@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/56_ejecucin_de_sentencias_dml.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.6.- Ejecución de sentencias DML. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-27"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Manejo de conectores.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_protocolos_de_acceso_a_bases_de_datos.html" class="no-ch">2.- Protocolos de acceso a bases de datos.</a></li>
+   <li><a href="3_conectores_o_drivers.html" class="no-ch">3.- Conectores o Drivers.</a></li>
+   <li><a href="4_arquitectura_jdbc.html" class="daddy">4.- Arquitectura JDBC.</a>
+   <ul class="other-section">
+      <li><a href="41_conectores_tipo_1_y_tipo_2.html" class="no-ch">4.1.- Conectores tipo 1 y tipo 2.</a></li>
+      <li><a href="42_conectores_tipo_3_y_tipo_4.html" class="no-ch">4.2.- Conectores tipo 3 y tipo 4.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_conexin_a_una_base_de_datos.html" class="current-page-parent daddy">5.- Conexión a una base de datos.</a>
+   <ul>
+      <li><a href="51_creacin_de_la_base_de_datos.html" class="no-ch">5.1.- Creación de la base de datos.</a></li>
+      <li><a href="52_drivers_de_conexin_oracle_y_mysql.html" class="no-ch">5.2.- Drivers de conexión (Oracle y MySQL)</a></li>
+      <li><a href="53_instalar_el_conector_de_la_base_de_datos.html" class="no-ch">5.3.- Instalar el conector de la base de datos.</a></li>
+      <li><a href="54_jdbc_conexin_a_una_base_de_datos.html" class="no-ch">5.4.- JDBC conexión a una base de datos.</a></li>
+      <li><a href="55_realizacin_de_consultas.html" class="no-ch">5.5.- Realización de consultas.</a></li>
+      <li id="active"><a href="56_ejecucin_de_sentencias_dml.html" class="active no-ch">5.6.- Ejecución de sentencias DML.</a></li>
+      <li><a href="57_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos.html" class="daddy">5.7.- Ejecución de procedimientos almacenados en la base de datos.</a>
+      <ul class="other-section">
+         <li><a href="571_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_mysql.html" class="no-ch">5.7.1.- Ejecución de procedimientos almacenados en la base de datos MySQL.</a></li>
+         <li><a href="572_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_oracle.html" class="no-ch">5.7.2.- Ejecución de procedimientos almacenados en la base de datos Oracle.</a></li>
+      </ul>
+      </li>
+      <li><a href="58_sentencias_preparadas.html" class="no-ch">5.8.- Sentencias preparadas.</a></li>
+      <li><a href="59_captura_de_errores_y_liberacin_de_recursos.html" class="no-ch">5.9.- Captura de errores y liberación de recursos.</a></li>
+      <li><a href="510_transacciones.html" class="no-ch">5.10.- Transacciones.</a></li>
+      <li><a href="511_consultas_al_diccionario_de_datos.html" class="no-ch">5.11.- Consultas al diccionario de datos.</a></li>
+      <li><a href="512_recuperacin_y_modificacin_de_valores_de_resultset.html" class="no-ch">5.12.- Recuperación y modificación de valores de ResultSet.</a></li>
+      <li><a href="513_pool_de_conexiones.html" class="daddy">5.13.- Pool de conexiones.</a>
+      <ul class="other-section">
+         <li><a href="5131_ejemplo_de_pool_de_conexiones_mysql.html" class="no-ch">5.13.1.- Ejemplo de pool de conexiones MySQL.</a></li>
+         <li><a href="5132_ejemplo_de_pool_de_conexiones_oracle.html" class="no-ch">5.13.2.- Ejemplo de pool de conexiones Oracle.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="6_operaciones_ejecucin_de_consultas.html" class="no-ch">6.- Operaciones: ejecución de consultas.</a></li>
+   <li><a href="7_excepciones_y_cierre_de_conexiones.html" class="daddy">7.- Excepciones y cierre de conexiones.</a>
+   <ul class="other-section">
+      <li><a href="71_excepciones.html" class="no-ch">7.1.- Excepciones.</a></li>
+      <li><a href="72_cierre_de_conexiones.html" class="no-ch">7.2.- Cierre de conexiones.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="55_realizacin_de_consultas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="57_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.6.- Ejecución de sentencias DML.</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id73">
+<div class="iDevice emphasis0" >
+<div id="ta73_117_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Las sentencias DML (Lenguaje de manipulación de datos), incluyen fundamentalmente tres tipos de operaciones inserciones (INSERT), borrados (DELETE) y modificaciones (UPDATE).</p>
+<p style="text-align: justify;">El funcionamiento de todas ellas en la conexión es bastante similar. A continuación se muestra un ejemplo de borrado en una conexión Oracle:</p>
+<div style="text-align: justify;">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.sql.*;
+public class DMLDeletePrep {
+ public static void main(String[] args) {
+   try
+   {
+   Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");   
+   Connection conexion = DriverManager.getConnection  ("jdbc:odbc:ORACLE-XE","scott", "tiger");   
+   String deptno=args[0];   
+   String sql= "DELETE FROM dept WHERE DEPTNO=?";
+   System.out.println(sql);
+   PreparedStatement sentencia = conexion.prepareStatement(sql);
+   sentencia.setInt(1,Integer.parseInt(deptno));
+   int filas = sentencia.executeUpdate(); 
+   System.out.println("Filas afectadas: "+filas); 
+   sentencia.close();
+       //Cerrar conexion
+   conexion.close();  
+    }       
+  catch (ClassNotFoundException cn) {cn.printStackTrace();}
+     catch (SQLException e) {e.printStackTrace();}  
+ } 
+}
+</code></pre>
+</div>
+</div>
+<code></code></div></div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="55_realizacin_de_consultas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="57_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/56_ejecucin_de_sentencias_dml.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:39 GMT -->
+</html>

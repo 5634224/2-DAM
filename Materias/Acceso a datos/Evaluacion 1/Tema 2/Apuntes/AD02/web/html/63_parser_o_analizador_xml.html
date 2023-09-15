@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431832/mod_resource/content/4/AD02_Contenidos_Web/63_parser_o_analizador_xml.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 19:08:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.3.- "Parser" o analizador XML. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-35"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Manejo de ficheros.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_clases_asociadas_a_las_operaciones_de_gestin_de_ficheros_y_directorios.html" class="daddy">2.- Clases asociadas a las operaciones de gestión de ficheros y directorios.</a>
+   <ul class="other-section">
+      <li><a href="21_clase_file.html" class="daddy">2.1.- Clase File.</a>
+      <ul class="other-section">
+         <li><a href="211_existencia_y_listado_de_ficheros_y_carpetas.html" class="no-ch">2.1.1.- Existencia y listado de ficheros y carpetas.</a></li>
+         <li><a href="212_creacin_y_eliminacin_de_ficheros_y_directorios.html" class="no-ch">2.1.2.- Creación y eliminación de ficheros y directorios.</a></li>
+      </ul>
+      </li>
+      <li><a href="22_interface_filenamefilter.html" class="no-ch">2.2.- Interface FilenameFilter.</a></li>
+      <li><a href="23_rutas_de_los_ficheros.html" class="no-ch">2.3.- Rutas de los ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_flujos.html" class="daddy">3.- Flujos.</a>
+   <ul class="other-section">
+      <li><a href="31_flujos_basados_en_bytes.html" class="no-ch">3.1.- Flujos basados en bytes.</a></li>
+      <li><a href="32_flujos_basados_en_caracteres.html" class="no-ch">3.2.- Flujos basados en caracteres.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_formas_de_acceso_a_un_fichero.html" class="daddy">4.- Formas de acceso a un fichero.</a>
+   <ul class="other-section">
+      <li><a href="41_operaciones_bsicas_sobre_ficheros_de_acceso_secuencial.html" class="no-ch">4.1.- Operaciones básicas sobre ficheros de acceso secuencial.</a></li>
+      <li><a href="42_operaciones_bsicas_sobre_ficheros_de_acceso_aleatorio.html" class="no-ch">4.2.- Operaciones básicas sobre ficheros de acceso aleatorio.</a></li>
+      <li><a href="43_enlaces_de_inters_sobre_ficheros.html" class="no-ch">4.3.- Enlaces de interés sobre ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_java_nio.html" class="daddy">5.- Java NIO.</a>
+   <ul class="other-section">
+      <li><a href="51_java_nio_path.html" class="no-ch">5.1.- Java NIO Path.</a></li>
+      <li><a href="52_clases_java_nio_files.html" class="no-ch">5.2.- Clases Java NIO Files.</a></li>
+      <li><a href="53_escribir_contenido_en_un_fichero.html" class="no-ch">5.3.- Escribir contenido en un fichero.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_trabajo_con_ficheros_xml_analizadores_sintcticos_parser_y_vinculacin_binding.html" class="current-page-parent daddy">6.- Trabajo con ficheros XML: analizadores sintácticos (parser) y vinculación (binding).</a>
+   <ul>
+      <li><a href="61_conceptos_previos.html" class="no-ch">6.1.- Conceptos previos.</a></li>
+      <li><a href="62_definiciones.html" class="no-ch">6.2.- Definiciones.</a></li>
+      <li id="active"><a href="63_parser_o_analizador_xml.html" class="active no-ch">6.3.- "Parser" o analizador XML.</a></li>
+      <li><a href="64_dom.html" class="daddy">6.4.- DOM.</a>
+      <ul class="other-section">
+         <li><a href="641_la_estructura_dom.html" class="no-ch">6.4.1.- La estructura DOM.</a></li>
+         <li><a href="642_ejemplo_completo.html" class="no-ch">6.4.2.- Ejemplo completo.</a></li>
+         <li><a href="643_creacin_de_un_fichero_xml_a_partir_de_un_documento.html" class="no-ch">6.4.3.- Creación de un fichero XML a partir de un documento.</a></li>
+      </ul>
+      </li>
+      <li><a href="65_sax.html" class="no-ch">6.5.- SAX.</a></li>
+      <li><a href="66_stax.html" class="daddy">6.6.- StAX.</a>
+      <ul class="other-section">
+         <li><a href="661_caractersticas_de_stax.html" class="no-ch">6.6.1.- Características de StAX.</a></li>
+         <li><a href="662_ejemplo_de_api_cursor.html" class="no-ch">6.6.2.- Ejemplo de API Cursor.</a></li>
+         <li><a href="663_ejemplo_de_api_event.html" class="no-ch">6.6.3.- Ejemplo de API Event.</a></li>
+      </ul>
+      </li>
+      <li><a href="67_binding.html" class="daddy">6.7.- Binding.</a>
+      <ul class="other-section">
+         <li><a href="671_configuracin_con_anotaciones.html" class="no-ch">6.7.1.- Configuración con anotaciones.</a></li>
+         <li><a href="672_ejemplos_con_anotaciones.html" class="no-ch">6.7.2.- Ejemplos con anotaciones.</a></li>
+         <li><a href="673_funcionamiento_de_jaxb.html" class="no-ch">6.7.3.- Funcionamiento de JAXB.</a></li>
+         <li><a href="674_ejemplo_marshall_unmarshall.html" class="no-ch">6.7.4.- Ejemplo: Marshall, Unmarshall.</a></li>
+         <li><a href="675_generacin_automtica_de_clases_java_a_partir_del_esquema_xsd.html" class="no-ch">6.7.5.- Generación automática de clases Java a partir del esquema .xsd.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="7_libreras_para_conversin_de_documentos_xml_a_otros_formatos.html" class="daddy">7.- Librerías para conversión de documentos XML a otros formatos.</a>
+   <ul class="other-section">
+      <li><a href="71_introduccin_a_jasperreport.html" class="no-ch">7.1.- Introducción a JasperReport.</a></li>
+      <li><a href="72_disear_y_compilar_la_plantilla.html" class="no-ch">7.2.- Diseñar y compilar la plantilla.</a></li>
+      <li><a href="73_rellenar_el_informe_con_datos_exportar_el_informe.html" class="no-ch">7.3.- Rellenar el informe con datos, exportar el informe.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_listar_ficheros_de_una_carpeta_filtrando.html" class="no-ch">Anexo I.- Listar ficheros de una carpeta, filtrando.</a></li>
+   <li><a href="anexo_ii_cdigo_de_separador_de_rutas.html" class="no-ch">Anexo II.- Código de separador de rutas.</a></li>
+   <li><a href="anexo_iii_cdigo_de_crear_un_fichero.html" class="no-ch">Anexo III.- Código de crear un fichero.</a></li>
+   <li><a href="anexo_iv_cdigo_de_crear_un_directorio.html" class="no-ch">Anexo IV.- Código de crear un directorio.</a></li>
+   <li><a href="anexo_v_anexo_de_recursos.html" class="no-ch">Anexo V.- Anexo de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="62_definiciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="64_dom.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.3.- "Parser" o analizador XML.</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id80">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Introducción</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta80_110_2" class="block iDevice_content">
+<div class="exe-text"><p align="left" style="text-align: justify;">Cuando se quieren almacenar datos que deban ser leídas por aplicaciones ejecutadas en múltiples plataformas será necesario recurrir a formatos más estandarizados, como los lenguajes de marcas.</p>
+<p align="left" style="text-align: justify;">Los documentos XML consiguen estructurar la información intercalando una serie de marcas denominadas etiquetas. En XML , las marcas o etiquetas tienen cierta similitud con un contenedor de información. Así, una etiqueta puede contener otras etiquetas o información textual. De este modo, conseguiremos subdividir la información estructurando de forma que pueda ser fácilmente interpretada.</p>
+<p align="left" style="text-align: justify;">Como toda la información es textual, no existe el problema de representar los datos de diferente manera. Cualquier dato, ya sea numérica o booleana, habrá transcribirla en modo texto, de modo que cualquiera que sea el sistema de representación de datos será posible leer e interpretar correctamente la información contenida en un archivo XML .</p>
+<p align="left" style="text-align: justify;">Es cierto que los caracteres se pueden escribir usando también diferentes sistemas de codificación, pero XML ofrece diversas técnicas para evitar que esto sea un problema. Por ejemplo, es posible incluir en la cabecera del archivo que codificación se ha utilizado durante el almacenamiento, o también se pueden escribir los caracteres de código ASCII superior a 127, utilizando entities de carácter , una forma universal de codificar cualquier símbolo .</p>
+<p align="left" style="text-align: justify;">XML consigue estructurar cualquier tipo de información jerárquica. Se puede establecer cierta similitud con la forma como la información se almacena en los objetos de una aplicación y la forma como se almacenaría en un documento XML . La información, en las aplicaciones orientadas a objeto, estructura, agrupa y jerarquiza en clases, y en los documentos XML se estructura, organiza y jerarquiza en etiquetas contenidas unas dentro de otras y atributos de las etiquetas </p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id81">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Analizador XML</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta81_111_2" class="block iDevice_content">
+<div class="exe-text"><p align="left" style="text-align: justify;">Dado que XML es un lenguaje utilizado ámpliamente en el desarrollo de la World Wide Web, existen ya herramientas y estándares de programación para leer documentos XML. Las herramientas o programas que leen el lenguaje XML y comprueban si el documento es válido sintácticamente, se denominan analizadores o "parsers". </p>
+<p align="left" style="text-align: justify;">Un parser XML es un módulo, biblioteca o programa que se ocupa de analizar, clasificar y transformar un archivo de XML en una representación interna,  extrayendo la información contenida en cada una de las etiquetas y relacionándola de acuerdo con su posición en la jerarquía.</p>
+<p align="left" style="text-align: justify;"> En el caso de XML, como el formato siempre es el mismo, no necesitamos crear un parser cada vez que hacemos un programa, sino que existen un gran número de parsers o analizadores sintácticos disponibles que pueden averiguar si un documento XML cumple con una determinada gramática. Estos analizadores o parsers pueden ser secuenciales como SAX o STAX o jerarquicos como DOM.</p>
+<p align="left" style="text-align: justify;"><b>Analizadores secuenciales</b></p>
+<p align="left" style="text-align: justify;">Los analizadores secuenciales, que permiten extraer el contenido a medida que se van descubriendo las etiquetas de apertura y cierre, se denominan analizadores sintácticos. Son analizadores muy rápidos, pero presentan el problema de que cada vez que se necesita acceder a una parte del contenido necesario releer todo el documento de arriba a abajo.</p>
+<p align="left" style="text-align: justify;">En Java hay dos analizadores secuenciales: SAX, que es el acrónimo de Simple API for XML . Es una analizador muy usado en varias bibliotecas de tratamiento de datos XML , pero no suele usarse en aplicaciones finales y STAX, Streaming API for XML, posterior a SAX y que lo ha superado.</p>
+<p align="left" style="text-align: justify;"><span><b>Analizadores jerárquicos</b></span></p>
+<p align="left" style="text-align: justify;">Generalmente, las aplicaciones finales que necesitan trabajar con datos XML suelen usar analizadores jerárquicos, porque además de realizar un análisis secuencial que les permite clasificar el contenido, se almacenan en la memoria RAM siguiendo la estructura jerárquica detectada en el documento. Esto facilita mucho las consultas que haya que repetir varias veces, dado que las estructuras jerárquicas de la memoria RAM tienen un rendimiento de acceso parcial a los datos muy eficiente.</p>
+<p align="left" style="text-align: justify;">Los analizadores jerárquicos guardan todos los datos del XML en memoria dentro de una estructura jerárquica. Son ideales para aplicaciones que requieran una consulta continua <span>de los datos. El formato de la estructura donde se almacena la información en la memoria RAM ha sido especificado por el organismo internacional W3C (World Wide Web Consortium) y se suele conocer como DOM (Document Object Model). Es una estructura que HTML y  javascript han popularizado mucho y se trata de una especificación que Java materializa en forma de interfaces. La principal se denomina Documento y representa todo un documento XML . Al tratarse de una interfaz, puede ser implementada por varias clases.</span></p>
+<p align="left" style="text-align: justify;"></p>
+<p style="text-align: justify;"><strong>Comparativa analizadores</strong></p>
+<table style="height: 182px; border-style: solid; border-color: #000000;" border="1">
+<tbody>
+<tr style="height: 22px;">
+<th style="width: 198.4px; height: 22px;">CARACTERÍSTICA</th>
+<th style="width: 106.4px; height: 22px;">STAX</th>
+<th style="width: 114.4px; height: 22px;">SAX</th>
+<th style="width: 86.4px; height: 22px;">DOM</th>
+<th style="width: 79.2px; height: 22px;">TRAX</th>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 198.4px; height: 20px;">Tipo de API</td>
+<td style="width: 106.4px; height: 20px;">Pull, streaming</td>
+<td style="width: 114.4px; height: 20px;">Push, streaming</td>
+<td style="width: 86.4px; height: 20px;">En memoria</td>
+<td style="width: 79.2px; height: 20px;">Regla XSLT</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 198.4px; height: 20px;">Facilidad de uso</td>
+<td style="width: 106.4px; height: 20px;">Alta</td>
+<td style="width: 114.4px; height: 20px;">Media</td>
+<td style="width: 86.4px; height: 20px;">Alta</td>
+<td style="width: 79.2px; height: 20px;">Media</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 198.4px; height: 20px;">Capacidad XPath</td>
+<td style="width: 106.4px; height: 20px;">No</td>
+<td style="width: 114.4px; height: 20px;">No</td>
+<td style="width: 86.4px; height: 20px;">Si</td>
+<td style="width: 79.2px; height: 20px;">Si</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 198.4px; height: 20px;">Eficiencia de CPU y memoria</td>
+<td style="width: 106.4px; height: 20px;">Buena</td>
+<td style="width: 114.4px; height: 20px;">Buena</td>
+<td style="width: 86.4px; height: 20px;">Varia</td>
+<td style="width: 79.2px; height: 20px;">Varia</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 198.4px; height: 20px;">Solo hacia adelante</td>
+<td style="width: 106.4px; height: 20px;">Si</td>
+<td style="width: 114.4px; height: 20px;">Si</td>
+<td style="width: 86.4px; height: 20px;">No</td>
+<td style="width: 79.2px; height: 20px;">No</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 198.4px; height: 20px;">Lee XML</td>
+<td style="width: 106.4px; height: 20px;">Si</td>
+<td style="width: 114.4px; height: 20px;">Si</td>
+<td style="width: 86.4px; height: 20px;">Si</td>
+<td style="width: 79.2px; height: 20px;">Si</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 198.4px; height: 20px;">Escribe XML</td>
+<td style="width: 106.4px; height: 20px;">Si</td>
+<td style="width: 114.4px; height: 20px;">No</td>
+<td style="width: 86.4px; height: 20px;">Si</td>
+<td style="width: 79.2px; height: 20px;">Si</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 198.4px; height: 20px;">Crear, Leer, Modificar, Borrar</td>
+<td style="width: 106.4px; height: 20px;">No</td>
+<td style="width: 114.4px; height: 20px;">No</td>
+<td style="width: 86.4px; height: 20px;">Si</td>
+<td style="width: 79.2px; height: 20px;">No</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="62_definiciones.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="64_dom.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431832/mod_resource/content/4/AD02_Contenidos_Web/63_parser_o_analizador_xml.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 19:08:16 GMT -->
+</html>

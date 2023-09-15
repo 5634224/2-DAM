@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+ead.murciaeduca.es	TRUE	/	FALSE	1999999999	MoodleSession	bd5e54db1d4147ba5f004b3367d11385
+mediateca.educa.madrid.org	TRUE	/	FALSE	1999999999	UqZBpD3n	v1kdCGSQ__F-C
+

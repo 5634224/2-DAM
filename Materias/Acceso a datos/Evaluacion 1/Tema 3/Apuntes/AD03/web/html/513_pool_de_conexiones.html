@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/513_pool_de_conexiones.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.13.- Pool de conexiones. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Manejo de conectores.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_protocolos_de_acceso_a_bases_de_datos.html" class="no-ch">2.- Protocolos de acceso a bases de datos.</a></li>
+   <li><a href="3_conectores_o_drivers.html" class="no-ch">3.- Conectores o Drivers.</a></li>
+   <li><a href="4_arquitectura_jdbc.html" class="daddy">4.- Arquitectura JDBC.</a>
+   <ul class="other-section">
+      <li><a href="41_conectores_tipo_1_y_tipo_2.html" class="no-ch">4.1.- Conectores tipo 1 y tipo 2.</a></li>
+      <li><a href="42_conectores_tipo_3_y_tipo_4.html" class="no-ch">4.2.- Conectores tipo 3 y tipo 4.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_conexin_a_una_base_de_datos.html" class="current-page-parent daddy">5.- Conexión a una base de datos.</a>
+   <ul>
+      <li><a href="51_creacin_de_la_base_de_datos.html" class="no-ch">5.1.- Creación de la base de datos.</a></li>
+      <li><a href="52_drivers_de_conexin_oracle_y_mysql.html" class="no-ch">5.2.- Drivers de conexión (Oracle y MySQL)</a></li>
+      <li><a href="53_instalar_el_conector_de_la_base_de_datos.html" class="no-ch">5.3.- Instalar el conector de la base de datos.</a></li>
+      <li><a href="54_jdbc_conexin_a_una_base_de_datos.html" class="no-ch">5.4.- JDBC conexión a una base de datos.</a></li>
+      <li><a href="55_realizacin_de_consultas.html" class="no-ch">5.5.- Realización de consultas.</a></li>
+      <li><a href="56_ejecucin_de_sentencias_dml.html" class="no-ch">5.6.- Ejecución de sentencias DML.</a></li>
+      <li><a href="57_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos.html" class="daddy">5.7.- Ejecución de procedimientos almacenados en la base de datos.</a>
+      <ul class="other-section">
+         <li><a href="571_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_mysql.html" class="no-ch">5.7.1.- Ejecución de procedimientos almacenados en la base de datos MySQL.</a></li>
+         <li><a href="572_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_oracle.html" class="no-ch">5.7.2.- Ejecución de procedimientos almacenados en la base de datos Oracle.</a></li>
+      </ul>
+      </li>
+      <li><a href="58_sentencias_preparadas.html" class="no-ch">5.8.- Sentencias preparadas.</a></li>
+      <li><a href="59_captura_de_errores_y_liberacin_de_recursos.html" class="no-ch">5.9.- Captura de errores y liberación de recursos.</a></li>
+      <li><a href="510_transacciones.html" class="no-ch">5.10.- Transacciones.</a></li>
+      <li><a href="511_consultas_al_diccionario_de_datos.html" class="no-ch">5.11.- Consultas al diccionario de datos.</a></li>
+      <li><a href="512_recuperacin_y_modificacin_de_valores_de_resultset.html" class="no-ch">5.12.- Recuperación y modificación de valores de ResultSet.</a></li>
+      <li id="active"><a href="513_pool_de_conexiones.html" class="active daddy">5.13.- Pool de conexiones.</a>
+      <ul>
+         <li><a href="5131_ejemplo_de_pool_de_conexiones_mysql.html" class="no-ch">5.13.1.- Ejemplo de pool de conexiones MySQL.</a></li>
+         <li><a href="5132_ejemplo_de_pool_de_conexiones_oracle.html" class="no-ch">5.13.2.- Ejemplo de pool de conexiones Oracle.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="6_operaciones_ejecucin_de_consultas.html" class="no-ch">6.- Operaciones: ejecución de consultas.</a></li>
+   <li><a href="7_excepciones_y_cierre_de_conexiones.html" class="daddy">7.- Excepciones y cierre de conexiones.</a>
+   <ul class="other-section">
+      <li><a href="71_excepciones.html" class="no-ch">7.1.- Excepciones.</a></li>
+      <li><a href="72_cierre_de_conexiones.html" class="no-ch">7.2.- Cierre de conexiones.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="512_recuperacin_y_modificacin_de_valores_de_resultset.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5131_ejemplo_de_pool_de_conexiones_mysql.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.13.- Pool de conexiones.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id23">
+<div class="iDevice emphasis0">
+<div id="ta23_73" class="block iDevice_content">
+<p><img alt="Ordendor portátil con internet." class="elemento_derecha" height="148" src="../jpg/ad03_cont_r15_portatil.jpg" style="width: 200px; height: 148px;" title="Portátil." width="200" /></p>
+<p style="text-align: justify;">Acabamos de ver cómo se realiza una conexión a una base de datos. En ocasiones, sobre todo cuando se trabaja en el ámbito de las aplicaciones distribuidas, en entornos web, es recomendable gestionar las conexiones de otro modo.</p>
+<p style="text-align: justify;">Antes de ver en que consiste , veamos como funciona la creación de conexiones en una aplicación clásica de escritorio cliente-servidor y luego veamos los problemas se seguir con dicha estructura en una aplicación web.</p>
+<p style="text-align: justify;"><b>Problemas en la creación de conexiones</b></p>
+<div style="text-align: justify;">
+<p><span>En una aplicación de escritorio se crea una conexión de base de datos al iniciar la aplicación y se cierra al finalizar la aplicación. Es decir que cada usuario que inicia la aplicación tiene una conexión en exclusiva para él. Y obviamente sería imposible compartirlas ya que cada aplicación estará en un ordenador independiente.</span><span></span></p>
+<p>En una aplicación Web podríamos seguir un esquema similar , en el que cada usuario nuevo que se conecta a nuestra aplicación se le crea una conexión y al salir de la aplicación que se cierre su conexión. Esto que aparentemente es sencillo tiene unos problemas debido a la diferente naturaleza de las aplicaciones de escritorio y las web.</p>
+<p>Si siguiéramos el mismo patrón de creación de conexiones de aplicaciones de escritorio en aplicaciones web acabaríamos con una cantidad enorme de conexiones activas (debido al gran número de usuarios) y con gran cantidad de conexiones abiertas sin usar (debido a usuarios que abandonan el portal y no lo hemos detectado).</p>
+</div>
+<p style="text-align: justify;"><span>Consecuencia de los anterior al tener tantas conexiones a la base de datos se acabaría cayendo el servidor de base de datos debido a los recursos consumidos por todas las conexiones.</span></p>
+<p style="text-align: justify;"><span>Podemos pensar que nuestro servidor puede aguantar todas esas conexiones ya que podemos tener pocos usuarios pero no suele ser así debido a:</span></p>
+<ul style="text-align: justify;">
+<li>Si no se cierran las conexiones aun teniendo pocos usuarios es probable que acabemos saturando al servidor de conexiones sin usar.</li>
+<li>Las aplicaciones Web pueden tener picos de mucho tráfico, donde sería normal que se excediera la capacidad de nuestro servidor.</li>
+<li>Sería muy sencillo hacernos un ataque de denegación de servicio y saturando el servidor haciendo que se crearan gran cantidad de conexiones que no se usen.</li>
+</ul>
+<p style="text-align: justify;"><span>Una solución  que nos evitaría las conexiones sin usar sería que se creara la conexión al iniciar cada petición web y se cerrara al finalizar dicha petición web. ¿El problema de eso? Crear y cerrar una conexión es muy costoso. Lo que tendríamos es una aplicación lentísima.</span></p>
+<p style="text-align: justify;"><span><b>Pool de conexiones</b></span></p>
+<p style="text-align: justify;">El concepto de Pool de conexiones se ha estandarizado desde la versión 3.0 de JDBC.</p>
+<p style="text-align: justify;">La solución del pool de conexiones tiene que solucionar los siguientes problemas:</p>
+<ul style="text-align: justify;">
+<li>No tener tantas conexiones como usuarios ya que el número de usuarios es demasiado elevado.</li>
+<li>Cerrar la conexión.</li>
+</ul>
+<p style="text-align: justify;"><img src="../png/pool_de_conexiones.png" alt="" width="622" height="303" /></p>
+<p style="text-align: justify;"><b>Veamos como funciona:</b></p>
+<p style="text-align: justify;"><span>El servidor web tiene “n” conexiones ya creadas y conectadas a la base de datos (Se llaman conexiones esperando).</span></p>
+<ul style="text-align: justify;">
+<li>Cuando llegan “m” peticiones web , la aplicación pide “m” conexiones al pool de conexiones, quedando esperando en el pool “n-m” conexiones. Esta operación es muy rápida ya que la conexión ya está creada y solo hay que marcarla como que alguien la está usando. Ahora hay “m” conexiones activas que está usando la aplicación.</li>
+<li>Cuando las peticiones web finalizan, las conexiones no se cierran sino que se devuelven al pool indicándole que ya se han acabado de usar las conexiones. Ahora vuelve a quedar “n” conexiones esperando en el pool. Esta operación también es muy rápida ya que realmente no se cierra ninguna conexión sino que simplemente se marcan como que ya no las están usando nadie.</li>
+<li style="list-style-type: none;">
+<ul>
+<li style="list-style-type: none;"></li>
+</ul>
+</li>
+</ul>
+<p style="text-align: justify;">Si se piden más conexiones de las que hay esperando en el pool se crearán en ese instante nuevas conexiones hasta el máximo de conexiones que permita el pool.</p>
+<p style="text-align: justify;">Al devolver una conexión al pool , ésta se queda esperando para que otra petición la pueda usar. Si hay ya demasiadas conexiones esperando a ser usadas se cerrarán para ahorrar recursos en el servidor de base de datos.</p>
+<p style="text-align: justify;"><b>¿Qué hemos conseguido con el pool?</b></p>
+<ul style="text-align: justify;">
+<li style="list-style-type: none;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Ahora las conexiones ya no se quedarán abiertas cuando el usuario se marcha del portal ya que cada conexión se pseudo-abre y pseudo-cierra con cada petición.</li>
+<li>No tenemos tantas conexiones como usuarios usan la aplicación ya que solo se necesitan tantas como usuarios hay haciendo una petición en ese instante. Pensemos por un momento en facebook. ¿cuandos usuarios están conectados a facebook? Supongamos “x”. Pero ¿cuantos están realmente haciendo una petición y no viendo los datos que se han servido? Supongamos “y”. Obviamente “y” es mucho menor que “x”. Con lo que nos hemos ahorrado “x-y” conexiones.</li>
+<li>Al iniciar un servidor <a href="#t1b48812c-120d-1da7-b76b-ae99744c0a07" id="link1b48812c-120d-1da7-b76b-ae99744c0a07" class="exe-tooltip definition-tt titled-tt" title="Java EE | ">Java EE</a>, automáticamente el<span> </span><span lang="en">pool</span><span> de conexiones crea un número de conexiones físicas iniciales.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p style="text-align: justify;">Cuando un objeto Java del servidor J2EE necesita una conexión, la solicita  a través del método <code><span class="">dataSource.getConnection()</span></code><span class="">,</span> la fuente de datos <code><span class="">javax.sql.DataSource</span><span class=""> </span></code>habla con el <span lang="en">pool</span> de conexiones y éste le entrega una conexión lógica<code> <span class="">java.sql.Connection</span></code><span class="">.</span> Esta conexión lógica la recibe por último, el objeto Java.</p>
+<p style="text-align: justify;"><span class="">Cuando un objeto Java del servidor Java EE desea cerrar una conexión a través del método </span><code><span class="">connection.close()</span></code><span class="">, </span><span class="">la fuente de datos<code> </code></span><span class=""><code>javax.sql.DataSource</code> </span><span class="">habla con el </span><span lang="en" class="">pool</span><span class=""> de conexiones y le devuelve la conexión lógica en cuestión.</span></p>
+<p style="text-align: justify;"><span class="">Si hay un pico en la demanda de conexiones a la base de datos, el </span><span lang="en" class="">pool</span><span class=""> de conexiones de forma transparente crea más conexiones físicas de objetos tipo<code> </code></span><code><span class="">Connection</span></code><span class="">. Si por el contrario las conexiones a la base de datos disminuyen, el </span><span lang="en" class="">pool</span><span class=""> de conexiones, también de forma transparente elimina conexiones físicas de objetos de tipo </span><code><span class="">Connection</span></code>.</p>
+<div id="t1b48812c-120d-1da7-b76b-ae99744c0a07" class="exe-tooltip-text">
+<p>Java platform Enterprise Edition o Java EE, anteriormente conocido como Java 2 platform Enterprise Edition o J2EE hasta la versión 1.4), es una plataforma de programación para desarrollar y ejecutar software de aplicaciones en Java con arquitectura de n niveles distribuida, basándose fundamentalmente en componentes de software modulares ejecutándose sobre un servidor de aplicaciones.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id24">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_debesconocerfpd.png)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta24_48" class="block iDevice_content">
+<p>
+El siguiente enlace es  bastante interesante, mostrando ejemplos de código.
+</p>
+<p class="enlace_centrado">
+<a href="http://chuwiki.chuidiang.org/index.php?title=Pool_de_conexiones" title="Acceder a la Wiki con información del pool de conexiones.">Ejemplo de <span lang="en">pool</span> de conexiones.</a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id25">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta25_47" class="block iDevice_content">
+<p>En el siguiente enlace puedes ver un ejemplo paso a paso con <span lang="en">NetBeans</span> y <span lang="en">MySQL</span>, sobre la creación de un <span lang="en">pool</span> de conexiones.</p>
+<p class="enlace_centrado"><a href="http://www.chuidiang.org/java/mysql/BasicDataSource-Pool-Conexiones.php" title="Acceder a crear pool de conexiones.">Como crear un Pool de Conexiones en Java con <span lang="en">NetBeans</span> y <span lang="en">MySQL</span> </a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="512_recuperacin_y_modificacin_de_valores_de_resultset.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5131_ejemplo_de_pool_de_conexiones_mysql.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/513_pool_de_conexiones.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:43 GMT -->
+</html>

@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431832/mod_resource/content/4/AD02_Contenidos_Web/661_caractersticas_de_stax.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 19:08:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.6.1.- Características de StAX. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-43"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Manejo de ficheros.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_clases_asociadas_a_las_operaciones_de_gestin_de_ficheros_y_directorios.html" class="daddy">2.- Clases asociadas a las operaciones de gestión de ficheros y directorios.</a>
+   <ul class="other-section">
+      <li><a href="21_clase_file.html" class="daddy">2.1.- Clase File.</a>
+      <ul class="other-section">
+         <li><a href="211_existencia_y_listado_de_ficheros_y_carpetas.html" class="no-ch">2.1.1.- Existencia y listado de ficheros y carpetas.</a></li>
+         <li><a href="212_creacin_y_eliminacin_de_ficheros_y_directorios.html" class="no-ch">2.1.2.- Creación y eliminación de ficheros y directorios.</a></li>
+      </ul>
+      </li>
+      <li><a href="22_interface_filenamefilter.html" class="no-ch">2.2.- Interface FilenameFilter.</a></li>
+      <li><a href="23_rutas_de_los_ficheros.html" class="no-ch">2.3.- Rutas de los ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_flujos.html" class="daddy">3.- Flujos.</a>
+   <ul class="other-section">
+      <li><a href="31_flujos_basados_en_bytes.html" class="no-ch">3.1.- Flujos basados en bytes.</a></li>
+      <li><a href="32_flujos_basados_en_caracteres.html" class="no-ch">3.2.- Flujos basados en caracteres.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_formas_de_acceso_a_un_fichero.html" class="daddy">4.- Formas de acceso a un fichero.</a>
+   <ul class="other-section">
+      <li><a href="41_operaciones_bsicas_sobre_ficheros_de_acceso_secuencial.html" class="no-ch">4.1.- Operaciones básicas sobre ficheros de acceso secuencial.</a></li>
+      <li><a href="42_operaciones_bsicas_sobre_ficheros_de_acceso_aleatorio.html" class="no-ch">4.2.- Operaciones básicas sobre ficheros de acceso aleatorio.</a></li>
+      <li><a href="43_enlaces_de_inters_sobre_ficheros.html" class="no-ch">4.3.- Enlaces de interés sobre ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_java_nio.html" class="daddy">5.- Java NIO.</a>
+   <ul class="other-section">
+      <li><a href="51_java_nio_path.html" class="no-ch">5.1.- Java NIO Path.</a></li>
+      <li><a href="52_clases_java_nio_files.html" class="no-ch">5.2.- Clases Java NIO Files.</a></li>
+      <li><a href="53_escribir_contenido_en_un_fichero.html" class="no-ch">5.3.- Escribir contenido en un fichero.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_trabajo_con_ficheros_xml_analizadores_sintcticos_parser_y_vinculacin_binding.html" class="current-page-parent daddy">6.- Trabajo con ficheros XML: analizadores sintácticos (parser) y vinculación (binding).</a>
+   <ul>
+      <li><a href="61_conceptos_previos.html" class="no-ch">6.1.- Conceptos previos.</a></li>
+      <li><a href="62_definiciones.html" class="no-ch">6.2.- Definiciones.</a></li>
+      <li><a href="63_parser_o_analizador_xml.html" class="no-ch">6.3.- "Parser" o analizador XML.</a></li>
+      <li><a href="64_dom.html" class="daddy">6.4.- DOM.</a>
+      <ul class="other-section">
+         <li><a href="641_la_estructura_dom.html" class="no-ch">6.4.1.- La estructura DOM.</a></li>
+         <li><a href="642_ejemplo_completo.html" class="no-ch">6.4.2.- Ejemplo completo.</a></li>
+         <li><a href="643_creacin_de_un_fichero_xml_a_partir_de_un_documento.html" class="no-ch">6.4.3.- Creación de un fichero XML a partir de un documento.</a></li>
+      </ul>
+      </li>
+      <li><a href="65_sax.html" class="no-ch">6.5.- SAX.</a></li>
+      <li class="current-page-parent"><a href="66_stax.html" class="current-page-parent daddy">6.6.- StAX.</a>
+      <ul>
+         <li id="active"><a href="661_caractersticas_de_stax.html" class="active no-ch">6.6.1.- Características de StAX.</a></li>
+         <li><a href="662_ejemplo_de_api_cursor.html" class="no-ch">6.6.2.- Ejemplo de API Cursor.</a></li>
+         <li><a href="663_ejemplo_de_api_event.html" class="no-ch">6.6.3.- Ejemplo de API Event.</a></li>
+      </ul>
+      </li>
+      <li><a href="67_binding.html" class="daddy">6.7.- Binding.</a>
+      <ul class="other-section">
+         <li><a href="671_configuracin_con_anotaciones.html" class="no-ch">6.7.1.- Configuración con anotaciones.</a></li>
+         <li><a href="672_ejemplos_con_anotaciones.html" class="no-ch">6.7.2.- Ejemplos con anotaciones.</a></li>
+         <li><a href="673_funcionamiento_de_jaxb.html" class="no-ch">6.7.3.- Funcionamiento de JAXB.</a></li>
+         <li><a href="674_ejemplo_marshall_unmarshall.html" class="no-ch">6.7.4.- Ejemplo: Marshall, Unmarshall.</a></li>
+         <li><a href="675_generacin_automtica_de_clases_java_a_partir_del_esquema_xsd.html" class="no-ch">6.7.5.- Generación automática de clases Java a partir del esquema .xsd.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="7_libreras_para_conversin_de_documentos_xml_a_otros_formatos.html" class="daddy">7.- Librerías para conversión de documentos XML a otros formatos.</a>
+   <ul class="other-section">
+      <li><a href="71_introduccin_a_jasperreport.html" class="no-ch">7.1.- Introducción a JasperReport.</a></li>
+      <li><a href="72_disear_y_compilar_la_plantilla.html" class="no-ch">7.2.- Diseñar y compilar la plantilla.</a></li>
+      <li><a href="73_rellenar_el_informe_con_datos_exportar_el_informe.html" class="no-ch">7.3.- Rellenar el informe con datos, exportar el informe.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_listar_ficheros_de_una_carpeta_filtrando.html" class="no-ch">Anexo I.- Listar ficheros de una carpeta, filtrando.</a></li>
+   <li><a href="anexo_ii_cdigo_de_separador_de_rutas.html" class="no-ch">Anexo II.- Código de separador de rutas.</a></li>
+   <li><a href="anexo_iii_cdigo_de_crear_un_fichero.html" class="no-ch">Anexo III.- Código de crear un fichero.</a></li>
+   <li><a href="anexo_iv_cdigo_de_crear_un_directorio.html" class="no-ch">Anexo IV.- Código de crear un directorio.</a></li>
+   <li><a href="anexo_v_anexo_de_recursos.html" class="no-ch">Anexo V.- Anexo de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="66_stax.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="662_ejemplo_de_api_cursor.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.6.1.- Características de StAX.</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id97">
+<div class="iDevice emphasis0" >
+<div id="ta97_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Las siguientes son las características de StAX API:</p>
+<ul style="text-align: justify;">
+<li>
+<div>Lee un documento XML de arriba a abajo, reconociendo los tokens que componen un documento XML bien formado.</div>
+</li>
+<li>
+<div>Los tokens se procesan en el mismo orden en que aparecen en el documento.</div>
+</li>
+<li>
+<div>Informa sobre el programa de aplicación la naturaleza de los tokens que el analizador ha encontrado a medida que ocurren.</div>
+</li>
+<li>
+<div>El programa de aplicación proporciona un lector de "eventos" que actúa como un iterador e itera sobre el evento para obtener la información requerida. Otro lector disponible es "cursor" que actúa como un puntero a los nodos XML.</div>
+</li>
+<li>
+<div>A medida que se identifican los eventos, los elementos XML pueden recuperarse del objeto de evento y pueden procesarse más.</div>
+</li>
+</ul>
+<p style="text-align: justify;"><b>Debemos usar un analizador StAX cuando:</b></p>
+<ul style="text-align: justify;">
+<li>Puede procesar el documento XML de forma lineal de arriba a abajo.</li>
+<li>El documento no está profundamente anidado.</li>
+<li>Está procesando un documento XML muy grande cuyo árbol DOM consumiría demasiada memoria. Las implementaciones DOM típicas usan diez bytes de memoria para representar un byte de XML.</li>
+<li>El problema a resolver involucra solo una parte del documento XML.</li>
+<li>Los datos están disponibles tan pronto como el analizador los vea, por lo que StAX funciona bien para un documento XML que llega a través de una transmisión.</li>
+</ul>
+<p style="text-align: justify;"><b>Para poder utilizar clases e interfaces de ambas API<span> </span></b>necesitamos un origen de datos XML valido. Esto lo conseguimos con la factoria<code><b> XMLInputFactory</b>:</code></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>XMLInputFactory xmlif = XMLInputFactory.newInstance();
+XMLStreamReader xmlsr =xmlif.createXMLStreamReader(new FileReader("books.xml"));</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">o bien </p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>XMLInputFactory inputFactory = XMLInputFactory.newInstance();
+InputStream in = new FileInputStream("books.xml");</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Como deciamos anteriormente,  STAX consiste en dos API llamados lectores "Iterador" y "cursor"</p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id98">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">¿Cómo funciona?</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta98_128_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">El analizador crea diferentes tipos de eventos a medida que avanza leyendo el documento XML de origen.</p>
+<p style="text-align: justify;">Algunos de los tipos de eventos importantes son:</p>
+<ol style="text-align: justify;">
+<li>Comience el documento</li>
+<li>Elemento de inicio</li>
+<li>Comentarios</li>
+<li>Caracteres</li>
+<li><span>Elemento final</span></li>
+<li><span>Documento final</span></li>
+</ol>
+<p style="text-align: justify;"><span>partimos del siguiente documento XML:</span></p>
+<div class="highlighted-code language-markup" style="text-align: justify;">
+<div>
+<pre><code>&lt;? xml version = "1.0"?&gt;
+&lt;BookCatalogue xmlns = "http://www.publishing.org"&gt;
+    &lt;Libro&gt;
+        &lt;Título&gt; Yogasana Vijnana: la ciencia del yoga &lt;/ Title&gt;
+        &lt;ISBN&gt; 81-40-34319-4 &lt;/ ISBN&gt;
+        &lt;Cost currency = "INR"&gt; 11.50 &lt;/ Cost&gt;
+    &lt;/ Book&gt;
+&lt;/ BookCatalogue&gt;</code></pre>
+</div>
+</div>
+<p id="yui_3_17_2_1_1596017674217_137" style="text-align: justify;"><span id="yui_3_17_2_1_1596017674217_136">Este documento genera 18 eventos entre primarios y secundarios:</span></p>
+<table summary="Example of Iterator API Event Mapping" border="1" id="yui_3_17_2_1_1596017674217_142"><colgroup><col width="6%" /><col width="72%" /><col width="21%" /></colgroup>
+<tbody id="yui_3_17_2_1_1596017674217_141">
+<tr>
+<th align="left" valign="top" scope="col">
+<div>#</div>
+</th>
+<th align="left" valign="top" scope="col">
+<div>Element/Attribute</div>
+</th>
+<th align="left" valign="top" scope="col">
+<div>Event</div>
+</th>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>1</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>version="1.0"</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>StartDocument</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>2</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>isCData = false data = "\n" IsWhiteSpace = true</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>Characters</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>3</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>qname = BookCatalogue:http://www.publishing.org attributes = null namespaces = {BookCatalogue" -&gt; http://www.publishing.org"}</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>StartElement</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>4</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>qname = Book attributes = null namespaces = null</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>StartElement</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>5</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>qname = Title attributes = null namespaces = null</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>StartElement</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>6</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>isCData = false data = "Yogasana Vijnana: the Science of Yoga\n\t" IsWhiteSpace = false</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>Characters</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>7</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>qname = Title namespaces = null</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>EndElement</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>8</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>qname = ISBN attributes = null namespaces = null</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>StartElement</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>9</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>isCData = false data = "81-40-34319-4\n\t" IsWhiteSpace = false</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>Characters</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>10</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>qname = ISBN namespaces = null</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>EndElement</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>11</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>qname = Cost attributes = {"currency" -&gt; INR} namespaces = null</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>StartElement</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>12</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>isCData = false data = "11.50\n\t" IsWhiteSpace = false</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>Characters</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>13</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>qname = Cost namespaces = null</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>EndElement</tt></code></span></div>
+</td>
+</tr>
+<tr id="yui_3_17_2_1_1596017674217_140">
+<td align="left" valign="top" scope="row">
+<div>14</div>
+</td>
+<td align="left" valign="top" scope="row" id="yui_3_17_2_1_1596017674217_139">
+<div><span style="font-size: 10pt;"><code id="yui_3_17_2_1_1596017674217_138">isCData = false data = "\n" IsWhiteSpace = true</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>Characters</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>15</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>qname = Book namespaces = null</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>EndElement</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>16</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>isCData = false data = "\n" IsWhiteSpace = true</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>Characters</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>17</div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code>qname = BookCatalogue:http://www.publishing.org namespaces = {BookCatalogue" -&gt; http://www.publishing.org"}</code></span></div>
+</td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>EndElement</tt></code></span></div>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" scope="row">
+<div>18</div>
+</td>
+<td align="left" valign="top" scope="row"></td>
+<td align="left" valign="top" scope="row">
+<div><span style="font-size: 10pt;"><code><tt>EndDocument</tt></code></span></div>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><span></span></p>
+<p style="text-align: justify;"></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id99">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Aspectos importantes:</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta99_129_2" class="block iDevice_content">
+<div class="exe-text"><p></p>
+<ul>
+<li id="yui_3_17_2_1_1596017674217_144">
+<div id="yui_3_17_2_1_1596017674217_143" style="text-align: justify;">Los eventos se crean en el orden en que se encuentran los elementos XML correspondientes en el documento, incluida la anidación de elementos, la apertura y el cierre de elementos, el orden de los atributos, el inicio del documento y el final del documento, y así sucesivamente.</div>
+</li>
+<li style="text-align: justify;">
+<div>Al igual que con la sintaxis XML adecuada, todos los elementos del contenedor tienen los correspondientes eventos de inicio y final; por ejemplo, cada <code><tt>StartElement</tt></code> tiene un <code><tt>EndElement</tt> </code>correspondiente , incluso para elementos vacíos.</div>
+</li>
+<li style="text-align: justify;">
+<div><tt>Los</tt> eventos de <tt>atributo</tt> se tratan como eventos secundarios, y se accede a ellos desde su evento <tt><code>StartElement</code> </tt>correspondiente .</div>
+</li>
+<li style="text-align: justify;">
+<div>De forma similar a los eventos de <tt>Atributo</tt> , los eventos de <tt>Espacio de nombres</tt> se tratan como secundarios, pero aparecen dos veces y son accesibles dos veces en la secuencia de eventos, primero desde su <code><tt>StartElement</tt></code> correspondiente y luego desde su <code><tt>EndElement</tt> </code>correspondiente .</div>
+</li>
+<li style="text-align: justify;">
+<div><tt>Los</tt> eventos de <tt>caracteres</tt> se especifican para todos los elementos, incluso si esos elementos no tienen datos de caracteres. Del mismo modo, los eventos de carácter<span style="font-family: monospace;"><span style="font-size: 13.65px;"> </span></span>se pueden dividir entre eventos.</div>
+</li>
+<li style="text-align: justify;">
+<div>El analizador StAX mantiene una pila de espacio de nombres, que contiene información sobre todos los espacios de nombres XML definidos para el elemento actual y sus antecesores. Se puede acceder a la pila del espacio de nombres, que se expone a través de la interfaz <code><tt>javax.xml.namespace.NamespaceContext</tt></code> , mediante el prefijo del espacio de nombres o el URI.</div>
+</li>
+</ul>
+<p style="text-align: justify;"></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper TrueFalseIdevice em_iDevice" id="id117">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Pregunta Verdadero-Falso</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta117_100" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b117" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b117" class="block iDevice_content">
+<p>Los eventos de caracteres se especifican para todos los elementos XML</p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b117"><input type="radio" name="option0b117" id="true0b117" class="exe-radio-option exe-radio-option-0-2-0b117-truefalse" /> Verdadero</label> 
+<label for="false0b117"><input type="radio" name="option0b117" id="false0b117" class="exe-radio-option exe-radio-option-1-2-0b117-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b117" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b117-result" class="right">Verdadero</strong></p>
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="66_stax.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="662_ejemplo_de_api_cursor.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431832/mod_resource/content/4/AD02_Contenidos_Web/661_caractersticas_de_stax.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 19:08:16 GMT -->
+</html>

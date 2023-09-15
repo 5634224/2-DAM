@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/1_concepto_de_mapeo_objetorelacional.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.- Concepto de Mapeo objeto-relacional. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li id="active"><a href="1_concepto_de_mapeo_objetorelacional.html" class="active no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul class="other-section">
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li><a href="22_herramientas_orm_ms_utilizadas.html" class="no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li><a href="4_instalacin_y_configuracin_de_hibernate.html" class="no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul class="other-section">
+      <li><a href="51_ficheros_de_configuracin_propiedades.html" class="no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li><a href="7_clases_persistentes.html" class="no-ch">7.- Clases persistentes.</a></li>
+   <li><a href="8_sesiones_estados_de_un_objeto.html" class="no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul class="other-section">
+      <li><a href="111_sintaxis_del_lenguaje_hql.html" class="no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li><a href="112_consultas_por_criterios.html" class="no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li><a href="12_gestin_de_transacciones.html" class="no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.- Concepto de Mapeo objeto-relacional.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id2">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_66" class="block iDevice_content">
+<p>
+<strong>María</strong> percibe que  sus aplicaciones, basadas en Programación Orientada a Objetos, no  son almacenables de forma directa en los Sistemas Gestores de Bases  de Datos que tienen en la empresa. ¿Cómo guardar un objeto en un  sistema de almacenamiento basado en tablas? 
+</p>
+<img alt="Imagen de María, una de las protagonistas de nuestros casos prácticos." class="elemento_centrado" height="132" src="../jpg/ad04_cont_r02_maria.jpg" style="width: 200px; height: 132px" title="Maria." width="200" />
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id3">
+<div class="iDevice emphasis0">
+<div id="ta3_73" class="block iDevice_content">
+<p style="text-align: justify;">A la hora de almacenar los datos de un programa orientado a objetos en una <a href="#ta90d829c-ab6e-1bf5-9c12-8e24c69111cb" id="linka90d829c-ab6e-1bf5-9c12-8e24c69111cb" class="exe-tooltip definition-tt">base de datos relacional</a>, surge un inconveniente debido a incompatibilidad de sistemas de <a href="#t72b4cd6b-add9-d5e9-52be-75f8d04a234f" id="link72b4cd6b-add9-d5e9-52be-75f8d04a234f" class="exe-tooltip definition-tt">tipos de datos</a>. En el software orientado a objetos, la información se representa como clases y objetos. En las bases de datos relacionales, como tablas y sus restricciones. Por tanto, para almacenar la información tratada en un programa orientado a objetos en una base de datos relacional es necesaria una traducción entre ambas formas.</p>
+<p style="text-align: justify;">El mapeo objeto-relacional (<a href="#t0af2c210-7452-afbf-8adb-8595ad47db27" id="link0af2c210-7452-afbf-8adb-8595ad47db27" class="exe-tooltip definition-tt">ORM</a>) soluciona este problema. Es una técnica de programación que se utiliza con el propósito de convertir datos entre el utilizado en un lenguaje de programación orientado a objetos y el utilizado en una base de datos relacional, gracias a la <a href="#te9552c2a-1b51-3a80-4a97-ff3dd1cdc744" id="linke9552c2a-1b51-3a80-4a97-ff3dd1cdc744" class="exe-tooltip definition-tt">persistencia</a>. Esto posibilita el uso en las bases de datos relacionales de las características propias de la programación orientada a objetos (básicamente  <a href="#t404f1a11-7476-1d70-208f-c5f4f9fdede2" id="link404f1a11-7476-1d70-208f-c5f4f9fdede2" class="exe-tooltip definition-tt">herencia</a> y <a href="#ta70d850a-acf8-56b7-018c-256f47317a19" id="linka70d850a-acf8-56b7-018c-256f47317a19" class="exe-tooltip definition-tt">polimorfismo</a>).</p>
+<div id="ta90d829c-ab6e-1bf5-9c12-8e24c69111cb" class="exe-tooltip-text" style="text-align: justify;">
+<p>Una base de datos relacional es una colección de elementos de datos organizados en un conjunto de tablas formalmente descritas desde la que se puede acceder a los datos o volver a montarlos de muchas maneras diferentes sin tener que reorganizar las tablas de la base.</p>
+</div>
+<div id="t72b4cd6b-add9-d5e9-52be-75f8d04a234f" class="exe-tooltip-text" style="text-align: justify;">
+<p>Tipos de datos: caracteres, numéricos, fecha y hora, binarios y rowid.</p>
+</div>
+<div id="t0af2c210-7452-afbf-8adb-8595ad47db27" class="exe-tooltip-text" style="text-align: justify;">
+<p>Mapeo Objeto Relacional</p>
+</div>
+<div id="te9552c2a-1b51-3a80-4a97-ff3dd1cdc744" class="exe-tooltip-text" style="text-align: justify;">
+<p>La persistencia de objetos es la capacidad que tienen los objetos de sobrevivir al proceso que los creó; permitiendo al programador almacenar, transferir, y recuperar el estado de los objetos.</p>
+</div>
+<div id="t404f1a11-7476-1d70-208f-c5f4f9fdede2" class="exe-tooltip-text" style="text-align: justify;">
+<p>Es el mecanismo por el cual una clase permite heredar las características (atributos y métodos) de otra clase.</p>
+</div>
+<div id="ta70d850a-acf8-56b7-018c-256f47317a19" class="exe-tooltip-text">
+<p style="text-align: justify;">El polimorfismo se refiere a la propiedad por la que es posible enviar mensajes sintácticamente iguales a objetos de tipos distintos.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta4_70" class="block iDevice_content">
+<p>
+<strong>La mayoría de las aplicaciones se construyen  usando técnicas de programación orientada a objetos; sin embargo,  los sistemas de bases de datos más extendidos son de tipo  relacional.</strong>
+</p>
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id5">
+<div class="iDevice emphasis0">
+<div id="ta5_73" class="block iDevice_content">
+<p style="text-align: justify;">Las bases de datos más extendidas son del tipo relacional y estas sólo permiten guardar tipos de datos primitivos (enteros, cadenas de texto, <abbr title="Etcétera.">etc</abbr>.) por lo que no se puede guardar de forma directa los objetos de la aplicación en las tablas. Por tanto, se debe convertir los valores de los objetos en valores simples que puedan ser almacenados en una base de datos (y poder recuperarlos más tarde).</p>
+<p style="text-align: justify;">El mapeo objeto-relacional surge, pues, para dar respuesta a esta problemática: traducir los objetos a formas que puedan ser almacenadas en bases de datos preservando las propiedades de los objetos y sus relaciones; estos objetos se dice entonces que son persistentes.</p>
+<div class="elemento_centrado" style="text-align: justify;">
+<div class="elemento_centrado"><a href="../jpeg/ad04_cont_r03_esquemaorm.jpeg" title="Ampliar imagen."><img alt="Esquema formado por varias figuras, tal y como se detallan a continuación: a la izquierda, un cilindro bajo el título “APLICACIONES”  en cuyo interior se puede leer “OBJETOS”. De él salen dos flechas hacia la derecha, una más alta que la otra. La flecha más alta está tachada con una cruz roja y acompañada por la frase “NO ALMACENAMIENTO” y se dirige hacia un rectángulo en cuyo interior se puede leer “TIPOS DE DATOS PRIMITIVOS”. La flecha más baja va acompañada por la palabra “ORM” y se dirige hacia un cilindro en cuyo interior se puede leer “TIPOS DE DATOS DE OBJETOS (PERSISTENTES)”. Esta zona de la derecha está bajo el título “BASES DE DATOS RELACIONALES”." class="imagen_ampliable" height="108" src="../jpeg/ad04_cont_r03_esquemaorm_miniatura.jpeg" style="width: 200px; height: 108px;" title="Esquema Herramientas ORM." width="200" /></a></div>
+</div>
+<p style="text-align: justify;">El <span lang="en">ORM</span> se encarga, de forma automática, de convertir los den <a href="#tcc82bfa5-374b-5f98-96f9-6891cd4312a3" id="linkcc82bfa5-374b-5f98-96f9-6891cd4312a3" class="exe-tooltip definition-tt">objetos</a> y <a href="#tef2e9ee9-44d1-8634-4368-3fed40113725" id="linkef2e9ee9-44d1-8634-4368-3fed40113725" class="exe-tooltip definition-tt">registros</a> y viceversa, simulando así tener una base de datos orientada a objetos.</p>
+<div id="tcc82bfa5-374b-5f98-96f9-6891cd4312a3" class="exe-tooltip-text" style="text-align: justify;">
+<p>Entidad existente en la memoria del ordenador que tiene unas propiedades (atributos o datos sobre sí mismo almacenados por el objeto) y unas operaciones disponibles específicas (métodos).</p>
+</div>
+<div id="tef2e9ee9-44d1-8634-4368-3fed40113725" class="exe-tooltip-text">
+<p style="text-align: justify;">Un registro (también llamado fila o tupla) representa un objeto único de datos implícitamente estructurados en una tabla.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id6">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_47" class="block iDevice_content">
+<p>En el siguiente enlace encontrarás un documento muy interesante sobre la problemática asociada al almacenamiento de objetos y al concepto de mapeo objeto-relacional.</p>
+<div class="enlace_centrado"><a href="https://informaticaviernes2011.files.wordpress.com/2011/07/orm_victor_raquel_berni.pdf">Introducción al mapeo objeto-relacional. </a><span class="tamano"> (0.43 MB) </span></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="index.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/1_concepto_de_mapeo_objetorelacional.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:02 GMT -->
+</html>

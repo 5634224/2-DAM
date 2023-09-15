@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431832/mod_resource/content/4/AD02_Contenidos_Web/642_ejemplo_completo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 19:08:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.4.2.- Ejemplo completo. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-38"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Manejo de ficheros.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_clases_asociadas_a_las_operaciones_de_gestin_de_ficheros_y_directorios.html" class="daddy">2.- Clases asociadas a las operaciones de gestión de ficheros y directorios.</a>
+   <ul class="other-section">
+      <li><a href="21_clase_file.html" class="daddy">2.1.- Clase File.</a>
+      <ul class="other-section">
+         <li><a href="211_existencia_y_listado_de_ficheros_y_carpetas.html" class="no-ch">2.1.1.- Existencia y listado de ficheros y carpetas.</a></li>
+         <li><a href="212_creacin_y_eliminacin_de_ficheros_y_directorios.html" class="no-ch">2.1.2.- Creación y eliminación de ficheros y directorios.</a></li>
+      </ul>
+      </li>
+      <li><a href="22_interface_filenamefilter.html" class="no-ch">2.2.- Interface FilenameFilter.</a></li>
+      <li><a href="23_rutas_de_los_ficheros.html" class="no-ch">2.3.- Rutas de los ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_flujos.html" class="daddy">3.- Flujos.</a>
+   <ul class="other-section">
+      <li><a href="31_flujos_basados_en_bytes.html" class="no-ch">3.1.- Flujos basados en bytes.</a></li>
+      <li><a href="32_flujos_basados_en_caracteres.html" class="no-ch">3.2.- Flujos basados en caracteres.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_formas_de_acceso_a_un_fichero.html" class="daddy">4.- Formas de acceso a un fichero.</a>
+   <ul class="other-section">
+      <li><a href="41_operaciones_bsicas_sobre_ficheros_de_acceso_secuencial.html" class="no-ch">4.1.- Operaciones básicas sobre ficheros de acceso secuencial.</a></li>
+      <li><a href="42_operaciones_bsicas_sobre_ficheros_de_acceso_aleatorio.html" class="no-ch">4.2.- Operaciones básicas sobre ficheros de acceso aleatorio.</a></li>
+      <li><a href="43_enlaces_de_inters_sobre_ficheros.html" class="no-ch">4.3.- Enlaces de interés sobre ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_java_nio.html" class="daddy">5.- Java NIO.</a>
+   <ul class="other-section">
+      <li><a href="51_java_nio_path.html" class="no-ch">5.1.- Java NIO Path.</a></li>
+      <li><a href="52_clases_java_nio_files.html" class="no-ch">5.2.- Clases Java NIO Files.</a></li>
+      <li><a href="53_escribir_contenido_en_un_fichero.html" class="no-ch">5.3.- Escribir contenido en un fichero.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_trabajo_con_ficheros_xml_analizadores_sintcticos_parser_y_vinculacin_binding.html" class="current-page-parent daddy">6.- Trabajo con ficheros XML: analizadores sintácticos (parser) y vinculación (binding).</a>
+   <ul>
+      <li><a href="61_conceptos_previos.html" class="no-ch">6.1.- Conceptos previos.</a></li>
+      <li><a href="62_definiciones.html" class="no-ch">6.2.- Definiciones.</a></li>
+      <li><a href="63_parser_o_analizador_xml.html" class="no-ch">6.3.- "Parser" o analizador XML.</a></li>
+      <li class="current-page-parent"><a href="64_dom.html" class="current-page-parent daddy">6.4.- DOM.</a>
+      <ul>
+         <li><a href="641_la_estructura_dom.html" class="no-ch">6.4.1.- La estructura DOM.</a></li>
+         <li id="active"><a href="642_ejemplo_completo.html" class="active no-ch">6.4.2.- Ejemplo completo.</a></li>
+         <li><a href="643_creacin_de_un_fichero_xml_a_partir_de_un_documento.html" class="no-ch">6.4.3.- Creación de un fichero XML a partir de un documento.</a></li>
+      </ul>
+      </li>
+      <li><a href="65_sax.html" class="no-ch">6.5.- SAX.</a></li>
+      <li><a href="66_stax.html" class="daddy">6.6.- StAX.</a>
+      <ul class="other-section">
+         <li><a href="661_caractersticas_de_stax.html" class="no-ch">6.6.1.- Características de StAX.</a></li>
+         <li><a href="662_ejemplo_de_api_cursor.html" class="no-ch">6.6.2.- Ejemplo de API Cursor.</a></li>
+         <li><a href="663_ejemplo_de_api_event.html" class="no-ch">6.6.3.- Ejemplo de API Event.</a></li>
+      </ul>
+      </li>
+      <li><a href="67_binding.html" class="daddy">6.7.- Binding.</a>
+      <ul class="other-section">
+         <li><a href="671_configuracin_con_anotaciones.html" class="no-ch">6.7.1.- Configuración con anotaciones.</a></li>
+         <li><a href="672_ejemplos_con_anotaciones.html" class="no-ch">6.7.2.- Ejemplos con anotaciones.</a></li>
+         <li><a href="673_funcionamiento_de_jaxb.html" class="no-ch">6.7.3.- Funcionamiento de JAXB.</a></li>
+         <li><a href="674_ejemplo_marshall_unmarshall.html" class="no-ch">6.7.4.- Ejemplo: Marshall, Unmarshall.</a></li>
+         <li><a href="675_generacin_automtica_de_clases_java_a_partir_del_esquema_xsd.html" class="no-ch">6.7.5.- Generación automática de clases Java a partir del esquema .xsd.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="7_libreras_para_conversin_de_documentos_xml_a_otros_formatos.html" class="daddy">7.- Librerías para conversión de documentos XML a otros formatos.</a>
+   <ul class="other-section">
+      <li><a href="71_introduccin_a_jasperreport.html" class="no-ch">7.1.- Introducción a JasperReport.</a></li>
+      <li><a href="72_disear_y_compilar_la_plantilla.html" class="no-ch">7.2.- Diseñar y compilar la plantilla.</a></li>
+      <li><a href="73_rellenar_el_informe_con_datos_exportar_el_informe.html" class="no-ch">7.3.- Rellenar el informe con datos, exportar el informe.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_listar_ficheros_de_una_carpeta_filtrando.html" class="no-ch">Anexo I.- Listar ficheros de una carpeta, filtrando.</a></li>
+   <li><a href="anexo_ii_cdigo_de_separador_de_rutas.html" class="no-ch">Anexo II.- Código de separador de rutas.</a></li>
+   <li><a href="anexo_iii_cdigo_de_crear_un_fichero.html" class="no-ch">Anexo III.- Código de crear un fichero.</a></li>
+   <li><a href="anexo_iv_cdigo_de_crear_un_directorio.html" class="no-ch">Anexo IV.- Código de crear un directorio.</a></li>
+   <li><a href="anexo_v_anexo_de_recursos.html" class="no-ch">Anexo V.- Anexo de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="641_la_estructura_dom.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="643_creacin_de_un_fichero_xml_a_partir_de_un_documento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.4.2.- Ejemplo completo.</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id84">
+<div class="iDevice emphasis0" >
+<div id="ta84_114_2" class="block iDevice_content">
+<div class="exe-text"><p>El ejemplo siguiente muestra cómo utilizar DOM para analizar y extraer información un fichero XML.</p>
+<p>Listamos la información contenida en el  documento <code>clase.xml</code>, si etiquetas.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>clase.xml
+&lt;? xml version = "1.0"?&gt;
+
+&lt;clase&gt;
+   &lt;alumno numero = "393"&gt;
+      &lt;nombre&gt; Luis &lt;/ nombre&gt;
+      &lt;apellido&gt; Luna &lt;/ apellido&gt;
+      &lt;apodo&gt; Na &lt;/ apodo&gt;
+      &lt;marcas&gt; 85 &lt;/ marcas&gt;
+   &lt;/ alumno&gt;
+&lt;alumno numero = "493"&gt;
+      &lt;nombre&gt; Antonio &lt;/ nombre&gt;
+      &lt;apellido&gt; Alvarez&lt;/ ​​apellido&gt;
+      &lt;apodo&gt; Avez &lt;/ apodo&gt;
+      &lt;marcas&gt; 95 &lt;/ marcas&gt;
+   &lt;/ alumno&gt;   
+&lt;alumno numero = "593"&gt;
+      &lt;nombre&gt; Juan &lt;/ nombre&gt;
+      &lt;apellido&gt; Juz &lt;/ apellido&gt; 
+     &lt;apodo&gt; jazz &lt;/ apodo&gt;
+      &lt;marcas&gt; 90 &lt;/ marcas&gt;
+   &lt;/ alumno&gt;
+&lt;/ clase&gt;</code></pre>
+</div>
+</div>
+<p></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id87">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Pasos a seguir...</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta87_117_2" class="block iDevice_content">
+<div class="exe-text"><p>1.- Importar paquetes XML.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import org.w3c.dom.*;
+import javax.xml.parsers.*;
+import java.io.*;</code></pre>
+</div>
+</div>
+<p>2.- Crear un SAXBuilder.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>DocumentBuilderFactory factory =
+DocumentBuilderFactory.newInstance();
+DocumentBuilder builder = factory.newDocumentBuilder();</code></pre>
+</div>
+</div>
+<p>3.- Crear un documento para el flujo de datos.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>StringBuilder xmlStringBuilder = new StringBuilder();
+xmlStringBuilder.append("&lt;?xml version="1.0"?&gt; &lt;class&gt; &lt;/class&gt;");
+ByteArrayInputStream input = new ByteArrayInputStream(
+   xmlStringBuilder.toString().getBytes("UTF-8"));
+Document doc = builder.parse(input);</code></pre>
+</div>
+</div>
+<p>4.- Extraer el elemento raíz.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>Element root = document.getDocumentElement();</code></pre>
+</div>
+</div>
+<p>5.- Examinar atributos.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//returns specific attribute
+getAttribute("attributeName");
+
+//returns a Map (table) of names/values
+getAttributes();</code></pre>
+</div>
+</div>
+<p>6.- Examinar subelementos.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>//returns a list of subelements of specified name
+getElementsByTagName("subelementName");
+
+//returns a list of all child nodes
+getChildNodes();</code></pre>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id90">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">El programa completo...</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta90_120_2" class="block iDevice_content">
+<div class="exe-text"><div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.io.File;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
+import org.w3c.dom.Element;
+public class DomParserDemo {
+public static void main(String[] args) {
+    try {
+         File inputFile = new File("clase.xml");
+         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+         Document doc = dBuilder.parse(inputFile);
+         doc.getDocumentElement().normalize();
+         System.out.println("Root element :" + 
+         doc.getDocumentElement().getNodeName());
+         NodeList nList = doc.getElementsByTagName("alumno");
+         System.out.println("----------------------------");
+         for (int temp = 0; temp &lt; nList.getLength(); temp++) {
+            Node nNode = nList.item(temp);
+            System.out.println("\nCurrent Element :" + nNode.getNodeName());
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement = (Element) nNode;
+                System.out.println("numero de alumno : "+ eElement.getAttribute("numero"));
+                System.out.println("nombre : "+ eElement.getElementsByTagName("nombre").item(0).getTextContent());
+                System.out.println("apellido :"+ eElement.getElementsByTagName("apellido").item(0).getTextContent());
+                System.out.println("apodo : "+ eElement.getElementsByTagName("apodo").item(0).getTextContent());
+                System.out.println("marcas : "+eElement.getElementsByTagName("marcas").item(0).getTextContent());
+             }
+            }
+          } catch (Exception e) {
+          e.printStackTrace();
+       }
+    }
+} </code></pre>
+</div>
+</div>
+</div>
+<p><a href="https://ioc.xtec.cat/materials/FP/Materials/2252_DAM/DAM_2252_M06/web/html/WebContent/u1/a3/continguts.html" title="Más ejemplos">Más ejemplos</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="641_la_estructura_dom.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="643_creacin_de_un_fichero_xml_a_partir_de_un_documento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431832/mod_resource/content/4/AD02_Contenidos_Web/642_ejemplo_completo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 19:08:16 GMT -->
+</html>

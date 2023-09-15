@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.- Ficheros de configuración y mapeo. Estructura y propiedades. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li><a href="1_concepto_de_mapeo_objetorelacional.html" class="no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul class="other-section">
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li><a href="22_herramientas_orm_ms_utilizadas.html" class="no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li><a href="4_instalacin_y_configuracin_de_hibernate.html" class="no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li id="active"><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="active daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul>
+      <li><a href="51_ficheros_de_configuracin_propiedades.html" class="no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li><a href="7_clases_persistentes.html" class="no-ch">7.- Clases persistentes.</a></li>
+   <li><a href="8_sesiones_estados_de_un_objeto.html" class="no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul class="other-section">
+      <li><a href="111_sintaxis_del_lenguaje_hql.html" class="no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li><a href="112_consultas_por_criterios.html" class="no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li><a href="12_gestin_de_transacciones.html" class="no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="4_instalacin_y_configuracin_de_hibernate.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_ficheros_de_configuracin_propiedades.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id28">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta28_66" class="block iDevice_content">
+<p style="text-align: justify;">En el momento de empezar a trabajar, <strong>Juan</strong> se enfrenta a aspectos esenciales tras la instalación de la herramienta <span lang="en">ORM</span>: los ficheros de configuración y de mapeo para el correcto funcionamiento de <span lang="en">Hibernate</span>.</p>
+<p><img alt="Imagen de Juan, uno de los protagonistas de nuestros casos prácticos." class="elemento_centrado" height="132" src="../jpeg/ad04_cont_r15_juan.jpeg" style="width: 200px; height: 132px;" title="Juan." width="200" /></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id29">
+<div class="iDevice emphasis0">
+<div id="ta29_73" class="block iDevice_content">
+<p style="text-align: justify;">Para empezar a trabajar con <span lang="en">Hibernate</span> es necesario configurar la herramienta para que conozca qué objetos debe recuperar de la base de datos relacional y en qué lugar los hará persistir. Por tanto, el primer paso será tener una base de datos relacional con la que poder trabajar.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id31">
+<div class="iDevice emphasis0">
+<div id="ta31_73" class="block iDevice_content">
+<p>
+En <span lang="en">NetBeans</span>, cuando se crea el archivo de configuración de <span lang="en">Hibernate</span> usando el asistente, podemos especificar la conexión a la base de datos, eligiendo de una lista de conexiones de bases de datos registradas en el <span lang="en">IDE</span>. Cuando se genera el archivo de configuración, el <span lang="en">IDE</span> añade de forma automática detalles de la conexión e información basada en la conexión de la base de datos seleccionada. El <span lang="en">IDE</span> añade también las bibliotecas de <span lang="en">Hibernate</span> en el proyecto. Después de crear el fichero de configuración, éste puede ser editado usando el editor interactivo, o editar directamente el código <span lang="en">XML</span>.
+</p>
+<p>
+El fichero de configuración contiene información sobre la base de datos a la que vamos a conectar la aplicación. Si se la aplicación se va a conectar a varias bases de datos, sería necesario definir tantos archivos de configuración como bases de datos a las que nos queramos conectar.
+</p>
+<p>
+Para tener toda esta información, en <span lang="en">Hibernate</span> surgen dos ficheros distintos:
+</p>
+<ul class="lista_verificacion">
+	<li>El archivo de propiedades de <span lang="en">Hibernate</span> (<code>Hibernate.properties</code>), que es el encargado de determinar todos los aspectos relacionados con el gestor de la base de datos y las conexiones con él.</li>
+	<li>Los archivos que definen el emparejamiento (<span lang="en">mapping</span>) de propiedades con tablas y columnas (<code>*.hbm.xml</code>).
+	</li>
+</ul>
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<a href="../jpeg/ad04_cont_r16_plugins.jpeg" title="Ampliar imagen."><img alt="Captura de pantalla donde se muestra la lista de plugins disponibles en NetBeans y, señalada en fondo azul, la fila en la que aparece “Sakila Sample Database”" class="imagen_ampliable" height="184" src="../jpeg/ad04_cont_r16_plugins_miniatura.jpeg" style="width: 160px; height: 184px" title="Relación de plugins disponibles en NetBeans." width="160" /></a>
+</div>
+</div>
+<div class="elemento_centrado">
+</div>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id32">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta32_70" class="block iDevice_content">
+<p><strong>Para utilizar <span lang="en">Hibernate</span> necesitamos tener una base de datos relacional instalada en <span lang="en">NetBeans</span>. </strong><strong></strong></p>
+<p><strong>La seleccionamos desde la lista de <span lang="en">plugins</span> disponibles y la instalamos en nuestro <span lang="en">IDE</span>.</strong></p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id33">
+<div class="iDevice emphasis0">
+<div id="ta33_73" class="block iDevice_content">
+<p>
+Como ya se ha visto, tras instalar el <span lang="en">plugin</span> podemos crear la base de datos <span lang="en">Sakila</span> desde la ventana Servicios de <span lang="en">NetBeans</span>. Para ello, seleccionaremos el servidor de <span lang="en">MySQL</span> y a continuación esta base de datos. Conectaremos con ella para poder tenerla disponible cuando empecemos a extraer la información que se nos pida.
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id34">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta34_47" class="block iDevice_content">
+<p>En el siguiente enlace encontrarás un documento donde se expone con más detalle aspectos básicos de configuración de Hibernate.</p>
+<p class="enlace_centrado"><a href="https://howtodoinjava.com/hibernate-tutorials/" title="Acceder Enlace a un documento de la herramienta Hibernate.">Tutorial de Hibernate.</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="4_instalacin_y_configuracin_de_hibernate.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_ficheros_de_configuracin_propiedades.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:06 GMT -->
+</html>

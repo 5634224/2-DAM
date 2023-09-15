@@ -1,0 +1,52 @@
+/**********************************************************
+Suponemos una clase TComponente que cuenta con una propiedad
+indexada llamada miembros.
+
+Miembros es un vector de cadenas de caracteres y debe
+proveerse de métodos para rellenar el vector al completo
+o cada uno de sus elementos por separado, indicando su 
+posición en el vector.
+
+De igual forma, precisa de métodos para devolver el vector
+al completo o alguna cadena especificada por su posición.
+
+***********************************************************/
+
+    private String[] miembros = new String[0];
+
+    public String getMiembros(int pos){
+    return miembros[pos];
+    }
+    public String[] getMiembros(){
+        return miembros;
+    }
+
+    public void setMiembros(int pos, String miembro){
+        miembros[pos] = miembro;
+    }
+    public void setMiembros(String[] miembros){
+        if(miembros == null){
+            miembros = new String[0];
+        }
+        this.miembros = miembros;
+    }
+
+
+
+/********************************************************
+Prueba de la clase TComponente
+
+********************************************************/
+
+    TComponente componente = new TComponente();
+
+    componente.setMiembros(new String[]{
+                                "Juan Martín Campos", 
+                                "Lucía Lafuente Martín", 
+                                "Gabriela Sánchez Alcudia"});
+
+    // En la posición 0 tenemos al miembro Juan Martín Campos
+    componente.setMiembros(0, "Juan Martínez Campos");  
+
+    // En miembro se almacenará Lucía Lafuente Martín
+    String miembro = componente.getMiembros(1);

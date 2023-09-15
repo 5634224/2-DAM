@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431922/mod_resource/content/4/AD07_Contenidos_Web/5_introspeccin_reflexin.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:57:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.- Introspección. Reflexión. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Creación de componentes visuales.</a></li>
+   <li><a href="1_concepto_de_componente_caractersticas.html" class="no-ch">1.- Concepto de componente. Características.</a></li>
+   <li><a href="2_propiedades_y_atributos.html" class="no-ch">2.- Propiedades y atributos.</a></li>
+   <li><a href="3_editores_de_propiedades.html" class="no-ch">3.- Editores de propiedades.</a></li>
+   <li><a href="4_eventos_asociacin_de_acciones_a_eventos.html" class="no-ch">4.- Eventos. Asociación de acciones a eventos.</a></li>
+   <li id="active"><a href="5_introspeccin_reflexin.html" class="active no-ch">5.- Introspección. Reflexión.</a></li>
+   <li><a href="6_persistencia_del_componente.html" class="no-ch">6.- Persistencia del componente.</a></li>
+   <li><a href="7_propiedades_simples_e_indexadas.html" class="no-ch">7.- Propiedades simples e indexadas.</a></li>
+   <li><a href="8_propiedades_compartidas_y_restringidas.html" class="no-ch">8.- Propiedades compartidas y restringidas.</a></li>
+   <li><a href="9_herramientas_para_el_desarrollo_de_componentes_visuales.html" class="no-ch">9.- Herramientas para el desarrollo de componentes visuales.</a></li>
+   <li><a href="10_empaquetado_de_componentes.html" class="no-ch">10.- Empaquetado de componentes.</a></li>
+   <li><a href="11_elaboracin_de_un_componente_de_ejemplo.html" class="daddy">11.- Elaboración de un componente de ejemplo.</a>
+   <ul class="other-section">
+      <li><a href="111_modelo_o_base_de_datos.html" class="no-ch">11.1.- Modelo o base de datos.</a></li>
+      <li><a href="112_controlador_o_lgica_del_modelo.html" class="no-ch">11.2.- Controlador o lógica del modelo.</a></li>
+      <li><a href="113_estructura_del_javabean.html" class="no-ch">11.3.- Estructura del JavaBean.</a></li>
+      <li><a href="114_creacin_del_componente.html" class="no-ch">11.4.- Creación del componente.</a></li>
+      <li><a href="115_aadir_propiedades.html" class="no-ch">11.5.- Añadir propiedades.</a></li>
+      <li><a href="116_implementar_el_comportamiento.html" class="no-ch">11.6.- Implementar el comportamiento.</a></li>
+      <li><a href="117_gestin_de_eventos.html" class="no-ch">11.7.- Gestión de eventos.</a></li>
+      <li><a href="118_uso_de_componentes_previamente_elaborados_en_netbeans.html" class="no-ch">11.8.- Uso de componentes previamente elaborados en NetBeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="4_eventos_asociacin_de_acciones_a_eventos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_persistencia_del_componente.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.- Introspección. Reflexión.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id26">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta26_66" class="block iDevice_content">
+<p style="text-align: justify;"><strong>Ada</strong> está muy satisfecha con la conversación.</p>
+<p style="text-align: justify;">-Habéis comentado que los controles que insertamos en un formulario son también componentes, y es así porque coinciden todas sus características. ¿No te llama la atención la capacidad que tienen las herramientas que usamos de detectar el nombre y el tipo de las propiedades?</p>
+<p style="text-align: justify;">-Es verdad -contesta <strong>María</strong>-, también, cuando escribo código directamente, las ayudas a la edición te dan pistas acerca de los métodos que puedes usar o qué argumentos debes colocar en una función. ¿Cómo puede la herramienta conocer eso?</p>
+<p style="text-align: justify;"><img alt="Imagen de Ada, la jefa de la empresa BK, donde se desarrollan nuestros casos prácticos." class="elemento_centrado" height="200" src="../jpg/ad07_cont_r09_ada.jpeg.jpg" style="width: 132px; height: 200px;" title="Ada." width="132" /></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id27">
+<div class="iDevice emphasis0">
+<div id="ta27_73" class="block iDevice_content">
+<p style="text-align: justify;">Un componente, como cualquier otra clase dispone de una interfaz, que es el conjunto de métodos y propiedades accesibles desde el entorno de programación. Normalmente, la interfaz la forman los atributos y métodos públicos.</p>
+<p style="text-align: justify;">La <strong>introspección</strong> es una característica que permite a las herramientas de programación visual arrastrar y soltar un componente en la zona de diseño de una aplicación y determinar dinámicamente qué métodos de interfaz, propiedades y eventos del componente están disponibles.</p>
+<p style="text-align: justify;">Esto se puede conseguir de diferentes formas, pero en el nivel más bajo se encuentra una característica denominada reflexión, que busca aquellos métodos definidos como públicos que empiezan por <span lang="en">get</span> o <span lang="en">set</span>, es decir, se basa en el uso de patrones de diseño, es decir, en establecer reglas en la construcción de la clase de forma que mediante el uso de una nomenclatura específica se permita a la herramienta encontrar la interfaz de un componente.</p>
+<p style="text-align: justify;">En <strong><span lang="en">JavaBeans</span></strong> la introspección se puede conseguir de varias maneras:</p>
+<ul class="lista_verificacion">
+<li style="text-align: justify;">Reflexión de bajo nivel, que utiliza patrones de diseño para descubrir las características del componente por medio de las posibilidades de reflexión del paquete<span style="font-size: 10pt;"> <code>java.lang.reflect.</code></span></li>
+<li style="text-align: justify;">Examinando una clase asociada de información del componente (<span style="font-size: 10pt;"><code>BeanInfo</code></span>) que describe explícitamente sus características para que puedan ser reconocidas.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id29">
+<div class="iDevice emphasis0">
+<div id="ta29_73" class="block iDevice_content">
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id31">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta31_47" class="block iDevice_content">
+<p style="text-align: justify;">En el siguiente enlace podrás acceder a una página <span lang="en">web</span> de Introducción a los <span lang="en">JavaBeans</span> donde podrás ampliar los conceptos de introspección, persistencia, reflexión, etc. de componentes en <span lang="en">Java</span>.</p>
+<p class="enlace_centrado"><a href="http://www.sc.ehu.es/sbweb/fisica/cursoJava/applets/javaBeans/fundamento.htm" title="Acceder a Introducción a los JavaBeans.">Características de los <span lang="en">JavaBeans</span>.</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id32">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-32_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion32_60" class="block question iDevice_content">
+<strong>La reflexión es una forma de implementar la introspección a bajo nivel, sin depender de la aplicación. </strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i32_63" class="sr-av"><a href="#answer-32_63">Opción 1</a></label><input type="radio" name="option32_60" id="i32_63" class="exe-radio-option exe-radio-option-0-2-32_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-32_63"><div id="taans32_63" class="block iDevice_content">
+Verdadero.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i32_104" class="sr-av"><a href="#answer-32_104">Opción 2</a></label><input type="radio" name="option32_60" id="i32_104" class="exe-radio-option exe-radio-option-1-2-32_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-32_104"><div id="taans32_104" class="block iDevice_content">
+Falso.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b32_60" class="feedback js-hidden">
+<div id="taf32_63" class=" iDevice_content">
+Correcto. Así es, es la forma más sencilla de implementar la introspección, ya que solo depende del código que se añada a la clase.
+
+</div>
+</section>
+<section id="sa1b32_60" class="feedback js-hidden">
+<div id="taf32_104" class=" iDevice_content">
+No es correcto, ciertamente la reflexión es el modo más sencillo de introspección.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-32_63">Opción correcta</a><span> (<a href="#sa0b32_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-32_104">Incorrecto</a><span> (<a href="#sa1b32_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="4_eventos_asociacin_de_acciones_a_eventos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_persistencia_del_componente.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431922/mod_resource/content/4/AD07_Contenidos_Web/5_introspeccin_reflexin.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:57:01 GMT -->
+</html>

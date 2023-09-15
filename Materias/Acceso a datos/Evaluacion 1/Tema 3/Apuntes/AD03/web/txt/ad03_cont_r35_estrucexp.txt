@@ -1,0 +1,16 @@
+ try {
+              // Bloque de instrucciones del try
+            
+            }catch (FileNotFoundException fnfe){
+              // Bloque para excepción por fichero no encontrado
+                
+            }catch(IOException ioe){
+              // Bloque para excepción por error de entrada salida
+                
+            }catch(SQLException sqle){
+              // Bloque para excepción por error con SQL
+            }catch(Exception e){
+
+            }finally{
+             //Instrucciones finales para, por ejemplo, limpieza
+            }

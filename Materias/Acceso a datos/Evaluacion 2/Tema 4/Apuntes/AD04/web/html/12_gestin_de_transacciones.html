@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/12_gestin_de_transacciones.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>12.- Gestión de transacciones. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-18"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li><a href="1_concepto_de_mapeo_objetorelacional.html" class="no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul class="other-section">
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li><a href="22_herramientas_orm_ms_utilizadas.html" class="no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li><a href="4_instalacin_y_configuracin_de_hibernate.html" class="no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul class="other-section">
+      <li><a href="51_ficheros_de_configuracin_propiedades.html" class="no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li><a href="7_clases_persistentes.html" class="no-ch">7.- Clases persistentes.</a></li>
+   <li><a href="8_sesiones_estados_de_un_objeto.html" class="no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul class="other-section">
+      <li><a href="111_sintaxis_del_lenguaje_hql.html" class="no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li><a href="112_consultas_por_criterios.html" class="no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="12_gestin_de_transacciones.html" class="active no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="112_consultas_por_criterios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_licencias_de_recursos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">12.- Gestión de transacciones.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id71">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta71_66" class="block iDevice_content">
+<p><strong>Juan </strong>está muy contento con la implementación de la interacción de la aplicación con la base de datos. El uso de clases y objetos que de forma transparente realizan las operaciones con las base de datos, supone un gran ventaja en la programación de aplicaciones con acceso a bases de datos. Sin embargo le surge una duda, ¿qué ocurre si hay varios accesos simultáneos a un determinado datos, uno para consultar y otro para actualizarlo? ¿Cómo se pueden gestionar la transacciones?</p>
+<p><img alt="Fotografía de Juan con camisa." class="elemento_centrado" height="132" src="../jpeg/ad04_cont_r15_juan.jpeg" style="width: 200px; height: 132px;" title="Juan de nuevo." width="200" /></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id72">
+<div class="iDevice emphasis0">
+<div id="ta72_73" class="block iDevice_content">
+<p><img alt="Imagen donde aparecen dos pantalla de ordenador, con un operario interactuando con ellas." class="elemento_derecha" height="132" src="../jpg/ad04_cont_r28_transaccion.jpg" style="width: 200px; height: 132px;" title="Transacción." width="200" /></p>
+<p>Un transacción es un conjunto de órdenes que se ejecutan formando un unidad de trabajo, en forma indivisible o atómica.</p>
+<p>Para la gestión de transacciones en <span lang="en">Hibernate</span>, no se produce bloqueo de objetos en la memoria. La aplicación puede esperar el comportamiento definido por el nivel de aislamiento de sus transacciones de las bases de datos. Gracias a la <code>Session</code>, la cual también es un caché con alcance de transacción. Para realizar con éxito la gestión de transacciones, ésta se van a basar en el uso del objeto <code>Session</code>.</p>
+<p>El objeto <code>Session</code> se obtiene a partir de un objeto <code>SessionFactory</code> ,invocando el método <code>openSession</code>. Un objeto <code>SessionFactory</code> representa una configuración particular de un conjunto de metadatos de <span lang="en">mapping</span> objeto/relaciona.</p>
+<pre><code></code></pre>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>Session session = HibernateUtil.getSessionFactory().openSession();
+Transaction tx = null;
+try 
+{
+          tx = session.beginTransaction();
+// Utilizar la Session para saveOrUpdate/get/delete/...tx.commit();
+} catch (Exception e) 
+{
+          if (tx != null) 
+          {
+               tx.rollback();
+               throw e;
+          }
+} finally {
+          session.close();
+}// Al finalizar la aplicación ...HibernateUtil.shutdown( );</code></pre>
+</div>
+</div>
+<p>Cuando se crea el objeto <code>Session</code> , se le asigna la conexión de la base de datos que va a utilizar. Una vez obtenido el objeto <code>Session</code> , se crea una nueva unidad de trabajo ( <span lang="en">Transaction</span>) utilizando el método <code>beginTransaction</code>. Dentro del contexto de la transacción creada, se pueden invocarlos métodos de gestión de persistencia proporcionados por el objeto <code>Session</code>, para recuperar, añadir, eliminar o modificar el estado de instancias de clases persistentes. También se pueden realizar consultas. Si las operaciones de persistencia no han producido ninguna excepción, se invoca el método <code>commit</code> de la unidad de trabajo para confirmar los cambios realizados. En caso contrario, se realiza un <code>rollback</code> para deshacer los cambios producidos. Sobre un mismo objeto Session pueden crearse varias unidades de trabajo. Finalmente se cierra el objeto <code>Session</code> invocando su método <code>close</code>.</p>
+<p></p>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="112_consultas_por_criterios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_licencias_de_recursos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/12_gestin_de_transacciones.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:12 GMT -->
+</html>

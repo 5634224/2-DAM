@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431832/mod_resource/content/4/AD02_Contenidos_Web/41_operaciones_bsicas_sobre_ficheros_de_acceso_secuencial.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 19:08:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.1.- Operaciones básicas sobre ficheros de acceso secuencial. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Manejo de ficheros.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_clases_asociadas_a_las_operaciones_de_gestin_de_ficheros_y_directorios.html" class="daddy">2.- Clases asociadas a las operaciones de gestión de ficheros y directorios.</a>
+   <ul class="other-section">
+      <li><a href="21_clase_file.html" class="daddy">2.1.- Clase File.</a>
+      <ul class="other-section">
+         <li><a href="211_existencia_y_listado_de_ficheros_y_carpetas.html" class="no-ch">2.1.1.- Existencia y listado de ficheros y carpetas.</a></li>
+         <li><a href="212_creacin_y_eliminacin_de_ficheros_y_directorios.html" class="no-ch">2.1.2.- Creación y eliminación de ficheros y directorios.</a></li>
+      </ul>
+      </li>
+      <li><a href="22_interface_filenamefilter.html" class="no-ch">2.2.- Interface FilenameFilter.</a></li>
+      <li><a href="23_rutas_de_los_ficheros.html" class="no-ch">2.3.- Rutas de los ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_flujos.html" class="daddy">3.- Flujos.</a>
+   <ul class="other-section">
+      <li><a href="31_flujos_basados_en_bytes.html" class="no-ch">3.1.- Flujos basados en bytes.</a></li>
+      <li><a href="32_flujos_basados_en_caracteres.html" class="no-ch">3.2.- Flujos basados en caracteres.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_formas_de_acceso_a_un_fichero.html" class="current-page-parent daddy">4.- Formas de acceso a un fichero.</a>
+   <ul>
+      <li id="active"><a href="41_operaciones_bsicas_sobre_ficheros_de_acceso_secuencial.html" class="active no-ch">4.1.- Operaciones básicas sobre ficheros de acceso secuencial.</a></li>
+      <li><a href="42_operaciones_bsicas_sobre_ficheros_de_acceso_aleatorio.html" class="no-ch">4.2.- Operaciones básicas sobre ficheros de acceso aleatorio.</a></li>
+      <li><a href="43_enlaces_de_inters_sobre_ficheros.html" class="no-ch">4.3.- Enlaces de interés sobre ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_java_nio.html" class="daddy">5.- Java NIO.</a>
+   <ul class="other-section">
+      <li><a href="51_java_nio_path.html" class="no-ch">5.1.- Java NIO Path.</a></li>
+      <li><a href="52_clases_java_nio_files.html" class="no-ch">5.2.- Clases Java NIO Files.</a></li>
+      <li><a href="53_escribir_contenido_en_un_fichero.html" class="no-ch">5.3.- Escribir contenido en un fichero.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_trabajo_con_ficheros_xml_analizadores_sintcticos_parser_y_vinculacin_binding.html" class="daddy">6.- Trabajo con ficheros XML: analizadores sintácticos (parser) y vinculación (binding).</a>
+   <ul class="other-section">
+      <li><a href="61_conceptos_previos.html" class="no-ch">6.1.- Conceptos previos.</a></li>
+      <li><a href="62_definiciones.html" class="no-ch">6.2.- Definiciones.</a></li>
+      <li><a href="63_parser_o_analizador_xml.html" class="no-ch">6.3.- "Parser" o analizador XML.</a></li>
+      <li><a href="64_dom.html" class="daddy">6.4.- DOM.</a>
+      <ul class="other-section">
+         <li><a href="641_la_estructura_dom.html" class="no-ch">6.4.1.- La estructura DOM.</a></li>
+         <li><a href="642_ejemplo_completo.html" class="no-ch">6.4.2.- Ejemplo completo.</a></li>
+         <li><a href="643_creacin_de_un_fichero_xml_a_partir_de_un_documento.html" class="no-ch">6.4.3.- Creación de un fichero XML a partir de un documento.</a></li>
+      </ul>
+      </li>
+      <li><a href="65_sax.html" class="no-ch">6.5.- SAX.</a></li>
+      <li><a href="66_stax.html" class="daddy">6.6.- StAX.</a>
+      <ul class="other-section">
+         <li><a href="661_caractersticas_de_stax.html" class="no-ch">6.6.1.- Características de StAX.</a></li>
+         <li><a href="662_ejemplo_de_api_cursor.html" class="no-ch">6.6.2.- Ejemplo de API Cursor.</a></li>
+         <li><a href="663_ejemplo_de_api_event.html" class="no-ch">6.6.3.- Ejemplo de API Event.</a></li>
+      </ul>
+      </li>
+      <li><a href="67_binding.html" class="daddy">6.7.- Binding.</a>
+      <ul class="other-section">
+         <li><a href="671_configuracin_con_anotaciones.html" class="no-ch">6.7.1.- Configuración con anotaciones.</a></li>
+         <li><a href="672_ejemplos_con_anotaciones.html" class="no-ch">6.7.2.- Ejemplos con anotaciones.</a></li>
+         <li><a href="673_funcionamiento_de_jaxb.html" class="no-ch">6.7.3.- Funcionamiento de JAXB.</a></li>
+         <li><a href="674_ejemplo_marshall_unmarshall.html" class="no-ch">6.7.4.- Ejemplo: Marshall, Unmarshall.</a></li>
+         <li><a href="675_generacin_automtica_de_clases_java_a_partir_del_esquema_xsd.html" class="no-ch">6.7.5.- Generación automática de clases Java a partir del esquema .xsd.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="7_libreras_para_conversin_de_documentos_xml_a_otros_formatos.html" class="daddy">7.- Librerías para conversión de documentos XML a otros formatos.</a>
+   <ul class="other-section">
+      <li><a href="71_introduccin_a_jasperreport.html" class="no-ch">7.1.- Introducción a JasperReport.</a></li>
+      <li><a href="72_disear_y_compilar_la_plantilla.html" class="no-ch">7.2.- Diseñar y compilar la plantilla.</a></li>
+      <li><a href="73_rellenar_el_informe_con_datos_exportar_el_informe.html" class="no-ch">7.3.- Rellenar el informe con datos, exportar el informe.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_listar_ficheros_de_una_carpeta_filtrando.html" class="no-ch">Anexo I.- Listar ficheros de una carpeta, filtrando.</a></li>
+   <li><a href="anexo_ii_cdigo_de_separador_de_rutas.html" class="no-ch">Anexo II.- Código de separador de rutas.</a></li>
+   <li><a href="anexo_iii_cdigo_de_crear_un_fichero.html" class="no-ch">Anexo III.- Código de crear un fichero.</a></li>
+   <li><a href="anexo_iv_cdigo_de_crear_un_directorio.html" class="no-ch">Anexo IV.- Código de crear un directorio.</a></li>
+   <li><a href="anexo_v_anexo_de_recursos.html" class="no-ch">Anexo V.- Anexo de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="4_formas_de_acceso_a_un_fichero.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_operaciones_bsicas_sobre_ficheros_de_acceso_aleatorio.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.1.- Operaciones básicas sobre ficheros de acceso secuencial.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id34">
+<div class="iDevice emphasis0">
+<div id="ta34_73" class="block iDevice_content">
+<p><img alt="Tres tipos de disquetes: de 5 y media, de tres y cuarto y otro más grande que esos dos." class="elemento_derecha" height="148" src="../jpg/ad02_cont_r19_discos.jpg" title="Disquetes." width="200" /></p>
+<p style="text-align: justify;">Como <strong>operaciones más comunes en ficheros de acceso secuencial</strong>, tenemos el acceso para:</p>
+<ul class="lista_verificacion">
+<li style="text-align: justify;">Crear un fichero o abrirlo para grabar datos.</li>
+<li style="text-align: justify;">Leer datos del fichero.</li>
+<li style="text-align: justify;">Borrar información de un fichero.</li>
+<li style="text-align: justify;">Copiar datos de un fichero a otro.</li>
+<li style="text-align: justify;">Búsqueda de información en un fichero.</li>
+<li style="text-align: justify;">Cerrar un fichero.<code></code></li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id35">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_debesconocerfpd.png)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta35_48" class="block iDevice_content">
+<p>En este enlace puedes ver un ejemplo con <span lang="en">buffer</span>.</p>
+<p class="enlace_centrado"><a href="https://javadesdecero.es/avanzado/streams-de-bytes/" target="_blank" title="Acceder a web con ejemplo de flujo de salida con Buffer tipo secuencial" rel="noopener">Acceder a web con ejemplo de flujo de salida con Buffer tipo secuencial</a></p>
+<p class="enlace_centrado">Ahora vamos a ver como buscar en un archivo secuencial. La idea es que al ser un fichero secuencial tenemos que abrirlo e ir leyendo hasta encontrar el dato que buscamos, si es que lo encontramos. Esto se muestra a continuación:</p>
+<div><code>String busqueda = jTexField1.getText();</code></div>
+<div><code>try {</code></div>
+<div><code>// Declarar variable</code></div>
+<div><code>DataInputStream archivo = null;</code></div>
+<div><code>// Abrir el archivo</code></div>
+<div><code>archivo = new DataInputStream ( new FileInputStream ("c:\\secuencial.dar") );</code></div>
+<div><code>// Leer archivo</code></div>
+<div><code>while (seguir) {</code></div>
+<div><code>// Leer el nombre</code></div>
+<div><code>nombre = archivo.readUTF();</code></div>
+<div><code>// Si el nombre es el que buscamos</code></div>
+<div><code>if (busqueda.equals (nombre) {</code></div>
+<div><code>System.out.println ("encontrado");</code></div>
+<div><code>seguir = false;</code></div>
+<div><code>jLabel2.setText ("¡¡Registro encontrado!!");</code></div>
+<div><code>}</code></div>
+<div><code>// Leer los otros campos</code></div>
+<div><code>apellidos = archivo.readUTF ();</code></div>
+<div><code>edad = archivo.readInt ();</code></div>
+<div><code>}</code></div>
+<div><code>// Cerrar fichero</code></div>
+<div><code>archivo.close ();</code></div>
+<div><code>}</code></div>
+<div><code>catch (FileNotFoundException fne) { / * Archivo no encontrado * / }</code></div>
+<div><code>catch (IOException ioe) { / * Error al escribir * / }</code></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id36">
+<div class="iDevice emphasis0">
+<div id="ta36_73" class="block iDevice_content">
+<p>Cuando se trabaja con ficheros de texto se recomienda usar las clases <strong><code>Reader</code></strong>, para entrada o lectura de caracteres, y <strong><code>Writer</code></strong> para salida o escritura de caracteres. Estas dos clases están optimizadas para trabajar con caracteres y con texto en general, debido a que tienen en cuenta que cada carácter Unicode está representado por dos <span lang="en">bytes</span>.</p>
+<p>Las subclases de <code>Writer</code> y <code>Reader</code> que permiten trabajar con ficheros de texto son:</p>
+<ul class="lista_verificacion">
+<li><code>FileReader</code>, para lectura desde un fichero de texto. Crea un flujo de entrada que trabaja con caracteres en vez de con <span lang="en">bytes</span>.</li>
+<li><code>FileWriter</code>, para escritura hacia un fichero de texto. Crea un flujo de salida que trabaja con caracteres en vez de con <span lang="en">bytes</span>.</li>
+</ul>
+<p>También se puede montar un <span lang="en">buffer</span> sobre cualquiera de los flujos que definen estas clases:</p>
+<ul class="lista_verificacion">
+<li><code>BufferedWriter</code> se usa para montar un <span lang="en">buffer</span> sobre un flujo de salida de tipo <code>FileWriter</code>.</li>
+<li><code>BufferedReader</code> se usa para montar un <span lang="en">buffer</span> sobre un flujo de entrada de tipo <code>FileReader</code>.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id37">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta37_54" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b37" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b37" class="block iDevice_content">
+<p>
+Señala si la afirmación es verdadera o falsa: La clase <code>Reader</code> está optimizada para trabajar con ficheros binarios. 
+</p>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b37"><input type="radio" name="option0b37" id="true0b37" class="exe-radio-option exe-radio-option-0-2-0b37-truefalse" /> Verdadero</label> 
+<label for="false0b37"><input type="radio" name="option0b37" id="false0b37" class="exe-radio-option exe-radio-option-1-2-0b37-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b37" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b37-result" class="wrong">Falso</strong></p>
+Está optimizada para ficheros de texto.
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="4_formas_de_acceso_a_un_fichero.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_operaciones_bsicas_sobre_ficheros_de_acceso_aleatorio.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431832/mod_resource/content/4/AD02_Contenidos_Web/41_operaciones_bsicas_sobre_ficheros_de_acceso_secuencial.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 19:08:14 GMT -->
+</html>

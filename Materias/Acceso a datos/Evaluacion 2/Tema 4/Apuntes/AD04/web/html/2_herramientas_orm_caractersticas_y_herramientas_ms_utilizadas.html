@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.- Herramientas ORM. Características y herramientas más utilizadas. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li><a href="1_concepto_de_mapeo_objetorelacional.html" class="no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li id="active"><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="active daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul>
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li><a href="22_herramientas_orm_ms_utilizadas.html" class="no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li><a href="4_instalacin_y_configuracin_de_hibernate.html" class="no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul class="other-section">
+      <li><a href="51_ficheros_de_configuracin_propiedades.html" class="no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li><a href="7_clases_persistentes.html" class="no-ch">7.- Clases persistentes.</a></li>
+   <li><a href="8_sesiones_estados_de_un_objeto.html" class="no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul class="other-section">
+      <li><a href="111_sintaxis_del_lenguaje_hql.html" class="no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li><a href="112_consultas_por_criterios.html" class="no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li><a href="12_gestin_de_transacciones.html" class="no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_concepto_de_mapeo_objetorelacional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_caractersticas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.- Herramientas ORM. Características y herramientas más utilizadas.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id7">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta7_66" class="block iDevice_content">
+<p>
+En la empresa se ponen manos a la obra para estudiar las herramientas que permitan almacenar objetos y clases en bases de datos relacionales. ¿Qué son y qué características tienen las herramientas <span lang="en">ORM</span>?
+</p>
+<img alt="Imagen que muestra a un hombre de perfil escribiendo en el teclado de un ordenador. " class="elemento_centrado" height="112" src="../jpeg/ad04_cont_r04_programador_01.jpeg" style="width: 200px; height: 112px" title="Trabajando con herramientas ORM." width="200" />
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id8">
+<div class="iDevice emphasis0">
+<div id="ta8_73" class="block iDevice_content">
+<p>
+Ya hemos dicho que las herramientas <span lang="en">ORM</span> se utilizan para dar solución al problema de que, en la programación orientada a objetos, la gestión de datos se implementa usando objetos; sin embargo, en los sistemas de gestión de bases de datos <acronym lang="en" title="Structured Query Language. Lenguaje de Consulta Estructurado.">SQL</acronym> sólo se pueden almacenar y manipular valores escalares organizados en tablas relacionales.
+</p>
+<p>
+<span lang="en">Object Relational Mapping</span> (<span lang="en">ORM</span>) es la herramienta que nos sirve para transformar representaciones de datos de los Sistemas de Bases de Datos Relacionales, a representaciones (Modelos) de objetos. Dado a que los <acronym lang="en" title="Relational Data Base Management Systems. Sistema de Gestión de Bases de Datos Relacionales.">RDBMS</acronym> carecen de la flexibilidad para representar datos no escalares, la existencia de un <span lang="en">ORM</span> es fundamental para el desarrollo de sistemas de <span lang="en">software</span> robustos y escalables.
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id9">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta9_70" class="block iDevice_content">
+<p>
+<strong>En el modelo relacional, cada fila en la tabla se mapea a un objeto y cada columna a una propiedad.</strong>
+</p>
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id10">
+<div class="iDevice emphasis0">
+<div id="ta10_73" class="block iDevice_content">
+<p>
+Las herramientas <span lang="en">ORM</span> pues, actúan como un puente que conecta las ventajas de los <span lang="en">RDBMS</span> con la buena representación de estos en un lenguaje Orientado a Objetos, o, dicho en otras palabras, nos lleva de la base de datos al lenguaje de programación.
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id11">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta11_47" class="block iDevice_content">
+<p>
+Qué son y cómo actúan las herramientas <span lang="en">ORM</span>. En el siguiente enlace encontrarás un artículo muy interesante sobre los tipos de herramientas <span lang="en">ORM</span> más utilizados en la actualidad y sus características más importantes.
+</p>
+<p class="enlace_centrado">
+<a href="http://www.srbyte.com/2009/09/que-es-orm.html" title="Acceder a un documento sobre las herramientas ORM.">Tipos y características de las herramientas <span lang="en">ORM</span>.</a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id13">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-13_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion13_60" class="block question iDevice_content">
+Utilizando una herramienta <span lang="en">ORM</span> podemos recuperar los objetos de un programa en formas compatibles con el sistema de almacenamiento de los gestores de bases de datos relacionales.
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i13_63" class="sr-av"><a href="#answer-13_63">Opción 1</a></label><input type="radio" name="option13_60" id="i13_63" class="exe-radio-option exe-radio-option-0-2-13_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-13_63"><div id="taans13_63" class="block iDevice_content">
+No.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i13_82" class="sr-av"><a href="#answer-13_82">Opción 2</a></label><input type="radio" name="option13_60" id="i13_82" class="exe-radio-option exe-radio-option-1-2-13_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-13_82"><div id="taans13_82" class="block iDevice_content">
+Si.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b13_60" class="feedback js-hidden">
+<div id="taf13_63" class=" iDevice_content">
+Incorrecta.  Realmente, esa es la función principal de una herramienta <span lang="en">ORM</span>.
+
+</div>
+</section>
+<section id="sa1b13_60" class="feedback js-hidden">
+<div id="taf13_82" class=" iDevice_content">
+Correcto. Efectivamente, y esos objetos se llaman persistentes.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-13_63">Incorrecto</a><span> (<a href="#sa0b13_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-13_82">Opción correcta</a><span> (<a href="#sa1b13_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_concepto_de_mapeo_objetorelacional.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_caractersticas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:02 GMT -->
+</html>

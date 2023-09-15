@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/7_clases_persistentes.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.- Clases persistentes. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li><a href="1_concepto_de_mapeo_objetorelacional.html" class="no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul class="other-section">
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li><a href="22_herramientas_orm_ms_utilizadas.html" class="no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li><a href="4_instalacin_y_configuracin_de_hibernate.html" class="no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul class="other-section">
+      <li><a href="51_ficheros_de_configuracin_propiedades.html" class="no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li id="active"><a href="7_clases_persistentes.html" class="active no-ch">7.- Clases persistentes.</a></li>
+   <li><a href="8_sesiones_estados_de_un_objeto.html" class="no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul class="other-section">
+      <li><a href="111_sintaxis_del_lenguaje_hql.html" class="no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li><a href="112_consultas_por_criterios.html" class="no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li><a href="12_gestin_de_transacciones.html" class="no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="8_sesiones_estados_de_un_objeto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.- Clases persistentes.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id49">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta49_66" class="block iDevice_content">
+<p>
+Para poder interactuar con un bases de datos, <strong>María </strong>debe definir en su aplicación  clases y objetos que puedan representar las entidades de la base de datos con la que interacciona la aplicación.
+</p>
+<img alt="Imagen de María, una de las protagonistas de nuestros casos prácticos en la oficina." class="elemento_centrado" height="132" src="../jpg/ad04_cont_r02_maria.jpg" style="width: 200px; height: 132px" title="María en la oficina. " width="200" />
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id50">
+<div class="iDevice emphasis0">
+<div id="ta50_73" class="block iDevice_content">
+<p><img alt="Imagen que muestra una pantalla de ordenador y una con un bolígrafo, tomando notas sobre un cuaderno." class="elemento_derecha" height="132" src="../jpg/ad04_cont_r22_configura.jpg" style="width: 200px; height: 132px;" title="Alimentación de clases persistentes." width="200" /></p>
+<p>Se denomina "persistencia" de los objetos a su capacidad para guardarse y recuperarse desde un medio de almacenamiento. Las clases persistente son clases en una aplicación que nos van a servir para representar entidades de la base de datos. No se considera que todas las instancia de una clase persistente puedan estar en estado persistente, ya que una instancia puede ser transitorio o separada.</p>
+<p>El estándar Java <span lang="en">Data</span> <span lang="en">Objects</span> (<acronym lang="en" title="Java Data Objects. Objetos de Datos Java.">JDO</acronym>), define una clase con capacidad de persistencia, como aquella que implementa la interaface javax.jdo.PersistenceCapable.</p>
+<p>Las clases persistentes tienen la capacidad de definir objetos que pueden almacenarse y recuperarse y un almacén persistente de datos. La especificación <span lang="en">JDO</span> incorpora la figura del procesador de clases en código ejecutable <span lang="en">Java</span>, <span lang="en">JDO</span> <span lang="en">Enhacer</span>, que es un programa que modifica los archivos compilados de las clases, añadiendo el código ejecutable necesario para realizar la grabación y recuperación transparente de los atributos de las instancias persistentes.</p>
+<p><span lang="en">JDO</span> permite a los programadores y programadoras convertir sus clases en persistentes, de forma que los objetos pertenecientes a clases concretas definidas por el programador pueden mantener su estado, con la única limitación de que el estado esté compuesto por los atributos persistentes que sean independientes del contexto de ejecución: tipos primitivos, tipos de referencia e interfaz y algunas clases del sistema que permiten modelar el estado como por ejemplo la clase <code>Array, Date</code>, etc.</p>
+<p>Para poder indicar las clases y atributos que son persistentes, se utiliza un fichero de configuración <span lang="en">XML</span>, que se denomina descriptor de persistencia.. Para que las instancias de las clases persistentes pueden mantenerse en los sistemas gestores de bases de datos, es necesario establecer la correspondencia entre los objetos y su estado persistente.</p>
+<p style="text-align: justify;">Las clases Java deberán tener las siguientes características:</p>
+<ul style="text-align: justify;">
+<li>Deben tener un constructor público sin ningún tipo de argumentos.</li>
+<li>Para cada propiedad que queramos persistir debe haber un método get/set asociado.</li>
+<li>Implementar el interfaz serializable.</li>
+</ul>
+<p style="text-align: justify;">Equivalen a la tabla de la base de datos y un registro o fila es un objeto persistente de esa clase. Un ejemplo podría ser el que se muestra a continuación:</p>
+<div class="highlighted-code language-java" style="text-align: justify;">
+<div>
+<pre><code>package Persistente;
+import java.util.HashSet;
+import java.util.Set;
+public class Departamentos implements java.io.Serializable {
+private byte deptNo;
+
+private String dnombre;
+private String loc;
+private Set empleadoses = new HashSet(0);
+public Departamentos() {
+}
+public Departamentos(byte deptNo) {
+    this.deptNo = deptNo;
+}
+public Departamentos(byte deptNo, String dnombre, String loc, Set
+    empleadoses) {
+    this.deptNo = deptNo;
+    this.dnombre = dnombre;
+    this.loc = loc;
+    this.empleadoses = empleadoses;
+}
+    public byte getDeptNo() {
+    return this.deptNo;
+}
+    public void setDeptNo(byte deptNo) {
+    this.deptNo = deptNo;
+}
+    public String getDnombre() {
+    return this.dnombre;
+}
+    public void setDnombre(String dnombre) {
+    this.dnombre = dnombre;
+}
+    public String getLoc() {
+    return this.loc;
+}
+    public void setLoc(String loc) {
+    this.loc = loc;
+}
+    public Set getEmpleadoses() {
+    return this.empleadoses;
+}
+    public void setEmpleadoses(Set empleadoses) {
+    this.empleadoses = empleadoses;
+}
+    public void setdeptNo(byte b) {
+    throw new UnsupportedOperationException("Not yet implemented");
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;"></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id51">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta51_47" class="block iDevice_content">
+<p>
+El siguiente enlace nos muestra documentación sobre <span lang="en">Java Data Objects</span>. (En inglés)
+</p>
+<p class="enlace_centrado">
+<a href="http://www.oracle.com/technetwork/java/index-jsp-135919.html" title="Acceder Página de Oracle sobre Java Data Objects.">Java Data Objects.</a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="8_sesiones_estados_de_un_objeto.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/7_clases_persistentes.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:09 GMT -->
+</html>

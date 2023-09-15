@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/111_sintaxis_del_lenguaje_hql.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.1.- Sintaxis del lenguaje HQL. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-17"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li><a href="1_concepto_de_mapeo_objetorelacional.html" class="no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul class="other-section">
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li><a href="22_herramientas_orm_ms_utilizadas.html" class="no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li><a href="4_instalacin_y_configuracin_de_hibernate.html" class="no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul class="other-section">
+      <li><a href="51_ficheros_de_configuracin_propiedades.html" class="no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li><a href="7_clases_persistentes.html" class="no-ch">7.- Clases persistentes.</a></li>
+   <li><a href="8_sesiones_estados_de_un_objeto.html" class="no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li class="current-page-parent"><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="current-page-parent daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul>
+      <li id="active"><a href="111_sintaxis_del_lenguaje_hql.html" class="active no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li><a href="112_consultas_por_criterios.html" class="no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li><a href="12_gestin_de_transacciones.html" class="no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="112_consultas_por_criterios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.1.- Sintaxis del lenguaje HQL.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id67">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta67_66" class="block iDevice_content">
+<p>
+Para poder sacarle el máximo partido a las herramienta <span lang="en">Hibernate</span>, <strong>Ada</strong> es consciente que el equipo de BK debe conocer la sintaxis básicas del lenguaje <span lang="en">HQL</span>. Conociendo la forma de construir consultas con <span lang="en">HQL</span>, se abre un abanico muy grande de posibilidades, para la implementación de consultas de ciertas complejidad.
+</p>
+<img alt="Imagen de Ada, en la oficina." class="elemento_centrado" height="200" src="../jpeg/ad04_cont_r01_ada.jpeg" style="width: 132px; height: 200px" title="Ada la jefa de BK." width="132" />
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id68">
+<div class="iDevice emphasis0">
+<div id="ta68_73" class="block iDevice_content">
+<p style="text-align: justify;">El Hibernate Query Languaje (HQL) es el lenguaje de consultas que usa Hibernate para obtener los objetos desde la base de datos. Su principal particularidad es que las consultas se realizan sobre los objetos java que forman nuestro modelo de negocio, es decir, las entidades que se persisten en Hibernate. Ésto hace que HQL tenga las siguientes características:</p>
+<ul style="text-align: justify;">
+<li>
+<div>Los tipos de datos son los de Java.</div>
+</li>
+<li>
+<div>Las consultas son independientes del lenguaje de <acronym title="Structured Query Language">SQL</acronym> específico de la base de datos</div>
+</li>
+<li>
+<div>Las consultas son independientes del modelo de tablas de la base de datos.</div>
+</li>
+<li>
+<div>Es posible tratar con las colecciones de Java.</div>
+</li>
+<li>
+<div>Es posible navegar entre los distintos objetos en la propia consulta.</div>
+</li>
+</ul>
+<div style="text-align: justify;">En Hibernate las consultas HQL se lanzan (o se ejecutan) sobre el modelo de entidades que hemos definido en Hibernate, esto es, sobre nuestras clases de negocio.</div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">Las sentencias que se estudian en este capitulo son del lenguaje HQL de Hibernate, en gran parte son compatibles con JPQL (Java Pesistance Query Language), lenguaje de consulta de persistencia de Java.</div>
+<div style="text-align: justify;">
+<p></p>
+<p>De forma poco ortodoxa se podría ver cómo que nuestro <em>modelo de tablas</em> en HQL son las clases Java y <strong>NO</strong> las tablas de la base de datos. Es decir que cuando hagamos ”<code>SELECT columna FROM nombreTabla</code>” , el <span style="font-size: 10pt;">”<code>nombreTabla</code>”</span> será una clase Java y <span style="font-size: 10pt;">”<code>columna</code>”</span> será una propiedad Java de dicha clase y <strong>nunca</strong> una tabla de la base de datos ni una columna de una tabla.</p>
+<p><img alt="Captura de pantalla de Netbeans, donde aparece el código de una consulta HQL, junto con el resultado de su ejecución." class="imagen_ampliable" height="200" src="../jpg/ad04_cont_r26a_consultahql_miniatura.jpg" title="Consulta HQL." width="144" style="width: 144px; height: 200px;" /></p>
+</div>
+<p id="yui_3_17_2_1_1596713469718_136" style="text-align: justify;"><strong><span style="font-size: 12pt;">Sentencias consulta (SELECT)</span></strong></p>
+<ul style="text-align: justify;">
+<li><strong>Clausula <span lang="en">from</span></strong>: La consulta más simple que se puede realizar con <span lang="en">Hibernate</span>, es utilizando la cláusula <code>from</code>, la siguientes sería una consulta que mostraría todos los datos de una tabla de nombre Alumnos: <code>from Alumnos</code></li>
+<li><strong>Cláusula <span lang="en">select</span></strong>: La cláusula select escoge qué objetos y propiedades devolver en el conjunto de resultados de la consulta. Un ejemplo de consulta podría ser <code>select alumno.nombre from Alumnos alumno where alumno.nombre like 'A%'</code></li>
+<li><strong>La cláusula <span lang="en">where</span></strong>: La cláusula <code>where</code> nos permite refinar la lista de instancias retornadas. Si no existe ningún alias, puede referirse a las propiedades por nombre: <code>from Alumnos where nombre='Francisco'</code>. Si existe un alias, usaremos un nombre de propiedad calificado: <code>from Alumnos as alumnos where alumnos.nombre='Francisco'</code>. Esto retorna instancias de Alumnos llamados "Francisco".</li>
+<li><strong>Funciones de agregación</strong>. Las consultas HQL pueden retornar resultados de funciones de agregación sobre propiedades: <code>select avg(alumnos.nota), sum(alumnos.nota), max(alumnos.nota), count(alumnos) from Alumnos alumnos</code>.</li>
+<li><strong>Expresiones</strong>. Las expresiones utilizadas en la cláusula <span lang="en">where</span> incluyen lo siguiente: operadores matemáticos, operadores de comparación binarios, operadores lógicos , paréntesis ( ) que indican agrupación, funciones <span lang="en">Java</span>, etc.</li>
+<li><strong>La cláusula <span lang="en">order</span> <span lang="en">by</span></strong>. La lista retornada por una consulta se puede ordenar por cualquier propiedad de una clase retornada o componentes. La palabra <code>asc</code> o <code>desc</code> opcionales indican ordenamiento ascendente o descendente respectivamente.</li>
+<li><strong>La cláusula <span lang="en">group</span> <span lang="en">by</span></strong>. Una consulta que retorna valores agregados se puede agrupar por cualquier propiedad de una clase retornada o componentes.</li>
+<li><strong>La cláusula having</strong>: restringe grupos.</li>
+</ul>
+<div id="yui_3_17_2_1_1596713469718_137" style="text-align: justify;">
+<p id="yui_3_17_2_1_1596713469718_138">La sintaxis HQL para las sentencias de consultas es la siguiente:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><span style="font-size: 10pt;"><code>    [select_clause]
+    from_clause
+    [where_clause]
+    [groupby_clause]
+    [having_clause]
+    [orderby_clause]</code></span></pre>
+</div>
+</div>
+Sobre el siguiente modelo de datos que se expone a continuación se harán todos los ejemplos de HQL</div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;"><img src="../png/ad04_cont_r31_modelo_datos_hql.png" alt="Modelo de datos HQL" title="Modelo de datos HQL" width="332" height="468" /></div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">Vemos en la sintaxis que la única clausula obligatoria es <code><i>from_clause. </i></code></div>
+<div style="text-align: justify;">
+<p>No obstante, Hibernate recomienda incluir <span style="font-size: 10pt;"><code> select_clause</code> </span>, por portabilidad con JPQL (java persistence query languagge). </p>
+<p>Veamos ahora un sencillo ejemplo de consulta en HQL</p>
+<div class="highlighted-code language-markup">
+<div>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT c FROM Ciclo c ORDER BY nombre</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>¿Qué diferencias podemos ver entre HQL y <acronym title="Structured Query Language">SQL</acronym>?</p>
+<ul>
+<li>
+<div><code>Ciclo</code> hace referencia a la clase Java<code>ejemplo02.Ciclo</code> y <strong>NO</strong> a la tabla <code>CicloFormativo</code>. Nótese que la clase Java y la tabla tienen distinto nombre .</div>
+</li>
+<li>
+<div>Es necesario definir el alias <code>c</code> de la clase Java <code>Ciclo</code>.</div>
+</li>
+<li>
+<div>Tras la palabra <code>SELECT</code> se usa el alias en vez del ”<code>*</code>”.</div>
+</li>
+<li>
+<div>Al ordenar los objetos se usa la propiedad <code>nombre</code> de la clase <code>Ciclo</code> en vez de la columna <code>nombreCiclo</code> de la tabla <code>CicloFormativo</code>.</div>
+</li>
+</ul>
+<div>Recuerda incluir el alias en la consulta HQL. Si no se hace y se deja la consulta de la siguiente forma:
+<p></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT Ciclo FROM Ciclo</code></pre>
+</div>
+</div>
+<p>se producirá la siguiente excepción:</p>
+<div class="highlighted-code language-java">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>java.lang.NullPointerException</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div>Hibernate soporta <strong>no</strong> incluir la parte del <code>SELECT</code> en la consulta HQL, quedando entonces la consulta de la siguiente forma:
+<p></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>  FROM Ciclo</code></pre>
+</div>
+</div>
+<p>pero en la propia documentación se recomienda no hacerlo ya que de esa forma se mejora la portabilidad en caso de usar el lenguaje de consultas de JPA <sup></sup>.</p>
+<p>Se ha hecho mención de esta característica ya que en muchos tutoriales que se encuentran por Internet se hace uso de ella.</p>
+</div>
+</div>
+<p style="text-align: justify;"><strong>Mayúsculas</strong></p>
+<div style="text-align: justify;">
+<p>Respecto a la sensibilidad de las mayúsculas y minúsculas , el lenguaje HQL sí que lo es, pero con matices.</p>
+<ul>
+<li>
+<div>Las palabras clave del lenguaje <strong>NO</strong> son sensibles a las mayúsculas o minúsculas.</div>
+<ul>
+<li>Las siguientes 2 consultas son equivalentes.
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>select count(*) from Ciclo
+SELECT COUNT(*) FROM Ciclo</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<div>El nombre de las clases Java y sus propiedades <strong>SI</strong> son sensibles a las mayúsculas o minúsculas.</div>
+<ul>
+<li>La siguiente consulta HQL es correcta
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT c.nombre FROM Ciclo c WHERE nombre='Desarrollo de aplicaciones Web'</code></pre>
+</div>
+</div>
+</li>
+<li>La siguiente consulta HQL es <strong>errónea</strong> ya que la propiedad <code>nombre</code> está escrita con la “N” en mayúsculas.
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT c.Nombre FROM Ciclo c WHERE Nombre='Desarrollo de aplicaciones Web'</code></pre>
+</div>
+</div>
+</li>
+<li>La siguiente consulta HQL es <strong>errónea</strong> ya que el nombre de la clase Java <code>Ciclo</code> está escrita con la “c” en minúsculas.
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT c.nombre FROM ciclo c WHERE nombre='Desarrollo de aplicaciones Web'</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<div>Al realizar comparaciones con los valores de las propiedades, éstas <strong>NO</strong> son sensibles a las mayúsculas o minúsculas.</div>
+<ul>
+<li>Las siguientes 2 consultas retornan los mismos objetos
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT c.nombre FROM Ciclo c WHERE nombre='Desarrollo de aplicaciones Web'
+SELECT c.nombre FROM Ciclo c WHERE nombre='DESARROLLO DE APLICACIONES WEB'</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p style="text-align: justify;"><strong>Filtrando</strong></p>
+<div style="text-align: justify;">
+<p>Al igual que en <acronym title="Structured Query Language">SQL</acronym> en HQL también podemos filtrar los resultados mediante la cláusula <code>WHERE</code>. La forma de usarla es muy parecida a <acronym title="Structured Query Language">SQL</acronym>.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>SELECT p FROM Profesor p WHERE nombre='ISABEL' AND ape1&lt;&gt;'ORELLANA'</code></pre>
+</div>
+</div>
+<p>Al igual que con el nombre de la clase, el nombre de los campos del <code>WHERE</code> siempre hace referencia a las propiedades Java y nunca a los nombres de las columnas. De esa forma seguimos independizando nuestro código Java de la estructura de la base de datos.</p>
+</div>
+<p style="text-align: justify;"><strong>Literales</strong></p>
+<ul style="text-align: justify;">
+<li>Texto</li>
+</ul>
+<div style="text-align: justify;">
+<p>El carácter para indicar un literal de texto es la comilla simple no pudiéndose usar la doble comilla.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT p FROM Profesor p WHERE nombre='juan'</code></pre>
+</div>
+</div>
+<p>Si se quiere usar la comilla dentro de un literal deberemos duplicarla.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>SELECT p FROM Profesor p WHERE ape1='perez l''andreu'</code></pre>
+</div>
+</div>
+</div>
+<ul style="text-align: justify;">
+<li>Integer</li>
+</ul>
+<div style="text-align: justify;">
+<p>Para incluir un número del tipo <code>integer</code> simplemente se escribe dicho número.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>SELECT tb FROM TiposBasicos tb WHERE inte=4</code></pre>
+</div>
+</div>
+</div>
+<ul style="text-align: justify;">
+<li>Long</li>
+</ul>
+<div style="text-align: justify;">
+<p>Para incluir un número del tipo <code>long</code> se escribe dicho número y se añade una <code>L</code> mayúscula al final.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>SELECT tb FROM TiposBasicos tb WHERE long1=4L</code></pre>
+</div>
+</div>
+<ul>
+<li><span style="font-size: 12pt; font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;">double</span></li>
+</ul>
+</div>
+<div style="text-align: justify;">
+<p>Para representar un <code>double</code> se escribe el número separando la parte decimal con un punto o se puede usar la notación científica.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT tb FROM TiposBasicos tb WHERE double1=1.45
+SELECT tb FROM TiposBasicos tb WHERE double1=1.7976931348623157E308</code></pre>
+</div>
+</div>
+</div>
+<ul style="text-align: justify;">
+<li>float</li>
+</ul>
+<div style="text-align: justify;">
+<p>Para representar un <code>float</code> se escribe el número separarando la parte decimal con un punto o se puede usar la notación científica pero se le añade el carácter <code>F</code> en mayúscula al final.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT tb FROM TiposBasicos tb WHERE float1=1.45F
+SELECT tb FROM TiposBasicos tb WHERE float1=3.4028235E38F</code></pre>
+</div>
+</div>
+</div>
+<ul style="text-align: justify;">
+<li>Fecha</li>
+</ul>
+<div style="text-align: justify;">
+<p>Para indicar una fecha la incluiremos entre comillas simples con el formato <code>yyyy-mm-dd</code></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT tb FROM TiposBasicos tb WHERE dateDate='2012-07-25'</code></pre>
+</div>
+</div>
+</div>
+<ul style="text-align: justify;">
+<li>Hora</li>
+</ul>
+<div style="text-align: justify;">
+<p>Para indicar una hora la incluiremos entre comillas simples con el formato <code>hh:mm:ss</code></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT tb FROM TiposBasicos tb WHERE dateTime='02:05:10'</code></pre>
+</div>
+</div>
+<ul>
+<li>
+<p><span style="font-size: 12pt; font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;">fecha y hora</span></p>
+</li>
+</ul>
+</div>
+<div style="text-align: justify;">
+<p>Para indicar una fecha y hora la incluiremos entre comillas simples con el formato <code>yyyy-mm-dd hh:mm:ss.millis</code>,siendo optativos el último punto y los milisegundos .</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT tb FROM TiposBasicos tb WHERE dateTime='2012-07-25 02:05:10'</code></pre>
+</div>
+</div>
+<ul>
+<li><span style="font-size: 12pt; font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;">Operadores de comparación</span></li>
+</ul>
+</div>
+<div style="text-align: justify;">
+<p>Para comparar los datos en una expresión se pueden usar las siguientes Operadores:</p>
+</div>
+<div style="padding-left: 90px; text-align: justify;">- Signo igual ”=”: La expresión será verdadera si los dos datos son iguales. En caso de comparar texto, la comparación no es sensible a mayúsculas o minúsculas.</div>
+<div style="padding-left: 90px; text-align: justify;"><span style="font-size: 1em;">-  Signo mayor que ”&gt;”: La expresión será verdadera si el dato de la izquierda es mayor que el de la derecha.</span></div>
+<div style="padding-left: 90px; text-align: justify;">-  Signo mayor que ”&gt;=”: La expresión será verdadera si el dato de la izquierda es mayor o igual que el de la derecha.</div>
+<div style="padding-left: 90px; text-align: justify;">-  Signo mayor que ”&lt;”: La expresión será verdadera si el dato de la izquierda es menor que el de la derecha.</div>
+<div style="padding-left: 90px; text-align: justify;">-  Signo mayor que ”&lt;=”: La expresión será verdadera si el dato de la izquierda es menor o igual que el de la derecha.</div>
+<div style="padding-left: 90px; text-align: justify;">-  Signo desigual ”&lt;&gt;”: La expresión será verdadera si el dato de la izquierda es distinto al de la derecha.</div>
+<div style="padding-left: 90px; text-align: justify;">-  Signo desigual ”!=”: La expresión será verdadera si el dato de la izquierda es distinto al de la derecha.</div>
+<div style="padding-left: 90px; text-align: justify;">-  Operador ”between”: La expresión será verdadera si el dato de la izquierda está dentro del rango de la derecha.</div>
+<div style="padding-left: 150px; text-align: justify;">
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT tb FROM TiposBasicos tb WHERE inte BETWEEN 1 AND 10</code></pre>
+</div>
+</div>
+</div>
+<div style="padding-left: 90px; text-align: justify;">-  Operador ”in”: La expresión será verdadera si el dato de la izquierda está dentro de la lista de valores de la derecha.</div>
+<div style="padding-left: 150px; text-align: justify;">
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT tb FROM TiposBasicos tb WHERE inte IN (1,3,5,7)</code></pre>
+</div>
+</div>
+</div>
+<div style="padding-left: 90px; text-align: justify;">-  Operador ”like”:  La expresión será verdadera si el dato de la izquierda coincide con el patrón de la derecha.Se utilizan los mismos signos que en <acronym title="Structured Query Language">SQL</acronym> ”%” y ”_”.</div>
+<div style="padding-left: 150px; text-align: justify;"></div>
+<div style="padding-left: 150px; text-align: justify;">
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT tb FROM TiposBasicos tb WHERE stri LIKE 'H_la%'</code></pre>
+</div>
+</div>
+</div>
+<div style="padding-left: 90px; text-align: justify;">-  Operador ”not”: Niega el resultado de una expresión.</div>
+<div style="padding-left: 90px; text-align: justify;"><span style="font-size: 1em;">-  Expresión ”is null”: Comprueba si el dato de la izquierda es null.</span></div>
+<div style="padding-left: 150px; text-align: justify;">
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT tb FROM TiposBasicos tb WHERE dataDate IS NUL</code></pre>
+</div>
+</div>
+</div>
+<div style="text-align: justify;">
+<ul>
+<li>Operadores lógicos</li>
+</ul>
+<p>Se puede hacer uso de los típicos operadores lógicos como en <acronym title="Structured Query Language">SQL</acronym>: AND, OR y <span style="font-size: 1em;">NOT </span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT p FROM Profesor p WHERE nombre='ANTONIO' AND (ape1='LARA' OR ape2='RUBIO')</code></pre>
+</div>
+</div>
+</div>
+<ul style="text-align: justify;">
+<li>Operadores Aritméticos</li>
+</ul>
+<div style="text-align: justify;">
+<p>Se puede hacer uso de los típicos operadores aritméticos: suma (+), <span style="font-size: 1em;">resta (-), </span><span style="font-size: 1em;">multiplicación (*) y </span><span style="font-size: 1em;">división (/).</span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT tb FROM TiposBasicos tb WHERE (((inte+1)*4)-10)/2=1</code></pre>
+</div>
+</div>
+<ul>
+<li><span style="font-size: 12pt;">Funciones de agregación</span></li>
+</ul>
+</div>
+<div style="text-align: justify;">
+<p>Las funciones de agregación que soporta HQL son:</p>
+</div>
+<div style="padding-left: 90px; text-align: justify;"><code>-  AVG()</code>: Calcula el valor medio de todos los datos.</div>
+<div style="padding-left: 90px; text-align: justify;"><code>-  SUM()</code>: Calcula la suma de todos los datos.</div>
+<div style="padding-left: 90px; text-align: justify;"><code>-  MIN()</code>: Calcula el valor mínimo de todos los datos.</div>
+<div style="padding-left: 90px; text-align: justify;"><code>-  MAX()</code>: Calcula el valor máximo de todos los datos.</div>
+<p style="padding-left: 90px; text-align: justify;"><code>-  COUNT()</code><span style="font-size: 1em;">: Cuanta el número de datos.</span></p>
+<div style="text-align: justify;">
+<div style="padding-left: 120px;">
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT AVG(c.horas),SUM(c.horas),MIN(c.horas),MAX(c.horas),COUNT(*) FROM Ciclo c</code></pre>
+</div>
+</div>
+</div>
+</div>
+<ul style="text-align: justify;">
+<li>Funciones sobre escalares</li>
+</ul>
+<div style="text-align: justify;">
+<p>Algunas de las funciones que soporta HQL sobre datos escalares son:</p>
+<div style="padding-left: 90px;"><code>-  UPPER(s)</code>: Transforma un texto a mayúsculas.</div>
+<div style="padding-left: 90px;"><code>-  LOWER(s)</code>: Transforma un texto a minúsculas.</div>
+<div style="padding-left: 90px;"><code>-  CONCAT(s1, s2)</code>: Concatena dos textos</div>
+<div style="padding-left: 90px;"><code>-  TRIM(s)</code>:Elimina los espacio iniciales y finales de un texto.</div>
+<div style="padding-left: 90px;"><code>-  SUBSTRING(s, offset, length)</code>: Retorna un substring de un texto.El <code>offset</code> empieza a contar desde 1 y no desde 0.</div>
+<div style="padding-left: 90px;"><code>-  LENGTH(s)</code>: Calcula la longitud de un texto.</div>
+<div style="padding-left: 90px;"><code>-  ABS</code>: Calcula el valor absoluto de un número.</div>
+<div style="padding-left: 90px;"><code>-  SQRT</code>: Calcula la raíz cuadrada del número</div>
+<div style="padding-left: 90px;">- Operador ”<code>||</code>” : Permite concatenar texto.</div>
+<div style="padding-left: 90px;"></div>
+<div style="padding-left: 90px;">
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT p.nombre || ' ' || p.ape1 || ' ' || p.ape2 FROM Profesor p WHERE Id=1001</code></pre>
+</div>
+</div>
+</div>
+</div>
+<ul style="text-align: justify;">
+<li>Ordenación</li>
+</ul>
+<div style="text-align: justify;">
+<p>Como en <acronym title="Structured Query Language">SQL</acronym> también es posible ordenar los resultados usando <code>ORDER BY</code>. Su funcionamiento es como en <acronym title="Structured Query Language">SQL</acronym>.</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT p FROM Profesor p ORDER BY nombre ASC,ape1 DESC</code></pre>
+</div>
+</div>
+<p>Las palabras <code>ASC</code> y <code>DESC</code> son opcionales al igual que en <acronym title="Structured Query Language">SQL</acronym>.</p>
+<div>El uso de funciones escalares y funciones de agrupamiento en la cláusula <code>ORDER BY</code> sólo es soportado por Hibernate si es soportado por el lenguaje de <acronym title="Structured Query Language">SQL</acronym> de la base de datos sobre la que se está ejecutando.</div>
+<p></p>
+<div>No se permite el uso de expresiones aritméticas en la cláusula <code>ORDER BY</code>.</div>
+<p></p>
+<ul>
+<li>
+<p><span style="font-size: 12pt;">Agrupaciones</span></p>
+</li>
+</ul>
+</div>
+<div style="text-align: justify;">
+<p>Al igual que en <acronym title="Structured Query Language">SQL</acronym> se pueden realizar agrupaciones mediante las palabras claves <code>GROUP BY</code> y <code>HAVING</code></p>
+<div>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT nombre,count(nombre) FROM Profesor p GROUP BY nombre HAVING count(nombre)&gt;1 ORDER BY count(nombre)</code></pre>
+</div>
+</div>
+<p>Los nombres de profesores que se repiten mas de una vez</p>
+</div>
+<div>El uso de funciones escalares y funciones de agrupamiento en la cláusula <code>HAVING</code> sólo es soportado por Hibernate si es soportado por el lenguaje de <acronym title="Structured Query Language">SQL</acronym> de la base de datos sobre la que se está ejecutando.</div>
+<p></p>
+<div>No se permite el uso de expresiones aritméticas en la cláusula <code>GROUP BY</code>.</div>
+<ul>
+<li><span style="font-size: 12pt;">Subconsultas</span></li>
+</ul>
+</div>
+<div style="text-align: justify;">
+<p>HQL también soporta subconsultas como en <acronym title="Structured Query Language">SQL</acronym>.</p>
+</div>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>SELECT c.nombre,c.horas FROM Ciclo c WHERE c.horas &gt;
+(SELECT AVG(c2.horas) FROM Ciclo c2)
+Ciclos que duran más horas que la media de duración de todos los ciclos</code></pre>
+</div>
+</div>
+<ul style="text-align: justify;">
+<li>Combinaciones (JOIN)</li>
+</ul>
+<p style="text-align: justify;">En la clausula from podemos incluir múltiples clases, lo que causa un producto cartesiano o una unión "cruzada" (cross join).</p>
+<div class="highlighted-code language-markup" style="text-align: justify;">
+<div>
+<pre><code>from Profesor as profesor, Ciclo as ciclo</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Para poder relacionar los profesores con los ciclos que imparten tenemos la opción de especificar la condición de combinación, de forma similar a como se hace en SQL</p>
+<div class="highlighted-code language-markup" style="text-align: justify;">
+<div>
+<pre><code>from Profesores as profesor, Ciclo as ciclo
+where profesor = ciclo.profesor</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">También podemos utilizar la clausula JOIN </p>
+<div class="highlighted-code language-markup" style="text-align: justify;">
+<div>
+<pre><code>from Profesor as profesor INNER JOIN profesor.ciclo as  ciclo</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">La palabra reservada INNER e opcional, también es posible incluir la clausula<span> </span><i>on condición.</i></p>
+<p style="text-align: justify;"><span>Ejemplo:</span><span></span></p>
+<div class="highlighted-code language-markup" style="text-align: justify;">
+<div>
+<pre><code>from Profesor as profesor INNER JOIN Ciclo as ciclo on </code></pre>
+</div>
+</div>
+<p style="text-align: justify;"><span>Los tipos de uniones soportadas se tomaron prestados de ANSI SQL</span></p>
+<div style="padding-left: 90px; text-align: justify;">-  inner join</div>
+<div style="padding-left: 90px; text-align: justify;">-  left outer join</div>
+<div style="padding-left: 90px; text-align: justify;">-  right outer join</div>
+<div style="padding-left: 90px; text-align: justify;">-  full join.</div>
+<ul style="text-align: justify;">
+<li><span>Parametros nombrados</span></li>
+</ul>
+<p style="text-align: justify;"><span>En ejemplos anteriores  incluíamos directamente el valor de los parámetros del <code>WHERE</code>. Eso nos llevaría desde Java a tener un código similar al siguiente:</span><span></span></p>
+<div class="highlighted-code language-java" style="text-align: justify;">
+<div>
+<pre><code>String nombre="ISIDRO";
+String ape1="CORTINA";
+String ape2="GARCIA";
+ Query query = session.createQuery("SELECT p FROM Profesor p where nombre='" + nombre +"' AND  ape1='" + ape1 + "' AND  ape2='" + ape2 + "' ");
+ List&lt;Profesor&gt; profesores = query.list();
+ for (Profesor profesor : profesores) {
+           System.out.println(profesor.toString());
+ }</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Hibernate soporta parámetros nombrados en sus consultas HQL. Esto facilita la escritura de consultas HQL que aceptan la entrada del usuario. A continuación se muestra la sintaxis simple de usar parámetros nombrados:</p>
+<div class="highlighted-code language-java" style="text-align: justify;">
+<div>
+<pre><code>String nombre="ISIDRO";
+String ape1="CORTINA";
+String ape2="GARCIA";
+ Query query = session.createQuery("SELECT p FROM Profesor p where nombre=:nombre +"' AND  ape1=:ape1 + "' AND  ape2=:ape2 ");
+ List&lt;Profesor&gt; profesores = query.setParameter(1,nombre).setParameter(2,ape1).setParameter(3,ape2).list();
+ for (Profesor profesor : profesores) {
+      System.out.println(profesor.toString());
+ }</code></pre>
+</div>
+</div>
+<div style="text-align: justify;">La asignación de valores a los parámetros se realiza con el método <code>setParameter</code>, los métodos <code>setString</code>, <code>setByte</code>, etc. están obsoletos. También podemos utilizar parámetros con ?.</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id70">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta70_47" class="block iDevice_content">
+<p>En la siguiente dirección <span lang="en">Web</span>, encontrarás una amplia información sobre el lenguaje de consulta <span lang="en">HQL</span>.</p>
+<p class="enlace_centrado"><a href="https://docs.jboss.org/hibernate/orm/3.5/reference/es-ES/html/queryhql.html" title="Acceder Enlace a un documento sobre el lenguaje HQL.">Tutorial de <span lang="en">HQL</span>.</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="112_consultas_por_criterios.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/111_sintaxis_del_lenguaje_hql.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:11 GMT -->
+</html>

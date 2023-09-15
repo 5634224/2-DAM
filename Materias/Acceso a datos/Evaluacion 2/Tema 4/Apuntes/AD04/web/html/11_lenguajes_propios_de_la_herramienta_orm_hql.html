@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/11_lenguajes_propios_de_la_herramienta_orm_hql.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.- Lenguajes propios de la herramienta ORM: HQL. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li><a href="1_concepto_de_mapeo_objetorelacional.html" class="no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul class="other-section">
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li><a href="22_herramientas_orm_ms_utilizadas.html" class="no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li><a href="4_instalacin_y_configuracin_de_hibernate.html" class="no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul class="other-section">
+      <li><a href="51_ficheros_de_configuracin_propiedades.html" class="no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li><a href="7_clases_persistentes.html" class="no-ch">7.- Clases persistentes.</a></li>
+   <li><a href="8_sesiones_estados_de_un_objeto.html" class="no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li id="active"><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="active daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul>
+      <li><a href="111_sintaxis_del_lenguaje_hql.html" class="no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li><a href="112_consultas_por_criterios.html" class="no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li><a href="12_gestin_de_transacciones.html" class="no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="10_consultas_sql.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="111_sintaxis_del_lenguaje_hql.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.- Lenguajes propios de la herramienta ORM: HQL.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id64">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta64_66" class="block iDevice_content">
+<p>
+<strong>María</strong> conoce el lenguaje <span lang="en">SQL</span>, para poder realizar consultas a una base de datos relacional. Sin embargo están para  poder interactuar con la base de datos desde <span lang="en">Java</span>, en BK está usando <span lang="en">Hibernate</span>. ¿Dispondrá <span lang="en">Hibernate</span> de un lenguaje de consulta propio? Ada le comenta que existe el  <acronym lang="en" title="Hibernate Query Language. Lenguaje de Consulta Hibernate.">HQL</acronym>, que le va a facilitar el trabajo de consulta.      
+</p>
+<img alt="Fotografía de María, nuestra protagnista." class="elemento_centrado" height="132" src="../jpg/ad04_cont_r02_maria.jpg" style="width: 200px; height: 132px" title="María de frente." width="200" />
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id65">
+<div class="iDevice emphasis0">
+<div id="ta65_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado">
+<a href="../jpg/ad04_cont_r26_libreriahibernate.jpg" title="Ampliar imagen."><img alt="Captura de pantalla de Netbeans, donde aparecen todas las librerías jar que debe incorporar una aplicación que va a utilizar Hibernate como ORM." class="imagen_ampliable" height="160" src="../jpg/ad04_cont_r26_libreriahibernate_miniatura.jpg" style="width: 200px; height: 160px" title="Librerías de Hibernate." width="200" /></a>
+</div>
+</div>
+<p>
+<span lang="en">Hibernate</span> utiliza un lenguaje de consulta potente (<span lang="en">HQL</span>) que se parece a SQL. Sin embargo, comparado con <span lang="en">SQ</span>L, <span lang="en">HQL</span> es completamente orientado a objetos y comprende nociones como herencia, polimorfismo y asociación. Las consultas se escriben en <span lang="en">HQL</span> y <span lang="en">Hibernate</span> se encarga de convertirlas al <span lang="en">SQL</span> usado por la base de datos con la que estemos trabajando y ejecutarla para realizar la operación indicada.
+</p>
+<p>
+HQL es que es <span lang="en">case</span>-<span lang="en">insensitive</span>, o sea que sus sentencias pueden escribirse en mayúsculas y minúsculas. Por lo tanto &quot;<span lang="en">SeLeCt</span>&quot;, &quot;<span lang="en">seleCT</span>&quot;, &quot;<span lang="en">select</span>&quot;, y &quot;<span lang="en">SELECT</span>&quot; se entienden como la misma cosa. Lo único con lo que debemos tener cuidado es con los nombres de las clases que estamos recuperando y con sus propiedades, ahí si se distinguen mayúsculas y minúsculas. O sea, en este caso &quot;pruebas.<span lang="en">Hibernate</span>.Usuario&quot; NO ES LO MISMO que &quot;PrueBAs.<span lang="en">Hibernate</span>.UsuArio&quot;. 
+</p>
+<p>
+Entre las características más importantes de <span lang="en">HQL</span>.
+</p>
+<ul class="lista_verificacion">
+	<li>Soporte completo para operaciones relacionales: <span lang="en">HQL</span> permite representar consultas <span lang="en">SQL</span> en forma de objetos. HQL usa clases y atributos o propiedades en vez de tablas y columnas. </li>
+	<li>Regresa sus resultados en forma de objetos: Las consultas realizadas usando <span lang="en">HQL</span> regresan los resultados de las mismas en la forma de objetos o listas de objetos, que son más fáciles de usar.</li>
+	<li>Consultas Polimórficas: Podemos declarar el resultado usando el tipo de la superclase e <span lang="en">Hibernate</span> se encargara de crear los objetos adecuados de las subclases correctas de forma automática. </li>
+	<li>Soporte para características avanzadas: <span lang="en">HQL</span> contiene muchas características avanzadas que son muy útiles y que no siempre están presentes en todas las bases de datos, o no es fácil usarlas, como paginación, <span lang="en">fetch</span> <span lang="en">joins</span> con perfiles dinámicos, <span lang="en">inner</span> y <span lang="en">outer</span> <span lang="en">joins</span>, etc. Además soporta proyecciones, funciones de agregación (<span lang="en">max</span>, <span lang="en">avg</span>), y agrupamientos, ordenamientos, y subconsultas. </li>
+	<li>Independiente del manejador de base de datos: Las consultas escritas en <span lang="en">HQL</span> son independientes de la base de datos (siempre que la base de datos soporte la característica que estamos intentando utilizar ^</li>
+</ul>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id66">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-66_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion66_60" class="block question iDevice_content">
+<strong>El lenguaje de consulta propio de </strong><span lang="en">Hibernate</span><strong> es:</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i66_63" class="sr-av"><a href="#answer-66_63">Opción 1</a></label><input type="radio" name="option66_60" id="i66_63" class="exe-radio-option exe-radio-option-0-3-66_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-66_63"><div id="taans66_63" class="block iDevice_content">
+<span lang="en">HQL</span>.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i66_83" class="sr-av"><a href="#answer-66_83">Opción 2</a></label><input type="radio" name="option66_60" id="i66_83" class="exe-radio-option exe-radio-option-1-3-66_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-66_83"><div id="taans66_83" class="block iDevice_content">
+<span lang="en">SQL</span>.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i66_86" class="sr-av"><a href="#answer-66_86">Opción 3</a></label><input type="radio" name="option66_60" id="i66_86" class="exe-radio-option exe-radio-option-2-3-66_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-66_86"><div id="taans66_86" class="block iDevice_content">
+<span lang="en">Java</span>.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b66_60" class="feedback js-hidden">
+<div id="taf66_63" class=" iDevice_content">
+Correcto. Es el lenguaje <span lang="en">Hibernate Query Language</span>.
+
+</div>
+</section>
+<section id="sa1b66_60" class="feedback js-hidden">
+<div id="taf66_83" class=" iDevice_content">
+No es correcta. 
+
+</div>
+</section>
+<section id="sa2b66_60" class="feedback js-hidden">
+<div id="taf66_86" class=" iDevice_content">
+No es correcta. 
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-66_63">Opción correcta</a><span> (<a href="#sa0b66_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-66_83">Incorrecto</a><span> (<a href="#sa1b66_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-66_86">Incorrecto</a><span> (<a href="#sa2b66_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="10_consultas_sql.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="111_sintaxis_del_lenguaje_hql.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/11_lenguajes_propios_de_la_herramienta_orm_hql.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:11 GMT -->
+</html>

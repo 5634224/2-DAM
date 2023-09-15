@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431832/mod_resource/content/4/AD02_Contenidos_Web/64_dom.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 19:08:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.4.- DOM. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-36"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Manejo de ficheros.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_clases_asociadas_a_las_operaciones_de_gestin_de_ficheros_y_directorios.html" class="daddy">2.- Clases asociadas a las operaciones de gestión de ficheros y directorios.</a>
+   <ul class="other-section">
+      <li><a href="21_clase_file.html" class="daddy">2.1.- Clase File.</a>
+      <ul class="other-section">
+         <li><a href="211_existencia_y_listado_de_ficheros_y_carpetas.html" class="no-ch">2.1.1.- Existencia y listado de ficheros y carpetas.</a></li>
+         <li><a href="212_creacin_y_eliminacin_de_ficheros_y_directorios.html" class="no-ch">2.1.2.- Creación y eliminación de ficheros y directorios.</a></li>
+      </ul>
+      </li>
+      <li><a href="22_interface_filenamefilter.html" class="no-ch">2.2.- Interface FilenameFilter.</a></li>
+      <li><a href="23_rutas_de_los_ficheros.html" class="no-ch">2.3.- Rutas de los ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_flujos.html" class="daddy">3.- Flujos.</a>
+   <ul class="other-section">
+      <li><a href="31_flujos_basados_en_bytes.html" class="no-ch">3.1.- Flujos basados en bytes.</a></li>
+      <li><a href="32_flujos_basados_en_caracteres.html" class="no-ch">3.2.- Flujos basados en caracteres.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_formas_de_acceso_a_un_fichero.html" class="daddy">4.- Formas de acceso a un fichero.</a>
+   <ul class="other-section">
+      <li><a href="41_operaciones_bsicas_sobre_ficheros_de_acceso_secuencial.html" class="no-ch">4.1.- Operaciones básicas sobre ficheros de acceso secuencial.</a></li>
+      <li><a href="42_operaciones_bsicas_sobre_ficheros_de_acceso_aleatorio.html" class="no-ch">4.2.- Operaciones básicas sobre ficheros de acceso aleatorio.</a></li>
+      <li><a href="43_enlaces_de_inters_sobre_ficheros.html" class="no-ch">4.3.- Enlaces de interés sobre ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_java_nio.html" class="daddy">5.- Java NIO.</a>
+   <ul class="other-section">
+      <li><a href="51_java_nio_path.html" class="no-ch">5.1.- Java NIO Path.</a></li>
+      <li><a href="52_clases_java_nio_files.html" class="no-ch">5.2.- Clases Java NIO Files.</a></li>
+      <li><a href="53_escribir_contenido_en_un_fichero.html" class="no-ch">5.3.- Escribir contenido en un fichero.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_trabajo_con_ficheros_xml_analizadores_sintcticos_parser_y_vinculacin_binding.html" class="current-page-parent daddy">6.- Trabajo con ficheros XML: analizadores sintácticos (parser) y vinculación (binding).</a>
+   <ul>
+      <li><a href="61_conceptos_previos.html" class="no-ch">6.1.- Conceptos previos.</a></li>
+      <li><a href="62_definiciones.html" class="no-ch">6.2.- Definiciones.</a></li>
+      <li><a href="63_parser_o_analizador_xml.html" class="no-ch">6.3.- "Parser" o analizador XML.</a></li>
+      <li id="active"><a href="64_dom.html" class="active daddy">6.4.- DOM.</a>
+      <ul>
+         <li><a href="641_la_estructura_dom.html" class="no-ch">6.4.1.- La estructura DOM.</a></li>
+         <li><a href="642_ejemplo_completo.html" class="no-ch">6.4.2.- Ejemplo completo.</a></li>
+         <li><a href="643_creacin_de_un_fichero_xml_a_partir_de_un_documento.html" class="no-ch">6.4.3.- Creación de un fichero XML a partir de un documento.</a></li>
+      </ul>
+      </li>
+      <li><a href="65_sax.html" class="no-ch">6.5.- SAX.</a></li>
+      <li><a href="66_stax.html" class="daddy">6.6.- StAX.</a>
+      <ul class="other-section">
+         <li><a href="661_caractersticas_de_stax.html" class="no-ch">6.6.1.- Características de StAX.</a></li>
+         <li><a href="662_ejemplo_de_api_cursor.html" class="no-ch">6.6.2.- Ejemplo de API Cursor.</a></li>
+         <li><a href="663_ejemplo_de_api_event.html" class="no-ch">6.6.3.- Ejemplo de API Event.</a></li>
+      </ul>
+      </li>
+      <li><a href="67_binding.html" class="daddy">6.7.- Binding.</a>
+      <ul class="other-section">
+         <li><a href="671_configuracin_con_anotaciones.html" class="no-ch">6.7.1.- Configuración con anotaciones.</a></li>
+         <li><a href="672_ejemplos_con_anotaciones.html" class="no-ch">6.7.2.- Ejemplos con anotaciones.</a></li>
+         <li><a href="673_funcionamiento_de_jaxb.html" class="no-ch">6.7.3.- Funcionamiento de JAXB.</a></li>
+         <li><a href="674_ejemplo_marshall_unmarshall.html" class="no-ch">6.7.4.- Ejemplo: Marshall, Unmarshall.</a></li>
+         <li><a href="675_generacin_automtica_de_clases_java_a_partir_del_esquema_xsd.html" class="no-ch">6.7.5.- Generación automática de clases Java a partir del esquema .xsd.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="7_libreras_para_conversin_de_documentos_xml_a_otros_formatos.html" class="daddy">7.- Librerías para conversión de documentos XML a otros formatos.</a>
+   <ul class="other-section">
+      <li><a href="71_introduccin_a_jasperreport.html" class="no-ch">7.1.- Introducción a JasperReport.</a></li>
+      <li><a href="72_disear_y_compilar_la_plantilla.html" class="no-ch">7.2.- Diseñar y compilar la plantilla.</a></li>
+      <li><a href="73_rellenar_el_informe_con_datos_exportar_el_informe.html" class="no-ch">7.3.- Rellenar el informe con datos, exportar el informe.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_listar_ficheros_de_una_carpeta_filtrando.html" class="no-ch">Anexo I.- Listar ficheros de una carpeta, filtrando.</a></li>
+   <li><a href="anexo_ii_cdigo_de_separador_de_rutas.html" class="no-ch">Anexo II.- Código de separador de rutas.</a></li>
+   <li><a href="anexo_iii_cdigo_de_crear_un_fichero.html" class="no-ch">Anexo III.- Código de crear un fichero.</a></li>
+   <li><a href="anexo_iv_cdigo_de_crear_un_directorio.html" class="no-ch">Anexo IV.- Código de crear un directorio.</a></li>
+   <li><a href="anexo_v_anexo_de_recursos.html" class="no-ch">Anexo V.- Anexo de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="63_parser_o_analizador_xml.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="641_la_estructura_dom.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.4.- DOM.</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id82">
+<div class="iDevice emphasis0" >
+<div id="ta82_112_2" class="block iDevice_content">
+<div class="exe-text"><p align="left" style="text-align: justify;"><span><b>DOM  (Document Object Model )</b> es una recomendación oficial del World Wide Web Consortium (W3C). Define una interfaz que permite a los programas acceder y actualizar el estilo, la estructura y el contenido de los documentos XML. </span>Los analizadores XML compatibles con DOM implementan esta interfaz.</p>
+<p align="left" style="text-align: justify;">El estándar W3C define la especificación de la clase<b><span> </span><code>DocumentBuilder</code><span> </span></b>con el propósito de poder instanciar estructuras DOM a partir de un XML . La clase<span> </span><b><code>DocumentBuilder</code><span> </span></b>es una clase abstracta, y para que se pueda adaptar a las diferentes plataformas, puede necesitar fuentes de datos o requerimientos diversos. Recuerda que las clases abstractas no se pueden instanciar de forma directa. Por este motivo, el consorcio W3 especifica también la clase<span> </span><code><b>DocumentBuilderFactory</b></code></p>
+<p align="left" style="text-align: justify;">Las instrucciones necesarias para leer un archivo XML y crear un objeto Documento serían las siguientes: </p>
+<div style="text-align: justify;">
+<div><code><b>DocumentBuilderFactory<span> </span></b>dbFactory =<b> DocumentBuilderFactory</b>. newInstance<span> </span>; </code></div>
+<div><code><b style="font-size: 1.05em;">DocumentBuilder</b><span style="font-size: 1.05em;"> </span><span style="font-size: 1.05em;">dBuilder =</span><span style="font-size: 1.05em;"> </span><b style="font-size: 1.05em;">dbFactory</b><span style="font-size: 1.05em;">. newDocumentBuilder</span><span style="font-size: 1.05em;"> </span><span style="font-size: 1.05em;">;</span></code></div>
+<div><code><b style="font-size: 1.05em;">Document</b><span style="font-size: 1.05em;"> doc =</span><span style="font-size: 1.05em;"> </span><b style="font-size: 1.05em;">dBuilder</b><span style="font-size: 1.05em;">. parse ( new File ( "fitxer.xml" ) ) ;</span></code></div>
+</div>
+<p style="text-align: justify;"><span></span></p>
+<p style="text-align: justify;"><span>La escritura de la información contenida en el </span><acronym title="Document Object Model">DOM</acronym><span> se puede secuenciar en forma de texto utilizando otra utilidad de Java llamada </span><em></em><b><code>Transformer</code> </b><span>. Se trata de una utilidad que permite realizar fácilmente conversiones entre diferentes representaciones de información jerárquica. Es capaz, por ejemplo, de pasar la información contenida en un objeto Documento a un archivo de texto en formato </span><acronym title="Extensible Markup Language">XML</acronym><span> . También sería capaz de hacer la operación inversa, pero el mismo </span><code><b>DocumentBuilder</b></code><b> </b><span>ya se encarga de ello. </span><br /><em><br /></em><b><code>Transformer</code> </b><span>es también una clase abstracta y requiere de una </span><em>fábrica</em><span> para poder ser instanciada. La clase <code>Transformer </code>puede trabajar con multitud de contenedores de información porque en realidad trabaja con un par de tipos adaptadores (clases que hacen compatibles jerarquías diferentes) que se llaman</span><b> <code>Source</code><span> </span></b><span>y</span><code><b><span> </span>Result</b></code><b>.</b><span> Las clases que implementen estas interfaces se encargarán de hacer compatible un tipo de contenedor específico al requerimiento de la clase </span><em></em><b><code>Transformer</code> </b><span>. Así, disponemos de las clases </span><b><code>DOMSource</code>, <code>SAXSource</code> o <code>StreamSorce</code><span> </span></b><span>como adaptadores del contenedor de la fuente de información ( </span><acronym title="Document Object Model">DOM</acronym><span>, SAX o Stream respectivamente). <b><code>DOMResult</code>, <code>SAXResult</code> o <code>StreamResult</code> </b></span><span>son los adaptadores equivalentes del contenedor destino.</span></p>
+<div style="text-align: justify;">
+<p>El código básico para realizar una transformación de DOM archivo de texto XML sería el siguiente:</p>
+</div>
+<div style="text-align: justify;">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>// Creación de una instancia Transformer
+Transformer trans = TransformerFactory. newInstance . newTransformer ;
+// Creación de los adaptadores Source y Results a partir de un Documento 
+// y un File.
+StreamResult result =  new StreamResult ( file ) ;
+DOMSource source =  new DOMSource ( doc ) ;
+trans.transform ( source, result ) ;</code></pre>
+</div>
+</div>
+<p><span style="font-size: 1.05em;">Con el fin de rebajar la complejidad, vamos a crear una clase que llamaremos </span><code>XmlCtrlDomcon</code><span style="font-size: 1.05em;"> utilidades genéricas que nos simplifiquen el traspaso de archivos XML a DOM o viceversa.</span></p>
+</div>
+<div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public  class XmlCtrlDom {
+    public  static  Document instanciarDocument 
+        throws ParserConfigurationException {
+        Document doc = null ;
+        doc = DocumentBuilderFactory. newInstance . newDocumentBuilder . newDocument ;
+        return doc ;
+    }
+    public  static  void escriureDocumentATextXml ( Document doc, File file )
+      throws TransformerException {
+        Transformer trans = TransformerFactory. newInstance . newTransformer ;
+        trans.setOutputProperty ( OutputKeys. indent , "yes" ) ;
+        StreamResult result =  new StreamResult ( file ) ;
+        DOMSource source =  new DOMSource ( doc ) ;
+        trans. transform ( source, result ) ;
+      }
+    public  static  Document instanciarDocument ( File fXmlFile ) 
+                              throws ParserConfigurationException,
+                                     SAXException, 
+                                     IOException {
+        Document doc = null ;
+        doc = DocumentBuilderFactory. newInstance.newDocumentBuilder . parse ( fXmlFile ) ;
+        doc. getDocumentElement.normalize ;
+        return doc ; 
+    }
+    ...
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;"></p>
+</div></div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="63_parser_o_analizador_xml.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="641_la_estructura_dom.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431832/mod_resource/content/4/AD02_Contenidos_Web/64_dom.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 19:08:16 GMT -->
+</html>

@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/510_transacciones.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.10.- Transacciones. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-19"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Manejo de conectores.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_protocolos_de_acceso_a_bases_de_datos.html" class="no-ch">2.- Protocolos de acceso a bases de datos.</a></li>
+   <li><a href="3_conectores_o_drivers.html" class="no-ch">3.- Conectores o Drivers.</a></li>
+   <li><a href="4_arquitectura_jdbc.html" class="daddy">4.- Arquitectura JDBC.</a>
+   <ul class="other-section">
+      <li><a href="41_conectores_tipo_1_y_tipo_2.html" class="no-ch">4.1.- Conectores tipo 1 y tipo 2.</a></li>
+      <li><a href="42_conectores_tipo_3_y_tipo_4.html" class="no-ch">4.2.- Conectores tipo 3 y tipo 4.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_conexin_a_una_base_de_datos.html" class="current-page-parent daddy">5.- Conexión a una base de datos.</a>
+   <ul>
+      <li><a href="51_creacin_de_la_base_de_datos.html" class="no-ch">5.1.- Creación de la base de datos.</a></li>
+      <li><a href="52_drivers_de_conexin_oracle_y_mysql.html" class="no-ch">5.2.- Drivers de conexión (Oracle y MySQL)</a></li>
+      <li><a href="53_instalar_el_conector_de_la_base_de_datos.html" class="no-ch">5.3.- Instalar el conector de la base de datos.</a></li>
+      <li><a href="54_jdbc_conexin_a_una_base_de_datos.html" class="no-ch">5.4.- JDBC conexión a una base de datos.</a></li>
+      <li><a href="55_realizacin_de_consultas.html" class="no-ch">5.5.- Realización de consultas.</a></li>
+      <li><a href="56_ejecucin_de_sentencias_dml.html" class="no-ch">5.6.- Ejecución de sentencias DML.</a></li>
+      <li><a href="57_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos.html" class="daddy">5.7.- Ejecución de procedimientos almacenados en la base de datos.</a>
+      <ul class="other-section">
+         <li><a href="571_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_mysql.html" class="no-ch">5.7.1.- Ejecución de procedimientos almacenados en la base de datos MySQL.</a></li>
+         <li><a href="572_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_oracle.html" class="no-ch">5.7.2.- Ejecución de procedimientos almacenados en la base de datos Oracle.</a></li>
+      </ul>
+      </li>
+      <li><a href="58_sentencias_preparadas.html" class="no-ch">5.8.- Sentencias preparadas.</a></li>
+      <li><a href="59_captura_de_errores_y_liberacin_de_recursos.html" class="no-ch">5.9.- Captura de errores y liberación de recursos.</a></li>
+      <li id="active"><a href="510_transacciones.html" class="active no-ch">5.10.- Transacciones.</a></li>
+      <li><a href="511_consultas_al_diccionario_de_datos.html" class="no-ch">5.11.- Consultas al diccionario de datos.</a></li>
+      <li><a href="512_recuperacin_y_modificacin_de_valores_de_resultset.html" class="no-ch">5.12.- Recuperación y modificación de valores de ResultSet.</a></li>
+      <li><a href="513_pool_de_conexiones.html" class="daddy">5.13.- Pool de conexiones.</a>
+      <ul class="other-section">
+         <li><a href="5131_ejemplo_de_pool_de_conexiones_mysql.html" class="no-ch">5.13.1.- Ejemplo de pool de conexiones MySQL.</a></li>
+         <li><a href="5132_ejemplo_de_pool_de_conexiones_oracle.html" class="no-ch">5.13.2.- Ejemplo de pool de conexiones Oracle.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="6_operaciones_ejecucin_de_consultas.html" class="no-ch">6.- Operaciones: ejecución de consultas.</a></li>
+   <li><a href="7_excepciones_y_cierre_de_conexiones.html" class="daddy">7.- Excepciones y cierre de conexiones.</a>
+   <ul class="other-section">
+      <li><a href="71_excepciones.html" class="no-ch">7.1.- Excepciones.</a></li>
+      <li><a href="72_cierre_de_conexiones.html" class="no-ch">7.2.- Cierre de conexiones.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="59_captura_de_errores_y_liberacin_de_recursos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="511_consultas_al_diccionario_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.10.- Transacciones.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id49">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta49_66" class="block iDevice_content">
+<p><img alt="Primer plano de Ana, mirando hacia el frente." class="elemento_izquierda" height="132" src="../jpg/caso_personajes_03.jpg" style="width: 200px; height: 132px;" title="Ana mirando hacia el frente." width="200" /></p>
+<p style="text-align: justify;">Hay un aspecto sobre bases de datos, que <strong>Ana</strong> estudió en el ciclo formativo, y que no había tenido ocasión de ver en un caso real, y es el de las <strong>transacciones en una base de datos</strong>. Es un tema que le apasiona y le pide a María que le muestre alguna que haya realizado ella, para estudiarla a fondo y aprender con sus consejos.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id50">
+<div class="iDevice emphasis0">
+<div id="ta50_73" class="block iDevice_content">
+<p><img alt="Paquete de tarjetas de crédito American Express." class="elemento_derecha" height="160" src="../jpg/ad03_cont_r29_americanexpress.jpg" style="width: 160px; height: 160px;" title="Tarjetas." width="160" /></p>
+<p style="text-align: justify;">Cuando tenemos una serie de consultas SQL que deben ejecutarse en conjunto, con el uso de transacciones podemos asegurarnos de que nunca nos quedaremos a medio camino de su ejecución.</p>
+<p style="text-align: justify;">Las transacciones tienen la característica de poder “deshacer” los cambios efectuados en las tablas, de una transacción dada, si no se han podido realizar todas las operaciones que forman parte de dicha transacción.</p>
+<p style="text-align: justify;">Por eso, las bases de datos que soportan transacciones son mucho más seguras y fáciles de recuperar si se produce algún fallo en el servidor que almacena la base de datos, ya que las consultas se ejecutan o no en su totalidad.</p>
+<p style="text-align: justify;">Al ejecutar una transacción, el motor de base de datos garantiza: <strong>atomicidad, consistencia, aislamiento y durabilidad (<acronym title="Atomicidad, consistencia, aislamiento y durabilidad.">ACID</acronym>)</strong> de la transacción (o conjunto de comandos) que se utilice.</p>
+<p style="text-align: justify;">El ejemplo típico que se pone para hacer más clara la necesidad de transacciones en algunos casos es el de una transacción bancaria. Por ejemplo, si una cantidad de dinero es transferida de la cuenta de Antonio a la cuenta de Pedro, se necesitarían dos consultas:</p>
+<ul class="lista_verificacion" style="text-align: justify;">
+<li>En la cuenta de Antonio para quitar de su cuenta ese dinero:</li>
+</ul>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>UPDATE cuentas SET saldo = saldo - cantidad WHERE cliente = “Antonio”;</code></pre>
+</div>
+</div>
+<ul class="lista_verificacion" style="text-align: justify;">
+<li>En la cuenta de Pedro para añadir ese dinero a su cuenta:</li>
+</ul>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>UPDATE cuentas SET saldo = saldo + cantidad WHERE cliente = “Pedro”;</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Pero, ¿qué ocurre si por algún imprevisto (un apagón de luz, etc.), el sistema “cae” después de que se ejecute la primera consulta, y antes de que se ejecute la segunda? Antonio tendrá una cantidad de dinero menos en su cuenta y creerá que ha realizado la transferencia. Pedro, sin embargo, creerá que todavía no le han realizado la transferencia.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id51">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-51_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion51_60" class="block question iDevice_content">
+<strong>Respecto a las transacciones, señala la respuesta correcta:</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i51_63" class="sr-av"><a href="#answer-51_63">Opción 1</a></label><input type="radio" name="option51_60" id="i51_63" class="exe-radio-option exe-radio-option-0-4-51_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-51_63"><div id="taans51_63" class="block iDevice_content">
+En caso de una transacción con tres operaciones, no se podrá deshacer en ningún caso.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i51_133" class="sr-av"><a href="#answer-51_133">Opción 2</a></label><input type="radio" name="option51_60" id="i51_133" class="exe-radio-option exe-radio-option-1-4-51_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-51_133"><div id="taans51_133" class="block iDevice_content">
+Una transacción permite recuperar los datos si se produce un fallo, aportando por tanto más seguridad en la realización de operaciones en la base de datos.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i51_136" class="sr-av"><a href="#answer-51_136">Opción 3</a></label><input type="radio" name="option51_60" id="i51_136" class="exe-radio-option exe-radio-option-2-4-51_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-51_136"><div id="taans51_136" class="block iDevice_content">
+Una transacción se hará sólo si las operaciones involucradas operan con dinero.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i51_139" class="sr-av"><a href="#answer-51_139">Opción 4</a></label><input type="radio" name="option51_60" id="i51_139" class="exe-radio-option exe-radio-option-3-4-51_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-51_139"><div id="taans51_139" class="block iDevice_content">
+Ninguna es correcta.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b51_60" class="feedback js-hidden">
+<div id="taf51_63" class=" iDevice_content">
+¡Incorrecto, el número de operaciones es indiferente!
+
+</div>
+</section>
+<section id="sa1b51_60" class="feedback js-hidden">
+<div id="taf51_133" class=" iDevice_content">
+¡Exacto, así es!
+
+</div>
+</section>
+<section id="sa2b51_60" class="feedback js-hidden">
+<div id="taf51_136" class=" iDevice_content">
+¡No es correcto! No tiene por qué ser con dinero.
+
+</div>
+</section>
+<section id="sa3b51_60" class="feedback js-hidden">
+<div id="taf51_139" class=" iDevice_content">
+¡No! Hay una correcta.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-51_63">Incorrecto</a><span> (<a href="#sa0b51_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-51_133">Opción correcta</a><span> (<a href="#sa1b51_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-51_136">Incorrecto</a><span> (<a href="#sa2b51_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-51_139">Incorrecto</a><span> (<a href="#sa3b51_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id77">
+<div class="iDevice emphasis0" >
+<div id="ta77_121_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">De manera más formal el control de la transacción es realizado por el objeto de la conexión. Cunado se crea una conexión, por defecto esta en el modo activado. Esto significa que cada operación DML (<code>INSERT, UPDATE, DELETE</code> ) es tratada como transacción por sí misma que <span> se valida automáticamente en cuanto se ejecute.</span></p>
+<p style="text-align: justify;"><span>A veces necesitamos agrupar varias sentencias SQL en una única transacción, para ello:</span></p>
+<ol style="text-align: justify;">
+<li>Modificamos el autocommit antes de ejecutar las consultas que deban estar en la misma transacccion: <span> </span><code>conexion.setAutoCommit(false)  </code></li>
+<li>Ejecutamos las sentencias </li>
+<li>Finalizaremos de forma manual la transacción.<code> conexion.Commit.</code></li>
+</ol>
+<p style="text-align: justify;"><strong>Ejemplo:</strong></p>
+<p style="text-align: justify;"><span id="yui_3_17_2_1_1596132379045_135">El siguiente programa actualiza la tabla CAFFEE con los datos de las ventas que se envían al programa como un objeto de tipo HashMap (colección que almacena datos asociando una clave a un valor ), las actualizaciones se tratan como una única transacción de forma que si se ha podido completar todas las actualizaciones, se validan y en caso de que falle alguna, el gestor de errores deshace los cambios ( <code>con.rollback()</code></span>)</p>
+<div style="text-align: justify;">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public void updateCoffeeSales(HashMap&lt;String, Integer&gt; salesForWeek)
+    throws SQLException {
+    PreparedStatement updateSales = null;
+    PreparedStatement updateTotal = null;
+    String updateString =
+        "update " + dbName + ".COFFEES " +
+        "set SALES = ? where COF_NAME = ?";
+    String updateStatement =
+        "update " + dbName + ".COFFEES " +
+        "set TOTAL = TOTAL + ? " +
+        "where COF_NAME = ?";
+    try {
+        con.setAutoCommit(false);
+        updateSales = con.prepareStatement(updateString);
+        updateTotal = con.prepareStatement(updateStatement);
+        for (Map.Entry&lt;String, Integer&gt; e : salesForWeek.entrySet()) {
+            updateSales.setInt(1, e.getValue().intValue());
+            updateSales.setString(2, e.getKey());
+            updateSales.executeUpdate();
+            updateTotal.setInt(1, e.getValue().intValue());
+            updateTotal.setString(2, e.getKey());
+            updateTotal.executeUpdate();
+            con.commit();
+        }
+    } catch (SQLException e ) {
+        JDBCTutorialUtilities.printSQLException(e);
+        if (con != null) {
+            try {
+                System.err.print("Transaction is being rolled back");
+                con.rollback();
+            } catch(SQLException excep) {
+                JDBCTutorialUtilities.printSQLException(excep);
+            }
+        }
+    } finally {
+        if (updateSales != null) {
+            updateSales.close();
+        }
+        if (updateTotal != null) {
+            updateTotal.close();
+        }
+        con.setAutoCommit(true);
+    }
+}</code></pre>
+</div>
+</div>
+<span style="font-size: 10pt;"><code></code></span></div></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id78">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Commit y Rollback.</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta78_122_2" class="block iDevice_content">
+<div class="exe-text"><p><img src="../jpg/ad03_cont_r30_commit.jpg" alt="" width="134" height="63" /></p>
+<p>Una transacción tiene dos finales posibles, <strong>COMMIT o ROLLBACK</strong>. Si se finaliza correctamente y sin problemas se hará con <code>COMMIT</code>, con lo que los cambios se realizan en la base de datos, y si por alguna razón hay un fallo, se deshacen los cambios efectuados hasta ese momento, con la ejecución de <code>ROLLBACK</code>.</p>
+<p>Por defecto, al menos en <span lang="en">MySQL</span> o con Oracle, en una conexión trabajamos en modo <code>autocommit</code> con valor <code>true</code>. Eso significa que cada consulta es una transacción en la base de datos.</p>
+<p>Por tanto, si queremos definir una transacción de varias operaciones, estableceremos el modo <code>autocommit</code> a <code>false</code> con el método <code>setAutoCommit</code> de la clase <code>Connection</code>.</p>
+<p>En modo no <code>autocommit</code> las transacciones quedan definidas por las ejecuciones de los métodos <code>commit</code> y <code>rollback</code>. Una transacción abarca desde el último <code>commit</code> o <code>rollback</code> hasta el siguiente <code>commit</code>. Los métodos <code>commit</code> o <code>rollback</code> forman parte de la clase <code>Connection</code>.</p>
+<p>En la siguiente porción de código de un procedimiento almacenado, puedes ver un ejemplo sencillo de cómo se puede utilizar <code>commit</code> y <code>rollback</code>: tras las operaciones se realiza el <code>commit</code>, y si ocurre una excepción, al capturarla realizaríamos el <code>rollback</code>.</p>
+<div class="codigo elemento_centrado" style="width: 38.45em;">
+<div class="texto_izquierda">
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>BEGIN
+…
+SET AUTOCOMMIT OFF
+update cuenta set saldo=saldo + 250 where dni=”12345678-L”;
+update cuenta set saldo=saldo - 250 where dni=”89009999-L”;
+COMMIT;
+…
+EXCEPTION
+   WHEN OTHERS THEN
+      ROLLBACK ;
+END;</code></pre>
+</div>
+</div>
+<pre><span style="font-family: 'Encode Sans', Arial, Helvetica, sans-serif; font-size: 1.05em;">Es conveniente planificar bien la aplicación para minimizar el tiempo en el que se tengan transacciones abiertas ejecutándose, ya que consumen recursos y suponen bloqueos en la base de datos que puede parar otras transacciones. En muchos casos, un diseño cuidadoso puede evitar usos innecesarios que se salgan fuera del modo estándar </span><code>AutoCommit</code><span style="font-family: 'Encode Sans', Arial, Helvetica, sans-serif; font-size: 1.05em;">.</span></pre>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id80">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Para saber más...</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta80_124_2" class="block iDevice_content">
+<div class="exe-text"><p>Hay una documentación muy extensa para programar con <acronym title="Procedural Language/Structured Query Language.">PL-SQL</acronym>: procedimientos, funciones, <span lang="en">triggers</span>, etc., en el siguiente enlace:</p>
+<p class="enlace_centrado"><a href="http://apuntesduoc.pbworks.com/w/file/fetch/54222708/040628_PLSQL_Basico.pdf" title="Acceder a la documentación de PL-SQL.">Programación con PL-SQL.</a></p>
+<p>Interesante tutorial sobre transacciones y otras cuestiones con <span lang="en">MySQL</span>.</p>
+<div class="enlace_centrado"><a class="pdf" href="http://www.uv.es/~jgutierr/MySQL_Java/CursoMysql_ses2.pdf" title="Descargar la documentación de MySQL [pdf - 217 KB]"><span lang="en">MySQL</span>.</a> <span class="tamano"> (217 KB)</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="59_captura_de_errores_y_liberacin_de_recursos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="511_consultas_al_diccionario_de_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/510_transacciones.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:42 GMT -->
+</html>

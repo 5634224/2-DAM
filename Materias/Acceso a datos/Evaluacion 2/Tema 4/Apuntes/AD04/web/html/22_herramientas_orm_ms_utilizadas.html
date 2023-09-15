@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/22_herramientas_orm_ms_utilizadas.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.- Herramientas ORM más utilizadas. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li><a href="1_concepto_de_mapeo_objetorelacional.html" class="no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li class="current-page-parent"><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="current-page-parent daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul>
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li id="active"><a href="22_herramientas_orm_ms_utilizadas.html" class="active no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li><a href="4_instalacin_y_configuracin_de_hibernate.html" class="no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul class="other-section">
+      <li><a href="51_ficheros_de_configuracin_propiedades.html" class="no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li><a href="7_clases_persistentes.html" class="no-ch">7.- Clases persistentes.</a></li>
+   <li><a href="8_sesiones_estados_de_un_objeto.html" class="no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul class="other-section">
+      <li><a href="111_sintaxis_del_lenguaje_hql.html" class="no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li><a href="112_consultas_por_criterios.html" class="no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li><a href="12_gestin_de_transacciones.html" class="no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_caractersticas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_arquitectura_de_hibernate.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.- Herramientas ORM más utilizadas.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id18">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta18_66" class="block iDevice_content">
+<p>
+Sabiendo ya la función de las herramientas <span lang="en">ORM</span>, el siguiente punto es el análisis de las <span lang="en">ORM</span> existentes en el mercado, junto a sus características más destacables, para decidir cuál es la que mejor se adapta a nuestras necesidades.
+</p>
+<img alt="Imagen que muestra a un hombre y una mujer mirando los cables de una instalación. El hombre observa mientras la mujer está arreglando los cables." class="elemento_centrado" height="112" src="../jpg/ad04_cont_r09_administracion_de_sistemas_01.jpeg.jpg" style="width: 200px; height: 112px" title="Administración de sistemas." width="200" />
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id19">
+<div class="iDevice emphasis0">
+<div id="ta19_73" class="block iDevice_content">
+<p>Entre las herramientas<span lang="en">ORM</span> más relevantes encontramos las siguientes:</p>
+<p><strong><span lang="en">Hibernate</span>:</strong></p>
+<p><span lang="en">Hibernate</span> es una herramienta de Mapeo objeto-relacional (<span lang="en">ORM)</span> para la plataforma Java (y disponible también para .Net con el nombre de <span lang="en">NHibernate</span>) que facilita el mapeo de atributos entre una base de datos relacional tradicional y el modelo de objetos de una aplicación. Utiliza archivos declarativos (<acronym lang="en" title="Extensible Markup Language. Lenguaje de Marcas Extensible.">XML</acronym>) o anotaciones en los beans de las entidades que permiten establecer estas relaciones.</p>
+<p><span lang="en">Hibernate</span> es software libre, distribuido bajo los términos de la licencia <span lang="en">GNU</span> <acronym lang="en" title="General License General Public. Licencia General Licencia Pública.">LGPL</acronym>.</p>
+<p><img alt="Imagen que muestra el logo de la herramienta ORM Hibernate. " class="elemento_centrado" height="56" src="../jpg/ad04_cont_r10_logohibernate.jpg" style="width: 200px; height: 56px;" title="Instalación de Hibernate. " width="200" /></p>
+<p><strong>Java Persistence Api (<acronym lang="en" title="Java Persistence Api. Persistencia Java Api.">JPA</acronym>):</strong></p>
+<p>El Java <span lang="en">Persistence</span> <a href="#tc02a6f3d-6442-b691-f5a0-22c867871ddc" id="linkc02a6f3d-6442-b691-f5a0-22c867871ddc" class="exe-tooltip definition-tt titled-tt" title="API: | ">API</a> (JPA) es una especificación de <span lang="en">Sun</span> <span lang="en">Microsystems</span> para la persistencia de objetos Java a cualquier base de datos relacional. Esta <acronym lang="en" title="Application Programming Interface. Interfaz de Programación de Aplicaciones.">API</acronym> fue desarrollada para la plataforma <acronym title="Java Enterprise Edition. Java Edición Empresa.">JEE</acronym> e incluida en el estándar de <acronym lang="en" title="Enterprise JavaBeans. Empresas JavaBeans.">EJB</acronym> 3.0, formando parte de la <acronym lang="en" title="Java Specification Request. Consulta de Especificación Java.">Java Specification Request</acronym> JSR 220.</p>
+<p>Para su utilización, <span lang="en">JPA</span> requiere de <acronym lang="en" title="Java 2 Platform, Standard Edition. Plataforma 2 de Java Edición Estandar.">J2SE</acronym> 1.5 (también conocida como Java 5) o superior, ya que hace uso intensivo de las nuevas características de lenguaje Java, como las anotaciones y los genéricos.</p>
+<p><strong>iBatis:</strong></p>
+<p>iBatis es un <span lang="en">framework</span> de persistencia desarrollado por la <span lang="en">Apache</span> <span lang="en">software</span> <span lang="en">Foundation</span>. Al igual que que el resto de los proyectos desarrollados por la ASF, iBatis es una herramienta de código libre.</p>
+<p>iBatis sigue el mismo esquema de uso que <span lang="en">Hibernate</span>; se apoya en ficheros de mapeo <span lang="en">XML</span> para persistir la información contenida en los objetos en un <a href="#t3ddb15fc-fe90-1f3d-d8de-9a0be4b999a1" id="link3ddb15fc-fe90-1f3d-d8de-9a0be4b999a1" class="exe-tooltip definition-tt titled-tt" title="Repositorio: | ">repositorio</a> relacional.</p>
+<p><img alt="Imagen que muestra el logo de la herramienta ORM iBatis." class="elemento_centrado" height="80" src="../jpg/ad04_cont_r11_logoibatis.jpg" style="width: 200px; height: 80px;" title="Logo de  iBatis." width="200" /></p>
+<p></p>
+<p>En el siguiente documento encontrarás las características más destacables de la herramienta <span lang="en">Hibernate</span>.</p>
+<div class="enlace_centrado"><a class="pdf" href="http://www.jtech.ua.es/j2ee/2006-2007/doc/sesion03-apuntes.pdf" title="Descargar un documento de configuración de Hibernate [pdf - 0.19 MB].">Aspectos de la configuración de Hibernate.</a> <span class="tamano"> (0.19 MB) </span></div>
+<div id="tc02a6f3d-6442-b691-f5a0-22c867871ddc" class="exe-tooltip-text">Conjunto de rutinas, estructuras de datos y/o protocolos proveídos por una biblioteca y/o servicio del sistema operativo para ser utilizado en otro <span lang="en">software</span>.</div>
+<div id="t3ddb15fc-fe90-1f3d-d8de-9a0be4b999a1" class="exe-tooltip-text">
+<p>Servidor o dispositivo donde se encuentran almacenados programas correspondientes a un sistema operativo.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id20">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-20_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion20_60" class="block question iDevice_content">
+<p>
+<strong>La herramienta <span lang="en">ORM</span> <span lang="en">Hibernate</span> se caracteriza por:</strong>
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i20_63" class="sr-av"><a href="#answer-20_63">Opción 1</a></label><input type="radio" name="option20_60" id="i20_63" class="exe-radio-option exe-radio-option-0-3-20_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-20_63"><div id="taans20_63" class="block iDevice_content">
+No ser compatible con la plataforma .Net.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i20_91" class="sr-av"><a href="#answer-20_91">Opción 2</a></label><input type="radio" name="option20_60" id="i20_91" class="exe-radio-option exe-radio-option-1-3-20_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-20_91"><div id="taans20_91" class="block iDevice_content">
+Ser <span lang="en">software</span> libre.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i20_94" class="sr-av"><a href="#answer-20_94">Opción 3</a></label><input type="radio" name="option20_60" id="i20_94" class="exe-radio-option exe-radio-option-2-3-20_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-20_94"><div id="taans20_94" class="block iDevice_content">
+Ser una especificación de <span lang="en">Sun Microsystems</span>.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b20_60" class="feedback js-hidden">
+<div id="taf20_63" class=" iDevice_content">
+Incorrecta, existe la variante <span lang="en">NHibernate</span> para este <span lang="en">framework</span>.
+
+</div>
+</section>
+<section id="sa1b20_60" class="feedback js-hidden">
+<div id="taf20_91" class=" iDevice_content">
+Correcto. Efectivamente, tiene licencia <span lang="en">GNU LGPL</span>.
+
+</div>
+</section>
+<section id="sa2b20_60" class="feedback js-hidden">
+<div id="taf20_94" class=" iDevice_content">
+Incorrecta. En este caso, se está refiriendo a <span lang="en">JPA</span>.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-20_63">Incorrecto</a><span> (<a href="#sa0b20_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-20_91">Opción correcta</a><span> (<a href="#sa1b20_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-20_94">Incorrecto</a><span> (<a href="#sa2b20_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_caractersticas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_arquitectura_de_hibernate.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/22_herramientas_orm_ms_utilizadas.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:04 GMT -->
+</html>

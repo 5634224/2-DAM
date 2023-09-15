@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431922/mod_resource/content/4/AD07_Contenidos_Web/9_herramientas_para_el_desarrollo_de_componentes_visuales.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:57:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.- Herramientas para el desarrollo de componentes visuales. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Creación de componentes visuales.</a></li>
+   <li><a href="1_concepto_de_componente_caractersticas.html" class="no-ch">1.- Concepto de componente. Características.</a></li>
+   <li><a href="2_propiedades_y_atributos.html" class="no-ch">2.- Propiedades y atributos.</a></li>
+   <li><a href="3_editores_de_propiedades.html" class="no-ch">3.- Editores de propiedades.</a></li>
+   <li><a href="4_eventos_asociacin_de_acciones_a_eventos.html" class="no-ch">4.- Eventos. Asociación de acciones a eventos.</a></li>
+   <li><a href="5_introspeccin_reflexin.html" class="no-ch">5.- Introspección. Reflexión.</a></li>
+   <li><a href="6_persistencia_del_componente.html" class="no-ch">6.- Persistencia del componente.</a></li>
+   <li><a href="7_propiedades_simples_e_indexadas.html" class="no-ch">7.- Propiedades simples e indexadas.</a></li>
+   <li><a href="8_propiedades_compartidas_y_restringidas.html" class="no-ch">8.- Propiedades compartidas y restringidas.</a></li>
+   <li id="active"><a href="9_herramientas_para_el_desarrollo_de_componentes_visuales.html" class="active no-ch">9.- Herramientas para el desarrollo de componentes visuales.</a></li>
+   <li><a href="10_empaquetado_de_componentes.html" class="no-ch">10.- Empaquetado de componentes.</a></li>
+   <li><a href="11_elaboracin_de_un_componente_de_ejemplo.html" class="daddy">11.- Elaboración de un componente de ejemplo.</a>
+   <ul class="other-section">
+      <li><a href="111_modelo_o_base_de_datos.html" class="no-ch">11.1.- Modelo o base de datos.</a></li>
+      <li><a href="112_controlador_o_lgica_del_modelo.html" class="no-ch">11.2.- Controlador o lógica del modelo.</a></li>
+      <li><a href="113_estructura_del_javabean.html" class="no-ch">11.3.- Estructura del JavaBean.</a></li>
+      <li><a href="114_creacin_del_componente.html" class="no-ch">11.4.- Creación del componente.</a></li>
+      <li><a href="115_aadir_propiedades.html" class="no-ch">11.5.- Añadir propiedades.</a></li>
+      <li><a href="116_implementar_el_comportamiento.html" class="no-ch">11.6.- Implementar el comportamiento.</a></li>
+      <li><a href="117_gestin_de_eventos.html" class="no-ch">11.7.- Gestión de eventos.</a></li>
+      <li><a href="118_uso_de_componentes_previamente_elaborados_en_netbeans.html" class="no-ch">11.8.- Uso de componentes previamente elaborados en NetBeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="8_propiedades_compartidas_y_restringidas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="10_empaquetado_de_componentes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">9.- Herramientas para el desarrollo de componentes visuales.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id48">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta48_66" class="block iDevice_content">
+<p style="text-align: justify;">-Llevamos toda la mañana hablando y aún no hemos hecho nada real, creo que lo ideal es empezar por conocer que herramientas podemos usar para programar un componente, sin duda necesitaremos que cumpla con algunas características como las ayudas al código o generación de clases auxiliares -comenta <strong>Juan</strong>.</p>
+<p><img alt="Imagen donde se aprecia el una pantalla de ordenador encendida." class="elemento_centrado" height="148" src="../jpg/ad07_cont_r19_pantalla.jpg" style="width: 200px; height: 148px;" title="Pantalla de ordenador." width="200" /></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id49">
+<div class="iDevice emphasis0">
+<div id="ta49_73" class="block iDevice_content">
+<p><code><span style="font-size: 12pt;"><strong><span lang="en">BeanBox</span></strong></span></code></p>
+<p style="text-align: justify;">Es la primera herramienta que se creó para trabajar con componentes de <code><span lang="en">JavaBeans</span></code> y se podría definir como un contenedor de <span lang="en">Beans</span>. Se proporcionaba desde la página <span lang="en">web</span> de <span lang="en">Sun</span>, y la documentación sobre <code><span lang="en">JavaBeans</span></code> se basaba en esta herramienta.</p>
+<p style="text-align: justify;">En <code><span lang="en">BeanBox</span></code> se pueden escribir los <span lang="en">Beans</span>, para luego arrastrarlos dentro de <code><span lang="en">BeanBox</span> </code>y comprobar si funcionan como se esperaba.</p>
+<p style="text-align: justify;">El <code><span lang="en">BeanBox</span></code> también puede verse como una demostración de cómo deben comportarse las herramientas de desarrollo compatibles con los <code><span lang="en">JavaBeans</span></code>. El <code><span lang="en">BeanBox</span></code> es una buena herramienta para aprender a trabajar con <span lang="en">Beans</span>, aunque hoy en día ha sido sustituida por <code><span lang="en">NetBeans</span>.</code></p>
+<div class="elemento_centrado" style="text-align: justify;"><a href="../jpeg/ad07_cont_r20_beanbox.jpeg" title="Ampliar imagen."> <img alt="Captura de pantalla donde se aprecia la interfaz del programa BeanBox." class="imagen_ampliable" height="200" src="../jpg/ad07_cont_r20_beanbox_miniatura.jpg" style="width: 282px; height: 200px;" title="Interfaz de BeanBox." width="282" /></a></div>
+<p style="text-align: justify;"><code><strong><span lang="en">Bean Builder</span></strong></code></p>
+<p style="text-align: justify;">En una versión mejorada del <code><span lang="en">BeanBox</span>.</code> Con esta aplicación se comenzó a dar un enfoque al proyecto que se desarrollaba, puesto que al igual que el <code><span lang="en">BeanBox</span></code> permitía el enlazado de componentes de manera gráfica y ver sus propiedades en tiempo que diseño, pero a diferencia de él y lo que más interesante resultaba era que no creaba archivos .ser para la serialización de los objetos sino que utiliza archivos <acronym lang="en" title="Extensible Markup Language.">XML</acronym> que podían ser entendidos por cualquier aplicación.</p>
+<p style="text-align: justify;"><code><strong><span lang="en">NetBeans</span></strong></code></p>
+<p style="text-align: justify;">Es la apuesta actual de <span lang="en">Oracle</span> para crear y utilizar <code><span lang="en">Beans</span></code>. Proporciona una base completa para todo el ciclo de vida de creación del <code><span lang="en">Bean</span></code>, y ayudas para la escritura de código para añadir propiedades, métodos <span lang="en">getter</span> y <span lang="en">setter</span> en propiedades simples, complejas, compartidas o ligadas, o para la generación de eventos. Además desde el administrador de la paleta es extremadamente sencillo incorporar nuevos <span lang="en">beans</span> desde sus archivos .<a href="#tf585ea11-5e67-b31e-d1d5-a1cf0a4e0744" id="linkf585ea11-5e67-b31e-d1d5-a1cf0a4e0744" class="exe-tooltip definition-tt titled-tt" title="Paquete jar: | ">jar</a>, e incorporarlos a una aplicación solo precisa de un par de clics.</p>
+<p style="text-align: justify;"><img alt="Imagen donde se aprecia el logo del entorno de desarrollo NetBeans." class="elemento_centrado" height="52" src="../jpg/ad07_cont_r21_netbeans.jpg" style="width: 200px; height: 52px;" title="Logo NetBeans." width="200" /></p>
+<p style="text-align: justify;">Una de las características que aporta <span lang="en">NetBeans</span> es la creación de la clase <strong>BeanInfo</strong> para el componente. Una clase <code>BeanInfo</code> puede gestionar el modo en que el componente aparece en la herramienta de desarrollo de aplicaciones, indicando que propiedades deben aparecer, en primer lugar, cual es deben estar ocultas, si existe un editor de propiedades asociado, etc, siendo además una de las bases de la <strong>introspección</strong> en Java.</p>
+<p style="text-align: justify;">Puedes generar un <code>BeanInfo</code> automáticamente desplegando el menú contextual de la clase que implementa el componente en el inspector de proyectos de <code><span lang="en">NetBeans</span></code> y seleccionar <strong>Editor <code>BeanInfo</code></strong>, si no existe te preguntará si quieres crearlo, cuando lo hagas se creará la clase <code>BeanInfo</code> y se mostrará el código, si cambias al diseño visual verás un panel que te permite gestionar gráficamente las propiedades de tu componente.</p>
+<p style="text-align: justify;">La principal ventaja de utilizar este método es que cuando nuestro componente hereda de una clase del tipo <code>JPanel</code> o <code>JFrame</code>, que son bastante complejas, el manejo de las propiedades heredadas es automático en el <code>BeanInfo</code>.</p>
+<div id="tf585ea11-5e67-b31e-d1d5-a1cf0a4e0744" class="exe-tooltip-text">Archivo comprimido que se crear con la herramienta java llamada <acronym lang="en" title="Java Archive.">jar</acronym> que contiene la estructura con los archivos y directorios necesarios para ejecutar una aplicación java.</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id51">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-51_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion51_60" class="block question iDevice_content">
+<strong>¿Qué herramienta usarías en la actualidad para crear un componente?</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i51_63" class="sr-av"><a href="#answer-51_63">Opción 1</a></label><input type="radio" name="option51_60" id="i51_63" class="exe-radio-option exe-radio-option-0-3-51_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-51_63"><div id="taans51_63" class="block iDevice_content">
+<span lang="en">BeanBox.</span>
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i51_132" class="sr-av"><a href="#answer-51_132">Opción 2</a></label><input type="radio" name="option51_60" id="i51_132" class="exe-radio-option exe-radio-option-1-3-51_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-51_132"><div id="taans51_132" class="block iDevice_content">
+<span lang="en">BeanBuilder</span>.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i51_135" class="sr-av"><a href="#answer-51_135">Opción 3</a></label><input type="radio" name="option51_60" id="i51_135" class="exe-radio-option exe-radio-option-2-3-51_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-51_135"><div id="taans51_135" class="block iDevice_content">
+<span lang="en">NetBeans</span>.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b51_60" class="feedback js-hidden">
+<div id="taf51_63" class=" iDevice_content">
+Incorrecto, ésta herramienta está obsoleta y ya no se usa.
+
+</div>
+</section>
+<section id="sa1b51_60" class="feedback js-hidden">
+<div id="taf51_132" class=" iDevice_content">
+No es correcto, ésta herramienta está obsoleta y ya no se usa.
+
+</div>
+</section>
+<section id="sa2b51_60" class="feedback js-hidden">
+<div id="taf51_135" class=" iDevice_content">
+Correcto, es la mejor para crear un componente visual de una forma rápida y cómoda.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-51_63">Incorrecto</a><span> (<a href="#sa0b51_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-51_132">Incorrecto</a><span> (<a href="#sa1b51_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-51_135">Opción correcta</a><span> (<a href="#sa2b51_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="8_propiedades_compartidas_y_restringidas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="10_empaquetado_de_componentes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431922/mod_resource/content/4/AD07_Contenidos_Web/9_herramientas_para_el_desarrollo_de_componentes_visuales.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:57:05 GMT -->
+</html>

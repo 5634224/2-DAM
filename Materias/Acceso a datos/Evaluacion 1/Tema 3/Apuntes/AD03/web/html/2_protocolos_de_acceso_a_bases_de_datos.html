@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/2_protocolos_de_acceso_a_bases_de_datos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.- Protocolos de acceso a bases de datos. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Manejo de conectores.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li id="active"><a href="2_protocolos_de_acceso_a_bases_de_datos.html" class="active no-ch">2.- Protocolos de acceso a bases de datos.</a></li>
+   <li><a href="3_conectores_o_drivers.html" class="no-ch">3.- Conectores o Drivers.</a></li>
+   <li><a href="4_arquitectura_jdbc.html" class="daddy">4.- Arquitectura JDBC.</a>
+   <ul class="other-section">
+      <li><a href="41_conectores_tipo_1_y_tipo_2.html" class="no-ch">4.1.- Conectores tipo 1 y tipo 2.</a></li>
+      <li><a href="42_conectores_tipo_3_y_tipo_4.html" class="no-ch">4.2.- Conectores tipo 3 y tipo 4.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_conexin_a_una_base_de_datos.html" class="daddy">5.- Conexión a una base de datos.</a>
+   <ul class="other-section">
+      <li><a href="51_creacin_de_la_base_de_datos.html" class="no-ch">5.1.- Creación de la base de datos.</a></li>
+      <li><a href="52_drivers_de_conexin_oracle_y_mysql.html" class="no-ch">5.2.- Drivers de conexión (Oracle y MySQL)</a></li>
+      <li><a href="53_instalar_el_conector_de_la_base_de_datos.html" class="no-ch">5.3.- Instalar el conector de la base de datos.</a></li>
+      <li><a href="54_jdbc_conexin_a_una_base_de_datos.html" class="no-ch">5.4.- JDBC conexión a una base de datos.</a></li>
+      <li><a href="55_realizacin_de_consultas.html" class="no-ch">5.5.- Realización de consultas.</a></li>
+      <li><a href="56_ejecucin_de_sentencias_dml.html" class="no-ch">5.6.- Ejecución de sentencias DML.</a></li>
+      <li><a href="57_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos.html" class="daddy">5.7.- Ejecución de procedimientos almacenados en la base de datos.</a>
+      <ul class="other-section">
+         <li><a href="571_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_mysql.html" class="no-ch">5.7.1.- Ejecución de procedimientos almacenados en la base de datos MySQL.</a></li>
+         <li><a href="572_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_oracle.html" class="no-ch">5.7.2.- Ejecución de procedimientos almacenados en la base de datos Oracle.</a></li>
+      </ul>
+      </li>
+      <li><a href="58_sentencias_preparadas.html" class="no-ch">5.8.- Sentencias preparadas.</a></li>
+      <li><a href="59_captura_de_errores_y_liberacin_de_recursos.html" class="no-ch">5.9.- Captura de errores y liberación de recursos.</a></li>
+      <li><a href="510_transacciones.html" class="no-ch">5.10.- Transacciones.</a></li>
+      <li><a href="511_consultas_al_diccionario_de_datos.html" class="no-ch">5.11.- Consultas al diccionario de datos.</a></li>
+      <li><a href="512_recuperacin_y_modificacin_de_valores_de_resultset.html" class="no-ch">5.12.- Recuperación y modificación de valores de ResultSet.</a></li>
+      <li><a href="513_pool_de_conexiones.html" class="daddy">5.13.- Pool de conexiones.</a>
+      <ul class="other-section">
+         <li><a href="5131_ejemplo_de_pool_de_conexiones_mysql.html" class="no-ch">5.13.1.- Ejemplo de pool de conexiones MySQL.</a></li>
+         <li><a href="5132_ejemplo_de_pool_de_conexiones_oracle.html" class="no-ch">5.13.2.- Ejemplo de pool de conexiones Oracle.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="6_operaciones_ejecucin_de_consultas.html" class="no-ch">6.- Operaciones: ejecución de consultas.</a></li>
+   <li><a href="7_excepciones_y_cierre_de_conexiones.html" class="daddy">7.- Excepciones y cierre de conexiones.</a>
+   <ul class="other-section">
+      <li><a href="71_excepciones.html" class="no-ch">7.1.- Excepciones.</a></li>
+      <li><a href="72_cierre_de_conexiones.html" class="no-ch">7.2.- Cierre de conexiones.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_conectores_o_drivers.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.- Protocolos de acceso a bases de datos.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id7">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta7_66" class="block iDevice_content">
+<p><img alt="Primer plano de María, mirando hacia el frente." class="elemento_izquierda" height="132" src="../png/caso_personajes_26.png" title="Primer plano de María, mirando hacia el frente. " width="200" /></p>
+<p style="text-align: justify;"><strong>María </strong>les pregunta a <strong>Antonio</strong> y a <strong>Ana</strong> -¿Estáis dispuestos a realizar consultas sobre bases de datos? Nos vais a tener que echar una mano a <strong>Juan</strong> y a mi para acabar pronto el trabajo. -¡Cuenta con ello! -responde<strong> Antonio.</strong> -Hacer consultas es lo que más me gusta, ¡soy una máquina en eso!</p>
+<p style="text-align: justify;"><strong>Ana</strong> comenta que a ella también le apasiona el tema, y que en el ciclo de <acronym title="Desarrollo de Aplicaciones Multiplataforma.">DAM</acronym> lo han estudiado muy bien. -¿Qué base de datos tienen implantada, qué protocolo de acceso hay que usar?</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id66">
+<div class="iDevice emphasis0" >
+<div id="ta66_110_2" class="block iDevice_content">
+<div class="exe-text"><p id="yui_3_17_2_1_1596098798422_136" style="text-align: justify;"><span id="yui_3_17_2_1_1596098798422_135">Inicialmente, cada empresa desarrolladora de un SGBD implementaba soluciones propietarias específicas para su sistema, pero pronto se dieron cuenta de que colaborando conjuntamente podían sacar mayor rendimiento y avanzar mucho más rápidamente.</span></p>
+<p id="yui_3_17_2_1_1596098798422_137" style="text-align: justify;">Cada SGBD tiene su propia conexión y su propio <acronym title="Application Programming Interface">API</acronym></p>
+<p style="text-align: justify;"><img src="../png/0_0.png" alt="" width="612" height="313" /></p>
+<p style="text-align: justify;">La llegada del <strong><acronym title="Open DataBase Conectivity">ODBC </acronym></strong>representó un avance sin precedentes en el camino hacia la interoperabilidad entre bases de datos y lenguajes de programación. La mayoría de empresas desarrolladoras de sistemas gestores de bases de datos incorporaron los <strong>drivers</strong> de conectividad a las utilidades de sus sistemas y los lenguajes de programación más importantes desarrollaron bibliotecas específicas para soportar el <strong><acronym title="Application Programming Interface">API</acronym> <acronym title="Open DataBase Conectivity">ODBC</acronym>.</strong></p>
+<p style="text-align: justify;">Aunque la industria aceptó <acronym title="Open DataBase Conectivity"><strong>ODBC</strong> </acronym>como medio principal para acceso a bases de datos en Windows, la verdad es que no se introduce bien en el mundo Java, debido a la complejidad que presenta <strong><acronym title="Open DataBase Conectivity">ODBC</acronym></strong>, y que entre otras cosas ha impedido su transición fuera del entorno Windows.</p>
+<p id="yui_3_17_2_1_1596098798422_140" style="text-align: justify;">Sistema de conexión <acronym title="Open DataBase Conectivity"><strong>ODBC</strong> </acronym>configurado usando diferentes controladores (drivers) y un <acronym title="Application Programming Interface">API</acronym> estándar.</p>
+<p style="text-align: justify;"><img src="../png/0_01.png" alt="" width="613" height="469" /></p>
+<p style="text-align: justify;"><strong><acronym lang="en" title="Java Database Connectivity.">JDBC</acronym>  (<span lang="en">Java Database Connectivity</span>) </strong>se trata de un <acronym title="Application Programming Interface">API</acronym> bastante similar a <strong>ODBC</strong> en cuanto a funcionalidad,  implementado específicamente para usar con el lenguaje Java, adaptado a las especificidades de Java. Es decir, la funcionalidad se encuentra capsulada en clases (ya que Java es un lenguaje totalmente orientado a objetos) y además, no depende de ninguna plataforma específica, de acuerdo con la característica multiplataforma defendida por Java.La idea en el desarrollo de <acronym lang="en" title="Java Database Connectivity.">JDBC </acronym>era intentar ser tan sencillo como fuera posible, pero proporcionando a los desarrolladores la máxima flexibilidad.</p>
+<div id="id2">
+<div id="ta2_73">
+<p style="text-align: justify;">Java, mediante <strong><acronym lang="en" title="Java Database Connectivity.">JDBC</acronym></strong>, permite simplificar el acceso a bases de datos relacionales, proporcionando un lenguaje mediante el cual las aplicaciones pueden comunicarse con motores de bases de datos. </p>
+<p style="text-align: justify;">Sun desarrolló este <acronym lang="en" title="Application programming interface.">API</acronym> <code>(java.sql.*)</code>para el acceso a bases de datos, con tres objetivos principales en mente:</p>
+<ul style="text-align: justify;">
+<li>Ser un <strong>API </strong>con soporte de <acronym lang="en" title="Structured query language.">SQL</acronym>: poder construir sentencias SQL e insertarlas dentro de llamadas al API de Java.</li>
+<li>Aprovechar la experiencia de los API's de bases de datos existentes.</li>
+<li>Ser lo más sencillo posible.</li>
+</ul>
+<p style="text-align: justify;">Los desarrolladores de Los Sistemas Gestores de Bases de Datos proporcionan la implementación de esa interfaz (Drivers).</p>
+<p style="text-align: justify;">JDBC es similar en estructura a ODBC. Una aplicación JDBC está compuesta de varias capas, como se muestra en la figura:</p>
+<p style="text-align: justify;"><img src="../png/0_02.png" alt="" width="720" height="517" /></p>
+<p style="text-align: justify;">La<b><span> </span>capa superior</b><span> </span>en este modelo es la aplicación Java. Las aplicaciones Java son portátiles: puede ejecutar una aplicación Java sin modificaciones en cualquier sistema que tenga instalado una maquina virtual java  (Java runtime environment). </p>
+<p style="text-align: justify;">Una aplicación Java que utiliza JDBC puede comunicarse con muchas bases de datos con pocas modificaciones, si es que las hay. Al igual que ODBC, JDBC proporciona una manera consistente de conectarse a una base de datos, ejecutar comandos y recuperar los resultados. Al igual que ODBC, JDBC no impone un lenguaje de comando común: puede usar la sintaxis específica de Oracle cuando está conectado a un servidor Oracle y la sintaxis específica de MySQL cuando está conectado a un servidor MySQL. </p>
+<p style="text-align: justify;">La clase<b> JDBC DriverManager </b>es responsable de localizar un controlador JDBC que necesita la aplicación. Cuando una aplicación cliente solicita una conexión de base de datos, la solicitud se expresa en forma de una URL (Uniform Resource Locator). Una URL de JDBC es similar a las URL que utiliza con un navegador web.  Para conectarnos a la base de datos Oracle,  por ejemplo:<code> jdbc:oracle:thin:ejemplo/ejemplo@localhost:1521:XE</code></p>
+<p style="text-align: justify;">A medida que cada controlador se carga en una Máquina Virtual de Java (VM), se registra con el <b>DriverManager JDBC</b> . Cuando una aplicación solicita una conexión, el DriverManager pregunta a cada <b>Controlador </b>si puede conectarse a la base de datos especificada en la URL dada. Tan pronto como encuentra un controlador adecuado , la búsqueda se detiene y el controlador intenta establecer una conexión con la base de datos. Si el intento de conexión falla, el <b>Controlador </b>lanzará una <b>SQLException </b>a la aplicación. Si la conexión se completa con éxito, el controlador crea un objeto de conexión y lo devuelve a la aplicación.</p>
+</div>
+</div></div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_conectores_o_drivers.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/2_protocolos_de_acceso_a_bases_de_datos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:33 GMT -->
+</html>

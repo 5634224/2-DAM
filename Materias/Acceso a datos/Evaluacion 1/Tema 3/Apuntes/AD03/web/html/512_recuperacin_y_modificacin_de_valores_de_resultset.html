@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/512_recuperacin_y_modificacin_de_valores_de_resultset.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.12.- Recuperación y modificación de valores de ResultSet. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-33"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Manejo de conectores.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_protocolos_de_acceso_a_bases_de_datos.html" class="no-ch">2.- Protocolos de acceso a bases de datos.</a></li>
+   <li><a href="3_conectores_o_drivers.html" class="no-ch">3.- Conectores o Drivers.</a></li>
+   <li><a href="4_arquitectura_jdbc.html" class="daddy">4.- Arquitectura JDBC.</a>
+   <ul class="other-section">
+      <li><a href="41_conectores_tipo_1_y_tipo_2.html" class="no-ch">4.1.- Conectores tipo 1 y tipo 2.</a></li>
+      <li><a href="42_conectores_tipo_3_y_tipo_4.html" class="no-ch">4.2.- Conectores tipo 3 y tipo 4.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_conexin_a_una_base_de_datos.html" class="current-page-parent daddy">5.- Conexión a una base de datos.</a>
+   <ul>
+      <li><a href="51_creacin_de_la_base_de_datos.html" class="no-ch">5.1.- Creación de la base de datos.</a></li>
+      <li><a href="52_drivers_de_conexin_oracle_y_mysql.html" class="no-ch">5.2.- Drivers de conexión (Oracle y MySQL)</a></li>
+      <li><a href="53_instalar_el_conector_de_la_base_de_datos.html" class="no-ch">5.3.- Instalar el conector de la base de datos.</a></li>
+      <li><a href="54_jdbc_conexin_a_una_base_de_datos.html" class="no-ch">5.4.- JDBC conexión a una base de datos.</a></li>
+      <li><a href="55_realizacin_de_consultas.html" class="no-ch">5.5.- Realización de consultas.</a></li>
+      <li><a href="56_ejecucin_de_sentencias_dml.html" class="no-ch">5.6.- Ejecución de sentencias DML.</a></li>
+      <li><a href="57_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos.html" class="daddy">5.7.- Ejecución de procedimientos almacenados en la base de datos.</a>
+      <ul class="other-section">
+         <li><a href="571_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_mysql.html" class="no-ch">5.7.1.- Ejecución de procedimientos almacenados en la base de datos MySQL.</a></li>
+         <li><a href="572_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_oracle.html" class="no-ch">5.7.2.- Ejecución de procedimientos almacenados en la base de datos Oracle.</a></li>
+      </ul>
+      </li>
+      <li><a href="58_sentencias_preparadas.html" class="no-ch">5.8.- Sentencias preparadas.</a></li>
+      <li><a href="59_captura_de_errores_y_liberacin_de_recursos.html" class="no-ch">5.9.- Captura de errores y liberación de recursos.</a></li>
+      <li><a href="510_transacciones.html" class="no-ch">5.10.- Transacciones.</a></li>
+      <li><a href="511_consultas_al_diccionario_de_datos.html" class="no-ch">5.11.- Consultas al diccionario de datos.</a></li>
+      <li id="active"><a href="512_recuperacin_y_modificacin_de_valores_de_resultset.html" class="active no-ch">5.12.- Recuperación y modificación de valores de ResultSet.</a></li>
+      <li><a href="513_pool_de_conexiones.html" class="daddy">5.13.- Pool de conexiones.</a>
+      <ul class="other-section">
+         <li><a href="5131_ejemplo_de_pool_de_conexiones_mysql.html" class="no-ch">5.13.1.- Ejemplo de pool de conexiones MySQL.</a></li>
+         <li><a href="5132_ejemplo_de_pool_de_conexiones_oracle.html" class="no-ch">5.13.2.- Ejemplo de pool de conexiones Oracle.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="6_operaciones_ejecucin_de_consultas.html" class="no-ch">6.- Operaciones: ejecución de consultas.</a></li>
+   <li><a href="7_excepciones_y_cierre_de_conexiones.html" class="daddy">7.- Excepciones y cierre de conexiones.</a>
+   <ul class="other-section">
+      <li><a href="71_excepciones.html" class="no-ch">7.1.- Excepciones.</a></li>
+      <li><a href="72_cierre_de_conexiones.html" class="no-ch">7.2.- Cierre de conexiones.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="511_consultas_al_diccionario_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="513_pool_de_conexiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.12.- Recuperación y modificación de valores de ResultSet.</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id82">
+<div class="iDevice emphasis0" >
+<div id="ta82_126_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;">Un  objeto <code>ResultSet </code>es una tabla de datos que representa un conjunto de resultados de base de datos. Puede ser creado a través de cualquier objeto que implementa el interfaz <code>Statement</code>, incluyendo<code> PreparedStatement,CallableStatement</code>.</p>
+<p style="text-align: justify;">Es necesario un bucle para iterar a través de todos los datos en el<code> ResultSet</code>, utilizando el método <code>ResultSet.next</code> se hace avanzar al cursor a la siguiente fila.</p>
+<p id="yui_3_17_2_1_1596134790719_135" style="text-align: justify;">Los  objeto <code>ResultSet</code> predeterminados no permiten la  actualización , ademas, solo se puede mover el cursor hacia adelante. Sin embargo, puede crear objetos <code>ResultSet</code> que se pueden desplazar hacia adelante y hacia atrás o moverse a una posición absoluta y actualizarse. </p>
+<p style="text-align: justify;">Para poder utilizar el ResultSet para actualizaciones de tablas, tendremos que crear la consulta con la opción<code> ResultSet.CONCUR_UPDATABLE</code>, es un parámetro opcional de la creación de la sentencia:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>conexion.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px; text-align: justify;">Además, es necesario  actualizar el dato en la fila actual del objeto <code>ResultSet:</code></p>
+<div style="text-align: justify;">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>resulSet.updateFloat( "PRICE", f * percentage);//recupera la columna con nombre "PRICE"
+resulSet.updateRow();</code></pre>
+</div>
+</div>
+<p style="padding-left: 30px;"><code><span style="font-size: 1.05em;"></span></code></p>
+</div>
+<p style="text-align: justify;">Con la opción <code>ResultSet.TYPE_SCROLL_SENSITIVE</code> se crea un objeto <code>ResultSet</code> cuyo que puede recorrerse  hacia adelante y hacia atrás en relación con la posición actual y con una posición absoluta. </p>
+<p style="text-align: justify;">Veamos el  ejemplo  siguiente, el  método <code>modifyPrices</code> (float percentage) multiplica el precio del café por un porcentaje dentro de la repetitiva que recorre,  utilizando el objeto<code> ResultSet</code>, todas las filas de la tabla coffees utilizando el objeto <code>ResultSet</code>.</p>
+<p style="text-align: justify;"><strong>Ejemplo:</strong></p>
+<div style="text-align: justify;">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>public void modifyPrices(float percentage) throws SQLException {
+    Statement stmt = null;
+    try {
+        stmt = con.createStatement();
+        stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
+                   ResultSet.CONCUR_UPDATABLE);
+        ResultSet uprs = stmt.executeQuery(
+            "SELECT * FROM  COFFEES");
+        while (uprs.next()) {
+            float f = uprs.getFloat("PRICE"); //recupera la columna con nombre "PRICE"
+            uprs.updateFloat( "PRICE", f * percentage); //también se puede utilizar  updateFloat( 3, f * percentage)
+            uprs.updateRow();
+        }
+    } catch (SQLException e ) {
+        JDBCTutorialUtilities.printSQLException(e);
+    } finally {
+        if (stmt != null) { stmt.close(); }
+    }
+}
+</code></pre>
+</div>
+</div>
+<br /><code></code><code></code></div></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id83">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Para saber más...</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta83_127_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><a href="https://docs.oracle.com/javase/tutorial/jdbc/basics/retrieving.html#rs_update">Para saber mas de los tipos de ResultSet que se pueden utilizar en Oracle</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id84">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Ejemplo completo de uso ResultSet para actualización.</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta84_128_2" class="block iDevice_content">
+<div class="exe-text"><div class="highlighted-code language-java">
+<div>
+<pre><code>import java.sql.*;
+import java.time.*;
+public class JDBCExample {
+	// JDBC driver name and database URL
+	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+	static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:XE";
+	// Database credentials
+	static final String USER = "scott";
+	static final String PASS = "tiger";
+	public static void main(String[] args) {
+		Connection conn = null;
+		try {
+			// STEP 3: Open a connection
+			System.out.println("Connecting to database...");
+			conn = DriverManager.getConnection(DB_URL, USER, PASS);
+			// STEP 4: Execute a query to create statment with
+			// required arguments for RS example.
+			System.out.println("Creating statement...");
+			Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+			// STEP 5: Execute a query
+			String sql = "SELECT EMPLOYEE_ID, first_name, last_name, salary, email, hire_date FROM Employees";
+			ResultSet rs = stmt.executeQuery(sql);
+			System.out.println("List result set for reference....");
+			printRs(rs);
+			// STEP 6: Loop through result set and add 5 in sal
+			// Move to BFR postion so while-loop works properly
+			rs.beforeFirst();
+			// STEP 7: Extract data from result set
+			while (rs.next()) {
+				// Retrieve by column name
+				int newAge = rs.getInt("salary") + 5;
+				rs.updateDouble("salary", newAge);
+				rs.updateRow();
+			}
+			System.out.println("List result set showing new salarys...");
+			printRs(rs);
+			// Insert a record into the table.
+			// Move to insert row and add column data with updateXXX()
+			System.out.println("Inserting a new record...");
+			rs.moveToInsertRow();
+			rs.updateInt("EMPLOYEE_ID", 300);
+			rs.updateString("first_name", "John");
+			rs.updateString("last_name", "Paul");
+			rs.updateInt("salary", 40);
+			rs.updateString("email", "ana@ana");
+			rs.updateTimestamp("hire_date", null);
+			// Commit row
+			rs.insertRow();
+			System.out.println("List result set showing new set...");
+			printRs(rs);
+			// Delete second record from the table.
+			// Set position to second record first_name
+			rs.absolute(2);
+			System.out.println("List the record before deleting...");
+			// Retrieve by column name
+			int EMPLOYEE_ID = rs.getInt("EMPLOYEE_ID");
+			int age = rs.getInt("salary");
+			String first_name = rs.getString("first_name");
+			String last_name = rs.getString("last_name");
+			// Display values
+			System.out.print("EMPLOYEE_ID: " + EMPLOYEE_ID);
+			System.out.print(", salary: " + age);
+			System.out.print(", first_name: " + first_name);
+			System.out.println(", last_name: " + last_name);
+			// Delete row
+			rs.deleteRow();
+			System.out.println("List result set after deleting one records...");
+			printRs(rs);
+			// STEP 8: Clean-up environment
+			rs.close();
+			stmt.close();
+			conn.close();
+		} catch (SQLException se) {
+			// Handle errors for JDBC
+			se.printStackTrace();
+		} catch (Exception e) {
+			// Handle errors for Class.forName
+			e.printStackTrace();
+		} finally {
+			// finally block used to close resources
+			try {
+				if (conn != null)
+					conn.close();
+			} catch (SQLException se) {
+				se.printStackTrace();
+			} // end finally try
+		} // end try
+		System.out.println("Goodbye!");
+	}// end main
+	public static void printRs(ResultSet rs) throws SQLException {
+		// Ensure we start with first_name row
+		rs.beforeFirst();
+		while (rs.next()) {
+			// Retrieve by column name
+			int EMPLOYEE_ID = rs.getInt("EMPLOYEE_ID");
+			int age = rs.getInt("salary");
+			String first_name = rs.getString("first_name");
+			String last_name = rs.getString("last_name");
+			// Display values
+			System.out.print("EMPLOYEE_ID: " + EMPLOYEE_ID);
+			System.out.print(", Salary: " + age);
+			System.out.print(", first_name: " + first_name);
+			System.out.println(", last_name: " + last_name);
+		}
+		System.out.println();
+	}// end printRs()
+}// end JDBCExample</code></pre>
+</div>
+</div>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="511_consultas_al_diccionario_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="513_pool_de_conexiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/512_recuperacin_y_modificacin_de_valores_de_resultset.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:42 GMT -->
+</html>

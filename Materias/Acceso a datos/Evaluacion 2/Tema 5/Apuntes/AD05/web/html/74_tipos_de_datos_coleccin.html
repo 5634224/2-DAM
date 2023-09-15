@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431894/mod_resource/content/8/AD05_Contenidos_Web/74_tipos_de_datos_coleccin.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:51:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.4.- Tipos de datos colección </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-25"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Bases de datos objeto-relacionales y orientadas a objetos.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_caractersticas_de_las_bases_de_datos_orientadas_a_objetos.html" class="daddy">2.- Características de las bases de datos orientadas a objetos.</a>
+   <ul class="other-section">
+      <li><a href="21_ventajas_e_inconvenientes.html" class="no-ch">2.1.- Ventajas e inconvenientes.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_gestores_de_bases_de_datos_orientadas_a_objetos.html" class="daddy">3.- Gestores de bases de datos orientadas a objetos.</a>
+   <ul class="other-section">
+      <li><a href="31_objetos_simples_y_objetos_estructurados.html" class="no-ch">3.1.- Objetos simples y objetos estructurados.</a></li>
+      <li><a href="32_instalacin_del_gestor_de_objetos_db4o.html" class="no-ch">3.2.- Instalación del gestor de objetos Db4o.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_el_api_de_la_base_de_objetos.html" class="daddy">4.- El API de la base de objetos.</a>
+   <ul class="other-section">
+      <li><a href="41_apertura_y_cierre_de_conexiones.html" class="no-ch">4.1.- Apertura y cierre de conexiones.</a></li>
+      <li><a href="42_consultas_a_la_base_de_objetos.html" class="no-ch">4.2.- Consultas a la base de objetos.</a></li>
+      <li><a href="43_actualizacin_de_objetos_simples.html" class="no-ch">4.3.- Actualización de objetos simples.</a></li>
+      <li><a href="44_actualizacin_de_objetos_estructurados.html" class="no-ch">4.4.- Actualización de objetos estructurados.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_consulta_de_objetos_oql.html" class="daddy">5.- El lenguaje de consulta de objetos OQL.</a>
+   <ul class="other-section">
+      <li><a href="51_sintaxis_expresiones_y_operadores.html" class="no-ch">5.1.- Sintaxis, expresiones y operadores.</a></li>
+      <li><a href="52_matisse_un_gestor_de_objetos_que_incorpora_oql.html" class="no-ch">5.2.- Matisse, un gestor de objetos que incorpora OQL.</a></li>
+      <li><a href="53_ejecucin_de_sentencias_oql.html" class="no-ch">5.3.- Ejecución de Sentencias OQL.</a></li>
+      <li><a href="54_ejecucin_de_sentencias_oql_va_jdbc.html" class="no-ch">5.4.- Ejecución de sentencias OQL vía JDBC.</a></li>
+   </ul>
+   </li>
+   <li><a href="6__caractersticas_de_las_bases_de_datos_objetorelacionales.html" class="no-ch">6.-  Características de las bases de datos objeto-relacionales.</a></li>
+   <li class="current-page-parent"><a href="7_gestores_de_bases_de_datos_objetorelacionales.html" class="current-page-parent daddy">7.- Gestores de Bases de Datos Objeto-Relacionales.</a>
+   <ul>
+      <li><a href="71_tipos_de_objetos.html" class="no-ch">7.1.- Tipos de objetos.</a></li>
+      <li><a href="72_tablas_de_objetos.html" class="no-ch">7.2.- Tablas de objetos</a></li>
+      <li><a href="73_referencias_entre_objetos.html" class="no-ch">7.3.- Referencias entre objetos</a></li>
+      <li id="active"><a href="74_tipos_de_datos_coleccin.html" class="active no-ch">7.4.- Tipos de datos colección</a></li>
+      <li><a href="75_acceso_a_datos.html" class="no-ch">7.5.- Acceso a datos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_gestin_de_transacciones_en_las_bdor.html" class="no-ch">8.- Gestión de transacciones en las BDOR..</a></li>
+   <li><a href="anexo_i_estndar_odmg93__u_odmg.html" class="no-ch">Anexo I.- Estándar ODMG-93  u ODMG.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="73_referencias_entre_objetos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="75_acceso_a_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.4.- Tipos de datos colección</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id80">
+<div class="iDevice emphasis0">
+<div id="ta80_73" class="block iDevice_content">
+<p>Para poder implementar relaciones 1:N, Oracle permite definir tipos colección. Un dato de tipo colección está formado por un número indefinido de elementos, todos del mismo tipo. De esta manera, es posible almacenar en un atributo un conjunto de tuplas en forma de array (VARRAY), o en forma de tabla anidada.</p>
+<p><span>Al igual que los tipo objeto, los tipo colección también tienen por defecto unas funciones </span>constructoras de colecciones cuyo nombre coincide con el del tipo. Los argumentos de  entrada de <span>estas funciones son el conjunto de elementos que forman la colección separados por comas y entre </span>paréntesis, y el resultado es un valor del tipo colección.</p>
+<p><span>En Oracle es posible diferenciar entre un valor nulo y una colección vacía. Para construir una </span>colección sin elementos se puede utilizar la función constructora del tipo seguida por dos paréntesis sin elementos dentro.</p>
+<p><span><b>El tipo VARRAY</b></span></p>
+<p><span>Un array es un conjunto ordenado de elementos del mismo tipo. Cada elemento tiene asociado un </span>índice que indica su posición dentro del array. Oracle permite que los VARRAY sean de longitud variable, aunque es necesario especificar un tamaño máximo cuando se declara el tipo VARRAY. Las siguientes declaraciones crean un tipo para una lista ordenada de precios, y un valor para dicho tipo.</p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CREATE TYPE precios AS VARRAY(10) OF NUMBER(12);
+precios('35', '342', '3970');</code></pre>
+</div>
+</div>
+<p><span>Se puede utilizar el tipo VARRAY para:</span></p>
+<ul>
+<li><span>Definir el tipo de dato de una columna de una tabla relacional.</span></li>
+<li><span>Definir el tipo de dato de un atributo de un tipo de objeto.</span></li>
+<li><span>Para definir una variable PL/SQL, un parámetro o el tipo que devuelve una función.</span></li>
+</ul>
+<pre style="padding-left: 60px;"><span style="font-size: 10pt;"><code></code></span></pre>
+<p><span>Cuando se declara un tipo VARRAY no se produce ninguna reserva de espacio. Si el espacio que </span>requiere lo permite, se almacena junto con el resto de columnas de su tabla, pero si es demasiado largo (más de 4000 bytes) se almacena aparte de la tabla como un BLOB.</p>
+<pre style="padding-left: 60px;"><span style="font-size: 10pt;"><code></code></span></pre>
+<p><span>En el siguiente ejemplo, se define un tipo de datos para almacenar una lista ordenada de teléfonos: el </span>tipo list (ya que en el tipo set no existe orden). Este tipo se utiliza después para asignárselo a un atributo del tipo de objeto cliente_t.</p>
+<pre style="padding-left: 60px;"><span style="font-size: 10pt;"><code></code></span></pre>
+<div class="editor-indent">
+<div class="editor-indent">
+<div class="editor-indent">
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CREATE TYPE lista_tel_t ASVARRAY(10) OF VARCHAR2(20) ;
+CREATE TYPE cliente_t AS OBJECT (clinum NUMBER,clinomb VARCHAR2(200),
+                                 direccion direccion_t,lista_tel lista_tel_t );</code></pre>
+</div>
+</div>
+<pre><span style="font-family: 'Encode Sans', Arial, Helvetica, sans-serif; font-size: 1.05em;">La principal limitación del tipo VARRAY es que en las consultas es imposible poner condiciones sobre los elementos almacenados dentro. Desde una consulta SQL, los valores de un VARRAY solamente pueden ser accedidos y recuperados como un bloque. Es decir, no se puede acceder individualmente a los elementos de un VARRAY. Sin embargo, desde un programa PL/SQL si que es posible definir un bucle que itere sobre los elementos de un VARRAY.3. Se define el tipo objeto ordenes_t y su atributo pedido almacena una tabla anidada del tipo lineas_pedido_t.</span></pre>
+</div>
+</div>
+</div>
+<p id="yui_3_17_2_1_1596197402477_144"><span id="yui_3_17_2_1_1596197402477_143"><b id="yui_3_17_2_1_1596197402477_142">Tablas anidadas</b></span></p>
+<p><span>Una tabla anidada es un conjunto de elementos del mismo tipo sin ningún orden predefinido. Estas </span>tablas solamente pueden tener una columna que puede ser de un tipo de datos básico de Oracle, o de un tipo de objeto definido por el usuario. En este último caso, la tabla anidada también puede ser considerada como una tabla con tantas columnas como atributos tenga el tipo de objeto. </p>
+<p>El siguiente ejemplo declara una tabla que después será anidada en el tipo ordenes_t. Los pasos de todo el diseño son los siguientes:</p>
+<p><span>1. Se define el tipo de objeto linea_t para las filas de la tabla anidada.</span></p>
+<div class="editor-indent">
+<div class="editor-indent">
+<div class="editor-indent">
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CREATE TYPE linea_t AS OBJECT (
+linum NUMBER,
+item VARCHAR2(30),
+cantidad NUMBER,
+descuento NUMBER(6,2));</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><span>2. Se define el tipo colección tabla lineas_pedido_t para después anidarla.</span></p>
+<div class="editor-indent">
+<div class="editor-indent">
+<div class="editor-indent">
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CREATE TYPE lineas_pedido_t AS TABLE OF linea_t ;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><span>Esta definición permite utilizar el tipo colección lineas_pedido_t para:</span></p>
+<div class="editor-indent">
+<div class="editor-indent">
+<ul>
+<li><span> Definir el tipo de dato de una columna de una tabla relacional.</span></li>
+<li> Definir el tipo de dato de un atributo de un tipo de objetos.</li>
+<li>Para definir una variable PL/SQL, un parámetro, o el tipo que devuelve una función.</li>
+</ul>
+</div>
+</div>
+<p><span>3. Se define el tipo objeto ordenes_t y su atributo pedido almacena una tabla anidada del tipo lineas_pedido_t.</span></p>
+<div class="editor-indent">
+<div class="editor-indent">
+<div class="editor-indent">
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CREATE TYPE ordenes_t AS OBJECT (
+ordnum NUMBER,
+cliente REF cliente_t,
+fechpedido DATE,
+fechentrega DATE,
+pedido lineas_pedido_t,
+direcentrega direccion_t) ;</code></pre>
+</div>
+</div>
+<pre style="padding-left: 60px;"></pre>
+</div>
+</div>
+</div>
+<p><span>4. Se define la tabla de objetos ordenes_tab y se especifica la tabla anidada del tipo lineas_pedido_t.</span></p>
+<div class="editor-indent">
+<div class="editor-indent">
+<div class="editor-indent">
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CREATE TABLE ordenes_tab OF ordenes_t
+(ordnum PRIMARY KEY,
+SCOPE FOR (cliente) IS clientes_tab)
+NESTED TABLE pedido STORE AS pedidos_tab) ;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><span>Este último paso es necesario realizarlo porque la declaración de una tabla anidada no reserva ningún </span>espacio para su almacenamiento. Lo que se hace es indicar en qué tabla (pedidos_tab) se deben almacenar todas las líneas de pedido que se representen en el atributo pedido de cualquier objeto de la tabla ordenes_tab. Es decir, todas las líneas de pedido de todas las ordenes se almacenan externamente a la tabla de ordenes, en otra tabla especial. Para relacionar las tuplas de una tabla anidada con la tupla a la que pertenecen, se utiliza una columna oculta que aparece en la tabla anidada por defecto. Todas las tuplas de una tabla anidada que pertenecen a la misma tupla tienen el mismo valor en esta columna (NESTED_TABLE_ID).</p>
+<p><span>A diferencia de los VARRAY, los elementos de las tablas anidadas (NESTED_TABLE) sí pueden ser </span>accedidos individualmente, y es posible poner condiciones de recuperación sobre ellos.  </p>
+<p id="yui_3_17_2_1_1596197402477_131">Mas adelante,  veremos, una forma conveniente de acceder individualmente a los elementos de una tabla anidada mediante un cursor anidado. Además, las tablas anidadas pueden estar indexadas.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper CitasparapensarfpdIdevice em_iDevice" id="id81">
+<div class="iDevice emphasis_citasparapensarfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_citasparapensarfpd.png)"><h1 class="iDeviceTitle">Citas para pensar</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta81_49" class="block iDevice_content">
+<blockquote>
+	<p>
+	&quot;No es sabio el que sabe donde está el tesoro, sino el que trabaja y lo saca&quot;.
+	</p>
+	<cite class="elemento_derecha">Francisco de Quevedo</cite>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="73_referencias_entre_objetos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="75_acceso_a_datos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431894/mod_resource/content/8/AD05_Contenidos_Web/74_tipos_de_datos_coleccin.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:51:24 GMT -->
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/55_realizacin_de_consultas.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.5.- Realización de consultas. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-15"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Manejo de conectores.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_protocolos_de_acceso_a_bases_de_datos.html" class="no-ch">2.- Protocolos de acceso a bases de datos.</a></li>
+   <li><a href="3_conectores_o_drivers.html" class="no-ch">3.- Conectores o Drivers.</a></li>
+   <li><a href="4_arquitectura_jdbc.html" class="daddy">4.- Arquitectura JDBC.</a>
+   <ul class="other-section">
+      <li><a href="41_conectores_tipo_1_y_tipo_2.html" class="no-ch">4.1.- Conectores tipo 1 y tipo 2.</a></li>
+      <li><a href="42_conectores_tipo_3_y_tipo_4.html" class="no-ch">4.2.- Conectores tipo 3 y tipo 4.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_conexin_a_una_base_de_datos.html" class="current-page-parent daddy">5.- Conexión a una base de datos.</a>
+   <ul>
+      <li><a href="51_creacin_de_la_base_de_datos.html" class="no-ch">5.1.- Creación de la base de datos.</a></li>
+      <li><a href="52_drivers_de_conexin_oracle_y_mysql.html" class="no-ch">5.2.- Drivers de conexión (Oracle y MySQL)</a></li>
+      <li><a href="53_instalar_el_conector_de_la_base_de_datos.html" class="no-ch">5.3.- Instalar el conector de la base de datos.</a></li>
+      <li><a href="54_jdbc_conexin_a_una_base_de_datos.html" class="no-ch">5.4.- JDBC conexión a una base de datos.</a></li>
+      <li id="active"><a href="55_realizacin_de_consultas.html" class="active no-ch">5.5.- Realización de consultas.</a></li>
+      <li><a href="56_ejecucin_de_sentencias_dml.html" class="no-ch">5.6.- Ejecución de sentencias DML.</a></li>
+      <li><a href="57_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos.html" class="daddy">5.7.- Ejecución de procedimientos almacenados en la base de datos.</a>
+      <ul class="other-section">
+         <li><a href="571_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_mysql.html" class="no-ch">5.7.1.- Ejecución de procedimientos almacenados en la base de datos MySQL.</a></li>
+         <li><a href="572_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_oracle.html" class="no-ch">5.7.2.- Ejecución de procedimientos almacenados en la base de datos Oracle.</a></li>
+      </ul>
+      </li>
+      <li><a href="58_sentencias_preparadas.html" class="no-ch">5.8.- Sentencias preparadas.</a></li>
+      <li><a href="59_captura_de_errores_y_liberacin_de_recursos.html" class="no-ch">5.9.- Captura de errores y liberación de recursos.</a></li>
+      <li><a href="510_transacciones.html" class="no-ch">5.10.- Transacciones.</a></li>
+      <li><a href="511_consultas_al_diccionario_de_datos.html" class="no-ch">5.11.- Consultas al diccionario de datos.</a></li>
+      <li><a href="512_recuperacin_y_modificacin_de_valores_de_resultset.html" class="no-ch">5.12.- Recuperación y modificación de valores de ResultSet.</a></li>
+      <li><a href="513_pool_de_conexiones.html" class="daddy">5.13.- Pool de conexiones.</a>
+      <ul class="other-section">
+         <li><a href="5131_ejemplo_de_pool_de_conexiones_mysql.html" class="no-ch">5.13.1.- Ejemplo de pool de conexiones MySQL.</a></li>
+         <li><a href="5132_ejemplo_de_pool_de_conexiones_oracle.html" class="no-ch">5.13.2.- Ejemplo de pool de conexiones Oracle.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="6_operaciones_ejecucin_de_consultas.html" class="no-ch">6.- Operaciones: ejecución de consultas.</a></li>
+   <li><a href="7_excepciones_y_cierre_de_conexiones.html" class="daddy">7.- Excepciones y cierre de conexiones.</a>
+   <ul class="other-section">
+      <li><a href="71_excepciones.html" class="no-ch">7.1.- Excepciones.</a></li>
+      <li><a href="72_cierre_de_conexiones.html" class="no-ch">7.2.- Cierre de conexiones.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="54_jdbc_conexin_a_una_base_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="56_ejecucin_de_sentencias_dml.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.5.- Realización de consultas.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id41">
+<div class="iDevice emphasis0">
+<div id="ta41_73" class="block iDevice_content">
+<p><img alt="Ilustración de un pollito amarillo que parece preguntar algo." class="elemento_derecha" height="200" src="../jpg/ad03_cont_r25_dudapollo.jpg" style="width: 148px; height: 200px;" title="Pregunta del pollo." width="148" /></p>
+<p><span>Para operar con una base de datos,  ejecutando las consultas necesarias, nuestra aplicación deberá:</span></p>
+<ol>
+<li><strong>Cargar</strong><span> el </span><span lang="en">driver</span><span> necesario para comprender el protocolo que usa la base de datos en cuestión.</span></li>
+<li><strong>Establecer</strong><span> una conexión con la base de datos.</span></li>
+<li><strong>Enviar</strong><span> consultas SQL y procesar el resultado.</span></li>
+<li><strong>Liberar<span> </span></strong><span>los recursos al terminar.</span></li>
+<li><strong>Gestionar</strong><span> los errores que se puedan producir.</span><span></span></li>
+</ol>
+<p>Para hacer consultas en la base de datos tendremos que crear un objeto de tipo <code>Statement</code>, ejecutar la consulta con el método <code>executeQuery(sql)</code> y recorrer el <code>ResultSet</code> que devuelve este método.</p>
+<p><strong>Ejemplo 1:</strong></p>
+<div><code><code><span></span></code></code>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+public class PrimeraConsulta {
+public static void main(String[] args) {
+try {
+    // Establecemos la conexion con la BD
+    Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/ejemplo", "root", "system");
+    // creamos el objeto Statement
+    Statement sentencia = conexion.createStatement();
+    //ejecutamos la consulta
+    String sql = "SELECT * FROM dept";
+    ResultSet resul = sentencia.executeQuery(sql);
+    // Recorremos el resultado para visualizar cada fila <br />    // Se hace un bucle mientras haya registros y se van visualizando while
+    (resul.next()) {
+    System.out.printf("%d, %s, %s %n", resul.getInt(1), resul.getString(2), resul.getString(3));
+}
+resul.close(); // Cerrar ResultSet
+sentencia.close(); // Cerrar Statement
+conexion.close(); // Cerrar conexión
+} catch (SQLException cn) {
+cn.printStackTrace();
+} 
+}
+}</code></pre>
+</div>
+</div>
+</div>
+<div><img src="../jpg/jdbc_instrucciones.jpg" alt="" width="638" height="479" style="display: block; margin-left: auto; margin-right: auto;" /><code></code></div>
+<p>El API JDBC distingue dos tipos de sentencias SQL:</p>
+<ul>
+<li>Consultas: <code>SELECT</code> devuelven de ninguna o varias filas.  </li>
+<li>Actualizaciones: <code>INSERT, UPDATE, DELETE,</code> sentencias DDL. </li>
+</ul>
+<p>Veamos en primer lugar consultas que devuelven datos (SELECT<b>)</b></p>
+<p>Los datos se devuelven utilizando un objeto <code>ResultSet.</code> Se accede a los datos a través de un cursor. Este cursor es un puntero que apunta a una fila de datos en el  objeto <code>ResultSet</code>. Inicialmente, el cursor se coloca antes de la primera fila. Accedemos a todas las filas de una a una llamando el método <code>next</code>, ya que cada invocación <code>next</code> avanzará a la siguiente fila.</p>
+<p><strong>Ejemplo 2: </strong></p>
+<div id="yui_3_17_2_1_1596108492429_148">
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+public class ConsultaSencilla {
+	public static void main(String[] args) {
+		Connection conexion;
+		try {
+			String urljdbc = "jdbc:oracle:thin:ejemplo/ejemplo@localhost:1521:XE";
+			conexion = DriverManager.getConnection(urljdbc, "ejemplo", "ejemplo");
+			Statement smt = conexion.createStatement();
+			ResultSet rset =
+                                 smt.executeQuery("select  empno, ename , job from emp order by 1");
+			while (rset.next())
+				System.out.println("empleado numero " + rset.getString(1) +
+                                " nombre " + rset.getString(2) + " oficio "+ rset.getString(3));
+			        resul.close(); // Cerrar ResultSet
+                                smt.close(); // Cerrar Statement
+                                conexion.close(); // Cerrar conexión
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}</code></pre>
+</div>
+</div>
+<code><span></span></code></div>
+<p><span><b>Veamos como ejecutar sentencias DML (UPDATE, DELETE, INSERT)</b><br /></span></p>
+<p>Pese a que se trata de sentencias muy dispares, desde el punto de vista de la comunicación con el SGBD se comportan de manera muy similar, siguiendo el siguiente patrón:</p>
+<ol>
+<li> A partir de una conexión activa, instanciaciamos un objeto <code>Statement.</code></li>
+<li>Ejecutamos la sentencia <acronym title="SQL">SQL, </acronym>método <code>executeUpdate.</code></li>
+<li>Cerramos del objeto <code>Statement</code> instanciado.</li>
+<li>Cerramos la conexión activa. </li>
+</ol>
+<p>El método <code>executeUpdate</code> devuelve un número entero que representa el número de filas afectadas por la instrucción SQL.</p>
+<p>Veamos el ejemplo siguiente, insertamos una línea y luego borramos todas las filas de la tabla jobs</p>
+<div>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Actualizacion {
+
+	public static void main(String[] args) {
+		// establecemos la conexion
+		Connection conexion;
+		try {
+			String urljdbc = "jdbc:oracle:thin:ejemplo/ejemplo@localhost:1521:XE";
+			conexion = DriverManager.getConnection(urljdbc, "scott", "tiger");
+			// crea la sentencia
+			Statement stm = conexion.createStatement();
+			// ejecuta la actualizacion la ejecucion devuelve 1, numero de filas afectadas
+			System.out.println(stm.executeUpdate("insert into jobs values ('ID TEACH', 'PROFESOR IT', 2500, 5000)"));
+			// valida los datos
+			// ejecuta el borrado, la ejecucion devuelve 19, numero de filas afectadas
+			System.out.println(stm.executeUpdate("delete from jobs "));
+			stm.close(); // Cerrar Statement
+                        // cierra la conexion                       
+			conexion.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}</code></pre>
+</div>
+</div>
+<code></code></div>
+<p><code><span></span></code></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id42">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta42_47" class="block iDevice_content">
+<p>
+Puedes ver un ejemplo más de consultas preparadas en el siguiente enlace:
+</p>
+<div class="enlace_centrado">
+<a href="http://www.dataprix.com/ca/node/941" title="Acceder a consultas preparadas.">
+Consultas preparadas.</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="54_jdbc_conexin_a_una_base_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="56_ejecucin_de_sentencias_dml.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/55_realizacin_de_consultas.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:39 GMT -->
+</html>

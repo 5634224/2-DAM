@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/4_instalacin_y_configuracin_de_hibernate.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.- Instalación y configuración de Hibernate </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li><a href="1_concepto_de_mapeo_objetorelacional.html" class="no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul class="other-section">
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li><a href="22_herramientas_orm_ms_utilizadas.html" class="no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li id="active"><a href="4_instalacin_y_configuracin_de_hibernate.html" class="active no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul class="other-section">
+      <li><a href="51_ficheros_de_configuracin_propiedades.html" class="no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li><a href="7_clases_persistentes.html" class="no-ch">7.- Clases persistentes.</a></li>
+   <li><a href="8_sesiones_estados_de_un_objeto.html" class="no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul class="other-section">
+      <li><a href="111_sintaxis_del_lenguaje_hql.html" class="no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li><a href="112_consultas_por_criterios.html" class="no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li><a href="12_gestin_de_transacciones.html" class="no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="3_arquitectura_de_hibernate.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.- Instalación y configuración de Hibernate</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id21">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta21_66" class="block iDevice_content">
+<p style="text-align: justify;">Una vez que el equipo de BK ha estudiado las diferentes herramientas <span lang="en">ORM</span>, ya han decidido que es <span lang="en">Hibernate</span> la que mejor se adapta a sus requerimientos. Por ello, el paso siguiente es su instalación y configuración en los equipos para empezar a utilizarla.</p>
+<p><img alt="Imagen que muestra a una chica sentada, trabajando con un ordenador. " class="elemento_centrado" height="112" src="../jpeg/ad04_cont_r12_servicios_de_internet_02.jpeg" style="width: 200px; height: 112px;" title="Instalando una herramienta ORM. " width="200" /></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id22">
+<div class="iDevice emphasis0">
+<div id="ta22_73" class="block iDevice_content">
+<p style="text-align: justify;">La instalación de Hibernate sobre el IDE <span lang="en">NetBeans</span> requiere tener instalado previamente este entorno de desarrollo, junto al JDK. El proceso que se va a desarrollar a continuación se hace con NetBeans 7.2 aunque para la versión 8.2 el proceso es idéntico. </p>
+<p style="text-align: justify;">El proceso de instalación de Hibernate se muestra en el siguiente documento que te puedes descargar en el siguiente <a href="../pdf/ad4_instalacion_hibernate.pdf">enlace</a>.</p>
+<p style="text-align: justify;">Se destaca que el IDE NetBeans 8.X ya tiene incluida la versión 4.X de Hibernate, si deseas una versión superior debes descargarla según el enlace dado. </p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id24">
+<div class="iDevice emphasis0">
+<div id="ta24_73" class="block iDevice_content">
+<p>Una vez que inicializamos <span lang="en">NetBeans</span>, podemos encontrar la herramienta <span lang="en">Hibernate</span> como un <span lang="en">plugin</span> de este entorno de desarrollo. Lo único que tienes que hacer es ir a la lista de <span lang="en">plugins</span> de <span lang="en">NetBeans</span> y comprobar que lo tienes instalado; en caso contrario, deberás instalarlo desde la opción de <span lang="en">plugins</span> disponibles.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id26">
+<div class="iDevice emphasis0">
+<div id="ta26_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado" style="text-align: justify;"><a href="../jpeg/ad04_cont_r14_pluginhibernate.jpeg" title="Ampliar imagen."><img alt="Captura de pantalla donde se muestra la lista de plugins instalados en NetBeans y, dentro de un rectángulo de borde rojo, se observa el plugin de Hibernate." class="imagen_ampliable" height="120" src="../jpeg/ad04_cont_r14_pluginhibernate_miniatura.jpeg" style="width: 200px; height: 120px;" title="Relación de plugins en NetBeans." width="200" /></a></div>
+</div>
+<p style="text-align: justify;">Para utilizar <span lang="en">Hibernate</span> en una aplicación, es necesario conocer cómo configurarlo.</p>
+<p style="text-align: justify;"><span lang="en">Hibernate</span> puede configurarse y ejecutarse en la mayoría de aplicaciones Java y entornos de desarrollo. El archivo de configuración de <span lang="en">Hibernate</span> recibe el nombre de <span lang="en">Hibernate</span>.<code>cfg.xml</code> y contiene información sobre la conexión de la base de datos y otras propiedades. Al crearlo, hay que especificar la conexión a la base de datos.</p>
+<p style="text-align: justify;">En los siguientes puntos del tema veremos más detenidamente el proceso de configuración.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozefpdIdevice em_iDevice" id="id27">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta27_41" class="block instructions iDevice_content">
+
+</section>
+<section class="activity" id="activity-27_42">
+<form name="cloze-form-27_42" action="#" class="activity-form cloze-activity-form">
+<div id="cloze27_42">
+<input type="hidden" name="clozeFlag27_42.strictMarking" id="clozeFlag27_42.strictMarking" value="false"/>
+
+<input type="hidden" name="clozeFlag27_42.checkCaps" id="clozeFlag27_42.checkCaps" value="false"/>
+
+<input type="hidden" name="clozeFlag27_42.instantMarking" id="clozeFlag27_42.instantMarking" value="false"/>
+
+<input type="hidden" name="clozeVar27_42.feedbackId" id="clozeVar27_42.feedbackId" value="ta27_43"/>
+
+<table class="tabla" summary="Tabla para relacionar los distintos tipos de herramienta ORM de la primera columna con las características más importantes, que están en la tercera columna.">
+	<caption>Ejercicio de relacionar</caption>
+	<thead>
+		<tr>
+			        	
+			<th scope="col">Tipo de herramienta</th>
+			<th scope="col">Relación</th>
+			<th scope="col">Desarrollador</th>
+		</tr>
+	</thead>
+	<tbody>
+		        
+		<tr>
+			        
+			<td><span lang="en">Hibernate</span>.</td>
+			<td class="texto_centrado"> 
+<label for="clozeBlank27_42.0" class="sr-av">Rellenar huecos (1):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank27_42.0" style="width:1em" />
+<span style="display:none" id="clozeAnswer27_42.0">JXUwMDZi
+</span>
+ </td>
+			<td>1.  <span lang="en">Sun</span> <span lang="en">Microsystems</span>.</td>
+		</tr>
+		<tr>
+			        
+			<td>openJPA.</td>
+			<td class="texto_centrado"> 
+<label for="clozeBlank27_42.1" class="sr-av">Rellenar huecos (2):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank27_42.1" style="width:1em" />
+<span style="display:none" id="clozeAnswer27_42.1">JXUwMDY5
+</span>
+ </td>
+			<td>2.  <span lang="en">Apache software Foundation</span>.</td>
+		</tr>
+		<tr>
+			        
+			<td>iBatis.</td>
+			<td class="texto_centrado"> 
+<label for="clozeBlank27_42.2" class="sr-av">Rellenar huecos (3):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank27_42.2" style="width:1em" />
+<span style="display:none" id="clozeAnswer27_42.2">JXUwMDZh
+</span>
+ </td>
+			<td>3.  Oracle.</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="block iDevice_buttons">
+<p>
+<input class="button" type="submit" name="submit27_42" value="Enviar"  id="submit27_42" />
+
+<input type="button" name="restart27_42" value="Reiniciar" style="display:none" id="restart27_42" onclick="$exe.cloze.restart('27_42')" />
+
+ 
+<input type="button" name="27_42showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton27_42" onclick="$exe.cloze.fillInputs('27_42')" />
+
+<span class="js-hidden js-warning">Habilitar JavaScript</span>
+</p>
+</div>
+<div id="clozeScore27_42"></div>
+</div>
+</form>
+</section><section id="ta27_43" class="feedback js-feedback iDevice_content" style="display:none">
+La herramienta ORM Hibernate es desarrollada por Oracle, el openJPA es una especificación de Sun Microsystems y la herramienta iBatis es desarrollado por Apache software Foundation.
+
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="3_arquitectura_de_hibernate.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/4_instalacin_y_configuracin_de_hibernate.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:05 GMT -->
+</html>

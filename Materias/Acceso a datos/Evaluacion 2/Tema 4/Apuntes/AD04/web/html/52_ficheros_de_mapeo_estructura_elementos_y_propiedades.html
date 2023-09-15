@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.2.- Ficheros de mapeo. Estructura, elementos y propiedades. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li><a href="1_concepto_de_mapeo_objetorelacional.html" class="no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul class="other-section">
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li><a href="22_herramientas_orm_ms_utilizadas.html" class="no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li><a href="4_instalacin_y_configuracin_de_hibernate.html" class="no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li class="current-page-parent"><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="current-page-parent daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul>
+      <li><a href="51_ficheros_de_configuracin_propiedades.html" class="no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li id="active"><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="active no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li><a href="7_clases_persistentes.html" class="no-ch">7.- Clases persistentes.</a></li>
+   <li><a href="8_sesiones_estados_de_un_objeto.html" class="no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul class="other-section">
+      <li><a href="111_sintaxis_del_lenguaje_hql.html" class="no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li><a href="112_consultas_por_criterios.html" class="no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li><a href="12_gestin_de_transacciones.html" class="no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="51_ficheros_de_configuracin_propiedades.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id40">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta40_66" class="block iDevice_content">
+<p style="text-align: justify;">Ya se ha configurado <span lang="en">Hibernate </span>y todo parece estar listo. La cuestión ahora es relacionar los objetos del programa orientado a objetos con las tablas de la base de datos relacional. Entran en juego los ficheros de mapeo.</p>
+<p><img alt="Imagen que muestra a una mujer, ligeramente de espaldas, que está arreglando unos cables que se encuentran en el interior de un armario. " class="elemento_centrado" height="112" src="../jpg/ad04_cont_r20_soporte_informatico_01.jpg" style="width: 200px; height: 112px;" title="Probando software. " width="200" /></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id41">
+<div class="iDevice emphasis0">
+<div id="ta41_73" class="block iDevice_content">
+<p style="text-align: justify;"><strong>Fichero de mapeo ''.hbm.xml''</strong></p>
+<p style="text-align: justify;">Para cada clase que queremos persistir se creará un fichero xml con la información que permitirá mapear la clase a una base de datos relacional. Este fichero estará en el mismo paquete que la clase a persistir.</p>
+<div class="highlighted-code language-markup" style="text-align: justify;">
+<div>
+<pre><code>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"&gt;
+&lt;hibernate-mapping&gt;
+&lt;class name="Persistente.Departamentos" table="DEPARTAMENTOS" schema="ANTONIO"&gt;
+    &lt;id name="deptNo" type="byte"&gt;
+      &lt;column name="DEPT_NO" precision="2" scale="0" /&gt;
+      &lt;generator class="assigned" /&gt;
+    &lt;/id&gt;
+    &lt;property name="dnombre" type="string"&gt;
+       &lt;column name="DNOMBRE" length="15" /&gt;
+    &lt;/property&gt;
+    &lt;property name="loc" type="string"&gt;
+      &lt;column name="LOC" length="15" /&gt;
+   &lt;/property&gt;
+    &lt;set name="empleadoses" inverse="true"&gt;
+    &lt;key&gt;
+      &lt;column name="DEPT_NO" precision="2" scale="0" not-null="true" /&gt;
+    &lt;/key&gt;
+     &lt;one-to-many class="Persistente.Empleados" /&gt;
+    &lt;/set&gt;
+    &lt;/class&gt;
+&lt;/hibernate-mapping&gt;</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">El significado del fichero anterior es el siguiente:</p>
+<p style="text-align: justify;"><strong>Hibernate-mapping: </strong>todos los ficheros de mapeo comienzan y acaban con esta etiqueta. </p>
+<p style="text-align: justify;"><strong>Class: </strong>engloba la clase con sus atributos e incluye el mapeo  de la tabla de la base de datos. Name es el nombre de la clase, table es el nombre de la tabal de la base de datos que representa ese objeto y catalogo el nombre de la base de datos. </p>
+<p style="text-align: justify;"><strong>El Singletón</strong></p>
+<p style="text-align: justify;">Antes de crear la clase main, una vez implementado hibernate, debemos crear una instancia que nos permita trabajar con la base de datos y que se utilizará a lo largo de de toda la aplicación.</p>
+<p style="text-align: justify;"><br />Un singletón es un patrón de diseño, realizado para restringir la creación de objetos pertenecientes a una clase. Su intención es garantizar que una clase solo tenga una instancia y proporcionar un punto de acceso global a ella.</p>
+<p style="text-align: justify;">El patrón singletón se implementa creando en nuestra clase un método que crea una instancia del objeto solo si todavía no existe alguna. Para asegurar que la clase no puede ser instanciada nuevamente se regula el alcance del constructor (con atributos como protegido o privado). Es una clase que ayuda y accede a <code>SessionFactory</code> para obtener un objeto de sesión. La clase se llama configure() y carga sobre el fichero de configuración hibernate.cfg.xml y entonces construye la <code>SessionFactory</code> para obtener el objeto de sesión. El nombre de la clase es <code>SessionFatoryUtil.java</code> y se incluirá en la clase main.</p>
+<div class="highlighted-code language-java" style="text-align: justify;">
+<div>
+<pre><code>public class SessionFactoryUtil {
+private static final SessionFactory sessionFactory;
+static {
+try {
+sessionFactory= new Configuration().configure().buildSessionFactory();
+}
+catch (Throwable ex) {
+System.err.println("Initial SessionFactory creation failed." + ex);
+throw new ExceptionInInitializerError(ex);
+}
+}
+public static SessionFactory getSessionFactory() {
+return sessionFactory;
+}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id42">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta42_70" class="block iDevice_content">
+<p>
+<strong>Para extraer un tabla concreta de la base de datos, la sintaxis en el mapeo requiere definir el <span lang="en">POJO</span> <code>Nombre_Clase.hbm.xml</code>, donde nombre_clase se corresponderá con el nombre la tabla que queremos extraer y donde se describe cómo se relacionan clases y tablas y propiedades y columnas.</strong>
+</p>
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id43">
+<div class="iDevice emphasis0">
+<div id="ta43_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado">
+<a href="../jpeg/ad04_cont_r21_mapeo.jpeg" title="Ampliar imagen."><img alt="Captura de pantalla donde se muestra el asistente de Hibernate para configurar el mapeo." class="imagen_ampliable" height="160" src="../jpeg/ad04_cont_r21_mapeo_miniatura.jpeg" style="width: 200px; height: 160px" title="Configuración del mapeo de Hibernate." width="200" /></a>
+</div>
+</div>
+<p>
+Mediante el asistente de <span lang="en">NetBeans</span>, seleccionamos Nuevo Mapeo en <span lang="en">Hibernate</span> y rellenamos los campos que nos piden, en función de la información que nos interese extraer de la base de datos.
+</p>
+<p>
+De esta manera, <span lang="en">NetBeans</span> genera un <span lang="en">POJO</span> <code>nombre_clase.java</code> (siendo nombre_clase aquella tabla cuya información nos interesa extraer de la base de datos) con todos los campos necesarios.
+</p>
+<p>
+Con ello, genera un fichero de mapeo de <span lang="en">Hibernate</span>, agregando su entrada a <code>Hibernate.cfg.xml</code>, entre las etiquetas <code></code>.
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id45">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-45_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion45_60" class="block question iDevice_content">
+<p>
+<strong>Los ficheros de mapeo se utilizan para relacionar tablas y clases que deseamos extraer de la base de datos que estamos consultando.</strong>
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i45_63" class="sr-av"><a href="#answer-45_63">Opción 1</a></label><input type="radio" name="option45_60" id="i45_63" class="exe-radio-option exe-radio-option-0-2-45_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-45_63"><div id="taans45_63" class="block iDevice_content">
+Falso.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i45_128" class="sr-av"><a href="#answer-45_128">Opción 2</a></label><input type="radio" name="option45_60" id="i45_128" class="exe-radio-option exe-radio-option-1-2-45_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-45_128"><div id="taans45_128" class="block iDevice_content">
+Verdadero.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b45_60" class="feedback js-hidden">
+<div id="taf45_63" class=" iDevice_content">
+Incorrecta, la afirmación es verdadera.
+
+</div>
+</section>
+<section id="sa1b45_60" class="feedback js-hidden">
+<div id="taf45_128" class=" iDevice_content">
+Correcto. Efectivamente, es su principal utilidad.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-45_63">Incorrecto</a><span> (<a href="#sa0b45_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-45_128">Opción correcta</a><span> (<a href="#sa1b45_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="51_ficheros_de_configuracin_propiedades.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:08 GMT -->
+</html>

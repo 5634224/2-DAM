@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/51_ficheros_de_configuracin_propiedades.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.1.- Ficheros de configuración. Propiedades </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li><a href="1_concepto_de_mapeo_objetorelacional.html" class="no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul class="other-section">
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li><a href="22_herramientas_orm_ms_utilizadas.html" class="no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li><a href="4_instalacin_y_configuracin_de_hibernate.html" class="no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li class="current-page-parent"><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="current-page-parent daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul>
+      <li id="active"><a href="51_ficheros_de_configuracin_propiedades.html" class="active no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li><a href="7_clases_persistentes.html" class="no-ch">7.- Clases persistentes.</a></li>
+   <li><a href="8_sesiones_estados_de_un_objeto.html" class="no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul class="other-section">
+      <li><a href="111_sintaxis_del_lenguaje_hql.html" class="no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li><a href="112_consultas_por_criterios.html" class="no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li><a href="12_gestin_de_transacciones.html" class="no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.1.- Ficheros de configuración. Propiedades</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id35">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta35_66" class="block iDevice_content">
+<p>
+<strong>Ana</strong> ya ha instalado <span lang="en">Hibernate</span> sobre el <span lang="en">IDE</span> <span lang="en">NetBeans</span> y ahora surge el problema de configurar correctamente todos sus parámetros para trabajar de la forma más adecuada. Hay varias formas de trabajar con los archivos de configuración de <span lang="en">Hibernate</span>; habrá que decidir de qué forma se va a trabajar.
+</p>
+<img alt="Imagen de Ana, una de las protagonistas de nuestros casos prácticos." class="elemento_centrado" height="132" src="../jpeg/ad04_cont_r17_ana.jpeg" style="width: 200px; height: 132px" title="Ana." width="200" />
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id36">
+<div class="iDevice emphasis0">
+<div id="ta36_73" class="block iDevice_content">
+<p>
+El archivo de configuración de <span lang="en">Hibernate</span> es el <code>Hibernate.cfg.xml</code> y contiene información sobre la conexión de base de datos, las asignaciones de recursos y otras propiedades de conexión.
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id38">
+<div class="iDevice emphasis0">
+<div id="ta38_73" class="block iDevice_content">
+<p>Al seleccionar una conexión a una base de datos en <span lang="en">NetBeans</span>, se crea un archivo de configuración en <span lang="en">Hibernate</span> que guarda los detalles de esa conexión. <span lang="en">NetBeans</span> también añade de forma automática la biblioteca de <span lang="en">Hibernate</span> para la ruta de clase que tendrá nuestro proyecto. Después de la creación del archivo <code>Hibernate.cfg.xml</code>, podemos editarlo o modificar el código xml mediante el editor xml.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="../jpeg/ad04_cont_r18_config.jpeg" title="Ampliar imagen."><img alt="Captura de pantalla donde se muestra la apariencia del archivo de configuración de Hibernate en NetBeans. " class="imagen_ampliable" height="72" src="../jpeg/ad04_cont_r18_config_miniatura.jpeg" style="width: 200px; height: 72px;" title="Archivo de configuración de Hibernate." width="200" /></a></div>
+</div>
+<p>Las propiedades más importantes del fichero <code>Hibernate.cfg.xml</code> son:</p>
+<ul class="lista_verificacion">
+<li><code>Hibernate.dialect</code>: Dialecto o lenguaje empleado. Por ejemplo, <span lang="en">MySQL</span>.</li>
+<li><code>Hibernate.connection.driver_class</code>. <span lang="en">Driver</span> utilizado para la conexión con la base de datos.</li>
+<li><code>Hibernate.connection.url</code>. Dirección de la base de datos con la que se va a conectar <span lang="en">Hibernate</span>.</li>
+<li><code>Hibernate.connection.username</code>. Nombre del usuario que va a realizar la extracción de información. Por defecto, el nombre de usuario es <span lang="en">root</span>.</li>
+<li><code>Hibernate.connection.password</code>. Contraseña el <span lang="en">root</span>.</li>
+<li><code>Hibernate.show_sql</code>. Para mostrar la herramienta. Por defecto, su valor es <span lang="en">true</span>.</li>
+</ul>
+<p>Otro fichero importante es <code>hibernate.reveng.xml</code>, que contiene los parámetros de conexión a la base de datos. Su estructura es la siguiente:</p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering <br />DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd"&gt;
+&lt;hibernate-reverse-engineering&gt;
+     &lt;schema-selection match-schema="ANTONIO"/&gt;
+     &lt;table-filter match-name="DEPARTAMENTOS"/&gt;
+     &lt;table-filter match-name="EMPLEADOS"/&gt;
+&lt;/hibernate-reverse-engineering&gt;</code></pre>
+</div>
+</div>
+<p></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id39">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-39_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion39_60" class="block question iDevice_content">
+El archivo Hibernate.cfg.xml contiene información sobre:  
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i39_63" class="sr-av"><a href="#answer-39_63">Opción 1</a></label><input type="radio" name="option39_60" id="i39_63" class="exe-radio-option exe-radio-option-0-3-39_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-39_63"><div id="taans39_63" class="block iDevice_content">
+La conexión, recursos y otras propiedades como nombre de usuario, contraseña, etc.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i39_117" class="sr-av"><a href="#answer-39_117">Opción 2</a></label><input type="radio" name="option39_60" id="i39_117" class="exe-radio-option exe-radio-option-1-3-39_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-39_117"><div id="taans39_117" class="block iDevice_content">
+La conexión a la base de datos.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i39_120" class="sr-av"><a href="#answer-39_120">Opción 3</a></label><input type="radio" name="option39_60" id="i39_120" class="exe-radio-option exe-radio-option-2-3-39_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-39_120"><div id="taans39_120" class="block iDevice_content">
+La dirección de la base de datos y la versión del IDE utilizada.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b39_60" class="feedback js-hidden">
+<div id="taf39_63" class=" iDevice_content">
+Correcto. Muy bien. 
+
+</div>
+</section>
+<section id="sa1b39_60" class="feedback js-hidden">
+<div id="taf39_117" class=" iDevice_content">
+Incorrecta. Esa es una, pero hay más.
+
+</div>
+</section>
+<section id="sa2b39_60" class="feedback js-hidden">
+<div id="taf39_120" class=" iDevice_content">
+No es correcta.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-39_63">Opción correcta</a><span> (<a href="#sa0b39_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-39_117">Incorrecto</a><span> (<a href="#sa1b39_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-39_120">Incorrecto</a><span> (<a href="#sa2b39_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/51_ficheros_de_configuracin_propiedades.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:07 GMT -->
+</html>

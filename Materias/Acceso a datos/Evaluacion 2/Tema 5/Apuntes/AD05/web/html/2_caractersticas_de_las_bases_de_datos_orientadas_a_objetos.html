@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431894/mod_resource/content/8/AD05_Contenidos_Web/2_caractersticas_de_las_bases_de_datos_orientadas_a_objetos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:51:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.- Características de las bases de datos orientadas a objetos. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-2"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Bases de datos objeto-relacionales y orientadas a objetos.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li id="active"><a href="2_caractersticas_de_las_bases_de_datos_orientadas_a_objetos.html" class="active daddy">2.- Características de las bases de datos orientadas a objetos.</a>
+   <ul>
+      <li><a href="21_ventajas_e_inconvenientes.html" class="no-ch">2.1.- Ventajas e inconvenientes.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_gestores_de_bases_de_datos_orientadas_a_objetos.html" class="daddy">3.- Gestores de bases de datos orientadas a objetos.</a>
+   <ul class="other-section">
+      <li><a href="31_objetos_simples_y_objetos_estructurados.html" class="no-ch">3.1.- Objetos simples y objetos estructurados.</a></li>
+      <li><a href="32_instalacin_del_gestor_de_objetos_db4o.html" class="no-ch">3.2.- Instalación del gestor de objetos Db4o.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_el_api_de_la_base_de_objetos.html" class="daddy">4.- El API de la base de objetos.</a>
+   <ul class="other-section">
+      <li><a href="41_apertura_y_cierre_de_conexiones.html" class="no-ch">4.1.- Apertura y cierre de conexiones.</a></li>
+      <li><a href="42_consultas_a_la_base_de_objetos.html" class="no-ch">4.2.- Consultas a la base de objetos.</a></li>
+      <li><a href="43_actualizacin_de_objetos_simples.html" class="no-ch">4.3.- Actualización de objetos simples.</a></li>
+      <li><a href="44_actualizacin_de_objetos_estructurados.html" class="no-ch">4.4.- Actualización de objetos estructurados.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_el_lenguaje_de_consulta_de_objetos_oql.html" class="daddy">5.- El lenguaje de consulta de objetos OQL.</a>
+   <ul class="other-section">
+      <li><a href="51_sintaxis_expresiones_y_operadores.html" class="no-ch">5.1.- Sintaxis, expresiones y operadores.</a></li>
+      <li><a href="52_matisse_un_gestor_de_objetos_que_incorpora_oql.html" class="no-ch">5.2.- Matisse, un gestor de objetos que incorpora OQL.</a></li>
+      <li><a href="53_ejecucin_de_sentencias_oql.html" class="no-ch">5.3.- Ejecución de Sentencias OQL.</a></li>
+      <li><a href="54_ejecucin_de_sentencias_oql_va_jdbc.html" class="no-ch">5.4.- Ejecución de sentencias OQL vía JDBC.</a></li>
+   </ul>
+   </li>
+   <li><a href="6__caractersticas_de_las_bases_de_datos_objetorelacionales.html" class="no-ch">6.-  Características de las bases de datos objeto-relacionales.</a></li>
+   <li><a href="7_gestores_de_bases_de_datos_objetorelacionales.html" class="daddy">7.- Gestores de Bases de Datos Objeto-Relacionales.</a>
+   <ul class="other-section">
+      <li><a href="71_tipos_de_objetos.html" class="no-ch">7.1.- Tipos de objetos.</a></li>
+      <li><a href="72_tablas_de_objetos.html" class="no-ch">7.2.- Tablas de objetos</a></li>
+      <li><a href="73_referencias_entre_objetos.html" class="no-ch">7.3.- Referencias entre objetos</a></li>
+      <li><a href="74_tipos_de_datos_coleccin.html" class="no-ch">7.4.- Tipos de datos colección</a></li>
+      <li><a href="75_acceso_a_datos.html" class="no-ch">7.5.- Acceso a datos</a></li>
+   </ul>
+   </li>
+   <li><a href="8_gestin_de_transacciones_en_las_bdor.html" class="no-ch">8.- Gestión de transacciones en las BDOR..</a></li>
+   <li><a href="anexo_i_estndar_odmg93__u_odmg.html" class="no-ch">Anexo I.- Estándar ODMG-93  u ODMG.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_ventajas_e_inconvenientes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.- Características de las bases de datos orientadas a objetos.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id4">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta4_66" class="block iDevice_content">
+<p><strong><img alt="Foto de Ana  mirando al frente." class="elemento_centrado" height="132" src="../jpg/caso_personajes_09.jpg" style="width: 200px; height: 132px;" title="Foto de Ana." width="200" /></strong></p>
+<p style="text-align: justify;"><strong>Ana</strong> se ha llevado a la empresa sus apuntes sobre bases de datos y acceso a datos del ciclo formativo, y ha empezado a repasar con <strong>Juan</strong> las características de las Bases de Objetos.</p>
+<p style="text-align: justify;">—¡Pero claro!, —le dice Juan a Ana— habrá que detenerse en valorar tanto las posibles ventajas como los inconvenientes de estas bases de datos, ya que tenemos que elegir el sistema de almacenamiento óptimo para esta aplicación. Ya sabes que no podemos fallar. ¡Somos los mejores! —y le sonríe.</p>
+<p style="text-align: justify;"></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id5">
+<div class="iDevice emphasis0">
+<div id="ta5_73" class="block iDevice_content">
+<p><img alt="Foto con imágenes de diseño asistido por ordenador. " class="elemento_derecha" height="206" src="../jpg/ad05_cont_r04_1_imagencadcam.jpg" style="width: 122px; height: 206px;" title="Pablo Sanz Almogera." width="122" /></p>
+<p style="text-align: justify;">En una BDOO, los datos se almacenan como objetos. Un <strong>objeto</strong> es, al igual que en POO, una entidad que se puede identificar unívocamente y que describe tanto el <a href="#t7acac051-be9e-4bae-2a4d-8318b67708d9" id="link7acac051-be9e-4bae-2a4d-8318b67708d9" class="exe-tooltip definition-tt titled-tt" title="Estado: | ">estado</a> como el <a href="#tfcff041a-5ac6-3ea4-6698-7d4d85a15dad" id="linkfcff041a-5ac6-3ea4-6698-7d4d85a15dad" class="exe-tooltip definition-tt titled-tt" title="Comportamiento: | ">comportamiento</a> de una entidad del 'mundo real'. El estado de un objeto se describe mediante atributos y su comportamiento es definido mediante procedimientos o métodos.</p>
+<p style="text-align: justify;">Entonces, ¿a qué equivalen las entidades, ocurrencias de entidades y relaciones del modelo relacional? Las entidades son las clases, las ocurrencias de entidad son objetos creados desde las clases, las relaciones se mantienen por medio de inclusión lógica, y no existen claves primarias, los objetos tienen un identificador.</p>
+<p style="text-align: justify;">La principal característica de las BDOO es que <strong>soportan un modelo de objetos puro y que el lenguaje de programación y el esquema de la base de datos utilizan las mismas definiciones de tipos</strong>.</p>
+<p style="text-align: justify;"><strong>Otras características importantes</strong> de las BDOO son las siguientes:</p>
+<ul class="lista_verificacion">
+<li style="text-align: justify;"><strong>Soportan las características propias de la Orientación a Objetos</strong> como agregación, encapsulamiento, polimorfismo y herencia. La herencia se mantiene en la propia base de datos.</li>
+<li style="text-align: justify;"><strong>Identificador de objeto</strong> (<acronym lang="en" title="Object Identifier.">OID</acronym>). Cada objeto tiene un identificador, generado por el sistema, que es único para cada objeto, lo que supone que cada vez que se necesite modificar un objeto, habrá que recuperarlo de la base de datos, hacer los cambios y almacenarlo nuevamente. Los <span lang="en">OID</span> son independientes del contenido del objeto, esto es, si cambia su información, el objeto sigue teniendo el mismo <span lang="en">OID</span>. Dos objetos serán equivalentes si tienen la misma información pero diferentes <span lang="en">OID</span>.</li>
+<li style="text-align: justify;"><strong>Jerarquía y extensión de tipos</strong>. Se pueden definir nuevos tipos basándose en otros tipos predefinidos, cargándolos en una jerarquía de tipos (o jerarquía de clases).</li>
+<li style="text-align: justify;"><strong>Objetos complejos</strong>. Los objetos pueden tener una estructura de objeto de complejidad arbitraria, a fin de contener toda la información necesaria que describe el objeto.</li>
+<li style="text-align: justify;"><strong>Acceso navegacional de datos</strong>. Cuando los datos se almacenan en una estructura de red densa y probablemente con una estructura de diferentes niveles de profundidad, el acceso a datos se hace principalmente navegando la estructura de objetos y se expresa de forma natural utilizando las construcciones nativas del lenguaje, sin necesidad de uniones o <span lang="en">joins</span> típicas en las BDR.</li>
+<li style="text-align: justify;"><strong>Gestión de versiones</strong>. El mismo objeto puede estar representado por múltiples versiones. Muchas aplicaciones de bases de datos que usan orientación a objetos requieren la existencia de varias versiones del mismo objeto, ya que si estando la aplicación en funcionamiento es necesario modificar alguno de sus módulos, el diseñador deberá crear una nueva versión de cada uno de ellos para efectuar cambios.</li>
+</ul>
+<div id="t7acac051-be9e-4bae-2a4d-8318b67708d9" class="exe-tooltip-text">
+<p>El estado de un objeto es el conjunto de valores que toman sus propiedades (atributos y relaciones).</p>
+</div>
+<div id="tfcff041a-5ac6-3ea4-6698-7d4d85a15dad" class="exe-tooltip-text">
+<p>El comportamiento de un objeto se refiere al conjunto de operaciones que se pueden realizar sobre un objeto.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id6">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-6_55">
+<form name="multi-select-form-6_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion6_55" class="block question iDevice_content">
+<p>
+<strong>Señala las opciones correctas. Las bases de datos orientadas a objetos:</strong>
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op6_550" class="sr-av"><a href="#answer-6_58">Opción 1</a></label><input type="checkbox" id="op6_550" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-6_58"><div id="taans6_58" class="block iDevice_content">
+Soportan conceptos de orientación a objetos como la herencia. 
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-6_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op6_551" class="sr-av"><a href="#answer-6_85">Opción 2</a></label><input type="checkbox" id="op6_551" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-6_85"><div id="taans6_85" class="block iDevice_content">
+Permiten la manipulación navegacional.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-6_551" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op6_552" class="sr-av"><a href="#answer-6_87">Opción 3</a></label><input type="checkbox" id="op6_552" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-6_87"><div id="taans6_87" class="block iDevice_content">
+Tienen el mismo tipo de problemas que las relacionales para gestionar objetos complejos.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-6_552" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op6_553" class="sr-av"><a href="#answer-6_89">Opción 4</a></label><input type="checkbox" id="op6_553" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-6_89"><div id="taans6_89" class="block iDevice_content">
+Cada objeto posee un identificador de objeto.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-6_553" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-6_55" /> 
+</p>
+</div>
+<section id="f6_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback6_55" class="feedback iDevice_content">
+Las bases de datos orientadas a objetos permiten usar conceptos de programación orientada a objetos como la herencia, permiten la manipulación navegacional y cada objeto tiene un identificador.
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-6_58" class="right">Correcto</a></li>
+<li><a href="#answer-6_85" class="right">Correcto</a></li>
+<li><a href="#answer-6_87" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-6_89" class="right">Correcto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id7">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta7_47" class="block iDevice_content">
+<p>
+Existen diferentes manifiestos sobre las características que debe cumplir un sistema de bases de datos orientado a objetos. En el siguiente enlace puedes consultar estos manifiestos. (Están a partir de la página 4).
+</p>
+<div class="enlace_centrado">
+ <a class="pdf" href="http://zarza.fis.usal.es/~fgarcia/docencia/poo/99-00/bdoo.pdf" title="Descargar información sobre los manifiestos de las bases de datos orientadas a objetos  [pdf - 0.30 MB]">Manifiestos sobre las bases de datos orientadas a objetos.</a> <span class="tamano"> (0.30 MB) </span> 
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_introduccin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_ventajas_e_inconvenientes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431894/mod_resource/content/8/AD05_Contenidos_Web/2_caractersticas_de_las_bases_de_datos_orientadas_a_objetos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:51:12 GMT -->
+</html>

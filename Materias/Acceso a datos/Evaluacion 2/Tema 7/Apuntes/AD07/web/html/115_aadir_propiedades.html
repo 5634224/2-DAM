@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431922/mod_resource/content/4/AD07_Contenidos_Web/115_aadir_propiedades.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:57:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.5.- Añadir propiedades. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-17"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Creación de componentes visuales.</a></li>
+   <li><a href="1_concepto_de_componente_caractersticas.html" class="no-ch">1.- Concepto de componente. Características.</a></li>
+   <li><a href="2_propiedades_y_atributos.html" class="no-ch">2.- Propiedades y atributos.</a></li>
+   <li><a href="3_editores_de_propiedades.html" class="no-ch">3.- Editores de propiedades.</a></li>
+   <li><a href="4_eventos_asociacin_de_acciones_a_eventos.html" class="no-ch">4.- Eventos. Asociación de acciones a eventos.</a></li>
+   <li><a href="5_introspeccin_reflexin.html" class="no-ch">5.- Introspección. Reflexión.</a></li>
+   <li><a href="6_persistencia_del_componente.html" class="no-ch">6.- Persistencia del componente.</a></li>
+   <li><a href="7_propiedades_simples_e_indexadas.html" class="no-ch">7.- Propiedades simples e indexadas.</a></li>
+   <li><a href="8_propiedades_compartidas_y_restringidas.html" class="no-ch">8.- Propiedades compartidas y restringidas.</a></li>
+   <li><a href="9_herramientas_para_el_desarrollo_de_componentes_visuales.html" class="no-ch">9.- Herramientas para el desarrollo de componentes visuales.</a></li>
+   <li><a href="10_empaquetado_de_componentes.html" class="no-ch">10.- Empaquetado de componentes.</a></li>
+   <li class="current-page-parent"><a href="11_elaboracin_de_un_componente_de_ejemplo.html" class="current-page-parent daddy">11.- Elaboración de un componente de ejemplo.</a>
+   <ul>
+      <li><a href="111_modelo_o_base_de_datos.html" class="no-ch">11.1.- Modelo o base de datos.</a></li>
+      <li><a href="112_controlador_o_lgica_del_modelo.html" class="no-ch">11.2.- Controlador o lógica del modelo.</a></li>
+      <li><a href="113_estructura_del_javabean.html" class="no-ch">11.3.- Estructura del JavaBean.</a></li>
+      <li><a href="114_creacin_del_componente.html" class="no-ch">11.4.- Creación del componente.</a></li>
+      <li id="active"><a href="115_aadir_propiedades.html" class="active no-ch">11.5.- Añadir propiedades.</a></li>
+      <li><a href="116_implementar_el_comportamiento.html" class="no-ch">11.6.- Implementar el comportamiento.</a></li>
+      <li><a href="117_gestin_de_eventos.html" class="no-ch">11.7.- Gestión de eventos.</a></li>
+      <li><a href="118_uso_de_componentes_previamente_elaborados_en_netbeans.html" class="no-ch">11.8.- Uso de componentes previamente elaborados en NetBeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="114_creacin_del_componente.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="116_implementar_el_comportamiento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.5.- Añadir propiedades.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id73">
+<div class="iDevice emphasis0">
+<div id="ta73_73" class="block iDevice_content">
+<p style="text-align: justify;">El componente tendrá como propiedades las mismas que los campos de la base de datos: DNI, nombre, apellidos, dirección y fecha de nacimiento.</p>
+<p style="text-align: justify;">La adición de propiedades en una clase Java se realiza simplemente escribiendo el código de declaración del atributo privado (o protegido) y los métodos <span style="font-size: 10pt;"><code>getter</code> </span>y <span style="font-size: small;"><code><span style="font-size: 10pt;">setter</span></code></span> que son la base de la <strong>instrospección</strong>.</p>
+<p style="text-align: justify;">Si bien <code><span lang="en">NetBeans</span></code> proporciona una ayuda especial para realizar esta tarea. Con el cursor posicionado dentro de la clase (puedes reservar una zona para el código de propiedades), haz clic con el botón secundario y selecciona la opción <strong>Insertar Código</strong>..., en la lista que te saldrá elige <strong>Agregar propiedad</strong>. Se desplegará el siguiente cuadro de diálogo en el que puedes escribir el nombre de la propiedad y su tipo, e insertar los métodos <code>get</code> y <code>set</code> de manera automática:</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado" style="text-align: justify;"><a href="../jpeg/ad07_cont_r29_agrega.jpeg" title="Ampliar imagen."><img alt="Captura de pantalla de la funcionalidad Agregar Propiedad a un componente en NetBeans." class="imagen_ampliable" height="152" src="../jpg/ad07_cont_r29_agrega_miniatura.jpg" style="width: 200px; height: 152px;" title="Agregar propiedad." width="200" /></a></div>
+<div class="elemento_centrado" style="text-align: justify;">Fíjate que si quisieras crear una propiedad indexada o restringida es muy sencillo de hacer, sólo hay que marcar la opción correspondiente y la herramienta genera el código base de los métodos necesarios.</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id75">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-75_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion75_60" class="block question iDevice_content">
+<strong>Para que una clase pueda ser considerada un componente debe implementar la interfaz <span style="font-size: small"><code>Serializable</code></span> y tener un constructor sin argumentos. ¿Verdadero o falso?</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i75_63" class="sr-av"><a href="#answer-75_63">Opción 1</a></label><input type="radio" name="option75_60" id="i75_63" class="exe-radio-option exe-radio-option-0-2-75_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-75_63"><div id="taans75_63" class="block iDevice_content">
+Verdadero.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i75_166" class="sr-av"><a href="#answer-75_166">Opción 2</a></label><input type="radio" name="option75_60" id="i75_166" class="exe-radio-option exe-radio-option-1-2-75_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-75_166"><div id="taans75_166" class="block iDevice_content">
+Falso.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b75_60" class="feedback js-hidden">
+<div id="taf75_63" class=" iDevice_content">
+Correcto. Muy bien, esos son los requisitos.
+
+</div>
+</section>
+<section id="sa1b75_60" class="feedback js-hidden">
+<div id="taf75_166" class=" iDevice_content">
+No es correcto, debes repasar este punto.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-75_63">Opción correcta</a><span> (<a href="#sa0b75_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-75_166">Incorrecto</a><span> (<a href="#sa1b75_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="114_creacin_del_componente.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="116_implementar_el_comportamiento.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431922/mod_resource/content/4/AD07_Contenidos_Web/115_aadir_propiedades.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:57:08 GMT -->
+</html>

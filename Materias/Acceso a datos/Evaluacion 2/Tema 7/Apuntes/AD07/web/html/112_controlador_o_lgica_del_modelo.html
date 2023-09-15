@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431922/mod_resource/content/4/AD07_Contenidos_Web/112_controlador_o_lgica_del_modelo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:57:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.2.- Controlador o lógica del modelo. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Creación de componentes visuales.</a></li>
+   <li><a href="1_concepto_de_componente_caractersticas.html" class="no-ch">1.- Concepto de componente. Características.</a></li>
+   <li><a href="2_propiedades_y_atributos.html" class="no-ch">2.- Propiedades y atributos.</a></li>
+   <li><a href="3_editores_de_propiedades.html" class="no-ch">3.- Editores de propiedades.</a></li>
+   <li><a href="4_eventos_asociacin_de_acciones_a_eventos.html" class="no-ch">4.- Eventos. Asociación de acciones a eventos.</a></li>
+   <li><a href="5_introspeccin_reflexin.html" class="no-ch">5.- Introspección. Reflexión.</a></li>
+   <li><a href="6_persistencia_del_componente.html" class="no-ch">6.- Persistencia del componente.</a></li>
+   <li><a href="7_propiedades_simples_e_indexadas.html" class="no-ch">7.- Propiedades simples e indexadas.</a></li>
+   <li><a href="8_propiedades_compartidas_y_restringidas.html" class="no-ch">8.- Propiedades compartidas y restringidas.</a></li>
+   <li><a href="9_herramientas_para_el_desarrollo_de_componentes_visuales.html" class="no-ch">9.- Herramientas para el desarrollo de componentes visuales.</a></li>
+   <li><a href="10_empaquetado_de_componentes.html" class="no-ch">10.- Empaquetado de componentes.</a></li>
+   <li class="current-page-parent"><a href="11_elaboracin_de_un_componente_de_ejemplo.html" class="current-page-parent daddy">11.- Elaboración de un componente de ejemplo.</a>
+   <ul>
+      <li><a href="111_modelo_o_base_de_datos.html" class="no-ch">11.1.- Modelo o base de datos.</a></li>
+      <li id="active"><a href="112_controlador_o_lgica_del_modelo.html" class="active no-ch">11.2.- Controlador o lógica del modelo.</a></li>
+      <li><a href="113_estructura_del_javabean.html" class="no-ch">11.3.- Estructura del JavaBean.</a></li>
+      <li><a href="114_creacin_del_componente.html" class="no-ch">11.4.- Creación del componente.</a></li>
+      <li><a href="115_aadir_propiedades.html" class="no-ch">11.5.- Añadir propiedades.</a></li>
+      <li><a href="116_implementar_el_comportamiento.html" class="no-ch">11.6.- Implementar el comportamiento.</a></li>
+      <li><a href="117_gestin_de_eventos.html" class="no-ch">11.7.- Gestión de eventos.</a></li>
+      <li><a href="118_uso_de_componentes_previamente_elaborados_en_netbeans.html" class="no-ch">11.8.- Uso de componentes previamente elaborados en NetBeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="111_modelo_o_base_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="113_estructura_del_javabean.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.2.- Controlador o lógica del modelo.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id62">
+<div class="iDevice emphasis0">
+<div id="ta62_73" class="block iDevice_content">
+<p style="text-align: justify;">En el entrono de la arquitectura MVC el controlador representa la <a href="#t604de47d-71aa-1514-f4ee-685771a6d2a9" id="link604de47d-71aa-1514-f4ee-685771a6d2a9" class="exe-tooltip definition-tt">lógica de negocio</a> de una aplicación. Encapsula las reglas de negocio en componentes que son fáciles de probar, permiten mejorar la calidad del software y promueven la reutilización.</p>
+<p style="text-align: justify;">El <a href="#t9d8f1d17-8d56-cd86-b327-d9dd4629bff6" id="link9d8f1d17-8d56-cd86-b327-d9dd4629bff6" class="exe-tooltip definition-tt">estado</a> del define el conjunto actual de valores del modelo e incluye métodos para cambiar estos valores. Estos métodos recogen parte de la lógica de negocio. Deberían de ser independientes del protocolo que se utilizara para acceder a ellos. Si resumimos la encapsulación, calidad del <span lang="en">software</span>, reutilización e independencia del protocolo obtenemos que los <span lang="en">JavaBeans</span> son la elección lógica para implementar estos componentes.</p>
+<p style="text-align: justify;"><img alt="En la imagen se observa el primer plano de un grano de café." class="elemento_centrado" height="148" src="../jpg/ad07_cont_r26_grano_cafe.jpg" style="width: 200px; height: 148px;" title="Grano de café." width="200" /></p>
+<p style="text-align: justify;">El componente se encarga de conectar con la base de datos y ejecutar la sentencia deseada. A través de los <strong>métodos</strong> puede posicionarse en cada fila de la consulta y almacena en las propiedades cada uno de los campos.</p>
+<p style="text-align: justify;">Las acciones definen los cambios permitidos para los estados en respuesta a los <strong>eventos</strong>.</p>
+<div id="t604de47d-71aa-1514-f4ee-685771a6d2a9" class="exe-tooltip-text">
+<p>Es la parte de un sistema que se encarga de codificar las reglas de negocio del mundo real que determinan cómo la información puede ser creada, almacenada y cambiada.</p>
+</div>
+<div id="t9d8f1d17-8d56-cd86-b327-d9dd4629bff6" class="exe-tooltip-text">
+<p>Es una configuración única de información en un programa o máquina.</p>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="111_modelo_o_base_de_datos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="113_estructura_del_javabean.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431922/mod_resource/content/4/AD07_Contenidos_Web/112_controlador_o_lgica_del_modelo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:57:07 GMT -->
+</html>

@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431832/mod_resource/content/4/AD02_Contenidos_Web/21_clase_file.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 19:08:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.- Clase File. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Manejo de ficheros.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li class="current-page-parent"><a href="2_clases_asociadas_a_las_operaciones_de_gestin_de_ficheros_y_directorios.html" class="current-page-parent daddy">2.- Clases asociadas a las operaciones de gestión de ficheros y directorios.</a>
+   <ul>
+      <li id="active"><a href="21_clase_file.html" class="active daddy">2.1.- Clase File.</a>
+      <ul>
+         <li><a href="211_existencia_y_listado_de_ficheros_y_carpetas.html" class="no-ch">2.1.1.- Existencia y listado de ficheros y carpetas.</a></li>
+         <li><a href="212_creacin_y_eliminacin_de_ficheros_y_directorios.html" class="no-ch">2.1.2.- Creación y eliminación de ficheros y directorios.</a></li>
+      </ul>
+      </li>
+      <li><a href="22_interface_filenamefilter.html" class="no-ch">2.2.- Interface FilenameFilter.</a></li>
+      <li><a href="23_rutas_de_los_ficheros.html" class="no-ch">2.3.- Rutas de los ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_flujos.html" class="daddy">3.- Flujos.</a>
+   <ul class="other-section">
+      <li><a href="31_flujos_basados_en_bytes.html" class="no-ch">3.1.- Flujos basados en bytes.</a></li>
+      <li><a href="32_flujos_basados_en_caracteres.html" class="no-ch">3.2.- Flujos basados en caracteres.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_formas_de_acceso_a_un_fichero.html" class="daddy">4.- Formas de acceso a un fichero.</a>
+   <ul class="other-section">
+      <li><a href="41_operaciones_bsicas_sobre_ficheros_de_acceso_secuencial.html" class="no-ch">4.1.- Operaciones básicas sobre ficheros de acceso secuencial.</a></li>
+      <li><a href="42_operaciones_bsicas_sobre_ficheros_de_acceso_aleatorio.html" class="no-ch">4.2.- Operaciones básicas sobre ficheros de acceso aleatorio.</a></li>
+      <li><a href="43_enlaces_de_inters_sobre_ficheros.html" class="no-ch">4.3.- Enlaces de interés sobre ficheros.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_java_nio.html" class="daddy">5.- Java NIO.</a>
+   <ul class="other-section">
+      <li><a href="51_java_nio_path.html" class="no-ch">5.1.- Java NIO Path.</a></li>
+      <li><a href="52_clases_java_nio_files.html" class="no-ch">5.2.- Clases Java NIO Files.</a></li>
+      <li><a href="53_escribir_contenido_en_un_fichero.html" class="no-ch">5.3.- Escribir contenido en un fichero.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_trabajo_con_ficheros_xml_analizadores_sintcticos_parser_y_vinculacin_binding.html" class="daddy">6.- Trabajo con ficheros XML: analizadores sintácticos (parser) y vinculación (binding).</a>
+   <ul class="other-section">
+      <li><a href="61_conceptos_previos.html" class="no-ch">6.1.- Conceptos previos.</a></li>
+      <li><a href="62_definiciones.html" class="no-ch">6.2.- Definiciones.</a></li>
+      <li><a href="63_parser_o_analizador_xml.html" class="no-ch">6.3.- "Parser" o analizador XML.</a></li>
+      <li><a href="64_dom.html" class="daddy">6.4.- DOM.</a>
+      <ul class="other-section">
+         <li><a href="641_la_estructura_dom.html" class="no-ch">6.4.1.- La estructura DOM.</a></li>
+         <li><a href="642_ejemplo_completo.html" class="no-ch">6.4.2.- Ejemplo completo.</a></li>
+         <li><a href="643_creacin_de_un_fichero_xml_a_partir_de_un_documento.html" class="no-ch">6.4.3.- Creación de un fichero XML a partir de un documento.</a></li>
+      </ul>
+      </li>
+      <li><a href="65_sax.html" class="no-ch">6.5.- SAX.</a></li>
+      <li><a href="66_stax.html" class="daddy">6.6.- StAX.</a>
+      <ul class="other-section">
+         <li><a href="661_caractersticas_de_stax.html" class="no-ch">6.6.1.- Características de StAX.</a></li>
+         <li><a href="662_ejemplo_de_api_cursor.html" class="no-ch">6.6.2.- Ejemplo de API Cursor.</a></li>
+         <li><a href="663_ejemplo_de_api_event.html" class="no-ch">6.6.3.- Ejemplo de API Event.</a></li>
+      </ul>
+      </li>
+      <li><a href="67_binding.html" class="daddy">6.7.- Binding.</a>
+      <ul class="other-section">
+         <li><a href="671_configuracin_con_anotaciones.html" class="no-ch">6.7.1.- Configuración con anotaciones.</a></li>
+         <li><a href="672_ejemplos_con_anotaciones.html" class="no-ch">6.7.2.- Ejemplos con anotaciones.</a></li>
+         <li><a href="673_funcionamiento_de_jaxb.html" class="no-ch">6.7.3.- Funcionamiento de JAXB.</a></li>
+         <li><a href="674_ejemplo_marshall_unmarshall.html" class="no-ch">6.7.4.- Ejemplo: Marshall, Unmarshall.</a></li>
+         <li><a href="675_generacin_automtica_de_clases_java_a_partir_del_esquema_xsd.html" class="no-ch">6.7.5.- Generación automática de clases Java a partir del esquema .xsd.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="7_libreras_para_conversin_de_documentos_xml_a_otros_formatos.html" class="daddy">7.- Librerías para conversión de documentos XML a otros formatos.</a>
+   <ul class="other-section">
+      <li><a href="71_introduccin_a_jasperreport.html" class="no-ch">7.1.- Introducción a JasperReport.</a></li>
+      <li><a href="72_disear_y_compilar_la_plantilla.html" class="no-ch">7.2.- Diseñar y compilar la plantilla.</a></li>
+      <li><a href="73_rellenar_el_informe_con_datos_exportar_el_informe.html" class="no-ch">7.3.- Rellenar el informe con datos, exportar el informe.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_i_listar_ficheros_de_una_carpeta_filtrando.html" class="no-ch">Anexo I.- Listar ficheros de una carpeta, filtrando.</a></li>
+   <li><a href="anexo_ii_cdigo_de_separador_de_rutas.html" class="no-ch">Anexo II.- Código de separador de rutas.</a></li>
+   <li><a href="anexo_iii_cdigo_de_crear_un_fichero.html" class="no-ch">Anexo III.- Código de crear un fichero.</a></li>
+   <li><a href="anexo_iv_cdigo_de_crear_un_directorio.html" class="no-ch">Anexo IV.- Código de crear un directorio.</a></li>
+   <li><a href="anexo_v_anexo_de_recursos.html" class="no-ch">Anexo V.- Anexo de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="2_clases_asociadas_a_las_operaciones_de_gestin_de_ficheros_y_directorios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="211_existencia_y_listado_de_ficheros_y_carpetas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1.- Clase File.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id5">
+<div class="iDevice emphasis0">
+<div id="ta5_73" class="block iDevice_content">
+<p style="text-align: justify;"><strong>¿Para qué sirve esta clase, qué nos permite? </strong>La clase <code>File</code> proporciona una representación abstracta de ficheros y directorios.</p>
+<p style="text-align: justify;">Esta clase, permite examinar y manipular archivos y directorios, independientemente de la plataforma en la que se esté trabajando: Linux, <span lang="en">Windows</span>, etc.</p>
+<p style="text-align: justify;">Las instancias de la clase <code>File</code> representan nombres de archivo, no los archivos en sí mismos.</p>
+<p style="text-align: justify;">El archivo correspondiente a un nombre puede ser que no exista, por esta razón habrá que controlar las posibles <strong>excepciones</strong>.</p>
+<p style="text-align: justify;">Un objeto de clase <code>File</code> permite examinar el nombre del archivo, descomponerlo en su rama de directorios o crear el archivo si no existe, pasando el objeto de tipo <code>File</code> a un constructor adecuado como <code>FileWriter(File f)</code>, que recibe como parámetro un objeto <code>File</code>.</p>
+<p style="text-align: justify;">Para archivos que existen, a través del objeto <code>File</code>, un programa puede examinar los atributos del archivo, cambiar su nombre, borrarlo o cambiar sus permisos. Dado un objeto <code>File</code>, podemos hacer las siguientes operaciones con él:</p>
+<ul class="lista_verificacion" style="text-align: justify;">
+<li><strong>Renombrar</strong> el archivo, con el método <code>renameTo()</code>. El objeto <code>File</code> dejará de referirse al archivo renombrado, ya que el <code>String</code> con el nombre del archivo en el objeto <code>File</code> no cambia.</li>
+<li><strong>Borrar</strong> el archivo, con el método <code>delete()</code>. También, con <code>deleteOnExit()</code> se borra cuando finaliza la ejecución de la máquina virtual Java.</li>
+<li><strong>Crear</strong> un nuevo fichero con un nombre único. El método estático <code>createTempFile()</code> crea un fichero temporal y devuelve un objeto <code>File</code> que apunta a él. Es útil para crear archivos temporales, que luego se borran, asegurándonos tener un nombre de archivo no repetido.</li>
+<li><strong>Establecer</strong> la fecha y la hora de modificación del archivo con <code>setLastModified()</code>. Por ejemplo, se podría hacer: <code>new File("prueba.txt").setLastModified(new Date().getTime());</code> para establecerle la fecha actual al fichero que se le pasa como parámetro, en este caso prueba.txt.</li>
+<li><strong>Crear</strong> un directorio, mediante el método <code>mkdir()</code>. También existe <code>mkdirs()</code>, que crea los directorios superiores si no existen.</li>
+<li><strong>Listar</strong> el contenido de un directorio. Los métodos <code>list()</code> y <code>listFiles()</code> listan el contenido de un directorio. <code>list()</code> devuelve un vector de <code>String</code> con los nombres de los archivos, <code>listFiles()</code> devuelve un vector de objetos <code>File</code>.</li>
+<li><strong>Listar</strong> los nombres de archivo de la raíz del sistema de archivos, mediante el método estático <code>listRoots()</code>.</li>
+</ul>
+<div style="text-align: justify;">La clase proporciona los siguientes constructores para crear objetos <code>File</code>:</div>
+<div style="text-align: justify;">
+<ul>
+<li><code><strong>public File(String nombreFichero|path);</strong></code></li>
+<li><code><strong>public File(String path, String nombreFichero|path);</strong></code></li>
+<li><code><strong><span lang="EN-GB">public File(File path, String nombreFichero|path);</span></strong></code></li>
+</ul>
+</div>
+<div style="text-align: justify;">La ruta o <code><strong>path</strong></code> puede ser absoluta o relativa.</div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;"><strong>Ejemplos utilizando el primer constructor:</strong></div>
+<div style="text-align: justify;">
+<ul>
+<li><code><strong>File f = new File("personas.dat");</strong></code><br />Crea un Objeto <code>File</code> asociado al fichero personas.dat que se encuentra en el directorio de trabajo. En este caso no se indica <code>path</code>. Se supone que el fichero se encuentra en el directorio actual de trabajo.</li>
+<li><code><strong>File f = new File("ficheros/personas.dat");</strong></code><br />Crea un Objeto <code>File</code> asociado al fichero personas.dat que se encuentra en el directorio ficheros dentro del directorio actual.  En este caso se indica la ruta relativa tomando como base el directorio actual de trabajo. Se supone que el fichero personas.dat se encuentra en el directorio ficheros. A su vez el directorio ficheros se encuentra dentro del directorio actual de trabajo.</li>
+<li><code><strong>File f = new File("c:/ficheros/personas.dat"); </strong></code><br />Crea un Objeto <code>File</code> asociado al fichero personas.dat dando la ruta absoluta:</li>
+</ul>
+</div>
+<div style="text-align: justify;"><strong>Ejemplos utilizando el segundo constructor:</strong></div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">En este caso se crea un objeto <code>File</code> cuya ruta (absoluta o relativa) se indica en el primer String.</div>
+<div style="text-align: justify;">
+<ul>
+<li><code><strong>File f = new File("ficheros", "personas.dat" ); </strong></code><br />Crea un Objeto <code>File</code> asociado al fichero personas.dat que se encuentra en el directorio ficheros dentro del directorio actual. En este caso se indica la ruta relativa tomando como base el directorio actual de trabajo.</li>
+</ul>
+</div>
+<div style="text-align: justify;"><strong>Ejemplos utilizando el tercer constructor:</strong></div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">Este constructor permite crear un objeto <code>File</code> cuya ruta se indica a través de otro objeto <code>File.</code></div>
+<div style="text-align: justify;">
+<div>
+<ul>
+<li><code><strong>File ruta = new File("ficheros");</strong></code><br /><code><strong>File f = new File(ruta, "personas.dat" );</strong></code><br />Crea un Objeto <code>File</code> asociado al fichero personas.dat que se encuentra en el directorio ficheros dentro del directorio actual.</li>
+</ul>
+</div>
+</div>
+<div style="text-align: justify;">Debemos tener en cuenta que crear un objeto <code>File</code> no significa que deba existir el fichero o el directorio o que el <code>path</code> sea correcto.</div>
+<div style="text-align: justify;">Si no existen no se lanzará ningún tipo de excepción ni tampoco serán creados.</div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;"><strong>Métodos</strong></div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">Alguno de los métodos de la clase <code>File</code> son los siguientes:</div>
+<div style="text-align: justify;"></div>
+<div style="text-align: justify;">
+<table border="1" cellpadding="0" cellspacing="0" id="yui_3_17_2_1_1595952751574_139" style="width: 987px; height: 650px;">
+<tbody id="yui_3_17_2_1_1595952751574_138">
+<tr style="height: 20px;">
+<td valign="top" style="width: 234.8px; height: 20px;">
+<div><b>Método</b></div>
+</td>
+<td valign="top" style="width: 746px; height: 20px;">
+<div><b>Descripción</b></div>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td valign="top" style="width: 234.8px; height: 20px;">
+<div><code>boolean canRead()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 20px;">
+<div>Devuelve true si se puede leer el fichero</div>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td valign="top" style="width: 234.8px; height: 20px;">
+<div><code>boolean canWrite()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 20px;">
+<div>Devuelve true si se puede escribir en el fichero</div>
+</td>
+</tr>
+<tr style="height: 41px;">
+<td valign="top" style="width: 234.8px; height: 41px;">
+<div><code><span lang="EN-GB">boolean createNewFile()</span></code></div>
+</td>
+<td valign="top" style="width: 746px; height: 41px;">
+<div>Crea el fichero asociado al objeto File. Devuelve true si se ha podido crear. Para poder crearlo el fichero no debe existir. Lanza una excepción del tipo <b>IOException</b>.</div>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td valign="top" style="width: 234.8px; height: 20px;">
+<div><code>boolean delete()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 20px;">
+<div>Elimina el fichero o directorio. Si es un directorio debe estar vacío. Devuelve true si se ha podido eliminar.</div>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td valign="top" style="width: 234.8px; height: 20px;">
+<div><code>boolean exists()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 20px;">
+<div>Devuelve true si el fichero o directorio existe</div>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td valign="top" style="width: 234.8px; height: 20px;">
+<div><code>String getName()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 20px;">
+<div>Devuelve el nombre del fichero o directorio</div>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td valign="top" style="width: 234.8px; height: 20px;">
+<div><code>String getAbsolutePath()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 20px;">
+<div>Devuelve la ruta absoluta asociada al objeto File.</div>
+</td>
+</tr>
+<tr style="height: 41px;">
+<td valign="top" style="width: 234.8px; height: 41px;">
+<div><code>String getCanonicalPath()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 41px;">
+<div>Devuelve la ruta única absoluta asociada al objeto File. Puede haber varias rutas absolutas asociadas a un File pero solo una única ruta canónica. Lanza una excepción del tipo <b>IOException</b>.</div>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td valign="top" style="width: 234.8px; height: 20px;">
+<div><code>String getPath()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 20px;">
+<div>Devuelve la ruta con la que se creó el objeto File. Puede ser relativa o no.</div>
+</td>
+</tr>
+<tr style="height: 51px;">
+<td valign="top" style="width: 234.8px; height: 51px;">
+<pre><code>String getParent()</code></pre>
+<div></div>
+</td>
+<td valign="top" style="width: 746px; height: 51px;">
+<div>Devuelve un String conteniendo el directorio padre del File. Devuelve null si no tiene directorio padre.</div>
+</td>
+</tr>
+<tr style="height: 31px;">
+<td valign="top" style="width: 234.8px; height: 31px;">
+<pre><code>File getParentFile()</code></pre>
+</td>
+<td valign="top" style="width: 746px; height: 31px;">
+<div>Devuelve un objeto File conteniendo el directorio padre del File. Devuelve null si no tiene directorio padre.</div>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td valign="top" style="width: 234.8px; height: 20px;">
+<div><code>boolean isAbsolute()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 20px;">
+<div>Devuelve true si es una ruta absoluta</div>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td valign="top" style="width: 234.8px; height: 20px;">
+<div><code>boolean isDirectory()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 20px;">
+<div>Devuelve true si es un directorio válido</div>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td valign="top" style="width: 234.8px; height: 20px;">
+<div><code>boolean isFile()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 20px;">
+<div>Devuelve true si es un fichero válido</div>
+</td>
+</tr>
+<tr style="height: 41px;">
+<td valign="top" style="width: 234.8px; height: 41px;">
+<div><code>long lastModified()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 41px;">
+<div>Devuelve un valor en milisegundos que representa la última vez que se ha modificado (medido desde las 00:00:00 GMT, del 1 de Enero de 1970). Devuelve 0 si el fichero no existe o ha ocurrido un error.</div>
+</td>
+</tr>
+<tr style="height: 41px;">
+<td valign="top" style="width: 234.8px; height: 41px;">
+<div><code>long length()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 41px;">
+<div>Devuelve el tamaño en bytes del fichero. Devuelve 0 si no existe. Devuelve un valor indeterminado si es un directorio.</div>
+</td>
+</tr>
+<tr style="height: 41px;">
+<td valign="top" style="width: 234.8px; height: 41px;">
+<div><code>String[] list()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 41px;">
+<div>Devuelve un array de String con el nombre de los archivos y directorios que contiene el directorio indicado en el objeto File. Si no es un directorio devuelve null. Si el directorio está vacío devuelve un array vacío.</div>
+</td>
+</tr>
+<tr style="height: 41px;">
+<td valign="top" style="width: 234.8px; height: 41px;">
+<div><code>String[] list(FilenameFilter filtro)</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 41px;">
+<div>Similar al anterior. Devuelve un array de String con el nombre de los archivos y directorios que contiene el directorio indicado en el objeto File que cumplen con el filtro indicado.</div>
+</td>
+</tr>
+<tr style="height: 20px;">
+<td valign="top" style="width: 234.8px; height: 20px;">
+<div><code>boolean mkdir()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 20px;">
+<div>Crea el directorio. Devuelve true si se ha podido crear.</div>
+</td>
+</tr>
+<tr style="height: 41px;">
+<td valign="top" style="width: 234.8px; height: 41px;">
+<div><code>boolean mkdirs()</code></div>
+</td>
+<td valign="top" style="width: 746px; height: 41px;">
+<div>Crea el directorio incluyendo los directorios no existentes especificados en la ruta <i>padre</i> del directorio a crear. Devuelve true si se ha creado el directorio y los directorios no existentes de la ruta padre.</div>
+</td>
+</tr>
+<tr style="height: 41px;">
+<td valign="top" style="width: 234.8px; height: 41px;">
+<div><code><span>boolean renameTo(File dest)</span></code></div>
+</td>
+<td valign="top" style="width: 746px; height: 41px;">
+<div>Cambia el nombre del fichero por el indicado en el parámetro dest. Devuelve true si se ha realizado el cambio.</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id6">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_54" class="block iDevice_content">
+<p>
+<strong>
+Señala si la afirmación es verdadera o falsa:
+</strong>
+</p>
+
+</div>
+<section class="question">
+<form name="true-false-form-0b6" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b6" class="block iDevice_content">
+<p>
+Podemos establecer la fecha de modificación de un archivo mediante el método <code>renameTo()</code>. 
+</p>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b6"><input type="radio" name="option0b6" id="true0b6" class="exe-radio-option exe-radio-option-0-2-0b6-truefalse" /> Verdadero</label> 
+<label for="false0b6"><input type="radio" name="option0b6" id="false0b6" class="exe-radio-option exe-radio-option-1-2-0b6-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b6" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b6-result" class="wrong">Falso</strong></p>
+<p>
+Ese no es el método que hay que usar, se usaría <code>setLastModified().</code>
+</p>
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="2_clases_asociadas_a_las_operaciones_de_gestin_de_ficheros_y_directorios.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="211_existencia_y_listado_de_ficheros_y_carpetas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431832/mod_resource/content/4/AD02_Contenidos_Web/21_clase_file.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 19:08:08 GMT -->
+</html>

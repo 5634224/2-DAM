@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/6_mapeo_de_colecciones_relaciones_y_herencia.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.- Mapeo de colecciones, relaciones y herencia- </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li><a href="1_concepto_de_mapeo_objetorelacional.html" class="no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul class="other-section">
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li><a href="22_herramientas_orm_ms_utilizadas.html" class="no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li><a href="4_instalacin_y_configuracin_de_hibernate.html" class="no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul class="other-section">
+      <li><a href="51_ficheros_de_configuracin_propiedades.html" class="no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="active no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li><a href="7_clases_persistentes.html" class="no-ch">7.- Clases persistentes.</a></li>
+   <li><a href="8_sesiones_estados_de_un_objeto.html" class="no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul class="other-section">
+      <li><a href="111_sintaxis_del_lenguaje_hql.html" class="no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li><a href="112_consultas_por_criterios.html" class="no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li><a href="12_gestin_de_transacciones.html" class="no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="7_clases_persistentes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.- Mapeo de colecciones, relaciones y herencia-</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id46">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta46_66" class="block iDevice_content">
+<p>
+<strong>María </strong>necesita ahora aprender la verdadera utilidad de <span lang="en">Hibernate</span>: el mapeo de elementos, tales como relaciones, colecciones y herencia, que le permita avanzar sobre el objetivo perseguido de almacenar estas características de la Programación Orientada a Objetos en las bases de datos relacionales.
+</p>
+<img alt="Imagen de cerca de María." class="elemento_centrado" height="132" src="../jpg/ad04_cont_r02_maria.jpg" style="width: 200px; height: 132px" title="María nuestra protagonista." width="200" />
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id47">
+<div class="iDevice emphasis0">
+<div id="ta47_73" class="block iDevice_content">
+<p><img alt="Hombre trabajando con la herramienta ORM." class="elemento_derecha" height="112" src="../jpeg/ad04_cont_r04_programador_01.jpeg" style="width: 200px; height: 112px;" title="Persona trabajando." width="200" /></p>
+<p><strong>1. Mapeo de colecciones.</strong></p>
+<p>Hay bastantes rangos de mapeos que se pueden generar para colecciones que cubran diversos modelos relacionales.</p>
+<p>El elemento de mapeo de <span lang="en">Hibernate</span> utilizado para mapear una colección depende del tipo de la interfaz; por ejemplo, un elemento se utiliza para mapear propiedades de tipo Set aunque, no obstante, existen además los elementos de mapeo etc.</p>
+<p>Las instancias de colección de distinguen por la clave foránea de la entidad que posee la colección. El elemento mapea la columna clave de la colección.</p>
+<p>Hay que resaltar que las colecciones pueden contener casi cualquier tipo de datos; esto implica que un objeto en una colección puede ser manejado con una semántica de "valor" o podría ser una referencia a otra entidad, con su propio ciclo de vida. Todos los mapeos de colección necesitan una columna índice en la tabla de colección: una columna índice es una columna que mapea a un índice de <span lang="en">array</span> o índice de <code>List</code>. Por último, una colección de valores o asociación muchos-a-muchos requiere una tabla de colección dedicada con una columna o columnas de clave foránea, columna de elemento de colección y probablemente una o varias columnas índice.</p>
+<p><strong>2. Mapeo de relaciones o asociaciones.</strong></p>
+<p>Para persistir, las relaciones usan las denominadas transacciones, ya que los cambios pueden incluir varias tablas. Una regla general para el mapeo es respetar el tipo de relación en el modelo de objetos y en el modelo relacional: así, una relación 1-1 en el modelo de objetos deberá corresponderse a una relación 1-1 en el modelo relacional.</p>
+<p>Para mapear las relaciones, se usan los identificadores de objetos (<acronym lang="en" title="Object Identifier Design. Identificador de Objeto.">OID</acronym>). Son la llave primaria de la tabla relacionada y se agregan como una columna más en la tabla donde se quiere establecer la relación. Dicha columna es una clave foránea a la tabla con la que está relacionada.</p>
+<p>Para profundizar más sobre mapeo de relaciones <a href="http://www.cursohibernate.es/doku.php?id=unidades:03_relaciones:02_uno_a_uno_bidireccional" title="mapeo de relaciones">mapeo de relaciones</a></p>
+<p><strong>3. Mapeo de herencia.</strong></p>
+<p>Como hemos comentado, las colecciones funcionan en ambos modelos, objeto y relacional. Para el caso de la herencia se presenta el problema que las base de datos relacionales no la soportan. Así es que somos nosotros quienes debemos modelar como se verá la herencia en el modelo relacional. Existen tres tipos de mapeos principales: modelar la jerarquía a una sola tabla, modelar la jerarquía completa en tablas, mapear cada tabla en tablas concretas. La decisión estará basada en el rendimiento y en la escalabilidad del modelo.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id48">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta48_47" class="block iDevice_content">
+<p>En el siguiente enlace puedes tener acceso a un tutorial en línea de los mapeos en <span lang="en">Hibernate</span><span lang="en"></span>, donde se detallan estos aspectos con más profundidad.</p>
+<p class="enlace_centrado"><a href="https://docs.jboss.org/hibernate/core/3.5/reference/es-ES/html/mapping.html" title="Acceder a una colección de artículos de mapeos Hibernate.">Mapeos en <span lang="en">Hibernate</span>.</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="7_clases_persistentes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/6_mapeo_de_colecciones_relaciones_y_herencia.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:08 GMT -->
+</html>

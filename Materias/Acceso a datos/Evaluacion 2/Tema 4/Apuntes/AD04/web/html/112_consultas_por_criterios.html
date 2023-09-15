@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/112_consultas_por_criterios.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.2.- Consultas por criterios </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-24"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li><a href="1_concepto_de_mapeo_objetorelacional.html" class="no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul class="other-section">
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li><a href="22_herramientas_orm_ms_utilizadas.html" class="no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li><a href="4_instalacin_y_configuracin_de_hibernate.html" class="no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul class="other-section">
+      <li><a href="51_ficheros_de_configuracin_propiedades.html" class="no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li><a href="7_clases_persistentes.html" class="no-ch">7.- Clases persistentes.</a></li>
+   <li><a href="8_sesiones_estados_de_un_objeto.html" class="no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li class="current-page-parent"><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="current-page-parent daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul>
+      <li><a href="111_sintaxis_del_lenguaje_hql.html" class="no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li id="active"><a href="112_consultas_por_criterios.html" class="active no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li><a href="12_gestin_de_transacciones.html" class="no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="111_sintaxis_del_lenguaje_hql.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_gestin_de_transacciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.2.- Consultas por criterios</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id78">
+<div class="iDevice emphasis0" >
+<div id="ta78_108_2" class="block iDevice_content">
+<div class="exe-text"><p><span style="color: #000000;">Hibernate tiene el objeto <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html" style="color: #000000;">Query</a> </code>que nos da acceso a todas las funcionalidades para poder leer objetos desde la base de datos. Veamos ahora un sencillo ejemplo de cómo funciona y posteriormente explicaremos más funcionalidades de la clase <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html" style="color: #000000;">Query</a></code>.</span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>Query query = session.createQuery("SELECT p FROM Profesor p");
+Lis&lt;Profesor&gt; profesores = query.list();
+or (Profesor profesor : profesores) 
+{   System.out.println(profesor.toString());
+}</code></pre>
+</div>
+</div>
+<p><span style="color: #000000;">Lanzar una consulta con Hibernate es bastante simple. Usando la <code>session </code>llamamos al método <code>createQuery(String queryString) </code>con la consulta en formato HQL y nos retorna un objeto <code>Query </code>(Línea 1). Después, sobre el objeto <code>Query </code>llamamos al método <code>list()</code> que nos retorna una lista de los objetos que ha retornado (Línea 2).</span></p>
+<p><span style="color: #000000;">Por último en las líneas de la 4 a la 6 podemos ver cómo usar la lista de objetos <code>Profesor </code>aunque este código ya es simplemente el uso de la clase <code>java.util.List </code>que no tiene nada que ver con Hibernate.</span></p>
+<p><span style="color: #000000;"><strong>1. Query</strong></span></p>
+<p><span style="color: #000000;">Pasemos ahora a ver las funcionalidades de la clase <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html" style="color: #000000;">Query</a></code></span></p>
+<p style="padding-left: 30px;"><span style="color: #000000;"><code></code></span><span style="color: #000000;"><strong>A. List()</strong></span></p>
+<ul>
+<li><span style="color: #000000;">Lista de Objetos</span><br /><span style="color: #000000;">El método <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html#list()" style="color: #000000;">list()</a></code> nos retorna una lista con todos los objetos que ha retornado la consulta. En caso de que no se encuentre ningún resultado se retornará una lista sin ningún elemento.</span></li>
+</ul>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>Query query = session.createQuery("SELECT p FROM Profesor p");
+List&lt;Profesor&gt; profesores = query.list();
+for (Profesor profesor : profesores) {
+System.out.println(profesor.toString())
+}</code></pre>
+</div>
+</div>
+<ul>
+<li><span style="color: #000000;">Lista de Array de Objetos:</span></li>
+</ul>
+<p><span style="color: #000000;">Las consultas pueden devolver datos escalares en vez de clases completas, por ejemplo, <code>SELECT p.id,p.nombre FROM Profesor p</code>.</span><br /><span style="color: #000000;">En la consulta podemos ver cómo en vez de retornar un objeto Profesor se retorna únicamente el código del profesor y su nombre.</span><br /><span style="color: #000000;">En estos casos el método <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html#list()" style="color: #000000;">list()</a></code> retorna una lista con una Array de objetos con tantos elementos como propiedades hayamos puesto en la <code>SELECT.</code></span><br /><span style="color: #000000;">Veamos ahora un ejemplo.</span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>Query query = session.createQuery("SELECT p.id,p.nombre FROM Profesor p");
+List&lt;Object[]&gt; listDatos = query.list(); 
+for (Object[] datos : listDatos)
+{ 
+System.out.println(datos[0] + "--" + datos[1]); 
+}</code></pre>
+</div>
+</div>
+<p><span style="color: #000000;">En la línea 1 vemos cómo se crea el objeto <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html" style="color: #000000;">Query</a> </code>con la consulta de datos escalares.</span></p>
+<p><span style="color: #000000;">En la línea 2 se ve que el método <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html#list()" style="color: #000000;">list()</a></code> retorna una lista de array de Objetos. Es decir '<code>List&lt;Object[]&gt;</code>'.</span></p>
+<p><span style="color: #000000;">En la línea 3 se inicia el bucle para recorrer cada una de las filas de datos escalares.</span></p>
+<p><span style="color: #000000;">En la línea 5 finalmente se accede a los 2 datos de cada fila mediante datos[0] y datos[1].</span></p>
+<ul>
+<li><span style="color: #000000;">Lista de Objeto</span></li>
+</ul>
+<p><span style="color: #000000;">Hay otro caso cuando hay una única columna en el SELECT de datos escalares. Es ese caso, como el array a retornar dentro de la lista solo tendría un elemento, no se retorna una lista de arrays <code>List&lt;Object[]&gt;</code> sino únicamente una lista de elementos <code>List&lt;Object&gt;</code>.</span></p>
+<p><span style="color: #000000;">Si modificamos la anterior consulta de forma que sólo se retorne el nombre, el código quedará de la siguiente forma:</span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>Query query = session.createQuery("SELECT p.nombre FROM Profesor p");
+List&lt;Object&gt; listDatos = query.list();
+for (Object datos : listDatos)
+{
+System.out.println(datos);}</code></pre>
+</div>
+</div>
+<p><span style="color: #000000;">En la línea 1 ahora la consulta sólo tiene un único dato escalar.</span></p>
+<p><span style="color: #000000;">En la línea 2 el método <a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html#list()" style="color: #000000;">list()</a> ya no retorna un List&lt;Object[] sino un List&lt;Object&gt;.</span></p>
+<p><span style="color: #000000;">En la línea 3 se inicia el bucle para recorrer cada una de las filas de datos escalares pero ahora el tipo es Object  en vez de Object[].</span></p>
+<p><span style="color: #000000;">En la línea 5 finalmente se accede al dato sin el índice del array ya que ha dejado de serlo.</span></p>
+<p style="padding-left: 30px;"><span style="color: #000000;"><strong>B. uniqueResult()</strong></span></p>
+<p><span style="color: #000000;">En muchas ocasiones una consulta únicamente retornará cero o un resultado. En ese caso es poco práctico que nos retorne una lista con un único elemento. Para facilitarnos dicha tarea Hibernate dispone del método <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html#uniqueResult()" style="color: #000000;">uniqueResult()</a></code>.</span></p>
+<p><span style="color: #000000;">Este método retornará directamente el único objeto que ha obtenido la consulta. En caso de que no encuentre ninguno se retornará <code>null</code>.</span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>Profesor profesor = (Profesor) session.createQuery("SELECT p FROM Profesor p <br />WHERE id=1001").uniqueResult();
+System.out.println("Profesor con Id 1001=" + profesor.getNombre());</code></pre>
+</div>
+</div>
+<p><span style="color: #000000;">Vemos cómo, gracias al método <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html#uniqueResult()" style="color: #000000;">uniqueResult()</a></code> , se simplifica el código aunque siempre se debe comprobar si ha retornado o no <code>null</code>.</span></p>
+<p><span style="color: #000000;">Al igual que ocurre con <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html#list()" style="color: #000000;">list()</a></code> el método <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html#uniqueResult()" style="color: #000000;">uniqueResult()</a></code> puede retornar tanto un objeto de una entidad , un array de objetos escalares <code>Object[]</code> o un único objeto escalar <code>Object</code>.</span></p>
+<p><span style="color: #000000;">Si el método <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html#uniqueResult()" style="color: #000000;">uniqueResult()</a></code> retorna más de un resultado se producirá la excepción: </span><code><span style="color: #000000;">org.hibernate.NonUniqueResultException: query did not return a unique result</span></code></p>
+<p style="padding-left: 30px;"><span style="color: #000000;"><strong>C. Paginación</strong></span></p>
+<p><span style="color: #000000;">La paginación es parte fundamental de cualquier aplicación ya que una consulta puede tener miles de resultados y no queremos mostrarlos todos a la vez.</span></p>
+<p><span style="color: #000000;">Para conseguir paginar el resultado de una consulta la clase <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html" style="color: #000000;">Query</a></code> dispone de los siguientes métodos:</span></p>
+<ul>
+<li><span style="color: #000000;"><code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html#setMaxResults(int)" style="color: #000000;">setMaxResults(int maxResults)</a>:</code> Establece el número máximo de objetos que van a retornarse.</span></li>
+<li><span style="color: #000000;"><code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html#setFirstResult(int)" style="color: #000000;">setFirstResult(int firstResult)</a>:</code> Establece el primer de los objetos que se van a retornar.</span></li>
+</ul>
+<p><span style="color: #000000;">Al realizar la paginación son necesarios al menos 2 valores:</span></p>
+<ul>
+<li><span style="color: #000000;">El tamaño de la página</span></li>
+<li><span style="color: #000000;">El número de la página a mostrar. </span></li>
+</ul>
+<p><span style="color: #000000;">Con esos 2 valores hemos creado el siguiente código Java que muestra una única página en función del <code>tamañoPagina</code> y <code>paginaAMostrar</code>.</span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code> 1: int tamanyoPagina = 10;
+ 2: int paginaAMostrar = 7;
+ 3:
+ 4: Query query = session.createQuery("SELECT p FROM Profesor p Order By p.id");
+ 5: query.setMaxResults(tamanyoPagina);
+ 6: query.setFirstResult(paginaAMostrar * tamanyoPagina);
+ 7: List&lt;Profesor&gt; profesores = query.list();
+ 8:
+ 9: for (Profesor profesor : profesores) {
+10:     System.out.println(profesor.toString());
+11: }</code></pre>
+</div>
+</div>
+<p><span style="color: #000000;">Las líneas 1 y 2 establecen los valores necesarios para poder mostrar la página, que son el tamaño de la página y el número de la página a mostrar.</span></p>
+<p><span style="color: #000000;">En la línea 4 se crea la <code>Query</code>.</span></p>
+<p><span style="color: #000000;">En la línea 5 se llama al método <code>setMaxResults(int maxResults)</code> para indicar que sólo se retornen como máximo tantos objetos como tamaño tiene la página.</span></p>
+<p><span style="color: #000000;">En la línea 6 se llama al método <code>setFirstResult(int firstResult)</code> para indicarle cuál es el primer objeto a retornar. Este valor coincidirá con el primer objeto de la página que se quiere mostrar. Para calcular dicho valor se multiplica el número de la página a mostrar por el tamaño de página. Para que esta fórmula funcione el número de página debe empezar por 0, es decir, que la primera página deberá ser la número 0, la segunda la número 1, y así sucesivamente.</span></p>
+<p><span style="color: #000000;">Por fin, en la línea 7 se obtienen únicamente los resultados de la página solicitada.</span></p>
+<p><span style="color: #000000;">Por último, en las líneas 9,10 y 11 se muestran los datos.</span></p>
+<p><span style="color: #000000;">El mayor problema que tiene la paginación es determinar el número de páginas para poder mostrárselo al usuario, para saber el número de páginas es necesario conocer el número de objetos que retorna la consulta y la forma mas rápida y sencilla es mediante una consulta que las cuente.</span></p>
+<p><span style="color: #000000;">El siguiente código Java calcula el número de páginas de la consulta.</span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>long numTotalObjetos = (Long) session.createQuery("SELECT count(*) <br />FROM Profesor p").uniqueResult();
+int numPaginas =(int) Math.ceil((double)numTotalObjetos / (double)tamanyoPagina);</code></pre>
+</div>
+</div>
+<p><span style="color: #000000;">En la línea 1 realizamos la consulta de <code>count(*)</code> para obtener el número de objetos que retorna la consulta</span></p>
+<p><span style="color: #000000;">En la línea 3 de divide el número total de objetos entre el tamaño de la página obteniéndose el número total de páginas.</span></p>
+<p><span style="color: #000000;">Al hacer la división para calcular el número de páginas es necesario hacer el cast de los 2 valores a double ya que si no Java automáticamente redondea el resultado a un valor entero con lo que el valor que se le pasa a <code>ceil</code> ya no será el correcto.</span></p>
+<p><strong style="font-size: 1em;">2. Consultas con nombre </strong></p>
+<p><span style="color: #000000;">En cualquier libro sobre arquitectura del software siempre se indica que las consultas a la base de datos no deberían escribirse directamente en el código sino que deberían estar en un fichero externo para que puedan modificarse fácilmente.</span></p>
+<p><span style="color: #000000;">Hibernate provee una funcionalidad para hacer ésto mismo de una forma sencilla. En cualquier fichero de mapeo de Hibernate se puede incluir anotaciones <code>@NamedQuery and @NamedQueries Annotations</code> con las consultas HQL que deseamos lanzar.</span></p>
+<p><span style="color: #000000;">En el siguiente ejemplo  se ha definido una <code>query</code> nombrada para la clase Profesor:</span></p>
+<p><span style="color: #000000;"><a href="https://www.objectdb.com/api/java/jpa/NamedQuery" style="color: #000000;"></a></span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>@NamedQuery(name="Profesores.findAll", query="SELECT p FROM Profesor p")</code></pre>
+</div>
+</div>
+<p><span style="color: #000000;">La anotación @NamedQuery contiene cuatro parámetros, dos de los cuales son obligatorios y dos opcionales. Los dos parámetros requeridos, <code><em>name </em></code>y <code><em>query </em></code>definen el nombre de la consulta y la propia cadena de consulta y se muestran arriba. Los dos elementos opcionales, <code><em>lockMode </em></code>y <code><em>hints</em></code>, proporcionan un reemplazo estático para los métodos <strong><code>setLockMode</code> </strong>y <code><strong>setHint</strong>.</code></span></p>
+<p><span style="color: #000000;">La entidad Profesor quedaría:</span><span style="color: #000000;"><a href="https://www.objectdb.com/api/java/jpa/Entity" style="color: #000000;"></a></span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>@Entity
+@NamedQuery(name="Profesores.findAll", query="SELECT p FROM Profesor p")
+public class Profesor {
+  ...
+}</code></pre>
+</div>
+</div>
+<p><span style="color: #000000;">Para añadir varias consultas nombradas , tiene que haber una consulta nombrada por cada una de ellas y estas dentro de una anotación envoltorio <code><a href="https://www.objectdb.com/api/java/jpa/NamedQueries" style="color: #000000;">@NamedQueries</a></code></span></p>
+<p><span style="color: #000000;"><a href="https://www.objectdb.com/api/java/jpa/Entity" style="color: #000000;"></a></span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>@Entity
+@NamedQueries({
+@NamedQuery(name="Profesores.findAll", query="SELECT p FROM Profesor p")
+@NamedQuery(name="Profesores.ByName", query="SELECT p FROM Profesor p where p.nombre =:nombre and p.ape1=:ape1 and p.ape2=:ape2")
+})
+public class Profesor {
+  ...
+}</code></pre>
+</div>
+</div>
+<p><span style="color: #000000;">Estas anotaciones tienen los siguientes datos:</span></p>
+<ul>
+<li><span style="color: #000000;"><code>name</code>: Este atributo define el nombre de la consulta.Es el nombre que posteriormente usaremos desde el código Java para acceder a la consulta.</span></li>
+<li><span style="color: #000000;"><code>query</code> es la consulta en formato HQL que ejecutará Hibernate.</span></li>
+<li><span style="color: #000000;">:nombre, :ape1, :ape2 son parámetros nombrados, también se podrían especificar con parámetros posicionales ? como en JDBC: </span></li>
+</ul>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>"SELECT p FROM Profesor p where p.nombre =? and p.ape1=? and p.ape2=?"</code></pre>
+</div>
+</div>
+<p><span style="color: #000000;"><strong>3. Código Java</strong></span></p>
+<p><span style="color: #000000;">Para hacer uso de una consulta con nombre usaremos el método <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/SharedSessionContract.html#getNamedQuery(java.lang.String)" style="color: #000000;">getNamedQuery(String queryString)</a></code> en vez de <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/SharedSessionContract.html#createQuery(java.lang.String)" style="color: #000000;">createQuery(String queryString)</a></code> para obtener el objeto <code><a href="http://docs.jboss.org/hibernate/core/4.1/javadocs/org/hibernate/Query.html" style="color: #000000;">Query</a></code>. Por lo tanto sólo se ha modificado la línea 1 y el resto del código queda exactamente igual.</span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>1: Query query = session.getNamedQuery("Profesores.findAll");
+2: List&lt;Profesor&gt; profesores = query.list();
+3: for (Profesor profesor : profesores) {
+4:     System.out.println(profesor.toString());
+5: }</code></pre>
+</div>
+</div>
+<p><span style="color: #000000;">Como podemos ver el uso de consultas con nombre es muy sencillo al usar Hibernate.</span></p>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code> 1: String nombre="ISIDRO";
+&amp;nbsp;2: String ape1="CORTINA";
+&amp;nbsp;3: String ape2="GARCIA";
+&amp;nbsp;4:
+&amp;nbsp;5: Query query = session.getNamedQuery(Profesores.ByName)
+&amp;nbsp;6: query.setString("nombre",nombre);
+&amp;nbsp;7: query.setString("ape1",ape1);
+&amp;nbsp;8: query.setString("ape2",ape2);
+&amp;nbsp;9:
+10: List&lt;Profesor&gt; profesores = query.list();
+11: for (Profesor profesor : profesores) {
+12:&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; System.out.println(profesor.toString());
+13: }</code></pre>
+</div>
+</div>
+<p><br /><br /></p></div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="111_sintaxis_del_lenguaje_hql.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_gestin_de_transacciones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/112_consultas_por_criterios.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:11 GMT -->
+</html>

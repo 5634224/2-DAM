@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431922/mod_resource/content/4/AD07_Contenidos_Web/117_gestin_de_eventos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:57:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.7.- Gestión de eventos. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-19"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Creación de componentes visuales.</a></li>
+   <li><a href="1_concepto_de_componente_caractersticas.html" class="no-ch">1.- Concepto de componente. Características.</a></li>
+   <li><a href="2_propiedades_y_atributos.html" class="no-ch">2.- Propiedades y atributos.</a></li>
+   <li><a href="3_editores_de_propiedades.html" class="no-ch">3.- Editores de propiedades.</a></li>
+   <li><a href="4_eventos_asociacin_de_acciones_a_eventos.html" class="no-ch">4.- Eventos. Asociación de acciones a eventos.</a></li>
+   <li><a href="5_introspeccin_reflexin.html" class="no-ch">5.- Introspección. Reflexión.</a></li>
+   <li><a href="6_persistencia_del_componente.html" class="no-ch">6.- Persistencia del componente.</a></li>
+   <li><a href="7_propiedades_simples_e_indexadas.html" class="no-ch">7.- Propiedades simples e indexadas.</a></li>
+   <li><a href="8_propiedades_compartidas_y_restringidas.html" class="no-ch">8.- Propiedades compartidas y restringidas.</a></li>
+   <li><a href="9_herramientas_para_el_desarrollo_de_componentes_visuales.html" class="no-ch">9.- Herramientas para el desarrollo de componentes visuales.</a></li>
+   <li><a href="10_empaquetado_de_componentes.html" class="no-ch">10.- Empaquetado de componentes.</a></li>
+   <li class="current-page-parent"><a href="11_elaboracin_de_un_componente_de_ejemplo.html" class="current-page-parent daddy">11.- Elaboración de un componente de ejemplo.</a>
+   <ul>
+      <li><a href="111_modelo_o_base_de_datos.html" class="no-ch">11.1.- Modelo o base de datos.</a></li>
+      <li><a href="112_controlador_o_lgica_del_modelo.html" class="no-ch">11.2.- Controlador o lógica del modelo.</a></li>
+      <li><a href="113_estructura_del_javabean.html" class="no-ch">11.3.- Estructura del JavaBean.</a></li>
+      <li><a href="114_creacin_del_componente.html" class="no-ch">11.4.- Creación del componente.</a></li>
+      <li><a href="115_aadir_propiedades.html" class="no-ch">11.5.- Añadir propiedades.</a></li>
+      <li><a href="116_implementar_el_comportamiento.html" class="no-ch">11.6.- Implementar el comportamiento.</a></li>
+      <li id="active"><a href="117_gestin_de_eventos.html" class="active no-ch">11.7.- Gestión de eventos.</a></li>
+      <li><a href="118_uso_de_componentes_previamente_elaborados_en_netbeans.html" class="no-ch">11.8.- Uso de componentes previamente elaborados en NetBeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="116_implementar_el_comportamiento.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="118_uso_de_componentes_previamente_elaborados_en_netbeans.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.7.- Gestión de eventos.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id78">
+<div class="iDevice emphasis0">
+<div id="ta78_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado" style="text-align: justify;">Los componentes usan los <strong>eventos</strong> para generar <strong>acciones</strong> en respuesta a los cambios del estado permitidos.</div>
+<div class="elemento_centrado" style="text-align: justify;"></div>
+<div class="elemento_centrado" style="text-align: justify;"><a href="../png/ad07_cont_r32_esquema2.png" title="Ampliar imagen."><img alt="Esquema de formado por cinco figuras distribuidas de la siguiente manera: En la parte izquierda un óvalo de fondo rosado, en cuyo interior se puede leer “GESTIÓN DE EVENTOS”. A su derecha se abre una figura de llave y encontramos cuatro rectángulos de borde redondeado y fondo verde, distribuidos de arriba a abajo. En el  rectángulo situado en la parte superior se puede leer en su interior “CLASE QUE IMPLEMENTE LOS EVENTOS”. Debajo de éste, otro rectángulo, en cuyo interior se puede leer “INTERFAZ QUE DEFINA LOS MÉTODOS”. Debajo de éste, otro en cuyo interior se puede leer “DOS MÉTODOS: AÑADIR Y ELIMINAR OYENTES”. Debajo de éste, el último rectángulo, en cuyo interior se puede leer “IMPLEMENTAR EL MÉTODO QUE GENERA EL EVENTO”." class="imagen_ampliable" height="64" src="../png/ad07_cont_r32_esquema2_miniatura.png" style="width: 200px; height: 64px;" title="Esquema de gestión de eventos." width="200" /></a></div>
+</div>
+<p style="text-align: justify;">Los componentes Java utilizan el modelo de delegación de eventos para gestionar la comunicación entre objetos como hemos visto. Para ilustrar el uso de los eventos en un componente <span lang="en">JavaBean</span> añadiremos le añadiremos un comportamiento extra que añadirá un nuevo alumno a la base de datos. Tendrá como especial característica que cada vez que se inserte un alumno nuevo que generará un evento que alerte de esta modificación. Esto que en principio puede parecer redundante no lo es en un entorno multiusuario en el que varios clientes se conecten simultáneamente a la base de datos. Para poder implementar esto necesitarás varias cosas:</p>
+<ul class="lista_verificacion" style="text-align: justify;">
+<li>Una clase que implemente los eventos. Esta clase hereda de <span style="font-size: 10pt;"><code>java.util.EventObject</code>.</span> En el ejemplo se llamará <span style="font-size: 10pt;"><code>BDModificadaEvent</code></span>.</li>
+<li>Una interfaz que defina los métodos a usar cuando se genere el evento. Implementa <span style="font-size: 10pt;"><code>java.util.EventListener.</code></span> En este caso la gestión del evento se hará a través del método <code>capturarBDModificada</code> de la interfaz <code>BDModificadaListener</code>. También tenemos un objeto de tipo <code>DBModificadaListener</code> llamado receptor que representa aquellos programas que contienen al componente <code>AlumnosBean</code> susceptibles de recibir el evento.</li>
+<li>Dos métodos, <code>addEventoListener</code> y <code>removeEventoListener </code> que permitan al componente añadir oyentes y eliminarlos. En principio se deben encargar de que pueda haber varios oyentes. En nuestro caso sólo vamos a tener un oyente, pero se suele implementar para admitir a varios.</li>
+<li>Implementar el método que lanza el evento, asegurándonos de todos los oyentes reciban el aviso. En este caso lo que se ha hecho es lanzar el método que se creó en la interfaz que describe al oyente.</li>
+</ul>
+<p style="text-align: justify;">Finalmente el código de la clase componente queda como aparece en el siguiente enlace:</p>
+<div class="enlace_centrado" style="text-align: justify;"><a class="binario" href="../java/ad07_cont_r33_alumnobean.java" title="Descargar Ejemplo de componente JavaBean con gestión de eventos. [java - 10 KB].">Código del componente AlumnoBean finalizado.</a> <span class="tamano"> (10 KB) </span></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id79">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-79_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion79_60" class="block question iDevice_content">
+<strong>¿Qué elementos interviene en la implementación de un evento?</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i79_63" class="sr-av"><a href="#answer-79_63">Opción 1</a></label><input type="radio" name="option79_60" id="i79_63" class="exe-radio-option exe-radio-option-0-3-79_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-79_63"><div id="taans79_63" class="block iDevice_content">
+Una clase que define el evento
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i79_173" class="sr-av"><a href="#answer-79_173">Opción 2</a></label><input type="radio" name="option79_60" id="i79_173" class="exe-radio-option exe-radio-option-1-3-79_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-79_173"><div id="taans79_173" class="block iDevice_content">
+Una interfaz que define los métodos a implementar.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i79_176" class="sr-av"><a href="#answer-79_176">Opción 3</a></label><input type="radio" name="option79_60" id="i79_176" class="exe-radio-option exe-radio-option-2-3-79_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-79_176"><div id="taans79_176" class="block iDevice_content">
+Una clase que defina el evento y una interfaz que defina los métodos a implementar.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b79_60" class="feedback js-hidden">
+<div id="taf79_63" class=" iDevice_content">
+Incorrecto. No es solo eso.
+
+</div>
+</section>
+<section id="sa1b79_60" class="feedback js-hidden">
+<div id="taf79_173" class=" iDevice_content">
+No es correcto. Además necesitas otra cosa...
+
+</div>
+</section>
+<section id="sa2b79_60" class="feedback js-hidden">
+<div id="taf79_176" class=" iDevice_content">
+Correcto, ambas cosas son necesarias en el modelo de eventos de Java.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-79_63">Incorrecto</a><span> (<a href="#sa0b79_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-79_173">Incorrecto</a><span> (<a href="#sa1b79_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-79_176">Opción correcta</a><span> (<a href="#sa2b79_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="116_implementar_el_comportamiento.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="118_uso_de_componentes_previamente_elaborados_en_netbeans.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431922/mod_resource/content/4/AD07_Contenidos_Web/117_gestin_de_eventos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:57:10 GMT -->
+</html>

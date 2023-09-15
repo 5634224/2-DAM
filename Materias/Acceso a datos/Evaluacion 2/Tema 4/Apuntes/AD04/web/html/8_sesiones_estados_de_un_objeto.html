@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/8_sesiones_estados_de_un_objeto.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>8.- Sesiones; estados de un objeto. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Mapeo objeto relacional.</a></li>
+   <li><a href="1_concepto_de_mapeo_objetorelacional.html" class="no-ch">1.- Concepto de Mapeo objeto-relacional.</a></li>
+   <li><a href="2_herramientas_orm_caractersticas_y_herramientas_ms_utilizadas.html" class="daddy">2.- Herramientas ORM. Características y herramientas más utilizadas.</a>
+   <ul class="other-section">
+      <li><a href="21_caractersticas.html" class="no-ch">2.1.- Características.</a></li>
+      <li><a href="22_herramientas_orm_ms_utilizadas.html" class="no-ch">2.2.- Herramientas ORM más utilizadas.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_arquitectura_de_hibernate.html" class="no-ch">3.- Arquitectura de Hibernate</a></li>
+   <li><a href="4_instalacin_y_configuracin_de_hibernate.html" class="no-ch">4.- Instalación y configuración de Hibernate</a></li>
+   <li><a href="5_ficheros_de_configuracin_y_mapeo_estructura_y_propiedades.html" class="daddy">5.- Ficheros de configuración y mapeo. Estructura y propiedades.</a>
+   <ul class="other-section">
+      <li><a href="51_ficheros_de_configuracin_propiedades.html" class="no-ch">5.1.- Ficheros de configuración. Propiedades</a></li>
+      <li><a href="52_ficheros_de_mapeo_estructura_elementos_y_propiedades.html" class="no-ch">5.2.- Ficheros de mapeo. Estructura, elementos y propiedades.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_mapeo_de_colecciones_relaciones_y_herencia.html" class="no-ch">6.- Mapeo de colecciones, relaciones y herencia-</a></li>
+   <li><a href="7_clases_persistentes.html" class="no-ch">7.- Clases persistentes.</a></li>
+   <li id="active"><a href="8_sesiones_estados_de_un_objeto.html" class="active no-ch">8.- Sesiones; estados de un objeto.</a></li>
+   <li><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="daddy">9.- Carga, almacenamiento y modificación de objetos.</a>
+   <ul class="other-section">
+      <li><a href="91_almacenamiento_y_modificando_de_objetos_persistentes.html" class="no-ch">9.1.- Almacenamiento y modificando de objetos persistentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_consultas_sql.html" class="no-ch">10.- Consultas SQL.</a></li>
+   <li><a href="11_lenguajes_propios_de_la_herramienta_orm_hql.html" class="daddy">11.- Lenguajes propios de la herramienta ORM: HQL.</a>
+   <ul class="other-section">
+      <li><a href="111_sintaxis_del_lenguaje_hql.html" class="no-ch">11.1.- Sintaxis del lenguaje HQL.</a></li>
+      <li><a href="112_consultas_por_criterios.html" class="no-ch">11.2.- Consultas por criterios</a></li>
+   </ul>
+   </li>
+   <li><a href="12_gestin_de_transacciones.html" class="no-ch">12.- Gestión de transacciones.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="7_clases_persistentes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">8.- Sesiones; estados de un objeto.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id52">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta52_66" class="block iDevice_content">
+<p>
+<strong>Ana </strong>se pregunta si los objetos que de utilizan en una aplicación, para representar entidades de una base de datos, se mantienen siempre en el mismo estado, o si por el contrario, durante todo el proceso de inicio de aplicación, acceso a la base de datos, modificación, etc., estos objetos cambian de estado o funcionalidad.
+</p>
+<img alt="Imagen de Ana con camiseta azul." class="elemento_centrado" height="132" src="../jpeg/ad04_cont_r17_ana.jpeg" style="width: 200px; height: 132px" title="Ana con camiseta azul." width="200" />
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id53">
+<div class="iDevice emphasis0">
+<div id="ta53_73" class="block iDevice_content">
+<p><img alt="Imagen de una pantalla de ordenador." class="elemento_derecha" height="112" src="../jpeg/ad04_cont_r05_servicios_de_internet_01.jpeg" style="width: 200px; height: 112px;" title="Pantalla de ordenador." width="200" /></p>
+<p>Para poder utilizar la persistencia en <span lang="en">Hibernate</span><span lang="en"></span> es necesario definir un objeto <code>Session</code> utilizando la clase <code>SesssionFactory</code>. La sesión corresponde con un objeto que representa una unidad de trabajo con la base de datos. La sesión nos permite representar el gestor de persistencia, ya que dispone de una <span lang="en">API</span> básica que nos permite cargar y guardar objetos.</p>
+<p>La sesión está formada internamente por una cola de sentencias <span lang="en">SQ</span>L que son necesarias ejecutar para poder sincronizar el estado de la sesión con la base de datos.</p>
+<p>Asimismo, la sesión contiene un lista de objetos persistentes. Un sesión corresponde con el primer nivel de caché.</p>
+<p>Si para realizar el acceso a datos, usamos <span lang="en">Hibernate</span>, la sesión nos permite definir el alcance de un contexto determinado. Para poder utilizar los mecanismos de persistencia de <span lang="en">Hibernate</span> se debe inicializar el entorno <span lang="en">Hibernate</span><span lang="en"></span> y obtener un objeto <span lang="en">Session</span> utilizando la clase <code>SessionFactory</code> de <span lang="en">Hibernate</span>. Un objeto <span lang="en">Session Hibernate</span><span lang="en"></span> representa una única unidad-de-trabajo para un almacén de datos dado y lo abre un ejemplar de <code>SessionFactory</code>. Se deben cerrar las sesiones cuando se haya completado todo el trabajo de una transacción.</p>
+<p>Los estados en los que se puede encontrar un objetos son:</p>
+<ul class="lista_verificacion">
+<li>Transitorio (<span lang="en">Transient</span><span lang="en"></span>). En este estado estará un objeto recién creado que no ha sido enlazado con el gestor de persistencia.</li>
+<li>Persistente: Ente este caso el objeto está enlazado con la sesión. Todos los cambios que se realicen será persistentes.</li>
+<li>Disociado (<span lang="en">Detached</span><span lang="en"></span>): En este caso nos encontramos con un objeto persistente que sigue en memoria después de que termine la sesión. En este caso existe en Java y en la base de datos.</li>
+<li>Borrado (<span lang="en">Removed</span><span lang="en"></span>): En esta caso el objeto está marcado para ser borrado de la base de datos. Existe en la aplicación Java y se borrará de la base de datos al terminar la sesión.</li>
+</ul>
+<p><img src="../jpg/ad04_cont_r30_estados_de_un_objeto.jpg" alt="Estados de un objeto" title="Estados de un objeto" width="537" height="355" /></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id54">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-54_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion54_60" class="block question iDevice_content">
+<strong>Un objeto en estado transitorio:</strong> 
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i54_63" class="sr-av"><a href="#answer-54_63">Opción 1</a></label><input type="radio" name="option54_60" id="i54_63" class="exe-radio-option exe-radio-option-0-3-54_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-54_63"><div id="taans54_63" class="block iDevice_content">
+El objeto no ha sido enlazado con el gestor de persistencia. 
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i54_137" class="sr-av"><a href="#answer-54_137">Opción 2</a></label><input type="radio" name="option54_60" id="i54_137" class="exe-radio-option exe-radio-option-1-3-54_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-54_137"><div id="taans54_137" class="block iDevice_content">
+El objeto ha sido marcado para ser borrado.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i54_140" class="sr-av"><a href="#answer-54_140">Opción 3</a></label><input type="radio" name="option54_60" id="i54_140" class="exe-radio-option exe-radio-option-2-3-54_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-54_140"><div id="taans54_140" class="block iDevice_content">
+El objeto sigue en memoria después de finalizada la sesión.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b54_60" class="feedback js-hidden">
+<div id="taf54_63" class=" iDevice_content">
+Correcto. Muy bien. 
+
+</div>
+</section>
+<section id="sa1b54_60" class="feedback js-hidden">
+<div id="taf54_137" class=" iDevice_content">
+Incorrecta. 
+
+</div>
+</section>
+<section id="sa2b54_60" class="feedback js-hidden">
+<div id="taf54_140" class=" iDevice_content">
+No es correcta. 
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-54_63">Opción correcta</a><span> (<a href="#sa0b54_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-54_137">Incorrecto</a><span> (<a href="#sa1b54_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-54_140">Incorrecto</a><span> (<a href="#sa2b54_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="7_clases_persistentes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="9_carga_almacenamiento_y_modificacin_de_objetos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431870/mod_resource/content/7/AD04_Contenidos_Web/8_sesiones_estados_de_un_objeto.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:47:09 GMT -->
+</html>

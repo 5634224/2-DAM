@@ -1,0 +1,9 @@
+delimiter $$
+
+CREATE TABLE `clientes` (
+  `Cod_Cliente` int(3) NOT NULL DEFAULT '0',
+  `Nombre` tinytext,
+  `Telefono` tinytext,
+  PRIMARY KEY (`Cod_Cliente`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+

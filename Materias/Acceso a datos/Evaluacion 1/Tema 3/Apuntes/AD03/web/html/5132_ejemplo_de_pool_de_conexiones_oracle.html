@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/5132_ejemplo_de_pool_de_conexiones_oracle.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.13.2.- Ejemplo de pool de conexiones Oracle. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-34"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Manejo de conectores.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_protocolos_de_acceso_a_bases_de_datos.html" class="no-ch">2.- Protocolos de acceso a bases de datos.</a></li>
+   <li><a href="3_conectores_o_drivers.html" class="no-ch">3.- Conectores o Drivers.</a></li>
+   <li><a href="4_arquitectura_jdbc.html" class="daddy">4.- Arquitectura JDBC.</a>
+   <ul class="other-section">
+      <li><a href="41_conectores_tipo_1_y_tipo_2.html" class="no-ch">4.1.- Conectores tipo 1 y tipo 2.</a></li>
+      <li><a href="42_conectores_tipo_3_y_tipo_4.html" class="no-ch">4.2.- Conectores tipo 3 y tipo 4.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_conexin_a_una_base_de_datos.html" class="current-page-parent daddy">5.- Conexión a una base de datos.</a>
+   <ul>
+      <li><a href="51_creacin_de_la_base_de_datos.html" class="no-ch">5.1.- Creación de la base de datos.</a></li>
+      <li><a href="52_drivers_de_conexin_oracle_y_mysql.html" class="no-ch">5.2.- Drivers de conexión (Oracle y MySQL)</a></li>
+      <li><a href="53_instalar_el_conector_de_la_base_de_datos.html" class="no-ch">5.3.- Instalar el conector de la base de datos.</a></li>
+      <li><a href="54_jdbc_conexin_a_una_base_de_datos.html" class="no-ch">5.4.- JDBC conexión a una base de datos.</a></li>
+      <li><a href="55_realizacin_de_consultas.html" class="no-ch">5.5.- Realización de consultas.</a></li>
+      <li><a href="56_ejecucin_de_sentencias_dml.html" class="no-ch">5.6.- Ejecución de sentencias DML.</a></li>
+      <li><a href="57_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos.html" class="daddy">5.7.- Ejecución de procedimientos almacenados en la base de datos.</a>
+      <ul class="other-section">
+         <li><a href="571_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_mysql.html" class="no-ch">5.7.1.- Ejecución de procedimientos almacenados en la base de datos MySQL.</a></li>
+         <li><a href="572_ejecucin_de_procedimientos_almacenados_en_la_base_de_datos_oracle.html" class="no-ch">5.7.2.- Ejecución de procedimientos almacenados en la base de datos Oracle.</a></li>
+      </ul>
+      </li>
+      <li><a href="58_sentencias_preparadas.html" class="no-ch">5.8.- Sentencias preparadas.</a></li>
+      <li><a href="59_captura_de_errores_y_liberacin_de_recursos.html" class="no-ch">5.9.- Captura de errores y liberación de recursos.</a></li>
+      <li><a href="510_transacciones.html" class="no-ch">5.10.- Transacciones.</a></li>
+      <li><a href="511_consultas_al_diccionario_de_datos.html" class="no-ch">5.11.- Consultas al diccionario de datos.</a></li>
+      <li><a href="512_recuperacin_y_modificacin_de_valores_de_resultset.html" class="no-ch">5.12.- Recuperación y modificación de valores de ResultSet.</a></li>
+      <li class="current-page-parent"><a href="513_pool_de_conexiones.html" class="current-page-parent daddy">5.13.- Pool de conexiones.</a>
+      <ul>
+         <li><a href="5131_ejemplo_de_pool_de_conexiones_mysql.html" class="no-ch">5.13.1.- Ejemplo de pool de conexiones MySQL.</a></li>
+         <li id="active"><a href="5132_ejemplo_de_pool_de_conexiones_oracle.html" class="active no-ch">5.13.2.- Ejemplo de pool de conexiones Oracle.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="6_operaciones_ejecucin_de_consultas.html" class="no-ch">6.- Operaciones: ejecución de consultas.</a></li>
+   <li><a href="7_excepciones_y_cierre_de_conexiones.html" class="daddy">7.- Excepciones y cierre de conexiones.</a>
+   <ul class="other-section">
+      <li><a href="71_excepciones.html" class="no-ch">7.1.- Excepciones.</a></li>
+      <li><a href="72_cierre_de_conexiones.html" class="no-ch">7.2.- Cierre de conexiones.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="5131_ejemplo_de_pool_de_conexiones_mysql.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_operaciones_ejecucin_de_consultas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.13.2.- Ejemplo de pool de conexiones Oracle.</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id85">
+<div class="iDevice emphasis0" >
+<div id="ta85_129_2" class="block iDevice_content">
+<div class="exe-text"><p>El siguiente código establece una conexión con la base de datos Oracle, utilizando un Pool de conexiones Oracle:</p>
+<div><code><code><span class=""></span></code></code>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>package PoolConexiones;
+/*
+   DESCRIPTION    
+   The code sample shows how to use the DataSource API to establish a connection
+   to the Database. You can specify properties with "setConnectionProperties".
+   This is the recommended way to create connections to the Database.
+   Note that an instance of oracle.jdbc.pool.OracleDataSource doesn't provide
+   any connection pooling. It's just a connection factory. A connection pool,
+   such as Universal Connection Pool (UCP), can be configured to use an
+   instance of oracle.jdbc.pool.OracleDataSource to create connections and 
+   then cache them.
+    Step 1: Enter the Database details in this file. 
+            DB_USER, DB_PASSWORD and DB_URL are required
+    Step 2: Run the sample with "ant DataSourceSample"
+   NOTES
+    Use JDK 1.7 and above
+   MODIFIED    (MM/DD/YY)
+    nbsundar    02/17/15 - Creation 
+ */
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
+import oracle.jdbc.pool.OracleDataSource;
+import oracle.jdbc.OracleConnection;
+import java.sql.DatabaseMetaData;
+public class DataSourceSample {  
+  // The recommended format of a connection URL is the long format with the
+  // connection descriptor.
+  final static String DB_URL= "jdbc:oracle:thin:@localhost:1521:XE";
+  final static String DB_USER = "scott";
+  final static String DB_PASSWORD = "tiger";
+ /*
+  * The method gets a database connection using 
+  * oracle.jdbc.pool.OracleDataSource. It also sets some connection 
+  * level properties, such as,
+  * OracleConnection.CONNECTION_PROPERTY_DEFAULT_ROW_PREFETCH,
+  * OracleConnection.CONNECTION_PROPERTY_THIN_NET_CHECKSUM_TYPES, etc.,
+  * There are many other connection related properties. Refer to 
+  * the OracleConnection interface to find more. 
+  */
+  public static void main(String args[]) throws SQLException {
+   Properties info = new Properties();     
+    info.put(OracleConnection.CONNECTION_PROPERTY_USER_NAME, DB_USER);
+    info.put(OracleConnection.CONNECTION_PROPERTY_PASSWORD, DB_PASSWORD);          
+    info.put(OracleConnection.CONNECTION_PROPERTY_DEFAULT_ROW_PREFETCH, "20");    
+    info.put(OracleConnection.CONNECTION_PROPERTY_THIN_NET_CHECKSUM_LEVEL, "REQUIRED");
+    OracleDataSource ods = new OracleDataSource();
+    ods.setURL(DB_URL);    
+    ods.setConnectionProperties(info);
+    // With AutoCloseable, the connection is closed automatically.
+    try (OracleConnection connection = (OracleConnection) ods.getConnection()) {
+      // Get the JDBC driver name and version 
+      DatabaseMetaData dbmd = connection.getMetaData();       
+      System.out.println("Driver Name: " + dbmd.getDriverName());
+      System.out.println("Driver Version: " + dbmd.getDriverVersion());
+      // Print some connection properties
+      System.out.println("Default Row Prefetch Value is: " + connection.getDefaultRowPrefetch());
+      System.out.println("Database Username is: " + connection.getUserName());
+      System.out.println();
+      // Perform a database operation 
+      printEmployees(connection);
+    }   
+  }
+ /*
+  * Displays first_name and last_name from the employees table.
+  */
+  public static void printEmployees(OracleConnection connection) throws SQLException {
+    // Statement and ResultSet are AutoCloseable and closed automatically. 
+    try (Statement statement = connection.createStatement()) {      
+      try (ResultSet resultSet = statement
+          .executeQuery("select first_name, last_name from employees")) {
+        System.out.println("FIRST_NAME" + "  " + "LAST_NAME");
+        System.out.println("---------------------");
+        while (resultSet.next())
+          System.out.println(resultSet.getString(1) + " "+ resultSet.getString(2) + " ");       
+      }
+    }   
+  } 
+}</code></pre>
+</div>
+</div>
+<code><span class=""><br /></span></code></div></div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="5131_ejemplo_de_pool_de_conexiones_mysql.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_operaciones_ejecucin_de_consultas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431852/mod_resource/content/6/AD03_Contenidos_Web/5132_ejemplo_de_pool_de_conexiones_oracle.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 20:39:43 GMT -->
+</html>
