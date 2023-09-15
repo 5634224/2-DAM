@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432762/mod_resource/content/3/PSP01_Contenidos_Web/PSP01_Contenidos_Web/62_semforos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 17:34:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.2.- Semáforos. | Unidad de trabajo 1 </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="author" content="MEFP" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-23"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Unidad de trabajo 1</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Programación multiproceso.</a></li>
+   <li><a href="1_recordando_cmo_programar_en_java_y_el_uso_bsico_del_ide_netbeans.html" class="no-ch">1.- Recordando cómo programar en Java y el uso básico del IDE NetBeans.</a></li>
+   <li><a href="2_introduccin_aplicaciones_ejecutables_y_procesos.html" class="daddy">2.- Introducción: Aplicaciones, Ejecutables y Procesos.</a>
+   <ul class="other-section">
+      <li><a href="21_ejecutables_tipos.html" class="no-ch">2.1.- Ejecutables. Tipos.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_gestin_de_procesos.html" class="daddy">3.- Gestión de procesos.</a>
+   <ul class="other-section">
+      <li><a href="31_gestin_de_procesos_introduccin.html" class="no-ch">3.1.- Gestión de procesos. Introducción.</a></li>
+      <li><a href="32_estados_de_un_proceso.html" class="no-ch">3.2.- Estados de un Proceso.</a></li>
+      <li><a href="33_planificacin_de_procesos_por_el_sistema_operativo.html" class="daddy">3.3.- Planificación de procesos por el Sistema Operativo.</a>
+      <ul class="other-section">
+         <li><a href="331_planificacin_de_procesos_por_el_sistema_operativo_ii.html" class="no-ch">3.3.1.- Planificación de procesos por el Sistema Operativo (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="34_cambio_de_contexto_en_la_cpu.html" class="no-ch">3.4.- Cambio de contexto en la CPU.</a></li>
+      <li><a href="35_servicios_hilos.html" class="no-ch">3.5.- Servicios. Hilos.</a></li>
+      <li><a href="36_creacin_de_procesos.html" class="no-ch">3.6.- Creación de procesos.</a></li>
+      <li><a href="37_comandos_para_la_gestin_de_procesos.html" class="no-ch">3.7.- Comandos para la gestión de procesos.</a></li>
+      <li><a href="38_herramientas_grficas_para_la_gestin_de_procesos.html" class="no-ch">3.8.- Herramientas gráficas para la gestión de procesos.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_programacin_concurrente.html" class="daddy">4.- Programación concurrente.</a>
+   <ul class="other-section">
+      <li><a href="41_para_qu_concurrencia.html" class="no-ch">4.1.- ¿Para qué concurrencia?</a></li>
+      <li><a href="42_condiciones_de_competencia.html" class="no-ch">4.2.- Condiciones de competencia.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_comunicacin_entre_procesos.html" class="daddy">5.- Comunicación entre procesos.</a>
+   <ul class="other-section">
+      <li><a href="51_mecanismos_bsicos_de_comunicacin.html" class="no-ch">5.1.- Mecanismos básicos de comunicación.</a></li>
+      <li><a href="52_tipos_de_comunicacin.html" class="no-ch">5.2.- Tipos de comunicación.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="6_sincronizacin_entre_procesos.html" class="current-page-parent daddy">6.- Sincronización entre procesos.</a>
+   <ul>
+      <li><a href="61_regiones_crticas.html" class="daddy">6.1.- Regiones críticas.</a>
+      <ul class="other-section">
+         <li><a href="611_categora_de_proceso_clientesuministrador.html" class="no-ch">6.1.1.- Categoría de proceso cliente-suministrador.</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="62_semforos.html" class="active no-ch">6.2.- Semáforos.</a></li>
+      <li><a href="63_monitores.html" class="daddy">6.3.- Monitores.</a>
+      <ul class="other-section">
+         <li><a href="631_monitores_lecturas_y_escrituras_bloqueantes_en_recursos_compartidos.html" class="no-ch">6.3.1.- Monitores: Lecturas y escrituras bloqueantes en recursos compartidos.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_memoria_compartida.html" class="no-ch">6.4.- Memoria compartida.</a></li>
+      <li><a href="65_cola_de_mensajes.html" class="no-ch">6.5.- Cola de mensajes.</a></li>
+   </ul>
+   </li>
+   <li><a href="7_requisitos_seguridad_vivacidad_eficiencia_y_reusabilidad.html" class="daddy">7.- Requisitos: seguridad, vivacidad, eficiencia y reusabilidad.</a>
+   <ul class="other-section">
+      <li><a href="71_arquitecturas_y_patrones_de_diseo.html" class="no-ch">7.1.- Arquitecturas y patrones de diseño.</a></li>
+      <li><a href="72_documentacin.html" class="no-ch">7.2.- Documentación</a></li>
+      <li><a href="73_dificultades_en_la_depuracin.html" class="no-ch">7.3.- Dificultades en la depuración.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_programacin_paralela_y_distribuida.html" class="daddy">8.- Programación paralela y distribuida.</a>
+   <ul class="other-section">
+      <li><a href="81_conceptos_bsicos.html" class="no-ch">8.1.- Conceptos básicos.</a></li>
+      <li><a href="82_tipos_de_paralelismo.html" class="no-ch">8.2.- Tipos de paralelismo.</a></li>
+      <li><a href="83_modelos_de_infraestructura_para_programacin_distribuida.html" class="no-ch">8.3.- Modelos de infraestructura para programación distribuida.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="611_categora_de_proceso_clientesuministrador.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="63_monitores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.2.- Semáforos.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id90">
+<div class="iDevice emphasis0">
+<div id="ta90_73" class="block iDevice_content">
+<img alt="Muestra varios semáforos en primer plano, en la calle de una ciudad." class="elemento_derecha" height="200" src="../jpg/psp01_cont_r052_semaforo.jpg" style="width: 148px; height: 200px" title="Semáforos." width="148" />
+<p>
+Veamos una primera solución eficiente a los problemas de sincronismo, entre procesos que acceden a un mismo recurso compartido. 
+</p>
+<p>
+Podemos ver varios procesos que quieren acceder al mismo recurso, como coches que necesitan pasar por un cruce de calles. En nuestros cruces, los semáforos nos indican cuándo podemos pasar y cuándo no. Nosotros, antes de intentar entrar en el cruce, primero miramos el color en el que se encuentra el semáforo, y si está en verde (abierto), pasamos. Si el color es rojo (cerrado), quedamos a la espera de que ese mismo semáforo nos indique que podemos pasar. Este mismo funcionamiento es el que van a seguir nuestros semáforos en programación concurrente. Y, son una solución eficiente, porque los procesos quedarán bloqueados (y no en espera activa) cuando no puedan acceder al recurso, y será el semáforo el que vaya desbloqueándolos cuando puedan pasar.
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id91">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta91_70" class="block iDevice_content">
+Un <strong>semáforo</strong>, es un componente de bajo nivel de abstracción que permite arbitrar los accesos a un recurso compartido en un entorno de programación concurrente. 
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id92">
+<div class="iDevice emphasis0">
+<div id="ta92_73" class="block iDevice_content">
+<p>
+Al <strong>utilizar</strong> un semáforo, lo veremos como un <strong>tipo dato</strong>, que podremos instanciar. Ese objeto semáforo podrá tomar  un determinado <strong>conjunto de valores y</strong> se podrá realizar con él un <strong>conjunto</strong> determinado <strong>de operaciones</strong>. Un semáforo, <strong>tendrá también asociada una lista de procesos que suspendidos que se encuentran a la espera de entrar en el mismo</strong>.
+</p>
+<p>
+Dependiendo del conjunto de datos que pueda tomar un semáforo, tendremos:
+</p>
+<ul class="lista_verificacion">
+	<li>Semáforos <strong>binarios</strong>. Aquellos que pueden tomar sólo valores 0 ó 1. Como nuestras luces verde y roja.</li>
+	<li>Semáforos <strong>generales</strong>. Pueden tomar cualquier valor Natural (entero no negativo).</li>
+</ul>
+ 
+<p>
+En cualquier caso, los valores que toma un semáforo representan:
+</p>
+<ul class="lista_verificacion">
+	<li>Valor igual a 0. Indica que el semáforo está cerrado.</li>
+	<li>Valor mayor de 0. El semáforo está abierto.</li>
+</ul>
+<p>
+Cualquier <strong>semáforo</strong> permite <strong>dos operaciones seguras</strong> (la implementación del semáforo garantiza que la operación de chequeo del valor del semáforo, y posterior actualización según proceda, es siempre segura respecto a otros accesos concurrentes ):
+</p>
+<ul class="lista_verificacion">
+	<li><code>objSemaforo.wait()</code>: Si el semáforo no es nulo (está abierto) decrementa en uno el valor del semáforo. Si el valor del semáforo es nulo (está cerrado), el proceso que lo ejecuta se suspende y se encola en la lista de procesos en espera del semáforo. </li>
+	<li><code>objSemaforo.signal()</code>: Si hay algún proceso en la lista de procesos del semáforo, activa uno de ellos para que ejecute la sentencia que sigue al <span lang="en">wait</span> que lo suspendió. Si no hay procesos en espera en la lista incrementa en 1 el valor del semáforo. </li>
+</ul>
+<p>
+Además de la operación segura anterior, con un semáforo, también podremos realizar una operación no segura, que es la <strong>inicialización del valor del semáforo</strong>. Ese valor indicará cuántos procesos pueden entrar concurrentemente en él. Esta inicialización la realizaremos al crear el semáforo.
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id93">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta93_70" class="block iDevice_content">
+<p>
+Para utilizar semáforos, seguiremos los siguientes pasos:
+</p>
+<ol class="lista_esquema">
+	<li>Un proceso padre creará e inicializará tanto semáforo.</li>
+	<li>El proceso padre creará el resto de procesos hijo pasándoles el semáforo que ha creado. Esos procesos hijos acceden al mismo recurso compartido.</li>
+	<li>Cada proceso hijo, hará uso de las operaciones seguras <span lang="en">wait</span> y <span lang="en">signal</span> respetando este esquema:
+	<ol>
+		<li><code>objSemaforo.wait();</code> Para consultar si puede acceder a la sección crítica.</li>
+		<li>Sección crítica; Instrucciones que acceden al recurso protegido por el semáforo objSemaforo.</li>
+		<li><code>objSemaforo.signal();</code> Indicar que abandona su sección y otro proceso podrá entrar.
+		<ul class="lista_verificacion">
+			<li>El proceso padre habrá creado tantos semáforos como tipos secciones críticas distintas se puedan distinguir en el funcionamiento de los procesos hijos (puede ocurrir, uno por cada recurso compartido).</li>
+		</ul>
+		</li>
+	</ol>
+	</li>
+</ol>
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id94">
+<div class="iDevice emphasis0">
+<div id="ta94_73" class="block iDevice_content">
+<p>
+La ventaja de utilizar semáforos es que son fáciles de comprender, proporcionan una <strong>gran capacidad funcional (podemos utilizarlos para resolver cualquier problema de concurrencia)</strong>. Pero, su nivel bajo de abstracción, los hace <strong>peligrosos de manejar</strong> y, a menudo, son la <strong>causa de muchos errores</strong>, como es el interbloqueo. Un simple olvido o cambio de orden conduce a bloqueos; y requieren que la gestión de un semáforo se distribuya por todo el código lo que hace la depuración de los errores en su gestión es muy difícil. 
+</p>
+<p>
+En <strong>java</strong>, encontramos la clase <code>Semaphore</code> dentro del paquete <code>java.util.concurrent</code>; y su uso real <strong>se aplica</strong> a los <strong>hilos</strong> de un mismo proceso, para arbitrar el acceso de esos hilos de forma concurrente a una misma región de la memoria del proceso. Por ello, veremos ejemplos de su uso en siguiente unidades de este módulo.
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id95">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-95_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion95_60" class="block question iDevice_content">
+<strong>¿Podemos resolver el problema de sincronización de los procesos suministrador y cliente que comparten un dato con un semáforo?</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i95_63" class="sr-av"><a href="#answer-95_63">Opción 1</a></label><input type="radio" name="option95_60" id="i95_63" class="exe-radio-option exe-radio-option-0-2-95_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-95_63"><div id="taans95_63" class="block iDevice_content">
+Sí.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i95_177" class="sr-av"><a href="#answer-95_177">Opción 2</a></label><input type="radio" name="option95_60" id="i95_177" class="exe-radio-option exe-radio-option-1-2-95_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-95_177"><div id="taans95_177" class="block iDevice_content">
+No.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b95_60" class="feedback js-hidden">
+<div id="taf95_63" class=" iDevice_content">
+Por supuesto que sí. Sólo tenemos que pensar cómo conseguimos el sincronismo que deseamos entre esos procesos utilizando un semáforo. Por ejemplo: el suministrador ejecutará <code>semaforoDato.signal()</code>;  y el cliente, <code>semaforoDato.wait()</code>.<br />
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<a href="../jpg/psp01_cont_r0053_clientesuministrador_semaforo.jpg" title="Ampliar imagen."><img alt="Dos procesos uno suministrador y otro cliente. Comparten un semáforo llamado s y un buffer con capacidad para un elemento. El proceso padre que inicialice el semáforo, lo hará creando el semáforo con un valor 0 (semáforo cerrado inicialmente). Para el proceso suministrador el código seár: escribir el dato en el buffer; semáforo s.signal; (y ya está). Para el proceso cliente: semáforo s.wait; leer la información del buffer. El proceso cliente, al ejecutar el método semáforo s.wait, puede que queda bloqueado a la espera de que el semáforo esté abierto o no quedar bloqueado, si el proceso suministrador ya ha ejecutado su semáforo s.signal. En cualquier caso, para la instrucción del cliente siguiente a s.wait, el proceso tiene la certeza de que lo que necesitaba está disponible." class="imagen_ampliable" height="84" src="../jpg/psp01_cont_r0053_clientesuministrador_semaforo_miniatura.jpg" style="width: 200px; height: 84px" title="Sincronización cliente-suministrador que intercambian un elemento utilizando un semáforo." width="200" /></a>
+</div>
+</div>
+
+</div>
+</section>
+<section id="sa1b95_60" class="feedback js-hidden">
+<div id="taf95_177" class=" iDevice_content">
+No es correcta tu respuesta. Los semáforos se pueden utilizar para resolver cualquier problema de concurrencia; de hecho, se utilizan para implementar el resto de primitivas de programación concurrente. Para solucionar nuestro suministrador-cliente, sólo tenemos que pensar cómo conseguimos el sincronismo que deseamos entre esos procesos utilizando un semáforo. Por ejemplo: el suministrador ejecutará <code>semaforoDato.signal()</code>;  y el cliente, <code>semaforoDato.wait()</code>.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-95_63">Opción correcta</a><span> (<a href="#sa0b95_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-95_177">Incorrecto</a><span> (<a href="#sa1b95_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="611_categora_de_proceso_clientesuministrador.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="63_monitores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432762/mod_resource/content/3/PSP01_Contenidos_Web/PSP01_Contenidos_Web/62_semforos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 17:34:54 GMT -->
+</html>

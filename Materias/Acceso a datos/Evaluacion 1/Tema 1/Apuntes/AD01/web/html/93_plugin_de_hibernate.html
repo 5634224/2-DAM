@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431817/mod_resource/content/3/AD01_Contenidos_Web/93_plugin_de_hibernate.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 17:39:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.3.- Plugin de Hibernate </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-25"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción al acceso a datos.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_acceso_a_datos.html" class="daddy">2.- Acceso a datos.</a>
+   <ul class="other-section">
+      <li><a href="21_qu_estrategia_o_mtodo_de_acceso_a_datos_usar.html" class="no-ch">2.1.- Qué estrategia o método de acceso a datos usar.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ficheros.html" class="daddy">3.- Ficheros.</a>
+   <ul class="other-section">
+      <li><a href="31_uso_ficheros_en_la_actualidad.html" class="no-ch">3.1.- Uso ficheros en la actualidad.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_bases_de_datos.html" class="daddy">4.- Bases de datos.</a>
+   <ul class="other-section">
+      <li><a href="41_introduccin.html" class="no-ch">4.1.- Introducción.</a></li>
+      <li><a href="42_bases_de_datos_relacionales.html" class="no-ch">4.2.- Bases de datos relacionales.</a></li>
+      <li><a href="43_bases_de_datos_orientadas_a_objetos_i.html" class="daddy">4.3.- Bases de datos orientadas a objetos (I).</a>
+      <ul class="other-section">
+         <li><a href="431_bases_de_datos_orientadas_a_objetos_ii.html" class="no-ch">4.3.1.- Bases de datos orientadas a objetos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="44_comparativa_entre_bases_de_datos_relacionales_y_orientadas_a_objetos.html" class="daddy">4.4.- Comparativa entre bases de datos relacionales y orientadas a objetos.</a>
+      <ul class="other-section">
+         <li><a href="441_desventajas_de_las_bases_de_datos_orientadas_a_objetos_frente_a__las_relacionales.html" class="no-ch">4.4.1.- Desventajas de las bases de datos orientadas a objetos frente a  las relacionales.</a></li>
+      </ul>
+      </li>
+      <li><a href="45_bases_de_datos_objetorelacionales.html" class="no-ch">4.5.- Bases de datos objeto-relacionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_acceso_a_bases_de_datos_mediante_conectores.html" class="no-ch">5.- Acceso a bases de datos mediante conectores.</a></li>
+   <li><a href="6_mapeo_objeto_relacional_orm.html" class="daddy">6.- Mapeo objeto relacional (ORM).</a>
+   <ul class="other-section">
+      <li><a href="61_capa_de_persistencia_y_framework_de_mapeo.html" class="no-ch">6.1.- Capa de persistencia y framework de mapeo.</a></li>
+   </ul>
+   </li>
+   <li><a href="7_bases_de_datos_xml.html" class="no-ch">7.- Bases de datos XML.</a></li>
+   <li><a href="8_desarrollo_de_componentes.html" class="daddy">8.- Desarrollo de componentes.</a>
+   <ul class="other-section">
+      <li><a href="81_definicin_de_componente.html" class="no-ch">8.1.- Definición de componente.</a></li>
+      <li><a href="82_javabeans.html" class="no-ch">8.2.- JavaBeans.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="9_herramientas_de_trabajo_necesarias_para_el_mdulo.html" class="current-page-parent daddy">9.- Herramientas de trabajo necesarias para el módulo</a>
+   <ul>
+      <li><a href="91_netbeans.html" class="no-ch">9.1.- Netbeans</a></li>
+      <li><a href="92_eclipse.html" class="no-ch">9.2.- Eclipse</a></li>
+      <li id="active"><a href="93_plugin_de_hibernate.html" class="active no-ch">9.3.- Plugin de Hibernate</a></li>
+      <li><a href="94_jdbc.html" class="no-ch">9.4.- JDBC</a></li>
+      <li><a href="95_sistemas_gestores_de_bases_de_datos_relacionalesseccin.html" class="no-ch">9.5.- Sistemas Gestores de Bases de Datos RelacionalesSección</a></li>
+      <li><a href="96_bases_de_datos_orientadas_a_documentos.html" class="no-ch">9.6.- Bases de datos orientadas a documentos</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="92_eclipse.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="94_jdbc.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">9.3.- Plugin de Hibernate</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id65">
+<div class="iDevice emphasis0" >
+<div id="ta65_112_2" class="block iDevice_content">
+<div class="exe-text"><div>
+<div>
+<p style="text-align: justify;">Hibernate Tools es un conjunto de herramientas para Hibernate implementado como un paquete integrado de complementos de Eclipse, junto con una tarea Ant unificada para su integración en el ciclo de compilación. </p>
+</div>
+<div style="text-align: justify;">
+<p>Las siguientes funciones están disponibles dentro de Eclipse.</p>
+<p><strong>Editor de mapeo</strong></p>
+</div>
+</div>
+<div style="text-align: justify;">
+<div>
+<div>
+<p>Un editor para los archivos de mapeo XML de Hibernate, compatible con autocompletado y resaltado de sintaxis. El editor incluso admite autocompletado semántico para nombres de clases, nombres de propiedades / campos, nombres de tablas y columnas.</p>
+</div>
+<div>
+<div><strong>Consola</strong></div>
+</div>
+</div>
+</div>
+<div style="text-align: justify;">
+<div>
+<div>
+<div>
+<p>La perspectiva de la consola Hibernate le permite configurar conexiones de bases de datos, proporciona visualización de clases y sus relaciones y le permite ejecutar consultas HQL interactivamente contra su base de datos y examinar los resultados de la consulta.</p>
+</div>
+<div>
+<div><strong>Ingeniería inversa</strong></div>
+</div>
+</div>
+</div>
+</div>
+<div style="text-align: justify;">
+<div>
+<div>
+<p>La característica más poderosa de Hibernate Tools es una herramienta de ingeniería inversa de base de datos que puede generar clases de modelo de dominio y archivos de mapeo Hibernate, Beans de entidad EJB3 anotados, documentación HTML o incluso una aplicación JBoss Seam completa en segundos.</p>
+</div>
+</div>
+</div>
+<div style="text-align: justify;">
+<p><strong>Wizards</strong></p>
+<div>
+<div>
+<p>Se proporcionan varios asistentes, incluidos los asistentes para generar rápidamente archivos de configuración de Hibernate (cfg.xml) y las configuraciones de la consola de Hibernate.</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<p style="text-align: justify;"><strong>Tarea Ant</strong></p>
+<p style="text-align: justify;">Las herramientas de Hibernate incluyen una tarea Ant unificada que le permite ejecutar generación de esquema, generación de mapeo o generación de código Java como parte de su compilación.</p>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id72">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta72_110_2" class="block iDevice_content">
+<div class="exe-text"><p>En la siguiente página aprenderás sobre los plugin de hibernate para NetBeans:</p>
+<p><a href="https://becommerce.es/web/java-anadir-soporte-hibernate-para-acceso-a-base-de-datos/" title="Plugin de hibernate" target="_blank" rel="noopener">Ir a la web</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="92_eclipse.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="94_jdbc.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431817/mod_resource/content/3/AD01_Contenidos_Web/93_plugin_de_hibernate.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 17:39:20 GMT -->
+</html>

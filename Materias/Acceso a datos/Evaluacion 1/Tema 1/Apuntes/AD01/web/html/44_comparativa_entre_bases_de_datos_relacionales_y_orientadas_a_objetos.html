@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431817/mod_resource/content/3/AD01_Contenidos_Web/44_comparativa_entre_bases_de_datos_relacionales_y_orientadas_a_objetos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 17:39:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.4.- Comparativa entre bases de datos relacionales y orientadas a objetos. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción al acceso a datos.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_acceso_a_datos.html" class="daddy">2.- Acceso a datos.</a>
+   <ul class="other-section">
+      <li><a href="21_qu_estrategia_o_mtodo_de_acceso_a_datos_usar.html" class="no-ch">2.1.- Qué estrategia o método de acceso a datos usar.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ficheros.html" class="daddy">3.- Ficheros.</a>
+   <ul class="other-section">
+      <li><a href="31_uso_ficheros_en_la_actualidad.html" class="no-ch">3.1.- Uso ficheros en la actualidad.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_bases_de_datos.html" class="current-page-parent daddy">4.- Bases de datos.</a>
+   <ul>
+      <li><a href="41_introduccin.html" class="no-ch">4.1.- Introducción.</a></li>
+      <li><a href="42_bases_de_datos_relacionales.html" class="no-ch">4.2.- Bases de datos relacionales.</a></li>
+      <li><a href="43_bases_de_datos_orientadas_a_objetos_i.html" class="daddy">4.3.- Bases de datos orientadas a objetos (I).</a>
+      <ul class="other-section">
+         <li><a href="431_bases_de_datos_orientadas_a_objetos_ii.html" class="no-ch">4.3.1.- Bases de datos orientadas a objetos (II).</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="44_comparativa_entre_bases_de_datos_relacionales_y_orientadas_a_objetos.html" class="active daddy">4.4.- Comparativa entre bases de datos relacionales y orientadas a objetos.</a>
+      <ul>
+         <li><a href="441_desventajas_de_las_bases_de_datos_orientadas_a_objetos_frente_a__las_relacionales.html" class="no-ch">4.4.1.- Desventajas de las bases de datos orientadas a objetos frente a  las relacionales.</a></li>
+      </ul>
+      </li>
+      <li><a href="45_bases_de_datos_objetorelacionales.html" class="no-ch">4.5.- Bases de datos objeto-relacionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_acceso_a_bases_de_datos_mediante_conectores.html" class="no-ch">5.- Acceso a bases de datos mediante conectores.</a></li>
+   <li><a href="6_mapeo_objeto_relacional_orm.html" class="daddy">6.- Mapeo objeto relacional (ORM).</a>
+   <ul class="other-section">
+      <li><a href="61_capa_de_persistencia_y_framework_de_mapeo.html" class="no-ch">6.1.- Capa de persistencia y framework de mapeo.</a></li>
+   </ul>
+   </li>
+   <li><a href="7_bases_de_datos_xml.html" class="no-ch">7.- Bases de datos XML.</a></li>
+   <li><a href="8_desarrollo_de_componentes.html" class="daddy">8.- Desarrollo de componentes.</a>
+   <ul class="other-section">
+      <li><a href="81_definicin_de_componente.html" class="no-ch">8.1.- Definición de componente.</a></li>
+      <li><a href="82_javabeans.html" class="no-ch">8.2.- JavaBeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="9_herramientas_de_trabajo_necesarias_para_el_mdulo.html" class="daddy">9.- Herramientas de trabajo necesarias para el módulo</a>
+   <ul class="other-section">
+      <li><a href="91_netbeans.html" class="no-ch">9.1.- Netbeans</a></li>
+      <li><a href="92_eclipse.html" class="no-ch">9.2.- Eclipse</a></li>
+      <li><a href="93_plugin_de_hibernate.html" class="no-ch">9.3.- Plugin de Hibernate</a></li>
+      <li><a href="94_jdbc.html" class="no-ch">9.4.- JDBC</a></li>
+      <li><a href="95_sistemas_gestores_de_bases_de_datos_relacionalesseccin.html" class="no-ch">9.5.- Sistemas Gestores de Bases de Datos RelacionalesSección</a></li>
+      <li><a href="96_bases_de_datos_orientadas_a_documentos.html" class="no-ch">9.6.- Bases de datos orientadas a documentos</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="431_bases_de_datos_orientadas_a_objetos_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="441_desventajas_de_las_bases_de_datos_orientadas_a_objetos_frente_a__las_relacionales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.4.- Comparativa entre bases de datos relacionales y orientadas a objetos.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id29">
+<div class="iDevice emphasis0">
+<div id="ta29_73" class="block iDevice_content">
+<p><img alt="Chica ofreciendo una llave con su mano derecha." class="elemento_derecha" height="160" src="../jpg/ad01_cont_r13_clave.jpg" style="width: 160px; height: 160px;" title="Clave." width="160" /></p>
+<p style="text-align: justify;">En numerosos bancos de pruebas realizados para comparar los sistemas de bases de datos orientados a objetos (ODBMS) y los sistemas de bases de datos relacionales (RDBMS), se ha mostrado que los ODBMS pueden ser superiores para ciertos tipos de tareas.</p>
+<p style="text-align: justify;">La explicación a esto es que muchas operaciones se realizan utilizando interfaces navegacionales más que declarativos, y el acceso a datos navegacional es normalmente implementado muy eficientemente.</p>
+<p style="text-align: justify;">Un buen argumento a favor de las bases de datos orientadas a objetos es la transparencia (no ensucia la construcción de una aplicación). El desarrollador así se debe preocupar de los objetos de su aplicación, en lugar de cómo los debe almacenar y recuperar de un medio físico.</p>
+<p style="text-align: justify;">Podemos decir que las ventajas de un <a href="#taae18a5a-2083-ac82-99e1-e2f20f137ab5" id="linkaae18a5a-2083-ac82-99e1-e2f20f137ab5" class="exe-tooltip definition-tt">SGBDOO</a> frente a las relacionales son:</p>
+<ul class="lista_verificacion">
+<li style="text-align: justify;">Permiten mayor <strong>capacidad de modelado</strong>. El modelado de datos orientado a objetos permite modelar el mundo real de una manera mucho más fiel. Esto se debe a:
+<ul>
+<li>un objeto permite encapsular tanto un estado como un comportamiento</li>
+<li>un objeto puede almacenar todas las relaciones que tenga con otros objetos</li>
+<li>los objetos pueden agruparse para formar objetos complejos (herencia).</li>
+</ul>
+</li>
+<li style="text-align: justify;"><strong>Extensibilidad</strong>, debido a que:
+<ul>
+<li>Se pueden construir nuevos tipos de datos a partir de los ya existentes.</li>
+<li>Podemos agrupar propiedades comunes de diversas clases e incluirlas en una superclase, lo que reduce la redundancia.</li>
+<li>Tenemos reusabilidad de clases, lo que repercute en una mayor facilidad de mantenimiento y un menor tiempo de desarrollo.</li>
+</ul>
+</li>
+<li style="text-align: justify;">Disposición de un <strong>lenguaje de consulta más expresivo</strong>. El <a href="#taa3a488d-c315-8c86-9893-290eb4284fda" id="linkaa3a488d-c315-8c86-9893-290eb4284fda" class="exe-tooltip definition-tt titled-tt" title="Acceso navegacional: | ">acceso navegacional</a> desde un objeto al siguiente es la forma más común de acceso a datos en un sistema gestor orientado a objetos. Mientras que <a href="#ta8d752c9-0782-7ae9-9f3e-223a7ae22a08" id="linka8d752c9-0782-7ae9-9f3e-223a7ae22a08" class="exe-tooltip definition-tt titled-tt" title="SQL: | ">SQL</a> utiliza el acceso declarativo. El acceso navegacional es más adecuado para gestionar operaciones tales como consultas recursivas, etc.</li>
+<li style="text-align: justify;"><strong>Adaptación a aplicaciones</strong> avanzadas de base de datos. Hay muchas áreas en las que las bases de datos relacionales no han tenido excesivo éxito, como es el caso de en sistemas de diseño <a href="#t716a18dc-70da-233e-a4d7-950aac0170c1" id="link716a18dc-70da-233e-a4d7-950aac0170c1" class="exe-tooltip definition-tt">CAD</a>, <a href="#t2388ccd2-2375-8dae-1e43-08b1eef836dc" id="link2388ccd2-2375-8dae-1e43-08b1eef836dc" class="exe-tooltip definition-tt">CASE</a>, sistemas multimedia, etc. en los que las capacidades de modelado de los SGBDOO han hecho que esos sistemas sí resulten efectivos para este tipo de aplicaciones.</li>
+<li style="text-align: justify;"><strong>Prestaciones</strong>. Los sistemas gestores de bases de datos orientadas a objetos proporcionan mejoras significativas de rendimiento con respecto a los SGBD relacionales. Aunque hay autores, que han argumentado que los bancos de prueba, usados en dichas pruebas, están dirigidos a aplicaciones de ingeniería donde los SGBDOO son más adecuados. También está demostrado, que los SGBDR tienen un rendimiento mejor que los SGBDOO en las aplicaciones tradicionales de bases de datos como el procesamiento de <a href="#ta4c8f888-3d73-82a9-dd05-3e75b7b62005" id="linka4c8f888-3d73-82a9-dd05-3e75b7b62005" class="exe-tooltip definition-tt titled-tt" title="Transacción: | ">transacciones</a> en línea.</li>
+<li style="text-align: justify;"><strong>Reglas de acceso</strong>. En las bases de datos relacionales, a los atributos se accede y se modifican a través de operadores relacionales predefinidos. En las orientadas a objetos se procede mediante las interfaces que se creen a tal efecto de las clases. Desde este punto de vista, los sistemas orientados a objetos dan independencia a cada objeto que el sistema relacional no permite.</li>
+<li style="text-align: justify;"><strong>Clave</strong>. En el modelo relacional, las claves primarias generalmente tienen una forma representable en texto, sin embargo los objetos no necesitan una representación visible del identificador.</li>
+</ul>
+<div id="taae18a5a-2083-ac82-99e1-e2f20f137ab5" class="exe-tooltip-text">
+<p>Sistema Gestor de Bases de Datos Orientadas a Objetos</p>
+</div>
+<div id="t716a18dc-70da-233e-a4d7-950aac0170c1" class="exe-tooltip-text">
+<p>Diseño asistido por ordenador</p>
+</div>
+<div id="t2388ccd2-2375-8dae-1e43-08b1eef836dc" class="exe-tooltip-text">
+<p>Conjunto de herramientas de diseño por ordenador</p>
+</div>
+<div id="taa3a488d-c315-8c86-9893-290eb4284fda" class="exe-tooltip-text">
+<p>Las técnicas navegacionales utilizan trayectorias para navegar entre los nodos de datos. Esto está en contraposición con las declarativas, para las cuales hay que pedir al sistema qué queremos en vez de cómo lo queremos para navegar en él. Por ejemplo, para dar direcciones a una casa, la visión navegacional se asemejaría a algo como, "en la carretera comarcal 332 cuenta 8 kilómetros, gira a la derecha sobre el camino del caballo, gira a la izquierda en el granero rojo, después para en la tercera casa del camino". Mientras que, el acercamiento declarativo se asemejaría a, "visite las casas verdes dentro de los coordenadas siguientes…".</p>
+</div>
+<div id="ta8d752c9-0782-7ae9-9f3e-223a7ae22a08" class="exe-tooltip-text">
+<p>Lenguaje declarativo de acceso a bases de datos relacionales que permite especificar diversos tipos de operaciones en éstas.</p>
+</div>
+<div id="ta4c8f888-3d73-82a9-dd05-3e75b7b62005" class="exe-tooltip-text">
+<p>Una transacción es un conjunto de órdenes que se ejecutan formando una unidad de trabajo, es decir, en forma indivisible o atómica.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id30">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta30_47" class="block iDevice_content">
+<p>
+En esta dirección puedes ver más información  sobre las bases de datos orientado a objetos.
+</p>
+<div class="enlace_centrado">
+<a class="pdf" href="http://www.iessanvicente.com/colaboraciones/bdOO.pdf" title="Descargar bases de datos orientadas a objetos.  [pdf - 0.15 MB]" target="_self">Bases de datos orientadas a objetos.</a> <span class="tamano"> (0.15 MB) </span> 
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice" id="id32">
+<div class="iDevice emphasis_reflexionfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_reflexionfpd.png)"><h1 class="iDeviceTitle">Reflexiona</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta32_40" class="block iDevice_content">
+<p>
+Puedes ver un poco sobre la vida de <span lang="en">Edgar F.Codd</span>, el &quot;padre&quot; del modelo
+relacional en el siguiente enlace.
+</p>
+<div class="enlace_centrado">
+<a href="http://www.dcc.uchile.cl/~rbaeza/inf/codd.html" title="Acceder a algo sobre Edgar F.Codd."><span lang="en">Edgar F.Codd</span>.</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id33">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-33_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion33_60" class="block question iDevice_content">
+<p>
+<strong>Señala la opción correcta. Las bases de datos
+orientadas a objetos son más recomendables que las relacionales:
+</strong>
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i33_63" class="sr-av"><a href="#answer-33_63">Opción 1</a></label><input type="radio" name="option33_60" id="i33_63" class="exe-radio-option exe-radio-option-0-4-33_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-33_63"><div id="taans33_63" class="block iDevice_content">
+Siempre.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i33_139" class="sr-av"><a href="#answer-33_139">Opción 2</a></label><input type="radio" name="option33_60" id="i33_139" class="exe-radio-option exe-radio-option-1-4-33_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-33_139"><div id="taans33_139" class="block iDevice_content">
+Cuando necesitamos la mayor cercanía al mundo real, la mayor capacidad de modelado, como en sistemas CAD/CAM. 
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i33_142" class="sr-av"><a href="#answer-33_142">Opción 3</a></label><input type="radio" name="option33_60" id="i33_142" class="exe-radio-option exe-radio-option-2-4-33_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-33_142"><div id="taans33_142" class="block iDevice_content">
+En aplicaciones de sistemas de control.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i33_145" class="sr-av"><a href="#answer-33_145">Opción 4</a></label><input type="radio" name="option33_60" id="i33_145" class="exe-radio-option exe-radio-option-3-4-33_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-33_145"><div id="taans33_145" class="block iDevice_content">
+En programas de control de stock.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b33_60" class="feedback js-hidden">
+<div id="taf33_63" class=" iDevice_content">
+No siempre es así.
+
+</div>
+</section>
+<section id="sa1b33_60" class="feedback js-hidden">
+<div id="taf33_139" class=" iDevice_content">
+¡Así es! Hay algunos casos como ese en los que las bases de datos orientadas a objetos son preferibles a las relacionales.
+
+</div>
+</section>
+<section id="sa2b33_60" class="feedback js-hidden">
+<div id="taf33_142" class=" iDevice_content">
+¡Incorrecto! Más bien en aplicaciones mulipedia, o CAD, etc.
+
+</div>
+</section>
+<section id="sa3b33_60" class="feedback js-hidden">
+<div id="taf33_145" class=" iDevice_content">
+¡No es correcto!
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-33_63">Incorrecto</a><span> (<a href="#sa0b33_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-33_139">Opción correcta</a><span> (<a href="#sa1b33_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-33_142">Incorrecto</a><span> (<a href="#sa2b33_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-33_145">Incorrecto</a><span> (<a href="#sa3b33_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id34">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta34_47" class="block iDevice_content">
+<p>
+En la siguiente web puedes ver un curso introductorio sobre <acronym lang="en" title="structured query language.">SQL</acronym>.
+</p>
+<div class="enlace_centrado">
+<a href="http://www.aulaclic.es/sql/f_sql.htm" title="Acceder a curso de SQL.">Curso de SQL</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="431_bases_de_datos_orientadas_a_objetos_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="441_desventajas_de_las_bases_de_datos_orientadas_a_objetos_frente_a__las_relacionales.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431817/mod_resource/content/3/AD01_Contenidos_Web/44_comparativa_entre_bases_de_datos_relacionales_y_orientadas_a_objetos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 17:39:15 GMT -->
+</html>
