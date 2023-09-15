@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431817/mod_resource/content/3/AD01_Contenidos_Web/5_acceso_a_bases_de_datos_mediante_conectores.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 17:39:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.- Acceso a bases de datos mediante conectores. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción al acceso a datos.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_acceso_a_datos.html" class="daddy">2.- Acceso a datos.</a>
+   <ul class="other-section">
+      <li><a href="21_qu_estrategia_o_mtodo_de_acceso_a_datos_usar.html" class="no-ch">2.1.- Qué estrategia o método de acceso a datos usar.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ficheros.html" class="daddy">3.- Ficheros.</a>
+   <ul class="other-section">
+      <li><a href="31_uso_ficheros_en_la_actualidad.html" class="no-ch">3.1.- Uso ficheros en la actualidad.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_bases_de_datos.html" class="daddy">4.- Bases de datos.</a>
+   <ul class="other-section">
+      <li><a href="41_introduccin.html" class="no-ch">4.1.- Introducción.</a></li>
+      <li><a href="42_bases_de_datos_relacionales.html" class="no-ch">4.2.- Bases de datos relacionales.</a></li>
+      <li><a href="43_bases_de_datos_orientadas_a_objetos_i.html" class="daddy">4.3.- Bases de datos orientadas a objetos (I).</a>
+      <ul class="other-section">
+         <li><a href="431_bases_de_datos_orientadas_a_objetos_ii.html" class="no-ch">4.3.1.- Bases de datos orientadas a objetos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="44_comparativa_entre_bases_de_datos_relacionales_y_orientadas_a_objetos.html" class="daddy">4.4.- Comparativa entre bases de datos relacionales y orientadas a objetos.</a>
+      <ul class="other-section">
+         <li><a href="441_desventajas_de_las_bases_de_datos_orientadas_a_objetos_frente_a__las_relacionales.html" class="no-ch">4.4.1.- Desventajas de las bases de datos orientadas a objetos frente a  las relacionales.</a></li>
+      </ul>
+      </li>
+      <li><a href="45_bases_de_datos_objetorelacionales.html" class="no-ch">4.5.- Bases de datos objeto-relacionales.</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="5_acceso_a_bases_de_datos_mediante_conectores.html" class="active no-ch">5.- Acceso a bases de datos mediante conectores.</a></li>
+   <li><a href="6_mapeo_objeto_relacional_orm.html" class="daddy">6.- Mapeo objeto relacional (ORM).</a>
+   <ul class="other-section">
+      <li><a href="61_capa_de_persistencia_y_framework_de_mapeo.html" class="no-ch">6.1.- Capa de persistencia y framework de mapeo.</a></li>
+   </ul>
+   </li>
+   <li><a href="7_bases_de_datos_xml.html" class="no-ch">7.- Bases de datos XML.</a></li>
+   <li><a href="8_desarrollo_de_componentes.html" class="daddy">8.- Desarrollo de componentes.</a>
+   <ul class="other-section">
+      <li><a href="81_definicin_de_componente.html" class="no-ch">8.1.- Definición de componente.</a></li>
+      <li><a href="82_javabeans.html" class="no-ch">8.2.- JavaBeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="9_herramientas_de_trabajo_necesarias_para_el_mdulo.html" class="daddy">9.- Herramientas de trabajo necesarias para el módulo</a>
+   <ul class="other-section">
+      <li><a href="91_netbeans.html" class="no-ch">9.1.- Netbeans</a></li>
+      <li><a href="92_eclipse.html" class="no-ch">9.2.- Eclipse</a></li>
+      <li><a href="93_plugin_de_hibernate.html" class="no-ch">9.3.- Plugin de Hibernate</a></li>
+      <li><a href="94_jdbc.html" class="no-ch">9.4.- JDBC</a></li>
+      <li><a href="95_sistemas_gestores_de_bases_de_datos_relacionalesseccin.html" class="no-ch">9.5.- Sistemas Gestores de Bases de Datos RelacionalesSección</a></li>
+      <li><a href="96_bases_de_datos_orientadas_a_documentos.html" class="no-ch">9.6.- Bases de datos orientadas a documentos</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="45_bases_de_datos_objetorelacionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_mapeo_objeto_relacional_orm.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.- Acceso a bases de datos mediante conectores.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id38">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta38_66" class="block iDevice_content">
+<p><img alt="Primer plano de Antonio, mirando hacia el frente." class="elemento_izquierda" height="132" src="../jpg/caso_personajes_08.jpg" title="Antonio mirando hacia el frente. " width="200" /></p>
+<p style="text-align: justify;"><strong>Antonio</strong>, después de salir la reunión que tuvieron con Ada y los tutores, pensó que ya no se acordaba de una de las cosas que había comentado <strong>Ada</strong>, concretamente había dicho algo sobre <acronym lang="en" title="Java Database Connectivity.">JDBC</acronym>. <strong>Antonio</strong> sabía perfectamente que lo había estudiado en el ciclo, pero ahora mismo no recordaba con total exactitud qué significaba ese término. Por ello, en cuanto llegara a casa, repasaría sus apuntes o lo buscaría por Internet, para calmar su inquietud.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id39">
+<div class="iDevice emphasis0">
+<div id="ta39_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a href="../png/ad01_cont_r17_piladriver.png" title="Ampliar imagen."><img alt="Esquema con las capas que separan el código de la aplicación de la base de datos." class="imagen_ampliable" height="128" src="../jpg/ad01_cont_r17_piladriver_miniatura.jpg" title="Pila drivers." width="200" /></a></div>
+</div>
+<p style="text-align: justify;">Para gestionar la información de las bases de datos hay unos estándares que facilitan a los programas informáticos manipular la información almacenada en ellas.</p>
+<p style="text-align: justify;">En Java existe un API basado en estos estándares que permite al desarrollar aplicaciones, que se pueda acceder a bases de datos relacionales: JDBC (<span lang="en">Java Database Connectivity</span>, conectividad de bases de datos de Java).</p>
+<p style="text-align: justify;">La mayoría de las aplicaciones importantes de una empresa están respaldadas por una arquitectura normalizada y optimizada de bases de datos relacionales. Tradicionalmente, dichas aplicaciones están basadas en sentencias SQL con las cuales se gestionan todos los datos que manejan.</p>
+<p style="text-align: justify;">Este modelo continúa teniendo una gran importancia estratégica y es la base para el continuo crecimiento del mapeo Objeto-Relacional (O/R) y está asociado a los mecanismos de persistencia.</p>
+<p style="text-align: justify;">Un <strong><span lang="en">driver</span> JDBC </strong>es un<strong> componente </strong>software<strong> que posibilita a una aplicación Java interaccionar con una base de datos.</strong></p>
+<p style="text-align: justify;">El  <a href="#tf96287fd-88ab-249d-5e9a-945ac1023de6" id="linkf96287fd-88ab-249d-5e9a-945ac1023de6" class="exe-tooltip definition-tt">API</a> JDBC define interfaces y clases para escribir aplicaciones de bases de datos en Java realizando conexiones de base de datos.</p>
+<p style="text-align: justify;">Mediante JDBC el programador puede enviar sentencias SQL, y<a href="#ta2385984-6745-b128-12ca-3ed31df262c4" id="linka2385984-6745-b128-12ca-3ed31df262c4" class="exe-tooltip definition-tt"> PL/SQL</a> a una base de datos relacional. JDBC permite embeber SQL dentro de código Java.</p>
+<p style="text-align: justify;">La ilustración muestra una representación de los diferentes mecanismos de mapeo O/R y cómo se relacionan con el código de la aplicación y con los recursos de datos relacionados. Se observa claramente la función crítica que desempeña el <span lang="en">driver</span> JDBC puesto que está situado en la base de cada uno de los marcos de trabajo.</p>
+<p style="text-align: justify;">La ventaja de usar conectores JDBC es que independiza de la base de datos que utilice.</p>
+<p style="text-align: justify;">No obstante hay un trabajo de traducción para mapear los campos devueltos por cada consulta a la colección de objetos correspondiente. Y hay que trabajar las sentencias de actualización, inserción y eliminación para cada uno de los campos. Esto constituye una razón para tratar de buscar alternativas menos costosas en tiempo de desarrollo.</p>
+<div id="tf96287fd-88ab-249d-5e9a-945ac1023de6" class="exe-tooltip-text">
+<p>Es una interfaz de programación de aplicaciones (API, por sus siglas del inglés: Application Programming Interface) provista por los creadores del lenguaje de programación Java, que da a los programadores los medios para desarrollar aplicaciones Java.</p>
+</div>
+<div id="ta2385984-6745-b128-12ca-3ed31df262c4" class="exe-tooltip-text">
+<p>(Procedural Language/Structured Query Language) es un lenguaje de programación incrustado en Oracle.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ReflectionfpdmodifIdevice em_iDevice" id="id40">
+<div class="iDevice emphasis_reflexionfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_reflexionfpd.png)"><h1 class="iDeviceTitle">¿Sabías que…?</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta40_40" class="block iDevice_content">
+<p>El controlador de ODBC (<span lang="en">Open Database Connectivity</span>, Conectividad abierta de bases de datos) es la interfaz de programación de base de datos que utiliza Microsoft para tener acceso a distintas bases de datos relacionales en diversas plataformas. También existe un estándar que sirve de puente entre JDBC-ODBC en las versiones Solaris y <span lang="en">Windows</span> de la plataforma Java, para que se pueda utilizar ODBC desde un programa Java.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="45_bases_de_datos_objetorelacionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_mapeo_objeto_relacional_orm.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431817/mod_resource/content/3/AD01_Contenidos_Web/5_acceso_a_bases_de_datos_mediante_conectores.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 17:39:17 GMT -->
+</html>

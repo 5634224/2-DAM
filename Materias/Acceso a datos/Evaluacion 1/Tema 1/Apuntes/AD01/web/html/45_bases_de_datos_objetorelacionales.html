@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431817/mod_resource/content/3/AD01_Contenidos_Web/45_bases_de_datos_objetorelacionales.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 17:39:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/exe_highlighter.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.5.- Bases de datos objeto-relacionales. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/exe_highlighter.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Introducción al acceso a datos.</a></li>
+   <li><a href="1_introduccin.html" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_acceso_a_datos.html" class="daddy">2.- Acceso a datos.</a>
+   <ul class="other-section">
+      <li><a href="21_qu_estrategia_o_mtodo_de_acceso_a_datos_usar.html" class="no-ch">2.1.- Qué estrategia o método de acceso a datos usar.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_ficheros.html" class="daddy">3.- Ficheros.</a>
+   <ul class="other-section">
+      <li><a href="31_uso_ficheros_en_la_actualidad.html" class="no-ch">3.1.- Uso ficheros en la actualidad.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_bases_de_datos.html" class="current-page-parent daddy">4.- Bases de datos.</a>
+   <ul>
+      <li><a href="41_introduccin.html" class="no-ch">4.1.- Introducción.</a></li>
+      <li><a href="42_bases_de_datos_relacionales.html" class="no-ch">4.2.- Bases de datos relacionales.</a></li>
+      <li><a href="43_bases_de_datos_orientadas_a_objetos_i.html" class="daddy">4.3.- Bases de datos orientadas a objetos (I).</a>
+      <ul class="other-section">
+         <li><a href="431_bases_de_datos_orientadas_a_objetos_ii.html" class="no-ch">4.3.1.- Bases de datos orientadas a objetos (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="44_comparativa_entre_bases_de_datos_relacionales_y_orientadas_a_objetos.html" class="daddy">4.4.- Comparativa entre bases de datos relacionales y orientadas a objetos.</a>
+      <ul class="other-section">
+         <li><a href="441_desventajas_de_las_bases_de_datos_orientadas_a_objetos_frente_a__las_relacionales.html" class="no-ch">4.4.1.- Desventajas de las bases de datos orientadas a objetos frente a  las relacionales.</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="45_bases_de_datos_objetorelacionales.html" class="active no-ch">4.5.- Bases de datos objeto-relacionales.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_acceso_a_bases_de_datos_mediante_conectores.html" class="no-ch">5.- Acceso a bases de datos mediante conectores.</a></li>
+   <li><a href="6_mapeo_objeto_relacional_orm.html" class="daddy">6.- Mapeo objeto relacional (ORM).</a>
+   <ul class="other-section">
+      <li><a href="61_capa_de_persistencia_y_framework_de_mapeo.html" class="no-ch">6.1.- Capa de persistencia y framework de mapeo.</a></li>
+   </ul>
+   </li>
+   <li><a href="7_bases_de_datos_xml.html" class="no-ch">7.- Bases de datos XML.</a></li>
+   <li><a href="8_desarrollo_de_componentes.html" class="daddy">8.- Desarrollo de componentes.</a>
+   <ul class="other-section">
+      <li><a href="81_definicin_de_componente.html" class="no-ch">8.1.- Definición de componente.</a></li>
+      <li><a href="82_javabeans.html" class="no-ch">8.2.- JavaBeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="9_herramientas_de_trabajo_necesarias_para_el_mdulo.html" class="daddy">9.- Herramientas de trabajo necesarias para el módulo</a>
+   <ul class="other-section">
+      <li><a href="91_netbeans.html" class="no-ch">9.1.- Netbeans</a></li>
+      <li><a href="92_eclipse.html" class="no-ch">9.2.- Eclipse</a></li>
+      <li><a href="93_plugin_de_hibernate.html" class="no-ch">9.3.- Plugin de Hibernate</a></li>
+      <li><a href="94_jdbc.html" class="no-ch">9.4.- JDBC</a></li>
+      <li><a href="95_sistemas_gestores_de_bases_de_datos_relacionalesseccin.html" class="no-ch">9.5.- Sistemas Gestores de Bases de Datos RelacionalesSección</a></li>
+      <li><a href="96_bases_de_datos_orientadas_a_documentos.html" class="no-ch">9.6.- Bases de datos orientadas a documentos</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="441_desventajas_de_las_bases_de_datos_orientadas_a_objetos_frente_a__las_relacionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_acceso_a_bases_de_datos_mediante_conectores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.5.- Bases de datos objeto-relacionales.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id35">
+<div class="iDevice emphasis0">
+<div id="ta35_73" class="block iDevice_content">
+<p style="text-align: justify;">Entendemos Base de Datos Objeto Relacional (BDOR), una base de datos que ha evolucionado desde el modelo relacional a otro extendido que incorpora conceptos del paradigma orientado a objetos. Por tanto, un Sistema de Gestión Objeto-Relacional (SGBDOR) contiene ambas tecnologías: relacional y de objetos.</p>
+<p style="text-align: justify;">En una Base de Datos Objeto Relacional el diseñador puede crear sus propios tipos de datos y crear métodos para esos tipos de datos.</p>
+<p style="text-align: justify;">Por ejemplo, podríamos definir un tipo de la siguiente manera:<span style="font-size: 1.05em;"></span></p>
+<div class="highlighted-code language-sql">
+<div>
+<pre><code>CREATE TYPE persona_t AS OBJECT ( 
+nif VARCHAR2(9), 
+nombre VARCHAR2(30), 
+direccion VARCHAR2(40), 
+telefono VARCHAR2(15), 
+fecha_nac DATE);</code></pre>
+</div>
+</div>
+<div class="elemento_derecha" style="text-align: justify;">
+<div class="elemento_centrado"><a href="../jpg/ad01_cont_r15_sqlplus.jpg" title="Ampliar imagen."><img alt="Pantalla donde se ve en ejecución SQL Plus." class="imagen_ampliable" height="156" src="../jpg/ad01_cont_r15_sqlplus_miniatura.jpg" title="SQL Plus." width="200" /></a></div>
+</div>
+<p style="text-align: justify;">Por poner un ejemplo, si consideramos la base de datos Oracle, debido a los requerimientos de las nuevas aplicaciones, el sistema de gestión de bases de datos relacional desde versión 8i fue extendido con conceptos del modelo de bases de datos orientadas a objetos. De esta manera, aunque las estructuras de datos que se utilizan para almacenar la información siguen siendo tablas, los diseñadores pueden utilizar muchos de los mecanismos de orientación a objetos para definir y acceder a los datos. Se reconoce el concepto de objetos, de tal manera que un objeto tiene un tipo, se almacena en cierta fila de cierta tabla y tiene un identificador único (OID). Estos identificadores se pueden utilizar para referenciar a otros objetos y así representar relaciones de asociación y de agregación.</p>
+<p style="text-align: justify;">La ventaja de este tipo de base de datos es que los usuarios pueden pasar sus aplicaciones actuales sobre bases de datos relaciones este nuevo modelo sin tener que reescribirlas. Más tarde, se pueden ir adaptando las aplicaciones y bases de datos para que utilicen las funciones orientadas a objetos.</p>
+<p style="text-align: justify;">Con las Bases de Datos Objeto-Relacional se amplía el modelo relacional destacando las siguientes aportaciones:</p>
+<ul class="lista_verificacion" style="text-align: justify;">
+<li>Se aumentan la variedad en los tipos de datos,
+<ul>
+<li>se pueden crear nuevos tipos de datos que permitan construir aplicaciones complejas con una gran riqueza de dominios. Se soportan tipos complejos como: registros, conjuntos, referencias, listas, pilas, colas y vectores.</li>
+</ul>
+</li>
+<li>Hay extensiones en el control de la Semántica de datos Objeto-Relacionales:
+<ul>
+<li>Se pueden crear <a href="#t6b73be5f-c499-1806-c391-3d760a195f1d" id="link6b73be5f-c499-1806-c391-3d760a195f1d" class="exe-tooltip definition-tt titled-tt" title="Procedimiento almacenado: | ">procedimientos almacenados</a> y funciones que tengan un código en algún lenguaje de programación, como por ejemplo: SQL, Java, C, etc.</li>
+</ul>
+</li>
+<li>Se pueden compartir varias librerías de clases ya existentes, esto es lo que conocemos como reusabilidad.</li>
+</ul>
+<p style="text-align: justify;">Como productos comerciales de bases de Datos Objeto-Relacional podemos destacar:</p>
+<ul class="lista_verificacion" style="text-align: justify;">
+<li>DB2 <span lang="en">Universal Database</span> de IBM (<span lang="en">International Business Machines</span>).</li>
+<li><span lang="en">Universal Server</span> de Informix (ahora de IBM),</li>
+<li>INGRES II, de <span lang="en">Computer Associates</span>.</li>
+<li>ORACLE de <span lang="en">Oracle Corporation</span>,</li>
+<li>SyBASE</li>
+</ul>
+<p style="text-align: justify;">Como productos de código abierto, destacamos PostGreSQL.</p>
+<div id="t0bf32ab4-c75a-9168-d148-95a39b94a0e3" class="exe-tooltip-text">
+<p style="text-align: justify;">Es un programa almacenado físicamente en una base de datos. Su implementación varía de un gestor de bases de datos a otro.</p>
+</div>
+<div id="t6b73be5f-c499-1806-c391-3d760a195f1d" class="exe-tooltip-text">
+<p>Un procedimiento almacenado (stored procedure en inglés) es un programa que se almacena físicamente en una base de datos.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id36">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta36_47" class="block iDevice_content">
+<div class="enlace_centrado"><a href="https://es.wikipedia.org/wiki/Base_de_datos_objeto-relacional" target="_blank" rel="noopener">Bases de datos Objeto-relacional </a><span class="tamano"> (0.33 MB) </span></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="441_desventajas_de_las_bases_de_datos_orientadas_a_objetos_frente_a__las_relacionales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_acceso_a_bases_de_datos_mediante_conectores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431817/mod_resource/content/3/AD01_Contenidos_Web/45_bases_de_datos_objetorelacionales.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 17:39:16 GMT -->
+</html>

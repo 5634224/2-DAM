@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432762/mod_resource/content/3/PSP01_Contenidos_Web/PSP01_Contenidos_Web/34_cambio_de_contexto_en_la_cpu.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 17:34:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.4.- Cambio de contexto en la CPU. | Unidad de trabajo 1 </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="author" content="MEFP" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Unidad de trabajo 1</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Programación multiproceso.</a></li>
+   <li><a href="1_recordando_cmo_programar_en_java_y_el_uso_bsico_del_ide_netbeans.html" class="no-ch">1.- Recordando cómo programar en Java y el uso básico del IDE NetBeans.</a></li>
+   <li><a href="2_introduccin_aplicaciones_ejecutables_y_procesos.html" class="daddy">2.- Introducción: Aplicaciones, Ejecutables y Procesos.</a>
+   <ul class="other-section">
+      <li><a href="21_ejecutables_tipos.html" class="no-ch">2.1.- Ejecutables. Tipos.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_gestin_de_procesos.html" class="current-page-parent daddy">3.- Gestión de procesos.</a>
+   <ul>
+      <li><a href="31_gestin_de_procesos_introduccin.html" class="no-ch">3.1.- Gestión de procesos. Introducción.</a></li>
+      <li><a href="32_estados_de_un_proceso.html" class="no-ch">3.2.- Estados de un Proceso.</a></li>
+      <li><a href="33_planificacin_de_procesos_por_el_sistema_operativo.html" class="daddy">3.3.- Planificación de procesos por el Sistema Operativo.</a>
+      <ul class="other-section">
+         <li><a href="331_planificacin_de_procesos_por_el_sistema_operativo_ii.html" class="no-ch">3.3.1.- Planificación de procesos por el Sistema Operativo (II).</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="34_cambio_de_contexto_en_la_cpu.html" class="active no-ch">3.4.- Cambio de contexto en la CPU.</a></li>
+      <li><a href="35_servicios_hilos.html" class="no-ch">3.5.- Servicios. Hilos.</a></li>
+      <li><a href="36_creacin_de_procesos.html" class="no-ch">3.6.- Creación de procesos.</a></li>
+      <li><a href="37_comandos_para_la_gestin_de_procesos.html" class="no-ch">3.7.- Comandos para la gestión de procesos.</a></li>
+      <li><a href="38_herramientas_grficas_para_la_gestin_de_procesos.html" class="no-ch">3.8.- Herramientas gráficas para la gestión de procesos.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_programacin_concurrente.html" class="daddy">4.- Programación concurrente.</a>
+   <ul class="other-section">
+      <li><a href="41_para_qu_concurrencia.html" class="no-ch">4.1.- ¿Para qué concurrencia?</a></li>
+      <li><a href="42_condiciones_de_competencia.html" class="no-ch">4.2.- Condiciones de competencia.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_comunicacin_entre_procesos.html" class="daddy">5.- Comunicación entre procesos.</a>
+   <ul class="other-section">
+      <li><a href="51_mecanismos_bsicos_de_comunicacin.html" class="no-ch">5.1.- Mecanismos básicos de comunicación.</a></li>
+      <li><a href="52_tipos_de_comunicacin.html" class="no-ch">5.2.- Tipos de comunicación.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_sincronizacin_entre_procesos.html" class="daddy">6.- Sincronización entre procesos.</a>
+   <ul class="other-section">
+      <li><a href="61_regiones_crticas.html" class="daddy">6.1.- Regiones críticas.</a>
+      <ul class="other-section">
+         <li><a href="611_categora_de_proceso_clientesuministrador.html" class="no-ch">6.1.1.- Categoría de proceso cliente-suministrador.</a></li>
+      </ul>
+      </li>
+      <li><a href="62_semforos.html" class="no-ch">6.2.- Semáforos.</a></li>
+      <li><a href="63_monitores.html" class="daddy">6.3.- Monitores.</a>
+      <ul class="other-section">
+         <li><a href="631_monitores_lecturas_y_escrituras_bloqueantes_en_recursos_compartidos.html" class="no-ch">6.3.1.- Monitores: Lecturas y escrituras bloqueantes en recursos compartidos.</a></li>
+      </ul>
+      </li>
+      <li><a href="64_memoria_compartida.html" class="no-ch">6.4.- Memoria compartida.</a></li>
+      <li><a href="65_cola_de_mensajes.html" class="no-ch">6.5.- Cola de mensajes.</a></li>
+   </ul>
+   </li>
+   <li><a href="7_requisitos_seguridad_vivacidad_eficiencia_y_reusabilidad.html" class="daddy">7.- Requisitos: seguridad, vivacidad, eficiencia y reusabilidad.</a>
+   <ul class="other-section">
+      <li><a href="71_arquitecturas_y_patrones_de_diseo.html" class="no-ch">7.1.- Arquitecturas y patrones de diseño.</a></li>
+      <li><a href="72_documentacin.html" class="no-ch">7.2.- Documentación</a></li>
+      <li><a href="73_dificultades_en_la_depuracin.html" class="no-ch">7.3.- Dificultades en la depuración.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_programacin_paralela_y_distribuida.html" class="daddy">8.- Programación paralela y distribuida.</a>
+   <ul class="other-section">
+      <li><a href="81_conceptos_bsicos.html" class="no-ch">8.1.- Conceptos básicos.</a></li>
+      <li><a href="82_tipos_de_paralelismo.html" class="no-ch">8.2.- Tipos de paralelismo.</a></li>
+      <li><a href="83_modelos_de_infraestructura_para_programacin_distribuida.html" class="no-ch">8.3.- Modelos de infraestructura para programación distribuida.</a></li>
+   </ul>
+   </li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="331_planificacin_de_procesos_por_el_sistema_operativo_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_servicios_hilos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.4.- Cambio de contexto en la CPU.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id32">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_casopracticofpd.png)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta32_66" class="block iDevice_content">
+<p>
+Una <span lang="en">CPU</span> ejecuta instrucciones, independientemente del proceso al que pertenezcan. Entonces, ¿cómo consigue unas veces ejecutar las instrucciones de un proceso y luego de otro y otro y otro..., sin que se mezclen los datos de unos con otros?
+</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<a href="../jpg/psp01_cont_r0016_multiplesprocesoscpu.jpg" title="Ampliar imagen."><img alt="Una CPU (una rueda dentada de ejecución) asignada a múltiples aplicaciones con sus correspondientes procesos cargados en memoria. Una gran interrogación que nos hace preguntarnos, ¿cómo se consigue todo funcione sin fallos?" class="imagen_ampliable" height="160" src="../jpg/psp01_cont_r0016_multiplesprocesoscpu_miniatura.jpg" style="width: 184px; height: 160px" title="¿Cómo ejecuta la CPU varios procesos sin que haya errores?" width="184" /></a>
+</div>
+</div>
+<p>
+&nbsp;
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id33">
+<div class="iDevice emphasis0">
+<div id="ta33_73" class="block iDevice_content">
+<p>
+Un <strong>proceso es una unidad de trabajo completa.</strong> El sistema operativo es el encargado de gestionar los procesos en ejecución de forma eficiente, intentando evitar que haya conflictos en el uso que hacen de los distintos recursos del sistema. Para realizar esta tarea de forma correcta, se asocia a cada proceso un conjunto de información (<span lang="en">PCB</span>) y de unos mecanismos de protección (un espacio de direcciones de memoria del que no se puede salir y una prioridad de ejecuión). 
+</p>
+<p>
+Imaginemos que, en nuestro equipo, en un momento determinado, podemos estar escuchando música, editando un documento, al mismo tiempo, chateando con otras personas y navegando en Internet. En este caso, tendremos ejecutándose en el sistema cuatro aplicaciones distintas, que pueden ser: el reproductor multimedia <span title="Nombre de una aplicación, reproductor de archivos multimedia.">VLC</span>, el editor de textos <span lang="en">writer</span> de <span lang="en">OpenOffice</span>, el <span lang="en">Messenger</span> y el navegador <span lang="en">Firefox</span>. Todos ellos, ejecutados sin fallos y cada uno haciendo uso de sus datos.
+</p>
+<p>
+El sistema operativo (el planificador), al realizar el cambio una aplicación a otra, tiene que guardar el estado en el que se encuentra el microprocesador y cargar el estado en el que estaba el microprocesador cuando cortó la ejecución de otro proceso, para continuar con ese. Pero, ¿qué es el <strong>estado de la <span lang="en">CPU</span>?</strong>
+</p>
+<p>
+Una <span lang="en">CPU</span>, además de circuitos encargados de realizar las operaciones con los datos (llamados circuitos operacionales), tiene unas pequeños espacios de memoria (llamados registros), en los que se <strong>almacenan temporalmente la información que, en cada instante, necesita la instrucción que esté procesando la <span lang="en">CPU</span>. El conjunto de registros de la <span lang="en">CPU</span> es su estado.</strong>
+</p>
+<p>
+Entre los registros, destacamos el <strong>Registro Contador de Programa y el puntero a la pila.</strong> 
+</p>
+<ul class="lista_verificacion">
+	<li>El <strong>Contador de Programa</strong>, en cada instante almacena la <strong>dirección de la siguiente instrucción a ejecutar</strong>. Recordemos, que cada instrucción a ejecutar, junto con los datos que necesite, es llevada desde la memoria principal a un registro de la <span lang="en">CPU</span> para que sea procesada; y, el resultado de la ejecución, dependiendo del caso, se vuelve a llevar a memoria (a la dirección que ocupe la correspondiente variable). Pues el Contador de Programa, apunta a la dirección de la siguiente instrucción que habrá que traer de la memoria, cuando se termine de procesar la instrucción en curso. Este Contador de Programa <strong>nos permitirá continuar en cada proceso por la instrucción en dónde lo hubiéramos</strong> dejado todo.</li>
+	<li>El <strong>Puntero a Pila</strong>, en cada instante apunta a la parte superior de la pila del proceso en ejecución. En la pila de cada proceso es donde será almacenado el contexto de la <span lang="en">CPU</span>. Y de donde se recuperará cuando ese proceso vuelva a ejecutarse.</li>
+</ul>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id34">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta34_70" class="block iDevice_content">
+<p>
+La <span lang="en">CPU</span> realiza un <strong>cambio de contexto</strong> cada vez que cambia la ejecución de un proceso a otro distinto. En un cambio de contexto, hay que <strong>guardar el estado actual de la <span lang="en">CPU</span> y restaurar el estado de <span lang="en">CPU</span> del proceso que va a pasar a ejecutar.</strong>
+</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<a href="../jpg/psp01_cont_r0017_cambiocontextocpu.jpg" title="Ampliar imagen."><img alt="Una CPU (una rueda dentada de ejecución) con sus registros internos, que son el estado de la CPU. Esos registros tienen que ir cambiando cuando cambia el proceso en ejecución. Aparecen varias aplicacioens con sus correspondientes procesos y flechas que indican que los registros de la CPU irán intercambiando información con cada cambio de estado." class="imagen_ampliable" height="200" src="../jpg/psp01_cont_r0017_cambiocontextocpu_miniatura.jpg" style="width: 160px; height: 200px" title="Estado de la CPU y su cambio de contexto." width="160" /></a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id35">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-35_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion35_60" class="block question iDevice_content">
+<strong>El estado de la <span lang="en">CPU</span> está formado por todos los registros que la forman y sus circuitos operacionales. Toda esa información es la que hay que almacenar cuando se produce un cambio de contexto. ¿Cierto o falso?</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i35_63" class="sr-av"><a href="#answer-35_63">Opción 1</a></label><input type="radio" name="option35_60" id="i35_63" class="exe-radio-option exe-radio-option-0-2-35_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-35_63"><div id="taans35_63" class="block iDevice_content">
+Falso.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i35_114" class="sr-av"><a href="#answer-35_114">Opción 2</a></label><input type="radio" name="option35_60" id="i35_114" class="exe-radio-option exe-radio-option-1-2-35_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-35_114"><div id="taans35_114" class="block iDevice_content">
+Cierto.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b35_60" class="feedback js-hidden">
+<div id="taf35_63" class=" iDevice_content">
+Así es. Todo es cierto salvo que los circuitos operacionales son circuitos electrónicos físicos y no forman parte del estado de la <span lang="en">CPU</span>, es la parte Hardware que realiza las operaciones.
+
+</div>
+</section>
+<section id="sa1b35_60" class="feedback js-hidden">
+<div id="taf35_114" class=" iDevice_content">
+No es correcto, el estado de la <span lang="en">CPU</span> está formado por la información contenida en sus registros. Los circuitos operacionales es son circuitos electrónicos físicos, que realiza operaciones en la información y devuelven resultados; no se pueden almacenar.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-35_63">Opción correcta</a><span> (<a href="#sa0b35_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-35_114">Incorrecto</a><span> (<a href="#sa1b35_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="331_planificacin_de_procesos_por_el_sistema_operativo_ii.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_servicios_hilos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432762/mod_resource/content/3/PSP01_Contenidos_Web/PSP01_Contenidos_Web/34_cambio_de_contexto_en_la_cpu.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 17:34:41 GMT -->
+</html>
