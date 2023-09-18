@@ -1,0 +1,3 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+14:33:17	153/153	---M--	404	error ('Not%20Found')	text/html	date:Mon,%2018%20Sep%202023%2012:33:11%20GMT	https://ead.murciaeduca.es/robots.txt		(from )
+14:33:17	483/483	U--MC-	303	error ('See%20Other')	text/html	date:Mon,%2018%20Sep%202023%2012:33:12%20GMT	https://ead.murciaeduca.es/pluginfile.php/1433002/mod_resource/content/1/44_verificacin_de_la_instalacin_y_configuracin_de_los_sistemas_operativos_y_de_gestin_de_datos.html	D:/Documentos/Mis%20lugares%20web/SGE01/44_verificacin_de_la_instalacin_y_configuracin_de_los_sistemas_operativos_y_de_gestin_de_datos.html	(from )
