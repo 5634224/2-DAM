@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432045/mod_resource/content/2/9_clases_propiedades_mtodos.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 22:33:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.- Clases, propiedades, métodos. | Unidad 1: Confección de interfaces de usuario </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Ministerio de Educación y Formación Profesional" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-20"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">Unidad 1: Confección de interfaces de usuario</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Confección de interfaces de usuario.</a></li>
+   <li><a href="1_ELABOR.HTM" class="no-ch">1.- Elaboración de interfaces de usuario.</a></li>
+   <li><a href="2_COMPON.HTM" class="daddy">2.- Componentes.</a>
+   <ul class="other-section">
+      <li><a href="21_BIBLI.HTM" class="no-ch">2.1.- Bibliotecas de componentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_HERRAM.HTM" class="daddy">3.- Herramientas para la elaboración de interfaces.</a>
+   <ul class="other-section">
+      <li><a href="31_NETBE.HTM" class="no-ch">3.1.- NetBeans.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_CONTEN.HTM" class="daddy">4.- Contenedores.</a>
+   <ul class="other-section">
+      <li><a href="41_CONTE.HTM" class="no-ch">4.1.- Contenedores secundarios.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_COMPON.HTM" class="daddy">5.- Componentes de la interfaz.</a>
+   <ul class="other-section">
+      <li><a href="51_AADIR.HTM" class="no-ch">5.1.- Añadir y eliminar componentes de la interfaz.</a></li>
+      <li><a href="52_MODIF.HTM" class="no-ch">5.2.- Modificación de propiedades.</a></li>
+      <li><a href="53_AADIR.HTM" class="no-ch">5.3.- Añadir funcionalidad desde NetBeans.</a></li>
+      <li><a href="54_UBICA.HTM" class="no-ch">5.4.- Ubicación y alineamiento de los componentes.</a></li>
+      <li><a href="55_ENLAC.HTM" class="daddy">5.5.- Enlace de componentes a orígenes de datos.</a>
+      <ul class="other-section">
+         <li><a href="551_FORM.HTM" class="no-ch">5.5.1.- Formularios maestro-detalle.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="6_ASOCIA.HTM" class="no-ch">6.- Asociación de acciones a eventos.</a></li>
+   <li><a href="7_DILOGO.HTM" class="daddy">7.- Diálogos modales y no modales.</a>
+   <ul class="other-section">
+      <li><a href="71_DILOG.HTM" class="no-ch">7.1.- Diálogos modales.</a></li>
+      <li><a href="72_DILOG.HTM" class="no-ch">7.2.- Diálogos no modales.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_EDICIN.HTM" class="no-ch">8.- Edición de código generado por herramientas de diseño.</a></li>
+   <li id="active"><a href="9_CLASES.HTM" class="active daddy">9.- Clases, propiedades, métodos.</a>
+   <ul>
+      <li><a href="91_CLASE.HTM" class="no-ch">9.1.- Clases.</a></li>
+      <li><a href="92_PROPI.HTM" class="no-ch">9.2.- Propiedades.</a></li>
+      <li><a href="93_MTODO.HTM" class="no-ch">9.3.- Métodos.</a></li>
+   </ul>
+   </li>
+   <li><a href="10_EVENT.HTM" class="daddy">10.- Eventos, escuchadores.</a>
+   <ul class="other-section">
+      <li><a href="101_ESCU.HTM" class="no-ch">10.1.- Escuchadores.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_I_.HTM" class="no-ch">Anexo I.- Creación de la base de datos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="8_EDICIN.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="91_CLASE.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">9.- Clases, propiedades, métodos.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id66">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_CAS.PNG)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta66_66" class="block iDevice_content">
+<p>El equipo de desarrollo de BK Programación, para poder dar funcionalidad a la aplicación de Gestión Hotelera, aparte de conocer los componentes que se pueden incorporar en una <span lang="en">interfaz</span> gráfica de usuario, necesitan conocer las clases, propiedades y métodos de <span lang="en">Java</span>, para que la aplicación tenga la mayor funcionalidad posible y se adapte a las necesidades del cliente.</p>
+<figure class="exe-figure exe-image position-center license-custom" style="width: 192px;"><img src="../JPG/DI01_-15.JPG" alt="Imagen donde se puede apreciar a una mujer realizando una exposición con ayuda de un proyector. La mujer está mostrando algo con la mano mientras parece dirigirse a otras personas." title="Exposición." class="elemento_centrado" width="192" height="108" style="width: 192px; height: 108px; vertical-align: middle;" />
+<figcaption class="figcaption"><span class="author">Ministerio de Educación y Formación Profesional.</span> <span class="license"><span class="sep">(</span><span class="custom-license">Elaboración propia</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p><br /><br /></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id67">
+<div class="iDevice emphasis0">
+<div id="ta67_73" class="block iDevice_content">
+<p>Para la implementación de Interfaces Gráficas de Usuario en <span lang="en">Java, </span><span lang="en"><span lang="en">JavaSof</span>t</span> ha creado un conjunto de clases que son agradables desde el punto de vista visual y fáciles de utilizar para el programador. Esta colección de clases son las <span lang="en">Java Foundation Classes</span> (<acronym lang="en" title="Java Foundation Classes.">JFC</acronym>), que en la plataforma <span lang="en">Java</span> 2 están constituidas por cinco grupos de clases: <span lang="en">AWT</span>, <span lang="en">Java</span> 2D, accesibilidad, arrastrar y soltar y <span lang="en">swing</span>.</p>
+<ul class="lista_verificacion">
+<li><span lang="en">AWT</span>. Bibliotecas de clases <span lang="en">Java</span> para el desarrollo de <span lang="en">Interfaces</span> gráficas de usuario.</li>
+<li><span lang="en">Java</span> 2D. Es un conjunto de clases gráficas baja licencia <acronym lang="en" title="International Business Machines.">IBM</acronym>/<span lang="en">Taligent</span>.</li>
+<li>Accesibilidad, proporciona clases para facilitar el uso de ordenadores y tecnología informática a personas con deficiencias visuales como lupas de pantallas, etc.</li>
+<li>Arrastrar y soltar (<span lang="en">Drag and Drop</span>), son clases en la que se soporta los JavaBeans<span lang="en"></span>.</li>
+<li><span lang="en">Swing</span>. Es la parte más importante para el desarrollo de aplicaciones de interfaz gráfica. <span lang="en">Swing</span> proporciona un conjunto de componentes muy bien descritos y especificados, de forma que su presentación visual es independiente de la plataforma donde se ejecuta la aplicación que utilice sus clases. <span lang="en">Swing</span> extiende <span lang="en">AWT</span> añadiendo un conjunto de componentes, <code>JComponents</code>, y sus clases de soporte.</li>
+</ul>
+<p>Actualmente, <span lang="en">swing</span> ha desplazado a <span lang="en">AWT</span> debido a que los componentes de <span lang="en">swing</span>, al estar escritos en <span lang="en">Java</span>, ofrecen mayor funcionalidad, e independiente de la plataforma.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id68">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-68_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion68_60" class="block question iDevice_content">
+<strong>Si se diseña una <span lang="en">interfaz</span> gráfica con un Entorno Integrado de Desarrollo, solo se pueden cambiar los valores de las propiedades de un componente desde la ventana de propiedades.</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i68_63" class="sr-av"><a href="#answer-68_63">Opción 1</a></label><input type="radio" name="option68_60" id="i68_63" class="exe-radio-option exe-radio-option-0-2-68_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-68_63"><div id="taans68_63" class="block iDevice_content">
+Verdadero.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i68_156" class="sr-av"><a href="#answer-68_156">Opción 2</a></label><input type="radio" name="option68_60" id="i68_156" class="exe-radio-option exe-radio-option-1-2-68_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-68_156"><div id="taans68_156" class="block iDevice_content">
+Falso.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b68_60" class="feedback js-hidden">
+<div id="taf68_63" class=" iDevice_content">
+Incorrecto. Desde el propio IDE se puede acceder al código fuente de la aplicación y modificar el código que sea necesario.
+
+</div>
+</section>
+<section id="sa1b68_60" class="feedback js-hidden">
+<div id="taf68_156" class=" iDevice_content">
+El IDE solo nos ayuda escribiendo el código fuente de la aplicación gráfica por nosotros, pero ese código es accesible para su modificación.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-68_63">Incorrecto</a><span> (<a href="#sa0b68_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-68_156">Opción correcta</a><span> (<a href="#sa1b68_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="8_EDICIN.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="91_CLASE.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432045/mod_resource/content/2/9_clases_propiedades_mtodos.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Sep 2023 22:33:38 GMT -->
+</html>

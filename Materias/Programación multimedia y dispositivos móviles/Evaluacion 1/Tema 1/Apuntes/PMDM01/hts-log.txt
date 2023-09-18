@@ -1,0 +1,39 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 19 Sep 2023 01:09:51 at https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwr3%e0C2%P%s%uN4L0%I0p7c8T6R2H3%kf2A250000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "es, en, *" https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/index.html -O1 "D:\Documentos\Mis lugares web\PMDM001" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+01:11:17	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_JuanyMaria.jpg
+01:11:18	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R02_Ipad_Negro_Cerca_De_Macbook_Sobre_Textil_Marron_pexels-pixabay-163163.jpg
+01:12:01	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/icon_parasabermasfpd.png
+01:12:01	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R03_PDA.jpg
+01:12:02	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R04_Dispositivos.jpg
+01:12:03	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R08_Dispositivos_Smartphone.jpg
+01:12:04	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R11_Android_logo_2019.png
+01:12:04	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R08_Dispositivos_Smartphone.1.jpg
+01:12:04	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R06_Android.jpg
+01:12:05	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_JuanMariayAda.jpg
+01:12:05	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R05_PantallaTelefono.jpg
+01:12:06	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R07_DispositivoPDA.gif
+01:12:07	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R13_WindowsPhone.jpg
+01:12:07	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_MariaJuanyAda.jpg
+01:12:08	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R14_ObjectiveC.jpg
+01:12:09	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R14b_Java.1.png
+01:12:09	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R16_AppAndroid.jpg
+01:12:10	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R17_Android_Stack.png
+01:12:10	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/icon_debesconocerfpd.png
+01:12:11	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/popup_bg.gif
+01:12:11	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R14b_Java.png
+01:12:12	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R15_AndroidStudio.jpg
+01:12:13	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_CONT_R18_MV.jpg
+01:12:41	Warning: 	HTML file (1500 bytes) retransferred due to lack of cache: https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/PMDM01_LimitacionesDispositivosMoviles.html
+01:12:41	Warning: 	Retry after error -2 (Receive Time Out) at link https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/lupa.png (from https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/content.css)
+01:12:41	Error: 	"Not Found" (404) at link https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/xspf_player.swf?song_url= (from https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/common.js)
+01:12:41	Error: 	"Not Found" (404) at link https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/exe_media.js (from https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/common.js)
+01:12:41	Error: 	"Not Found" (404) at link https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/exe_media.css (from https://ead.murciaeduca.es/pluginfile.php/1432372/mod_resource/content/8/DAM_PMDM01_Contenidos/common.js)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 51 seconds : 112 links scanned, 131 files written (5815607 bytes overall), 81 files updated [4166871 bytes received at 24367 bytes/sec], 141491 bytes transferred using HTTP compression in 2 files, ratio 23%, 2.2 requests per connection
+(3 errors, 25 warnings, 0 messages)
