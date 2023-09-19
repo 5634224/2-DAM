@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432373/mod_resource/content/1/DAM_PMDM02_Contenidos/32_modelo_de_estados_de_una_aplicacin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Sep 2023 10:37:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="EXE_LIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="EXE_EFFE.CSS" />
+<link rel="stylesheet" type="text/css" href="EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.2.- Modelo de estados de una aplicación. | PMDM02 - DAM - Programación Multimedia y Dispositivos Móviles - UT02.- Entorno de trabajo. Instalación y primer programa con Android Studio. Contenidos. </title>
+<link rel="shortcut icon" href="FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="EXE_JQUE.JS"></script>
+<script type="text/javascript" src="EXE_LIGH.JS"></script>
+<script type="text/javascript" src="EXE_EFFE.JS"></script>
+<script type="text/javascript" src="EXE_HIGH.JS"></script>
+<script type="text/javascript" src="COMMON_I.JS"></script>
+<script type="text/javascript" src="COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM02 - DAM - Programación Multimedia y Dispositivos Móviles - UT02.- Entorno de trabajo. Instalación y primer programa con Android Studio. Contenidos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Entorno de trabajo. Instalación y primer programa con Android Studio.</a></li>
+   <li><a href="1_MDULOS.HTM" class="no-ch">1.- Módulos para el desarrollo de aplicaciones. Instalación de Android Studio</a></li>
+   <li><a href="2_INTEGR.HTM" class="daddy">2.- Integración en el entorno de desarrollo.</a>
+   <ul class="other-section">
+      <li><a href="21_CREAC.HTM" class="no-ch">2.1.- Creación de un proyecto.</a></li>
+      <li><a href="22_ESCRI.HTM" class="daddy">2.2.- Escritura de código.</a>
+      <ul class="other-section">
+         <li><a href="221_MAIN.HTM" class="no-ch">2.2.1.- MainActivity.</a></li>
+         <li><a href="222_ACTI.HTM" class="no-ch">2.2.2.- activity_main.xml.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_COMPI.HTM" class="no-ch">2.3.- Compilación.</a></li>
+      <li><a href="24_EMULA.HTM" class="no-ch">2.4.- Emuladores.</a></li>
+      <li><a href="25_INSTA.HTM" class="no-ch">2.5.- Instalación y ejecución en un dispositivo real.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_GESTIN.HTM" class="current-page-parent daddy">3.- Gestión del entorno de ejecución.</a>
+   <ul>
+      <li><a href="31_EL_CI.HTM" class="no-ch">3.1.- El ciclo de vida y el administrador de aplicaciones.</a></li>
+      <li id="active"><a href="32_MODEL.HTM" class="active no-ch">3.2.- Modelo de estados de una aplicación.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="31_EL_CI.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.2.- Modelo de estados de una aplicación.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id23">
+<div class="iDevice emphasis0">
+<div id="ta23_154" class="block iDevice_content">
+<p>De manera similar a como el planificador de procesos (<span lang="en">scheduler</span>) en sistemas operativos se encarga de gestionar el estado de los procesos (programas en ejecución), el Administrador de Aplicaciones es también el encargado de gestionar los estados de una aplicación durante su ejecución.</p>
+<p>Cuando una aplicación se pone en ejecución es cargada en la memoria del dispositivo mediante un <strong>proceso</strong>, <strong>entrando en funcionamiento una <span lang="en">activity</span></strong>. Es una diferencia con respecto a otros paradigmas que cargan la aplicación mediante el método <strong><em></em></strong><span lang="en"><strong><em>main()</em></strong></span>. El ciclo de vida de cualquier <span lang="en">activity</span> dependerá de cómo esté relacionado con otras actividades, con sus tareas y con la pila de actividades que tenga la aplicación.</p>
+<p>Según <a href="https://developer.android.com/guide/components/activities/activity-lifecycle#asem" target="_blank" title="Abir página web de developer.android.com que habla sobre el ciclo de vida de las apps (se abre en una nueva ventana)." rel="noopener">Android Developer<sub><img style="vertical-align: bottom;" src="ICO_NV.JPG" alt="" width="16" height="14" /></sub></a>, los usuarios cambian el estado de los procesos de las apps según interactúan con ellas. Los cambios en el estado del proceso van a cambiar el estado de la activity que se está ejecutando. Básicamente estarán en tres estados:</p>
+<ul class="lista_verificacion">
+<li style="margin-bottom: 7px;"><strong>Reanudada</strong>: La actividad se encuentra en el primer plano de la pantalla y tiene la atención del usuario. (A veces, este estado también se denomina "en ejecución").</li>
+<li style="margin-bottom: 7px;"><strong>Pausada</strong>: Otra actividad se encuentra en el primer plano y tiene la atención del usuario, pero esta todavía está visible. Es decir, otra actividad está visible por encima de esta y esa actividad es parcialmente transparente o no cubre toda la pantalla. Una actividad pausada está completamente "viva" (el objeto Activity se conserva en la memoria, mantiene toda la información de estado y miembro y continúa anexado al administrador de ventanas), pero el sistema puede eliminarla en situaciones en que la memoria sea extremadamente baja.</li>
+<li style="margin-bottom: 7px;"><strong>Detenida</strong>: La actividad está completamente opacada por otra actividad (ahora la actividad se encuentra en "segundo plano"). Una actividad detenida también permanece "viva" (el objeto <a href="https://developer.android.com/reference/android/app/Activity.html?hl=es-419" target="_blank" title="Acceder a la página de referencia de la clase Activity en Developer.android.com (se abre en una nueva ventana)" rel="noopener">Activity<sub><img style="vertical-align: bottom;" src="ICO_NV.JPG" alt="" width="16" height="14" /></sub></a> se conserva en memoria, mantiene toda la información de estado y miembro, pero no está anexado al administrador de ventanas). Sin embargo, ya no está visible para el usuario y el sistema puede eliminarla cuando necesite memoria en alguna otra parte.</li>
+</ul>
+<p>Si se pausa o se detiene una actividad, el sistema puede excluirla de la memoria al solicitarle que se cierre (llamando a su método <strong><em></em></strong><span lang="en"><strong><em>finish()</em></strong></span>), o simplemente eliminando su proceso. Cuando se vuelve a abrir la actividad (después de haber sido eliminada o destruida), es necesario crearla nuevamente.</p>
+<p>Cuando una actividad entra y sale de los diferentes estados que se describieron más arriba, esto se notifica a través de diferentes métodos llamados <strong></strong><span lang="en"><strong>callback</strong></span>. Todos los métodos <span lang="en">callback</span> son enlaces que puedes invalidar para realizar las tareas correspondientes cuando cambia el estado de la actividad. La siguiente actividad de ejemplo incluye todos los métodos fundamentales del ciclo de vida.</p>
+<p><span class=" resaltado_inline">NOTA: La implementación que realices de estos métodos del ciclo de vida siempre debe llamar a la implementación de la superclase antes de realizar cualquier otra tarea, como se muestra en los ejemplos.</span></p>
+<div class="exe-fx exe-accordion">
+<h2>Ejemplo</h2>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class ExampleActivity extends Activity {
+
+    @Override
+
+    public void <a href="https://developer.android.com/reference/android/app/Activity.html?hl=es-419#onCreate(android.os.Bundle)" target="_blank" title="Acceder a definición del método en developer.android (se abre en ventana nueva)" rel="noopener">onCreate</a>(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+
+        // The activity is being created.
+
+    }
+
+    @Override
+
+    protected void <a href="https://developer.android.com/reference/android/app/Activity.html?hl=es-419#onStart()" target="_blank" title="Acceder a definición del método en developer.android (se abre en ventana nueva)" rel="noopener">onStart</a>() {
+
+        super.onStart();
+
+        // The activity is about to become visible.
+
+    }
+
+    @Override
+
+    protected void <a href="https://developer.android.com/reference/android/app/Activity.html?hl=es-419#onResume()" target="_blank" title="Acceder a definición del método en developer.android (se abre en ventana nueva)" rel="noopener">onResume</a>() {
+
+        super.onResume();
+
+        // The activity has become visible (it is now "resumed").
+
+    }
+
+    @Override
+
+    protected void <a href="https://developer.android.com/reference/android/app/Activity.html?hl=es-419#onPause()" target="_blank" title="Acceder a definición del método en developer.android (se abre en ventana nueva)" rel="noopener">onPause</a>() {
+
+        super.onPause();
+
+        // Another activity is taking focus (this activity is about to be "paused").
+
+    }
+
+    @Override
+
+    protected void <a href="https://developer.android.com/reference/android/app/Activity.html?hl=es-419#onStop()" target="_blank" title="Acceder a definición del método en developer.android (se abre en ventana nueva)" rel="noopener">onStop</a>() {
+
+        super.onStop();
+
+        // The activity is no longer visible (it is now "stopped")
+
+    }
+
+    @Override
+
+    protected void <a href="https://developer.android.com/reference/android/app/Activity.html?hl=es-419#onDestroy()" target="_blank" title="Acceder a definición del método en developer.android (se abre en ventana nueva)" rel="noopener">onDestroy</a>() {
+
+        super.onDestroy();
+
+        // The activity is about to be destroyed.
+
+    }
+
+}</code></pre>
+</div>
+</div>
+</div>
+<p></p>
+<h3>Los 3 bucles del ciclo de vida de un activity</h3>
+<p>En conjunto, estos métodos anteriores definen el ciclo de vida completo de una actividad. Al implementar estos métodos, puedes monitorear los tres bucles anidados en el ciclo de vida de la actividad que puedes ver representados en la ilustración así como el camino que debe tomar una actividad entre estados. Los rectángulos representan los métodos callback que puedes implementar para realizar operaciones cuando la actividad cambie de estado.</p>
+<figure class="exe-figure exe-image float-right license-custom" style="width: 194px;"><a href="PMDM02_C.PNG" rel="lightbox noopener" title="Ampliar imagen"><img src="PMDM02_C.PNG" alt="Ilustración que muestra el ciclo de vida con sus estados por los que pasa un Activity en Android" title="ciclo de vida de activity en Android" class="imagen_ampliable" width="154" height="200" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/guide/platform?" target="_blank" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana)." class="author" rel="noopener">Google Developers</a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+<ul class="lista_verificacion">
+<li style="margin-bottom: 7px;">El ciclo de vida <strong>completo</strong> de una actividad transcurre entre la llamada a <strong><span lang="en">onCreate</span></strong>() y la llamada a <strong><span lang="en">onDestroy</span></strong>(). Tu actividad debe configurar el estado "global" (como la definición del diseño) en <span lang="en">onCreate</span>(), y liberar todos los recursos restantes en <span lang="en">onDestroy</span>(). Por ejemplo, si hay un subproceso de descarga de datos de la red en ejecución en segundo plano en tu actividad, esta podría crear ese subproceso en <span lang="en">onCreate</span>() y luego detenerlo en <span lang="en">onDestroy</span>().</li>
+<li style="margin-bottom: 7px;">El ciclo de vida <strong>visible</strong> de una actividad transcurre entre la llamada a <strong></strong><span lang="en"><strong>onStart</strong></span>() y la llamada a <strong></strong><span lang="en"><strong>onStop</strong></span>(). Durante ese tiempo, el usuario puede ver la actividad en pantalla e interactuar con ella. Por ejemplo, se llama a <span lang="en">onStop</span>() cuando se inicia una nueva actividad y esta ya no está visible. Entre estos dos métodos, puedes conservar los recursos necesarios para mostrarle la actividad al usuario más tarde. El sistema podría llamar a <span lang="en">onStart</span>() y <span lang="en">onStop</span>() muchas veces durante el ciclo de vida completo de la actividad, ya que la actividad pasa de ser visible y a estar oculta para el usuario. No uses estos métodos para hacer acciones que sólo se realizar una vez.</li>
+<li style="margin-bottom: 7px;">El ciclo de vida <strong>en primer plano</strong> de una actividad transcurre entre la llamada a <strong><span lang="en">onResume</span></strong>() y la llamada a <strong></strong><span lang="en"><strong>onPause</strong></span>(). Durante ese tiempo, la actividad se encuentra al frente de todas las demás actividades en la pantalla y tiene el foco en la interacción del usuario. Con frecuencia, una actividad puede entrar y salir de primer plano, por ejemplo, se llama a <span lang="en">onPause</span>() cuando el dispositivo entre en suspensión o cuando aparece un diálogo. Dado que este estado puede cambiar con frecuencia, el código en estos métodos debe ser bastante liviano para evitar las transiciones lentas que hacen que el usuario deba esperar.</li>
+</ul>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="31_EL_CI.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432373/mod_resource/content/1/DAM_PMDM02_Contenidos/32_modelo_de_estados_de_una_aplicacin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Sep 2023 10:37:12 GMT -->
+</html>

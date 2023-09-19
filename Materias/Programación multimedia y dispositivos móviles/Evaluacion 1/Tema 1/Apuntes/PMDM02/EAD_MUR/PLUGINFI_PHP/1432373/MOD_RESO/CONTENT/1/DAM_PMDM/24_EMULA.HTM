@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432373/mod_resource/content/1/DAM_PMDM02_Contenidos/24_emuladores.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Sep 2023 10:37:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="EXE_LIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.4.- Emuladores. | PMDM02 - DAM - Programación Multimedia y Dispositivos Móviles - UT02.- Entorno de trabajo. Instalación y primer programa con Android Studio. Contenidos. </title>
+<link rel="shortcut icon" href="FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="EXE_JQUE.JS"></script>
+<script type="text/javascript" src="EXE_LIGH.JS"></script>
+<script type="text/javascript" src="COMMON_I.JS"></script>
+<script type="text/javascript" src="COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-15"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM02 - DAM - Programación Multimedia y Dispositivos Móviles - UT02.- Entorno de trabajo. Instalación y primer programa con Android Studio. Contenidos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Entorno de trabajo. Instalación y primer programa con Android Studio.</a></li>
+   <li><a href="1_MDULOS.HTM" class="no-ch">1.- Módulos para el desarrollo de aplicaciones. Instalación de Android Studio</a></li>
+   <li class="current-page-parent"><a href="2_INTEGR.HTM" class="current-page-parent daddy">2.- Integración en el entorno de desarrollo.</a>
+   <ul>
+      <li><a href="21_CREAC.HTM" class="no-ch">2.1.- Creación de un proyecto.</a></li>
+      <li><a href="22_ESCRI.HTM" class="daddy">2.2.- Escritura de código.</a>
+      <ul class="other-section">
+         <li><a href="221_MAIN.HTM" class="no-ch">2.2.1.- MainActivity.</a></li>
+         <li><a href="222_ACTI.HTM" class="no-ch">2.2.2.- activity_main.xml.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_COMPI.HTM" class="no-ch">2.3.- Compilación.</a></li>
+      <li id="active"><a href="24_EMULA.HTM" class="active no-ch">2.4.- Emuladores.</a></li>
+      <li><a href="25_INSTA.HTM" class="no-ch">2.5.- Instalación y ejecución en un dispositivo real.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_GESTIN.HTM" class="daddy">3.- Gestión del entorno de ejecución.</a>
+   <ul class="other-section">
+      <li><a href="31_EL_CI.HTM" class="no-ch">3.1.- El ciclo de vida y el administrador de aplicaciones.</a></li>
+      <li><a href="32_MODEL.HTM" class="no-ch">3.2.- Modelo de estados de una aplicación.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="23_COMPI.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="25_INSTA.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.4.- Emuladores.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id41">
+<div class="iDevice emphasis0">
+<div id="ta41_154" class="block iDevice_content">
+<p>Normalmente los entornos de desarrollo integrados suelen incorporar uno o varios emuladores que te servirán para poder probar las aplicaciones antes de instalarlas en el dispositivo para el cual se han programado. Así podrás observar si la aplicación funciona correctamente y si tiene más o menos el aspecto que tenías pensado. Hay que tener en cuenta que los emuladores no siempre van coincidir en aspecto (y a veces incluso en funcionalidad) con el dispositivo real y podrás encontrar abundantes diferencias dependiendo de diversos factores como por ejemplo el tipo de dispositivo que se emule. No es lo mismo emular un teléfono con <strong>Windows Phone</strong>, que un <strong>iPhone</strong> o un <strong>iPad</strong>, o un teléfono con <strong>Android</strong>, o un dispositivo móvil con <strong>Java ME</strong>.</p>
+<p>Independientemente de la plataforma para la que vayas a desarrollar las aplicaciones (<strong>Android, iOS, Java ME,</strong> etc.) es importante que el entorno que elijas disponga de emuladores pues es lo que utilizarás la mayor parte del tiempo. Gran parte del proceso de depuración se realizará con el emulador, podremos ejecutar las instrucciones paso a paso, establecer puntos de ruptura (<span lang="en">breakpoints</span>), observar el contenido de variables, etc. Además en muchos casos es posible que no tengas a tu disposición en ese momento el dispositivo concreto para el que deseas programar de manera que necesitarás el emulador.</p>
+<figure class="exe-figure exe-image float-right license-custom" style="width: 240px;"><a href="PMDM0-16.JPG" target="_blank" title="Ampliar imagen" rel="lightbox noopener"><img src="PMDM0-16.JPG" alt="Ilustración que muestra la pantalla con el AVD Manager en Android Studio" title="Android Studio AVD Manager" class="imagen_ampliable" width="200" height="108" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana)." class="author" rel="noopener">Google Developers</a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>En principio trataremos de trabajar con la aplicación de emulación proporcionada por Android (<abbr title="(Android Virtual Device) Dispositivo Virtual Android"></abbr><strong><span title="(Android Virtual Device) Dispositivo Virtual Android" lang="en"><abbr title="(Android Virtual Device) Dispositivo Virtual Android">AVD</abbr></span></strong>), pero es posible utilizar otras aplicaciones gratuitas o de pago que consiguen emulaciones tan buenas o incluso más rápidas que la AVD. Éstas, normalmente se valen del uso de máquinas virtuales para poder funcionar.</p>
+<p>Hay que tener en cuenta que si decidimos cambiar el tipo de emulador utilizado, la salida podrá ser ligeramente diferente en cuanto al aspecto estético del dispositivo emulado.</p>
+<p>Si deseamos usar <a href="https://developer.android.com/studio/run/emulator.html?hl=es-419" target="_blank" title="Acceder a la página web de developer.android sobre el emulador de Android (se abre en una nueva ventana)" rel="noopener">Android Emulator<sub><img style="vertical-align: bottom;" src="ICO_NV.JPG" alt="" width="16" height="14" /></sub></a> para ejecutar nuestra app, debes preparar un <strong><span lang="en">Android Virtual Device</span></strong> (<strong>AVD</strong>). Si todavía no lo hemos creado, cuando hagamos clic en Run, aparecerá un error ya que la app no encuentra un dispositivo sobre el que ejecutarse. Para solventar el problema debemos abrir <em><strong><span lang="en">Tools &gt; Device Manager</span></strong></em> desde donde podremos elegir <span lang="en"><em></em></span><em><strong><span lang="en"><span lang="en">Create Device</span></span></strong></em>. Seguiremos las instrucciones del asistente <em></em><strong><span lang="en"><em><span lang="en">Virtual Device Configuratio</span>n</em></span></strong> para definir el tipo de dispositivo que deseas emular, seleccionando la categoría (teléfono, TV, Wear, tablet o Automotive), el modelo y la imagen del sistema (a descargar).</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id42">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta42_128" class="block iDevice_content">
+<p>Para obtener más información, consulta <a href="https://developer.android.com/studio/run/managing-avds.html?hl=es-419" target="_blank" title="Acceder a la página de developer.android.com con información de adminsitración de dispositivos Android virtuales (se abre en una nueva ventana)" rel="noopener">Creación y administración de dispositivos virtuales<sub><img style="vertical-align: bottom;" src="ICO_NV.JPG" alt="" width="16" height="14" /></sub></a>.</p>
+<p>También puedes conseguir más información sobre otros <a href="https://www.xataka.com/basics/mejores-emuladores-android-para-pc" target="_blank" title="Acceder a la página web con la lista de emuladores de android en xataca.com (se abre en una nueva ventana)" rel="noopener">emuladores de Android<sub><img style="vertical-align: bottom;" src="ICO_NV.JPG" alt="" width="16" height="14" /></sub></a>, algunos orientados sólo para los juegos, pero otros, como <strong>Genymotion</strong> orientados al desarrollo de apps.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="23_COMPI.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="25_INSTA.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432373/mod_resource/content/1/DAM_PMDM02_Contenidos/24_emuladores.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Sep 2023 10:37:08 GMT -->
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432373/mod_resource/content/1/DAM_PMDM02_Contenidos/21_creacin_de_un_proyecto.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Sep 2023 10:36:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="EXE_LIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="EXE_EFFE.CSS" />
+<link rel="stylesheet" type="text/css" href="CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.- Creación de un proyecto. | PMDM02 - DAM - Programación Multimedia y Dispositivos Móviles - UT02.- Entorno de trabajo. Instalación y primer programa con Android Studio. Contenidos. </title>
+<link rel="shortcut icon" href="FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="EXE_JQUE.JS"></script>
+<script type="text/javascript" src="EXE_LIGH.JS"></script>
+<script type="text/javascript" src="EXE_EFFE.JS"></script>
+<script type="text/javascript" src="COMMON_I.JS"></script>
+<script type="text/javascript" src="COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM02 - DAM - Programación Multimedia y Dispositivos Móviles - UT02.- Entorno de trabajo. Instalación y primer programa con Android Studio. Contenidos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Entorno de trabajo. Instalación y primer programa con Android Studio.</a></li>
+   <li><a href="1_MDULOS.HTM" class="no-ch">1.- Módulos para el desarrollo de aplicaciones. Instalación de Android Studio</a></li>
+   <li class="current-page-parent"><a href="2_INTEGR.HTM" class="current-page-parent daddy">2.- Integración en el entorno de desarrollo.</a>
+   <ul>
+      <li id="active"><a href="21_CREAC.HTM" class="active no-ch">2.1.- Creación de un proyecto.</a></li>
+      <li><a href="22_ESCRI.HTM" class="daddy">2.2.- Escritura de código.</a>
+      <ul class="other-section">
+         <li><a href="221_MAIN.HTM" class="no-ch">2.2.1.- MainActivity.</a></li>
+         <li><a href="222_ACTI.HTM" class="no-ch">2.2.2.- activity_main.xml.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_COMPI.HTM" class="no-ch">2.3.- Compilación.</a></li>
+      <li><a href="24_EMULA.HTM" class="no-ch">2.4.- Emuladores.</a></li>
+      <li><a href="25_INSTA.HTM" class="no-ch">2.5.- Instalación y ejecución en un dispositivo real.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_GESTIN.HTM" class="daddy">3.- Gestión del entorno de ejecución.</a>
+   <ul class="other-section">
+      <li><a href="31_EL_CI.HTM" class="no-ch">3.1.- El ciclo de vida y el administrador de aplicaciones.</a></li>
+      <li><a href="32_MODEL.HTM" class="no-ch">3.2.- Modelo de estados de una aplicación.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="2_INTEGR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_ESCRI.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1.- Creación de un proyecto.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id13">
+<div class="iDevice emphasis0">
+<div id="ta13_154" class="block iDevice_content">
+<p>Para describir este apartado, usaremos la referencia proporcionada desde esta página de <a href="https://developer.android.com/studio/projects/create-project.html" target="_blank" title="Acceder a página web de Creación de un proyecto de developer.android.com (se abre en una nueva ventana)" rel="noopener">Creación de proyectos de developer.android.com<sub><img style="vertical-align: bottom;" src="ICO_NV.JPG" alt="" width="16" height="14" /></sub></a>.</p>
+<p>Un proyecto de <strong>Android Studio</strong> contiene uno o más módulos que mantienen tu código organizado en unidades de funcionalidad discretas. Veremos la manera de iniciar un proyecto nuevo o importar uno existente.</p>
+<p><strong>Android Studio</strong> facilita la creación de apps de Android para varios factores de forma, como teléfonos y <span lang="en">tablets</span>, <span lang="en"></span><strong><abbr title="Se refiere a dispositivos corporales (wearables) como relojes inteligentes (smartwatches), pulseras inteligentes (smartbands), etc. Google desarrolló Wear OS, el sistema operativo para dispositivos corporales (wearables) basado en Android."><span title="Se refiere a dispositivos corporales (wearables) como relojes inteligentes (smartwatches), pulseras inteligentes (smartbands), etc. Google desarrolló Wear OS, el sistema operativo para dispositivos corporales (wearables) basado en Android." lang="en">Wear OS</span></abbr></strong> , Android TV y <strong><abbr title="Android Automotive (Automóvil con Android) es una adaptación del sistema operativo de teléfonos inteligentes Android de Google, diseñado para su uso en paneles de vehículos."><span title="Android Automotive (Automóvil con Android) es una adaptación del sistema operativo de teléfonos inteligentes Android de Google, diseñado para su uso en paneles de vehículos." lang="en">Android Automotive</span></abbr></strong>. El asistente <strong></strong><span lang="en"><strong></strong></span><span lang="en"><span lang="en"><strong>New Project</strong></span></span> te permite elegir los formatos para tu app y completar la estructura del proyecto con todo lo que necesitas para comenzar. Revisa y sigue los siguientes pasos para crear un proyecto nuevo.</p>
+<div class="exe-fx exe-accordion">
+<h2>Paso 1: Nuevo Proyecto</h2>
+<figure class="exe-figure exe-image float-left license-custom" style="width: 200px;"><a href="PMDM02-4.JPG" rel="lightbox" title="Ampliar imagen"><img src="PMDM02-4.JPG" alt="Ilustración que muestra la pantalla de bienvenida de Android Studio" title="Welcome Android Studio" class="imagen_ampliable" style="margin-bottom: 0px; margin-top: 0px;" width="200" vspace="0" height="158" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana)." class="author" rel="noopener">Google Developers </a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo <abbr title="No comercial">nc</abbr></span><span class="sep">)</span></span></figcaption>
+</figure>
+<br />
+<p>Si no tienes un proyecto abierto, Android Studio te muestra la pantalla de bienvenida. Para crear un proyecto nuevo, haz clic en <span></span><strong></strong><span lang="en"><strong>New Project</strong></span>.</p>
+<p>Si tienes un proyecto abierto, Android Studio muestra el entorno de desarrollo. Para crear un proyecto nuevo, haz clic en <em><strong></strong></em><span lang="en"><em><strong>File &gt; New &gt; New Project</strong></em></span>.</p>
+<h2>Paso 2: Agregar una actividad</h2>
+<p>En la siguiente pantalla, puedes seleccionar un tipo de proyecto. Escogeremos <em></em><strong><span lang="en"><em>Phone</em></span> </strong>and <strong><em></em></strong><span lang="en"><strong><em>Tablet</em> </strong></span>con una actividad vacía (<em><strong><span lang="en">Empty Activity</span></strong></em>)</p>
+<figure class="exe-figure exe-image position-center license-custom" style="width: 240px;"><a href="PMDM02-5.JPG" rel="lightbox" title="Ampliar imagen"><img src="PMDM02-5.JPG" alt="Ilustración que muestra la pantalla de Nuevo proyecto de Android Studio" title="New Project Android Studio" class="imagen_ampliable" width="200" height="152" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana)." class="author" rel="noopener">Google Developers</a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+<h2>Paso 3: Configuración del proyecto</h2>
+<p>Introduce los siguientes datos de configuración del nuevo proyecto que estás creando:</p>
+<figure class="exe-figure exe-image float-right license-custom" style="width: 240px;"><a href="PMDM02-6.JPG" rel="lightbox" title="Ampliar imagen"><img src="PMDM02-6.JPG" alt="Ilustración que muestra la pantalla de configuración inicial del proyecto de Android" title="Setup Android Studio project" class="imagen_ampliable" width="200" height="152" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana)." class="author" rel="noopener">Google Developers</a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+<ul class="lista_verificacion">
+<li style="margin-bottom: 7px;">Nombre de la aplicación: Hola mundo</li>
+<li style="margin-bottom: 7px;">Nombre del paquete: com.miempresa.holamundo</li>
+<li style="margin-bottom: 7px;">Ubicación para guardar el proyecto: por defecto o la que elijas</li>
+<li style="margin-bottom: 7px;">Lenguage: Java</li>
+<li style="margin-bottom: 7px;">Nivel API mínimo: escoge aquel que permita que nuestra app se ejecute en valores cercanos el 100% de los dispositivos</li>
+<li style="margin-bottom: 7px;">No marcar la opción Use Legacy android.support libraries</li>
+</ul>
+<p>Pulsar el botón <strong><em>Finalizar</em></strong>.</p>
+<p>A continuación debe aparecer el nuevo proyecto abierto en la ventana de Android Studio.</p>
+<h2>Paso 4: Seleccionar factores de forma y el nivel de API</h2>
+<p>Este paso no lo realizaremos ahora pero lo comentamos para verlo más adelante en el curso.</p>
+<figure class="exe-figure exe-image float-left license-custom" style="width: 240px;"><a href="PMDM02-7.JPG" rel="lightbox" title="Ampliar imagen"><img src="PMDM02-7.JPG" alt="Ilustración que muestra la distribución de las versiones Android en tanto porciento y la API que debemos elegir." title="Distribución de versiones Android y su API" class="imagen_ampliable" style="margin-bottom: 0px; margin-top: 0px;" width="200" vspace="0" height="138" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana)." class="author" rel="noopener">Google Developers</a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Podremos seleccionar los <strong>factores de forma</strong> admitidos por tu app (o añadirlos con <strong><span lang="en">File</span> &gt; <span lang="en">New</span> &gt; <span lang="en">New Module</span></strong>), como teléfonos y <span lang="en">tablets, Wear OS , Android TV</span> y <span lang="en">Android Automotive</span>. Los formatos seleccionados se convierten en los módulos de la app dentro del proyecto. Para cada formato, también puedes seleccionar el nivel de API para esa app. Asimismo, podremos seleccionar las versiones mínimas para los distintos factores de forma. Esta selección hará que nuestra aplicación sea compatible con más o menos versiones de Android, tal y como se muestra en esta tabla.</p>
+<p><em>Por ejemplo, según la imagen, si elegimos la API29, nuestra aplicación será compatible, en principio sólo con el 50,8% de todos los dispositivos Android tablet y teléfonos que hay en uso en el mundo.</em></p>
+<figure class="exe-figure exe-image float-right license-custom" style="width: 240px;"><a href="PMDM02-8.JPG" rel="lightbox" title="Ampliar imagen"><img src="PMDM02-8.JPG" alt="Ilustración que muestra la pantalla de Nuevo Módulo de Android Studio" title="New Módulo Android Studio" class="imagen_ampliable" style="margin-top: 0px;" width="200" vspace="0" height="132" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana)." class="author" rel="noopener">Google Developers</a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>NOTA: Para eliminar módulos añadidos, nos colocamos encima de la carpeta del módulo añadido y con el botón derecho "Open Module Settings" para eliminarlo con el "-". Depués suprimimos la carpeta.</p>
+<p>Cada factor de forma será un módulo en nuestra app, como se puede ver en la imagen de la derecha (en este caso hemos supuesto que hemos elegido los factores de forma <span lang="en">Phone and Tablet</span> y TV):</p>
+<h2>Paso 5: Actividad principal</h2>
+<p>Una <strong>actividad</strong> (<strong></strong><span lang="en"><strong></strong></span><span lang="en"><span lang="en"><strong></strong></span></span><span lang="en"><span lang="en"><span lang="en"><strong>activity</strong></span></span></span>) es un componente de la aplicación que contiene una pantalla con la que los usuarios pueden interactuar para realizar una acción, como marcar un número telefónico, tomar una foto, enviar un correo electrónico o ver un mapa. A cada actividad se le asigna una ventana en la que se puede dibujar su interfaz de usuario. La ventana generalmente abarca toda la pantalla, pero en ocasiones puede ser más pequeña que esta y quedar "flotando" encima de otras ventanas.</p>
+<p>Una aplicación generalmente consiste en múltiples actividades vinculadas de forma flexible entre sí. Normalmente, una actividad en una aplicación se especifica como la actividad "principal" que se presenta al usuario cuando este inicia la aplicación por primera vez. Cada actividad puede a su vez iniciar otra actividad para poder realizar diferentes acciones.</p>
+<figure class="exe-figure exe-image float-right license-custom" style="width: 240px;"><a href="PMDM02-9.JPG" rel="lightbox" title="Ampliar imagen"><img src="PMDM02-9.JPG" alt="Ilustración que muestra la pantalla con el código java de la actividad principal" title="Main activity Android Studio" class="imagen_ampliable" style="margin-bottom: 0px; margin-top: 0px;" width="200" vspace="0" height="126" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana)." class="author" rel="noopener">Google Developers</a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Por ahora nuestro proyecto sólo tiene una actividad que es la principal representada por:</p>
+<ol style="list-style-type: upper-alpha;">
+<li style="margin-bottom: 7px;">La clase <span class=" destacado_inline" lang="en">MainActivity </span>(con fichero de código fuente <em><span lang="en">MainActivity.java</span></em>)</li>
+<li style="margin-bottom: 7px;">La disposición o <span class=" destacado_inline" lang="en">layout</span> <em></em><span lang="en"><em>activity_main</em></span> (almacenada en el fichero XML: <em></em><span lang="en"><em>activity_main.xml</em></span>) que contiene la información necesaria para dibujar en pantalla la interfaz gráfica de la actividad principal</li>
+</ol>
+<p>Nota: no es obligatorio, sin embargo, por ahora, la primera actividad que crearemos será la actividad principal de la aplicación. Mantendremos el nombre <strong></strong><span lang="en"><strong>MainActivity</strong></span> con fichero de interfaz <strong></strong><span lang="en"><strong>activity_main</strong></span>, lo cual ayudará a identificar y organizar las partes de la aplicación. Por otro lado, comentar que la actividad principal no tiene por qué ser la primera actividad que se abre en la aplicación, aunque será lo más frecuente. Puede suceder, que antes de abrir la actividad principal se abra lo que se conoce como una pantalla de bienvenida (<em></em><span lang="en"><em>splash screen</em></span>) que ayuda a mejorar la experiencia de usuario. Esto será habitual en aplicaciones más trabajadas o en fase de producción.</p>
+<p>Para ver la relación existente entre la clase <strong></strong><span lang="en"><strong>MainActivity</strong></span> y su disposición (<strong></strong><span lang="en"><strong>layout</strong></span>) podemos pulsar Ctrl+BIzq (Botón izquierdo del ratón) sobre el nombre de la clase <span lang="en">MainActivity</span> en la línea de código <em></em><span lang="en"><em>"public class MainActivity</em></span>" y nos llevará al fichero XML asociado. Asimismo si pulsamos Ctrl+BIzq sobre el nombre de una clase, el entorno de desarrollo Android Studio nos llevará a su definición; puedes probar pulsando sobre <em><span lang="en">Bundle</span></em> (el tipo del parámetro del método onCreate). En el caso de MainActivity no nos llevó a su definición ya que estamos en ella (en el fichero <em><span lang="en">MainActivity.java</span></em> donde se define la propia clase); en vez de eso nos mostró los sitios donde se usa esta clase (uno de ellos es el fichero XML de la disposición asociada).</p>
+<h2>Paso 6: Desarrollar tu app</h2>
+<figure class="exe-figure exe-image float-right license-custom" style="width: 240px;"><a href="PMDM0-10.JPG" rel="lightbox" title="Ampliar imagen"><img src="PMDM0-10.JPG" alt="Ilustración que muestra la pantalla de configuración del layout de un activity en Android Studio" title="Android Studio Activity Layout" class="imagen_ampliable" width="200" height="134" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana)." class="author" rel="noopener">Google Developers</a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Android Studio crea la estructura predeterminada de tu proyecto y se abre el entorno de desarrollo. Si tu app admite más de un formato, Android Studio crea una carpeta de módulos con archivos de origen completos para cada uno de ellos, como se muestra en la siguiente figura, donde se puede apreciar que:</p>
+<ul class="lista_verificacion">
+<li style="margin-bottom: 7px;">En la parte superior nos encontramos con un menú y/o barra de herramientas.</li>
+<li style="margin-bottom: 7px;">En el panel lateral izquierdo tenemos un navegador de la estructura de ficheros del proyecto.</li>
+<li style="margin-bottom: 7px;">En parte central disponemos de un panel con una paleta de elementos incorporables en una emulación de la interfaz visual de mi aplicación.</li>
+<li style="margin-bottom: 7px;">En el panel lateral derecho disponemos de un árbol de componentes de la interfaz visual, así como un descriptor de propiedades de cada elemento incorporado.</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id14">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta14_128" class="block iDevice_content">
+<p>Para obtener más información sobre la estructura del proyecto y los tipos de módulos de Android, lee <a href="https://developer.android.com/studio/projects/index.html?hl=es-419" target="_blank" title="Acceder a página sobre información de proyectos en developer.android.com (se abre en ventana nueva)" rel="noopener">Información general sobre proyectos<sub><img style="vertical-align: bottom;" src="ICO_NV.JPG" alt="" width="16" height="14" /></sub></a>.</p>
+<p>Para obtener más información sobre la manera de agregar un módulo para un dispositivo nuevo a un proyecto existente, consulta <a href="https://developer.android.com/studio/projects/add-app-module.html?hl=es-419" target="_blank" title="Acceder a página sobre cómo agregar un módulo para un dispositivo nuevo en developer.android.com (se abre en ventana nueva)" rel="noopener">Agregar un módulo para un dispositivo nuevo<sub><img style="vertical-align: bottom;" src="ICO_NV.JPG" alt="" width="16" height="14" /></sub></a>.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="2_INTEGR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_ESCRI.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432373/mod_resource/content/1/DAM_PMDM02_Contenidos/21_creacin_de_un_proyecto.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Sep 2023 10:37:03 GMT -->
+</html>

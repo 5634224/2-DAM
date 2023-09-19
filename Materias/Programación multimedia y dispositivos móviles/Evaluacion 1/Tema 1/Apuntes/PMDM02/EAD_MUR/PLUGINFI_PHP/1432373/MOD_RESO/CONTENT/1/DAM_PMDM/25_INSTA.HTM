@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432373/mod_resource/content/1/DAM_PMDM02_Contenidos/25_instalacin_y_ejecucin_en_un_dispositivo_real.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Sep 2023 10:37:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.5.- Instalación y ejecución en un dispositivo real. | PMDM02 - DAM - Programación Multimedia y Dispositivos Móviles - UT02.- Entorno de trabajo. Instalación y primer programa con Android Studio. Contenidos. </title>
+<link rel="shortcut icon" href="FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="EXE_JQUE.JS"></script>
+<script type="text/javascript" src="COMMON_I.JS"></script>
+<script type="text/javascript" src="COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM02 - DAM - Programación Multimedia y Dispositivos Móviles - UT02.- Entorno de trabajo. Instalación y primer programa con Android Studio. Contenidos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Entorno de trabajo. Instalación y primer programa con Android Studio.</a></li>
+   <li><a href="1_MDULOS.HTM" class="no-ch">1.- Módulos para el desarrollo de aplicaciones. Instalación de Android Studio</a></li>
+   <li class="current-page-parent"><a href="2_INTEGR.HTM" class="current-page-parent daddy">2.- Integración en el entorno de desarrollo.</a>
+   <ul>
+      <li><a href="21_CREAC.HTM" class="no-ch">2.1.- Creación de un proyecto.</a></li>
+      <li><a href="22_ESCRI.HTM" class="daddy">2.2.- Escritura de código.</a>
+      <ul class="other-section">
+         <li><a href="221_MAIN.HTM" class="no-ch">2.2.1.- MainActivity.</a></li>
+         <li><a href="222_ACTI.HTM" class="no-ch">2.2.2.- activity_main.xml.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_COMPI.HTM" class="no-ch">2.3.- Compilación.</a></li>
+      <li><a href="24_EMULA.HTM" class="no-ch">2.4.- Emuladores.</a></li>
+      <li id="active"><a href="25_INSTA.HTM" class="active no-ch">2.5.- Instalación y ejecución en un dispositivo real.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_GESTIN.HTM" class="daddy">3.- Gestión del entorno de ejecución.</a>
+   <ul class="other-section">
+      <li><a href="31_EL_CI.HTM" class="no-ch">3.1.- El ciclo de vida y el administrador de aplicaciones.</a></li>
+      <li><a href="32_MODEL.HTM" class="no-ch">3.2.- Modelo de estados de una aplicación.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="24_EMULA.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_GESTIN.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.5.- Instalación y ejecución en un dispositivo real.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id43">
+<div class="iDevice emphasis0">
+<div id="ta43_154" class="block iDevice_content">
+<p style="text-align: justify;">Como ya se ha comentado antes, algo que debes tener en cuenta cuando se desarrollan aplicaciones con la tecnología Android Studio (y en general para casi cualquier plataforma) es que el aspecto e incluso el funcionamiento que presente la aplicación puede que sea diferente en un dispositivo real con respecto al que se podía observar en un emulador. Es muy posible que su aspecto varíe según se instale en un dispositivo u otro, así como también si lo pruebas en un emulador u otro.</p>
+<p>Esto se debe tanto a las características físicas del propio dispositivo (tamaño, resolución y colores de la pantalla, tipo de mando de juegos (joystick), botones, etc.) como a la implementación de la máquina virtual de Java que tenga ese dispositivo. Aunque la comparación no es del todo precisa, la situación podría se similar a la que se produce cuando navegas por un mismo sitio web con ordenadores distintos, con sistemas operativos diferentes y con navegadores también distintos, obteniendo visualizaciones de la web algo diferentes.</p>
+<p>La manera más sencilla de probar tu aplicación será transfiriendo el <strong><a href="#t3c3c112c-a138-b7fb-d420-c6ce3ded79f0" id="link3c3c112c-a138-b7fb-d420-c6ce3ded79f0" class="exe-tooltip definition-tt titled-tt blue-tt" title="Archivo APK | ">archivo apk</a><em></em></strong> generado de la aplicación a la memoria del dispositivo donde deseas realizar la prueba (a través de un cable USB, por Bluetooth, mediante una tarjeta de memoria, etc.).</p>
+<p>Dependiendo del fabricante del dispositivo, es posible que se disponga de alguna utilidad específica del fabricante que permita realizar la instalación desde el ordenador pero también podemos disponer de utilidades no propietarias de fabricantes de móviles. Un ejemplo de este SW para Android es <strong><abbr title="Android Debug Bridge (adb) es una herramienta de línea de comandos versátil que te permite comunicarte con un dispositivo.">adb</abbr></strong>. La forma de hacerlo podría cambiar dependiendo del fabricante del dispositivo así como del tipo de archivos generados (no será el mismo proceso para un iOS que para un un Android, cada plataforma tendrá sus procedimientos específicos de instalación de software).</p>
+<p>En el caso de Android, será imprescindible activar la opción de <strong>Depuración por USB</strong>. Puedes ver más información al respecto en este vídeo:</p>
+<figure class="exe-figure exe-media position-center license-copyright" style="width: 325px;"><iframe width="325" height="185" src="https://www.youtube.com/embed/Zqg6Kl46_c4" allowfullscreen="allowfullscreen"></iframe>
+<figcaption class="figcaption"><a href="https://youtu.be/Zqg6Kl46_c4" target="_blank" class="author" title="Acceder al vídeo en YouTube. (Se abre en una nueva ventana)." rel="noopener">El Androide Libre.</a> <span class="license"><span class="sep">(</span><a href="https://www.youtube.com/static?template=terms&amp;hl=es&amp;gl=ES" target="_blank" title="Acceder a los términos de uso y licencia de YouTube. (Se abre en una nueva ventana)." rel="noopener"><span>Todos los derechos reservados</span></a><span class="sep">)</span></span></figcaption>
+</figure>
+<p style="text-align: center;"><span style="font-size: 8pt;"><a href="PMDM02_D.HTM" target="_blank" title="Acceder a la descripción textual alternativa del vídeo &quot;Qué es la depuración USB en Android&quot; (se abre en una nueva ventana)." rel="noopener">Descripción textual del vídeo<sub><img src="ICO_NV.JPG" alt="Nueva ventana" title="Nueva ventana" width="16" height="14" /></sub></a></span></p>
+<div id="t3c3c112c-a138-b7fb-d420-c6ce3ded79f0" class="exe-tooltip-text">
+<p>Un archivo con la extensión APK (acrónimo de Android Application Package) es la forma en la que está empaquetada una aplicación de Android que contiene, como instalable que es, todos los archivos necesarios para instalar una aplicación en nuestro dispositivo basado en Android.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id44">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta44_128" class="block iDevice_content">
+<p>Para obtener más información, consulta <a href="https://developer.android.com/studio/run/device.html?hl=es-419" target="_blank" title="Acceder a la página de developer.android.com sobre cómo ejecutar aplicaciones en dispositivos físicos (se abre en una nueva ventana)" rel="noopener">Ejecutar apps en un dispositivo de hardware<sub><img style="vertical-align: bottom;" src="ICO_NV.JPG" alt="" width="16" height="14" /></sub></a>.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="24_EMULA.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_GESTIN.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432373/mod_resource/content/1/DAM_PMDM02_Contenidos/25_instalacin_y_ejecucin_en_un_dispositivo_real.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Sep 2023 10:37:08 GMT -->
+</html>

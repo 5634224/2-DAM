@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432373/mod_resource/content/1/DAM_PMDM02_Contenidos/22_escritura_de_cdigo.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Sep 2023 10:37:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="EXE_LIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.- Escritura de código. | PMDM02 - DAM - Programación Multimedia y Dispositivos Móviles - UT02.- Entorno de trabajo. Instalación y primer programa con Android Studio. Contenidos. </title>
+<link rel="shortcut icon" href="FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="EXE_JQUE.JS"></script>
+<script type="text/javascript" src="EXE_LIGH.JS"></script>
+<script type="text/javascript" src="COMMON_I.JS"></script>
+<script type="text/javascript" src="COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM02 - DAM - Programación Multimedia y Dispositivos Móviles - UT02.- Entorno de trabajo. Instalación y primer programa con Android Studio. Contenidos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Entorno de trabajo. Instalación y primer programa con Android Studio.</a></li>
+   <li><a href="1_MDULOS.HTM" class="no-ch">1.- Módulos para el desarrollo de aplicaciones. Instalación de Android Studio</a></li>
+   <li class="current-page-parent"><a href="2_INTEGR.HTM" class="current-page-parent daddy">2.- Integración en el entorno de desarrollo.</a>
+   <ul>
+      <li><a href="21_CREAC.HTM" class="no-ch">2.1.- Creación de un proyecto.</a></li>
+      <li id="active"><a href="22_ESCRI.HTM" class="active daddy">2.2.- Escritura de código.</a>
+      <ul>
+         <li><a href="221_MAIN.HTM" class="no-ch">2.2.1.- MainActivity.</a></li>
+         <li><a href="222_ACTI.HTM" class="no-ch">2.2.2.- activity_main.xml.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_COMPI.HTM" class="no-ch">2.3.- Compilación.</a></li>
+      <li><a href="24_EMULA.HTM" class="no-ch">2.4.- Emuladores.</a></li>
+      <li><a href="25_INSTA.HTM" class="no-ch">2.5.- Instalación y ejecución en un dispositivo real.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_GESTIN.HTM" class="daddy">3.- Gestión del entorno de ejecución.</a>
+   <ul class="other-section">
+      <li><a href="31_EL_CI.HTM" class="no-ch">3.1.- El ciclo de vida y el administrador de aplicaciones.</a></li>
+      <li><a href="32_MODEL.HTM" class="no-ch">3.2.- Modelo de estados de una aplicación.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_CREAC.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="221_MAIN.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.- Escritura de código.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id15">
+<div class="iDevice emphasis0">
+<div id="ta15_154" class="block iDevice_content">
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id30">
+<div class="iDevice emphasis0">
+<div id="ta30_154" class="block iDevice_content">
+<p>Lo más habitual, al menos en los primeros pasos con Android Studio es partir de una aplicación previa básica que a modo de esqueleto permita agregar las particularidades necesarias para dar respuesta a las necesidades a cubrir por nuestra aplicación. Es decir, aprovecharemos las plantillas que nos proporciona Android Studio, y sobre la que elijamos, comenzaremos a trabajar para desarrollar nuestra aplicación. Concretamente, vamos a trabajar sobre la plantilla <strong></strong><span lang="en"><strong>"Empty Activity"</strong></span> que tiene los elementos estrictamente necesarios para poder ejecutar la aplicación generada. Además, es habitual también, al menos, en los primeros pasos con Android Studio, mantener el nombre de actividad que pone por defecto (<strong></strong><span lang="en"><strong>MainActivity</strong></span>), de forma que cuando arranque la aplicación, esta será la actividad (<strong></strong><span lang="en"><strong>activity</strong></span>) que cargará en primer lugar.</p>
+<p>Posteriormente, podremos incorporar más actividades para completar nuestra aplicación. También podremos cambiar el nombre de cualquiera de ellas, incluido <strong><span lang="en">MainActivity</span></strong>. Todas las actividades que vayamos incorporando en nuestra aplicación quedarán reflejadas en el fichero <strong><em>AndroidManifest.xml</em></strong> que veremos posteriormente. Además dicho fichero permitirá establecer cúal será la actividad con la que arrancará la aplicación.</p>
+<p>Según la documentación proporcionada por Android Developers:</p>
+<p style="padding-left: 30px;"><em>Una <span lang="en">Activity</span> es un componente de la aplicación que contiene una pantalla con la que los usuarios pueden interactuar para realizar una acción, como marcar un número telefónico, tomar una foto, enviar un correo electrónico o ver un mapa. A cada actividad se le asigna una ventana en la que se puede dibujar su interfaz de usuario. La ventana generalmente abarca toda la pantalla, pero en ocasiones puede ser más pequeña que esta y quedar "flotando" encima de otras ventanas.</em></p>
+<p style="padding-left: 30px;"><em>Una aplicación generalmente consiste en múltiples actividades vinculadas de forma flexible entre sí. Normalmente, una actividad en una aplicación se especifica como la actividad "principal" que se presenta al usuario cuando este inicia la aplicación por primera vez. Cada actividad puede a su vez iniciar otra actividad para poder realizar diferentes acciones. Cada vez que se inicia una actividad nueva, se detiene la actividad anterior, pero el sistema conserva la actividad en una pila (la "pila de actividades"). Cuando se inicia una actividad nueva, se la incluye en la pila de actividades y capta el foco del usuario. La pila de actividades cumple con el mecanismo de pila "el último en entrar es el primero en salir", por lo que, cuando el usuario termina de interactuar con la actividad actual y presiona el botón Atrás, se quita de la pila (y se destruye) y se reanuda la actividad anterior.</em></p>
+<p>Así pues, de forma un poco simple, podremos asociar el concepto de <strong><span lang="en">Activity</span></strong> al de "pantalla" o ventana de la aplicación, de forma que todas las diferentes pantallas que pudiéramos ver en una aplicación tendrán asociadas una actividad.</p>
+<p>Las actividades estarán compuestas por una parte lógica y una parte gráfica.</p>
+<p>La parte lógica se corresponderá con un archivo <em><strong>.java</strong></em>, que contiene la clase para poder interactuar desde esa actividad, a través de los diferentes métodos de que disponga, e incluso apoyándose en otros ficheros <em><strong>.java</strong></em> que contengan clases que también interactúen entre sí.</p>
+<p>Por otro lado, la parte gráfica normalmente se corresponderá con un fichero <em><strong>.xml</strong></em> en el que se define la disposición (<strong></strong><span lang="en"><strong>layout</strong></span>) de los elementos que se mostrarán. Así, en dicho fichero, mediante etiquetas XML específicas, se podrán incorporar todos aquellos elementos que queramos que se muestren en mi interfaz.</p>
+<p>Veremos más adelante, cuando planteemos alguna aplicación con interfaz "programática", que será posible incorporar los elementos gráficos directamente en el fichero <em><strong>.java</strong></em>, pero en general, esto suele ser bastante más costoso en esfuerzo y tiempo.</p>
+<figure class="exe-figure exe-image float-right license-custom" style="width: 240px;"><a href="PMDM0-11.JPG" target="_blank" rel="lightbox noopener" title="Ampliar imagen"><img src="PMDM0-11.JPG" alt="Ilustración que muestra la pantalla con el código de main_activity en Android Studio" title="Android Studio Main Activity 2" class="imagen_ampliable" width="200" height="235" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana)." class="author" rel="noopener">Google Developers</a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Resumiendo, la escritura se hará en ficheros <em><strong>.java</strong></em>, para incorporar el código (utilizando lenguaje de programación <strong>Java</strong>) responsable de la lógica de mi aplicación y en ficheros XML para incorporar el código (utilizando lenguaje de etiquetas XML) responsable de la presentación o aspecto de la interfaz.</p>
+<p>Al crear nuestra primera aplicación, podemos ver ambas facetas. Para ello, completamos la creación de nuestro primer proyecto (llamado <em>HolaMundo</em>), y vemos que a través del navegador de proyectos ubicado en el marco (<em><span lang="en">frame</span></em>) de la izquierda se crean 2 ficheros relacionados entre sí:</p>
+<ul class="lista_verificacion">
+<li style="margin-bottom: 7px;"><span lang="en">MainActivity</span>, es la clase Java definida en el fichero <em><span lang="en">MainActivity.java</span></em>, y que contendrá las especificaciones lógicas de la actividad principal y de momento única, de nuestra aplicación.</li>
+<li style="margin-bottom: 7px;"><em><span lang="en">activity_main.xml</span></em> contendrá las especificaciones de apariencia o diseño de la interfaz de esa actividad.</li>
+</ul>
+<p>En los siguientes subapartados veremos el contenido de cada fichero y los explicaremos con más detalle.</p>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_CREAC.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="221_MAIN.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432373/mod_resource/content/1/DAM_PMDM02_Contenidos/22_escritura_de_cdigo.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Sep 2023 10:37:04 GMT -->
+</html>

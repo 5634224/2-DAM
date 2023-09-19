@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432373/mod_resource/content/1/DAM_PMDM02_Contenidos/31_el_ciclo_de_vida_y_el_administrador_de_aplicaciones.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Sep 2023 10:37:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="EXE_LIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1.- El ciclo de vida y el administrador de aplicaciones. | PMDM02 - DAM - Programación Multimedia y Dispositivos Móviles - UT02.- Entorno de trabajo. Instalación y primer programa con Android Studio. Contenidos. </title>
+<link rel="shortcut icon" href="FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="EXE_JQUE.JS"></script>
+<script type="text/javascript" src="EXE_LIGH.JS"></script>
+<script type="text/javascript" src="COMMON_I.JS"></script>
+<script type="text/javascript" src="COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM02 - DAM - Programación Multimedia y Dispositivos Móviles - UT02.- Entorno de trabajo. Instalación y primer programa con Android Studio. Contenidos.</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Entorno de trabajo. Instalación y primer programa con Android Studio.</a></li>
+   <li><a href="1_MDULOS.HTM" class="no-ch">1.- Módulos para el desarrollo de aplicaciones. Instalación de Android Studio</a></li>
+   <li><a href="2_INTEGR.HTM" class="daddy">2.- Integración en el entorno de desarrollo.</a>
+   <ul class="other-section">
+      <li><a href="21_CREAC.HTM" class="no-ch">2.1.- Creación de un proyecto.</a></li>
+      <li><a href="22_ESCRI.HTM" class="daddy">2.2.- Escritura de código.</a>
+      <ul class="other-section">
+         <li><a href="221_MAIN.HTM" class="no-ch">2.2.1.- MainActivity.</a></li>
+         <li><a href="222_ACTI.HTM" class="no-ch">2.2.2.- activity_main.xml.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_COMPI.HTM" class="no-ch">2.3.- Compilación.</a></li>
+      <li><a href="24_EMULA.HTM" class="no-ch">2.4.- Emuladores.</a></li>
+      <li><a href="25_INSTA.HTM" class="no-ch">2.5.- Instalación y ejecución en un dispositivo real.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_GESTIN.HTM" class="current-page-parent daddy">3.- Gestión del entorno de ejecución.</a>
+   <ul>
+      <li id="active"><a href="31_EL_CI.HTM" class="active no-ch">3.1.- El ciclo de vida y el administrador de aplicaciones.</a></li>
+      <li><a href="32_MODEL.HTM" class="no-ch">3.2.- Modelo de estados de una aplicación.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="3_GESTIN.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_MODEL.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1.- El ciclo de vida y el administrador de aplicaciones.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id21">
+<div class="iDevice emphasis0">
+<div id="ta21_154" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-custom" style="width: 240px;"><a href="PMDM0-18.JPG" target="_blank" title="Ampliar imagen" rel="lightbox noopener"><img src="PMDM0-18.JPG" alt="Ilustración que muestra 2 pantallas de un dispositivo virtual Android Pixel 5 dónde se muestra el administrador de aplicaciones y los detalles de la aplicación Hola Mundo." title="Administrador de apliaciones en un dispositivo móvil Android (virtual)" class="imagen_ampliable" style="margin: 0px;" width="200" vspace="0" hspace="0" height="208" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana)." class="author" rel="noopener">Google Developers</a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>El administrador de aplicaciones o gestor de aplicaciones permite mostrar todas las apps que tenemos instaladas en nuestro dispositivo y controlar de un vistazo las que se está ejecutando, desinstalarlas o detenerlas, o incluso conocer en cada momento los recursos que está consumiendo cada una de ellas. Llevará a cabo esencialmente dos funciones:</p>
+<ul class="lista_verificacion">
+<li style="margin-bottom: 7px;">La gestión del ciclo de vida de las aplicaciones en el dispositivo.</li>
+<li style="margin-bottom: 7px;">El control de los estados por los que pasa la aplicación mientras resida en la memoria del dispositivo, es decir, mientras esté en ejecución.</li>
+</ul>
+<h3>El ciclo de vida de una aplicación de Android</h3>
+<p>El ciclo de vida de una aplicación de Android pasa por cinco fases: descubrimiento, instalación, ejecución, actualización y borrado.</p>
+<ul class="lista_verificacion">
+<li style="margin-bottom: 7px;"><strong>Descubrimiento (o localización)</strong>. Consiste en el proceso por el cual un usuario localiza una aplicación Android a través de su dispositivo. El gestor de aplicaciones es el que proporciona los mecanismos necesarios para realizar la elección de la aplicación que se desea descargar (mediante un cable USB, Bluetooth, conexión a Internet, etc.).</li>
+<li style="margin-bottom: 7px;"><strong>Instalación</strong>. Una vez que la aplicación ha sido descargada en el dispositivo, ésta puede ser instalada. El gestor de aplicaciones de Android se encargará de controlar el proceso de instalación informando al usuario de la evolución de este proceso. Una vez instalado la aplicación, éste permanecerá en el dispositivo (en memoria persistente) hasta que el usuario decida borrarlo.</li>
+<li style="margin-bottom: 7px;"><strong>Ejecución</strong>. El gestor de aplicaciones de Android es también el que permite poner en ejecución la aplicación. Una vez que una aplicación está en ejecución, el gestor de aplicaciones también tendrá el control de los distintos estados por los que pueda pasar dicha aplicación dependiendo de los eventos que se vayan desencadenando durante esa ejecución.</li>
+<li style="margin-bottom: 7px;"><strong>Actualización</strong>. Una vez que una aplicación ha sido descargada, el gestor de aplicaciones de Android debe ser capaz de detectar si se trata de una actualización de una aplicación ya presente en el dispositivo. En tal caso se informaría al usuario para que decidiera si quiere llevar a cabo o no la actualización.</li>
+<li style="margin-bottom: 7px;"><strong>Borrado</strong>. Si el usuario así lo desea, el gestor de aplicaciones de Android se encargará de borrar la aplicación del dispositivo. Normalmente se solicitará confirmación y se informará de las posibles incidencias durante el proceso de borrado.</li>
+</ul>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="3_GESTIN.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_MODEL.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432373/mod_resource/content/1/DAM_PMDM02_Contenidos/31_el_ciclo_de_vida_y_el_administrador_de_aplicaciones.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Sep 2023 10:37:10 GMT -->
+</html>
