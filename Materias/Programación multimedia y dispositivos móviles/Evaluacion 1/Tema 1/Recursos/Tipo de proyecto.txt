@@ -1,0 +1,2 @@
+Tipo de proyecto que hay que hacer para que aparezca el Activity_main.xml:
+Empty Views Activity
