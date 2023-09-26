@@ -1,0 +1,75 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 26 Sep 2023 16:22:30 at https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwr3%e0C2%Ps2u1%s%uN4%I0p7DaK0c8T6R2H3%kf2A250000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "es, en, *" https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/index.html -O1 "D:\Documentos\Mis lugares web\SGE02" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+16:22:51	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/favicon.ico
+16:22:52	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R01_CASO_Libros.jpg
+16:22:52	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/icon_casopracticofpd.png
+16:22:52	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/ministerio-de-educacion-y-formacion-profesional-web.jpg
+16:22:53	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/Bola_del_mundo_con_dos_manos.jpg
+16:22:53	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/icon_parasabermasfpd.png
+16:22:53	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R03_Tiposlicencia.JPG
+16:22:53	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R04_GNU_logo.png
+16:22:53	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R03_Tiposlicencia_miniatura.JPG
+16:22:53	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/icon_reflexionfpd.png
+16:22:54	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/icon_autoevaluacionfpd.gif
+16:22:55	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/Openbravo_producto_instalado.png
+16:22:56	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/Pagina_Web_Odoo.png
+16:22:57	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R07_CASO_Webinar.jpg
+16:22:58	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/Captura_de_pantalla_Synaptic_Dolibarr.png
+16:22:59	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R09_Cliente_Servidor.jpg
+16:23:00	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R09_Cliente_Servidor_miniatura.jpg
+16:23:01	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/icon_recomendacionfpd.png
+16:23:01	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R10_Instalaciones.jpg
+16:23:01	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/icon_debesconocerfpd.png
+16:23:01	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R15_Servidores.jpg
+16:23:02	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R14_Configuracion.jpg
+16:23:02	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/Pantalla_inicial_al_Acceder_a_Odoo_via_web.png
+16:23:02	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/Imagen_Odoo_interfaz_web.png
+16:23:03	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R22_CASO_Saladereuniones.jpg
+16:23:03	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R23_Conexion.jpg
+16:23:03	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R24_Modules.jpg
+16:23:04	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R24_Modules_miniatura.jpg
+16:23:04	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R25_Contabilidad.png
+16:23:04	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/pallets-europallet-warehouse-wood.jpg
+16:23:04	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R27_Dolar.jpg
+16:23:04	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R29_CRM.jpg
+16:23:05	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R28_RRHH.jpg
+16:23:05	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R30_Moneda.jpg
+16:23:05	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/Pantalla_inicial_interfaz_web_crear_instancia_BD_localizacion.png
+16:23:05	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R25_Contabilidad_miniatura.png
+16:23:05	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/Pantallazo_de_Odoo_para_buscar_Modelo_Localizacion_del_pais.png
+16:23:05	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/BU001838.jpg
+16:23:05	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R33_Remoto.jpg
+16:23:05	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R36_LogoWindows.jpg
+16:23:05	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R34_Bye.jpg
+16:23:06	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R41_Programming.jpg
+16:23:06	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/SGE02_CONT_R40_CASO_PERSONAJES_05.jpg
+16:23:56	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/documento.png
+16:23:56	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/pre_code_bg.gif
+16:23:57	Warning: 	HTML file (2695 bytes) retransferred due to lack of cache: https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/index1.html
+16:23:57	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/hcalculo.png
+16:23:57	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/imagen.png
+16:23:57	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/presentacion.png
+16:23:57	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/paquete.png
+16:23:57	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/audio.png
+16:23:57	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/binario.png
+16:24:46	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/html.png
+16:24:47	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/cc-by-nc.png
+16:24:47	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/cc-by-nd.png
+16:24:48	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/cc-by-sa.png
+16:24:48	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/cc0.png
+16:24:48	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/cc-by-nc-sa.png
+16:24:48	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/postit.png
+16:24:50	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/icon_orientacionesfpd.png
+16:25:39	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/icon_activity.png
+16:25:39	Error: 	"Not Found" (404) at link https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/xspf_player.swf?song_url= (from https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/common.js)
+16:25:39	Error: 	"Not Found" (404) at link https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/exe_media.js (from https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/common.js)
+16:25:39	Error: 	"Not Found" (404) at link https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/exe_media.css (from https://ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/common.js)
+
+HTTrack Website Copier/3.49-2 mirror complete in 3 minutes 9 seconds : 124 links scanned, 181 files written (4943756 bytes overall) [3229204 bytes received at 17085 bytes/sec], 138624 bytes transferred using HTTP compression in 2 files, ratio 23%, 2.7 requests per connection
+(3 errors, 61 warnings, 0 messages)

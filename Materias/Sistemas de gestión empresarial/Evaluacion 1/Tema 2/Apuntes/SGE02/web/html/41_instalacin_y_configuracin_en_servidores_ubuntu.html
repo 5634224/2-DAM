@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/41_instalacin_y_configuracin_en_servidores_ubuntu.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Sep 2023 14:22:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.1.- Instalación y configuración en servidores Ubuntu. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-22"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Instalación y configuración de sistemas ERP-CRM.</a></li>
+   <li><a href="1_introduccin.html" class="daddy">1.- Introducción.</a>
+   <ul class="other-section">
+      <li><a href="11_tipos_de_licencia.html" class="no-ch">1.1.- Tipos de licencia.</a></li>
+      <li><a href="12_el_software_libre_en_el_mercado_de_los_erps.html" class="no-ch">1.2.- El software libre en el mercado de los ERPs.</a></li>
+      <li><a href="13_erps_de_software_libre.html" class="no-ch">1.3.- ERPs de software libre.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_instalacin_y_configuracin_del_sistema_erpcrm.html" class="daddy">2.- Instalación y configuración del sistema ERP-CRM.</a>
+   <ul class="other-section">
+      <li><a href="21_tipos_de_instalacin_monopuesto_clienteservidor.html" class="no-ch">2.1.- Tipos de instalación. Monopuesto. Cliente/Servidor.</a></li>
+      <li><a href="22_procesos_de_instalacin_y_servicios_de_acceso_al_sistema.html" class="no-ch">2.2.- Procesos de instalación y servicios de acceso al sistema.</a></li>
+      <li><a href="23_parmetros_de_configuracin_descripcin_tipologa_y_uso.html" class="no-ch">2.3.- Parámetros de configuración: descripción, tipología y uso.</a></li>
+      <li><a href="24_configuracin_del_servidor_y_de_la_base_de_datos.html" class="no-ch">2.4.- Configuración del servidor y de la base de datos.</a></li>
+      <li><a href="25_servicio_de_acceso_desde_el_cliente_va_web.html" class="no-ch">2.5.- Servicio de acceso desde el cliente vía web.</a></li>
+      <li><a href="26_actualizacin_del_sistema_erpcrm.html" class="no-ch">2.6.- Actualización del sistema ERP/CRM.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_tipos_de_mdulos_caractersticas_funcionales_descripcin_e_interconexin.html" class="daddy">3.- Tipos de módulos. Características funcionales. Descripción e Interconexión.</a>
+   <ul class="other-section">
+      <li><a href="31_mdulo_base.html" class="no-ch">3.1.- Módulo base.</a></li>
+      <li><a href="32_gestin_contable_y_financiera.html" class="no-ch">3.2.- Gestión contable y financiera.</a></li>
+      <li><a href="33_compras_ventas_y_almacn.html" class="no-ch">3.3.- Compras, Ventas y Almacén.</a></li>
+      <li><a href="34_facturacin.html" class="no-ch">3.4.- Facturación.</a></li>
+      <li><a href="35_gestin_de_personal.html" class="no-ch">3.5.- Gestión de Personal.</a></li>
+      <li><a href="36_gestin_de_las_relaciones_con_el_cliente.html" class="no-ch">3.6.- Gestión de las relaciones con el cliente.</a></li>
+      <li><a href="37_introduccin_a_la_instalacin_y_configuracin_de_mdulos.html" class="no-ch">3.7.- Introducción a la instalación y configuración de módulos.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_asistencia_tcnica_remota_en_el_sistema_erpcrm.html" class="current-page-parent daddy">4.- Asistencia técnica remota en el sistema ERP-CRM.</a>
+   <ul>
+      <li id="active"><a href="41_instalacin_y_configuracin_en_servidores_ubuntu.html" class="active no-ch">4.1.- Instalación y configuración en servidores Ubuntu.</a></li>
+      <li><a href="42_instalacin_y_configuracin_en_servidores_windows.html" class="no-ch">4.2.- Instalación y configuración en servidores Windows.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_herramientas_para_la_programacin_de_sistemas_erpcrm.html" class="no-ch">5.- Herramientas para la programación de sistemas ERP/CRM.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="4_asistencia_tcnica_remota_en_el_sistema_erpcrm.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_instalacin_y_configuracin_en_servidores_windows.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.1.- Instalación y configuración en servidores Ubuntu.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id55">
+<div class="iDevice emphasis0">
+<div id="ta55_73" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 192px;"><img src="../jpg/sge02_cont_r34_bye.jpg" alt="Ilustración de los logos de Ubuntu y Windows" title="Bye bye Windows." class="elemento_derecha" width="192" height="144" />
+<figcaption class="figcaption"><a href="http://www.flickr.com/photos/8427392@N07/605741060/" target="_blank" class="author" title="Acceder a la página web desde la cual se puede descargar la imagen" rel="noopener">*manci*</a> <span class="license"><span class="sep">(</span><a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" title="Acceder a la página web con los términos de la licencia Creative Commons BY-SA" rel="noopener">CC BY-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Ubuntu incorpora un sistema de asistencia remota mediante el uso del protocolo <strong><span lang="en">VNC</span></strong> gracias al servidor <strong>VINO</strong>. La configuración del servidor remoto VINO se hace a través de la <strong>Configuración del Sistema(Escritorio remoto)</strong>. Aparecerá una pantalla donde podremos definir si queremos que otros usuarios sólo vean nuestro escritorio o también lo controlen, o requerir que al conectarse tengan que introducir una contraseña.</p>
+<p>Una vez hecho esto en el servidor, para acceder remotamente debemos utilizar el cliente <span lang="en">VNC</span> en el otro equipo. Ubuntu puede traer alguno instalado por defecto, lo cual podemos comprobar buscando el texto "<code>vnc</code>" en <span lang="en">Synaptic</span>. Si no tenemos ningún visor <span lang="en">VNC</span>, podemos instalar uno con el siguiente comando:</p>
+<div class="codigo elemento_centrado" style="width: 22.5em;">
+<div class="texto_izquierda">
+<pre><code>sudo apt-get <span lang="en">install</span> vncviewer</code></pre>
+</div>
+</div>
+<p></p>
+<p>Una vez instalado, podemos acceder al escritorio remoto escribiendo en un terminal el siguiente comando:</p>
+<div class="codigo elemento_centrado" style="width: 22.5em;">
+<div class="texto_izquierda">
+<pre><code>vncviewer IP_servidor</code></pre>
+</div>
+</div>
+<p></p>
+<p>Si el equipo cliente es otro sistema operativo, como por ejemplo <span lang="en">Windows</span>, podemos utilizar <span lang="en">UltraVNC</span>, que podemos <a href="https://www.uvnc.com/" title="Acceder a página oficial de UltraVNC." target="_blank" rel="noopener">Descargar de la página oficial de UltraVNC</a>. Tras el proceso de instalación ejecutaríamos el cliente <span lang="en">VNC</span> mediante el comando <strong>Inicio/Programas/<span lang="en">UltraVNC</span>/<span lang="en">UltraVNC </span></strong><span lang="en"><strong><span lang="en">Viewer</span></strong></span>. Aparecerá una ventana en la que sólo hay que poner:</p>
+<div class="codigo elemento_centrado" style="width: 22.5em;">
+<div class="texto_izquierda">
+<pre><code>Ip_Servidor:0</code></pre>
+</div>
+</div>
+<p></p>
+<p>Siendo:</p>
+<ul class="lista_verificacion">
+<li><code>Ip_Servidor</code> la dirección IP del ordenador remoto.</li>
+<li><code>0</code> un número que indica la ventana en el que está el servidor remoto.</li>
+</ul>
+<p>¿Y cómo sabemos la <span lang="en">IP</span> del servidor? Pues podemos tener dos situaciones:</p>
+<ul class="lista_verificacion">
+<li><strong>Equipos a conectar en la misma red</strong>. Nos conectaremos a la <span lang="en">IP</span> privada del servidor. Para saber cuál es podemos escribir desde un terminal en Ubuntu o <span lang="en">Windows</span> la orden <code>ifconfig</code> ó <code>ipconfig</code>, respectivamente.</li>
+<li><strong>Equipos a conectar en redes separadas por un </strong><a href="#td0e8db36-f9f5-5b38-0bbf-d628ceb89180" id="linkd0e8db36-f9f5-5b38-0bbf-d628ceb89180" class="exe-tooltip definition-tt titled-tt blue-tt" title="router | "><span lang="en">router</span></a>. Nos conectaremos a la Ip pública de la red del servidor. La <span lang="en">IP</span> pública la asigna el operador de la línea y normalmente varía con el tiempo, para saber cuál es podemos entrar en una <a href="http://www.verip.es/" title="Acceder a página web para información sobre la IP.">página para información sobre la <span lang="en">IP</span></a>. El <span lang="en">router</span> de la red del servidor dirigirá la petición del cliente <span lang="en">VNC</span> al equipo donde se esté ejecutando el servidor VNC.</li>
+</ul>
+<p>Tras la ejecución del cliente <span lang="en">VNC</span>, si así lo hemos indicado en VINO, se nos solicitará la contraseña para conectarnos, y al introducirla se abrirá una ventana a pantalla completa con iconos en la parte superior cuyo contenido será el escritorio del ordenador remoto. A partir de ahí se podrá utilizar como si estuviéramos delante de él.</p>
+<p>El acceso al escritorio del servidor remotamente tendrá sentido si este servidor tiene un entorno gráfico levantado. Habitualmente los servidores Ubuntu no tienen un entorno gráfico en ejecución, por lo que la forma de acceder a ellos remotamente será estableciendo un terminal remoto seguro por SSH. Para ello el servidor tiene que tener instalado el paquete SSH <span lang="en">server</span>.</p>
+<div id="td0e8db36-f9f5-5b38-0bbf-d628ceb89180" class="exe-tooltip-text">
+<p>Dispositivo <span lang="en">hardware</span> para la interconexión de redes de ordenadores.</p>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="4_asistencia_tcnica_remota_en_el_sistema_erpcrm.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="42_instalacin_y_configuracin_en_servidores_windows.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433013/mod_resource/content/1/41_instalacin_y_configuracin_en_servidores_ubuntu.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Sep 2023 14:22:50 GMT -->
+</html>
