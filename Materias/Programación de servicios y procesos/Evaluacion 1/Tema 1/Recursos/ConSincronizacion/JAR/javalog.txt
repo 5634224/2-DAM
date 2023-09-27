@@ -1,0 +1,1441 @@
+Creado el fichero.
+Creado el proceso 0
+Creado el proceso 1
+Creado el proceso 2
+Creado el proceso 3
+Creado el proceso 4
+Creado el proceso 5
+Creado el proceso 6
+Creado el proceso 7
+Creado el proceso 8
+Creado el proceso 9
+Creado el proceso 10
+Creado el proceso 11
+Creado el proceso 12
+Creado el proceso 13
+Creado el proceso 14
+Creado el proceso 15
+Creado el proceso 16
+Creado el proceso 17
+Creado el proceso 18
+Creado el proceso 19
+Creado el proceso 20
+Creado el proceso 21
+Creado el proceso 22
+Creado el proceso 23
+Creado el proceso 24
+Creado el proceso 25
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso1: ENTRA sección
+Proceso0: valor escrito 1
+Proceso1: SALE sección
+Proceso2: ENTRA sección
+Proceso1: valor escrito 2
+Proceso2: SALE sección
+Proceso2: valor escrito 3
+Proceso3: ENTRA sección
+Proceso3: SALE sección
+Proceso4: ENTRA sección
+Proceso3: valor escrito 4
+Proceso4: SALE sección
+Proceso6: ENTRA sección
+Proceso4: valor escrito 5
+Proceso6: SALE sección
+Proceso11: ENTRA sección
+Proceso6: valor escrito 6
+Proceso11: SALE sección
+Proceso5: ENTRA sección
+Proceso11: valor escrito 7
+Proceso5: SALE sección
+Proceso7: ENTRA sección
+Proceso5: valor escrito 8
+Proceso7: SALE sección
+Proceso13: ENTRA sección
+Proceso7: valor escrito 9
+Proceso13: SALE sección
+Proceso13: valor escrito 10
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso8: ENTRA sección
+Proceso12: valor escrito 11
+Proceso8: SALE sección
+Proceso9: ENTRA sección
+Proceso8: valor escrito 12
+Proceso9: SALE sección
+Proceso10: ENTRA sección
+Proceso9: valor escrito 13
+Proceso10: SALE sección
+Proceso0: ENTRA sección
+Proceso10: valor escrito 14
+Proceso0: SALE sección
+Proceso1: ENTRA sección
+Proceso0: valor escrito 15
+Proceso1: SALE sección
+Proceso1: valor escrito 16
+Proceso19: ENTRA sección
+Proceso19: SALE sección
+Proceso19: valor escrito 17
+Proceso15: ENTRA sección
+Proceso15: SALE sección
+Proceso15: valor escrito 18
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso16: valor escrito 19
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso22: ENTRA sección
+Proceso14: valor escrito 20
+Proceso22: SALE sección
+Proceso17: ENTRA sección
+Proceso22: valor escrito 21
+Proceso17: SALE sección
+Proceso3: ENTRA sección
+Proceso17: valor escrito 22
+Proceso3: SALE sección
+Proceso2: ENTRA sección
+Proceso3: valor escrito 23
+Proceso2: SALE sección
+Proceso2: valor escrito 24
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso18: ENTRA sección
+Proceso21: valor escrito 25
+Proceso18: SALE sección
+Proceso20: ENTRA sección
+Proceso18: valor escrito 26
+Proceso20: SALE sección
+Proceso4: ENTRA sección
+Proceso20: valor escrito 27
+Proceso4: SALE sección
+Proceso4: valor escrito 28
+Proceso25: ENTRA sección
+Proceso25: SALE sección
+Proceso24: ENTRA sección
+Proceso25: valor escrito 29
+Proceso24: SALE sección
+Proceso6: ENTRA sección
+Proceso24: valor escrito 30
+Proceso6: SALE sección
+Proceso6: valor escrito 31
+Proceso23: ENTRA sección
+Proceso23: SALE sección
+Proceso11: ENTRA sección
+Proceso23: valor escrito 32
+Proceso11: SALE sección
+Proceso5: ENTRA sección
+Proceso11: valor escrito 33
+Proceso5: SALE sección
+Proceso5: valor escrito 34
+Proceso7: ENTRA sección
+Proceso7: SALE sección
+Proceso7: valor escrito 35
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso13: valor escrito 36
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso8: ENTRA sección
+Proceso12: valor escrito 37
+Proceso8: SALE sección
+Proceso9: ENTRA sección
+Proceso8: valor escrito 38
+Proceso9: SALE sección
+Proceso10: ENTRA sección
+Proceso9: valor escrito 39
+Proceso10: SALE sección
+Proceso10: valor escrito 40
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso0: valor escrito 41
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso1: valor escrito 42
+Proceso19: ENTRA sección
+Proceso19: SALE sección
+Proceso19: valor escrito 43
+Proceso15: ENTRA sección
+Proceso15: SALE sección
+Proceso15: valor escrito 44
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso16: valor escrito 45
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso14: valor escrito 46
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso22: valor escrito 47
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso17: valor escrito 48
+Proceso3: ENTRA sección
+Proceso3: SALE sección
+Proceso3: valor escrito 49
+Proceso2: ENTRA sección
+Proceso2: SALE sección
+Proceso21: ENTRA sección
+Proceso2: valor escrito 50
+Proceso21: SALE sección
+Proceso21: valor escrito 51
+Proceso18: ENTRA sección
+Proceso18: SALE sección
+Proceso18: valor escrito 52
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 53
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso25: ENTRA sección
+Proceso4: valor escrito 54
+Proceso25: SALE sección
+Proceso25: valor escrito 55
+Proceso24: ENTRA sección
+Proceso24: SALE sección
+Proceso24: valor escrito 56
+Proceso6: ENTRA sección
+Proceso6: SALE sección
+Proceso6: valor escrito 57
+Proceso23: ENTRA sección
+Proceso23: SALE sección
+Proceso23: valor escrito 58
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso5: ENTRA sección
+Proceso11: valor escrito 59
+Proceso5: SALE sección
+Proceso5: valor escrito 60
+Proceso7: ENTRA sección
+Proceso7: SALE sección
+Proceso7: valor escrito 61
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso13: valor escrito 62
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso12: valor escrito 63
+Proceso8: ENTRA sección
+Proceso8: SALE sección
+Proceso8: valor escrito 64
+Proceso9: ENTRA sección
+Proceso9: SALE sección
+Proceso10: ENTRA sección
+Proceso9: valor escrito 65
+Proceso10: SALE sección
+Proceso10: valor escrito 66
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso0: valor escrito 67
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso1: valor escrito 68
+Proceso19: ENTRA sección
+Proceso19: SALE sección
+Proceso19: valor escrito 69
+Proceso15: ENTRA sección
+Proceso15: SALE sección
+Proceso15: valor escrito 70
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso16: valor escrito 71
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso22: ENTRA sección
+Proceso14: valor escrito 72
+Proceso22: SALE sección
+Proceso17: ENTRA sección
+Proceso22: valor escrito 73
+Proceso17: SALE sección
+Proceso17: valor escrito 74
+Proceso3: ENTRA sección
+Proceso3: SALE sección
+Proceso3: valor escrito 75
+Proceso2: ENTRA sección
+Proceso2: SALE sección
+Proceso2: valor escrito 76
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso21: valor escrito 77
+Proceso18: ENTRA sección
+Proceso18: SALE sección
+Proceso18: valor escrito 78
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 79
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso25: ENTRA sección
+Proceso4: valor escrito 80
+Proceso25: SALE sección
+Proceso24: ENTRA sección
+Proceso25: valor escrito 81
+Proceso24: SALE sección
+Proceso6: ENTRA sección
+Proceso24: valor escrito 82
+Proceso6: SALE sección
+Proceso23: ENTRA sección
+Proceso6: valor escrito 83
+Proceso23: SALE sección
+Proceso23: valor escrito 84
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso11: valor escrito 85
+Proceso5: ENTRA sección
+Proceso5: SALE sección
+Proceso5: valor escrito 86
+Proceso7: ENTRA sección
+Proceso7: SALE sección
+Proceso7: valor escrito 87
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso12: ENTRA sección
+Proceso13: valor escrito 88
+Proceso12: SALE sección
+Proceso12: valor escrito 89
+Proceso8: ENTRA sección
+Proceso8: SALE sección
+Proceso8: valor escrito 90
+Proceso9: ENTRA sección
+Proceso9: SALE sección
+Proceso9: valor escrito 91
+Proceso10: ENTRA sección
+Proceso10: SALE sección
+Proceso10: valor escrito 92
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso0: valor escrito 93
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso19: ENTRA sección
+Proceso1: valor escrito 94
+Proceso19: SALE sección
+Proceso19: valor escrito 95
+Proceso15: ENTRA sección
+Proceso15: SALE sección
+Proceso15: valor escrito 96
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso16: valor escrito 97
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso14: valor escrito 98
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso22: valor escrito 99
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso17: valor escrito 100
+Proceso3: ENTRA sección
+Proceso3: SALE sección
+Proceso3: valor escrito 101
+Proceso2: ENTRA sección
+Proceso2: SALE sección
+Proceso2: valor escrito 102
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso21: valor escrito 103
+Proceso18: ENTRA sección
+Proceso18: SALE sección
+Proceso18: valor escrito 104
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 105
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso4: valor escrito 106
+Proceso25: ENTRA sección
+Proceso25: SALE sección
+Proceso25: valor escrito 107
+Proceso24: ENTRA sección
+Proceso24: SALE sección
+Proceso6: ENTRA sección
+Proceso24: valor escrito 108
+Proceso6: SALE sección
+Proceso23: ENTRA sección
+Proceso6: valor escrito 109
+Proceso23: SALE sección
+Proceso23: valor escrito 110
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso5: ENTRA sección
+Proceso11: valor escrito 111
+Proceso5: SALE sección
+Proceso5: valor escrito 112
+Proceso7: ENTRA sección
+Proceso7: SALE sección
+Proceso13: ENTRA sección
+Proceso7: valor escrito 113
+Proceso13: SALE sección
+Proceso13: valor escrito 114
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso12: valor escrito 115
+Proceso8: ENTRA sección
+Proceso8: SALE sección
+Proceso8: valor escrito 116
+Proceso9: ENTRA sección
+Proceso9: SALE sección
+Proceso9: valor escrito 117
+Proceso10: ENTRA sección
+Proceso10: SALE sección
+Proceso10: valor escrito 118
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso0: valor escrito 119
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso1: valor escrito 120
+Proceso19: ENTRA sección
+Proceso19: SALE sección
+Proceso19: valor escrito 121
+Proceso15: ENTRA sección
+Proceso15: SALE sección
+Proceso15: valor escrito 122
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso16: valor escrito 123
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso14: valor escrito 124
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso22: valor escrito 125
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso17: valor escrito 126
+Proceso3: ENTRA sección
+Proceso3: SALE sección
+Proceso2: ENTRA sección
+Proceso3: valor escrito 127
+Proceso2: SALE sección
+Proceso2: valor escrito 128
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso18: ENTRA sección
+Proceso21: valor escrito 129
+Proceso18: SALE sección
+Proceso18: valor escrito 130
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 131
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso4: valor escrito 132
+Proceso25: ENTRA sección
+Proceso25: SALE sección
+Proceso24: ENTRA sección
+Proceso25: valor escrito 133
+Proceso24: SALE sección
+Proceso24: valor escrito 134
+Proceso6: ENTRA sección
+Proceso6: SALE sección
+Proceso6: valor escrito 135
+Proceso23: ENTRA sección
+Proceso23: SALE sección
+Proceso23: valor escrito 136
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso11: valor escrito 137
+Proceso5: ENTRA sección
+Proceso5: SALE sección
+Proceso5: valor escrito 138
+Proceso7: ENTRA sección
+Proceso7: SALE sección
+Proceso7: valor escrito 139
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso13: valor escrito 140
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso12: valor escrito 141
+Proceso8: ENTRA sección
+Proceso8: SALE sección
+Proceso8: valor escrito 142
+Proceso9: ENTRA sección
+Proceso9: SALE sección
+Proceso9: valor escrito 143
+Proceso10: ENTRA sección
+Proceso10: SALE sección
+Proceso10: valor escrito 144
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso0: valor escrito 145
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso19: ENTRA sección
+Proceso1: valor escrito 146
+Proceso19: SALE sección
+Proceso19: valor escrito 147
+Proceso15: ENTRA sección
+Proceso15: SALE sección
+Proceso15: valor escrito 148
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso14: ENTRA sección
+Proceso16: valor escrito 149
+Proceso14: SALE sección
+Proceso14: valor escrito 150
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso22: valor escrito 151
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso3: ENTRA sección
+Proceso17: valor escrito 152
+Proceso3: SALE sección
+Proceso3: valor escrito 153
+Proceso2: ENTRA sección
+Proceso2: SALE sección
+Proceso2: valor escrito 154
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso21: valor escrito 155
+Proceso18: ENTRA sección
+Proceso18: SALE sección
+Proceso18: valor escrito 156
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 157
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso4: valor escrito 158
+Proceso25: ENTRA sección
+Proceso25: SALE sección
+Proceso25: valor escrito 159
+Proceso24: ENTRA sección
+Proceso24: SALE sección
+Proceso24: valor escrito 160
+Proceso6: ENTRA sección
+Proceso6: SALE sección
+Proceso6: valor escrito 161
+Proceso23: ENTRA sección
+Proceso23: SALE sección
+Proceso23: valor escrito 162
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso5: ENTRA sección
+Proceso11: valor escrito 163
+Proceso5: SALE sección
+Proceso5: valor escrito 164
+Proceso7: ENTRA sección
+Proceso7: SALE sección
+Proceso7: valor escrito 165
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso13: valor escrito 166
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso12: valor escrito 167
+Proceso8: ENTRA sección
+Proceso8: SALE sección
+Proceso9: ENTRA sección
+Proceso8: valor escrito 168
+Proceso9: SALE sección
+Proceso9: valor escrito 169
+Proceso10: ENTRA sección
+Proceso10: SALE sección
+Proceso10: valor escrito 170
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso0: valor escrito 171
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso1: valor escrito 172
+Proceso19: ENTRA sección
+Proceso19: SALE sección
+Proceso19: valor escrito 173
+Proceso15: ENTRA sección
+Proceso15: SALE sección
+Proceso15: valor escrito 174
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso16: valor escrito 175
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso14: valor escrito 176
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso17: ENTRA sección
+Proceso22: valor escrito 177
+Proceso17: SALE sección
+Proceso17: valor escrito 178
+Proceso3: ENTRA sección
+Proceso3: SALE sección
+Proceso3: valor escrito 179
+Proceso2: ENTRA sección
+Proceso2: SALE sección
+Proceso2: valor escrito 180
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso18: ENTRA sección
+Proceso21: valor escrito 181
+Proceso18: SALE sección
+Proceso18: valor escrito 182
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 183
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso4: valor escrito 184
+Proceso25: ENTRA sección
+Proceso25: SALE sección
+Proceso25: valor escrito 185
+Proceso24: ENTRA sección
+Proceso24: SALE sección
+Proceso6: ENTRA sección
+Proceso24: valor escrito 186
+Proceso6: SALE sección
+Proceso23: ENTRA sección
+Proceso6: valor escrito 187
+Proceso23: SALE sección
+Proceso23: valor escrito 188
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso11: valor escrito 189
+Proceso5: ENTRA sección
+Proceso5: SALE sección
+Proceso5: valor escrito 190
+Proceso7: ENTRA sección
+Proceso7: SALE sección
+Proceso7: valor escrito 191
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso13: valor escrito 192
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso12: valor escrito 193
+Proceso8: ENTRA sección
+Proceso8: SALE sección
+Proceso8: valor escrito 194
+Proceso9: ENTRA sección
+Proceso9: SALE sección
+Proceso9: valor escrito 195
+Proceso10: ENTRA sección
+Proceso10: SALE sección
+Proceso0: ENTRA sección
+Proceso10: valor escrito 196
+Proceso0: SALE sección
+Proceso0: valor escrito 197
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso1: valor escrito 198
+Proceso19: ENTRA sección
+Proceso19: SALE sección
+Proceso15: ENTRA sección
+Proceso19: valor escrito 199
+Proceso15: SALE sección
+Proceso16: ENTRA sección
+Proceso15: valor escrito 200
+Proceso16: SALE sección
+Proceso16: valor escrito 201
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso14: valor escrito 202
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso22: valor escrito 203
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso17: valor escrito 204
+Proceso3: ENTRA sección
+Proceso3: SALE sección
+Proceso3: valor escrito 205
+Proceso2: ENTRA sección
+Proceso2: SALE sección
+Proceso2: valor escrito 206
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso18: ENTRA sección
+Proceso21: valor escrito 207
+Proceso18: SALE sección
+Proceso18: valor escrito 208
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 209
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso4: valor escrito 210
+Proceso25: ENTRA sección
+Proceso25: SALE sección
+Proceso25: valor escrito 211
+Proceso24: ENTRA sección
+Proceso24: SALE sección
+Proceso6: ENTRA sección
+Proceso24: valor escrito 212
+Proceso6: SALE sección
+Proceso23: ENTRA sección
+Proceso6: valor escrito 213
+Proceso23: SALE sección
+Proceso23: valor escrito 214
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso11: valor escrito 215
+Proceso5: ENTRA sección
+Proceso5: SALE sección
+Proceso5: valor escrito 216
+Proceso7: ENTRA sección
+Proceso7: SALE sección
+Proceso7: valor escrito 217
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso12: ENTRA sección
+Proceso13: valor escrito 218
+Proceso12: SALE sección
+Proceso8: ENTRA sección
+Proceso12: valor escrito 219
+Proceso8: SALE sección
+Proceso9: ENTRA sección
+Proceso8: valor escrito 220
+Proceso9: SALE sección
+Proceso10: ENTRA sección
+Proceso9: valor escrito 221
+Proceso10: SALE sección
+Proceso10: valor escrito 222
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso0: valor escrito 223
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso19: ENTRA sección
+Proceso1: valor escrito 224
+Proceso19: SALE sección
+Proceso19: valor escrito 225
+Proceso15: ENTRA sección
+Proceso15: SALE sección
+Proceso16: ENTRA sección
+Proceso15: valor escrito 226
+Proceso16: SALE sección
+Proceso14: ENTRA sección
+Proceso16: valor escrito 227
+Proceso14: SALE sección
+Proceso22: ENTRA sección
+Proceso14: valor escrito 228
+Proceso22: SALE sección
+Proceso22: valor escrito 229
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso17: valor escrito 230
+Proceso3: ENTRA sección
+Proceso3: SALE sección
+Proceso3: valor escrito 231
+Proceso2: ENTRA sección
+Proceso2: SALE sección
+Proceso2: valor escrito 232
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso21: valor escrito 233
+Proceso18: ENTRA sección
+Proceso18: SALE sección
+Proceso18: valor escrito 234
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 235
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso25: ENTRA sección
+Proceso4: valor escrito 236
+Proceso25: SALE sección
+Proceso25: valor escrito 237
+Proceso24: ENTRA sección
+Proceso24: SALE sección
+Proceso24: valor escrito 238
+Proceso6: ENTRA sección
+Proceso6: SALE sección
+Proceso23: ENTRA sección
+Proceso6: valor escrito 239
+Proceso23: SALE sección
+Proceso23: valor escrito 240
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso11: valor escrito 241
+Proceso5: ENTRA sección
+Proceso5: SALE sección
+Proceso7: ENTRA sección
+Proceso5: valor escrito 242
+Proceso7: SALE sección
+Proceso7: valor escrito 243
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso13: valor escrito 244
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso12: valor escrito 245
+Proceso8: ENTRA sección
+Proceso8: SALE sección
+Proceso8: valor escrito 246
+Proceso9: ENTRA sección
+Proceso9: SALE sección
+Proceso9: valor escrito 247
+Proceso10: ENTRA sección
+Proceso10: SALE sección
+Proceso10: valor escrito 248
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso0: valor escrito 249
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso19: ENTRA sección
+Proceso1: valor escrito 250
+Proceso19: SALE sección
+Proceso15: ENTRA sección
+Proceso19: valor escrito 251
+Proceso15: SALE sección
+Proceso15: valor escrito 252
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso16: valor escrito 253
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso14: valor escrito 254
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso22: valor escrito 255
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso3: ENTRA sección
+Proceso17: valor escrito 256
+Proceso3: SALE sección
+Proceso2: ENTRA sección
+Proceso3: valor escrito 257
+Proceso2: SALE sección
+Proceso2: valor escrito 258
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso21: valor escrito 259
+Proceso18: ENTRA sección
+Proceso18: SALE sección
+Proceso18: valor escrito 260
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 261
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso25: ENTRA sección
+Proceso4: valor escrito 262
+Proceso25: SALE sección
+Proceso24: ENTRA sección
+Proceso25: valor escrito 263
+Proceso24: SALE sección
+Proceso24: valor escrito 264
+Proceso6: ENTRA sección
+Proceso6: SALE sección
+Proceso23: ENTRA sección
+Proceso6: valor escrito 265
+Proceso23: SALE sección
+Proceso23: valor escrito 266
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso11: valor escrito 267
+Proceso5: ENTRA sección
+Proceso5: SALE sección
+Proceso7: ENTRA sección
+Proceso5: valor escrito 268
+Proceso7: SALE sección
+Proceso7: valor escrito 269
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso13: valor escrito 270
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso8: ENTRA sección
+Proceso12: valor escrito 271
+Proceso8: SALE sección
+Proceso8: valor escrito 272
+Proceso9: ENTRA sección
+Proceso9: SALE sección
+Proceso9: valor escrito 273
+Proceso10: ENTRA sección
+Proceso10: SALE sección
+Proceso10: valor escrito 274
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso0: valor escrito 275
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso19: ENTRA sección
+Proceso1: valor escrito 276
+Proceso19: SALE sección
+Proceso19: valor escrito 277
+Proceso15: ENTRA sección
+Proceso15: SALE sección
+Proceso15: valor escrito 278
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso16: valor escrito 279
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso14: valor escrito 280
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso22: valor escrito 281
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso17: valor escrito 282
+Proceso3: ENTRA sección
+Proceso3: SALE sección
+Proceso3: valor escrito 283
+Proceso2: ENTRA sección
+Proceso2: SALE sección
+Proceso2: valor escrito 284
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso18: ENTRA sección
+Proceso21: valor escrito 285
+Proceso18: SALE sección
+Proceso18: valor escrito 286
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 287
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso25: ENTRA sección
+Proceso4: valor escrito 288
+Proceso25: SALE sección
+Proceso25: valor escrito 289
+Proceso24: ENTRA sección
+Proceso24: SALE sección
+Proceso24: valor escrito 290
+Proceso6: ENTRA sección
+Proceso6: SALE sección
+Proceso6: valor escrito 291
+Proceso23: ENTRA sección
+Proceso23: SALE sección
+Proceso11: ENTRA sección
+Proceso23: valor escrito 292
+Proceso11: SALE sección
+Proceso11: valor escrito 293
+Proceso5: ENTRA sección
+Proceso5: SALE sección
+Proceso5: valor escrito 294
+Proceso7: ENTRA sección
+Proceso7: SALE sección
+Proceso7: valor escrito 295
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso13: valor escrito 296
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso12: valor escrito 297
+Proceso8: ENTRA sección
+Proceso8: SALE sección
+Proceso8: valor escrito 298
+Proceso9: ENTRA sección
+Proceso9: SALE sección
+Proceso9: valor escrito 299
+Proceso10: ENTRA sección
+Proceso10: SALE sección
+Proceso10: valor escrito 300
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso0: valor escrito 301
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso19: ENTRA sección
+Proceso1: valor escrito 302
+Proceso19: SALE sección
+Proceso15: ENTRA sección
+Proceso19: valor escrito 303
+Proceso15: SALE sección
+Proceso15: valor escrito 304
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso16: valor escrito 305
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso14: valor escrito 306
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso22: valor escrito 307
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso17: valor escrito 308
+Proceso3: ENTRA sección
+Proceso3: SALE sección
+Proceso2: ENTRA sección
+Proceso3: valor escrito 309
+Proceso2: SALE sección
+Proceso2: valor escrito 310
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso18: ENTRA sección
+Proceso21: valor escrito 311
+Proceso18: SALE sección
+Proceso18: valor escrito 312
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 313
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso4: valor escrito 314
+Proceso25: ENTRA sección
+Proceso25: SALE sección
+Proceso25: valor escrito 315
+Proceso24: ENTRA sección
+Proceso24: SALE sección
+Proceso24: valor escrito 316
+Proceso6: ENTRA sección
+Proceso6: SALE sección
+Proceso23: ENTRA sección
+Proceso6: valor escrito 317
+Proceso23: SALE sección
+Proceso23: valor escrito 318
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso11: valor escrito 319
+Proceso5: ENTRA sección
+Proceso5: SALE sección
+Proceso7: ENTRA sección
+Proceso5: valor escrito 320
+Proceso7: SALE sección
+Proceso7: valor escrito 321
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso13: valor escrito 322
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso12: valor escrito 323
+Proceso8: ENTRA sección
+Proceso8: SALE sección
+Proceso8: valor escrito 324
+Proceso9: ENTRA sección
+Proceso9: SALE sección
+Proceso10: ENTRA sección
+Proceso9: valor escrito 325
+Proceso10: SALE sección
+Proceso0: ENTRA sección
+Proceso10: valor escrito 326
+Proceso0: SALE sección
+Proceso0: valor escrito 327
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso19: ENTRA sección
+Proceso1: valor escrito 328
+Proceso19: SALE sección
+Proceso19: valor escrito 329
+Proceso15: ENTRA sección
+Proceso15: SALE sección
+Proceso15: valor escrito 330
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso16: valor escrito 331
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso14: valor escrito 332
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso22: valor escrito 333
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso17: valor escrito 334
+Proceso3: ENTRA sección
+Proceso3: SALE sección
+Proceso3: valor escrito 335
+Proceso2: ENTRA sección
+Proceso2: SALE sección
+Proceso2: valor escrito 336
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso21: valor escrito 337
+Proceso18: ENTRA sección
+Proceso18: SALE sección
+Proceso18: valor escrito 338
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 339
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso25: ENTRA sección
+Proceso4: valor escrito 340
+Proceso25: SALE sección
+Proceso25: valor escrito 341
+Proceso24: ENTRA sección
+Proceso24: SALE sección
+Proceso24: valor escrito 342
+Proceso6: ENTRA sección
+Proceso6: SALE sección
+Proceso6: valor escrito 343
+Proceso23: ENTRA sección
+Proceso23: SALE sección
+Proceso23: valor escrito 344
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso5: ENTRA sección
+Proceso11: valor escrito 345
+Proceso5: SALE sección
+Proceso7: ENTRA sección
+Proceso5: valor escrito 346
+Proceso7: SALE sección
+Proceso7: valor escrito 347
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso13: valor escrito 348
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso8: ENTRA sección
+Proceso12: valor escrito 349
+Proceso8: SALE sección
+Proceso8: valor escrito 350
+Proceso9: ENTRA sección
+Proceso9: SALE sección
+Proceso10: ENTRA sección
+Proceso9: valor escrito 351
+Proceso10: SALE sección
+Proceso10: valor escrito 352
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso1: ENTRA sección
+Proceso0: valor escrito 353
+Proceso1: SALE sección
+Proceso1: valor escrito 354
+Proceso19: ENTRA sección
+Proceso19: SALE sección
+Proceso15: ENTRA sección
+Proceso19: valor escrito 355
+Proceso15: SALE sección
+Proceso16: ENTRA sección
+Proceso15: valor escrito 356
+Proceso16: SALE sección
+Proceso16: valor escrito 357
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso22: ENTRA sección
+Proceso14: valor escrito 358
+Proceso22: SALE sección
+Proceso22: valor escrito 359
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso17: valor escrito 360
+Proceso3: ENTRA sección
+Proceso3: SALE sección
+Proceso2: ENTRA sección
+Proceso3: valor escrito 361
+Proceso2: SALE sección
+Proceso21: ENTRA sección
+Proceso2: valor escrito 362
+Proceso21: SALE sección
+Proceso21: valor escrito 363
+Proceso18: ENTRA sección
+Proceso18: SALE sección
+Proceso20: ENTRA sección
+Proceso18: valor escrito 364
+Proceso20: SALE sección
+Proceso4: ENTRA sección
+Proceso20: valor escrito 365
+Proceso4: SALE sección
+Proceso4: valor escrito 366
+Proceso25: ENTRA sección
+Proceso25: SALE sección
+Proceso25: valor escrito 367
+Proceso24: ENTRA sección
+Proceso24: SALE sección
+Proceso24: valor escrito 368
+Proceso6: ENTRA sección
+Proceso6: SALE sección
+Proceso6: valor escrito 369
+Proceso23: ENTRA sección
+Proceso23: SALE sección
+Proceso23: valor escrito 370
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso11: valor escrito 371
+Proceso5: ENTRA sección
+Proceso5: SALE sección
+Proceso5: valor escrito 372
+Proceso7: ENTRA sección
+Proceso7: SALE sección
+Proceso7: valor escrito 373
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso13: valor escrito 374
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso12: valor escrito 375
+Proceso8: ENTRA sección
+Proceso8: SALE sección
+Proceso8: valor escrito 376
+Proceso9: ENTRA sección
+Proceso9: SALE sección
+Proceso9: valor escrito 377
+Proceso10: ENTRA sección
+Proceso10: SALE sección
+Proceso10: valor escrito 378
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso0: valor escrito 379
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso19: ENTRA sección
+Proceso1: valor escrito 380
+Proceso19: SALE sección
+Proceso15: ENTRA sección
+Proceso19: valor escrito 381
+Proceso15: SALE sección
+Proceso15: valor escrito 382
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso16: valor escrito 383
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso14: valor escrito 384
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso22: valor escrito 385
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso3: ENTRA sección
+Proceso17: valor escrito 386
+Proceso3: SALE sección
+Proceso3: valor escrito 387
+Proceso2: ENTRA sección
+Proceso2: SALE sección
+Proceso21: ENTRA sección
+Proceso2: valor escrito 388
+Proceso21: SALE sección
+Proceso21: valor escrito 389
+Proceso18: ENTRA sección
+Proceso18: SALE sección
+Proceso18: valor escrito 390
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso4: ENTRA sección
+Proceso20: valor escrito 391
+Proceso4: SALE sección
+Proceso4: valor escrito 392
+Proceso25: ENTRA sección
+Proceso25: SALE sección
+Proceso24: ENTRA sección
+Proceso25: valor escrito 393
+Proceso24: SALE sección
+Proceso24: valor escrito 394
+Proceso6: ENTRA sección
+Proceso6: SALE sección
+Proceso6: valor escrito 395
+Proceso23: ENTRA sección
+Proceso23: SALE sección
+Proceso23: valor escrito 396
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso5: ENTRA sección
+Proceso11: valor escrito 397
+Proceso5: SALE sección
+Proceso7: ENTRA sección
+Proceso5: valor escrito 398
+Proceso7: SALE sección
+Proceso7: valor escrito 399
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso12: ENTRA sección
+Proceso13: valor escrito 400
+Proceso12: SALE sección
+Proceso8: ENTRA sección
+Proceso12: valor escrito 401
+Proceso8: SALE sección
+Proceso8: valor escrito 402
+Proceso9: ENTRA sección
+Proceso9: SALE sección
+Proceso9: valor escrito 403
+Proceso10: ENTRA sección
+Proceso10: SALE sección
+Proceso10: valor escrito 404
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso0: valor escrito 405
+Proceso1: ENTRA sección
+Proceso1: SALE sección
+Proceso1: valor escrito 406
+Proceso19: ENTRA sección
+Proceso19: SALE sección
+Proceso15: ENTRA sección
+Proceso19: valor escrito 407
+Proceso15: SALE sección
+Proceso15: valor escrito 408
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso16: valor escrito 409
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso14: valor escrito 410
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso22: valor escrito 411
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso3: ENTRA sección
+Proceso17: valor escrito 412
+Proceso3: SALE sección
+Proceso3: valor escrito 413
+Proceso2: ENTRA sección
+Proceso2: SALE sección
+Proceso2: valor escrito 414
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso21: valor escrito 415
+Proceso18: ENTRA sección
+Proceso18: SALE sección
+Proceso18: valor escrito 416
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso4: ENTRA sección
+Proceso20: valor escrito 417
+Proceso4: SALE sección
+Proceso4: valor escrito 418
+Proceso25: ENTRA sección
+Proceso25: SALE sección
+Proceso25: valor escrito 419
+Proceso24: ENTRA sección
+Proceso24: SALE sección
+Proceso24: valor escrito 420
+Proceso6: ENTRA sección
+Proceso6: SALE sección
+Proceso6: valor escrito 421
+Proceso23: ENTRA sección
+Proceso23: SALE sección
+Proceso23: valor escrito 422
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso11: valor escrito 423
+Proceso5: ENTRA sección
+Proceso5: SALE sección
+Proceso7: ENTRA sección
+Proceso5: valor escrito 424
+Proceso7: SALE sección
+Proceso13: ENTRA sección
+Proceso7: valor escrito 425
+Proceso13: SALE sección
+Proceso13: valor escrito 426
+Proceso12: ENTRA sección
+Proceso12: SALE sección
+Proceso8: ENTRA sección
+Proceso12: valor escrito 427
+Proceso8: SALE sección
+Proceso8: valor escrito 428
+Proceso9: ENTRA sección
+Proceso9: SALE sección
+Proceso9: valor escrito 429
+Proceso10: ENTRA sección
+Proceso10: SALE sección
+Proceso0: ENTRA sección
+Proceso10: valor escrito 430
+Proceso0: SALE sección
+Proceso1: ENTRA sección
+Proceso0: valor escrito 431
+Proceso1: SALE sección
+Proceso1: valor escrito 432
+Proceso19: ENTRA sección
+Proceso19: SALE sección
+Proceso19: valor escrito 433
+Proceso15: ENTRA sección
+Proceso15: SALE sección
+Proceso16: ENTRA sección
+Proceso15: valor escrito 434
+Proceso16: SALE sección
+Proceso16: valor escrito 435
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso14: valor escrito 436
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso22: valor escrito 437
+Proceso17: ENTRA sección
+Proceso17: SALE sección
+Proceso3: ENTRA sección
+Proceso17: valor escrito 438
+Proceso3: SALE sección
+Proceso2: ENTRA sección
+Proceso3: valor escrito 439
+Proceso2: SALE sección
+Proceso2: valor escrito 440
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso21: valor escrito 441
+Proceso18: ENTRA sección
+Proceso18: SALE sección
+Proceso18: valor escrito 442
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 443
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso25: ENTRA sección
+Proceso4: valor escrito 444
+Proceso25: SALE sección
+Proceso24: ENTRA sección
+Proceso25: valor escrito 445
+Proceso24: SALE sección
+Proceso24: valor escrito 446
+Proceso6: ENTRA sección
+Proceso6: SALE sección
+Proceso6: valor escrito 447
+Proceso23: ENTRA sección
+Proceso23: SALE sección
+Proceso23: valor escrito 448
+Proceso11: ENTRA sección
+Proceso11: SALE sección
+Proceso11: valor escrito 449
+Proceso5: ENTRA sección
+Proceso5: SALE sección
+Proceso7: ENTRA sección
+Proceso5: valor escrito 450
+Proceso7: SALE sección
+Proceso7: valor escrito 451
+Proceso13: ENTRA sección
+Proceso13: SALE sección
+Proceso12: ENTRA sección
+Proceso13: valor escrito 452
+Proceso12: SALE sección
+Proceso8: ENTRA sección
+Proceso12: valor escrito 453
+Proceso8: SALE sección
+Proceso9: ENTRA sección
+Proceso8: valor escrito 454
+Proceso9: SALE sección
+Proceso10: ENTRA sección
+Proceso9: valor escrito 455
+Proceso10: SALE sección
+Proceso10: valor escrito 456
+Proceso0: ENTRA sección
+Proceso0: SALE sección
+Proceso1: ENTRA sección
+Proceso0: valor escrito 457
+Proceso1: SALE sección
+Proceso1: valor escrito 458
+Proceso19: ENTRA sección
+Proceso19: SALE sección
+Proceso15: ENTRA sección
+Proceso19: valor escrito 459
+Proceso15: SALE sección
+Proceso15: valor escrito 460
+Proceso16: ENTRA sección
+Proceso16: SALE sección
+Proceso16: valor escrito 461
+Proceso14: ENTRA sección
+Proceso14: SALE sección
+Proceso14: valor escrito 462
+Proceso22: ENTRA sección
+Proceso22: SALE sección
+Proceso17: ENTRA sección
+Proceso22: valor escrito 463
+Proceso17: SALE sección
+Proceso3: ENTRA sección
+Proceso17: valor escrito 464
+Proceso3: SALE sección
+Proceso2: ENTRA sección
+Proceso3: valor escrito 465
+Proceso2: SALE sección
+Proceso2: valor escrito 466
+Proceso21: ENTRA sección
+Proceso21: SALE sección
+Proceso21: valor escrito 467
+Proceso18: ENTRA sección
+Proceso18: SALE sección
+Proceso18: valor escrito 468
+Proceso20: ENTRA sección
+Proceso20: SALE sección
+Proceso20: valor escrito 469
+Proceso4: ENTRA sección
+Proceso4: SALE sección
+Proceso4: valor escrito 470
+Proceso25: ENTRA sección
+Proceso25: SALE sección
+Proceso25: valor escrito 471
+Proceso24: ENTRA sección
