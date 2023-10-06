@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/22_ventajas_y_uso_de_hilos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.- Ventajas y uso de hilos. | PSP_02 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="PSP_02" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_02</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Programación multihilo.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li class="current-page-parent"><a href="2_CONCEP.HTM" class="current-page-parent daddy">2.- Conceptos sobre hilos.</a>
+   <ul>
+      <li><a href="21_RECUR.HTM" class="no-ch">2.1.- Recursos compartidos por los hilos.</a></li>
+      <li id="active"><a href="22_VENTA.HTM" class="active no-ch">2.2.- Ventajas y uso de hilos.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_MULTIH.HTM" class="daddy">3.- Multihilo en Java. Librerías y clases.</a>
+   <ul class="other-section">
+      <li><a href="31_UTILI.HTM" class="no-ch">3.1.- Utilidades de concurrencia del paquete java.lang.</a></li>
+      <li><a href="32_UTILI.HTM" class="no-ch">3.2.- Utilidades de concurrencia del paquete java.util.concurrent.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_CREACI.HTM" class="daddy">4.- Creación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="41_CREAC.HTM" class="no-ch">4.1.- Creación de hilos extendiendo la clase Thread.</a></li>
+      <li><a href="42_CREAC.HTM" class="no-ch">4.2.- Creación de hilos mediante la interfaz Runnable.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_ESTADO.HTM" class="daddy">5.- Estados de un hilo.</a>
+   <ul class="other-section">
+      <li><a href="51_INICI.HTM" class="no-ch">5.1.- Iniciar un hilo.</a></li>
+      <li><a href="52_DETEN.HTM" class="no-ch">5.2.- Detener temporalmente un hilo.</a></li>
+      <li><a href="53_FINAL.HTM" class="no-ch">5.3.- Finalizar un hilo.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo. Dormir un hilo con sleep.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_GESTIN.HTM" class="daddy">6.- Gestión y planificación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="61_PRIOR.HTM" class="no-ch">6.1.- Prioridad de hilos.</a></li>
+      <li><a href="62_HILOS.HTM" class="no-ch">6.2.- Hilos egoístas y programación expulsora.</a></li>
+   </ul>
+   </li>
+   <li><a href="7_SINCRO.HTM" class="daddy">7.- Sincronización y comunicación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="71_INFOR.HTM" class="no-ch">7.1.- Información compartida entre hilos.</a></li>
+      <li><a href="72_MONIT.HTM" class="no-ch">7.2.- Monitores. Métodos synchronized.</a></li>
+      <li><a href="73_MONIT.HTM" class="no-ch">7.3.- Monitores. Segmentos de código synchronized.</a></li>
+      <li><a href="74_COMUN.HTM" class="no-ch">7.4.- Comunicación entre hilos con métodos de java.lang.Object.</a></li>
+      <li><a href="75_EL_PR.HTM" class="no-ch">7.5.- El problema del interbloqueo (deadlock).</a></li>
+      <li><a href="76_LA_CL.HTM" class="no-ch">7.6.- La clase Semaphore.</a></li>
+      <li><a href="77_LA_CL.HTM" class="no-ch">7.7.- La clase Exchanger.</a></li>
+      <li><a href="78_LAS_C.HTM" class="no-ch">7.8.- Las clase CountDownLatch.</a></li>
+      <li><a href="79_LA_CL.HTM" class="no-ch">7.9.- La clase CyclicBarrier.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_APLICA.HTM" class="daddy">8.- Aplicaciones multihilo.</a>
+   <ul class="other-section">
+      <li><a href="81_OTRAS.HTM" class="no-ch">8.1.- Otras utilidades de concurrencia.</a></li>
+      <li><a href="82_LA_IN.HTM" class="no-ch">8.2.- La interfaz Executor y los pools de hilos.</a></li>
+      <li><a href="83_GESTI.HTM" class="no-ch">8.3.- Gestión de excepciones.</a></li>
+      <li><a href="84_DEPUR.HTM" class="no-ch">8.4.- Depuración y documentación.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_RECUR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_MULTIH.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.- Ventajas y uso de hilos.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id11">
+<div class="iDevice emphasis0">
+<div id="ta11_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a href="../JPG/PSP02-11.JPG" title="Ampliar imagen."><img alt="Dibujo de un proceso como un rectágulo grueso y  un hilo o proceso ligero como un rectángulo delgado." class="imagen_ampliable" src="../JPG/PSP02-12.JPG" style="width: 180px; height: 160px;" title="Proceso y Proceso ligero." width="180" height="160" /></a></div>
+</div>
+<p>Como consecuencia de compartir el espacio de memoria, los hilos aportan las siguientes <strong>ventajas sobre los procesos</strong>:</p>
+<ul class="lista_verificacion">
+<li>Se consumen menos recursos en el lanzamiento, y la ejecución de un hilo que en el lanzamiento y ejecución de un proceso.</li>
+<li>Se tarda menos tiempo en crear y terminar un hilo que un proceso.</li>
+<li>La conmutación entre hilos del mismo proceso o cambio de contexto es bastante más rápida que entre procesos.</li>
+</ul>
+<p>Es por esas razones, por lo que a los hilos se les denomina también <strong>procesos ligeros</strong>.</p>
+<p>Y ¿<strong>cuándo se aconseja utilizar hilos</strong>? Se aconseja utilizar hilos en una aplicación cuando:</p>
+<ul class="lista_verificacion">
+<li>La aplicación maneja entradas de varios dispositivos de comunicación.</li>
+<li>La aplicación debe poder realizar diferentes tareas a la vez.</li>
+<li>Interesa diferenciar tareas con una prioridad variada. Por ejemplo, una prioridad alta para manejar tareas de tiempo crítico y una prioridad baja para otras tareas.</li>
+<li>La aplicación se va a ejecutar en un entorno multiprocesador.</li>
+</ul>
+<p>Por ejemplo, imagina la siguiente situación:</p>
+<ul class="lista_verificacion">
+<li>Debes crear una aplicación que se ejecutará en un servidor para atender peticiones de clientes. Esta aplicación podría ser un servidor de bases de datos, o un servidor web.</li>
+<li>Cuando se ejecuta el programa éste abre su puerto y queda a la escucha, esperando recibir peticiones.</li>
+<li>Si cuando recibe una petición de un cliente se pone a procesarla para obtener una respuesta y devolverla, cualquier petición que reciba mientras tanto no podrá atenderla, puesto que está ocupado.</li>
+<li>La solución será construir la aplicación con múltiples hilos de ejecución.</li>
+<li>En este caso, al ejecutar la aplicación se pone en marcha el hilo principal, que queda a la escucha.</li>
+<li>Cuando el hilo principal recibe una petición, creará un nuevo hilo que se encarga de procesarla y generar la consulta, mientras tanto el hilo principal sigue a la escucha recibiendo peticiones y creando hilos.</li>
+<li>De esta manera un gestor de bases de datos puede atender consultas de varios clientes, o un servidor web puede atender a miles de clientes.</li>
+<li>Si el número de peticiones simultáneas es elevado, la creación de un hilo para cada una de ellas puede comprometer los recursos del sistema. En este caso, como veremos al final de la unidad lo resolveremos mejor con un <span lang="en">pool</span> de hilos.</li>
+</ul>
+<p>Resumiendo, los hilos son idóneos para programar aplicaciones de entornos interactivos y en red, así como simuladores y animaciones.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id12">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta12_70" class="block iDevice_content">
+Los hilos son más frecuentes de lo que parece.  De hecho, todos los programas con interfaz gráfico son multihilo porque los eventos y las rutinas de dibujado de las ventanas corren en un hilo distinto al principal. Por ejemplo en Java,  <acronym lang="en" title="X Window Toolkit para Java.">AWT</acronym> o la biblioteca gráfica <code>Swing</code> usan hilos. 
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id13">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_54" class="block iDevice_content">
+<strong>Señala si la afirmación siguiente es verdadera o falsa:</strong>
+
+</div>
+<section class="question">
+<form name="true-false-form-0b13" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b13" class="block iDevice_content">
+La conmutación entre procesos  es mas rápida que la conmutación entre hilos.
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b13"><input type="radio" name="option0b13" id="true0b13" class="exe-radio-option exe-radio-option-0-2-0b13-truefalse" /> Verdadero</label> 
+<label for="false0b13"><input type="radio" name="option0b13" id="false0b13" class="exe-radio-option exe-radio-option-1-2-0b13-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b13" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b13-result" class="wrong">Falso</strong></p>
+La afirmación es falsa,  la conmutación entre hilos es más rápida que entre procesos, ya que los hilos comparten un  mismo espacio de direcciones.
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_RECUR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_MULTIH.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/22_ventajas_y_uso_de_hilos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:39 GMT -->
+</html>

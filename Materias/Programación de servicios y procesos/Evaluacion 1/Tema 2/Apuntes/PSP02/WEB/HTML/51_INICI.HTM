@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/51_iniciar_un_hilo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.1.- Iniciar un hilo. | PSP_02 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="PSP_02" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<link rel="stylesheet" type="text/css" href="../CSS/INTERACT.CSS" />
+<script type="text/javascript" src="../JS/INTERACT.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_02</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Programación multihilo.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_CONCEP.HTM" class="daddy">2.- Conceptos sobre hilos.</a>
+   <ul class="other-section">
+      <li><a href="21_RECUR.HTM" class="no-ch">2.1.- Recursos compartidos por los hilos.</a></li>
+      <li><a href="22_VENTA.HTM" class="no-ch">2.2.- Ventajas y uso de hilos.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_MULTIH.HTM" class="daddy">3.- Multihilo en Java. Librerías y clases.</a>
+   <ul class="other-section">
+      <li><a href="31_UTILI.HTM" class="no-ch">3.1.- Utilidades de concurrencia del paquete java.lang.</a></li>
+      <li><a href="32_UTILI.HTM" class="no-ch">3.2.- Utilidades de concurrencia del paquete java.util.concurrent.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_CREACI.HTM" class="daddy">4.- Creación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="41_CREAC.HTM" class="no-ch">4.1.- Creación de hilos extendiendo la clase Thread.</a></li>
+      <li><a href="42_CREAC.HTM" class="no-ch">4.2.- Creación de hilos mediante la interfaz Runnable.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_ESTADO.HTM" class="current-page-parent daddy">5.- Estados de un hilo.</a>
+   <ul>
+      <li id="active"><a href="51_INICI.HTM" class="active no-ch">5.1.- Iniciar un hilo.</a></li>
+      <li><a href="52_DETEN.HTM" class="no-ch">5.2.- Detener temporalmente un hilo.</a></li>
+      <li><a href="53_FINAL.HTM" class="no-ch">5.3.- Finalizar un hilo.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo. Dormir un hilo con sleep.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_GESTIN.HTM" class="daddy">6.- Gestión y planificación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="61_PRIOR.HTM" class="no-ch">6.1.- Prioridad de hilos.</a></li>
+      <li><a href="62_HILOS.HTM" class="no-ch">6.2.- Hilos egoístas y programación expulsora.</a></li>
+   </ul>
+   </li>
+   <li><a href="7_SINCRO.HTM" class="daddy">7.- Sincronización y comunicación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="71_INFOR.HTM" class="no-ch">7.1.- Información compartida entre hilos.</a></li>
+      <li><a href="72_MONIT.HTM" class="no-ch">7.2.- Monitores. Métodos synchronized.</a></li>
+      <li><a href="73_MONIT.HTM" class="no-ch">7.3.- Monitores. Segmentos de código synchronized.</a></li>
+      <li><a href="74_COMUN.HTM" class="no-ch">7.4.- Comunicación entre hilos con métodos de java.lang.Object.</a></li>
+      <li><a href="75_EL_PR.HTM" class="no-ch">7.5.- El problema del interbloqueo (deadlock).</a></li>
+      <li><a href="76_LA_CL.HTM" class="no-ch">7.6.- La clase Semaphore.</a></li>
+      <li><a href="77_LA_CL.HTM" class="no-ch">7.7.- La clase Exchanger.</a></li>
+      <li><a href="78_LAS_C.HTM" class="no-ch">7.8.- Las clase CountDownLatch.</a></li>
+      <li><a href="79_LA_CL.HTM" class="no-ch">7.9.- La clase CyclicBarrier.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_APLICA.HTM" class="daddy">8.- Aplicaciones multihilo.</a>
+   <ul class="other-section">
+      <li><a href="81_OTRAS.HTM" class="no-ch">8.1.- Otras utilidades de concurrencia.</a></li>
+      <li><a href="82_LA_IN.HTM" class="no-ch">8.2.- La interfaz Executor y los pools de hilos.</a></li>
+      <li><a href="83_GESTI.HTM" class="no-ch">8.3.- Gestión de excepciones.</a></li>
+      <li><a href="84_DEPUR.HTM" class="no-ch">8.4.- Depuración y documentación.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="5_ESTADO.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_DETEN.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.1.- Iniciar un hilo.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id34">
+<div class="iDevice emphasis0">
+<div id="ta34_73" class="block iDevice_content">
+<p><img alt="Muestra la palabra start seguida de dos paréntesis, en color azul." class="elemento_derecha" height="80" src="../JPG/PSP02-25.JPG" style="width: 200px; height: 80px;" title="Start." width="200" /></p>
+<p>Cuando se crea un nuevo hilo o <code>thread</code> mediante el método<code> new()</code>, no implica que el hilo ya se pueda ejecutar.</p>
+<p>Para que el hilo se pueda ejecutar, debe estar en el estado "Ejecutable", y para conseguir ese estado es necesario <strong>iniciar o arrancar el hilo</strong> mediante el método <strong>start()</strong> de la clase <code>thread()</code>.</p>
+<p>En los ejemplos anteriores, recuerda que teníamos el código <code>hilo1.start()</code>; que precisamente se encargaba de iniciar el hilo representado por el objeto <code>thread hilo1</code>.</p>
+<p>En realidad el método <code>start()</code> <strong>realiza las siguientes tareas</strong>:</p>
+<ul class="lista_verificacion">
+<li>Crea los recursos del sistema necesarios para ejecutar el hilo.</li>
+<li>Se encarga de <strong>llamar a su método</strong> <code>run()</code> <strong>y lo ejecuta como un subproceso nuevo e independiente</strong>.</li>
+</ul>
+<p>Es por esto último que cuando se invoca a <code>start()</code> se suele decir que el hilo está "corriendo" ("<span lang="en">running</span>"), pero recuerda que esto no significa que el hilo esté ejecutándose en todo momento, ya que <strong>un hilo "Ejecutable" puede estar "Preparado" o "Ejecutándose"</strong> según tenga o no asignado tiempo de procesamiento.</p>
+<p>Algunas <strong>consideraciones importantes</strong> que debes tener en cuenta son las siguientes:</p>
+<ul class="lista_verificacion">
+<li>Puedes invocar directamente al método <code>run()</code>, por ejemplo poner <code>hilo1.run()</code>; y se ejecutará el código asociado a <code>run()</code> dentro del hilo actual (como cualquier otro método), pero no comenzará un nuevo hilo como subproceso independiente.</li>
+<li>Una vez que se ha llamado al método <code>start()</code> de un hilo, no puedes volver a realizar otra llamada al mismo método. Si lo haces, obtendrás una excepción <code>IllegalThreadStateException</code>.</li>
+<li>El orden en el que inicies los hilos mediante <code>start()</code> no influye en el orden de ejecución de los mismos, lo que pone de manifiesto que <strong>el orden de ejecución de los hilos es no-determinístico</strong> (no se conoce la secuencia en la que serán ejecutadas la instrucciones del programa).</li>
+</ul>
+<p>En el siguiente recurso didáctico puedes ver un programa que define dos hilos, construidos cada uno de ellos por los procedimientos vistos anteriormente. Cada hilo imprime una palabra 5 veces. Observa que si ejecutas varias veces el programa, el orden de ejecución de los hilos no es siempre el mismo y que no influye en absoluto el orden en el que se inician con <code>start()</code> (el orden de ejecución de los hilos es no-determinístico).</p>
+<p>Nota. puede que tengas que aumentar el número de iteraciones (número de palabras que imprime cada hilo) para apreciar las observaciones indicadas anteriormente.</p>
+<div class="enlace_centrado"><a class="paquete" href="../ZIP/PSP02_-4.ZIP" title="Descargar proyecto Java que crea y ejecuta varios hilos. [zip - 0.01 MB]"> Código del proyecto que crea y ejecuta varios hilos.</a><span class="tamano">(0.01 MB) </span></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper interactive-videoIdevice em_iDevice" id="id99">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Creación y ejecución de varios hilos</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta99_108_2" class="block iDevice_content">
+			<div class="exe-interactive-video">				<p id="exe-interactive-video-file" class="js-hidden">					<a href="../MP4/PSP02_CO.MP4">mp4</a>				</p>				<script type="text/javascript">//<![CDATA[					
+var InteractiveVideo = {"slides":[{"type":"text","text":"<p>Creación y ejecución de varios hilos.</p>","startTime":1}],"i18n":{"start":"Inicio","results":"Resultados","slide":"Diapositiva (fotograma)","score":"Puntuación","seen":"Visto","total":"Total","seeAll":"debe ver todo el contenido y contestar a las preguntas","noSlides":"El vídeo no tiene contenidos interactivos.","goOn":"Continuar","error":"Error","dataError":"Código no compatible","onlyOne":"Sólo un vídeo interactivo por página.","cover":"Portada","fsWarning":"Salga del modo pantalla completa (tecla Esc) para ver la diapositiva","right":"¡Correcto!","wrong":"Incorrecto","sortableListInstructions":"Pinche y arrastre o use las flechas.","up":"Subir","down":"Bajar","rightAnswer":"Respuesta correcta:","notAnswered":"Por favor termine la actividad","check":"Comprobar","newWindow":"Ventana nueva"},"title":"Creación y ejecución de varios hilos","description":""}				//]]></script>			</div><p class="sr-av"><video width="320" height="240" controls="controls" class="mediaelement"><source src="../MP4/PSP02_CO.MP4" /></video></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id35">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta35_54" class="block iDevice_content">
+<strong>Señala si la siguiente afirmación es verdadera o falsa</strong>
+
+</div>
+<section class="question">
+<form name="true-false-form-0b35" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b35" class="block iDevice_content">
+El método <code>start()</code> se encarga de llamar al método <code>run()</code> del hilo para que se ejecute como un subproceso independiente. 
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b35"><input type="radio" name="option0b35" id="true0b35" class="exe-radio-option exe-radio-option-0-2-0b35-truefalse" /> Verdadero</label> 
+<label for="false0b35"><input type="radio" name="option0b35" id="false0b35" class="exe-radio-option exe-radio-option-1-2-0b35-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b35" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b35-result" class="right">Verdadero</strong></p>
+Es verdadero, precisamente <code>start()</code> es el método que inicia un hilo y lo deja disponible para su ejecución como subproceso independiente.
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="5_ESTADO.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_DETEN.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/51_iniciar_un_hilo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:46 GMT -->
+</html>

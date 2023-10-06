@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/21_recursos_compartidos_por_los_hilos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.- Recursos compartidos por los hilos. | PSP_02 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="PSP_02" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_02</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Programación multihilo.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li class="current-page-parent"><a href="2_CONCEP.HTM" class="current-page-parent daddy">2.- Conceptos sobre hilos.</a>
+   <ul>
+      <li id="active"><a href="21_RECUR.HTM" class="active no-ch">2.1.- Recursos compartidos por los hilos.</a></li>
+      <li><a href="22_VENTA.HTM" class="no-ch">2.2.- Ventajas y uso de hilos.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_MULTIH.HTM" class="daddy">3.- Multihilo en Java. Librerías y clases.</a>
+   <ul class="other-section">
+      <li><a href="31_UTILI.HTM" class="no-ch">3.1.- Utilidades de concurrencia del paquete java.lang.</a></li>
+      <li><a href="32_UTILI.HTM" class="no-ch">3.2.- Utilidades de concurrencia del paquete java.util.concurrent.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_CREACI.HTM" class="daddy">4.- Creación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="41_CREAC.HTM" class="no-ch">4.1.- Creación de hilos extendiendo la clase Thread.</a></li>
+      <li><a href="42_CREAC.HTM" class="no-ch">4.2.- Creación de hilos mediante la interfaz Runnable.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_ESTADO.HTM" class="daddy">5.- Estados de un hilo.</a>
+   <ul class="other-section">
+      <li><a href="51_INICI.HTM" class="no-ch">5.1.- Iniciar un hilo.</a></li>
+      <li><a href="52_DETEN.HTM" class="no-ch">5.2.- Detener temporalmente un hilo.</a></li>
+      <li><a href="53_FINAL.HTM" class="no-ch">5.3.- Finalizar un hilo.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo. Dormir un hilo con sleep.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_GESTIN.HTM" class="daddy">6.- Gestión y planificación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="61_PRIOR.HTM" class="no-ch">6.1.- Prioridad de hilos.</a></li>
+      <li><a href="62_HILOS.HTM" class="no-ch">6.2.- Hilos egoístas y programación expulsora.</a></li>
+   </ul>
+   </li>
+   <li><a href="7_SINCRO.HTM" class="daddy">7.- Sincronización y comunicación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="71_INFOR.HTM" class="no-ch">7.1.- Información compartida entre hilos.</a></li>
+      <li><a href="72_MONIT.HTM" class="no-ch">7.2.- Monitores. Métodos synchronized.</a></li>
+      <li><a href="73_MONIT.HTM" class="no-ch">7.3.- Monitores. Segmentos de código synchronized.</a></li>
+      <li><a href="74_COMUN.HTM" class="no-ch">7.4.- Comunicación entre hilos con métodos de java.lang.Object.</a></li>
+      <li><a href="75_EL_PR.HTM" class="no-ch">7.5.- El problema del interbloqueo (deadlock).</a></li>
+      <li><a href="76_LA_CL.HTM" class="no-ch">7.6.- La clase Semaphore.</a></li>
+      <li><a href="77_LA_CL.HTM" class="no-ch">7.7.- La clase Exchanger.</a></li>
+      <li><a href="78_LAS_C.HTM" class="no-ch">7.8.- Las clase CountDownLatch.</a></li>
+      <li><a href="79_LA_CL.HTM" class="no-ch">7.9.- La clase CyclicBarrier.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_APLICA.HTM" class="daddy">8.- Aplicaciones multihilo.</a>
+   <ul class="other-section">
+      <li><a href="81_OTRAS.HTM" class="no-ch">8.1.- Otras utilidades de concurrencia.</a></li>
+      <li><a href="82_LA_IN.HTM" class="no-ch">8.2.- La interfaz Executor y los pools de hilos.</a></li>
+      <li><a href="83_GESTI.HTM" class="no-ch">8.3.- Gestión de excepciones.</a></li>
+      <li><a href="84_DEPUR.HTM" class="no-ch">8.4.- Depuración y documentación.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="2_CONCEP.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_VENTA.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1.- Recursos compartidos por los hilos.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id9">
+<div class="iDevice emphasis0">
+<div id="ta9_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado">
+<a href="../JPG/PSP02_-7.JPG" title="Ampliar imagen."><img alt="Representación gráfica de dos procesos, con uno y dos hilos respectivamente. Se muestran los recursos propios de cada hilo y los recursos que pueden compartir. los hilos. " class="imagen_ampliable" height="128" src="../JPG/PSP02_-8.JPG" style="width: 200px; height: 128px" title="Recursos compartidos por hilos." width="200" /></a>
+</div>
+</div>
+<p>
+<strong>
+Un hilo lleva asociados</strong> los siguientes elementos:
+</p>
+<ul class="lista_verificacion">
+	<li>Un identificador único.</li>
+	<li>Un contador de programa propio.</li>
+	<li>Un conjunto de registros.</li>
+	<li>Una pila (variables locales).</li>
+</ul>
+<p>
+Por otra parte, <strong>un hilo puede compartir con otros hilos del mismo proceso los siguientes recursos</strong>: 
+</p>
+<ul class="lista_verificacion">
+	<li>Código.</li>
+	<li>Datos (como variables globales).</li>
+	<li>Otros recursos del sistema operativo, como los ficheros abiertos y las señales.</li>
+</ul>
+<p>
+Seguro que te estarás preguntando &quot;si los hilos de un proceso comparten el mismo espacio de memoria, ¿qué pasa si uno de ellos la corrompe?&quot; La respuesta es, que los otros hilos también sufrirán las consecuencias. Recuerda que en el caso de procesos, el sistema operativo normalmente protege a un proceso de otro y si un proceso corrompe su espacio de memoria los demás no se verán afectados
+</p>
+<div class="elemento_derecha">
+<div class="elemento_centrado">
+<a href="../JPG/PSP02_-9.JPG" title="Ampliar imagen."><img alt="Representación gráfica de tres procesos, dos de ellos con un hilo y otro con dos hilos,    ejemplizando como los hilos disponen de sus recursos propios, pero que  los hilos de un mismo proceso comparten la memoria asignada al proceso.  " class="imagen_ampliable" height="112" src="../JPG/PSP02-10.JPG" style="width: 200px; height: 112px" title="Memoria compartida por hilos." width="200" /></a>
+</div>
+</div>
+<p>
+El hecho de que los hilos compartan recursos (por ejemplo, pudiendo acceder a las mismas variables) implica que sea necesario  <strong>utilizar esquemas de bloqueo y sincronización</strong>, lo que puede hacer más difícil el desarrollo de los programas y así como su depuración.  
+</p>
+<p>
+Realmente, es en la sincronización de hilos, donde reside el arte de programar con hilos; ya que de no hacerlo bien, podemos crear una aplicación totalmente ineficiente o inútil, como por ejemplo,  programas que tardan horas en procesar servicios, o que se bloquean con facilidad y que intercambian datos de manera equivocada.
+</p>
+<p>
+Profundizaremos más adelante en la sincronización, comunicación y compartición de recursos entre hilos dentro del contexto de Java.
+</p>
+<p>
+Pero ¿qué ventajas aportan los hilos y cuando deben utilizarse? Eso es lo que vamos a ver precisamente en el siguiente apartado.
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id10">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-10_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion10_60" class="block question iDevice_content">
+<strong>Señala la opción correcta. Un hilo puede compartir con otros hilos:</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i10_63" class="sr-av"><a href="#answer-10_63">Opción 1</a></label><input type="radio" name="option10_60" id="i10_63" class="exe-radio-option exe-radio-option-0-4-10_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-10_63"><div id="taans10_63" class="block iDevice_content">
+Código y pila.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i10_92" class="sr-av"><a href="#answer-10_92">Opción 2</a></label><input type="radio" name="option10_60" id="i10_92" class="exe-radio-option exe-radio-option-1-4-10_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-10_92"><div id="taans10_92" class="block iDevice_content">
+Código, datos y registros.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i10_95" class="sr-av"><a href="#answer-10_95">Opción 3</a></label><input type="radio" name="option10_60" id="i10_95" class="exe-radio-option exe-radio-option-2-4-10_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-10_95"><div id="taans10_95" class="block iDevice_content">
+Registros y pila.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i10_98" class="sr-av"><a href="#answer-10_98">Opción 4</a></label><input type="radio" name="option10_60" id="i10_98" class="exe-radio-option exe-radio-option-3-4-10_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-10_98"><div id="taans10_98" class="block iDevice_content">
+Código, datos y ficheros.<br />
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b10_60" class="feedback js-hidden">
+<div id="taf10_63" class=" iDevice_content">
+Incorrecto, prueba de nuevo.
+
+</div>
+</section>
+<section id="sa1b10_60" class="feedback js-hidden">
+<div id="taf10_92" class=" iDevice_content">
+No es correcto, deberías haber leído mejor.
+
+</div>
+</section>
+<section id="sa2b10_60" class="feedback js-hidden">
+<div id="taf10_95" class=" iDevice_content">
+No, precisamente esos elementos no se comparten.
+
+</div>
+</section>
+<section id="sa3b10_60" class="feedback js-hidden">
+<div id="taf10_98" class=" iDevice_content">
+Muy bien, vamos por buen camino. 
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-10_63">Incorrecto</a><span> (<a href="#sa0b10_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-10_92">Incorrecto</a><span> (<a href="#sa1b10_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-10_95">Incorrecto</a><span> (<a href="#sa2b10_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-10_98">Opción correcta</a><span> (<a href="#sa3b10_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="2_CONCEP.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_VENTA.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/21_recursos_compartidos_por_los_hilos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:38 GMT -->
+</html>

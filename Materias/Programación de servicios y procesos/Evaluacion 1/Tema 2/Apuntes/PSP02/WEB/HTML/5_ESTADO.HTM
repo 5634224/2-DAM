@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/5_estados_de_un_hilo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.- Estados de un hilo. | PSP_02 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="PSP_02" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_02</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Programación multihilo.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_CONCEP.HTM" class="daddy">2.- Conceptos sobre hilos.</a>
+   <ul class="other-section">
+      <li><a href="21_RECUR.HTM" class="no-ch">2.1.- Recursos compartidos por los hilos.</a></li>
+      <li><a href="22_VENTA.HTM" class="no-ch">2.2.- Ventajas y uso de hilos.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_MULTIH.HTM" class="daddy">3.- Multihilo en Java. Librerías y clases.</a>
+   <ul class="other-section">
+      <li><a href="31_UTILI.HTM" class="no-ch">3.1.- Utilidades de concurrencia del paquete java.lang.</a></li>
+      <li><a href="32_UTILI.HTM" class="no-ch">3.2.- Utilidades de concurrencia del paquete java.util.concurrent.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_CREACI.HTM" class="daddy">4.- Creación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="41_CREAC.HTM" class="no-ch">4.1.- Creación de hilos extendiendo la clase Thread.</a></li>
+      <li><a href="42_CREAC.HTM" class="no-ch">4.2.- Creación de hilos mediante la interfaz Runnable.</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="5_ESTADO.HTM" class="active daddy">5.- Estados de un hilo.</a>
+   <ul>
+      <li><a href="51_INICI.HTM" class="no-ch">5.1.- Iniciar un hilo.</a></li>
+      <li><a href="52_DETEN.HTM" class="no-ch">5.2.- Detener temporalmente un hilo.</a></li>
+      <li><a href="53_FINAL.HTM" class="no-ch">5.3.- Finalizar un hilo.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo. Dormir un hilo con sleep.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_GESTIN.HTM" class="daddy">6.- Gestión y planificación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="61_PRIOR.HTM" class="no-ch">6.1.- Prioridad de hilos.</a></li>
+      <li><a href="62_HILOS.HTM" class="no-ch">6.2.- Hilos egoístas y programación expulsora.</a></li>
+   </ul>
+   </li>
+   <li><a href="7_SINCRO.HTM" class="daddy">7.- Sincronización y comunicación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="71_INFOR.HTM" class="no-ch">7.1.- Información compartida entre hilos.</a></li>
+      <li><a href="72_MONIT.HTM" class="no-ch">7.2.- Monitores. Métodos synchronized.</a></li>
+      <li><a href="73_MONIT.HTM" class="no-ch">7.3.- Monitores. Segmentos de código synchronized.</a></li>
+      <li><a href="74_COMUN.HTM" class="no-ch">7.4.- Comunicación entre hilos con métodos de java.lang.Object.</a></li>
+      <li><a href="75_EL_PR.HTM" class="no-ch">7.5.- El problema del interbloqueo (deadlock).</a></li>
+      <li><a href="76_LA_CL.HTM" class="no-ch">7.6.- La clase Semaphore.</a></li>
+      <li><a href="77_LA_CL.HTM" class="no-ch">7.7.- La clase Exchanger.</a></li>
+      <li><a href="78_LAS_C.HTM" class="no-ch">7.8.- Las clase CountDownLatch.</a></li>
+      <li><a href="79_LA_CL.HTM" class="no-ch">7.9.- La clase CyclicBarrier.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_APLICA.HTM" class="daddy">8.- Aplicaciones multihilo.</a>
+   <ul class="other-section">
+      <li><a href="81_OTRAS.HTM" class="no-ch">8.1.- Otras utilidades de concurrencia.</a></li>
+      <li><a href="82_LA_IN.HTM" class="no-ch">8.2.- La interfaz Executor y los pools de hilos.</a></li>
+      <li><a href="83_GESTI.HTM" class="no-ch">8.3.- Gestión de excepciones.</a></li>
+      <li><a href="84_DEPUR.HTM" class="no-ch">8.4.- Depuración y documentación.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="42_CREAC.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_INICI.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.- Estados de un hilo.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id30">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_CAS.PNG)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta30_66" class="block iDevice_content">
+<p>
+Hasta el momento, <strong>Juan</strong> ha podido comprobar que <strong>Ana</strong> se desenvuelve muy bien con todos los aspectos repasados sobre hilos en Java, pero lo más complicado comienza ahora. 
+Juan le pregunta a <strong>Ana</strong>, —¿Tienes claro los diferentes estados que puede tener un hilo a lo largo de su vida y cómo se pasa de uno a otro? 
+A lo que <strong>Ana</strong> le responde, —Mas o menos...., pero  me vendría bien dar un repaso, porque además quiero recordar que había unos cuantos métodos para pasar de un estado a otro cuyo uso es peligroso y además ya están considerados obsoletos debido a los problemas que ocasionan. 
+</p>
+<img alt="Juan mirando a la cámara." class="elemento_centrado" height="132" src="../JPG/CASO_P-2.JPG" style="width: 200px; height: 132px" title="Juan." width="200" />
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id31">
+<div class="iDevice emphasis0">
+<div id="ta31_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a href="../JPG/PSP02-23.JPG" title="Ampliar imagen."><img alt="Esquema con los estados de un hilo: nuevo, ejecutable (preparado y ejecutándose), no ejecutable y muerto. Se muestra también algunos métodos que permiten pasar de un estado a otro, como el método new(), start(), sleep() y wait(). También se muestra el método yield(), la etiqueta vivo (estados ejecutable y no ejecutable), y la etiqueta fin de método run(), para indicar que así se pasa al estado muerto." class="imagen_ampliable" src="../JPG/PSP02-24.JPG" style="width: 200px; height: 120px;" title="Estados de un hilo." width="200" height="120" /></a></div>
+</div>
+<p>El <strong>ciclo de vida de un hilo</strong> comprende los diferentes estados en los que puede estar un hilo desde que se crea o nace hasta que finaliza o muere.</p>
+<p>De manera general, los <strong>diferentes estados</strong> en los que se puede encontrar un hilo son los siguientes:</p>
+<ul class="lista_verificacion">
+<li><strong>Nuevo</strong> (<span lang="en">new</span>): se ha creado un nuevo hilo, pero aún no está disponible para su ejecución.</li>
+<li><strong>Ejecutable</strong> (<span lang="en">runnable</span>): el hilo está preparado para ejecutarse. Puede estar <strong>Ejecutándose</strong>, siempre y cuando se le haya asignado tiempo de procesamiento, o bien que no esté ejecutándose en un instante determinado en beneficio de otro hilo, en cuyo caso estará <strong>Preparado</strong>.</li>
+<li><strong>No Ejecutable o Detenido</strong> (<span lang="en">no runnable</span>): el hilo podría estar ejecutándose, pero hay alguna actividad interna al propio hilo que se lo impide, como por ejemplo una espera producida por una operación de entrada/salida (E/S). Si un hilo está en estado "No Ejecutable", no tiene oportunidad de que se le asigne tiempo de procesamiento.</li>
+<li><strong>Muerto o Finalizado</strong> (<span lang="en">terminated</span>): el hilo ha finalizado. La forma natural de que muera un hilo es finalizando su método <code>run()</code>.</li>
+</ul>
+<p>El método <code>getState()</code> de la clase <code>thread</code>, permite obtener en cualquier momento el estado en el que se encuentra un hilo. Devuelve por tanto: <code>NEW</code>, <code>RUNNABLE</code>, <code>NO RUNNABLE</code> o <code>TERMINATED</code>.</p>
+<p>En la imagen anterior, puedes ver algunos de los métodos que permiten obtener cada uno de esos estados. Los veremos con más detalle en los siguientes apartados.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id33">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta33_54" class="block iDevice_content">
+<strong>Señala si la afirmación siguiente es verdadera o falsa:</strong>
+
+</div>
+<section class="question">
+<form name="true-false-form-0b33" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b33" class="block iDevice_content">
+A un hilo en estado 'No Ejecutable' nunca se le asignará tiempo de procesamiento. 
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b33"><input type="radio" name="option0b33" id="true0b33" class="exe-radio-option exe-radio-option-0-2-0b33-truefalse" /> Verdadero</label> 
+<label for="false0b33"><input type="radio" name="option0b33" id="false0b33" class="exe-radio-option exe-radio-option-1-2-0b33-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b33" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b33-result" class="right">Verdadero</strong></p>
+La afirmación es verdadera, ya que sólo se le puede asignar tiempo de procesamiento si el hilo está en estado 'Ejecutable'
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="42_CREAC.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="51_INICI.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/5_estados_de_un_hilo.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:45 GMT -->
+</html>

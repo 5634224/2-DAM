@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/75_el_problema_del_interbloqueo_deadlock.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:12:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.5.- El problema del interbloqueo (deadlock). | PSP_02 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="PSP_02" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-24"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_02</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Programación multihilo.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_CONCEP.HTM" class="daddy">2.- Conceptos sobre hilos.</a>
+   <ul class="other-section">
+      <li><a href="21_RECUR.HTM" class="no-ch">2.1.- Recursos compartidos por los hilos.</a></li>
+      <li><a href="22_VENTA.HTM" class="no-ch">2.2.- Ventajas y uso de hilos.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_MULTIH.HTM" class="daddy">3.- Multihilo en Java. Librerías y clases.</a>
+   <ul class="other-section">
+      <li><a href="31_UTILI.HTM" class="no-ch">3.1.- Utilidades de concurrencia del paquete java.lang.</a></li>
+      <li><a href="32_UTILI.HTM" class="no-ch">3.2.- Utilidades de concurrencia del paquete java.util.concurrent.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_CREACI.HTM" class="daddy">4.- Creación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="41_CREAC.HTM" class="no-ch">4.1.- Creación de hilos extendiendo la clase Thread.</a></li>
+      <li><a href="42_CREAC.HTM" class="no-ch">4.2.- Creación de hilos mediante la interfaz Runnable.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_ESTADO.HTM" class="daddy">5.- Estados de un hilo.</a>
+   <ul class="other-section">
+      <li><a href="51_INICI.HTM" class="no-ch">5.1.- Iniciar un hilo.</a></li>
+      <li><a href="52_DETEN.HTM" class="no-ch">5.2.- Detener temporalmente un hilo.</a></li>
+      <li><a href="53_FINAL.HTM" class="no-ch">5.3.- Finalizar un hilo.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo. Dormir un hilo con sleep.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_GESTIN.HTM" class="daddy">6.- Gestión y planificación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="61_PRIOR.HTM" class="no-ch">6.1.- Prioridad de hilos.</a></li>
+      <li><a href="62_HILOS.HTM" class="no-ch">6.2.- Hilos egoístas y programación expulsora.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="7_SINCRO.HTM" class="current-page-parent daddy">7.- Sincronización y comunicación de hilos.</a>
+   <ul>
+      <li><a href="71_INFOR.HTM" class="no-ch">7.1.- Información compartida entre hilos.</a></li>
+      <li><a href="72_MONIT.HTM" class="no-ch">7.2.- Monitores. Métodos synchronized.</a></li>
+      <li><a href="73_MONIT.HTM" class="no-ch">7.3.- Monitores. Segmentos de código synchronized.</a></li>
+      <li><a href="74_COMUN.HTM" class="no-ch">7.4.- Comunicación entre hilos con métodos de java.lang.Object.</a></li>
+      <li id="active"><a href="75_EL_PR.HTM" class="active no-ch">7.5.- El problema del interbloqueo (deadlock).</a></li>
+      <li><a href="76_LA_CL.HTM" class="no-ch">7.6.- La clase Semaphore.</a></li>
+      <li><a href="77_LA_CL.HTM" class="no-ch">7.7.- La clase Exchanger.</a></li>
+      <li><a href="78_LAS_C.HTM" class="no-ch">7.8.- Las clase CountDownLatch.</a></li>
+      <li><a href="79_LA_CL.HTM" class="no-ch">7.9.- La clase CyclicBarrier.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_APLICA.HTM" class="daddy">8.- Aplicaciones multihilo.</a>
+   <ul class="other-section">
+      <li><a href="81_OTRAS.HTM" class="no-ch">8.1.- Otras utilidades de concurrencia.</a></li>
+      <li><a href="82_LA_IN.HTM" class="no-ch">8.2.- La interfaz Executor y los pools de hilos.</a></li>
+      <li><a href="83_GESTI.HTM" class="no-ch">8.3.- Gestión de excepciones.</a></li>
+      <li><a href="84_DEPUR.HTM" class="no-ch">8.4.- Depuración y documentación.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="74_COMUN.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="76_LA_CL.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.5.- El problema del interbloqueo (deadlock).</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id70">
+<div class="iDevice emphasis0">
+<div id="ta70_73" class="block iDevice_content">
+<img alt="Avenida con  atasco de vehículos." class="elemento_derecha" height="148" src="../JPG/PSP02-50.JPG" style="width: 200px; height: 148px" title="Caos circulatorio." width="200" />
+<p>
+El <strong>interbloqueo</strong> o bloqueo mutuo (<span lang="en">deadlock</span>) consiste en que uno a más  hilos, <strong>se bloquean o esperan indefinidamente</strong>. 
+</p>
+<p>
+¿Cómo se llega a una situación de interbloqueo? A dicha situación se llega
+</p>
+<ul class="lista_verificacion">
+	<li>Porque <strong>cada hilo espera a que le llegue un aviso de otro hilo que nunca le llega</strong>. </li>
+	<li>Porque todos <strong>los hilos, de forma circular, esperan para acceder a un recurso</strong>.</li>
+</ul>
+<p>
+El problema del bloqueo mutuo, en las aplicaciones concurrentes, se podrá dar fundamentalmente cuando un hilo entra en un bloque <code>synchronized</code>, y a su vez llama a otro bloque <code>synchronized</code>, o bien al utilizar clases de <code>java.util.concurrent</code> que llevan implícita la exclusión mutua.
+</p>
+<p>
+En el siguiente enlace puedes consultar un artículo y ejemplo detallado sobre el interbloqueo.
+</p>
+<p class="enlace_centrado">
+<a href="http://infotrick.site40.net/blog/?p=60" title="Acceder  al artículo sobre el problema del interbloqueo."> El problema de los interbloqueos.</a>
+</p>
+<p>
+En el siguiente enlace encontrarás un ejemplo que produce interbloqueo. Observa que no finaliza la ejecución del programa y que en la barra de estado del <acronym lang="en" title="Integrated Development Environment. Entorno de Desarrollo Integrado.">IDE</acronym> <span lang="en">NetBeans</span> (a la derecha) aparece la indicación de programa bloqueado. Habrá que finalizar manualmente el programa.
+</p>
+<div class="enlace_centrado">
+<a class="paquete" href="../ZIP/PSP02-14.ZIP" title="Descargar  proyecto Java ejemplo de Interbloqueo. [zip - 0.01 MB]">Código del ejemplo de Interbloqueo.</a> <span class="tamano"> (0.01 MB) </span> 
+</div>
+<p>
+Otro problema, menos frecuente, es la <strong>inanición</strong> (<span lang="en">starvation</span>), que consiste en que un hilo es desestimado para su ejecución. Se produce cuando un hilo no puede tener acceso regular a los recursos compartidos y no puede avanzar, quedando bloqueado. Esto puede ocurrir porque el hilo nunca es seleccionado para su procesamiento o bien porque otros hilos que compiten por el mismo recurso se lo impiden. 
+</p>
+<p>
+Está claro que los programas que desarrollemos deben estar exentos de estos problemas, por lo que habrá que ser cuidadosos en su diseño.
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id71">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_DEB.PNG)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta71_48" class="block iDevice_content">
+<p>La interface <code>Lock</code> del paquete <code>java.util.concurrent</code> permite resolver algunos problemas de concurrencia como el interbloqueo. En el siguiente enlace encontrarás una explicación y ejemplo de uso.</p>
+<p class="enlace_centrado"><a href="https://www.redeszone.net/2012/09/10/curso-java-volumen-vii-todo-sobre-locks-en-java/" title="Acceder a la información sobre Locks en Java.">Todo sobre Locks en Java</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id72">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta72_47" class="block iDevice_content">
+<p>En este enlace, puedes consultar los principios del interbloqueo, ejemplos, y estrategias de prevención.</p>
+<p class="enlace_centrado"><a href="https://1984.lsi.us.es/wiki-ssoo/index.php/Condiciones_para_el_interbloqueo_y_estrategias_de_resolución" title="Acceder  a la información y ejemplos de interbloqueo."> Principios y ejemplos de interbloqueo.</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id73">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-73_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion73_60" class="block question iDevice_content">
+<strong>Señala la opción correcta. El interbloqueo:
+</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i73_63" class="sr-av"><a href="#answer-73_63">Opción 1</a></label><input type="radio" name="option73_60" id="i73_63" class="exe-radio-option exe-radio-option-0-4-73_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-73_63"><div id="taans73_63" class="block iDevice_content">
+Es una propiedad de los hilos.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i73_118" class="sr-av"><a href="#answer-73_118">Opción 2</a></label><input type="radio" name="option73_60" id="i73_118" class="exe-radio-option exe-radio-option-1-4-73_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-73_118"><div id="taans73_118" class="block iDevice_content">
+Puede aparecer cuando se sincronizan bloques de código.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i73_121" class="sr-av"><a href="#answer-73_121">Opción 3</a></label><input type="radio" name="option73_60" id="i73_121" class="exe-radio-option exe-radio-option-2-4-73_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-73_121"><div id="taans73_121" class="block iDevice_content">
+En Java nunca puede aparecer.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i73_124" class="sr-av"><a href="#answer-73_124">Opción 4</a></label><input type="radio" name="option73_60" id="i73_124" class="exe-radio-option exe-radio-option-3-4-73_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-73_124"><div id="taans73_124" class="block iDevice_content">
+Se produce cuando un hilo entra en un bloque synchronized.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b73_60" class="feedback js-hidden">
+<div id="taf73_63" class=" iDevice_content">
+No es la acertada, precisamente es algo que se debe evitar que ocurra.
+
+</div>
+</section>
+<section id="sa1b73_60" class="feedback js-hidden">
+<div id="taf73_118" class=" iDevice_content">
+Muy bien, vamos por buen camino.
+
+</div>
+</section>
+<section id="sa2b73_60" class="feedback js-hidden">
+<div id="taf73_121" class=" iDevice_content">
+No es correcto, si que puede aparecer.
+
+</div>
+</section>
+<section id="sa3b73_60" class="feedback js-hidden">
+<div id="taf73_124" class=" iDevice_content">
+Incorrecto, prueba de nuevo.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-73_63">Incorrecto</a><span> (<a href="#sa0b73_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-73_118">Opción correcta</a><span> (<a href="#sa1b73_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-73_121">Incorrecto</a><span> (<a href="#sa2b73_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-73_124">Incorrecto</a><span> (<a href="#sa3b73_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="74_COMUN.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="76_LA_CL.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/75_el_problema_del_interbloqueo_deadlock.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:12:00 GMT -->
+</html>

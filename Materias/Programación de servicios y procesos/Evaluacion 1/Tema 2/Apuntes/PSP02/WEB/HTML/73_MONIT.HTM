@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/73_monitores_segmentos_de_cdigo_synchronized.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.3.- Monitores. Segmentos de código synchronized. | PSP_02 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="PSP_02" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-22"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_02</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Programación multihilo.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_CONCEP.HTM" class="daddy">2.- Conceptos sobre hilos.</a>
+   <ul class="other-section">
+      <li><a href="21_RECUR.HTM" class="no-ch">2.1.- Recursos compartidos por los hilos.</a></li>
+      <li><a href="22_VENTA.HTM" class="no-ch">2.2.- Ventajas y uso de hilos.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_MULTIH.HTM" class="daddy">3.- Multihilo en Java. Librerías y clases.</a>
+   <ul class="other-section">
+      <li><a href="31_UTILI.HTM" class="no-ch">3.1.- Utilidades de concurrencia del paquete java.lang.</a></li>
+      <li><a href="32_UTILI.HTM" class="no-ch">3.2.- Utilidades de concurrencia del paquete java.util.concurrent.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_CREACI.HTM" class="daddy">4.- Creación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="41_CREAC.HTM" class="no-ch">4.1.- Creación de hilos extendiendo la clase Thread.</a></li>
+      <li><a href="42_CREAC.HTM" class="no-ch">4.2.- Creación de hilos mediante la interfaz Runnable.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_ESTADO.HTM" class="daddy">5.- Estados de un hilo.</a>
+   <ul class="other-section">
+      <li><a href="51_INICI.HTM" class="no-ch">5.1.- Iniciar un hilo.</a></li>
+      <li><a href="52_DETEN.HTM" class="no-ch">5.2.- Detener temporalmente un hilo.</a></li>
+      <li><a href="53_FINAL.HTM" class="no-ch">5.3.- Finalizar un hilo.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo. Dormir un hilo con sleep.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_GESTIN.HTM" class="daddy">6.- Gestión y planificación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="61_PRIOR.HTM" class="no-ch">6.1.- Prioridad de hilos.</a></li>
+      <li><a href="62_HILOS.HTM" class="no-ch">6.2.- Hilos egoístas y programación expulsora.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="7_SINCRO.HTM" class="current-page-parent daddy">7.- Sincronización y comunicación de hilos.</a>
+   <ul>
+      <li><a href="71_INFOR.HTM" class="no-ch">7.1.- Información compartida entre hilos.</a></li>
+      <li><a href="72_MONIT.HTM" class="no-ch">7.2.- Monitores. Métodos synchronized.</a></li>
+      <li id="active"><a href="73_MONIT.HTM" class="active no-ch">7.3.- Monitores. Segmentos de código synchronized.</a></li>
+      <li><a href="74_COMUN.HTM" class="no-ch">7.4.- Comunicación entre hilos con métodos de java.lang.Object.</a></li>
+      <li><a href="75_EL_PR.HTM" class="no-ch">7.5.- El problema del interbloqueo (deadlock).</a></li>
+      <li><a href="76_LA_CL.HTM" class="no-ch">7.6.- La clase Semaphore.</a></li>
+      <li><a href="77_LA_CL.HTM" class="no-ch">7.7.- La clase Exchanger.</a></li>
+      <li><a href="78_LAS_C.HTM" class="no-ch">7.8.- Las clase CountDownLatch.</a></li>
+      <li><a href="79_LA_CL.HTM" class="no-ch">7.9.- La clase CyclicBarrier.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_APLICA.HTM" class="daddy">8.- Aplicaciones multihilo.</a>
+   <ul class="other-section">
+      <li><a href="81_OTRAS.HTM" class="no-ch">8.1.- Otras utilidades de concurrencia.</a></li>
+      <li><a href="82_LA_IN.HTM" class="no-ch">8.2.- La interfaz Executor y los pools de hilos.</a></li>
+      <li><a href="83_GESTI.HTM" class="no-ch">8.3.- Gestión de excepciones.</a></li>
+      <li><a href="84_DEPUR.HTM" class="no-ch">8.4.- Depuración y documentación.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="72_MONIT.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="74_COMUN.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.3.- Monitores. Segmentos de código synchronized.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id62">
+<div class="iDevice emphasis0">
+<div id="ta62_73" class="block iDevice_content">
+<span><img alt="Tela de hilos con colores color rosa, azul y blanco" class="elemento_derecha" height="132" src="../JPG/PSP02-46.JPG" style="width: 200px; height: 132px" title="Mezcla Hilos." width="200" /></span>
+<p>
+Hay casos en los que no se puede, o no interesa sincronizar un método. Por ejemplo, no podremos sincronizar un método que no hemos creado nosotros y que por tanto no podemos acceder a su código fuente para añadir <code>synchronized</code> en su definición.  La forma de resolver esta situación es <strong>poner las llamadas a los métodos que se quieren sincronizar dentro de segmentos sincronizados</strong> de la siguiente forma: <code>synchronized (objeto){ // sentencias segmento;   }</code>
+</p>
+<p>
+En este caso el <strong>funcionamiento</strong> es el siguiente:
+</p>
+<ul class="lista_verificacion">
+	<li>El objeto que se pasa al segmento, es el objeto donde está el método que se quiere sincronizar.</li>
+	<li>Dentro del segmento se hará la llamada al método que se quiere sincronizar.</li>
+	<li>El hilo que entra en el segmento declarado <code>synchronized</code> se hará con el monitor del objeto, si está libre, o se bloqueará en espera de que quede libre. El monitor se libera al salir el hilo del segmento de  código <code>synchronized</code>.</li>
+	<li>Sólo un hilo puede ejecutar el segmento synchronized a la vez.</li>
+</ul>
+<p>
+En el ejemplo del problema de los jardines, aplicando este procedimiento, habría que sincronizar el objeto que denominaremos  <code>jardin</code> y que será desde donde se invoca al método <code>incrementaCuenta()</code>, método que manipula la variable <code>cuenta</code> que modifican diferentes hilos:
+</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<a href="../JPG/PSP02-47.JPG" title="Ampliar imagen."><img alt="Código de un  segmento java synchronized." class="imagen_ampliable" height="56" src="../JPG/PSP02-48.JPG" style="width: 200px; height: 56px" title="Segmento sincronizado." width="200" /></a>
+</div>
+</div>
+<p>
+Observa que:
+</p>
+<ul class="lista_verificacion">
+	<li>Ahora el método incrementaCuenta()  no será synchronized  (se haría igual para decrementaCuenta()),</li>
+	<li>Se está consiguiendo un acceso con exclusión mutua sobre el objeto jardin, aún cuando su clase no contiene  ningún segmento ni método synchronized.</li>
+</ul>
+<p>
+En el siguiente enlace dispones del ejemplo completo con los cambios que acabamos de indicar.
+</p>
+<div class="enlace_centrado">
+<a class="paquete" href="../ZIP/PSP02-12.ZIP" title="Descargar proyecto Java que sincroniza objeto en 'Problema de los Jardines'.  [zip - 0.01 MB]">Código del proyecto que sincroniza objeto en 'Problema de los Jardines'</a>. <span class="tamano"> (0.01 MB) </span> 
+</div>
+<p>
+Debes <strong>tener en cuenta</strong> que:
+</p>
+<ul class="lista_verificacion">
+	<li>Declarar un método o segmento de código como sincronizado ralentizará la ejecución del programa, ya que la <strong>adquisición y liberación de monitores genera una sobrecarga</strong>.</li>
+	<li>Siempre que sea posible, por legibilidad del código, es <strong>mejor sincronizar métodos completos</strong>.</li>
+	<li>Al declarar bloques <code>synchronized</code> puede aparecer un <strong>nuevo problema, denominado interbloqueo</strong> (lo veremos más adelante).</li>
+</ul>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id63">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta63_70" class="block iDevice_content">
+Muchos métodos de las clases predefinidas de Java ya están sincronizados. Por ejemplo, el método de la clase <code>Component</code> de Java AWT que agrega un objeto <code>MouseListener</code> a un <code>Component</code> (para que <code>MouseEvents</code> se registren en el <code>MouseListener</code>) está sincronizado. Si compruebas el código fuente de AWT y <span lang="en">Swing</span>, encontrarás que el prototipo de este método es: <code>public synchronized void addMouseListener(MouseListener l)</code>
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id64">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta64_54" class="block iDevice_content">
+<strong>Señala si la siguiente afirmación es verdadera o falsa.</strong>
+
+</div>
+<section class="question">
+<form name="true-false-form-0b64" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b64" class="block iDevice_content">
+Solo se puede sincronizar un bloque de código, si éste está dentro de en un método sincronizado.
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b64"><input type="radio" name="option0b64" id="true0b64" class="exe-radio-option exe-radio-option-0-2-0b64-truefalse" /> Verdadero</label> 
+<label for="false0b64"><input type="radio" name="option0b64" id="false0b64" class="exe-radio-option exe-radio-option-1-2-0b64-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b64" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b64-result" class="wrong">Falso</strong></p>
+Es falso, el bloque de código sincronizado puede pertenecer a cualquier método.  
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="72_MONIT.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="74_COMUN.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/73_monitores_segmentos_de_cdigo_synchronized.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:58 GMT -->
+</html>

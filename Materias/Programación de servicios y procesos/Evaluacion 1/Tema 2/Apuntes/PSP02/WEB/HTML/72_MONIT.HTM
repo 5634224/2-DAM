@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/72_monitores_mtodos_synchronized.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>7.2.- Monitores. Métodos synchronized. | PSP_02 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="PSP_02" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<link rel="stylesheet" type="text/css" href="../CSS/INTERACT.CSS" />
+<script type="text/javascript" src="../JS/INTERACT.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-21"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_02</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Programación multihilo.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_CONCEP.HTM" class="daddy">2.- Conceptos sobre hilos.</a>
+   <ul class="other-section">
+      <li><a href="21_RECUR.HTM" class="no-ch">2.1.- Recursos compartidos por los hilos.</a></li>
+      <li><a href="22_VENTA.HTM" class="no-ch">2.2.- Ventajas y uso de hilos.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_MULTIH.HTM" class="daddy">3.- Multihilo en Java. Librerías y clases.</a>
+   <ul class="other-section">
+      <li><a href="31_UTILI.HTM" class="no-ch">3.1.- Utilidades de concurrencia del paquete java.lang.</a></li>
+      <li><a href="32_UTILI.HTM" class="no-ch">3.2.- Utilidades de concurrencia del paquete java.util.concurrent.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_CREACI.HTM" class="daddy">4.- Creación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="41_CREAC.HTM" class="no-ch">4.1.- Creación de hilos extendiendo la clase Thread.</a></li>
+      <li><a href="42_CREAC.HTM" class="no-ch">4.2.- Creación de hilos mediante la interfaz Runnable.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_ESTADO.HTM" class="daddy">5.- Estados de un hilo.</a>
+   <ul class="other-section">
+      <li><a href="51_INICI.HTM" class="no-ch">5.1.- Iniciar un hilo.</a></li>
+      <li><a href="52_DETEN.HTM" class="no-ch">5.2.- Detener temporalmente un hilo.</a></li>
+      <li><a href="53_FINAL.HTM" class="no-ch">5.3.- Finalizar un hilo.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo. Dormir un hilo con sleep.</a></li>
+   </ul>
+   </li>
+   <li><a href="6_GESTIN.HTM" class="daddy">6.- Gestión y planificación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="61_PRIOR.HTM" class="no-ch">6.1.- Prioridad de hilos.</a></li>
+      <li><a href="62_HILOS.HTM" class="no-ch">6.2.- Hilos egoístas y programación expulsora.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="7_SINCRO.HTM" class="current-page-parent daddy">7.- Sincronización y comunicación de hilos.</a>
+   <ul>
+      <li><a href="71_INFOR.HTM" class="no-ch">7.1.- Información compartida entre hilos.</a></li>
+      <li id="active"><a href="72_MONIT.HTM" class="active no-ch">7.2.- Monitores. Métodos synchronized.</a></li>
+      <li><a href="73_MONIT.HTM" class="no-ch">7.3.- Monitores. Segmentos de código synchronized.</a></li>
+      <li><a href="74_COMUN.HTM" class="no-ch">7.4.- Comunicación entre hilos con métodos de java.lang.Object.</a></li>
+      <li><a href="75_EL_PR.HTM" class="no-ch">7.5.- El problema del interbloqueo (deadlock).</a></li>
+      <li><a href="76_LA_CL.HTM" class="no-ch">7.6.- La clase Semaphore.</a></li>
+      <li><a href="77_LA_CL.HTM" class="no-ch">7.7.- La clase Exchanger.</a></li>
+      <li><a href="78_LAS_C.HTM" class="no-ch">7.8.- Las clase CountDownLatch.</a></li>
+      <li><a href="79_LA_CL.HTM" class="no-ch">7.9.- La clase CyclicBarrier.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_APLICA.HTM" class="daddy">8.- Aplicaciones multihilo.</a>
+   <ul class="other-section">
+      <li><a href="81_OTRAS.HTM" class="no-ch">8.1.- Otras utilidades de concurrencia.</a></li>
+      <li><a href="82_LA_IN.HTM" class="no-ch">8.2.- La interfaz Executor y los pools de hilos.</a></li>
+      <li><a href="83_GESTI.HTM" class="no-ch">8.3.- Gestión de excepciones.</a></li>
+      <li><a href="84_DEPUR.HTM" class="no-ch">8.4.- Depuración y documentación.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="71_INFOR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="73_MONIT.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">7.2.- Monitores. Métodos synchronized.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id59">
+<div class="iDevice emphasis0">
+<div id="ta59_73" class="block iDevice_content">
+<p><img alt="Dibujo con las palabras Monitores, Synchronized y Secciones Críticas en rojo, verde y azul respectivamente, sobre un cartel gris y con un candado en la esquina superior izquierda." class="elemento_derecha" src="../JPG/PSP02-43.JPG" style="width: 200px; height: 140px;" title="Recurso compartido." width="200" height="140" /></p>
+<p>En Java, un monitor es una porción de código protegida por un mute o <span lang="en">lock</span>. Para <strong>crear un monitor</strong> en Java, hay que <strong>marcar un bloque de código con la palabra</strong> <code>synchronized</code>, pudiendo ser ese bloque:</p>
+<ul class="lista_verificacion">
+<li>Un <strong>método completo</strong>.</li>
+<li>Cualquier <strong>segmento de código</strong>.</li>
+</ul>
+<p>Añadir <code>synchronized</code> a un método significará que:</p>
+<ul class="lista_verificacion">
+<li>Hemos creado un monitor asociado al objeto.</li>
+<li>Sólo un hilo puede ejecutar el método <code>synchronized</code> de ese objeto a la vez.</li>
+<li>Los hilos que necesitan acceder a ese método <code>synchronized</code> permanecerán bloqueados y en espera.</li>
+<li>Cuando el hilo finaliza la ejecución del método <code>synchronized</code>, los hilos en espera de poder ejecutarlo se desbloquearán. El planificador Java seleccionará a uno de ellos.</li>
+</ul>
+<p>En el siguiente documento encontrarás una explicación detallada sobre el funcionamiento de un monitor Java.</p>
+<div class="enlace_centrado"><a class="pdf" href="../PDF/PSP02_CO.PDF" title="Descargar documento con explicación del funcionamiento de un monitor Java.  [pdf - 0.08 MB]"> Explicación del funcionamiento de un monitor Java</a>. <span class="tamano"> (0.08 MB) </span></div>
+<p>Y ¿<strong>qué bloques interesa marcar</strong> como <code>synchronized</code>? Precisamente los que se correspondan con secciones críticas y contengan el código o datos que comparten los hilos.</p>
+<p>En el ejemplo anterior, "Problema de los jardines" se debería sincronizar tanto el método <code>incrementaCuenta()</code>, como el <code>decrementaCuenta()</code> tal y como ves en el siguiente código, ya que estos métodos contienen la variable cuenta, la cual es modificada por diferentes hilos. Así mientras un hilo ejecuta el método <code>incrementaCuenta()</code> del objeto <code>jardin, jardin.incrementaCuenta()</code>, ningún otro hilo podrá ejecutarlo.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="../JPG/PSP02-44.JPG" title="Ampliar imagen."><img alt="Código de un método java synchronized." class="imagen_ampliable" src="../JPG/PSP02-45.JPG" style="width: 200px; height: 52px;" title="Método sincronizado." width="200" height="52" /></a></div>
+</div>
+<p>En el siguiente enlace dispones del proyecto completo con los dos métodos sincronizados.</p>
+<div class="enlace_centrado"><a class="paquete" href="../ZIP/PSP02-10.ZIP" title="Descargar el proyecto java del 'problema de los jardines' sincronizado.  [zip - 0.01 MB]">Ejemplo 'problema de los jardines' sincronizado.</a> <span class="tamano"> (0.01 MB) </span></div>
+<p>En el siguiente recurso didáctico dispones de otro sencillo ejemplo que simula el acceso simultáneo de 4 terminales a un servidor utilizando monitores Java.</p>
+<div class="elemento_centrado">
+<div class="credenciales elemento_centrado"></div>
+</div>
+<div class="enlace_centrado"><a class="paquete" href="../ZIP/PSP02-11.ZIP" title="Descargar proyecto Java que sincroniza método.  [zip - 0.01 MB]"> Código del proyecto que sincroniza método.</a><span class="tamano"> (0.01 MB) </span></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper interactive-videoIdevice em_iDevice" id="id102">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Sincronizar métodos. Uso de monitores</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta102_111_2" class="block iDevice_content">
+			<div class="exe-interactive-video">				<p id="exe-interactive-video-file" class="js-hidden">					<a href="../MP4/PSP02_-4.MP4">mp4</a>				</p>				<script type="text/javascript">//<![CDATA[					
+var InteractiveVideo = {"slides":[{"type":"text","text":"<p>Sincronizar métodos. Uso de monitores.</p>","startTime":1}],"i18n":{"start":"Inicio","results":"Resultados","slide":"Diapositiva (fotograma)","score":"Puntuación","seen":"Visto","total":"Total","seeAll":"debe ver todo el contenido y contestar a las preguntas","noSlides":"El vídeo no tiene contenidos interactivos.","goOn":"Continuar","error":"Error","dataError":"Código no compatible","onlyOne":"Sólo un vídeo interactivo por página.","cover":"Portada","fsWarning":"Salga del modo pantalla completa (tecla Esc) para ver la diapositiva","right":"¡Correcto!","wrong":"Incorrecto","sortableListInstructions":"Pinche y arrastre o use las flechas.","up":"Subir","down":"Bajar","rightAnswer":"Respuesta correcta:","notAnswered":"Por favor termine la actividad","check":"Comprobar","newWindow":"Ventana nueva"},"title":"Sincronizar métodos. Uso de monitores","description":""}				//]]></script>			</div><p class="sr-av"><video width="320" height="240" controls="controls" class="mediaelement"><source src="../MP4/PSP02_-4.MP4" /></video></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id60">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_DEB.PNG)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta60_48" class="block iDevice_content">
+<p>En el siguiente enlace encontrarás el significado de la siguiente afirmación: "Los monitores java son re-entrantes".</p>
+<p class="enlace_centrado"><a href="https://programacion.net/articulo/threads_de_control_100/14" title="Acceder  a la información sobre el significado de 'los monitores java son re-entrnates'.">¿Qué significa que los monitores java son re-entrantes".</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id61">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta61_54" class="block iDevice_content">
+<strong>Señala si la siguiente afirmación es verdadera o falsa.</strong>
+
+</div>
+<section class="question">
+<form name="true-false-form-0b61" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b61" class="block iDevice_content">
+Para crear un monitor Java hay que marcar un bloque de código con la palabra <code>Syncronized</code>. 
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b61"><input type="radio" name="option0b61" id="true0b61" class="exe-radio-option exe-radio-option-0-2-0b61-truefalse" /> Verdadero</label> 
+<label for="false0b61"><input type="radio" name="option0b61" id="false0b61" class="exe-radio-option exe-radio-option-1-2-0b61-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b61" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b61-result" class="right">Verdadero</strong></p>
+Es verdadera, efectivamente esa es la forma de implementar en Java un monitor. 
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="71_INFOR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="73_MONIT.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/72_monitores_mtodos_synchronized.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:57 GMT -->
+</html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/6_gestin_y_planificacin_de_hilos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>6.- Gestión y planificación de hilos. | PSP_02 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="PSP_02" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_02</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Programación multihilo.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_CONCEP.HTM" class="daddy">2.- Conceptos sobre hilos.</a>
+   <ul class="other-section">
+      <li><a href="21_RECUR.HTM" class="no-ch">2.1.- Recursos compartidos por los hilos.</a></li>
+      <li><a href="22_VENTA.HTM" class="no-ch">2.2.- Ventajas y uso de hilos.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_MULTIH.HTM" class="daddy">3.- Multihilo en Java. Librerías y clases.</a>
+   <ul class="other-section">
+      <li><a href="31_UTILI.HTM" class="no-ch">3.1.- Utilidades de concurrencia del paquete java.lang.</a></li>
+      <li><a href="32_UTILI.HTM" class="no-ch">3.2.- Utilidades de concurrencia del paquete java.util.concurrent.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_CREACI.HTM" class="daddy">4.- Creación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="41_CREAC.HTM" class="no-ch">4.1.- Creación de hilos extendiendo la clase Thread.</a></li>
+      <li><a href="42_CREAC.HTM" class="no-ch">4.2.- Creación de hilos mediante la interfaz Runnable.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_ESTADO.HTM" class="daddy">5.- Estados de un hilo.</a>
+   <ul class="other-section">
+      <li><a href="51_INICI.HTM" class="no-ch">5.1.- Iniciar un hilo.</a></li>
+      <li><a href="52_DETEN.HTM" class="no-ch">5.2.- Detener temporalmente un hilo.</a></li>
+      <li><a href="53_FINAL.HTM" class="no-ch">5.3.- Finalizar un hilo.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo. Dormir un hilo con sleep.</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="6_GESTIN.HTM" class="active daddy">6.- Gestión y planificación de hilos.</a>
+   <ul>
+      <li><a href="61_PRIOR.HTM" class="no-ch">6.1.- Prioridad de hilos.</a></li>
+      <li><a href="62_HILOS.HTM" class="no-ch">6.2.- Hilos egoístas y programación expulsora.</a></li>
+   </ul>
+   </li>
+   <li><a href="7_SINCRO.HTM" class="daddy">7.- Sincronización y comunicación de hilos.</a>
+   <ul class="other-section">
+      <li><a href="71_INFOR.HTM" class="no-ch">7.1.- Información compartida entre hilos.</a></li>
+      <li><a href="72_MONIT.HTM" class="no-ch">7.2.- Monitores. Métodos synchronized.</a></li>
+      <li><a href="73_MONIT.HTM" class="no-ch">7.3.- Monitores. Segmentos de código synchronized.</a></li>
+      <li><a href="74_COMUN.HTM" class="no-ch">7.4.- Comunicación entre hilos con métodos de java.lang.Object.</a></li>
+      <li><a href="75_EL_PR.HTM" class="no-ch">7.5.- El problema del interbloqueo (deadlock).</a></li>
+      <li><a href="76_LA_CL.HTM" class="no-ch">7.6.- La clase Semaphore.</a></li>
+      <li><a href="77_LA_CL.HTM" class="no-ch">7.7.- La clase Exchanger.</a></li>
+      <li><a href="78_LAS_C.HTM" class="no-ch">7.8.- Las clase CountDownLatch.</a></li>
+      <li><a href="79_LA_CL.HTM" class="no-ch">7.9.- La clase CyclicBarrier.</a></li>
+   </ul>
+   </li>
+   <li><a href="8_APLICA.HTM" class="daddy">8.- Aplicaciones multihilo.</a>
+   <ul class="other-section">
+      <li><a href="81_OTRAS.HTM" class="no-ch">8.1.- Otras utilidades de concurrencia.</a></li>
+      <li><a href="82_LA_IN.HTM" class="no-ch">8.2.- La interfaz Executor y los pools de hilos.</a></li>
+      <li><a href="83_GESTI.HTM" class="no-ch">8.3.- Gestión de excepciones.</a></li>
+      <li><a href="84_DEPUR.HTM" class="no-ch">8.4.- Depuración y documentación.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="54_EJEMP.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="61_PRIOR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">6.- Gestión y planificación de hilos.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id44">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_CAS.PNG)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta44_66" class="block iDevice_content">
+<p>
+<strong>Ana</strong> está algo preocupada y pensativa, porque sabe que programar con hilos es un tema muy peliagudo y hay que tener claro cómo los gestiona Java para conseguir que el programa realmente sea eficiente y se ejecute de igual forma en cualquier <acronym title="Sistema Operativo.">SO</acronym>. Después de un descanso en el parque, ha decidido repasar este tema y así adelantar trabajo para mañana. Realmente está muy ilusionada con el proyecto, pues nota como <strong>Juan</strong> y <strong>Ada</strong> apoyan las sugerencias que va haciendo respecto a la aplicación.
+</p>
+<img alt="Foto de Ana  sentada en un banco de un parque, mirando al frente y pensativa." class="elemento_centrado" height="200" src="../JPG/EIN_PP-2.JPG" style="width: 132px; height: 200px" title="Foto de Ana en un banco de un parque." width="132" />
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id45">
+<div class="iDevice emphasis0">
+<div id="ta45_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado">
+<a href="../JPG/PSP02-30.JPG" title="Ampliar imagen."><img alt="Dibujo en el que se muestra la ejecución de dos hilos, cada uno en un procesador y la ejecución alternada de ambos hilos en caso de un solo procesador. El hilo1 se representa en rojo y el hilo2 se representa en azul." class="imagen_ampliable" height="128" src="../JPG/PSP02-31.JPG" style="width: 200px; height: 128px" title="Planificar y ejecutar hilos." width="200" /></a>
+</div>
+</div>
+<p>
+La ejecución de hilos se puede realizar mediante:
+</p>
+<ul class="lista_verificacion">
+	<li><strong>Paralelismo</strong>. En un sistema con múltiples <acronym title="Unidad Central de Proceso.">CPU</acronym>, cada CPU puede ejecutar un hilo diferente.</li>
+	<li><strong>Pseudoparalelismo</strong>. Si no es posible el paralelismo, una CPU es responsable de ejecutar múltiples hilos.</li>
+</ul>
+<p>
+La ejecución de múltiples hilos en una sola CPU requiere la planificación de una secuencia de ejecución (<span lang="en">sheduling</span>). 
+</p>
+<p>
+El <strong>planificador de hilos de Java </strong>(<span lang="en">Sheduler</span>) utiliza un algoritmo de secuenciación de hilos denominado <span lang="en">fixed priority scheduling</span> que está basado en un sistema de prioridades relativas, de manera que el algoritmo secuencia la ejecución de hilos en base a la prioridad  de cada uno de ellos.
+</p>
+<p>
+El <strong>funcionamiento</strong> del algoritmo  es el siguiente:
+</p>
+<ul class="lista_verificacion">
+	<li>El hilo elegido para ejecutarse, siempre es el hilo &quot;Ejecutable&quot; de prioridad más alta.</li>
+	<li>Si hay más de un hilo con la misma prioridad, el orden de ejecución se maneja mediante un algoritmo por turnos (<span lang="en">round-rubin</span>) basado en una cola circular <acronym lang="en" title="First In, First Out. Primero en entrar, primero en salir.">FIFO</acronym> (Primero en entrar, primero en salir).</li>
+	<li>Cuando el hilo que está &quot;ejecutándose&quot; pasa al estado de &quot;No Ejecutable&quot; o &quot;Muerto&quot;,  se selecciona otro hilo para su ejecución.</li>
+	<li>La ejecución de un hilo se interrumpe, si otro hilo con prioridad más alta se vuelve &quot;Ejecutable&quot;. El hecho de que un hilo con una prioridad más alta interrumpa a otro se denomina &quot;<strong>planificación apropiativa</strong>&quot; ('<span lang="en">preemptive sheudling</span>'). </li>
+</ul>
+<p>
+Pero la responsabilidad de ejecución de los hilos es del Sistemas Operativos sobre el que corre la <acronym lang="en" title="Java Virtual Machine.">JVM</acronym>, y <strong>Sistemas Operativos distintos manejan los hilos de manera diferente</strong>:
+</p>
+<ul class="lista_verificacion">
+	<li>En un <strong>Sistema Operativo que implementa</strong> <span lang="en">time-slicing</span> (subdivisión de tiempo), el hilo que entra en ejecución, se mantiene en ella sólo un micro-intervalo de tiempo fijo o cuanto (<span lang="en">quantum</span>) de procesamiento, de manera que el hilo que está &quot;ejecutándose&quot; no solo es interrumpido si otro hilo con prioridad más alta se vuelve &quot;Ejecutable&quot;, sino también cuando su &quot;cuanto&quot; de ejecución se acaba. Es el patrón seguido por Linux, y por todos los <span lang="en">Windows</span> a partir de <span lang="en">Windows</span> 95 y <acronym title="New Technology.">NT</acronym>.</li>
+	<li>En un <strong>Sistema Operativo que no implementa</strong> <span lang="en">time-slicing</span> el hilo que entra en ejecución, es ejecutado hasta su muerte; salvo que regrese a &quot;No ejecutable&quot;, u otro hilo de prioridad más alta alcance el estado de &quot;Ejecutable&quot; (en cuyo caso, el primero regresa a &quot;preparado&quot; para que se ejecute el segundo). Es el patrón seguido en el Sistema Operativo Solaris.</li>
+</ul>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id46">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta46_54" class="block iDevice_content">
+<strong>Señala si la siguiente afirmación es verdadera o falsa</strong>
+
+</div>
+<section class="question">
+<form name="true-false-form-0b46" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b46" class="block iDevice_content">
+La ejecución de un hilo sólo puede interrumpirse por otro hilo de mayor prioridad o,  porque el hilo que está 'Ejecutándose' pase a estado 'No ejecutable'. 
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b46"><input type="radio" name="option0b46" id="true0b46" class="exe-radio-option exe-radio-option-0-2-0b46-truefalse" /> Verdadero</label> 
+<label for="false0b46"><input type="radio" name="option0b46" id="false0b46" class="exe-radio-option exe-radio-option-1-2-0b46-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b46" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b46-result" class="wrong">Falso</strong></p>
+Es falso, eso sólo ocurre cuando Java corre sobre SO sin <span lang="en">time-slicing</span>, como  por ejemplo el sistema operativo Solaris
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id47">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta47_47" class="block iDevice_content">
+<p>
+En el siguiente enlace encontrarás información sobre <span lang="en">HyperThreading</span>, marca registrada de la empresa <span lang="en">Intel</span> que permite a los programas multihilo procesarlos en paralelo dentro de un único procesador.
+</p>
+<p class="enlace_centrado">
+<a href="http://es.wikipedia.org/wiki/HyperThreading" title="Acceder a la wikipedia para obtener información sobre la tecnología HyperThreading."> Información sobre <span lang="en">HyperThreading.</span></a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="54_EJEMP.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="61_PRIOR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432783/mod_resource/content/1/PSP02_Contenidos_Web/6_gestin_y_planificacin_de_hilos.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 06 Oct 2023 22:11:50 GMT -->
+</html>
