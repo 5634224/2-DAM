@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433024/mod_resource/content/1/22_definicin_de_campos.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Oct 2023 13:56:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.- Definición de campos. </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Organización, consulta y tratamiento de la información.</a></li>
+   <li><a href="1_ORGANI.HTM" class="daddy">1.- Organización y consulta de la información.</a>
+   <ul class="other-section">
+      <li><a href="11_TABLA.HTM" class="no-ch">1.1.- Tablas y vistas de la base de datos.</a></li>
+      <li><a href="12_CONSU.HTM" class="no-ch">1.2.- Consultas de acceso a datos.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_VISUAL.HTM" class="current-page-parent daddy">2.- Visualización de la información.</a>
+   <ul>
+      <li><a href="21_INTER.HTM" class="no-ch">2.1.- Interfaces de entrada de datos y de procesos. Formularios y Gráficos.</a></li>
+      <li id="active"><a href="22_DEFIN.HTM" class="active no-ch">2.2.- Definición de campos.</a></li>
+      <li><a href="23_MENS.HTM" class="no-ch">2.3.- Menús.</a></li>
+      <li><a href="24_BSQUE.HTM" class="no-ch">2.4.- Búsqueda de información.</a></li>
+      <li><a href="25_INFOR.HTM" class="no-ch">2.5.- Informes y listados de la aplicación.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_TRATAM.HTM" class="daddy">3.- Tratamiento de la información.</a>
+   <ul class="other-section">
+      <li><a href="31_CLCUL.HTM" class="no-ch">3.1.- Cálculos: pedidos, albaranes, facturas, asientos predefinidos, trazabilidad y producción.</a></li>
+      <li><a href="32_PROCE.HTM" class="no-ch">3.2.- Procedimientos almacenados de servidor.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_EXTRAC.HTM" class="daddy">4.- Extracción de datos en sistemas de ERP-CRM y almacenes de datos.</a>
+   <ul class="other-section">
+      <li><a href="41_IMPOR.HTM" class="no-ch">4.1.- Importar y exportar datos.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_EVALUA.HTM" class="daddy">5.- Evaluación del rendimiento y auditorías de acceso a los datos.</a>
+   <ul class="other-section">
+      <li><a href="51_MONIT.HTM" class="no-ch">5.1.- Monitorización y evaluación del rendimiento.</a></li>
+      <li><a href="52_AUDIT.HTM" class="no-ch">5.2.- Auditorías de control de acceso a los datos. Trazas del sistema (logs).</a></li>
+      <li><a href="53_INCID.HTM" class="no-ch">5.3.- Incidencias: identificación y resolución.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_INTER.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_MENS.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.- Definición de campos.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id18">
+<div class="iDevice emphasis0">
+<div id="ta18_73" class="block iDevice_content">
+<p>Al principio del apartado veíamos un ejemplo de definición de un objeto. Decíamos que los objetos están definidos en archivos <span lang="en">XML</span>. Un objeto está formado por campos. Los campos son la información que se muestra en pantalla. Por ejemplo, una vista de tipo formulario con dos campos nombre y título la definiríamos así:</p>
+<div class="codigo elemento_centrado" style="width: 21.95em;">
+<div class="texto_izquierda">
+<pre><code>&lt;?xml version="1.0"?&gt; </code></pre>
+<pre><code>&lt;form string=”Empresa”&gt;</code></pre>
+<pre><code>     &lt;field name=”name”/&gt;</code></pre>
+<pre><code>     &lt;field name=”title”/&gt;</code></pre>
+<pre><code>&lt;/form&gt; </code></pre>
+</div>
+</div>
+<div class="elemento_derecha">
+<div class="elemento_centrado">
+<figure class="exe-figure exe-image float-right license-custom" style="width: 250px;"><a href="../PNG/PANTAL-4.PNG" title="Descargar la ampliación de la imagen." target="_blank" rel="noopener"><img src="../PNG/PANTAL-4.PNG" alt="Ilustración de Pantallazo de Odoo sobre descripción de campos de respartner" title="Pantallazo de Odoo sobre descripción de campos de respartner" class="imagen_ampliable" width="250" height="114" /></a>
+<figcaption class="figcaption"><span class="author">Captura de pantalla de Odoo propiedad de Odoo, S.A.</span> <span class="license"><span class="sep">(</span><span class="custom-license"><a href="https://www.gnu.org/licenses/lgpl-3.0.html" target="_blank" title="Acceder a la página web con los términos de la Licencia LGPLv3" rel="noopener">Licencia LGPLv3</a></span><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+</div>
+<p></p>
+<p>En el ejemplo anterior, hemos utilizado distintos tipos de etiquetas para describir la vista, La etiqueta <code>form</code> indica que vamos a describir un formulario y dentro de ella se utiliza la etiqueta <code>field</code> para cada uno de los campos que lo componen. Las etiquetas empiezan con el símbolo <code>&lt;</code> y terminan con el símbolo <code>/&gt;</code>. En las vistas de tipo formulario, los campos van precedidos por una etiqueta con su nombre y se colocan de izquierda a derecha, en el orden con que son declarados en el archivo <span lang="en">XML</span> .</p>
+<p>Hay un tipo especial de campo que son los campos de relación <code>one2many</code>. Estos campos se utilizan para reflejar una relación de uno-a-muchos entre dos objetos. Por ejemplo, el campo <code>address</code> dentro del objeto <code>res.partner</code> es un campo <code>one2many</code> lo cual quiere decir que ese campo está enlazado con otro objeto, en este caso <code>res.partner.address</code>, esto es, que un registro de <code>res.partner</code> puede tener muchos registros relacionados en <code>res.partner.address</code>. En otras palabras, una empresa puede tener muchas direcciones también llamadas contactos de la empresa, y esas direcciones se guardan en la tabla <code>res.partner.address</code>. A la hora de describir este tipo de campos en el archivo <span lang="en">XML</span> utilizaremos la sintaxis:</p>
+<div class="codigo elemento_centrado" style="width: 48.35em;">
+<div class="texto_izquierda">
+<pre><code>&lt;field mode=”form,tree” name=”address” &gt;</code></pre>
+<pre><code>     &lt;dentro pondremos los campos que forman parte de res.partner.address&gt;</code></pre>
+<pre><code>&lt;/field&gt;</code></pre>
+</div>
+</div>
+<p></p>
+<p>En el menú <strong>Ajustes/Técnico/Estructura de la base de datos/Modelos</strong> podemos ver los campos del objeto Empresa(res.partner), y veremos que uno de ellos es el campo address de tipo One2many.</p>
+<p>Además de los campos, existen varios elementos de diseño que nos permiten personalizar las vistas <span lang="en">form</span> y <span lang="en">tree</span>. Algunos de ellos son:</p>
+<ul class="lista_verificacion">
+<li><code>mode</code>: tipo de vistas que va a permitir el objeto.</li>
+<li><code>name</code>: nombre del campo tal y como aparece en el objeto.</li>
+<li><code>separator</code>: agrega una línea de separación en el formato, ejemplo:
+<p class="elemento_centrado"><code class="codigo">&lt;separator string="link" colspan="4"/&gt;</code></p>
+<p>El atributo <code>string</code> define la etiqueta del separador y el atributo colspan define su tamaño .</p>
+</li>
+<li><code>notebook</code>: Permite distribuir los campos de la vista en diferentes pestañas o <span lang="en">tabs</span> que van definidos por paginas, ejemplo:
+<p class="elemento_centrado"><code class="codigo">&lt;notebook colspan="4"&gt;....&lt;/notebook&gt;</code></p>
+</li>
+</ul>
+<p>Por otra parte, a la etiqueta <code>field</code> se le pueden añadir atributos. Algunos de ellos son:</p>
+<ul class="lista_verificacion">
+<li><code>colspan="4"</code>:El numero de columnas por las que se puede extender un campo .</li>
+<li><code>readonly="1"</code>: Establece un campo como solo lectura .</li>
+<li>i<code>nvisible="True"</code>: Oculta el campo y su etiqueta .</li>
+<li><code>password="True"</code>: Reemplaza la entrada de un campo con un símbolo "•" .</li>
+<li><code>string=""</code>: La etiqueta que va a aparecer junto al campo.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id19">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-19_55">
+<form name="multi-select-form-19_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion19_55" class="block question iDevice_content">
+<strong>Señala cuáles son elementos de diseño para la creación de vistas.</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op19_550" class="sr-av"><a href="#answer-19_58">Opción 1</a></label><input type="checkbox" id="op19_550" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-19_58"><div id="taans19_58" class="block iDevice_content">
+<code>mode.</code>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-19_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op19_551" class="sr-av"><a href="#answer-19_86">Opción 2</a></label><input type="checkbox" id="op19_551" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-19_86"><div id="taans19_86" class="block iDevice_content">
+<code>readonly.</code>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-19_551" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op19_552" class="sr-av"><a href="#answer-19_88">Opción 3</a></label><input type="checkbox" id="op19_552" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-19_88"><div id="taans19_88" class="block iDevice_content">
+<code>separator.</code>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-19_552" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op19_553" class="sr-av"><a href="#answer-19_90">Opción 4</a></label><input type="checkbox" id="op19_553" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-19_90"><div id="taans19_90" class="block iDevice_content">
+<code>res.partner.</code>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-19_553" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-19_55" /> 
+</p>
+</div>
+<section id="f19_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback19_55" class="feedback iDevice_content">
+Recuerda que los elementos de diseño permiten personalizar las vistas.
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-19_58" class="right">Correcto</a></li>
+<li><a href="#answer-19_86" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-19_88" class="right">Correcto</a></li>
+<li><a href="#answer-19_90" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_INTER.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_MENS.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433024/mod_resource/content/1/22_definicin_de_campos.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Oct 2023 13:56:59 GMT -->
+</html>

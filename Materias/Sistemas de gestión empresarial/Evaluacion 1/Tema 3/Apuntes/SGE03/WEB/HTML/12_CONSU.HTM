@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433024/mod_resource/content/1/12_consultas_de_acceso_a_datos.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Oct 2023 13:56:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2.- Consultas de acceso a datos. </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Organización, consulta y tratamiento de la información.</a></li>
+   <li class="current-page-parent"><a href="1_ORGANI.HTM" class="current-page-parent daddy">1.- Organización y consulta de la información.</a>
+   <ul>
+      <li><a href="11_TABLA.HTM" class="no-ch">1.1.- Tablas y vistas de la base de datos.</a></li>
+      <li id="active"><a href="12_CONSU.HTM" class="active no-ch">1.2.- Consultas de acceso a datos.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_VISUAL.HTM" class="daddy">2.- Visualización de la información.</a>
+   <ul class="other-section">
+      <li><a href="21_INTER.HTM" class="no-ch">2.1.- Interfaces de entrada de datos y de procesos. Formularios y Gráficos.</a></li>
+      <li><a href="22_DEFIN.HTM" class="no-ch">2.2.- Definición de campos.</a></li>
+      <li><a href="23_MENS.HTM" class="no-ch">2.3.- Menús.</a></li>
+      <li><a href="24_BSQUE.HTM" class="no-ch">2.4.- Búsqueda de información.</a></li>
+      <li><a href="25_INFOR.HTM" class="no-ch">2.5.- Informes y listados de la aplicación.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_TRATAM.HTM" class="daddy">3.- Tratamiento de la información.</a>
+   <ul class="other-section">
+      <li><a href="31_CLCUL.HTM" class="no-ch">3.1.- Cálculos: pedidos, albaranes, facturas, asientos predefinidos, trazabilidad y producción.</a></li>
+      <li><a href="32_PROCE.HTM" class="no-ch">3.2.- Procedimientos almacenados de servidor.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_EXTRAC.HTM" class="daddy">4.- Extracción de datos en sistemas de ERP-CRM y almacenes de datos.</a>
+   <ul class="other-section">
+      <li><a href="41_IMPOR.HTM" class="no-ch">4.1.- Importar y exportar datos.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_EVALUA.HTM" class="daddy">5.- Evaluación del rendimiento y auditorías de acceso a los datos.</a>
+   <ul class="other-section">
+      <li><a href="51_MONIT.HTM" class="no-ch">5.1.- Monitorización y evaluación del rendimiento.</a></li>
+      <li><a href="52_AUDIT.HTM" class="no-ch">5.2.- Auditorías de control de acceso a los datos. Trazas del sistema (logs).</a></li>
+      <li><a href="53_INCID.HTM" class="no-ch">5.3.- Incidencias: identificación y resolución.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="11_TABLA.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_VISUAL.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.2.- Consultas de acceso a datos.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id11">
+<div class="iDevice emphasis0">
+<div id="ta11_73" class="block iDevice_content">
+<figure class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 349px;"><img src="../PNG/SGE03_CO.PNG" alt=" Logotipo de pgAdmin, herramienta para el manejo de bases de datos." title="Logo de pgAdmin." class="elemento_derecha" width="349" height="100" />
+<figcaption class="figcaption"><a href="../FILE_PGA.HTM" target="_blank" class="author" title="Acceder a la página web desde la cual se puede descargar la imagen" rel="noopener">pgAdmin Community</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a la página web con los términos de la licencia Creative Commons BY-SA" rel="noopener">CC BY-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Las consultas de acceso a datos nos permiten acceder a la información que guardan las tablas y vistas de la base de datos. Las consultas de acceso a datos sirven para indicar al sistema de gestión de la base de datos que devuelva un extracto de la información en forma de un conjunto de registros.</p>
+<p>Los pasos para crear una consulta son:</p>
+<ul class="lista_verificacion">
+<li>Seleccionar las tablas o vistas sobres las que va a actuar la consulta.</li>
+<li>Establecer la relación entre las tablas y vistas, en caso de que la aplicación no la proporcione.</li>
+<li>Seleccionar los campos a mostrar en la consulta.</li>
+<li>Ejecutar la consulta.</li>
+</ul>
+<p>Las consultas pueden actuar sobre una o varias tablas o vistas, y se pueden guardar para ser utilizadas posteriormente. En ocasiones la aplicación permite realizar consultas de acceso a datos, o bien podemos conectarnos directamente al sistema gestor de base de datos.</p>
+<p>Las consultas de acceso a datos se pueden construir escribiendo el código en el lenguaje de consulta utilizado, como por ejemplo <span lang="en">SQL</span>, o bien mediante asistentes y constructores gráficos si se trata de consultas poco complejas.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id12">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_DEB.PNG)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta12_48" class="block iDevice_content">
+<p>El siguiente enlace, muestra cómo visualizar gráficamente una consulta de acceso a datos con PgAdmin 4, ahora bien no se puede crear con PgAdmin 4 una consulta gráficamente como sí era posible en su versión anterior pgAdmin III. Puedes ver en esta página <span lang="en">web</span> cómo se hace:</p>
+<p class="enlace_centrado"><a href="http://www.comunidadism.es/blogs/gestion-de-bases-de-datos-postgresql-nuevo-pgadmin4" title="Acceder al enlace cómo Visualizar gŕaficamente una consulta de acceso a datos en pgAdmin 4." target="_blank" rel="noopener">Visualizar gŕaficamente una consulta de acceso a datos en pgAdmin 4.</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="11_TABLA.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_VISUAL.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433024/mod_resource/content/1/12_consultas_de_acceso_a_datos.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Oct 2023 13:56:57 GMT -->
+</html>
