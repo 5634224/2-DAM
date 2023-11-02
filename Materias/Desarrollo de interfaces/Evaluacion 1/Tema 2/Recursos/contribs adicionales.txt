@@ -1,0 +1,3 @@
+- Conjuntos de iconos cogidos a través del S.O, que cambien al cambiar el tema del S.O
+- CSS
+- Animaciones

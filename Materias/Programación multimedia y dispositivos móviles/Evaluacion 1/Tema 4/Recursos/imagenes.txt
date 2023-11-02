@@ -1,0 +1,1 @@
+Libreria de control para manejar imágenes: Glide
