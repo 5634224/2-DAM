@@ -1,0 +1,23 @@
+UBUNTU
+
+usuario: sge
+
+contraseña: sge
+
+ODOO
+
+nombre de la base de datos : sge
+
+Usuario: sge@sge.com
+
+contraseña: sge
+
+POSTGRESQL
+
+usuario: postgres
+
+contraseña: odoo16
+
+usuario: odoo16
+
+contraseña: odoo16
