@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/33_ejemplo.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3.- Ejemplo. | PSP_03_Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-17"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_03_Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Comunicaciones en red.</a></li>
+   <li><a href="1_CONCEP.HTM" class="daddy">1.- Conceptos básicos.</a>
+   <ul class="other-section">
+      <li><a href="11_RECOR.HTM" class="daddy">1.1.- Recordando TCP/IP</a>
+      <ul class="other-section">
+         <li><a href="111_RECO.HTM" class="no-ch">1.1.1.- Recordando TCP/IP (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="12_CONEX.HTM" class="no-ch">1.2.- Conexiones TCP/UDP.</a></li>
+      <li><a href="13_PUERT.HTM" class="no-ch">1.3.- Puertos de comunicación</a></li>
+      <li><a href="14_NOMBR.HTM" class="no-ch">1.4.- Nombres en Internet.</a></li>
+      <li><a href="15_MODEL.HTM" class="no-ch">1.5.- Modelos de comunicaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_SOCKET.HTM" class="daddy">2.- Sockets TCP.</a>
+   <ul class="other-section">
+      <li><a href="21_SERVI.HTM" class="no-ch">2.1.- Servidor.</a></li>
+      <li><a href="22_CLIEN.HTM" class="no-ch">2.2.- Cliente.</a></li>
+      <li><a href="23_FLUJO.HTM" class="no-ch">2.3.- Flujo de Entrada y de Salida.</a></li>
+      <li><a href="24_EJEMP.HTM" class="daddy">2.4.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="241_EJEM.HTM" class="no-ch">2.4.1.- Ejemplo (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_SOCKET.HTM" class="current-page-parent daddy">3.- Sockets UDP.</a>
+   <ul>
+      <li><a href="31_RECEP.HTM" class="no-ch">3.1.- Receptor.</a></li>
+      <li><a href="32_EMISO.HTM" class="no-ch">3.2.- Emisor.</a></li>
+      <li id="active"><a href="33_EJEMP.HTM" class="active daddy">3.3.- Ejemplo.</a>
+      <ul>
+         <li><a href="331_EJEM.HTM" class="no-ch">3.3.1.- Ejemplo (II).</a></li>
+         <li><a href="332_EJEM.HTM" class="no-ch">3.3.2.- Ejemplo (III).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="32_EMISO.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="331_EJEM.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.3.- Ejemplo.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id37">
+<div class="iDevice emphasis0">
+<div id="ta37_73" class="block iDevice_content">
+<img alt="Ilustración de un ordenador." class="elemento_centrado" height="132" src="../JPG/PSP03-21.JPG" style="width: 200px; height: 132px" title="Ordenador." width="200" /><br />
+<p>
+A continuación, para aprender a programar <span lang="en">Sockets UDP</span> se va a realizar un ejemplo sencillo donde intervienen dos procesos:
+</p>
+<ul class="lista_verificacion">
+	<li><strong>Receptor<span lang="en">UDP</span></strong>.  Inicia el puerto 1500 y  muestra en pantalla todos los mensajes que llegan a él.</li>
+	<li><strong>Emisor<span lang="en">UDP</span></strong>. Permite enviar por líneas de comandos mensajes al receptor por el puerto 1500.</li>
+</ul>
+<p>
+<strong>Receptor<span lang="en">UDP.java</span></strong>
+</p>
+<div class="codigo elemento_centrado" style="width: 47.8em">
+<div class="texto_izquierda">
+<pre>
+<code>import java.net.*; </code>
+</pre>
+<pre>
+<code>import java.io.*; </code>
+</pre>
+<pre>
+<code> </code>
+</pre>
+<pre>
+<code>public class ReceptorUDP { </code>
+</pre>
+<pre>
+<code>  public static void main(String args [] ) { </code>
+</pre>
+<pre>
+<code>    // Sin argumentos </code>
+</pre>
+<pre>
+<code>    if (args.length != 0) { </code>
+</pre>
+<pre>
+<code>      System.err.println(&quot;Uso: java ReceptorUDP&quot;); </code>
+</pre>
+<pre>
+<code>    } </code>
+</pre>
+<pre>
+<code>    else try{ </code>
+</pre>
+<pre>
+<code>      // Crea el  socket </code>
+</pre>
+<pre>
+<code>      DatagramSocket sSocket = new DatagramSocket(1500); </code>
+</pre>
+<pre>
+<code> </code>
+</pre>
+<pre>
+<code>      // Crea el espacio para los mensajes </code>
+</pre>
+<pre>
+<code>      byte [] cadena = new byte[1000] ; </code>
+</pre>
+<pre>
+<code>      DatagramPacket mensaje = new DatagramPacket(cadena, cadena.length); </code>
+</pre>
+<pre>
+<code> </code>
+</pre>
+<pre>
+<code>      System.out.println(&quot;Esperando mensajes..&quot;);</code>
+</pre>
+<pre>
+<code>      while(true){</code>
+</pre>
+<pre>
+<code>           // Recibe y muestra el mensaje </code>
+</pre>
+<pre>
+<code>           sSocket.receive(mensaje); </code>
+</pre>
+<pre>
+<code>           String datos=new String(mensaje.getData(),0,mensaje.getLength());</code>
+</pre>
+<pre>
+<code>           System.out.println(&quot;\tMensaje Recibido: &quot; +datos);</code>
+</pre>
+<pre>
+<code>      }</code>
+</pre>
+<pre>
+<code>    } catch(SocketException e) { </code>
+</pre>
+<pre>
+<code>      System.err.println(&quot;Socket: &quot; + e.getMessage()); </code>
+</pre>
+<pre>
+<code>    } catch(IOException e) { </code>
+</pre>
+<pre>
+<code>      System.err.println(&quot;E/S: &quot; + e.getMessage()); } </code>
+</pre>
+<pre>
+<code>  } </code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+<br />
+</div>
+</div>
+
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="32_EMISO.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="331_EJEM.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/33_ejemplo.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:28 GMT -->
+</html>

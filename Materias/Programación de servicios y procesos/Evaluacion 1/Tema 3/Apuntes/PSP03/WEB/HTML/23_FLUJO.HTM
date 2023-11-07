@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/23_flujo_de_entrada_y_de_salida.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.3.- Flujo de Entrada y de Salida. | PSP_03_Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_03_Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Comunicaciones en red.</a></li>
+   <li><a href="1_CONCEP.HTM" class="daddy">1.- Conceptos básicos.</a>
+   <ul class="other-section">
+      <li><a href="11_RECOR.HTM" class="daddy">1.1.- Recordando TCP/IP</a>
+      <ul class="other-section">
+         <li><a href="111_RECO.HTM" class="no-ch">1.1.1.- Recordando TCP/IP (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="12_CONEX.HTM" class="no-ch">1.2.- Conexiones TCP/UDP.</a></li>
+      <li><a href="13_PUERT.HTM" class="no-ch">1.3.- Puertos de comunicación</a></li>
+      <li><a href="14_NOMBR.HTM" class="no-ch">1.4.- Nombres en Internet.</a></li>
+      <li><a href="15_MODEL.HTM" class="no-ch">1.5.- Modelos de comunicaciones.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_SOCKET.HTM" class="current-page-parent daddy">2.- Sockets TCP.</a>
+   <ul>
+      <li><a href="21_SERVI.HTM" class="no-ch">2.1.- Servidor.</a></li>
+      <li><a href="22_CLIEN.HTM" class="no-ch">2.2.- Cliente.</a></li>
+      <li id="active"><a href="23_FLUJO.HTM" class="active no-ch">2.3.- Flujo de Entrada y de Salida.</a></li>
+      <li><a href="24_EJEMP.HTM" class="daddy">2.4.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="241_EJEM.HTM" class="no-ch">2.4.1.- Ejemplo (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_SOCKET.HTM" class="daddy">3.- Sockets UDP.</a>
+   <ul class="other-section">
+      <li><a href="31_RECEP.HTM" class="no-ch">3.1.- Receptor.</a></li>
+      <li><a href="32_EMISO.HTM" class="no-ch">3.2.- Emisor.</a></li>
+      <li><a href="33_EJEMP.HTM" class="daddy">3.3.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="331_EJEM.HTM" class="no-ch">3.3.1.- Ejemplo (II).</a></li>
+         <li><a href="332_EJEM.HTM" class="no-ch">3.3.2.- Ejemplo (III).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="22_CLIEN.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="24_EJEMP.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.3.- Flujo de Entrada y de Salida.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id25">
+<div class="iDevice emphasis0">
+<div id="ta25_73" class="block iDevice_content">
+<img alt="Icono que representa un servidor." class="elemento_derecha" height="200" src="../JPG/PSP03-14.JPG" style="width: 160px; height: 200px" title="Icono servidor." width="160" />
+<p>
+Una vez establecida la conexión entre el cliente y el servidor se inicializa la variable del tipo <span lang="en">Socket</span> que en el ejemplo se llama sCliente. Para poder enviar o recibir datos a través del <span lang="en">socket</span> es necesario establecer un <span lang="en">stream</span> (flujo) de entrada o de salida según corresponda.
+</p>
+<p>
+Continuando con el ejemplo anterior, a continuación se va a establecer un <span lang="en">stream</span> de salida llamado flujo_salida.
+</p>
+<p>
+<code>OutputStream aux = sCliente.getOutputStream();</code>
+</p>
+<p>
+<code>DataOutputStream flujo_salida= new DataOutputStream( aux );</code>
+</p>
+<p>
+o lo que es lo mismo,
+</p>
+<p>
+<code>DataOutputStream flujo_salida= new </code>
+</p>
+<p>
+<code>DataOutputStream(sCliente.getOutputStream());</code>
+</p>
+<p>
+A partir de éste momento puede enviar información de la siguiente forma:
+</p>
+<p>
+<code>flujo_salida.writeUTF( &quot;Enviar datos&quot;);</code>
+</p>
+<p>
+De forma análoga, puede establecer el stream de entrada de la siguiente forma:
+</p>
+<p>
+<code>InputStream aux = sCliente.getInputStream();</code>
+</p>
+<p>
+<code>DataInputStream flujo_entrada = new DataInputStream( aux );</code>
+</p>
+<p>
+o lo que es lo mismo,
+</p>
+<p>
+<code>DataInputStream flujo_entrada = new</code> 
+</p>
+<p>
+<code>DataInputStream(sCliente.getInputStream());</code>
+</p>
+<p>
+A continuación se muestra una forma cómoda de recibir información:
+</p>
+<p>
+<code>String datos=new String();</code>
+</p>
+<p>
+<code>Datos=flujo_entrada.readUTF();</code>
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id26">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta26_47" class="block iDevice_content">
+<p>Además de utilizar las funciones <code>writeUTF</code> y <code>readUTF</code> es posible recibir información de otras formas. Para más información consulte los siguientes enlaces.</p>
+<p class="enlace_centrado"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/DataInputStream.html" title="Acceder al artículo sobre los streams de entrada." lang="en">Data Input Stream.</a></p>
+<p class="enlace_centrado"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/DataOutputStream.html" title="Acceder al artículo sobre los streams de salida." lang="en">Data Output Stream.</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id28">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-28_55">
+<form name="multi-select-form-28_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion28_55" class="block question iDevice_content">
+<p>
+<strong>Indica si la siguiente afirmación es correcta. ¿Existen flujos de entrada y salida simultáneos?</strong>
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op28_550" class="sr-av"><a href="#answer-28_58">Opción 1</a></label><input type="checkbox" id="op28_550" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-28_58"><div id="taans28_58" class="block iDevice_content">
+Verdadero.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-28_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op28_551" class="sr-av"><a href="#answer-28_119">Opción 2</a></label><input type="checkbox" id="op28_551" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-28_119"><div id="taans28_119" class="block iDevice_content">
+Falso.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-28_551" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-2-28_55" /> 
+</p>
+</div>
+<section id="f28_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback28_55" class="feedback iDevice_content">
+Es falso ya que existe flujos de entrada y flujos de salida. Pero hay que crear un flujo para cada comunicación.
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-28_58" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-28_119" class="right">Correcto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="22_CLIEN.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="24_EJEMP.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/23_flujo_de_entrada_y_de_salida.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:26 GMT -->
+</html>

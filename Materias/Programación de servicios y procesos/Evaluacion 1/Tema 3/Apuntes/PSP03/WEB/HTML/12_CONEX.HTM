@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/12_conexiones_tcpudp.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2.- Conexiones TCP/UDP. | PSP_03_Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-4"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_03_Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Comunicaciones en red.</a></li>
+   <li class="current-page-parent"><a href="1_CONCEP.HTM" class="current-page-parent daddy">1.- Conceptos básicos.</a>
+   <ul>
+      <li><a href="11_RECOR.HTM" class="daddy">1.1.- Recordando TCP/IP</a>
+      <ul class="other-section">
+         <li><a href="111_RECO.HTM" class="no-ch">1.1.1.- Recordando TCP/IP (II).</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="12_CONEX.HTM" class="active no-ch">1.2.- Conexiones TCP/UDP.</a></li>
+      <li><a href="13_PUERT.HTM" class="no-ch">1.3.- Puertos de comunicación</a></li>
+      <li><a href="14_NOMBR.HTM" class="no-ch">1.4.- Nombres en Internet.</a></li>
+      <li><a href="15_MODEL.HTM" class="no-ch">1.5.- Modelos de comunicaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_SOCKET.HTM" class="daddy">2.- Sockets TCP.</a>
+   <ul class="other-section">
+      <li><a href="21_SERVI.HTM" class="no-ch">2.1.- Servidor.</a></li>
+      <li><a href="22_CLIEN.HTM" class="no-ch">2.2.- Cliente.</a></li>
+      <li><a href="23_FLUJO.HTM" class="no-ch">2.3.- Flujo de Entrada y de Salida.</a></li>
+      <li><a href="24_EJEMP.HTM" class="daddy">2.4.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="241_EJEM.HTM" class="no-ch">2.4.1.- Ejemplo (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_SOCKET.HTM" class="daddy">3.- Sockets UDP.</a>
+   <ul class="other-section">
+      <li><a href="31_RECEP.HTM" class="no-ch">3.1.- Receptor.</a></li>
+      <li><a href="32_EMISO.HTM" class="no-ch">3.2.- Emisor.</a></li>
+      <li><a href="33_EJEMP.HTM" class="daddy">3.3.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="331_EJEM.HTM" class="no-ch">3.3.1.- Ejemplo (II).</a></li>
+         <li><a href="332_EJEM.HTM" class="no-ch">3.3.2.- Ejemplo (III).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="111_RECO.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_PUERT.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.2.- Conexiones TCP/UDP.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id9">
+<div class="iDevice emphasis0">
+<div id="ta9_73" class="block iDevice_content">
+<p><img alt="Icono que muestra varios dispositivos comunicándose." class="elemento_derecha" src="../JPG/PSP03_-3.JPG" style="width: 200px; height: 128px;" title="Networking." width="200" height="128" /></p>
+<p>Como se ha visto anteriormente, la capa de transporte cumple la función de establecer las reglas necesarias para establecer una conexión entre dos dispositivos.</p>
+<p>Desde la capa anterior, la capa de red, la información se recibe en forma de paquetes desordenados y la capa de transporte debe ser capaz de manejar dichos paquetes y obtener un único flujo de datos. Recuerde, que la capa de red en la arquitectura <span lang="en">TCP/IP</span> no se preocupa del orden de los paquetes ni de los errores, es en esta capa donde se deben cuidar estos detalles.</p>
+<p>La capa de transporte del modelo <span lang="en">TCP/IP</span> es equivalente a la capa de transporte del modelo <span lang="en">OSI</span>, por lo que es el encargado de la transferencia libre de errores de los datos entre el emisor y el receptor, aunque no estén directamente conectados, así como de mantener el flujo de la red. La tarea de este nivel es proporcionar un transporte de datos confiable de la máquina de origen a la máquina destino, independientemente de la red física.</p>
+<p>Existen dos tipos de conexiones:</p>
+<ul class="lista_verificacion">
+<li><strong lang="en">TCP (Transmission Control Protocol)</strong>. Es un protocolo orientado a la conexión que permite que un flujo de bytes originado en una máquina se entregue sin errores en cualquier máquina destino. Este protocolo fragmenta el flujo entrante de bytes en mensajes y pasa cada uno a la capa de red. En el diseño, el proceso <span lang="en">TCP</span> receptor reensambla los mensajes recibidos para formar el flujo de salida. <span lang="en">TCP</span> también se encarga del control de flujo para asegurar que un emisor rápido no pueda saturar a un receptor lento con más mensajes de los que pueda gestionar.</li>
+<li><strong lang="en">UDP (User Datagram Protocol)</strong>. Es un protocolo sin conexión, para aplicaciones que no necesitan la asignación de secuencia ni el control de flujo <span lang="en">TCP</span> y que desean utilizar los suyos propios. Este protocolo también se utilizan para las consultas de petición y respuesta del tipo cliente-servidor, y en aplicaciones en las que la velocidad es más importante que la entrega precisa, como las transmisiones de voz o de vídeo. Uno de sus usos es en la transmisión de audio y vídeo en tiempo real, donde no es posible realizar retransmisiones por los estrictos requisitos de retardo que se tiene en estos casos.</li>
+</ul>
+<p>De esta forma, a la hora de programar nuestra aplicación deberemos elegir el protocolo que queremos utilizar según nuestras necesidades: <span lang="en">TCP</span> o <span lang="en">UDP</span>.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id10">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta10_47" class="block iDevice_content">
+<p>
+Es interesante que leas algo más sobre los protocolos más importantes de este nivel, por lo que te proponemos los siguientes enlaces.
+</p>
+<p class="enlace_centrado">
+<a href="http://es.wikipedia.org/wiki/Transmission_Control_Protocol" lang="en" title="Acceder al artículo sobre TCP.">TCP.</a>
+</p>
+<p class="enlace_centrado">
+<a href="http://es.wikipedia.org/wiki/User_Datagram_Protocol" lang="en" title="Acceder al artículo sobre UDP.">UDP.</a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozefpdIdevice em_iDevice" id="id11">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta11_41" class="block instructions iDevice_content">
+
+</section>
+<section class="activity" id="activity-11_42">
+<form name="cloze-form-11_42" action="#" class="activity-form cloze-activity-form">
+<div id="cloze11_42">
+<input type="hidden" name="clozeFlag11_42.strictMarking" id="clozeFlag11_42.strictMarking" value="false"/>
+
+<input type="hidden" name="clozeFlag11_42.checkCaps" id="clozeFlag11_42.checkCaps" value="false"/>
+
+<input type="hidden" name="clozeFlag11_42.instantMarking" id="clozeFlag11_42.instantMarking" value="false"/>
+
+<p align="left">
+Las conexiones    
+<label for="clozeBlank11_42.0" class="sr-av">Rellenar huecos (1):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank11_42.0" style="width:3em" />
+<span style="display:none" id="clozeAnswer11_42.0">JXUwMDBjJXUwMDE3JXUwMDEz
+</span>
+    garantizan la correcta recepción de los
+paquetes y las conexiones    
+<label for="clozeBlank11_42.1" class="sr-av">Rellenar huecos (2):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank11_42.1" style="width:3em" />
+<span style="display:none" id="clozeAnswer11_42.1">JXUwMDBkJXUwMDExJXUwMDE0
+</span>
+    son más
+rápidas pero no permiten la corrección de errores.
+</p>
+
+<div class="block iDevice_buttons">
+<p>
+<input class="button" type="submit" name="submit11_42" value="Enviar"  id="submit11_42" />
+
+<input type="button" name="restart11_42" value="Reiniciar" style="display:none" id="restart11_42" onclick="$exe.cloze.restart('11_42')" />
+
+ 
+<input type="button" name="11_42showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton11_42" onclick="$exe.cloze.fillInputs('11_42')" />
+
+<span class="js-hidden js-warning">Habilitar JavaScript</span>
+</p>
+</div>
+<div id="clozeScore11_42"></div>
+</div>
+</form>
+</section></div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="111_RECO.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_PUERT.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/12_conexiones_tcpudp.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:23 GMT -->
+</html>

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/22_cliente.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.- Cliente. | PSP_03_Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_03_Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Comunicaciones en red.</a></li>
+   <li><a href="1_CONCEP.HTM" class="daddy">1.- Conceptos básicos.</a>
+   <ul class="other-section">
+      <li><a href="11_RECOR.HTM" class="daddy">1.1.- Recordando TCP/IP</a>
+      <ul class="other-section">
+         <li><a href="111_RECO.HTM" class="no-ch">1.1.1.- Recordando TCP/IP (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="12_CONEX.HTM" class="no-ch">1.2.- Conexiones TCP/UDP.</a></li>
+      <li><a href="13_PUERT.HTM" class="no-ch">1.3.- Puertos de comunicación</a></li>
+      <li><a href="14_NOMBR.HTM" class="no-ch">1.4.- Nombres en Internet.</a></li>
+      <li><a href="15_MODEL.HTM" class="no-ch">1.5.- Modelos de comunicaciones.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_SOCKET.HTM" class="current-page-parent daddy">2.- Sockets TCP.</a>
+   <ul>
+      <li><a href="21_SERVI.HTM" class="no-ch">2.1.- Servidor.</a></li>
+      <li id="active"><a href="22_CLIEN.HTM" class="active no-ch">2.2.- Cliente.</a></li>
+      <li><a href="23_FLUJO.HTM" class="no-ch">2.3.- Flujo de Entrada y de Salida.</a></li>
+      <li><a href="24_EJEMP.HTM" class="daddy">2.4.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="241_EJEM.HTM" class="no-ch">2.4.1.- Ejemplo (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_SOCKET.HTM" class="daddy">3.- Sockets UDP.</a>
+   <ul class="other-section">
+      <li><a href="31_RECEP.HTM" class="no-ch">3.1.- Receptor.</a></li>
+      <li><a href="32_EMISO.HTM" class="no-ch">3.2.- Emisor.</a></li>
+      <li><a href="33_EJEMP.HTM" class="daddy">3.3.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="331_EJEM.HTM" class="no-ch">3.3.1.- Ejemplo (II).</a></li>
+         <li><a href="332_EJEM.HTM" class="no-ch">3.3.2.- Ejemplo (III).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_SERVI.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_FLUJO.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.- Cliente.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id23">
+<div class="iDevice emphasis0">
+<div id="ta23_73" class="block iDevice_content">
+<p>
+Los pasos que realiza el cliente para realizar una comunicación son:
+</p>
+<ul class="lista_verificacion">
+	<li><strong>Conectarse con el servidor</strong>. El cliente utiliza la función Socket para indicarse con un determinado servidor a un puerto específico. Una vez realizada la conexión se crea el <span lang="en">socket</span> por donde se realizará la comunicación.</li>
+	<li><strong>Envío y recepción de datos</strong>. Para poder recibir/enviar datos es necesario crear un flujo (stream) de entrada y otro de salida. </li>
+	<li>Una vez finalizada la comunicación se <strong>cierra el <span lang="en">socket</span></strong>.
+	</li>
+</ul>
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<a href="../PNG/PSP03_-3.PNG" title="Ampliar imagen."><img alt="Esquema de funcionamiento interno del modelo cliente/servidor en el que se muestran las diferentes módulos de funcionamiento y su interconexión." class="imagen_ampliable" height="96" src="../PNG/PSP03_-4.PNG" style="width: 120px; height: 96px" title="Esquema de funcionamiento interno del modelo cliente/servidor." width="120" /></a>
+</div>
+<div class="elemento_centrado credenciales">
+Esquema de funcionamiento interno del modelo cliente/servidor.
+</div>
+</div>
+<br />
+<p>
+Para conectarse a un servidor se utiliza la función <code>Socket</code> indicando el equipo y el puerto al que desea conectarse. Su sintaxis es:
+</p>
+<p>
+<code>Socket sCliente = new Socket( Host , Puerto );</code>
+</p>
+<p>
+donde <span lang="en">Host</span> es un string que guarda el nombre o dirección IP del servidor y Puerto es una variable del tipo <code>int</code> que guarda el puerto. &quot;
+</p>
+<p>
+Si lo prefiere también puede realizar la conexión directamente:
+</p>
+<p>
+<code>Socket sCliente = new Socket(&quot;192.168.1.200&quot;, 1500);</code>
+</p>
+<p>
+Una vez establecida la comunicación, se crean los <span lang="en">streams</span> de entrada y salida para realizar las diferentes comunicaciones entre el cliente y el servidor. En el siguiente apartado veremos la creación de <span lang="en">streams</span>.
+</p>
+<p>
+Finalmente, una vez terminada la comunicación se cierra el <span lang="en">socket</span> de la siguiente forma:
+</p>
+<p>
+<code> sCliente.close();</code>
+</p>
+<p>
+A continuación se muestra el código comentado de un servidor.
+</p>
+<div class="codigo elemento_centrado" style="width: 39.55em">
+<div class="texto_izquierda">
+<pre>
+<code>import java.io.*;</code>
+</pre>
+<pre>
+<code>import java.net.*;</code>
+</pre>
+<pre>
+<code>class Cliente {</code>
+</pre>
+<pre>
+<code>    static final String Host = &quot;localhost&quot;;</code>
+</pre>
+<pre>
+<code>    static final int Puerto=2000;</code>
+</pre>
+<pre>
+<code>    public Cliente( ) {</code>
+</pre>
+<pre>
+<code>        try{</code>
+</pre>
+<pre>
+<code>            // Me conecto al servidor en un detrminado puerto</code>
+</pre>
+<pre>
+<code>            Socket sCliente = new Socket( Host, Puerto );</code>
+</pre>
+<pre>
+<code>// TAREAS QUE REALIZA EL  CLIENTE</code>
+</pre>
+<pre>
+<code>           // Cierro el socket</code>
+</pre>
+<pre>
+<code>            sCliente.close();</code>
+</pre>
+<pre>
+<code>        } catch( Exception e ) {</code>
+</pre>
+<pre>
+<code>            System.out.println( e.getMessage() );</code>
+</pre>
+<pre>
+<code>        }</code>
+</pre>
+<pre>
+<code>    }</code>
+</pre>
+<pre>
+<code>    public static void main( String[] arg ) {</code>
+</pre>
+<pre>
+<code>        new Cliente();</code>
+</pre>
+<pre>
+<code>    }</code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+<br />
+</div>
+</div>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id24">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-24_55">
+<form name="multi-select-form-24_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion24_55" class="block question iDevice_content">
+<p>
+<strong>¿Qué función permite al servidor publicar un puerto?</strong>
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op24_550" class="sr-av"><a href="#answer-24_58">Opción 1</a></label><input type="checkbox" id="op24_550" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-24_58"><div id="taans24_58" class="block iDevice_content">
+<span lang="en">Socket</span>.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-24_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op24_551" class="sr-av"><a href="#answer-24_112">Opción 2</a></label><input type="checkbox" id="op24_551" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-24_112"><div id="taans24_112" class="block iDevice_content">
+<span lang="en">ServerSocket</span>.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-24_551" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op24_552" class="sr-av"><a href="#answer-24_114">Opción 3</a></label><input type="checkbox" id="op24_552" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-24_114"><div id="taans24_114" class="block iDevice_content">
+<span lang="en">Accept</span>.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-24_552" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op24_553" class="sr-av"><a href="#answer-24_116">Opción 4</a></label><input type="checkbox" id="op24_553" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-24_116"><div id="taans24_116" class="block iDevice_content">
+<span lang="en">ExportSocket</span>.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-24_553" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-24_55" /> 
+</p>
+</div>
+<section id="f24_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback24_55" class="feedback iDevice_content">
+La segunda respuesta es la correcta.
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-24_58" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-24_112" class="right">Correcto</a></li>
+<li><a href="#answer-24_114" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-24_116" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_SERVI.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_FLUJO.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/22_cliente.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:26 GMT -->
+</html>

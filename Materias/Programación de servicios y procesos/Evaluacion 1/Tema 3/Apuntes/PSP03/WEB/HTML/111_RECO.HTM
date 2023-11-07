@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/111_recordando_tcpip_ii.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1.1.- Recordando TCP/IP (II). | PSP_03_Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_03_Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Comunicaciones en red.</a></li>
+   <li class="current-page-parent"><a href="1_CONCEP.HTM" class="current-page-parent daddy">1.- Conceptos básicos.</a>
+   <ul>
+      <li class="current-page-parent"><a href="11_RECOR.HTM" class="current-page-parent daddy">1.1.- Recordando TCP/IP</a>
+      <ul>
+         <li id="active"><a href="111_RECO.HTM" class="active no-ch">1.1.1.- Recordando TCP/IP (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="12_CONEX.HTM" class="no-ch">1.2.- Conexiones TCP/UDP.</a></li>
+      <li><a href="13_PUERT.HTM" class="no-ch">1.3.- Puertos de comunicación</a></li>
+      <li><a href="14_NOMBR.HTM" class="no-ch">1.4.- Nombres en Internet.</a></li>
+      <li><a href="15_MODEL.HTM" class="no-ch">1.5.- Modelos de comunicaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_SOCKET.HTM" class="daddy">2.- Sockets TCP.</a>
+   <ul class="other-section">
+      <li><a href="21_SERVI.HTM" class="no-ch">2.1.- Servidor.</a></li>
+      <li><a href="22_CLIEN.HTM" class="no-ch">2.2.- Cliente.</a></li>
+      <li><a href="23_FLUJO.HTM" class="no-ch">2.3.- Flujo de Entrada y de Salida.</a></li>
+      <li><a href="24_EJEMP.HTM" class="daddy">2.4.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="241_EJEM.HTM" class="no-ch">2.4.1.- Ejemplo (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_SOCKET.HTM" class="daddy">3.- Sockets UDP.</a>
+   <ul class="other-section">
+      <li><a href="31_RECEP.HTM" class="no-ch">3.1.- Receptor.</a></li>
+      <li><a href="32_EMISO.HTM" class="no-ch">3.2.- Emisor.</a></li>
+      <li><a href="33_EJEMP.HTM" class="daddy">3.3.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="331_EJEM.HTM" class="no-ch">3.3.1.- Ejemplo (II).</a></li>
+         <li><a href="332_EJEM.HTM" class="no-ch">3.3.2.- Ejemplo (III).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="11_RECOR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_CONEX.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.1.1.- Recordando TCP/IP (II).</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id5">
+<div class="iDevice emphasis0">
+<div id="ta5_73" class="block iDevice_content">
+<p>El modelo <span lang="en">TCP/IP</span> tiene sólo cuatro capas:</p>
+<ul class="lista_verificacion">
+<li><strong>La capa <span lang="en">host</span>-red</strong>. Esta capa permite comunicar el ordenador con el medio que conecta el equipo a la red. Para ello primero debe permitir convertir la información en impulsos físicos (<abbr title="  Por ejemplo.   ">p.ej</abbr>. eléctricos, magnéticos, luminosos) y además, debe permitir las conexiones entre los ordenadores de la red. En esta capa se realiza un direccionamiento físico utilizando las direcciones MAC.</li>
+<li><strong>La capa de red</strong>. Esta capa es el eje de la arquitectura <span lang="en">TCP/IP</span> ya que permite que los equipos envíen paquetes en cualquier red y viajen de forma independiente a su destino (que podría estar en una red diferente). Los paquetes pueden llegar incluso en un orden diferente a aquel en que se enviaron, en cuyo caso corresponde a las capas superiores reordenándolos, si se desea la entrega ordenada. La capa de red define un formato de paquete y protocolo oficial llamado <span lang="en">IP</span> (<span lang="en">I</span><span lang="en">nternet Protocol</span>). El trabajo de la capa de red es entregar paquetes <span lang="en">IP</span> a su destino. Aquí la consideración más importante es decidir el camino que tienen que seguir los paquetes (encaminamiento), y también evitar la congestión. En esta capa se realiza el direccionamiento lógico o direccionamiento por <span lang="en">IP</span>, ya que ésta es la capa encargada de enviar un determinado mensaje a su dirección <span lang="en">IP</span> de destino.</li>
+<li><strong>La capa de transporte</strong>. La capa de transporte permite que los equipos lleven a cabo una conversación. Aquí se definieron dos protocolos de transporte: <span lang="en">TCP</span> (<span lang="en">Transmission Control Protocol</span>) y <span lang="en">UDP</span> (<span lang="en">User Datagram Protocol</span>). El protocolo <span lang="en">TCP</span> es un protocolo orientado a conexión y fiable, y el protocolo <span lang="en">UDP</span> es un protocolo no orientado a conexión y no fiable En esta capa además se realiza el direccionamiento por puertos. Gracias a la capa anterior, los paquetes viajan de un equipo origen a un equipo destino. La capa de transporte se encarga de que la información se envíe a la aplicación adecuada (mediante un determinado puerto).</li>
+<li><strong>La capa de aplicación</strong>. Esta capa engloba las funcionalidades de las capas de sesión, presentación y aplicación del modelo <span lang="en">OSI</span>. Incluye todos los protocolos de alto nivel relacionados con las aplicaciones que se utilizan en Internet (por ejemplo <acronym title="Hypertext Transfer Protocol." lang="en">HTTP</acronym>, <acronym title="File Transfer Protocol." lang="en">FTP</acronym>, <span lang="en">TELNET</span>).</li>
+</ul>
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="../PNG/PSP03_CO.PNG" title="Ampliar imagen."><img alt="Esquema que muestra las capas del modelo TCP/IP con sus principales características. " class="imagen_ampliable" src="../PNG/PSP03_-2.PNG" style="width: 72px; height: 120px;" title="Modelo TCP/IP." width="72" height="120" /></a></div>
+<div class="elemento_centrado credenciales">Modelo <span lang="en">TCP/IP</span>.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id6">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_DEB.PNG)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_48" class="block iDevice_content">
+<p>
+Si quieres ampliar tus conocimientos sobre el modelo <span lang="en">TCP/IP</span> debes leer el siguiente artículo prestando especial atención a la capa de transporte.
+</p>
+<p class="enlace_centrado">
+<a href="http://es.wikipedia.org/wiki/Modelo_TCP/IP" title="Acceder al artículo sobre el modelo TCP/IP.">Texto del enlace: Modelo <span lang="en">TCP/IP</span>.</a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id7">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-7_55">
+<form name="multi-select-form-7_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion7_55" class="block question iDevice_content">
+<p>
+<strong>Indica la capa que se encarga de enrutar un paquete por la red para que llegue a su destino.</strong>
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op7_550" class="sr-av"><a href="#answer-7_58">Opción 1</a></label><input type="checkbox" id="op7_550" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-7_58"><div id="taans7_58" class="block iDevice_content">
+Capa <span lang="en">host</span>-red. 
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-7_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op7_551" class="sr-av"><a href="#answer-7_82">Opción 2</a></label><input type="checkbox" id="op7_551" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-7_82"><div id="taans7_82" class="block iDevice_content">
+Capa de red.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-7_551" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op7_552" class="sr-av"><a href="#answer-7_84">Opción 3</a></label><input type="checkbox" id="op7_552" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-7_84"><div id="taans7_84" class="block iDevice_content">
+Capa de transporte.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-7_552" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op7_553" class="sr-av"><a href="#answer-7_86">Opción 4</a></label><input type="checkbox" id="op7_553" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-7_86"><div id="taans7_86" class="block iDevice_content">
+Capa de aplicación.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-7_553" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-7_55" /> 
+</p>
+</div>
+<section id="f7_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback7_55" class="feedback iDevice_content">
+La segunda respuesta es la correcta ya que es la encargada de realizar el direccionamiento <span lang="en">IP</span>.
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-7_58" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-7_82" class="right">Correcto</a></li>
+<li><a href="#answer-7_84" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-7_86" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id8">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta8_47" class="block iDevice_content">
+Si quieres ampliar tus conocimientos sobre redes puedes ver la siguiente presentación.
+<div class="enlace_centrado">
+<a class="presentacion" href="http://centros.edu.xunta.es/iesoteropedrayo.ourense/dptos/tec/_private/redes.ppt" title="Descargar Presentación sobre redes de comunicación. [ppt - 0.62 MB]">Redes de comunicación.</a> <span class="tamano"> (0.62 MB) </span> 
+</div>
+<a class="elemento_centrado credenciales" href="PSP03_DE.HTM" title="Resumen textual alternativo para `Redes de comunicación´.">Resumen textual alternativo</a>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="11_RECOR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_CONEX.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/111_recordando_tcpip_ii.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:22 GMT -->
+</html>

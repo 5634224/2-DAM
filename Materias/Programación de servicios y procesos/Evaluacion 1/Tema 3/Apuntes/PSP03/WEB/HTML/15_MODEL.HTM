@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/15_modelos_de_comunicaciones.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.5.- Modelos de comunicaciones. | PSP_03_Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_03_Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Comunicaciones en red.</a></li>
+   <li class="current-page-parent"><a href="1_CONCEP.HTM" class="current-page-parent daddy">1.- Conceptos básicos.</a>
+   <ul>
+      <li><a href="11_RECOR.HTM" class="daddy">1.1.- Recordando TCP/IP</a>
+      <ul class="other-section">
+         <li><a href="111_RECO.HTM" class="no-ch">1.1.1.- Recordando TCP/IP (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="12_CONEX.HTM" class="no-ch">1.2.- Conexiones TCP/UDP.</a></li>
+      <li><a href="13_PUERT.HTM" class="no-ch">1.3.- Puertos de comunicación</a></li>
+      <li><a href="14_NOMBR.HTM" class="no-ch">1.4.- Nombres en Internet.</a></li>
+      <li id="active"><a href="15_MODEL.HTM" class="active no-ch">1.5.- Modelos de comunicaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_SOCKET.HTM" class="daddy">2.- Sockets TCP.</a>
+   <ul class="other-section">
+      <li><a href="21_SERVI.HTM" class="no-ch">2.1.- Servidor.</a></li>
+      <li><a href="22_CLIEN.HTM" class="no-ch">2.2.- Cliente.</a></li>
+      <li><a href="23_FLUJO.HTM" class="no-ch">2.3.- Flujo de Entrada y de Salida.</a></li>
+      <li><a href="24_EJEMP.HTM" class="daddy">2.4.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="241_EJEM.HTM" class="no-ch">2.4.1.- Ejemplo (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_SOCKET.HTM" class="daddy">3.- Sockets UDP.</a>
+   <ul class="other-section">
+      <li><a href="31_RECEP.HTM" class="no-ch">3.1.- Receptor.</a></li>
+      <li><a href="32_EMISO.HTM" class="no-ch">3.2.- Emisor.</a></li>
+      <li><a href="33_EJEMP.HTM" class="daddy">3.3.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="331_EJEM.HTM" class="no-ch">3.3.1.- Ejemplo (II).</a></li>
+         <li><a href="332_EJEM.HTM" class="no-ch">3.3.2.- Ejemplo (III).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="14_NOMBR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_SOCKET.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.5.- Modelos de comunicaciones.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id17">
+<div class="iDevice emphasis0">
+<div id="ta17_73" class="block iDevice_content">
+<p>Sin duda alguna, el modelo de comunicación que ha revolucionado los sistemas informáticos es el modelo cliente/servidor. El modelo cliente/servidor esta compuesto por un servidor que ofrece una serie de servicios y unos clientes que acceden a dichos servicios a través de la red.</p>
+<p>Por ejemplo, el servicio más importante de Internet, el <acronym title="World Wide Web." lang="en">WWW</acronym> , utiliza el modelo cliente/servidor. Por un lado tenemos el servidor que alojan las páginas <span lang="en">web</span> y por otro lado los clientes que solicitan al servidor una determinada página <span lang="en">web</span>.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="../JPG/PSP03_-6.JPG" title="Ampliar imagen."><img alt="Esquema que muestra dos clientes comunicándose con un servidor." class="imagen_ampliable" src="../JPG/PSP03_-7.JPG" style="width: 200px; height: 132px;" title="Modelo Cliente/Servidor." width="200" height="132" /></a></div>
+<div class="elemento_centrado credenciales">Modelo Cliente/Servidor</div>
+</div>
+<p></p>
+<p>Otro modelo ampliamente utilizado son los Sistemas de Información Distribuidos. Un Sistema de Información Distribuido esta compuesto por un conjunto de equipos que interactúan entre sí y pueden trabajar a la vez como cliente y servidor. Desde el punto de vista externo es igual que un sistema cliente/servidor ya que el cliente ve al Sistema de Información Distribuido como una entidad. Internamente, los equipos del Sistema de Información Distribuido interactúan entre sí (actuando como servidores y clientes de forma simultánea) para compartir información, recursos, realizar tareas, etc.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="../JPG/PSP03_-8.JPG" title="Ampliar imagen."><img alt="Esquema que muestra dos clientes comunicándose con un sistema información distribuido." class="imagen_ampliable" src="../JPG/PSP03_-9.JPG" style="width: 192px; height: 160px;" title=" Modelo Sistema de Información Distribuido." width="192" height="160" /></a></div>
+<div class="elemento_centrado credenciales">Modelo Sistema de Información Distribuido</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ClozefpdIdevice em_iDevice" id="id18">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta18_41" class="block instructions iDevice_content">
+<p>
+<strong>Rellena los huecos con las palabras que faltan.</strong>
+</p>
+
+</section>
+<section class="activity" id="activity-18_42">
+<form name="cloze-form-18_42" action="#" class="activity-form cloze-activity-form">
+<div id="cloze18_42">
+<input type="hidden" name="clozeFlag18_42.strictMarking" id="clozeFlag18_42.strictMarking" value="false"/>
+
+<input type="hidden" name="clozeFlag18_42.checkCaps" id="clozeFlag18_42.checkCaps" value="false"/>
+
+<input type="hidden" name="clozeFlag18_42.instantMarking" id="clozeFlag18_42.instantMarking" value="false"/>
+
+<p align="left" class="MsoNormal" style="text-align: left">
+<span>El   
+<label for="clozeBlank18_42.0" class="sr-av">Rellenar huecos (1):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank18_42.0" style="width:6em" />
+<span style="display:none" id="clozeAnswer18_42.0">JXUwMDM1JXUwMDAyJXUwMDBiJXUwMDAxJXUwMDA5JXUwMDAz
+</span>
+     
+<label for="clozeBlank18_42.1" class="sr-av">Rellenar huecos (2):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank18_42.1" style="width:16em" />
+<span style="display:none" id="clozeAnswer18_42.1">JXUwMDNiJXUwMDBmJXUwMDA1JXUwMDBjJXUwMDBiJXUwMDFhJXUwMDExJXUwMDRhJXUwMDVjJXUw
+MDE2JXUwMDE3JXUwMDA0JXUwMDFmJXUwMDBkJXUwMDBiJXUwMDFk
+</span>
+   suele tener un servidor mientras
+que   
+<label for="clozeBlank18_42.2" class="sr-av">Rellenar huecos (3):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank18_42.2" style="width:2em" />
+<span style="display:none" id="clozeAnswer18_42.2">JXUwMDJkJXUwMDFi
+</span>
+     
+<label for="clozeBlank18_42.3" class="sr-av">Rellenar huecos (4):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank18_42.3" style="width:7em" />
+<span style="display:none" id="clozeAnswer18_42.3">JXUwMDJiJXUwMDFhJXUwMDFhJXUwMDA3JXUwMDExJXUwMDA4JXUwMDBj
+</span>
+     
+<label for="clozeBlank18_42.4" class="sr-av">Rellenar huecos (5):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank18_42.4" style="width:2em" />
+<span style="display:none" id="clozeAnswer18_42.4">JXUwMDNjJXUwMDAx
+</span>
+     
+<label for="clozeBlank18_42.5" class="sr-av">Rellenar huecos (6):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank18_42.5" style="width:11em" />
+<span style="display:none" id="clozeAnswer18_42.5">JXUwMDMxJXUwMDA3JXUwMDA4JXUwMDA5JXUwMDFkJXUwMDFmJXUwMDBjJXUwMDAyJXUwMDBhJXUw
+MDlhJXUwMDlk
+</span>
+     
+<label for="clozeBlank18_42.6" class="sr-av">Rellenar huecos (7):</label>
+<input class="autocomplete-off" type="text" value="" id="clozeBlank18_42.6" style="width:11em" />
+<span style="display:none" id="clozeAnswer18_42.6">JXUwMDNjJXUwMDBkJXUwMDFhJXUwMDA3JXUwMDA2JXUwMDFiJXUwMDBiJXUwMDE3JXUwMDFjJXUw
+MDBkJXUwMDBi
+</span>
+  
+esta compuesto por muchos servidores.</span>
+</p>
+
+<div class="block iDevice_buttons">
+<p>
+<input class="button" type="submit" name="submit18_42" value="Enviar"  id="submit18_42" />
+
+<input type="button" name="restart18_42" value="Reiniciar" style="display:none" id="restart18_42" onclick="$exe.cloze.restart('18_42')" />
+
+ 
+<input type="button" name="18_42showAnswersButton" value="Mostrar las respuestas" style="display:none" id="showAnswersButton18_42" onclick="$exe.cloze.fillInputs('18_42')" />
+
+<span class="js-hidden js-warning">Habilitar JavaScript</span>
+</p>
+</div>
+<div id="clozeScore18_42"></div>
+</div>
+</form>
+</section></div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="14_NOMBR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_SOCKET.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/15_modelos_de_comunicaciones.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:24 GMT -->
+</html>

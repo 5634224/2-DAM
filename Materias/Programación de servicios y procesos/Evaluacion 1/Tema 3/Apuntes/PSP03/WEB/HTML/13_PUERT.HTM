@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/13_puertos_de_comunicacin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.3.- Puertos de comunicación | PSP_03_Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_03_Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Comunicaciones en red.</a></li>
+   <li class="current-page-parent"><a href="1_CONCEP.HTM" class="current-page-parent daddy">1.- Conceptos básicos.</a>
+   <ul>
+      <li><a href="11_RECOR.HTM" class="daddy">1.1.- Recordando TCP/IP</a>
+      <ul class="other-section">
+         <li><a href="111_RECO.HTM" class="no-ch">1.1.1.- Recordando TCP/IP (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="12_CONEX.HTM" class="no-ch">1.2.- Conexiones TCP/UDP.</a></li>
+      <li id="active"><a href="13_PUERT.HTM" class="active no-ch">1.3.- Puertos de comunicación</a></li>
+      <li><a href="14_NOMBR.HTM" class="no-ch">1.4.- Nombres en Internet.</a></li>
+      <li><a href="15_MODEL.HTM" class="no-ch">1.5.- Modelos de comunicaciones.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_SOCKET.HTM" class="daddy">2.- Sockets TCP.</a>
+   <ul class="other-section">
+      <li><a href="21_SERVI.HTM" class="no-ch">2.1.- Servidor.</a></li>
+      <li><a href="22_CLIEN.HTM" class="no-ch">2.2.- Cliente.</a></li>
+      <li><a href="23_FLUJO.HTM" class="no-ch">2.3.- Flujo de Entrada y de Salida.</a></li>
+      <li><a href="24_EJEMP.HTM" class="daddy">2.4.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="241_EJEM.HTM" class="no-ch">2.4.1.- Ejemplo (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_SOCKET.HTM" class="daddy">3.- Sockets UDP.</a>
+   <ul class="other-section">
+      <li><a href="31_RECEP.HTM" class="no-ch">3.1.- Receptor.</a></li>
+      <li><a href="32_EMISO.HTM" class="no-ch">3.2.- Emisor.</a></li>
+      <li><a href="33_EJEMP.HTM" class="daddy">3.3.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="331_EJEM.HTM" class="no-ch">3.3.1.- Ejemplo (II).</a></li>
+         <li><a href="332_EJEM.HTM" class="no-ch">3.3.2.- Ejemplo (III).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="12_CONEX.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="14_NOMBR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.3.- Puertos de comunicación</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id12">
+<div class="iDevice emphasis0">
+<div id="ta12_73" class="block iDevice_content">
+<img alt="Icono de Internet." class="elemento_derecha" height="160" src="../JPG/PSP03_-4.JPG" style="width: 160px; height: 160px" title="Internet." width="160" />
+<p>
+Con la capa de red se consigue que la información vaya de un equipo origen a un equipo destino a través de su dirección <span lang="en">IP</span>. Pero para que una aplicación pueda comunicarse con otra aplicación es necesario establecer a qué aplicación se conectará. El método que se emplea es el de definir direcciones de transporte en las que los procesos pueden estar a la escucha de solicitudes de conexión. Estos puntos terminales se llaman puertos.
+</p>
+<p>
+Aunque muchos de los puertos se asignan de manera arbitraria, ciertos puertos se asignan, por convenio, a ciertas aplicaciones particulares o servicios de carácter universal. De hecho, la <acronym lang="en" title="Internet Assigned Numbers Authority.">IANA</acronym> (<span lang="en">Internet Assigned Numbers Authority</span>) determina, las asignaciones de todos los puertos. Existen tres rangos de puertos establecidos:
+</p>
+<ul class="lista_verificacion">
+	<li><strong>Puertos conocidos [0, 1023]</strong>. Son puertos reservados a aplicaciones de uso estándar como: 21 – <span lang="en">FTP</span> (<span lang="en">File Transfer Protocol</span>), 22 – <acronym lang="en" title="Secure Shell.">SSH</acronym> (<span lang="en">Secure SHell</span>), 53 – <acronym lang="en" title="Domain Name System.">DNS</acronym> (Servicio de nombres de dominio), 80 – <span lang="en">HTTP</span> (<span lang="en">Hypertext Transfer Protocol</span>), etc.</li>
+	<li><strong>Puertos registrados [1024, 49151]</strong>. Estos puertos son asignados por <span lang="en">IANA</span> para un servicio específico o aplicaciones. Estos puertos pueden ser utilizados por los usuarios libremente.</li>
+	<li><strong>Puertos dinámicos [49152, 65535]</strong>. Este rango de puertos no puede ser registrado y su uso se establece para conexiones temporales entre aplicaciones.</li>
+</ul>
+<p>
+Cuando se desarrolla una aplicación que utilice un puerto de comunicación, optaremos por utilizar puertos comprendidos entre el rango 1024-49151.
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id13">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_47" class="block iDevice_content">
+<p>Durante el desarrollo de este módulo y de otros de este ciclo, necesitaras conocer cuales son los puertos relacionados con cada una de las aplicaciones, por tanto te recomendamos el siguiente enlace.</p>
+<p class="enlace_centrado"><a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml" title="Acceder al artículo sobre servicios y puertos relacionados.">Puertos.</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id15">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-15_55">
+<form name="multi-select-form-15_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion15_55" class="block question iDevice_content">
+¿Qué puerto se utiliza para el servicio <span lang="en">web</span>?
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op15_550" class="sr-av"><a href="#answer-15_58">Opción 1</a></label><input type="checkbox" id="op15_550" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-15_58"><div id="taans15_58" class="block iDevice_content">
+21
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-15_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op15_551" class="sr-av"><a href="#answer-15_91">Opción 2</a></label><input type="checkbox" id="op15_551" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-15_91"><div id="taans15_91" class="block iDevice_content">
+80
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-15_551" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op15_552" class="sr-av"><a href="#answer-15_93">Opción 3</a></label><input type="checkbox" id="op15_552" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-15_93"><div id="taans15_93" class="block iDevice_content">
+8080
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-15_552" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op15_553" class="sr-av"><a href="#answer-15_95">Opción 4</a></label><input type="checkbox" id="op15_553" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-15_95"><div id="taans15_95" class="block iDevice_content">
+22
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-15_553" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-15_55" /> 
+</p>
+</div>
+<section id="f15_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback15_55" class="feedback iDevice_content">
+Las segunda respuesta es la correcta.
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-15_58" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-15_91" class="right">Correcto</a></li>
+<li><a href="#answer-15_93" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-15_95" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="12_CONEX.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="14_NOMBR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/13_puertos_de_comunicacin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:23 GMT -->
+</html>

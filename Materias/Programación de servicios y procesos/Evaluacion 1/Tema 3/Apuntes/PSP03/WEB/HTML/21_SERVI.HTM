@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/21_servidor.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.- Servidor. | PSP_03_Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PSP_03_Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Comunicaciones en red.</a></li>
+   <li><a href="1_CONCEP.HTM" class="daddy">1.- Conceptos básicos.</a>
+   <ul class="other-section">
+      <li><a href="11_RECOR.HTM" class="daddy">1.1.- Recordando TCP/IP</a>
+      <ul class="other-section">
+         <li><a href="111_RECO.HTM" class="no-ch">1.1.1.- Recordando TCP/IP (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="12_CONEX.HTM" class="no-ch">1.2.- Conexiones TCP/UDP.</a></li>
+      <li><a href="13_PUERT.HTM" class="no-ch">1.3.- Puertos de comunicación</a></li>
+      <li><a href="14_NOMBR.HTM" class="no-ch">1.4.- Nombres en Internet.</a></li>
+      <li><a href="15_MODEL.HTM" class="no-ch">1.5.- Modelos de comunicaciones.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_SOCKET.HTM" class="current-page-parent daddy">2.- Sockets TCP.</a>
+   <ul>
+      <li id="active"><a href="21_SERVI.HTM" class="active no-ch">2.1.- Servidor.</a></li>
+      <li><a href="22_CLIEN.HTM" class="no-ch">2.2.- Cliente.</a></li>
+      <li><a href="23_FLUJO.HTM" class="no-ch">2.3.- Flujo de Entrada y de Salida.</a></li>
+      <li><a href="24_EJEMP.HTM" class="daddy">2.4.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="241_EJEM.HTM" class="no-ch">2.4.1.- Ejemplo (II)</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_SOCKET.HTM" class="daddy">3.- Sockets UDP.</a>
+   <ul class="other-section">
+      <li><a href="31_RECEP.HTM" class="no-ch">3.1.- Receptor.</a></li>
+      <li><a href="32_EMISO.HTM" class="no-ch">3.2.- Emisor.</a></li>
+      <li><a href="33_EJEMP.HTM" class="daddy">3.3.- Ejemplo.</a>
+      <ul class="other-section">
+         <li><a href="331_EJEM.HTM" class="no-ch">3.3.1.- Ejemplo (II).</a></li>
+         <li><a href="332_EJEM.HTM" class="no-ch">3.3.2.- Ejemplo (III).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="2_SOCKET.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_CLIEN.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1.- Servidor.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id22">
+<div class="iDevice emphasis0">
+<div id="ta22_73" class="block iDevice_content">
+<p>
+Los pasos que realiza el servidor para realizar una comunicación son:
+</p>
+<ul class="lista_verificacion">
+	<li><strong>Publicar puerto</strong>. Se utiliza el comando <code>ServerSocket</code> indicando el puerto por donde se van a recibir las conexiones.</li>
+	<li><strong>Esperar peticiones</strong>. En este momento el servidor queda a la espera a que se conecte un cliente. Una vez que se conecte un cliente se crea el <span lang="en">socket</span> del cliente por donde se envían y reciben los datos.</li>
+	<li><strong>Envío y recepción de datos</strong>. Para poder recibir/enviar datos es necesario crear un flujo (<span lang="en">stream</span>) de entrada y otro de salida. Cuando el servidor recibe una petición, éste la procesa y le envía el resultado al cliente.</li>
+	<li>Una vez finalizada la comunicación se <strong>cierra el <span lang="en">socket</span> del cliente</strong>.
+	</li>
+</ul>
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<a href="../PNG/PSP03_-3.PNG" title="Ampliar imagen."><img alt="Esquema de funcionamiento interno del modelo cliente/servidor en el que se muestran las diferentes módulos de funcionamiento y su interconexión." class="imagen_ampliable" height="96" src="../PNG/PSP03_-4.PNG" style="width: 120px; height: 96px" title=" Esquema de funcionamiento interno del modelo cliente/servidor." width="120" /></a>
+</div>
+<div class="elemento_centrado credenciales">
+Esquema de funcionamiento interno del modelo cliente/servidor
+</div>
+</div>
+<br />
+<p>
+Para publicar el puerto del servidor se utiliza la función <code>ServerSocket</code> a la que hay que indicarle el puerto a utilizar. Su estructura es:
+</p>
+<p>
+<code>ServerSocket skServidor = new ServerSocket(Puerto);</code>
+</p>
+<p>
+Una vez publicado el puerto, el servidor utiliza la función <code>accept()</code> para esperar la conexión de un cliente. Una vez que el cliente se conecta, entonces se crea un nuevo <span lang="en">socket</span> por donde se van a realizar todas las comunicaciones con el cliente y servidor. 
+</p>
+<p>
+<code>Socket sCliente = skServidor.accept(); </code>
+</p>
+<p>
+Una vez recibida la petición del cliente el servidor se comunica con el cliente a través de <span lang="en">streams</span> de datos que veremos en el siguiente punto.
+</p>
+<p>
+Finalmente, una vez terminada la comunicación se cierra el <span lang="en">socket</span> de la siguiente forma:
+</p>
+<p>
+<code>sCliente.close();</code>
+</p>
+<p>
+A continuación se muestra el código comentado de un servidor
+</p>
+<div class="codigo elemento_centrado" style="width: 52.2em">
+<div class="texto_izquierda">
+<pre>
+<code>import java.io.* ;</code>
+</pre>
+<pre>
+<code>import java.net.* ;</code>
+</pre>
+<pre>
+<code>class Servidor {</code>
+</pre>
+<pre>
+<code>    static final int Puerto=2000;</code>
+</pre>
+<pre>
+<code>    public Servidor( ) {</code>
+</pre>
+<pre>
+<code>    try {</code>
+</pre>
+<pre>
+<code>        // Inicio la escucha del servidor en un determinado puerto</code>
+</pre>
+<pre>
+<code>        ServerSocket skServidor = new ServerSocket(Puerto);</code>
+</pre>
+<pre>
+<code>        System.out.println(&quot;Escucho el puerto &quot; + Puerto );</code>
+</pre>
+<pre>
+<code>        // Espero a que se conecte un cliente y creo un nuevo socket para el cliente</code>
+</pre>
+<pre>
+<code>        Socket sCliente = skServidor.accept(); </code>
+</pre>
+<pre>
+<code>        // ATENDER PETICIÓN DEL CLIENTE</code>
+</pre>
+<pre>
+<code>        // Cierro el socket</code>
+</pre>
+<pre>
+<code>        sCliente.close();</code>
+</pre>
+<pre>
+<code>        }</code>
+</pre>
+<pre>
+<code>    } catch( Exception e ) {</code>
+</pre>
+<pre>
+<code>        System.out.println( e.getMessage() );</code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+<pre>
+<code>public static void main( String[] arg ) {</code>
+</pre>
+<pre>
+<code>    }</code>
+</pre>
+<pre>
+<code>     new Servidor();</code>
+</pre>
+<pre>
+<code> }</code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+<br />
+</div>
+</div>
+
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="2_SOCKET.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_CLIEN.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432811/mod_resource/content/5/PSP03_Contenidos_Web/21_servidor.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Nov 2023 10:42:26 GMT -->
+</html>
