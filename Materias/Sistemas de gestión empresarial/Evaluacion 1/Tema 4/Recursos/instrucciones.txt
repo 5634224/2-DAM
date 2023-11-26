@@ -1,8 +1,12 @@
-cd /opt/odoo16
+Como buscar la carpeta adecuada en mi caso:
+sudo find / -name odoo
+
+
+cd /opt/odoo16 -> buscar la carpeta adecuada en mi caso
 setup.cfg es un archivo de configuracion importante
 la carpeta addons es donde se instalan los módulos o aplicaciones
 
-cd /opt/odoo16/addons/cr
+cd /opt/odoo16/addons/cr -> buscar la carpeta en mi caso
 
 models = define los modelos o tablas que usa la aplicacion
 views = tenemos las vistas (formularios, menus, etc.)
@@ -14,8 +18,14 @@ Podemos incluir datos de demo en el fichero demo/demo.xml
 
 security/ir.model.access.vsv = define que usuario y grupo de usuarios pueden acceder y modificar nuestra aplicacion
 
-en custom-addons es la carpeta donde nosotros podemnos crear nuestros propios módulos, a partir de otros ya existentes
+en ./custom-addons es la carpeta donde nosotros podemnos crear nuestros propios módulos, a partir de otros ya existentes
 
 
 Hay que añadir en el /etcd/odoo/odoo.conf la carpeta addons custom:
 addons_path = /opt/odoo16/odoo16/addons,/opt/odoo16/odoo16/custom-addons
+
+
+Configurar vscode:
+en linux:
+ifconfig
+instalar SSH

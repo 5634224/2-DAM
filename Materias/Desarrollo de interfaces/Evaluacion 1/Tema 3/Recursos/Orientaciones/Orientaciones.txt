@@ -1,0 +1,6 @@
+Orientaciones al alumno
+El alumno en este tema deberá prestar atención al apartado de "Contenidos" completo y lógicamente al contenido de las tutorías telemáticas. El alumno aprenderá a:
+
+Instalar SceneBuilder y utilizarlo para diseñar sus interfaces gráficas en JavaFX.
+Diseño a partir de UMLy disponer los controles adecuados en formularios.
+Tener en cuenta el diseño de Layout para la disposición de controles.
