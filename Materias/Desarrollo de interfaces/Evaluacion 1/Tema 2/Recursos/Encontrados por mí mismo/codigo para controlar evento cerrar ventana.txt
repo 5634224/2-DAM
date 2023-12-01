@@ -1,0 +1,24 @@
+primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                // Crear un alerta de confirmación
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Confirmación de cierre");
+                alert.setHeaderText("¿Estás seguro de que quieres cerrar la aplicación?");
+
+                // Opcional: personalizar el texto de los botones
+                alert.getButtonTypes().setAll(ButtonType.YES, ButtonType.NO);
+
+                // Mostrar el diálogo y esperar respuesta
+                alert.showAndWait().ifPresent(response -> {
+                    if (response != ButtonType.YES) {
+                        // Si la respuesta no es "YES", consume el evento
+                        // (esto evita que la ventana se cierre)
+                        event.consume();
+                    }
+                });
+            }
+        });
+
+        primaryStage.show();
+    }
