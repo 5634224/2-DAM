@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433035/mod_resource/content/1/32_crear_objetos_tablas_y_vistas_que_es_preciso_adaptar.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Dec 2023 16:20:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.2.- Crear objetos. Tablas y vistas que es preciso adaptar. </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Implantación de sistemas ERP-CRM.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introducción.</a>
+   <ul class="other-section">
+      <li><a href="11_TIPOS.HTM" class="no-ch">1.1.- Tipos y necesidades de las empresas.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_SELECC.HTM" class="daddy">2.- Selección del sistema ERP y módulos a utilizar.</a>
+   <ul class="other-section">
+      <li><a href="21_ANLIS.HTM" class="no-ch">2.1.- Análisis inicial.</a></li>
+      <li><a href="22_CARGA.HTM" class="no-ch">2.2.- Carga de módulos.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_IMPLAN.HTM" class="current-page-parent daddy">3.- Implantación en la empresa.</a>
+   <ul>
+      <li><a href="31_CONSU.HTM" class="no-ch">3.1.- Consultas necesarias para obtener información.</a></li>
+      <li id="active"><a href="32_CREAR.HTM" class="active no-ch">3.2.- Crear objetos. Tablas y vistas que es preciso adaptar.</a></li>
+      <li><a href="33_CREAC.HTM" class="no-ch">3.3.- Creación de formularios personalizados.</a></li>
+      <li><a href="34_CREAC.HTM" class="no-ch">3.4.- Creación de informes y gráficos personalizados.</a></li>
+      <li><a href="35_MANEJ.HTM" class="no-ch">3.5.- Manejar plantillas de documentos.</a></li>
+      <li><a href="36_EXPOR.HTM" class="no-ch">3.6.- Exportación de datos.</a></li>
+      <li><a href="37_TRASP.HTM" class="no-ch">3.7.- Traspaso de datos.</a></li>
+      <li><a href="38_PLANI.HTM" class="no-ch">3.8.- Planificación de la implantación.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_CONFIG.HTM" class="daddy">4.- Configuración del sistema.</a>
+   <ul class="other-section">
+      <li><a href="41_CONTR.HTM" class="no-ch">4.1.- Control de acceso.</a></li>
+      <li><a href="42_CAMBI.HTM" class="no-ch">4.2.- Cambiar la apariencia del sistema.</a></li>
+      <li><a href="43_REALI.HTM" class="no-ch">4.3.- Realizar copias de seguridad.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_PUESTA.HTM" class="daddy">5.- Puesta en marcha y finalización del proyecto.</a>
+   <ul class="other-section">
+      <li><a href="51_FACTO.HTM" class="no-ch">5.1.- Factores de éxito de la implantación de un ERP.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="31_CONSU.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_CREAC.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.2.- Crear objetos. Tablas y vistas que es preciso adaptar.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id23">
+<div class="iDevice emphasis0">
+<div id="ta23_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado">
+<figure class="exe-figure exe-image float-right license-custom" style="width: 231px;"><a href="../PNG/PANTALLA.PNG" title="Descargar la ampliación de la  imagen." target="_blank" rel="noopener"><img src="../PNG/PANTALLA.PNG" alt="Ilustración de Captura de pantalla de Odoo sobre Ajustes-&gt;Tecnico-&gt;Estructura de la base de datos-&gt; Modelos" title="Captura de pantalla de Odoo sobre Ajustes-&gt;Tecnico-&gt;Estructura de la base de datos-&gt; Modelos" class="imagen_ampliable" style="width: 200px; height: 80px;" width="231" height="118" /></a>
+<figcaption class="figcaption"><span class="author">Captura de pantalla de Odoo propiedad de Odoo, S.A.</span> <span class="license"><span class="sep">(</span><a href="https://www.gnu.org/licenses/lgpl-3.0.html" target="_blank" title="Acceder a la página web con los términos de la Licencia LGPLv3" rel="noopener">Licencia LGPLv3</a><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+</div>
+<p>Lo primero que tenemos que hacer es estudiar la información a introducir en la aplicación. Puede ser que haya que añadir campos a objetos existentes o bien crear objetos nuevos. Incluso puede ser que necesitemos llevar bases de datos diferentes, cada base de datos constituye una empresa distinta.</p>
+<p>Para crear una nueva base de datos lo hacemos antes de conectarnos con ninguna, desde el menú <strong>Base de Datos</strong>.</p>
+<p>Para crear nuevos objetos se utiliza el menú <strong>Ajustes/Tecnicos/Estructura de la bases/Objetos</strong><strong></strong>. A la hora de crear un nuevo objeto deberemos introducir, entre otros, los siguientes datos:</p>
+<ul class="lista_verificacion">
+<li><strong>Nombre del objeto</strong>: nombre que va a tener el objeto en la aplicación.</li>
+<li><strong>Objeto</strong>: nombre del objeto en la base de datos.</li>
+<li><strong>Descripción de los campos</strong>: lista de campos del objeto.</li>
+<li><strong>Tipo de los campos</strong>: tipo de dato que va a tener el campo, como por ejemplo texto o fecha.</li>
+<li><strong>Permisos de acceso</strong>: son los derechos de acceso a ese objeto por parte de los usuarios del sistema. Si no se asigna un grupo a un objeto, todos los usuarios pueden acceder a él sin ninguna restricción.</li>
+</ul>
+<p>Cuando creamos un objeto en <span lang="en">Odoo</span>, lo que estamos haciendo es crear una tabla en la base de datos. Por otra parte, la modificación de objetos la podemos hacer desde el menú de <strong>Objetos</strong> o bien directamente desde la base de datos utilizando <strong>pgAdmin</strong>. También es posible tener objetos en <span lang="en">Odoo</span> que en lugar de tablas sean vistas en la base de datos, como por ejemplo el objeto <code>Estadísticas de Servidor</code> en la aplicación es la vista <code>report_smtp_server</code> en la base de datos.</p>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="31_CONSU.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="33_CREAC.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433035/mod_resource/content/1/32_crear_objetos_tablas_y_vistas_que_es_preciso_adaptar.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Dec 2023 16:20:48 GMT -->
+</html>

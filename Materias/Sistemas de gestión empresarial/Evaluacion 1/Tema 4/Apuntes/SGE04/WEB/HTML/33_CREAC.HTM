@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433035/mod_resource/content/1/33_creacin_de_formularios_personalizados.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Dec 2023 16:20:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3.- Creación de formularios personalizados. </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Implantación de sistemas ERP-CRM.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introducción.</a>
+   <ul class="other-section">
+      <li><a href="11_TIPOS.HTM" class="no-ch">1.1.- Tipos y necesidades de las empresas.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_SELECC.HTM" class="daddy">2.- Selección del sistema ERP y módulos a utilizar.</a>
+   <ul class="other-section">
+      <li><a href="21_ANLIS.HTM" class="no-ch">2.1.- Análisis inicial.</a></li>
+      <li><a href="22_CARGA.HTM" class="no-ch">2.2.- Carga de módulos.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_IMPLAN.HTM" class="current-page-parent daddy">3.- Implantación en la empresa.</a>
+   <ul>
+      <li><a href="31_CONSU.HTM" class="no-ch">3.1.- Consultas necesarias para obtener información.</a></li>
+      <li><a href="32_CREAR.HTM" class="no-ch">3.2.- Crear objetos. Tablas y vistas que es preciso adaptar.</a></li>
+      <li id="active"><a href="33_CREAC.HTM" class="active no-ch">3.3.- Creación de formularios personalizados.</a></li>
+      <li><a href="34_CREAC.HTM" class="no-ch">3.4.- Creación de informes y gráficos personalizados.</a></li>
+      <li><a href="35_MANEJ.HTM" class="no-ch">3.5.- Manejar plantillas de documentos.</a></li>
+      <li><a href="36_EXPOR.HTM" class="no-ch">3.6.- Exportación de datos.</a></li>
+      <li><a href="37_TRASP.HTM" class="no-ch">3.7.- Traspaso de datos.</a></li>
+      <li><a href="38_PLANI.HTM" class="no-ch">3.8.- Planificación de la implantación.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_CONFIG.HTM" class="daddy">4.- Configuración del sistema.</a>
+   <ul class="other-section">
+      <li><a href="41_CONTR.HTM" class="no-ch">4.1.- Control de acceso.</a></li>
+      <li><a href="42_CAMBI.HTM" class="no-ch">4.2.- Cambiar la apariencia del sistema.</a></li>
+      <li><a href="43_REALI.HTM" class="no-ch">4.3.- Realizar copias de seguridad.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_PUESTA.HTM" class="daddy">5.- Puesta en marcha y finalización del proyecto.</a>
+   <ul class="other-section">
+      <li><a href="51_FACTO.HTM" class="no-ch">5.1.- Factores de éxito de la implantación de un ERP.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="32_CREAR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_CREAC.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.3.- Creación de formularios personalizados.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id25">
+<div class="iDevice emphasis0">
+<div id="ta25_73" class="block iDevice_content">
+<p>Un formulario es una interfaz de entrada y visualización de datos. En <span lang="en">Odoo</span>, se implementan mediante las <strong>vistas</strong>, las cuales pueden ser de tipo formulario, de tipo árbol o gráficos. La modificación de vistas tal y como hemos visto en la unidad anterior podemos hacerlo de cualquiera de las dos formas siguientes:</p>
+<ul class="lista_verificacion">
+<li>Cambiando el código <acronym title="eXtensible Markup Language. Lenguaje de Maquetación Extensible." lang="en">XML</acronym> desde el menú <strong>Ajustes/Tecnico/Interfaz de usuario/Vistas</strong>.</li>
+<li>Utilizando el <strong>Administrador de vistas</strong>, nos vamos al objeto del cual depende la vista y elegimos el menú contextual <strong>Personalizar</strong>/<strong>Gestionar Vistas</strong>.</li>
+</ul>
+<div style="width: 100%;">
+<div style="width: 50%; float: left;">
+<div class="elemento_centrado">
+<figure class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 232px;"><img src="../PNG/XML_LOGO.PNG" alt="Imagen de las sigas XML." title="XML." style="width: 196px; height: 120px;" width="232" height="52" />
+<figcaption class="figcaption"><a href="https://commons.wikimedia.org/wiki/File:Xml_logo.svg" target="_blank" class="author" title="Acceder a la página web desde la cual se puede descargar la imagen" rel="noopener">Jmh2o</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a la página web con los términos de la licencia Creative Commons BY-SA" rel="noopener">CC BY-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+</div>
+<div style="width: 50%; float: right;">
+<div class="elemento_centrado">
+<div>
+<figure class="exe-figure exe-image position-center license-CC-BY-SA" style="width: 156px;"><a href="../JPG/SGE04_-2.JPG" title="Descargar la imagen ampliada." target="_blank" rel="noopener"><img src="../JPG/SGE04_-3.JPG" alt="Ejemplo de un documento XML muy simple." title="Ejemplo XML." class="imagen_ampliable" style="width: 156px; height: 172px;" width="156" height="172" /></a>
+<figcaption class="figcaption"><a href="http://commons.wikimedia.org/wiki/File:XML.svg" target="_blank" class="author" title="Acceder a la página web desde la cual se puede descargar la imagen" rel="noopener">Dreftymac</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a la página web con los terminos de la licencia Creative Commons BY-SA" rel="noopener">CC BY-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="32_CREAR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_CREAC.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433035/mod_resource/content/1/33_creacin_de_formularios_personalizados.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Dec 2023 16:20:48 GMT -->
+</html>
