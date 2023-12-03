@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/27_monitorizar_tiempos_de_respuesta.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.7.- Monitorizar tiempos de respuesta. | DAM_PSP04 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="CIDEAD" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-14"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP04</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Aplicaciones cliente-servidor.</a></li>
+   <li><a href="1_PARADI.HTM" class="daddy">1.- Paradigma Cliente/Servidor.</a>
+   <ul class="other-section">
+      <li><a href="11_CARAC.HTM" class="no-ch">1.1.- Características básicas.</a></li>
+      <li><a href="12_VENTA.HTM" class="no-ch">1.2.- Ventajas y desventajas.</a></li>
+      <li><a href="13_MODEL.HTM" class="no-ch">1.3.- Modelos.</a></li>
+      <li><a href="14_PROGR.HTM" class="no-ch">1.4.- Programación.</a></li>
+      <li><a href="15_EJEMP.HTM" class="daddy">1.5.- Ejemplo I.</a>
+      <ul class="other-section">
+         <li><a href="151_EJEM.HTM" class="no-ch">1.5.1.- Ejemplo I (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_OPTIMI.HTM" class="current-page-parent daddy">2.- Optimización de sockets.</a>
+   <ul>
+      <li><a href="21_ATEND.HTM" class="no-ch">2.1.- Atender múltiples peticiones simultáneas.</a></li>
+      <li><a href="22_THREA.HTM" class="no-ch">2.2.- Threads.</a></li>
+      <li><a href="23_EJEMP.HTM" class="daddy">2.3.- Ejemplo II.</a>
+      <ul class="other-section">
+         <li><a href="231_EJEM.HTM" class="no-ch">2.3.1.- Ejemplo II (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="24_PRDID.HTM" class="no-ch">2.4.- Pérdida de información.</a></li>
+      <li><a href="25_TRANS.HTM" class="no-ch">2.5.- Transacciones.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+      <li id="active"><a href="27_MONIT.HTM" class="active no-ch">2.7.- Monitorizar tiempos de respuesta.</a></li>
+      <li><a href="28_EJEMP.HTM" class="no-ch">2.8.- Ejemplo IV.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="26_EJEMP.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="28_EJEMP.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.7.- Monitorizar tiempos de respuesta.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id32">
+<div class="iDevice emphasis0">
+<div id="ta32_73" class="block iDevice_content">
+<p><img alt=" Icono que simula los engranajes de un reloj." class="elemento_derecha" height="200" src="../PNG/PSP04_-7.PNG" style="width: 161px; height: 200px;" title="Icono tiempo." width="161" /> Un aspecto muy importante para ver el comportamiento de nuestra aplicación Cliente/Servidor son los tiempos de respuesta del servidor. Desde que el cliente realiza una petición hasta que recibe su resultado intervienen dos tiempos:</p>
+<ul class="lista_verificacion">
+<li><strong>Tiempo de procesamiento</strong>. Es el tiempo que el servidor necesita para procesar la petición del cliente y enviar los datos.</li>
+<li><strong>Tiempo de transmisión</strong>. Es el tiempo que transcurre para que los mensajes viajen a través de los diferentes dispositivos de la red hasta llegar a su destino.</li>
+</ul>
+<p>Para medir el tiempo de procesamiento tan sólo se necesitar medir el tiempo que transcurre en que el servidor procese la solicitud del cliente. Para medir el tiempo en milisegundos necesario para procesar la petición de un cliente puede utilizar el siguiente código:</p>
+<div class="codigo elemento_centrado" style="width: 39em;">
+<div class="texto_izquierda">
+<pre><code>import java.util.Date;</code></pre>
+<pre><code></code></pre>
+<pre><code>long tiempo1=(new Date()).getTime();</code></pre>
+<pre><code>// Procesar la petición del cliente</code></pre>
+<pre><code></code></pre>
+<pre><code>long tiempo2=(new Date()).getTime();</code></pre>
+<pre><code>System.out.println("\t  Tiempo = "+(tiempo2-tiempo1)+" ms");</code></pre>
+</div>
+</div>
+<p>Para medir el tiempo de transmisión es necesario enviar a través de un mensaje el tiempo del sistema y el receptor comparar su tiempo de respuesta con el que hay dentro del mensaje. Lógicamente, para poder comparar los tiempos de respuesta de dos equipos es totalmente necesario que los relojes del sistema estén sincronizados a través de cualquier servicio de tiempo (NTP). En equipos <span lang="en">Windows</span> la sincronización de los relojes se realiza automáticamente y en equipos <acronym title="is Not Unix">GNU</acronym>/Linux se realiza ejecutando el siguiente comando:</p>
+<div class="codigo elemento_centrado" style="width: 29.1em;">
+<div class="texto_izquierda">
+<pre><code>/usr/sbin/ntpdate -u 0.centos.pool.ntp.org</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id33">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta33_47" class="block iDevice_content">
+<p>
+Para sincronizar el reloj de dos equipos es necesario utilizar el servicio NTP (Network Time Protocol).
+</p>
+<p class="enlace_centrado">
+<a href="http://es.wikipedia.org/wiki/Network_Time_Protocol" title="Acceder a información sobre el servicio NTP.">Servicio NTP.</a>
+</p>
+ 
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id34">
+<div class="iDevice emphasis0">
+<div id="ta34_73" class="block iDevice_content">
+<p>Otra forma de calcular el tiempo de transmisión es utilizar el comando ping. Como puede ver en la siguiente figura el tiempo para que el cliente origen acceda al servidor <a href="http://www.google.es/" title="Acceder a google." target="_self">www.google.es</a> es de unos 115 milisegundos de media.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="../JPG/PSP04-21.JPG" title="Ampliar imagen."><img alt="Resultado de realizar un ping al servidor www.google.es" class="imagen_ampliable" height="96" src="../JPG/PSP04-22.JPG" style="width: 192px; height: 96px;" title="ping www.google.es" width="192" /></a></div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id35">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-35_55">
+<form name="multi-select-form-35_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion35_55" class="block question iDevice_content">
+<p>
+<strong>¿Qué tiempos del sistema afectan en el modelo cliente/servidor?</strong>
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op35_550" class="sr-av"><a href="#answer-35_58">Opción 1</a></label><input type="checkbox" id="op35_550" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-35_58"><div id="taans35_58" class="block iDevice_content">
+Tiempo de procesamiento.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-35_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op35_551" class="sr-av"><a href="#answer-35_138">Opción 2</a></label><input type="checkbox" id="op35_551" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-35_138"><div id="taans35_138" class="block iDevice_content">
+Tiempo de transmisión.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-35_551" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op35_552" class="sr-av"><a href="#answer-35_140">Opción 3</a></label><input type="checkbox" id="op35_552" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-35_140"><div id="taans35_140" class="block iDevice_content">
+Todas son correctas.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-35_552" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-3-35_55" /> 
+</p>
+</div>
+<section id="f35_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback35_55" class="feedback iDevice_content">
+Todas son correctas ya que todos los tiempos intervienen en el comportamiento del sistema.
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-35_58" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-35_138" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-35_140" class="right">Correcto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="26_EJEMP.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="28_EJEMP.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/27_monitorizar_tiempos_de_respuesta.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:31 GMT -->
+</html>

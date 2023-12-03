@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/25_transacciones.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.5.- Transacciones. | DAM_PSP04 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="CIDEAD" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-12"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP04</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Aplicaciones cliente-servidor.</a></li>
+   <li><a href="1_PARADI.HTM" class="daddy">1.- Paradigma Cliente/Servidor.</a>
+   <ul class="other-section">
+      <li><a href="11_CARAC.HTM" class="no-ch">1.1.- Características básicas.</a></li>
+      <li><a href="12_VENTA.HTM" class="no-ch">1.2.- Ventajas y desventajas.</a></li>
+      <li><a href="13_MODEL.HTM" class="no-ch">1.3.- Modelos.</a></li>
+      <li><a href="14_PROGR.HTM" class="no-ch">1.4.- Programación.</a></li>
+      <li><a href="15_EJEMP.HTM" class="daddy">1.5.- Ejemplo I.</a>
+      <ul class="other-section">
+         <li><a href="151_EJEM.HTM" class="no-ch">1.5.1.- Ejemplo I (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_OPTIMI.HTM" class="current-page-parent daddy">2.- Optimización de sockets.</a>
+   <ul>
+      <li><a href="21_ATEND.HTM" class="no-ch">2.1.- Atender múltiples peticiones simultáneas.</a></li>
+      <li><a href="22_THREA.HTM" class="no-ch">2.2.- Threads.</a></li>
+      <li><a href="23_EJEMP.HTM" class="daddy">2.3.- Ejemplo II.</a>
+      <ul class="other-section">
+         <li><a href="231_EJEM.HTM" class="no-ch">2.3.1.- Ejemplo II (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="24_PRDID.HTM" class="no-ch">2.4.- Pérdida de información.</a></li>
+      <li id="active"><a href="25_TRANS.HTM" class="active no-ch">2.5.- Transacciones.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+      <li><a href="27_MONIT.HTM" class="no-ch">2.7.- Monitorizar tiempos de respuesta.</a></li>
+      <li><a href="28_EJEMP.HTM" class="no-ch">2.8.- Ejemplo IV.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="24_PRDID.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="26_EJEMP.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.5.- Transacciones.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id27">
+<div class="iDevice emphasis0">
+<div id="ta27_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a href="../JPG/PSP04-18.JPG" title="Ampliar imagen."><img alt="Ejemplo de diagrama de estados que modela el comportamiento de un servidor. " class="imagen_ampliable" src="../JPG/PSP04-19.JPG" style="width: 192px; height: 124px;" title="Diagrama de estados." width="192" height="124" /></a></div>
+</div>
+<p>Uno de los principales fallos de seguridad que se producen en la programas clientes/servidor es que el cliente pueda realizar:</p>
+<ul class="lista_verificacion">
+<li><strong>Operaciones no autorizadas</strong>. El servidor no puede procesar una orden a la que el cliente no tiene acceso. Por ejemplo, que el cliente realice una solicitud de información a la que no tiene acceso.</li>
+<li><strong>Mensajes mal formados</strong>. Es posible que el cliente envíe al servidor mensajes mal formados o con información incompleta que produzca un error de procesamiento del sistema llegando incluso a dejar "colgado" el servidor.</li>
+</ul>
+<p>Para evitar cualquier problema de seguridad es muy importante modelar el flujo de información y el comportamiento del servidor con un diagrama de estados o autómata. Por ejemplo, en la siguiente figura puede ver que el servidor se inicia en el estado 0 y directamente envía al cliente el mensaje <em>Introduce el comando</em>. El cliente puede enviar los comandos:</p>
+<ul class="lista_verificacion">
+<li><span lang="en"><em>ls</em></span> que va al estado 2 mostrando el contenido del directorio y vuelve automáticamente al estado 1.</li>
+<li><span lang="en"><em>get</em></span> que le lleva al estado 3 donde le solicita al cliente el nombre del archivo a mostrar. Al introducir el nombre del archivo se desplaza al estado 4 donde muestra el contenido del archivo y vuelve automáticamente al estado 1.</li>
+<li><span lang="en"><em>exit</em></span> que le lleva directamente al estado donde finaliza la conexión del cliente (estado -1).</li>
+<li>Cualquier otro comando hace que vuelva al estado 1 solicitándole al cliente que introduzca un comando válido.</li>
+</ul>
+<p>Para poder seguir el comportamiento del autómata el servidor tiene que definir dos variables <em>estado</em> y <em>comando</em>. La variable <em>estado</em> almacena la posición en la que se encuentra y la variable <em>comando</em> es el comando que recibe el servidor y el que permite la transición de un estado a otro. Cuando se utilizan autómatas muy sencillos como es el caso del ejemplo, es posible modelar el comportamiento del autómata utilizando estructuras <code>case</code> e <code>if</code>. En el caso de utilizar autómatas grandes la mejor forma de modelar su comportamiento es mediante una tabla cuyas filas son los diferentes estados del autómata y la columna las diferentes entradas del sistema.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id28">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta28_47" class="block iDevice_content">
+<p>
+Si deseas más información sobre los autómatas finitos puedes consultar el siguiente enlace:
+</p>
+<p class="enlace_centrado">
+<a href="http://es.wikipedia.org/wiki/Autómata_finito" title="Acceder a información sobre los autómatas de la wikipedia.">Autómata Finito.</a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id30">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-30_55">
+<form name="multi-select-form-30_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion30_55" class="block question iDevice_content">
+<p>
+<strong>¿Qué permite el diagrama de transacciones del sistema?</strong>
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op30_550" class="sr-av"><a href="#answer-30_58">Opción 1</a></label><input type="checkbox" id="op30_550" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-30_58"><div id="taans30_58" class="block iDevice_content">
+Asegurar el sistema.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-30_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op30_551" class="sr-av"><a href="#answer-30_129">Opción 2</a></label><input type="checkbox" id="op30_551" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-30_129"><div id="taans30_129" class="block iDevice_content">
+Implementar los diferentes estados en los que se encuentra el servidor.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-30_551" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op30_552" class="sr-av"><a href="#answer-30_131">Opción 3</a></label><input type="checkbox" id="op30_552" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-30_131"><div id="taans30_131" class="block iDevice_content">
+Evitar que un cliente pueda realizar una operación no autorizada.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-30_552" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op30_553" class="sr-av"><a href="#answer-30_133">Opción 4</a></label><input type="checkbox" id="op30_553" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-30_133"><div id="taans30_133" class="block iDevice_content">
+Todas son correctas.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-30_553" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-30_55" /> 
+</p>
+</div>
+<section id="f30_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback30_55" class="feedback iDevice_content">
+Todas son correctas.
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-30_58" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-30_129" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-30_131" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-30_133" class="right">Correcto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="24_PRDID.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="26_EJEMP.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/25_transacciones.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:30 GMT -->
+</html>

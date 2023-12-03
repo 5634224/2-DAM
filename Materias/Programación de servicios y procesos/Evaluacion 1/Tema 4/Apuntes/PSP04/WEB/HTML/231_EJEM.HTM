@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/231_ejemplo_ii_ii.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.3.1.- Ejemplo II (II). | DAM_PSP04 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="CIDEAD" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP04</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Aplicaciones cliente-servidor.</a></li>
+   <li><a href="1_PARADI.HTM" class="daddy">1.- Paradigma Cliente/Servidor.</a>
+   <ul class="other-section">
+      <li><a href="11_CARAC.HTM" class="no-ch">1.1.- Características básicas.</a></li>
+      <li><a href="12_VENTA.HTM" class="no-ch">1.2.- Ventajas y desventajas.</a></li>
+      <li><a href="13_MODEL.HTM" class="no-ch">1.3.- Modelos.</a></li>
+      <li><a href="14_PROGR.HTM" class="no-ch">1.4.- Programación.</a></li>
+      <li><a href="15_EJEMP.HTM" class="daddy">1.5.- Ejemplo I.</a>
+      <ul class="other-section">
+         <li><a href="151_EJEM.HTM" class="no-ch">1.5.1.- Ejemplo I (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_OPTIMI.HTM" class="current-page-parent daddy">2.- Optimización de sockets.</a>
+   <ul>
+      <li><a href="21_ATEND.HTM" class="no-ch">2.1.- Atender múltiples peticiones simultáneas.</a></li>
+      <li><a href="22_THREA.HTM" class="no-ch">2.2.- Threads.</a></li>
+      <li class="current-page-parent"><a href="23_EJEMP.HTM" class="current-page-parent daddy">2.3.- Ejemplo II.</a>
+      <ul>
+         <li id="active"><a href="231_EJEM.HTM" class="active no-ch">2.3.1.- Ejemplo II (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="24_PRDID.HTM" class="no-ch">2.4.- Pérdida de información.</a></li>
+      <li><a href="25_TRANS.HTM" class="no-ch">2.5.- Transacciones.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+      <li><a href="27_MONIT.HTM" class="no-ch">2.7.- Monitorizar tiempos de respuesta.</a></li>
+      <li><a href="28_EJEMP.HTM" class="no-ch">2.8.- Ejemplo IV.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="23_EJEMP.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="24_PRDID.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.3.1.- Ejemplo II (II).</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id23">
+<div class="iDevice emphasis0">
+<div id="ta23_73" class="block iDevice_content">
+<img alt="Icono de un ordenador mostrando el terminal del sistema." class="elemento_centrado" height="160" src="../JPG/PSP04-13.JPG" style="width: 160px; height: 160px" title="Terminal." width="160" />
+<p>
+<strong>Cliente.java</strong>
+</p>
+<div class="codigo elemento_centrado" style="width: 57.15em">
+<div class="texto_izquierda">
+<pre>
+<code>import java.io.*;</code>
+</pre>
+<pre>
+<code>import java.net.*;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>class Cliente {</code>
+</pre>
+<pre>
+<code>    static final String HOST = &quot;localhost&quot;;</code>
+</pre>
+<pre>
+<code>    static final int Puerto=2000;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>    public Cliente( ) {</code>
+</pre>
+<pre>
+<code>        try{</code>
+</pre>
+<pre>
+<code>            Socket sCliente = new Socket( HOST , Puerto );</code>
+</pre>
+<pre>
+<code>            // Creo los flujos de entrada y salida</code>
+</pre>
+<pre>
+<code>            DataInputStream flujo_entrada = new DataInputStream(skCliente.getInputStream());</code>
+</pre>
+<pre>
+<code>            DataOutputStream flujo_salida= new DataOutputStream(skCliente.getOutputStream());</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>            // TAREAS QUE REALIZA EL CLIENTE</code>
+</pre>
+<pre>
+<code>            String datos=flujo_entrada.readUTF();</code>
+</pre>
+<pre>
+<code>            System.out.println(datos);</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>            sCliente.close();</code>
+</pre>
+<pre>
+<code>        } catch( Exception e ) {</code>
+</pre>
+<pre>
+<code>     System.out.println( e.getMessage() );</code>
+</pre>
+<pre>
+<code>        }</code>
+</pre>
+<pre>
+<code>    }</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>    public static void main( String[] arg ) {</code>
+</pre>
+<pre>
+<code>     new Cliente();</code>
+</pre>
+<pre>
+<code>    }</code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id24">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-24_55">
+<form name="multi-select-form-24_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion24_55" class="block question iDevice_content">
+<p>
+<strong>En la clase Servidor, ¿dónde se ubica el código que atiende al cliente?</strong>
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op24_550" class="sr-av"><a href="#answer-24_58">Opción 1</a></label><input type="checkbox" id="op24_550" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-24_58"><div id="taans24_58" class="block iDevice_content">
+<code>public Servidor</code>.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-24_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op24_551" class="sr-av"><a href="#answer-24_119">Opción 2</a></label><input type="checkbox" id="op24_551" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-24_119"><div id="taans24_119" class="block iDevice_content">
+<code>run()</code>.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-24_551" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op24_552" class="sr-av"><a href="#answer-24_121">Opción 3</a></label><input type="checkbox" id="op24_552" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-24_121"><div id="taans24_121" class="block iDevice_content">
+<code>public static void main</code>.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-24_552" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-3-24_55" /> 
+</p>
+</div>
+<section id="f24_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback24_55" class="feedback iDevice_content">
+La respuesta <code>run()</code> es la correcta.
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-24_58" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-24_119" class="right">Correcto</a></li>
+<li><a href="#answer-24_121" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="23_EJEMP.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="24_PRDID.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/231_ejemplo_ii_ii.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:29 GMT -->
+</html>

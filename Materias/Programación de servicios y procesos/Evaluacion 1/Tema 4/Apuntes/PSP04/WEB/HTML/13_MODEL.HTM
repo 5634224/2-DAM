@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/13_modelos.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.3.- Modelos. | DAM_PSP04 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="CIDEAD" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP04</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Aplicaciones cliente-servidor.</a></li>
+   <li class="current-page-parent"><a href="1_PARADI.HTM" class="current-page-parent daddy">1.- Paradigma Cliente/Servidor.</a>
+   <ul>
+      <li><a href="11_CARAC.HTM" class="no-ch">1.1.- Características básicas.</a></li>
+      <li><a href="12_VENTA.HTM" class="no-ch">1.2.- Ventajas y desventajas.</a></li>
+      <li id="active"><a href="13_MODEL.HTM" class="active no-ch">1.3.- Modelos.</a></li>
+      <li><a href="14_PROGR.HTM" class="no-ch">1.4.- Programación.</a></li>
+      <li><a href="15_EJEMP.HTM" class="daddy">1.5.- Ejemplo I.</a>
+      <ul class="other-section">
+         <li><a href="151_EJEM.HTM" class="no-ch">1.5.1.- Ejemplo I (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="2_OPTIMI.HTM" class="daddy">2.- Optimización de sockets.</a>
+   <ul class="other-section">
+      <li><a href="21_ATEND.HTM" class="no-ch">2.1.- Atender múltiples peticiones simultáneas.</a></li>
+      <li><a href="22_THREA.HTM" class="no-ch">2.2.- Threads.</a></li>
+      <li><a href="23_EJEMP.HTM" class="daddy">2.3.- Ejemplo II.</a>
+      <ul class="other-section">
+         <li><a href="231_EJEM.HTM" class="no-ch">2.3.1.- Ejemplo II (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="24_PRDID.HTM" class="no-ch">2.4.- Pérdida de información.</a></li>
+      <li><a href="25_TRANS.HTM" class="no-ch">2.5.- Transacciones.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+      <li><a href="27_MONIT.HTM" class="no-ch">2.7.- Monitorizar tiempos de respuesta.</a></li>
+      <li><a href="28_EJEMP.HTM" class="no-ch">2.8.- Ejemplo IV.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="12_VENTA.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="14_PROGR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.3.- Modelos.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id9">
+<div class="iDevice emphasis0">
+<div id="ta9_73" class="block iDevice_content">
+<p>
+La principal forma de clasificar los modelos Cliente/Servidor es a partir del número de capas (<span lang="en">tiers</span>) que tiene la infraestructura del sistema. De ésta forma podemos tener los siguientes modelos:
+</p>
+<ul class="lista_verificacion">
+	<li><strong>1 capa (1-<span lang="en">tier</span>)</strong>. El proceso cliente/servidor se encuentra en el mismo equipo y realmente no se considera un modelo cliente/servidor ya que no se realizan comunicaciones por la red.</li>
+	<li><strong>2 capas (2-<span lang="en">tiers</span>)</strong>.  Es el modelo tradicional en el que existe un servidor y unos clientes bien diferenciados. El principal problema de éste modelo es que no permite escalabilidad del sistema y puede sobrecargarse con un número alto de peticiones por parte de los clientes.
+	<div class="elemento_centrado">
+	<div class="elemento_centrado">
+	<a href="../JPG/PSP04_CO.JPG" title="Ampliar imagen."><img alt=" Imagen que muestra el modelo cliente/servidor en el que hay 3 clientes que se comunican con un servidor." class="imagen_ampliable" height="160" src="../JPG/PSP04_-2.JPG" style="width: 172px; height: 160px" title="Modelo cliente/servidor." width="172" /></a>
+	</div>
+	</div>
+	</li>
+	<li><strong>3 capas (3-<span lang="en">tiers</span>)</strong>. Para mejorar el rendimiento del sistema en el modelo de dos capas se añade una nueva capa de servidores. En este caso se dispone de:
+	<ul>
+		<li><strong>Servidor de aplicación</strong>.  Es el encargado de interactuar con los diferentes clientes y enviar las peticiones de procesamiento al servidor de datos.</li>
+		<li><strong>Servidor de datos</strong>. Recibe las peticiones del servidor de aplicación, las procesa y le devuelve su resultado al servidor de aplicación para que éste los envíe al cliente. Para mejorar el rendimiento del sistema, es posible añadir los servidores de datos que sean necesarios.
+		</li>
+	</ul>
+	<div class="elemento_centrado">
+	<div class="elemento_centrado">
+	<a href="../JPG/PSP04_-5.JPG" title="Ampliar imagen."><img alt="Imagen que representa el modelo cliente/servidor de 3 capas." class="imagen_ampliable" height="96" src="../JPG/PSP04_-6.JPG" style="width: 192px; height: 96px" title="Modelo cliente/servidor de 3 capas." width="192" /></a>
+	</div>
+	</div>
+	</li>
+	<li><strong>n capas (n-<span lang="en">tiers</span>)</strong>. A partir del modelo anterior, se pueden añadir capas adiciones de servidores con el objetivo de separar la funcionalidad de cada servidor y de mejorar el rendimiento del sistema.</li>
+</ul>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id10">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta10_54" class="block iDevice_content">
+<p>
+<strong>¿Es realmente el modelo de 1-capa (1-<span lang="en">tiers</span>) un modelo cliente/servidor?</strong>
+</p>
+
+</div>
+<section class="question">
+<form name="true-false-form-0b10" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b10" class="block iDevice_content">
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b10"><input type="radio" name="option0b10" id="true0b10" class="exe-radio-option exe-radio-option-0-2-0b10-truefalse" /> Verdadero</label> 
+<label for="false0b10"><input type="radio" name="option0b10" id="false0b10" class="exe-radio-option exe-radio-option-1-2-0b10-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b10" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b10-result" class="wrong">Falso</strong></p>
+Realmente no es un modelo cliente/servidor porque los dos procesos están en el mismo equipo y no existen comunicaciones externas.
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="12_VENTA.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="14_PROGR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/13_modelos.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:25 GMT -->
+</html>

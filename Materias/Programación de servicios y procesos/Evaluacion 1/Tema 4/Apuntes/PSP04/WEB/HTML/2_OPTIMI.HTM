@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/2_optimizacin_de_sockets.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.- Optimización de sockets. | DAM_PSP04 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="CIDEAD" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP04</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Aplicaciones cliente-servidor.</a></li>
+   <li><a href="1_PARADI.HTM" class="daddy">1.- Paradigma Cliente/Servidor.</a>
+   <ul class="other-section">
+      <li><a href="11_CARAC.HTM" class="no-ch">1.1.- Características básicas.</a></li>
+      <li><a href="12_VENTA.HTM" class="no-ch">1.2.- Ventajas y desventajas.</a></li>
+      <li><a href="13_MODEL.HTM" class="no-ch">1.3.- Modelos.</a></li>
+      <li><a href="14_PROGR.HTM" class="no-ch">1.4.- Programación.</a></li>
+      <li><a href="15_EJEMP.HTM" class="daddy">1.5.- Ejemplo I.</a>
+      <ul class="other-section">
+         <li><a href="151_EJEM.HTM" class="no-ch">1.5.1.- Ejemplo I (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li id="active"><a href="2_OPTIMI.HTM" class="active daddy">2.- Optimización de sockets.</a>
+   <ul>
+      <li><a href="21_ATEND.HTM" class="no-ch">2.1.- Atender múltiples peticiones simultáneas.</a></li>
+      <li><a href="22_THREA.HTM" class="no-ch">2.2.- Threads.</a></li>
+      <li><a href="23_EJEMP.HTM" class="daddy">2.3.- Ejemplo II.</a>
+      <ul class="other-section">
+         <li><a href="231_EJEM.HTM" class="no-ch">2.3.1.- Ejemplo II (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="24_PRDID.HTM" class="no-ch">2.4.- Pérdida de información.</a></li>
+      <li><a href="25_TRANS.HTM" class="no-ch">2.5.- Transacciones.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+      <li><a href="27_MONIT.HTM" class="no-ch">2.7.- Monitorizar tiempos de respuesta.</a></li>
+      <li><a href="28_EJEMP.HTM" class="no-ch">2.8.- Ejemplo IV.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="151_EJEM.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_ATEND.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.- Optimización de sockets.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id15">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_CAS.PNG)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta15_66" class="block iDevice_content">
+<p><img alt="María se encuentra configurando un equipo junto a un armario de comunicaciones." class="elemento_derecha" src="../JPG/CASO_SOP.JPG" style="width: 192px; height: 108px;" title="María configurando un equipo." width="192" height="108" /></p>
+<p><strong> María</strong> y <strong>Juan</strong> están revisando la aplicación que están desarrollando.</p>
+<p><strong>María</strong>: Juan, la aplicación va muy bien pero ahora vamos a optimizar su comportamiento. Lo primero que vamos a hacer es hacer que la aplicación permita atender múltiples peticiones de forma concurrente y para ello vamos a utilizar las hebras de ejecución (<strong>threads</strong>).</p>
+<p><strong>Antonio</strong>: Yo he utilizado antes las hebras cuando quería que un programa hiciera varias cosas a la vez. Pero no sé muy bien como utilizarlas con <strong><span lang="en">sockets</span></strong>.</p>
+<p><strong>María</strong>: Es muy fácil. Vamos a hacer que cada vez que se recibe un cliente se cree una hebra para atender dicho cliente. Vamos a verlo.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id16">
+<div class="iDevice emphasis0">
+<div id="ta16_73" class="block iDevice_content">
+<img alt="Icono que simula un socket." class="elemento_derecha" height="160" src="../JPG/PSP04-11.JPG" style="width: 160px; height: 160px" title="Socket." width="160" />
+<p>
+A la hora de utilizar los <span lang="en">sockets</span> es muy importante optimizar su funcionamiento y garantizar la seguridad del sistema. Como la información reside en el servidor y existen múltiples clientes que realizan peticiones es totalmente indispensable permitir que la aplicación cliente/servidor cuente con las siguientes características que veremos más adelante:
+</p>
+<ul class="lista_verificacion">
+	<li><strong>Atender múltiples peticiones simultáneamente</strong>. El servidor debe permitir el acceso de forma simultánea al servidor para acceder a los recursos o servicios que éste ofrece.</li>
+	<li><strong>Seguridad</strong>. Para asegurar el sistema, como mínimo, el servidor debe ser capaz de evitar la pérdida de información, filtrar las peticiones de los clientes para asegurar que éstas están bien formadas y llevar un control sobre las diferentes transacciones de los clientes.</li>
+	<li>Por último, es necesario dotar a nuestro sistema de mecanismos para<strong> monitorizar los tiempos de respuesta</strong> de los clientes para ver el comportamiento del sistema.</li>
+</ul>
+
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="151_EJEM.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="21_ATEND.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/2_optimizacin_de_sockets.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:27 GMT -->
+</html>

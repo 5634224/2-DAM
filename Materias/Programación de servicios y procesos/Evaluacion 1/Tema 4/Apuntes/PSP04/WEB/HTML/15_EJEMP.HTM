@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/15_ejemplo_i.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.5.- Ejemplo I. | DAM_PSP04 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="CIDEAD" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP04</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Aplicaciones cliente-servidor.</a></li>
+   <li class="current-page-parent"><a href="1_PARADI.HTM" class="current-page-parent daddy">1.- Paradigma Cliente/Servidor.</a>
+   <ul>
+      <li><a href="11_CARAC.HTM" class="no-ch">1.1.- Características básicas.</a></li>
+      <li><a href="12_VENTA.HTM" class="no-ch">1.2.- Ventajas y desventajas.</a></li>
+      <li><a href="13_MODEL.HTM" class="no-ch">1.3.- Modelos.</a></li>
+      <li><a href="14_PROGR.HTM" class="no-ch">1.4.- Programación.</a></li>
+      <li id="active"><a href="15_EJEMP.HTM" class="active daddy">1.5.- Ejemplo I.</a>
+      <ul>
+         <li><a href="151_EJEM.HTM" class="no-ch">1.5.1.- Ejemplo I (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="2_OPTIMI.HTM" class="daddy">2.- Optimización de sockets.</a>
+   <ul class="other-section">
+      <li><a href="21_ATEND.HTM" class="no-ch">2.1.- Atender múltiples peticiones simultáneas.</a></li>
+      <li><a href="22_THREA.HTM" class="no-ch">2.2.- Threads.</a></li>
+      <li><a href="23_EJEMP.HTM" class="daddy">2.3.- Ejemplo II.</a>
+      <ul class="other-section">
+         <li><a href="231_EJEM.HTM" class="no-ch">2.3.1.- Ejemplo II (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="24_PRDID.HTM" class="no-ch">2.4.- Pérdida de información.</a></li>
+      <li><a href="25_TRANS.HTM" class="no-ch">2.5.- Transacciones.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+      <li><a href="27_MONIT.HTM" class="no-ch">2.7.- Monitorizar tiempos de respuesta.</a></li>
+      <li><a href="28_EJEMP.HTM" class="no-ch">2.8.- Ejemplo IV.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="14_PROGR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="151_EJEM.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.5.- Ejemplo I.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id13">
+<div class="iDevice emphasis0">
+<div id="ta13_73" class="block iDevice_content">
+<p>
+A modo de ejemplo, vamos a ver un ejemplo sencillo en el que el servidor va a aceptar tres clientes (de forma secuencial no concurrente) y le va a indicar el número de cliente que es.
+</p>
+<p>
+<strong>servidor.java</strong>
+</p>
+<div class="codigo elemento_centrado" style="width: 52.75em">
+<div class="texto_izquierda">
+<pre>
+<code>import java.io.* ;</code>
+</pre>
+<pre>
+<code>import java.net.* ;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>class Servidor {</code>
+</pre>
+<pre>
+<code>    static final int Puerto=2000;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>    public Servidor( ) {</code>
+</pre>
+<pre>
+<code>    try {</code>
+</pre>
+<pre>
+<code>        ServerSocket sServidor = new ServerSocket(Puerto);</code>
+</pre>
+<pre>
+<code>        System.out.println(&quot;Escucho el puerto &quot; + Puerto );</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>        for ( int nCli = 0; nCli &lt; 3; nCli++) {</code>
+</pre>
+<pre>
+<code>            Socket sCliente = sServidor.accept(); </code>
+</pre>
+<pre>
+<code>     System.out.println(&quot;Sirvo al cliente &quot; + nCli);</code>
+</pre>
+<pre>
+<code>     DataOutputStream flujo_salida= new DataOutputStream(sCliente.getOutputStream());</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>     flujo_salida.writeUTF( &quot;Hola cliente &quot; + nCli );</code>
+</pre>
+<pre>
+<code>     sCliente.close();</code>
+</pre>
+<pre>
+<code>        }</code>
+</pre>
+<pre>
+<code>        System.out.println(&quot;Se han atendido los clientes&quot;);</code>
+</pre>
+<pre>
+<code>    } catch( Exception e ) {</code>
+</pre>
+<pre>
+<code>        System.out.println( e.getMessage() );</code>
+</pre>
+<pre>
+<code>    }</code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>public static void main( String[] arg ) {</code>
+</pre>
+<pre>
+<code>     new Servidor();</code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+</div>
+</div>
+<p>
+Para compilar el programa ejecute:
+</p>
+<div class="codigo elemento_centrado" style="width: 16.45em">
+<div class="texto_izquierda">
+<pre>
+<code>javac Servidor.java</code>
+</pre>
+</div>
+</div>
+<p>
+y para ejecutarlo ejecute
+</p>
+<div class="codigo elemento_centrado" style="width: 13.7em">
+<div class="texto_izquierda">
+<pre>
+<code> java Servidor</code>
+</pre>
+</div>
+</div>
+<p>
+En la siguiente figura se muestra al servidor como ha procesado las solicitudes de tres clientes.
+</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<a href="../JPG/PSP04_-7.JPG" title="Ampliar imagen."><img alt="Captura de pantalla que muestra el resultado de ejecutar el servidor." class="imagen_ampliable" height="96" src="../JPG/PSP04_-8.JPG" style="width: 192px; height: 96px" title="Java Servidor." width="192" /></a>
+</div>
+<div class="elemento_centrado credenciales">
+java Servidor  
+</div>
+</div>
+
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="14_PROGR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="151_EJEM.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/15_ejemplo_i.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:26 GMT -->
+</html>

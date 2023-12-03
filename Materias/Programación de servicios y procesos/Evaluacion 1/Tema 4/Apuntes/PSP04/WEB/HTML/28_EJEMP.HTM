@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/28_ejemplo_iv.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.8.- Ejemplo IV. | DAM_PSP04 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="CIDEAD" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-15"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP04</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Aplicaciones cliente-servidor.</a></li>
+   <li><a href="1_PARADI.HTM" class="daddy">1.- Paradigma Cliente/Servidor.</a>
+   <ul class="other-section">
+      <li><a href="11_CARAC.HTM" class="no-ch">1.1.- Características básicas.</a></li>
+      <li><a href="12_VENTA.HTM" class="no-ch">1.2.- Ventajas y desventajas.</a></li>
+      <li><a href="13_MODEL.HTM" class="no-ch">1.3.- Modelos.</a></li>
+      <li><a href="14_PROGR.HTM" class="no-ch">1.4.- Programación.</a></li>
+      <li><a href="15_EJEMP.HTM" class="daddy">1.5.- Ejemplo I.</a>
+      <ul class="other-section">
+         <li><a href="151_EJEM.HTM" class="no-ch">1.5.1.- Ejemplo I (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_OPTIMI.HTM" class="current-page-parent daddy">2.- Optimización de sockets.</a>
+   <ul>
+      <li><a href="21_ATEND.HTM" class="no-ch">2.1.- Atender múltiples peticiones simultáneas.</a></li>
+      <li><a href="22_THREA.HTM" class="no-ch">2.2.- Threads.</a></li>
+      <li><a href="23_EJEMP.HTM" class="daddy">2.3.- Ejemplo II.</a>
+      <ul class="other-section">
+         <li><a href="231_EJEM.HTM" class="no-ch">2.3.1.- Ejemplo II (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="24_PRDID.HTM" class="no-ch">2.4.- Pérdida de información.</a></li>
+      <li><a href="25_TRANS.HTM" class="no-ch">2.5.- Transacciones.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+      <li><a href="27_MONIT.HTM" class="no-ch">2.7.- Monitorizar tiempos de respuesta.</a></li>
+      <li id="active"><a href="28_EJEMP.HTM" class="active no-ch">2.8.- Ejemplo IV.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="27_MONIT.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ANEXO_LI.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.8.- Ejemplo IV.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id36">
+<div class="iDevice emphasis0">
+<div id="ta36_73" class="block iDevice_content">
+<p>
+A continuación vamos a ver un ejemplo en el que se calcula el tiempo de trasmisión de datos entre una aplicación Cliente y Servidor. Para ello, el servidor le va a enviar al cliente un mensaje con el tiempo del sistema en milisegundos y el cliente cuando reciba el mensaje calculará la diferencia entre el tiempo de su sistema y el del mensaje.<img alt="Icono que representa un servidor." class="elemento_centrado" height="196" src="../JPG/PSP04-20.JPG" style="width: 160px; height: 196px" title="Icono servidor." width="160" />
+</p>
+<p>
+<strong>Servidor.java</strong>
+</p>
+<div class="codigo elemento_centrado" style="width: 56.6em">
+<div class="texto_izquierda">
+<pre>
+<code>import java.io.* ;</code>
+</pre>
+<pre>
+<code>import java.net.* ;</code>
+</pre>
+<pre>
+<code>import java.util.Date;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>class Servidor {</code>
+</pre>
+<pre>
+<code>    static final int Puerto=2000;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>    public Servidor( ) {</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>        try {</code>
+</pre>
+<pre>
+<code>            // Inicio el servidor en el puerto</code>
+</pre>
+<pre>
+<code>            ServerSocket sServidor = new ServerSocket(Puerto);</code>
+</pre>
+<pre>
+<code>            System.out.println(&quot;Escucho el puerto &quot; + Puerto );</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>            // Se conecta un cliente</code>
+</pre>
+<pre>
+<code>            Socket sCliente = sServidor.accept(); // Crea objeto</code>
+</pre>
+<pre>
+<code>            System.out.println(&quot;Cliente conectado&quot;);</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>            // Creo los flujos de entrada y salida</code>
+</pre>
+<pre>
+<code>            DataInputStream flujo_entrada = new DataInputStream( sCliente.getInputStream());</code>
+</pre>
+<pre>
+<code>            DataOutputStream flujo_salida= new DataOutputStream(sCliente.getOutputStream());</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>            // CUERPO DEL ALGORITMO</code>
+</pre>
+<pre>
+<code>            long tiempo1=(new Date()).getTime();</code>
+</pre>
+<pre>
+<code>            flujo_salida.writeUTF(Long.toString(tiempo1));     </code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>     // Se cierra la conexión</code>
+</pre>
+<pre>
+<code>     sCliente.close();</code>
+</pre>
+<pre>
+<code>     System.out.println(&quot;Cliente desconectado&quot;);</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>        } catch( Exception e ) {</code>
+</pre>
+<pre>
+<code>     System.out.println( e.getMessage() );</code>
+</pre>
+<pre>
+<code>        }</code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>public static void main( String[] arg ) {</code>
+</pre>
+<pre>
+<code>    new Servidor();</code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+</div>
+</div>
+<p>
+<strong>
+Cliente.java</strong>
+</p>
+<div class="codigo elemento_centrado" style="width: 54.95em">
+<div class="texto_izquierda">
+<pre>
+<code>import java.io.*;</code>
+</pre>
+<pre>
+<code>import java.net.*;</code>
+</pre>
+<pre>
+<code>import java.util.Date;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>class Cliente {</code>
+</pre>
+<pre>
+<code>    static final String HOST = &quot;localhost&quot;;</code>
+</pre>
+<pre>
+<code>    static final int Puerto=2000;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>    public Cliente( ) {</code>
+</pre>
+<pre>
+<code>     String datos=new String();</code>
+</pre>
+<pre>
+<code>     String num_cliente=new String();</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>     // para leer del teclado</code>
+</pre>
+<pre>
+<code>     BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>     try{</code>
+</pre>
+<pre>
+<code>         // Me conecto al puerto</code>
+</pre>
+<pre>
+<code>         Socket sCliente = new Socket( HOST , Puerto );</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>         // Creo los flujos de entrada y salida</code>
+</pre>
+<pre>
+<code>         DataInputStream flujo_entrada = new DataInputStream(sCliente.getInputStream());</code>
+</pre>
+<pre>
+<code>         DataOutputStream flujo_salida= new DataOutputStream(sCliente.getOutputStream());</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>         // CUERPO DEL ALGORITMO</code>
+</pre>
+<pre>
+<code>         datos=flujo_entrada.readUTF();     </code>
+</pre>
+<pre>
+<code>         long tiempo1=Long.valueOf(datos);</code>
+</pre>
+<pre>
+<code>         long tiempo2=(new Date()).getTime();          </code>
+</pre>
+<pre>
+<code>         System.out.println(&quot;\n El tiempo es:&quot;+(tiempo2-tiempo1));     </code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>         // Se cierra la conexión</code>
+</pre>
+<pre>
+<code>         sCliente.close();</code>
+</pre>
+<pre>
+<code>     } catch( Exception e ) {</code>
+</pre>
+<pre>
+<code>         System.out.println( e.getMessage() );</code>
+</pre>
+<pre>
+<code>     }</code>
+</pre>
+<pre>
+<code>        }</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>    public static void main( String[] arg ) {</code>
+</pre>
+<pre>
+<code>        new Cliente();</code>
+</pre>
+<pre>
+<code>    }</code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+</div>
+</div>
+<p>
+&nbsp;
+</p>
+
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="27_MONIT.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ANEXO_LI.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/28_ejemplo_iv.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:31 GMT -->
+</html>

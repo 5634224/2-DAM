@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/1_paradigma_clienteservidor.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.- Paradigma Cliente/Servidor. | DAM_PSP04 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="CIDEAD" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-1"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP04</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Aplicaciones cliente-servidor.</a></li>
+   <li id="active"><a href="1_PARADI.HTM" class="active daddy">1.- Paradigma Cliente/Servidor.</a>
+   <ul>
+      <li><a href="11_CARAC.HTM" class="no-ch">1.1.- Características básicas.</a></li>
+      <li><a href="12_VENTA.HTM" class="no-ch">1.2.- Ventajas y desventajas.</a></li>
+      <li><a href="13_MODEL.HTM" class="no-ch">1.3.- Modelos.</a></li>
+      <li><a href="14_PROGR.HTM" class="no-ch">1.4.- Programación.</a></li>
+      <li><a href="15_EJEMP.HTM" class="daddy">1.5.- Ejemplo I.</a>
+      <ul class="other-section">
+         <li><a href="151_EJEM.HTM" class="no-ch">1.5.1.- Ejemplo I (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="2_OPTIMI.HTM" class="daddy">2.- Optimización de sockets.</a>
+   <ul class="other-section">
+      <li><a href="21_ATEND.HTM" class="no-ch">2.1.- Atender múltiples peticiones simultáneas.</a></li>
+      <li><a href="22_THREA.HTM" class="no-ch">2.2.- Threads.</a></li>
+      <li><a href="23_EJEMP.HTM" class="daddy">2.3.- Ejemplo II.</a>
+      <ul class="other-section">
+         <li><a href="231_EJEM.HTM" class="no-ch">2.3.1.- Ejemplo II (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="24_PRDID.HTM" class="no-ch">2.4.- Pérdida de información.</a></li>
+      <li><a href="25_TRANS.HTM" class="no-ch">2.5.- Transacciones.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+      <li><a href="27_MONIT.HTM" class="no-ch">2.7.- Monitorizar tiempos de respuesta.</a></li>
+      <li><a href="28_EJEMP.HTM" class="no-ch">2.8.- Ejemplo IV.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="INDEX.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_CARAC.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.- Paradigma Cliente/Servidor.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id2">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_CAS.PNG)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_66" class="block iDevice_content">
+<p>
+<strong>María</strong>: Mira <strong>Juan</strong>. Ahora vamos a ver todas las características del modelo cliente/servidor. Pero no todo son ventajas. También hay desventajas que tenemos que tener en cuenta a la hora de programar las aplicaciones. 
+</p>
+<p>
+<strong>Juan</strong>: De acuerdo, estupendo. Estoy deseando empezar…
+</p>
+<img alt="Juan utilizando un equipo." class="elemento_centrado" height="108" src="../JPG/CASO_PRO.JPG" style="width: 192px; height: 108px" title="Juan." width="192" />
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id3">
+<div class="iDevice emphasis0">
+<div id="ta3_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a href="../JPG/PSP04_CO.JPG" title="Ampliar imagen."><img alt=" Imagen que muestra el modelo cliente/servidor en el que hay 3 clientes que se comunican con un servidor." class="imagen_ampliable" src="../JPG/PSP04_-2.JPG" style="width: 172px; height: 160px;" title="Modelo cliente/servidor." width="172" height="160" /></a></div>
+</div>
+<p>En el mundo de las comunicaciones entre equipos el modelo de comunicación más utilizado es el modelo Cliente/servidor ya que ofrece una gran flexibilidad, interoperabilidad y estabilidad para acceder a recursos de forma centralizada.</p>
+<p>El término modelo Cliente/Servidor se acuñó por primera vez en los años 80 para explicar un sencillo paradigma: un equipo cliente requiere un servicio de un equipo servidor.</p>
+<p>Desde el punto de vista funcional, se puede definir el modelo Cliente/Servidor como una arquitectura distribuida que permite a los usuarios finales obtener acceso a recursos de forma transparente en entornos multiplataforma. Normalmente, los recursos que suele ofrecer el servidor son datos, pero también puede permitir acceso a dispositivos hardware, tiempo de procesamiento, etc.</p>
+<p>Los elementos que componen el modelo son:</p>
+<ul class="lista_verificacion">
+<li><strong>Cliente</strong>. Es el proceso que permite interactuar con el usuario, realizar las peticiones, enviarlas al servidor y mostrar los datos al cliente. En definitiva, se comporta como la interfaz (front-end<span lang="en"></span>) que utiliza el usuario para interactuar con el servidor. Las funciones que lleva a cabo el proceso cliente se resumen en los siguientes puntos:
+<ul>
+<li>Interactuar con el usuario.</li>
+<li>Procesar las peticiones para ver si son válidas y evitar peticiones maliciosas al servidor.</li>
+<li>Recibir los resultados del servidor.</li>
+<li>Formatear y mostrar los resultados.</li>
+</ul>
+</li>
+<li><strong>Servidor</strong>. Es el proceso encargado de recibir y procesar las peticiones de los clientes para permitir el acceso a algún recurso (back-end). Las funciones del servidor son:
+<ul>
+<li>Aceptar las peticiones de los clientes.</li>
+<li>Procesar las peticiones.</li>
+<li>Formatear y enviar el resultado a los clientes.</li>
+<li>Procesar la lógica de la aplicación y realizar validaciones de datos.</li>
+<li>Asegurar la consistencia de la información.</li>
+<li>Evitar que las peticiones de los clientes interfieran entre sí.</li>
+<li>Mantener la seguridad del sistema.</li>
+</ul>
+</li>
+</ul>
+<p>La idea es tratar el servidor como una entidad que realiza un determinado conjunto de tareas y que las ofrece como servicio a los clientes.</p>
+<p>La forma más habitual de utilizar el modelo cliente/servidor es mediante la utilización de equipos a través de interfaces gráficas; mientras que la administración de datos y su seguridad e integridad se deja a cargo del servidor. Normalmente, el trabajo pesado lo realiza el servidor y los procesos clientes sólo se encargan de interactuar con el usuario. En otras palabras, el modelo Cliente/Servidor es una extensión de programación modular en la que se divide la funcionalidad del software en dos módulos con el fin de hacer más fácil el desarrollo y mejorar su mantenimiento</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id4">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-4_55">
+<form name="multi-select-form-4_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion4_55" class="block question iDevice_content">
+<p>
+<strong>Indica qué operación no realiza un servidor:</strong>
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op4_550" class="sr-av"><a href="#answer-4_58">Opción 1</a></label><input type="checkbox" id="op4_550" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-4_58"><div id="taans4_58" class="block iDevice_content">
+Recibir la petición del cliente.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-4_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op4_551" class="sr-av"><a href="#answer-4_78">Opción 2</a></label><input type="checkbox" id="op4_551" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-4_78"><div id="taans4_78" class="block iDevice_content">
+Procesar la petición del cliente.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-4_551" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op4_552" class="sr-av"><a href="#answer-4_80">Opción 3</a></label><input type="checkbox" id="op4_552" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-4_80"><div id="taans4_80" class="block iDevice_content">
+Mostrar el resultado al usuario.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-4_552" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op4_553" class="sr-av"><a href="#answer-4_82">Opción 4</a></label><input type="checkbox" id="op4_553" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-4_82"><div id="taans4_82" class="block iDevice_content">
+Asegurar el sistema.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-4_553" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-4_55" /> 
+</p>
+</div>
+<section id="f4_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback4_55" class="feedback iDevice_content">
+Las respuesta c es la correcta ya que es el cliente es el encargado de interactuar con el usuario.
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-4_58" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-4_78" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-4_80" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-4_82" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="INDEX.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_CARAC.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/1_paradigma_clienteservidor.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:24 GMT -->
+</html>

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/14_programacin.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.4.- Programación. | DAM_PSP04 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="CIDEAD" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP04</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Aplicaciones cliente-servidor.</a></li>
+   <li class="current-page-parent"><a href="1_PARADI.HTM" class="current-page-parent daddy">1.- Paradigma Cliente/Servidor.</a>
+   <ul>
+      <li><a href="11_CARAC.HTM" class="no-ch">1.1.- Características básicas.</a></li>
+      <li><a href="12_VENTA.HTM" class="no-ch">1.2.- Ventajas y desventajas.</a></li>
+      <li><a href="13_MODEL.HTM" class="no-ch">1.3.- Modelos.</a></li>
+      <li id="active"><a href="14_PROGR.HTM" class="active no-ch">1.4.- Programación.</a></li>
+      <li><a href="15_EJEMP.HTM" class="daddy">1.5.- Ejemplo I.</a>
+      <ul class="other-section">
+         <li><a href="151_EJEM.HTM" class="no-ch">1.5.1.- Ejemplo I (II).</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="2_OPTIMI.HTM" class="daddy">2.- Optimización de sockets.</a>
+   <ul class="other-section">
+      <li><a href="21_ATEND.HTM" class="no-ch">2.1.- Atender múltiples peticiones simultáneas.</a></li>
+      <li><a href="22_THREA.HTM" class="no-ch">2.2.- Threads.</a></li>
+      <li><a href="23_EJEMP.HTM" class="daddy">2.3.- Ejemplo II.</a>
+      <ul class="other-section">
+         <li><a href="231_EJEM.HTM" class="no-ch">2.3.1.- Ejemplo II (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="24_PRDID.HTM" class="no-ch">2.4.- Pérdida de información.</a></li>
+      <li><a href="25_TRANS.HTM" class="no-ch">2.5.- Transacciones.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+      <li><a href="27_MONIT.HTM" class="no-ch">2.7.- Monitorizar tiempos de respuesta.</a></li>
+      <li><a href="28_EJEMP.HTM" class="no-ch">2.8.- Ejemplo IV.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="13_MODEL.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="15_EJEMP.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.4.- Programación.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id11">
+<div class="iDevice emphasis0">
+<div id="ta11_73" class="block iDevice_content">
+<p>De forma interna, los pasos que realiza el servidor para realizar una comunicación son:</p>
+<ul class="lista_verificacion">
+<li><strong>Publicar puerto</strong>. Publica el puerto por donde se van a recibir las conexiones.</li>
+<li><strong>Esperar peticiones</strong>. En este momento el servidor queda a la espera a que se conecte un cliente. Una vez que se conecte un cliente se crea el <span lang="en">socket</span> del cliente por donde se envían y reciben los datos.</li>
+<li><strong>Envío y recepción de datos</strong>. Para poder recibir/enviar datos es necesario crear un flujo (stream) de entrada y otro de salida. Cuando el servidor recibe una petición, éste la procesa y le envía el resultado al cliente.</li>
+<li>Una vez finalizada la comunicación <strong>se cierra el <span lang="en">socket</span> del cliente</strong>.</li>
+</ul>
+<p>Los pasos que realiza el cliente para realizar una comunicación son:</p>
+<ul class="lista_verificacion">
+<li><strong>Conectarse con el servidor</strong>. El cliente se conecta con un determinado servidor a un puerto específico. Una vez realizada la conexión se crea el <span lang="en">socket</span> por donde se realizará la comunicación.</li>
+<li><strong>Envío y recepción de datos.</strong> Para poder recibir/enviar datos es necesario crear un flujo (<span lang="en">stream</span>) de entrada y otro de salida.</li>
+<li>Una vez finalizada la comunicación se <strong>cierra el <span lang="en">socket</span></strong>.</li>
+</ul>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="../PNG/PSP04_CO.PNG" title="Ampliar imagen."><img alt="Esquema de funcionamiento interno del modelo cliente/servidor en el que se muestran las diferentes módulos de funcionamiento y su interconexión." class="imagen_ampliable" src="../PNG/PSP04_-2.PNG" style="width: 160px; height: 172px;" title="Esquema de funcionamiento interno del modelo cliente/servidor." width="160" height="172" /></a>
+<div class="elemento_centrado credenciales">Esquema de funcionamiento interno del modelo cliente/servidor.</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id12">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-12_55">
+<form name="multi-select-form-12_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion12_55" class="block question iDevice_content">
+<p>
+<strong>¿Qué función es la que permite espera la conexión de un cliente?</strong>
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op12_550" class="sr-av"><a href="#answer-12_58">Opción 1</a></label><input type="checkbox" id="op12_550" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-12_58"><div id="taans12_58" class="block iDevice_content">
+<span lang="en">ServerSocket</span>.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-12_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op12_551" class="sr-av"><a href="#answer-12_94">Opción 2</a></label><input type="checkbox" id="op12_551" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-12_94"><div id="taans12_94" class="block iDevice_content">
+<span lang="en">Socket</span>.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-12_551" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op12_552" class="sr-av"><a href="#answer-12_96">Opción 3</a></label><input type="checkbox" id="op12_552" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-12_96"><div id="taans12_96" class="block iDevice_content">
+<span lang="en">Accept</span>.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-12_552" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op12_553" class="sr-av"><a href="#answer-12_98">Opción 4</a></label><input type="checkbox" id="op12_553" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-12_98"><div id="taans12_98" class="block iDevice_content">
+<span lang="en">Stream</span>.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-12_553" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-12_55" /> 
+</p>
+</div>
+<section id="f12_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback12_55" class="feedback iDevice_content">
+Las respuesta <span lang="en">Accept</span> es la correcta ya que <span lang="en">accept</span> queda a la espera hasta que se conecte un cliente. Cuando se conecta el cliente, entonces se crea el <span lang="en">socket</span> del cliente.
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-12_58" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-12_94" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-12_96" class="right">Correcto</a></li>
+<li><a href="#answer-12_98" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="13_MODEL.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="15_EJEMP.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432824/mod_resource/content/2/PSP04_Contenidos_Web/14_programacin.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 03 Dec 2023 01:16:25 GMT -->
+</html>
