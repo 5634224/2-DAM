@@ -1,0 +1,69 @@
+/*==================== SERVIDOR UDP JAVA =========================*/
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+
+public class UDPServer {
+    public static void main(String[] args) {
+        try {
+            // Crear un socket UDP en el puerto 9876
+            DatagramSocket socket = new DatagramSocket(9876);
+
+            // Crear un buffer para recibir datos
+            byte[] buffer = new byte[1024];
+
+            // Crear un paquete para almacenar los datos recibidos
+            DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+
+            System.out.println("Servidor UDP esperando...");
+
+            // Esperar a recibir un paquete
+            socket.receive(packet);
+
+            // Convertir los datos recibidos a una cadena
+            String mensajeRecibido = new String(packet.getData(), 0, packet.getLength());
+
+            // Mostrar el mensaje recibido
+            System.out.println("Mensaje recibido: " + mensajeRecibido);
+
+            // Cerrar el socket
+            socket.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+/*==================== CLIENTE UDP JAVA =========================*/
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+
+public class UDPClient {
+    public static void main(String[] args) {
+        try {
+            // Crear un socket UDP
+            DatagramSocket socket = new DatagramSocket();
+
+            // Especificar la dirección IP del servidor y el puerto
+            InetAddress servidorDireccion = InetAddress.getByName("localhost");
+            int servidorPuerto = 9876;
+
+            // Crear un mensaje para enviar al servidor
+            String mensaje = "Hola, servidor UDP!";
+            byte[] buffer = mensaje.getBytes();
+
+            // Crear un paquete con los datos a enviar
+            DatagramPacket packet = new DatagramPacket(buffer, buffer.length, servidorDireccion, servidorPuerto);
+
+            // Enviar el paquete al servidor
+            socket.send(packet);
+
+            System.out.println("Mensaje enviado al servidor: " + mensaje);
+
+            // Cerrar el socket
+            socket.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}

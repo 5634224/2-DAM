@@ -1,0 +1,15 @@
+/*===== 10% nota cuestionarios =====*/
+5% not cuestionario 1
+5% nota cuestionario 2
+
+/*===== 30% nota actividades ======*/
+7,5% act1
+22,5% act2
+
+/*===== 60% examen =====*/
+6% nota test
+18% nota imágenes UT1
+36% nota desarrollo app
+18% interfaz
+6% funcionalidad
+12% explicación
