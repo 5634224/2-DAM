@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/43_programacin_de_un_cliente_ftp.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.3.- Programación de un cliente FTP. | DAM_PSP_05 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-20"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_05</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Generación de servicios en red.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_PROTOC.HTM" class="daddy">2.- Protocolos de comunicaciones del nivel de aplicación.</a>
+   <ul class="other-section">
+      <li><a href="21_COMUN.HTM" class="no-ch">2.1.- Comunicación entre aplicaciones.</a></li>
+      <li><a href="22_CONEX.HTM" class="no-ch">2.2.- Conexión, transmisión y desconexión.</a></li>
+      <li><a href="23_DNS_Y.HTM" class="no-ch">2.3.- DNS y resolución de nombres.</a></li>
+      <li><a href="24_EL_PR.HTM" class="no-ch">2.4.- El protocolo FTP.</a></li>
+      <li><a href="25_LOS_P.HTM" class="no-ch">2.5.- Los protocolos SMTP y POP3.</a></li>
+      <li><a href="26_EL_PR.HTM" class="no-ch">2.6.- El protocolo HTTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_BIBLIO.HTM" class="daddy">3.- Bibliotecas de clases y componentes Java.</a>
+   <ul class="other-section">
+      <li><a href="31_OBJET.HTM" class="no-ch">3.1.- Objetos predefinidos.</a></li>
+      <li><a href="32_MTODO.HTM" class="no-ch">3.2.- Métodos y ejemplos de uso de InetAddress.</a></li>
+      <li><a href="33_PROGR.HTM" class="no-ch">3.3.- Programación con URL.</a></li>
+      <li><a href="34_CREAR.HTM" class="no-ch">3.4.- Crear y analizar objetos URL.</a></li>
+      <li><a href="35_LEER_.HTM" class="no-ch">3.5.- Leer y escribir a través de una URLConnection.</a></li>
+      <li><a href="36_TRABA.HTM" class="no-ch">3.6.- Trabajar con el contenido de una URL.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_PROGRA.HTM" class="current-page-parent daddy">4.- Programación de aplicaciones cliente.</a>
+   <ul>
+      <li><a href="41_PROGR.HTM" class="no-ch">4.1.- Programación de un cliente HTTP.</a></li>
+      <li><a href="42_BIBLI.HTM" class="no-ch">4.2.- Bibliotecas para programar un cliente FTP.</a></li>
+      <li id="active"><a href="43_PROGR.HTM" class="active no-ch">4.3.- Programación de un cliente FTP.</a></li>
+      <li><a href="44_PROGR.HTM" class="no-ch">4.4.- Programación de un cliente Telnet.</a></li>
+      <li><a href="45_PROGR.HTM" class="no-ch">4.5.- Programación de un cliente SMTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_PROGRA.HTM" class="daddy">5.- Programación de servidores.</a>
+   <ul class="other-section">
+      <li><a href="51_PROGR.HTM" class="no-ch">5.1.- Programación de un servidor HTTP.</a></li>
+      <li><a href="52_IMPLE.HTM" class="no-ch">5.2.- Implementar comunicaciones simultáneas.</a></li>
+      <li><a href="53_MONIT.HTM" class="no-ch">5.3.- Monitorización de tiempos de respuesta.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo de monitorización del tiempo de transmisión.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="42_BIBLI.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="44_PROGR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.3.- Programación de un cliente FTP.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id61">
+<div class="iDevice emphasis0">
+<div id="ta61_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a href="../PNG/PSP05-21.PNG" title="Ampliar imagen."><img alt="Cartel con fondo gris claro incluyendo a diferentes colores  rótulos con las siguientes palabras: FTPClient, connect(), logout(), login()." class="imagen_ampliable" height="136" src="../PNG/PSP05-22.PNG" style="width: 200px; height: 136px;" title="Clase FTPClient." width="200" /></a></div>
+</div>
+<p>Una forma sencilla de<strong> crear un cliente <span lang="en">FTP</span></strong> es <strong>mediante la clase <code>FTPClient</code>.</strong></p>
+<p>Una vez creado el cliente, como en cualquier objeto <code>SocketClient</code> habrá que seguir el siguente <strong>esquema básico de trabajo</strong>:</p>
+<ul class="lista_verificacion">
+<li><strong>Realizar la conexión del cliente con el servidor</strong>. El método <code>connect(InetAddress
+	host)</code> realiza la conexión del cliente con el servidor de nombre <code>host</code>, abriendo un objeto <code>Socket</code> conectado al <span lang="en">host</span> remoto en el puerto por defecto.</li>
+<li><strong>Comprobar la conexión</strong>. El método <code>getReplyCode()</code> devuelve un código de respuesta del servidor indicativo de el éxito o fracaso de la conexión.</li>
+<li><strong>Validar usuario</strong>. El método<code> login(String
+	usuario, String password)</code> permite esa validación.</li>
+<li><strong>Realizar operaciones contra el servidor</strong>. Por ejemplo:
+<ul>
+<li>Listar todos los ficheros disponibles en una determinada carpeta remota mediante el método <code>listNames()</code>.</li>
+<li>Recuperar el contenido de un fichero remoto mediante <code>retrieveFile(String
+		rutaRemota, OutputStream ficheroLocal)</code> y transferirlo al equipo local para escribirlo en el <code>ficheroLocal</code> especificado.</li>
+</ul>
+</li>
+<li><strong>Desconexión del servidor</strong>. El método <code>disconnect()</code> o <code>logout()</code> realiza la desconexión del servidor.</li>
+</ul>
+<p>Ten en cuenta, que durante todo este proceso puede generarse tanto una <code>SocketException</code> si se superó el tiempo de espera para conectar con el servidor, o una <code>IOException</code> si no se tiene acceso al fichero especificado.</p>
+<p>En el siguiente enlace, tienes un ejemplo de programación de un cliente <span lang="en">FTP</span>, que se conecta a un servidor remoto y se descarga un fichero. Ten en cuenta que para poder ejecutarlo, puede que tengas que desactivar cualquier cortafuegos o <span lang="en">firewall</span> que tengas activo.</p>
+<div class="enlace_centrado"><a class="paquete" href="../ZIP/PSP05_-2.ZIP" title="Descargar el proyecto Java ejemplo de programación de un cliente FTP. [zip - 0.01 MB]">Código del proyecto Java para programar un cliente <span lang="en">FTP</span>.</a> <span class="tamano"> (0.01 MB) </span></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id62">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta62_54" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b62" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b62" class="block iDevice_content">
+<p>
+<strong>Señala si la afirmación siguiente es verdadera o falsa:</strong>
+</p>
+<p>
+<strong>El método <code>FTPClient.login (user, password)</code>  realiza la conexión a un servidor <span lang="en">FTP</span>  como el usuario indicado.</strong>
+</p>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b62"><input type="radio" name="option0b62" id="true0b62" class="exe-radio-option exe-radio-option-0-2-0b62-truefalse" /> Verdadero</label> 
+<label for="false0b62"><input type="radio" name="option0b62" id="false0b62" class="exe-radio-option exe-radio-option-1-2-0b62-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b62" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b62-result" class="wrong">Falso</strong></p>
+La afirmación es falsa, lo que realiza es la validación del usuario, no la conexión al servidor.
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="42_BIBLI.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="44_PROGR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/43_programacin_de_un_cliente_ftp.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:32 GMT -->
+</html>

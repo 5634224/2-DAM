@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/23_dns_y_resolucin_de_nombres.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.3.- DNS y resolución de nombres. | DAM_PSP_05 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_05</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Generación de servicios en red.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li class="current-page-parent"><a href="2_PROTOC.HTM" class="current-page-parent daddy">2.- Protocolos de comunicaciones del nivel de aplicación.</a>
+   <ul>
+      <li><a href="21_COMUN.HTM" class="no-ch">2.1.- Comunicación entre aplicaciones.</a></li>
+      <li><a href="22_CONEX.HTM" class="no-ch">2.2.- Conexión, transmisión y desconexión.</a></li>
+      <li id="active"><a href="23_DNS_Y.HTM" class="active no-ch">2.3.- DNS y resolución de nombres.</a></li>
+      <li><a href="24_EL_PR.HTM" class="no-ch">2.4.- El protocolo FTP.</a></li>
+      <li><a href="25_LOS_P.HTM" class="no-ch">2.5.- Los protocolos SMTP y POP3.</a></li>
+      <li><a href="26_EL_PR.HTM" class="no-ch">2.6.- El protocolo HTTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_BIBLIO.HTM" class="daddy">3.- Bibliotecas de clases y componentes Java.</a>
+   <ul class="other-section">
+      <li><a href="31_OBJET.HTM" class="no-ch">3.1.- Objetos predefinidos.</a></li>
+      <li><a href="32_MTODO.HTM" class="no-ch">3.2.- Métodos y ejemplos de uso de InetAddress.</a></li>
+      <li><a href="33_PROGR.HTM" class="no-ch">3.3.- Programación con URL.</a></li>
+      <li><a href="34_CREAR.HTM" class="no-ch">3.4.- Crear y analizar objetos URL.</a></li>
+      <li><a href="35_LEER_.HTM" class="no-ch">3.5.- Leer y escribir a través de una URLConnection.</a></li>
+      <li><a href="36_TRABA.HTM" class="no-ch">3.6.- Trabajar con el contenido de una URL.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_PROGRA.HTM" class="daddy">4.- Programación de aplicaciones cliente.</a>
+   <ul class="other-section">
+      <li><a href="41_PROGR.HTM" class="no-ch">4.1.- Programación de un cliente HTTP.</a></li>
+      <li><a href="42_BIBLI.HTM" class="no-ch">4.2.- Bibliotecas para programar un cliente FTP.</a></li>
+      <li><a href="43_PROGR.HTM" class="no-ch">4.3.- Programación de un cliente FTP.</a></li>
+      <li><a href="44_PROGR.HTM" class="no-ch">4.4.- Programación de un cliente Telnet.</a></li>
+      <li><a href="45_PROGR.HTM" class="no-ch">4.5.- Programación de un cliente SMTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_PROGRA.HTM" class="daddy">5.- Programación de servidores.</a>
+   <ul class="other-section">
+      <li><a href="51_PROGR.HTM" class="no-ch">5.1.- Programación de un servidor HTTP.</a></li>
+      <li><a href="52_IMPLE.HTM" class="no-ch">5.2.- Implementar comunicaciones simultáneas.</a></li>
+      <li><a href="53_MONIT.HTM" class="no-ch">5.3.- Monitorización de tiempos de respuesta.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo de monitorización del tiempo de transmisión.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="22_CONEX.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="24_EL_PR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.3.- DNS y resolución de nombres.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id15">
+<div class="iDevice emphasis0">
+<div id="ta15_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a href="../JPG/PSP05_CO.JPG" title="Ampliar imagen."><img alt="Foto de una pantalla de monitor TFT que muestra nombres de dominio." class="imagen_ampliable" src="../JPG/PSP05_-2.JPG" style="width: 200px; height: 148px;" title="DNS." width="200" height="148" /></a></div>
+</div>
+<p>Todas las computadoras y dispositivos conectados a una red <span lang="en">TCP/IP</span> se identifican mediante una dirección <span lang="en">IP</span>, como por ejemplo <code>117.142.234.125.</code></p>
+<p>En su forma actual (<acronym title="Internet Protocol version 4." lang="en">IPv4</acronym>), una dirección <span lang="en">IP</span> se compone de cuatro bytes sin signo (de 0 a 254) separados por puntos para que resulte más legible, tal y como has visto en el ejemplo anterior. Por supuesto, se trata de valores ideales para los ordenadores, pero para los seres humanos que quieran acordarse de la <span lang="en">IP</span> de un nodo en concreto de la red, son todo un problema de memoria.</p>
+<p>El sistema <span lang="en">DNS</span> o Sistema de Nombres de Dominio es el mecanismo que se inventó, para que los nodos que ofrecen algún tipo de servicio interesante tengan un nombre fácil de recordar, lo que se denomina un nombre de dominio, como por ejemplo<code> www.todofp.es</code>.</p>
+<p><span lang="en">DNS</span> es un sistema de nomenclatura jerárquica para computadoras, servicios o cualquier recurso conectado a Internet o a una red privada.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id16">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta16_70" class="block iDevice_content">
+El
+objetivo principal de los nombres de dominio y del servicio <span lang="en">DNS</span>, es
+traducir o resolver nombres (por ejemplo
+<code>www.dominio.es</code>) en las
+direcciones <span lang="en">IP</span> (identificador binario) de cada equipo conectado a la
+red, con el propósito de poder localizar y direccionar estos equipos
+dentro de la red.
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id17">
+<div class="iDevice emphasis0">
+<div id="ta17_73" class="block iDevice_content">
+<p>
+Sin
+la ayuda del servicio <span lang="en">DNS</span>, los usuarios de una red <span lang="en">TCP/IP</span> tendrían
+que acceder a cada servicio de la misma utilizando la dirección <span lang="en">IP</span>
+del nodo.
+</p>
+<p>
+Además
+<strong>el servicio <span lang="en">DNS</span> proporciona otras ventajas</strong>: 
+</p>
+<ul class="lista_verificacion">
+	<li>
+	Permite
+	que una misma dirección <span lang="en">IP</span> sea compartida por varios dominios.
+	</li>
+	<li>
+	Permite
+	que un mismo dominio se corresponda con diferentes direcciones <span lang="en">IP</span>.
+	</li>
+	<li>
+	Permite
+	que cualquier servicio de red pueda cambiar de nodo, y por tanto de <span lang="en">IP</span>, sin cambiar de nombre de dominio.
+	</li>
+</ul>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id18">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta18_54" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b18" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b18" class="block iDevice_content">
+<p>
+<strong>Señala si la afirmación siguiente es verdadera o falsa:</strong>
+</p>
+<p>
+<strong>El servicio <span lang="en">DNS</span> permite resolver una <span lang="en">IP</span> en su único nombre de dominio.</strong>
+</p>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b18"><input type="radio" name="option0b18" id="true0b18" class="exe-radio-option exe-radio-option-0-2-0b18-truefalse" /> Verdadero</label> 
+<label for="false0b18"><input type="radio" name="option0b18" id="false0b18" class="exe-radio-option exe-radio-option-1-2-0b18-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b18" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b18-result" class="wrong">Falso</strong></p>
+La afirmación es falsa, pues una misma <span lang="en">IP</span> puede se compartida por más de un dominio.
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id19">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta19_47" class="block iDevice_content">
+<p>
+Puedes profundizar en el funcionamiento
+del servicio <span lang="en">DNS</span> en el siguiente enlace:
+</p>
+<div class="enlace_centrado">
+<a href="http://es.wikipedia.org/wiki/Domain_Name_System" title="Acceder a información detallada del servicio DNS.">
+Información detallada sobre el servicio <span lang="en">DNS</span>.</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="22_CONEX.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="24_EL_PR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/23_dns_y_resolucin_de_nombres.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:21 GMT -->
+</html>

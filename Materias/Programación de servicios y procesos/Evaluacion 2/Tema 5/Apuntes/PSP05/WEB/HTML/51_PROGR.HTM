@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/51_programacin_de_un_servidor_http.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.1.- Programación de un servidor HTTP. | DAM_PSP_05 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-23"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_05</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Generación de servicios en red.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_PROTOC.HTM" class="daddy">2.- Protocolos de comunicaciones del nivel de aplicación.</a>
+   <ul class="other-section">
+      <li><a href="21_COMUN.HTM" class="no-ch">2.1.- Comunicación entre aplicaciones.</a></li>
+      <li><a href="22_CONEX.HTM" class="no-ch">2.2.- Conexión, transmisión y desconexión.</a></li>
+      <li><a href="23_DNS_Y.HTM" class="no-ch">2.3.- DNS y resolución de nombres.</a></li>
+      <li><a href="24_EL_PR.HTM" class="no-ch">2.4.- El protocolo FTP.</a></li>
+      <li><a href="25_LOS_P.HTM" class="no-ch">2.5.- Los protocolos SMTP y POP3.</a></li>
+      <li><a href="26_EL_PR.HTM" class="no-ch">2.6.- El protocolo HTTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_BIBLIO.HTM" class="daddy">3.- Bibliotecas de clases y componentes Java.</a>
+   <ul class="other-section">
+      <li><a href="31_OBJET.HTM" class="no-ch">3.1.- Objetos predefinidos.</a></li>
+      <li><a href="32_MTODO.HTM" class="no-ch">3.2.- Métodos y ejemplos de uso de InetAddress.</a></li>
+      <li><a href="33_PROGR.HTM" class="no-ch">3.3.- Programación con URL.</a></li>
+      <li><a href="34_CREAR.HTM" class="no-ch">3.4.- Crear y analizar objetos URL.</a></li>
+      <li><a href="35_LEER_.HTM" class="no-ch">3.5.- Leer y escribir a través de una URLConnection.</a></li>
+      <li><a href="36_TRABA.HTM" class="no-ch">3.6.- Trabajar con el contenido de una URL.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_PROGRA.HTM" class="daddy">4.- Programación de aplicaciones cliente.</a>
+   <ul class="other-section">
+      <li><a href="41_PROGR.HTM" class="no-ch">4.1.- Programación de un cliente HTTP.</a></li>
+      <li><a href="42_BIBLI.HTM" class="no-ch">4.2.- Bibliotecas para programar un cliente FTP.</a></li>
+      <li><a href="43_PROGR.HTM" class="no-ch">4.3.- Programación de un cliente FTP.</a></li>
+      <li><a href="44_PROGR.HTM" class="no-ch">4.4.- Programación de un cliente Telnet.</a></li>
+      <li><a href="45_PROGR.HTM" class="no-ch">4.5.- Programación de un cliente SMTP.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_PROGRA.HTM" class="current-page-parent daddy">5.- Programación de servidores.</a>
+   <ul>
+      <li id="active"><a href="51_PROGR.HTM" class="active no-ch">5.1.- Programación de un servidor HTTP.</a></li>
+      <li><a href="52_IMPLE.HTM" class="no-ch">5.2.- Implementar comunicaciones simultáneas.</a></li>
+      <li><a href="53_MONIT.HTM" class="no-ch">5.3.- Monitorización de tiempos de respuesta.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo de monitorización del tiempo de transmisión.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="5_PROGRA.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_IMPLE.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.1.- Programación de un servidor HTTP.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id72">
+<div class="iDevice emphasis0">
+<div id="ta72_73" class="block iDevice_content">
+<img alt="Estudiante sentado de espalda trabajando con ordenador y un libro." class="elemento_derecha" height="132" src="../JPG/PSP05-19.JPG" style="width: 200px; height: 132px" title="Estudiante con ordenador." width="200" />
+<p>
+Antes de lanzarnos a
+la programación del servidor <span lang="en">HTTP</span>, vamos a recordar 
+o conocer cómo funciona este protocolo y a sentar las hipótesis de
+trabajo.
+</p>
+<p>
+El servidor que
+vamos a programar cumple lo siguiente:
+</p>
+<ul class="lista_verificacion">
+	<li>
+	Se basa en la
+	versión 1.1 del protocolo <span lang="en">HTTP</span>.
+	</li>
+	<li>
+	Implementará solo
+	una parte del protocolo.
+	</li>
+	<li>
+	Se basa en dos
+	tipos de mensajes: peticiones de clientes a servidores y respuestas
+	de servidores a clientes.
+	</li>
+	<li>
+	Nuestro
+	servidor solo implementará peticiones <code>GET</code>.
+	</li>
+</ul>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id73">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_DEB.PNG)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta73_48" class="block iDevice_content">
+<p>¿Cómo procesa el servidor <span lang="en">web</span> las peticiones del cliente? Dependerá del método utilizado en la petición por el cliente, que en nuestro ejemplo es el <code>GET</code>. Consulta la siguiente web para ver cómo se hace.</p>
+<p></p>
+<p style="text-align: center;"><a href="http://www.jtech.ua.es/j2ee/restringido/cw/sesion03-apuntes.html">Respuesta a una petición HTTP</a>.</p>
+<p style="text-align: center;"></p>
+<p style="text-align: left;">O visualiza la siguiente presentación:</p>
+<p style="text-align: center;"></p>
+<p style="text-align: center;"><a href="../MP4/PSP05_-4.MP4" title="Acceder a presentación">Estructura de la respuesta a una petición con la orden GET</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id74">
+<div class="iDevice emphasis0">
+<div id="ta74_73" class="block iDevice_content">
+<p>
+Para crear un
+servidor <span lang="en">HTTP</span> o servidor <span lang="en">web</span>,
+el esquema básico a seguir será: 
+</p>
+<ul class="lista_verificacion">
+	<li>
+	Crear
+	un <code>socketServer</code> asociado al puerto 80 (puerto por defecto para el protocolo <span lang="en">HTTP</span>). </li>
+	<li>
+	Esperar peticiones
+	del cliente.
+	</li>
+	<li>
+	Acceptar la
+	petición del cliente. 
+	</li>
+	<li>
+	Procesar petición
+	(intercambio de mensajes según protocolo + transmisión de datos).
+	</li>
+	<li>
+	Cerrar
+<code>socket</code> del
+	cliente. </li>
+</ul>
+<p>
+A
+continuación, vamos a programar un sencillo servidor
+<span lang="en">web</span> que acepte peticiones
+por el puerto 8066 de un cliente que será tu propio navegador <span lang="en">web</span>.
+Según la <span lang="en">URL</span> que incluyas en el navegador, el servidor contestará
+con diferente información. Los casos que vamos a contemplar son los
+siguientes: 
+</p>
+<ul class="lista_verificacion">
+	<li>
+	Al
+	poner en tu navegador <code>http://locahost:8066</code>,
+	te dará la bienvenida. </li>
+	<li>
+	Al
+	poner en tu navegador <code>http://localhost:8066/quijote</code>,
+	mostrará un párrafo de el Quijote. </li>
+	<li>
+	Al
+	poner en tu navegador  una <span lang="en">URL</span> diferente a las anteriores, como por
+	ejemplo <code>http://localhost:8066/a</code>,
+	mostrara un mensaje de error. </li>
+</ul>
+<p>
+Recuerda detener o
+parar el servidor, una vez lo hayas probado, antes de volver
+reiniciarlo.
+</p>
+<p>
+En
+el siguiente enlace dispones del proyecto java completo:
+</p>
+<div class="enlace_centrado">
+ <a class="paquete" href="../ZIP/PSP05_-3.ZIP" title="Descargar el código del proyecto java ejemplo de un servidor HTTP. [zip - 0.02 MB]">Ejemplo de servidor <span lang="en">HTTP</span>.</a> <span class="tamano"> (0.02 MB) </span> 
+</div>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id75">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta75_54" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b75" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b75" class="block iDevice_content">
+<p>
+<strong>
+Señala si la afirmación siguiente es verdadera o falsa:</strong>
+</p>
+<p>
+<strong>
+El método <code>GET</code>  lo utiliza el servidor para enviar información al cliente.</strong>
+</p>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b75"><input type="radio" name="option0b75" id="true0b75" class="exe-radio-option exe-radio-option-0-2-0b75-truefalse" /> Verdadero</label> 
+<label for="false0b75"><input type="radio" name="option0b75" id="false0b75" class="exe-radio-option exe-radio-option-1-2-0b75-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b75" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b75-result" class="wrong">Falso</strong></p>
+La afirmación es falsa, es un método que utiliza el cliente para realizar la petición al servidor.
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id76">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta76_47" class="block iDevice_content">
+<p>
+En
+el siguiente enlace dispones de la información necesaria para
+conocer el funcionamiento del protocolo <span lang="en">HTTP</span>.
+</p>
+<div class="enlace_centrado">
+<a href="http://es.kioskea.net/contents/internet/http.php3" title="Acceder a información sobre protocolo HTTP.">
+Funcionamiento del protocolo <span lang="en">HTTP</span>.</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="5_PROGRA.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_IMPLE.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/51_programacin_de_un_servidor_http.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:42 GMT -->
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/25_los_protocolos_smtp_y_pop3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.5.- Los protocolos SMTP y POP3. | DAM_PSP_05 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_05</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Generación de servicios en red.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li class="current-page-parent"><a href="2_PROTOC.HTM" class="current-page-parent daddy">2.- Protocolos de comunicaciones del nivel de aplicación.</a>
+   <ul>
+      <li><a href="21_COMUN.HTM" class="no-ch">2.1.- Comunicación entre aplicaciones.</a></li>
+      <li><a href="22_CONEX.HTM" class="no-ch">2.2.- Conexión, transmisión y desconexión.</a></li>
+      <li><a href="23_DNS_Y.HTM" class="no-ch">2.3.- DNS y resolución de nombres.</a></li>
+      <li><a href="24_EL_PR.HTM" class="no-ch">2.4.- El protocolo FTP.</a></li>
+      <li id="active"><a href="25_LOS_P.HTM" class="active no-ch">2.5.- Los protocolos SMTP y POP3.</a></li>
+      <li><a href="26_EL_PR.HTM" class="no-ch">2.6.- El protocolo HTTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_BIBLIO.HTM" class="daddy">3.- Bibliotecas de clases y componentes Java.</a>
+   <ul class="other-section">
+      <li><a href="31_OBJET.HTM" class="no-ch">3.1.- Objetos predefinidos.</a></li>
+      <li><a href="32_MTODO.HTM" class="no-ch">3.2.- Métodos y ejemplos de uso de InetAddress.</a></li>
+      <li><a href="33_PROGR.HTM" class="no-ch">3.3.- Programación con URL.</a></li>
+      <li><a href="34_CREAR.HTM" class="no-ch">3.4.- Crear y analizar objetos URL.</a></li>
+      <li><a href="35_LEER_.HTM" class="no-ch">3.5.- Leer y escribir a través de una URLConnection.</a></li>
+      <li><a href="36_TRABA.HTM" class="no-ch">3.6.- Trabajar con el contenido de una URL.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_PROGRA.HTM" class="daddy">4.- Programación de aplicaciones cliente.</a>
+   <ul class="other-section">
+      <li><a href="41_PROGR.HTM" class="no-ch">4.1.- Programación de un cliente HTTP.</a></li>
+      <li><a href="42_BIBLI.HTM" class="no-ch">4.2.- Bibliotecas para programar un cliente FTP.</a></li>
+      <li><a href="43_PROGR.HTM" class="no-ch">4.3.- Programación de un cliente FTP.</a></li>
+      <li><a href="44_PROGR.HTM" class="no-ch">4.4.- Programación de un cliente Telnet.</a></li>
+      <li><a href="45_PROGR.HTM" class="no-ch">4.5.- Programación de un cliente SMTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_PROGRA.HTM" class="daddy">5.- Programación de servidores.</a>
+   <ul class="other-section">
+      <li><a href="51_PROGR.HTM" class="no-ch">5.1.- Programación de un servidor HTTP.</a></li>
+      <li><a href="52_IMPLE.HTM" class="no-ch">5.2.- Implementar comunicaciones simultáneas.</a></li>
+      <li><a href="53_MONIT.HTM" class="no-ch">5.3.- Monitorización de tiempos de respuesta.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo de monitorización del tiempo de transmisión.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="24_EL_PR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="26_EL_PR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.5.- Los protocolos SMTP y POP3.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id23">
+<div class="iDevice emphasis0">
+<div id="ta23_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a href="../PNG/PSP05-11.PNG" title="Ampliar imagen."><img alt="Dibujo que representa el funcionamiento del protocolo smtp. Dos rectángulos representan los servidores de emisor y destinatario. Dos rectángulos huecos, representan los clientes, agente emisor y receptor. Entre agente emisor y servidor de emisor, y entre servidor de emisor y servidor del destinatario la palabra SMTP.  Entre servidor destinatario y agente receptor las palabras POP3 o IMAP." class="imagen_ampliable" src="../PNG/PSP05-12.PNG" style="width: 160px; height: 193px;" title="SMTP." width="160" height="193" /></a></div>
+<div class="elemento_centrado credenciales">Esquema protocolos SMTP.</div>
+</div>
+<p>El <strong>correo electrónico es un servicio que permite a los usuarios enviar y recibir mensajes y archivos rápidamente a través de la red</strong>.</p>
+<ul class="lista_verificacion">
+<li>Principalmente se usa este nombre para denominar al sistema que provee este servicio en Internet, mediante el protocolo <span lang="en">SMTP</span> o Protocolo Simple de Transferencia de Correo, aunque por extensión también puede verse aplicado a sistemas análogos que usen otras tecnologías.</li>
+<li>Por medio de mensajes de correo electrónico se puede enviar, no solamente texto, sino todo tipo de documentos digitales.</li>
+</ul>
+<p>El servicio de correo basado en el protocolo <span lang="en">SMTP</span> sigue el modelo cliente/servidor, por lo que el trabajo se distribuye entre el programa Servidor y el Cliente. Te indicamos a continuación, <strong>algunas consideraciones importantes sobre el servicio de correo a través de <span lang="en">SMTP</span></strong>:</p>
+<ul class="lista_verificacion">
+<li>El servidor mantiene las cuentas de los usuarios así como los buzones correspondientes.</li>
+<li>Los clientes de correo gestionan la descarga de mensajes así como su elaboración.</li>
+<li>El servicio <span lang="en">SMTP</span> utiliza el puerto 25.</li>
+<li>El protocolo <span lang="en">SMTP</span> se encarga del transporte del correo saliente desde la máquina del usuario remitente hasta el servidor que almacene los mensajes de los destinatarios.
+<ul>
+<li>El usuario remitente redacta su mensaje y lo envía hacia su servidor de correo.</li>
+<li>Desde allí se reenvía al servidor del destinatario, quién lo descarga del buzón en la máquina local mediante el protocolo <span lang="en">POP</span>3, o la consulta vía web, haciendo uso del protocolo <acronym title="Internet Message Access Protocol." lang="en">IMAP</acronym>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>¿Cómo funciona <span lang="en">SMTP</span> y qué mensajes intercambian cliente y servidor?</strong> En el siguiente enlace dispones de una explicación del funcionamiento del protocolo <span lang="en">SMTP</span> en líneas generales (Resumen simple de funcionamiento):</p>
+<div class="enlace_centrado"><a href="http://es.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol#Funcionamiento" title="Acceder a explicación del funcionamiento del protocolo SMTP."> Funcionamiento del protocolo <span lang="en">SMTP</span>.</a></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id24">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta24_47" class="block iDevice_content">
+<p>
+Si quieres profundizar
+sobre el protocolo <span lang="en">POP</span>3, consulta el siguiente enlace:
+</p>
+<div class="enlace_centrado">
+<a href="http://es.wikipedia.org/wiki/Post_Office_Protocol" title="Acceder a información sobre el protocolo POP3.">
+Protocolo <span lang="en">POP</span>3.</a>
+</div>
+<p>
+En
+este otro enlace descubrirás las ventajas de <span lang="en">IMAP</span> sobre <span lang="en">POP</span>3:
+</p>
+<div class="enlace_centrado">
+<a href="http://es.wikipedia.org/wiki/Internet_Message_Access_Protocol" title="Acceder a información sobre protocolo IMAP y ventajas sobre POP3.">
+Protocolo <span lang="en">IMAP</span>.</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="24_EL_PR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="26_EL_PR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/25_los_protocolos_smtp_y_pop3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:22 GMT -->
+</html>

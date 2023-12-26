@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/53_monitorizacin_de_tiempos_de_respuesta.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.3.- Monitorización de tiempos de respuesta. | DAM_PSP_05 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-25"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_05</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Generación de servicios en red.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_PROTOC.HTM" class="daddy">2.- Protocolos de comunicaciones del nivel de aplicación.</a>
+   <ul class="other-section">
+      <li><a href="21_COMUN.HTM" class="no-ch">2.1.- Comunicación entre aplicaciones.</a></li>
+      <li><a href="22_CONEX.HTM" class="no-ch">2.2.- Conexión, transmisión y desconexión.</a></li>
+      <li><a href="23_DNS_Y.HTM" class="no-ch">2.3.- DNS y resolución de nombres.</a></li>
+      <li><a href="24_EL_PR.HTM" class="no-ch">2.4.- El protocolo FTP.</a></li>
+      <li><a href="25_LOS_P.HTM" class="no-ch">2.5.- Los protocolos SMTP y POP3.</a></li>
+      <li><a href="26_EL_PR.HTM" class="no-ch">2.6.- El protocolo HTTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_BIBLIO.HTM" class="daddy">3.- Bibliotecas de clases y componentes Java.</a>
+   <ul class="other-section">
+      <li><a href="31_OBJET.HTM" class="no-ch">3.1.- Objetos predefinidos.</a></li>
+      <li><a href="32_MTODO.HTM" class="no-ch">3.2.- Métodos y ejemplos de uso de InetAddress.</a></li>
+      <li><a href="33_PROGR.HTM" class="no-ch">3.3.- Programación con URL.</a></li>
+      <li><a href="34_CREAR.HTM" class="no-ch">3.4.- Crear y analizar objetos URL.</a></li>
+      <li><a href="35_LEER_.HTM" class="no-ch">3.5.- Leer y escribir a través de una URLConnection.</a></li>
+      <li><a href="36_TRABA.HTM" class="no-ch">3.6.- Trabajar con el contenido de una URL.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_PROGRA.HTM" class="daddy">4.- Programación de aplicaciones cliente.</a>
+   <ul class="other-section">
+      <li><a href="41_PROGR.HTM" class="no-ch">4.1.- Programación de un cliente HTTP.</a></li>
+      <li><a href="42_BIBLI.HTM" class="no-ch">4.2.- Bibliotecas para programar un cliente FTP.</a></li>
+      <li><a href="43_PROGR.HTM" class="no-ch">4.3.- Programación de un cliente FTP.</a></li>
+      <li><a href="44_PROGR.HTM" class="no-ch">4.4.- Programación de un cliente Telnet.</a></li>
+      <li><a href="45_PROGR.HTM" class="no-ch">4.5.- Programación de un cliente SMTP.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_PROGRA.HTM" class="current-page-parent daddy">5.- Programación de servidores.</a>
+   <ul>
+      <li><a href="51_PROGR.HTM" class="no-ch">5.1.- Programación de un servidor HTTP.</a></li>
+      <li><a href="52_IMPLE.HTM" class="no-ch">5.2.- Implementar comunicaciones simultáneas.</a></li>
+      <li id="active"><a href="53_MONIT.HTM" class="active no-ch">5.3.- Monitorización de tiempos de respuesta.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo de monitorización del tiempo de transmisión.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="52_IMPLE.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="54_EJEMP.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.3.- Monitorización de tiempos de respuesta.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id79">
+<div class="iDevice emphasis0">
+<div id="ta79_73" class="block iDevice_content">
+<img alt="Foto en la que se ve en primer plano la esquina superior izquierda de la esfera de un reloj con números romanos." class="elemento_derecha" height="132" src="../JPG/PSP05-21.JPG" style="width: 196px; height: 132px" title="Reloj." width="196" />
+<p>
+Una
+cuestión muy importante para evaluar el rendimiento y
+comportamiento de una aplicación cliente/servidor es monitorizar los
+tiempos de respuesta del servidor. Los tiempos que intervienen desde
+que un cliente realiza una petición al servidor hasta que recibe su
+resultado son dos:
+</p>
+<ul class="lista_verificacion">
+	<li>
+	<strong>Tiempo
+	de procesamiento</strong>. Es el tiempo que el servidor necesita para
+	procesar la petición del cliente y enviar los datos.
+	</li>
+	<li>
+	<strong>Tiempo
+	de transmisión</strong>. Es el tiempo que tardan los mensajes en llegar
+	a su destino a través de la red.
+	</li>
+</ul>
+<p>
+¿Cómo
+podemos medir esos tiempos?
+</p>
+<p>
+Para
+<strong>medir el tiempo de procesamiento</strong> bastar medir el tiempo que
+transcurre en el servidor para procesar la solicitud del cliente. Por
+ejemplo, el siguiente código permite medir ese tiempo en
+milisegundos:
+</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<a href="../JPG/PSP05-22.JPG" title="Ampliar imagen."><img alt="Código java para evaluar el tiempo de proceso de un servidor." class="imagen_ampliable" height="48" src="../JPG/PSP05-23.JPG" style="width: 200px; height: 48px" title="Tiempo proceso." width="200" /></a>
+</div>
+</div>
+<div class="enlace_centrado">
+<a class="hcalculo" href="../TXT/PSP05_-2.TXT" title="Descargar el código Java ejemplo medir tiempo de procesamiento. [txt - 0.01 MB]">Código <span lang="en">Java</span> ejemplo para medir tiempo de procesamiento.</a> <span class="tamano"> (0.01 MB) </span> 
+</div>
+<p>
+Para
+<strong>medir el tiempo de transmisión</strong> será necesario que el
+servidor envíe un mensaje con el tiempo del sistema al cliente. El
+cliente al recibir el mensaje debe calcular su tiempo de sistema y
+compararlo con el tiempo  recibido en el mensaje.<br />
+</p>
+<p>
+Para
+poder comparar los tiempos de respuesta de dos equipos es
+imprescindible que sus relojes de sistema estén sincronizados a
+través de cualquier servicio de tiempo (<acronym lang="en" title="Network Time Protocol.">NTP</acronym>).
+En equipos Windows por ejemplo, la sincronización de los relojes se
+realiza automáticamente. 
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id80">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-80_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion80_60" class="block question iDevice_content">
+<strong>Señala la opción correcta. Para monitoriza r el tiempo de respuesta del servidor:</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i80_63" class="sr-av"><a href="#answer-80_63">Opción 1</a></label><input type="radio" name="option80_60" id="i80_63" class="exe-radio-option exe-radio-option-0-4-80_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-80_63"><div id="taans80_63" class="block iDevice_content">
+Basta con controlar el tiempo de proceso del servidor.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i80_103" class="sr-av"><a href="#answer-80_103">Opción 2</a></label><input type="radio" name="option80_60" id="i80_103" class="exe-radio-option exe-radio-option-1-4-80_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-80_103"><div id="taans80_103" class="block iDevice_content">
+Solo interesa realizar esta tarea si hay sobrecarga.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i80_106" class="sr-av"><a href="#answer-80_106">Opción 3</a></label><input type="radio" name="option80_60" id="i80_106" class="exe-radio-option exe-radio-option-2-4-80_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-80_106"><div id="taans80_106" class="block iDevice_content">
+Solo depende del tiempo de transmisión.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i80_109" class="sr-av"><a href="#answer-80_109">Opción 4</a></label><input type="radio" name="option80_60" id="i80_109" class="exe-radio-option exe-radio-option-3-4-80_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-80_109"><div id="taans80_109" class="block iDevice_content">
+Se debe tener en cuenta el tiempo de proceso del servidor y el tiempo de transmisión.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b80_60" class="feedback js-hidden">
+<div id="taf80_63" class=" iDevice_content">
+No es correcto, prueba de nuevo.
+
+</div>
+</section>
+<section id="sa1b80_60" class="feedback js-hidden">
+<div id="taf80_103" class=" iDevice_content">
+Incorrecto, deberías haber leído mejor.
+
+</div>
+</section>
+<section id="sa2b80_60" class="feedback js-hidden">
+<div id="taf80_106" class=" iDevice_content">
+No es cierto, debes prestar más atención.
+
+</div>
+</section>
+<section id="sa3b80_60" class="feedback js-hidden">
+<div id="taf80_109" class=" iDevice_content">
+Muy bien, vamos por buen camino.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-80_63">Incorrecto</a><span> (<a href="#sa0b80_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-80_103">Incorrecto</a><span> (<a href="#sa1b80_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-80_106">Incorrecto</a><span> (<a href="#sa2b80_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-80_109">Opción correcta</a><span> (<a href="#sa3b80_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id81">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta81_47" class="block iDevice_content">
+<p>
+Consulta el siguiente
+enlace para obtener más información sobre el servicio <span lang="en">NTP</span>.
+</p>
+<div class="enlace_centrado">
+<a href="http://es.wikipedia.org/wiki/Network_Time_Protocol" title="Acceder a información sobre el servicio NTP.">
+El servicio <span lang="en">NTP</span>.</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="52_IMPLE.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="54_EJEMP.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/53_monitorizacin_de_tiempos_de_respuesta.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:45 GMT -->
+</html>

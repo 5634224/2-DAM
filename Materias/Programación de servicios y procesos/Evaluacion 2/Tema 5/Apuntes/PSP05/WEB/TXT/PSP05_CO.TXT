@@ -1,0 +1,13 @@
+ URL url = new URL("http://ftp.rediris.es/debian/README.mirrors.txt");
+      //conecta a esa URL
+      url.openConnection();
+      //Asocia un flujo de entrada a la conexión URL
+      InputStream flujoIn = url.openStream();
+      //Crea flujo de salida asociado a destino
+      FileOutputStream flujoOutFile = new FileOutputStream("C://fichero.txt");
+     //mientras hay bytes
+      while ((BytesLeidos = flujoIn.read(buffer)) > 0) {
+        //almacena lo que lee en el buffer
+        flujoOutFile.write(buffer, 0, BytesLeidos);
+        totalBytesLeidos += BytesLeidos;
+      }

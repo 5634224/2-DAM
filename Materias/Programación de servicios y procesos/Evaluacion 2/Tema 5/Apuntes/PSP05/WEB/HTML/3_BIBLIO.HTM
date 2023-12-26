@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/3_bibliotecas_de_clases_y_componentes_java.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.- Bibliotecas de clases y componentes Java. | DAM_PSP_05 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_05</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Generación de servicios en red.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_PROTOC.HTM" class="daddy">2.- Protocolos de comunicaciones del nivel de aplicación.</a>
+   <ul class="other-section">
+      <li><a href="21_COMUN.HTM" class="no-ch">2.1.- Comunicación entre aplicaciones.</a></li>
+      <li><a href="22_CONEX.HTM" class="no-ch">2.2.- Conexión, transmisión y desconexión.</a></li>
+      <li><a href="23_DNS_Y.HTM" class="no-ch">2.3.- DNS y resolución de nombres.</a></li>
+      <li><a href="24_EL_PR.HTM" class="no-ch">2.4.- El protocolo FTP.</a></li>
+      <li><a href="25_LOS_P.HTM" class="no-ch">2.5.- Los protocolos SMTP y POP3.</a></li>
+      <li><a href="26_EL_PR.HTM" class="no-ch">2.6.- El protocolo HTTP.</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="3_BIBLIO.HTM" class="active daddy">3.- Bibliotecas de clases y componentes Java.</a>
+   <ul>
+      <li><a href="31_OBJET.HTM" class="no-ch">3.1.- Objetos predefinidos.</a></li>
+      <li><a href="32_MTODO.HTM" class="no-ch">3.2.- Métodos y ejemplos de uso de InetAddress.</a></li>
+      <li><a href="33_PROGR.HTM" class="no-ch">3.3.- Programación con URL.</a></li>
+      <li><a href="34_CREAR.HTM" class="no-ch">3.4.- Crear y analizar objetos URL.</a></li>
+      <li><a href="35_LEER_.HTM" class="no-ch">3.5.- Leer y escribir a través de una URLConnection.</a></li>
+      <li><a href="36_TRABA.HTM" class="no-ch">3.6.- Trabajar con el contenido de una URL.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_PROGRA.HTM" class="daddy">4.- Programación de aplicaciones cliente.</a>
+   <ul class="other-section">
+      <li><a href="41_PROGR.HTM" class="no-ch">4.1.- Programación de un cliente HTTP.</a></li>
+      <li><a href="42_BIBLI.HTM" class="no-ch">4.2.- Bibliotecas para programar un cliente FTP.</a></li>
+      <li><a href="43_PROGR.HTM" class="no-ch">4.3.- Programación de un cliente FTP.</a></li>
+      <li><a href="44_PROGR.HTM" class="no-ch">4.4.- Programación de un cliente Telnet.</a></li>
+      <li><a href="45_PROGR.HTM" class="no-ch">4.5.- Programación de un cliente SMTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_PROGRA.HTM" class="daddy">5.- Programación de servidores.</a>
+   <ul class="other-section">
+      <li><a href="51_PROGR.HTM" class="no-ch">5.1.- Programación de un servidor HTTP.</a></li>
+      <li><a href="52_IMPLE.HTM" class="no-ch">5.2.- Implementar comunicaciones simultáneas.</a></li>
+      <li><a href="53_MONIT.HTM" class="no-ch">5.3.- Monitorización de tiempos de respuesta.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo de monitorización del tiempo de transmisión.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="26_EL_PR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="31_OBJET.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.- Bibliotecas de clases y componentes Java.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id28">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_CAS.PNG)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta28_66" class="block iDevice_content">
+<img alt="Foto de Ana de pié en diagonal, mirando al frente y con manos cogidas." class="elemento_derecha" height="132" src="../JPG/EIN_PPAA.JPG" style="width: 196px; height: 132px" title="Foto de Ana en diagonal." width="196" />
+<p>
+<strong>Ana</strong> le dice a <strong>Juan</strong>, -ahora
+tenemos que ver qué clases  nos proporciona <span lang="en">Java</span> para implementar
+servicios y clientes en red ¿Habrá alguna otra además de
+<code>java.net</code>?. 
+</p>
+<p>
+<strong>Juan</strong> le contesta, -la
+biblioteca <code>java.net</code> es muy extensa y es
+la que proporciona prácticamente todas las funcionalidades de
+programación en red. Vamos a  estudiarla a fondo y ver qué clases
+nos pueden servir para nuestra aplicación.
+</p>
+<p>
+<strong>Ana </strong>dice, -me
+parece perfecto. ¿Empezamos?
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id29">
+<div class="iDevice emphasis0">
+<div id="ta29_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado">
+<a href="../JPG/PSP05_-6.JPG" title="Ampliar imagen."><img alt="Foto de una captura de pantalla donde se ve una inatalación de la aplicación Java." class="imagen_ampliable" height="152" src="../JPG/PSP05_-7.JPG" style="width: 200px; height: 152px" title="Java." width="200" /></a>
+</div>
+</div>
+<p>
+<span lang="en">Java</span> se ha construido con extensas capacidades de interconexión <span lang="en">TCP/IP</span> y
+soporta diferentes niveles de conectividad en red, facilitando la
+creación de aplicaciones cliente/servidor y generación de servicios
+en red. Así por ejemplo: permite abrir una <span lang="en">URL</span>
+como por ejemplo <code>http://www.dominio.es/public/archivo.pdf</code>,
+permite
+realizar una invocación de métodos remotos, <acronym lang="en" title="Remote Method Invocation. Invocación remota de métodos.">RMI</acronym>,
+o permite trabajar con <span lang="en">sockets</span>.
+</p>
+<p>
+<strong>El
+paquete principal que proporciona el <span lang="en">API</span> de <span lang="en">Java</span> para programar aplicaciones con comunicaciones en red es:</strong>
+</p>
+<ul>
+	<li class="lista_verificacion">
+<code>java.net</code>.
+	Este
+	paquete soporta clases para generar diferentes
+	servicios de red, servidores y clientes.
+	</li>
+</ul>
+<p>
+<strong>Otros
+paquetes <span lang="en">Java</span> para comunicaciones y servicios en red son:</strong>:
+</p>
+<ul class="lista_verificacion">
+	<li>
+<code>java.rmi</code>.
+	Paquete que permite implementar una interface de control remoto
+	(<span lang="en">RMI</span>). 
+	</li>
+	<li>
+<code>javax.mail</code>.
+	Permite implementar sistemas de correo electrónico.
+	</li>
+</ul>
+<p>
+Para
+ciertos servicios estándar, <span lang="en">Java</span> no proporciona objetos predefinidos
+y por tanto una solución fácil para generarlos es recurrir a
+bibliotecas externas, como por ejemplo, el <span lang="en">API</span>
+proporcionado
+por <span lang="en">Apache Commons Net</span>
+(las bibliotecas <code>org.apache.commons.net</code>).
+Esta <span lang="en">API</span> permite implementar aplicaciones cliente para los protocolos
+estándar más populares, como: <span lang="en">Telnet</span>, <span lang="en">FTP</span>, o <span lang="en">FTP</span> sobre <span lang="en">HTTP</span> entre
+otros.
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id30">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta30_47" class="block iDevice_content">
+<p>En el siguiente enlace puedes consultar todas las funcionalidades que ofrece el <span lang="en">API</span> <span lang="en">Apache Commons Net</span>.</p>
+<div class="enlace_centrado"><a href="http://commons.apache.org/net/" title="Acceder a información sobre a las bibliotecas de Apache Commons Net."> Bibliotecas de <span lang="en">Apache Commons Net</span>.</a></div>
+<p><a href="http://commons.apache.org/net/" title="Acceder a información sobre a las bibliotecas de Apache Commons Net."></a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="26_EL_PR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="31_OBJET.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/3_bibliotecas_de_clases_y_componentes_java.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:23 GMT -->
+</html>

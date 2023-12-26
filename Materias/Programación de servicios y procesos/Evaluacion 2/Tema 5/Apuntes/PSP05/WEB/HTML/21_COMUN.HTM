@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/21_comunicacin_entre_aplicaciones.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.- Comunicación entre aplicaciones. | DAM_PSP_05 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-6"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_05</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Generación de servicios en red.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li class="current-page-parent"><a href="2_PROTOC.HTM" class="current-page-parent daddy">2.- Protocolos de comunicaciones del nivel de aplicación.</a>
+   <ul>
+      <li id="active"><a href="21_COMUN.HTM" class="active no-ch">2.1.- Comunicación entre aplicaciones.</a></li>
+      <li><a href="22_CONEX.HTM" class="no-ch">2.2.- Conexión, transmisión y desconexión.</a></li>
+      <li><a href="23_DNS_Y.HTM" class="no-ch">2.3.- DNS y resolución de nombres.</a></li>
+      <li><a href="24_EL_PR.HTM" class="no-ch">2.4.- El protocolo FTP.</a></li>
+      <li><a href="25_LOS_P.HTM" class="no-ch">2.5.- Los protocolos SMTP y POP3.</a></li>
+      <li><a href="26_EL_PR.HTM" class="no-ch">2.6.- El protocolo HTTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_BIBLIO.HTM" class="daddy">3.- Bibliotecas de clases y componentes Java.</a>
+   <ul class="other-section">
+      <li><a href="31_OBJET.HTM" class="no-ch">3.1.- Objetos predefinidos.</a></li>
+      <li><a href="32_MTODO.HTM" class="no-ch">3.2.- Métodos y ejemplos de uso de InetAddress.</a></li>
+      <li><a href="33_PROGR.HTM" class="no-ch">3.3.- Programación con URL.</a></li>
+      <li><a href="34_CREAR.HTM" class="no-ch">3.4.- Crear y analizar objetos URL.</a></li>
+      <li><a href="35_LEER_.HTM" class="no-ch">3.5.- Leer y escribir a través de una URLConnection.</a></li>
+      <li><a href="36_TRABA.HTM" class="no-ch">3.6.- Trabajar con el contenido de una URL.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_PROGRA.HTM" class="daddy">4.- Programación de aplicaciones cliente.</a>
+   <ul class="other-section">
+      <li><a href="41_PROGR.HTM" class="no-ch">4.1.- Programación de un cliente HTTP.</a></li>
+      <li><a href="42_BIBLI.HTM" class="no-ch">4.2.- Bibliotecas para programar un cliente FTP.</a></li>
+      <li><a href="43_PROGR.HTM" class="no-ch">4.3.- Programación de un cliente FTP.</a></li>
+      <li><a href="44_PROGR.HTM" class="no-ch">4.4.- Programación de un cliente Telnet.</a></li>
+      <li><a href="45_PROGR.HTM" class="no-ch">4.5.- Programación de un cliente SMTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_PROGRA.HTM" class="daddy">5.- Programación de servidores.</a>
+   <ul class="other-section">
+      <li><a href="51_PROGR.HTM" class="no-ch">5.1.- Programación de un servidor HTTP.</a></li>
+      <li><a href="52_IMPLE.HTM" class="no-ch">5.2.- Implementar comunicaciones simultáneas.</a></li>
+      <li><a href="53_MONIT.HTM" class="no-ch">5.3.- Monitorización de tiempos de respuesta.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo de monitorización del tiempo de transmisión.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="2_PROTOC.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_CONEX.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1.- Comunicación entre aplicaciones.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id10">
+<div class="iDevice emphasis0">
+<div id="ta10_73" class="block iDevice_content">
+<p><span lang="en">TCP/IP</span> funciona sobre el concepto del modelo cliente/servidor, donde, como recordarás de unidades anteriores:</p>
+<ul class="lista_verificacion">
+<li><strong>El Cliente </strong>es el programa que ejecuta el usuario y solicita un servicio al servidor. Es quien inicia la comunicación.</li>
+<li><strong>El Servidor </strong>es el programa que se ejecuta en una máquina (o varias) de red y ofrece un servicio (<span lang="en">FTP</span>, <span lang="en">web</span>, <span lang="en">SMTP</span>, <abbr title="Etcétera.">etc</abbr>.) a uno o múltiples clientes. Este proceso permanece a la espera de peticiones, las acepta y como respuesta, proporciona el servicio solicitado.</li>
+</ul>
+<p><strong>La capa de aplicación es el nivel que utilizan los programas para comunicarse a través de una red con otros programas</strong>. Los procesos que aparecen en esta capa, son aplicaciones específicas que pasan los datos al nivel de aplicación en el formato que internamente use el programa, y es codificado de acuerdo con un protocolo estándar. Una vez que los datos de la aplicación han sido codificados, en un protocolo estándar del nivel de aplicación, se pasan hacia abajo al siguiente nivel de la pila de protocolos <span lang="en">TCP/IP</span>.</p>
+<p>En el nivel de transporte, las aplicaciones normalmente hacen uso de <span lang="en">TCP</span> y <acronym title="User Datagram Protocol." lang="en">UDP</acronym>, y son habitualmente asociados a un número de puerto. Por ejemplo, el servicio web mediante <span lang="en">HTTP</span> utiliza por defecto el puerto 80, el servicio <span lang="en">FTP</span> el puerto 21, etc.</p>
+<p>Por ejemplo, la <span lang="en">World Wide Web</span> o <span lang="en">Web</span>, que usa el protocolo <span lang="en">HTTP</span>, sigue fielmente el modelo cliente/servidor:</p>
+<ul class="lista_verificacion">
+<li>Los clientes son las aplicaciones que permiten consultar las páginas <span lang="en">web</span> (navegadores) y los servidores, las aplicaciones que suministran (sirven) páginas <span lang="en">web</span>.</li>
+<li>Cuando un usuario introduce una dirección web en el navegador (una <acronym title="Uniform Resource Locator." lang="en">URL</acronym>), por ejemplo <code>http://www.dominio.es</code>, éste solicita mediante el protocolo <span lang="en">HTTP</span> la página web al servidor web que se ejecuta en la máquina donde está la página.</li>
+<li>El servidor web envía la página por Internet al cliente (navegador) que la solicitó, y éste último la muestra al usuario.</li>
+</ul>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="../PNG/PSP05_-5.PNG" title="Ampliar imagen."><img alt="Dibujo que muestra dos equipos comunicándose por Internet, uno ejecuta el servidor web y otro el cliente http. Se dibuja la petición del cliente y la respuesta del servidor, mediante el texto de un posible diálogo según el protocolo http." class="imagen_ampliable" src="../PNG/PSP05_-6.PNG" style="width: 177px; height: 160px;" title="Comunicación HTTP." width="177" height="160" /></a></div>
+<div class="elemento_centrado credenciales">Diálogo entre cliente y servidor <span lang="en">HTTP</span>.</div>
+</div>
+<p></p>
+<p><strong>Los dos extremos dialogan siguiendo un protocolo de aplicación</strong>, tal y como puedes ver en la imagen que representa el ejemplo anterior.</p>
+<ul class="lista_verificacion">
+<li>El cliente solicita el recurso <span lang="en">web</span> <code>www.dominio.es</code> mediante <code>GET
+	HTTP/1.0</code></li>
+<li>El servidor le contesta <code>HTTP/1.0
+	200 OK</code> (todo correcto) y le envía la página <acronym title="HyperText Markup Language." lang="en">html</acronym> solicitada.</li>
+</ul>
+<p>Más adelante veremos varios ejemplos de cómo implementar un servicio <span lang="en">web</span> básico.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id11">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta11_47" class="block iDevice_content">
+<p>
+En
+el siguiente enlace dispones de un relación detallada de números de
+puerto y servicios que por defecto se le asocian, así como el
+protocolo de nivel de transporte que utilizan.
+</p>
+<div class="enlace_centrado">
+<a href="http://es.wikipedia.org/wiki/Anexo:Números_de_puerto" title="Acceder a información sobre servicios y puertos asociados.">
+Servicios y puertos asociados.</a>
+</div>
+<p>
+Los
+<acronym lang="en" title="Request For Comments.">RFC</acronym>
+(<span lang="en">Request For Comments</span>)
+documentan los protocolos de aplicación estándar. En el siguiente
+enlace puedes consultar los <span lang="en">RFC</span>.
+</p>
+<div class="enlace_centrado">
+<a href="http://www.rfc-editor.org/" title="Acceder a la documentación RFC.">
+Documentación <span lang="en">RFC</span>.</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="2_PROTOC.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="22_CONEX.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/21_comunicacin_entre_aplicaciones.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:19 GMT -->
+</html>
