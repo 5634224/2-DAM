@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/34_crear_y_analizar_objetos_url.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.4.- Crear y analizar objetos URL. | DAM_PSP_05 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-15"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_05</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Generación de servicios en red.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_PROTOC.HTM" class="daddy">2.- Protocolos de comunicaciones del nivel de aplicación.</a>
+   <ul class="other-section">
+      <li><a href="21_COMUN.HTM" class="no-ch">2.1.- Comunicación entre aplicaciones.</a></li>
+      <li><a href="22_CONEX.HTM" class="no-ch">2.2.- Conexión, transmisión y desconexión.</a></li>
+      <li><a href="23_DNS_Y.HTM" class="no-ch">2.3.- DNS y resolución de nombres.</a></li>
+      <li><a href="24_EL_PR.HTM" class="no-ch">2.4.- El protocolo FTP.</a></li>
+      <li><a href="25_LOS_P.HTM" class="no-ch">2.5.- Los protocolos SMTP y POP3.</a></li>
+      <li><a href="26_EL_PR.HTM" class="no-ch">2.6.- El protocolo HTTP.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_BIBLIO.HTM" class="current-page-parent daddy">3.- Bibliotecas de clases y componentes Java.</a>
+   <ul>
+      <li><a href="31_OBJET.HTM" class="no-ch">3.1.- Objetos predefinidos.</a></li>
+      <li><a href="32_MTODO.HTM" class="no-ch">3.2.- Métodos y ejemplos de uso de InetAddress.</a></li>
+      <li><a href="33_PROGR.HTM" class="no-ch">3.3.- Programación con URL.</a></li>
+      <li id="active"><a href="34_CREAR.HTM" class="active no-ch">3.4.- Crear y analizar objetos URL.</a></li>
+      <li><a href="35_LEER_.HTM" class="no-ch">3.5.- Leer y escribir a través de una URLConnection.</a></li>
+      <li><a href="36_TRABA.HTM" class="no-ch">3.6.- Trabajar con el contenido de una URL.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_PROGRA.HTM" class="daddy">4.- Programación de aplicaciones cliente.</a>
+   <ul class="other-section">
+      <li><a href="41_PROGR.HTM" class="no-ch">4.1.- Programación de un cliente HTTP.</a></li>
+      <li><a href="42_BIBLI.HTM" class="no-ch">4.2.- Bibliotecas para programar un cliente FTP.</a></li>
+      <li><a href="43_PROGR.HTM" class="no-ch">4.3.- Programación de un cliente FTP.</a></li>
+      <li><a href="44_PROGR.HTM" class="no-ch">4.4.- Programación de un cliente Telnet.</a></li>
+      <li><a href="45_PROGR.HTM" class="no-ch">4.5.- Programación de un cliente SMTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_PROGRA.HTM" class="daddy">5.- Programación de servidores.</a>
+   <ul class="other-section">
+      <li><a href="51_PROGR.HTM" class="no-ch">5.1.- Programación de un servidor HTTP.</a></li>
+      <li><a href="52_IMPLE.HTM" class="no-ch">5.2.- Implementar comunicaciones simultáneas.</a></li>
+      <li><a href="53_MONIT.HTM" class="no-ch">5.3.- Monitorización de tiempos de respuesta.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo de monitorización del tiempo de transmisión.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="33_PROGR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_LEER_.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.4.- Crear y analizar objetos URL.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id42">
+<div class="iDevice emphasis0">
+<div id="ta42_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"><a href="../JPG/PSP05_-9.JPG" title="Ampliar imagen."><img alt="Rótulo con la palabra web 2.0." class="imagen_ampliable" src="../JPG/PSP05-10.JPG" style="width: 200px; height: 88px;" title="Web 2.0." width="200" height="88" /></a></div>
+</div>
+<p><strong> ¿Cómo podemos crear objetos <span lang="en">URL</span>?</strong> La clase <code>URL</code> dispone de diversos constructores para crear objetos tipo <span lang="en">URL</span> que se diferencian en la forma de pasarle la dirección <span lang="en">URL</span>. Por ejemplo, se puede crear un objeto <code>URL</code>:</p>
+<ul class="lista_verificacion">
+<li>A partir de todos o algunos de los elementos que forman parte de una URL, como por ejemplo:
+<p><code>
+	URL
+	url=new URL("http", "www.iesalandalus.org",80","index.htm")</code>. Crea un objeto <code>URL</code> a partir de los componentes indicados (protocolo, <span lang="en">host</span>, puerto, fichero), esto es, crea la <span lang="en">URL</span>: <code>http://www.iesalandalus.org:80/index.htm</code>.</p>
+</li>
+<li>A partir de la cadena especificada, dejando que el sistema utilice todos los valores por defecto que tiene definidos, como por ejemplo: <code>URL
+	url=new URL("http://www.iesalandalus.org")</code> que crearía la <span lang="en">URL</span> : <code>http://www.iesalandalus.org</code>.</li>
+<li>A partir de una ruta relativa pasada como primer parámetro.</li>
+<li>A partir de las especificaciones indicadas y un manejador del protocolo que conoce cómo comunicarse con el servidor.</li>
+</ul>
+<p>Cada uno de los constructores de <span lang="en">URL</span> puede lanzar una <code>MalformedURLException</code> si los argumentos del constructor son nulos o el protocolo es desconocido. Lo normal, es capturar y manejar esta excepción mediante un bloque <code>try-
+catch</code>.</p>
+<p>En el siguiente enlace dispones de ejemplos que ilustran diferentes formas de crear un objeto <span lang="en">URL</span>.</p>
+<div class="enlace_centrado"><a href="http://www.it.uc3m.es/celeste/docencia/cr/2003/PracticaURL/" title="Acceder a información sobre la clase URL y ejemplos."> La clase <span lang="en">URL</span> y ejemplos.</a></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id43">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta43_70" class="block iDevice_content">
+<p align="justify">
+Las <span lang="en">URL</span>s son objetos de una sola escritura. Lo que significa, que una vez
+que has creado un objeto <span lang="en">URL</span> no se puede cambiar ninguno de sus
+atributos (protocolo, nombre del <span lang="en">host</span>,
+nombre del fichero ni número de puerto).
+</p>
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id44">
+<div class="iDevice emphasis0">
+<div id="ta44_73" class="block iDevice_content">
+<p><strong>Se puede analizar y descomponer una <span lang="en">URL</span></strong> utilizando los siguientes métodos:</p>
+<ul class="lista_verificacion">
+<li><code>
+	getProtocol()</code>. Obtiene el protocolo de la <span lang="en">URL</span>.</li>
+<li><code>
+	getHost()</code>. Obtiene el <span lang="en">host</span> de la <span lang="en">URL</span>.</li>
+<li><code>
+	getPort()</code>. Obtiene el puerto de la <span lang="en">URL</span>, si no se ha especificado obtiene -1.</li>
+<li><code>
+	getDefaultPort()</code>. Obtiene el puerto por defecto asociado a la <span lang="en">URL</span>, si no lo tiene obtiene -1.</li>
+<li><code>
+	getFile()</code>. Obtiene el fichero de la <span lang="en">URL</span> o una cadena vacía si no existe.</li>
+<li><code>
+	getRef()</code>. Obtiene la referencia de la <span lang="en">URL</span> o <code>null</code> si no la tiene.</li>
+</ul>
+<p>En el siguiente enlace puedes ver un ejemplo de cómo analizar o descomponer una <span lang="en">URL</span>.</p>
+<div class="enlace_centrado"><a href="http://chuwiki.chuidiang.org/index.php?title=Extraer_enlaces_de_una_URL_con_Java" title="Acceder a ejemplo sobre analizar una URL."> Analizar una <span lang="en">URL</span>.</a></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id45">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-45_55">
+<form name="multi-select-form-45_55" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion45_55" class="block question iDevice_content">
+<strong>Señala las opciones correctas. Métodos que permiten analizar una <span lang="en">URL</span> son:</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op45_550" class="sr-av"><a href="#answer-45_58">Opción 1</a></label><input type="checkbox" id="op45_550" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-45_58"><div id="taans45_58" class="block iDevice_content">
+El método <code>getURL()</code> que obtiene cada parte de la <span lang="en">URL</span>.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-45_550" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op45_551" class="sr-av"><a href="#answer-45_103">Opción 2</a></label><input type="checkbox" id="op45_551" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-45_103"><div id="taans45_103" class="block iDevice_content">
+El método <code>getHost()</code> que obtiene el <span lang="en">host</span>.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-45_551" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op45_552" class="sr-av"><a href="#answer-45_105">Opción 3</a></label><input type="checkbox" id="op45_552" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-45_105"><div id="taans45_105" class="block iDevice_content">
+El método <code>URL(“direccion”)</code> que la analiza de forma completa.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-45_552" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op45_553" class="sr-av"><a href="#answer-45_107">Opción 4</a></label><input type="checkbox" id="op45_553" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-45_107"><div id="taans45_107" class="block iDevice_content">
+El método <code>getProtocol()</code> que obtiene el protocolo.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-45_553" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-45_55" /> 
+</p>
+</div>
+<section id="f45_55" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback45_55" class="feedback iDevice_content">
+Efectivamente, esos dos métodos obtienen el elemento indicado de la <span lang="en">URL</span>.
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-45_58" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-45_103" class="right">Correcto</a></li>
+<li><a href="#answer-45_105" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-45_107" class="right">Correcto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="33_PROGR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_LEER_.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/34_crear_y_analizar_objetos_url.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:25 GMT -->
+</html>

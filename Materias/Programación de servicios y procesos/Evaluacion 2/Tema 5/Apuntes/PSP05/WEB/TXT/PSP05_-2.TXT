@@ -1,0 +1,8 @@
+ //anota la lectura del reloj del Sistema antes de inciar el procesamiento
+ long tiempoInicio = System.currentTimeMillis();
+//procesamiento de la petición del cliente 
+
+//anota la lectura del reloj del Sistema al finalizar el procesamiento
+ long tiempoFin= System.currentTimeMillis();
+ long tiempoProceso= tiempoFin - tiempoInicio;
+System.out.println("Tiempo en procesar petición: "+ tiempoProceso);

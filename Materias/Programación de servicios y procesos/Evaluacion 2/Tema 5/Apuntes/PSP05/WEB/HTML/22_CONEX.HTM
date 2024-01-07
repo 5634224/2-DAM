@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/22_conexin_transmisin_y_desconexin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.- Conexión, transmisión y desconexión. | DAM_PSP_05 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_05</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Generación de servicios en red.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li class="current-page-parent"><a href="2_PROTOC.HTM" class="current-page-parent daddy">2.- Protocolos de comunicaciones del nivel de aplicación.</a>
+   <ul>
+      <li><a href="21_COMUN.HTM" class="no-ch">2.1.- Comunicación entre aplicaciones.</a></li>
+      <li id="active"><a href="22_CONEX.HTM" class="active no-ch">2.2.- Conexión, transmisión y desconexión.</a></li>
+      <li><a href="23_DNS_Y.HTM" class="no-ch">2.3.- DNS y resolución de nombres.</a></li>
+      <li><a href="24_EL_PR.HTM" class="no-ch">2.4.- El protocolo FTP.</a></li>
+      <li><a href="25_LOS_P.HTM" class="no-ch">2.5.- Los protocolos SMTP y POP3.</a></li>
+      <li><a href="26_EL_PR.HTM" class="no-ch">2.6.- El protocolo HTTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_BIBLIO.HTM" class="daddy">3.- Bibliotecas de clases y componentes Java.</a>
+   <ul class="other-section">
+      <li><a href="31_OBJET.HTM" class="no-ch">3.1.- Objetos predefinidos.</a></li>
+      <li><a href="32_MTODO.HTM" class="no-ch">3.2.- Métodos y ejemplos de uso de InetAddress.</a></li>
+      <li><a href="33_PROGR.HTM" class="no-ch">3.3.- Programación con URL.</a></li>
+      <li><a href="34_CREAR.HTM" class="no-ch">3.4.- Crear y analizar objetos URL.</a></li>
+      <li><a href="35_LEER_.HTM" class="no-ch">3.5.- Leer y escribir a través de una URLConnection.</a></li>
+      <li><a href="36_TRABA.HTM" class="no-ch">3.6.- Trabajar con el contenido de una URL.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_PROGRA.HTM" class="daddy">4.- Programación de aplicaciones cliente.</a>
+   <ul class="other-section">
+      <li><a href="41_PROGR.HTM" class="no-ch">4.1.- Programación de un cliente HTTP.</a></li>
+      <li><a href="42_BIBLI.HTM" class="no-ch">4.2.- Bibliotecas para programar un cliente FTP.</a></li>
+      <li><a href="43_PROGR.HTM" class="no-ch">4.3.- Programación de un cliente FTP.</a></li>
+      <li><a href="44_PROGR.HTM" class="no-ch">4.4.- Programación de un cliente Telnet.</a></li>
+      <li><a href="45_PROGR.HTM" class="no-ch">4.5.- Programación de un cliente SMTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_PROGRA.HTM" class="daddy">5.- Programación de servidores.</a>
+   <ul class="other-section">
+      <li><a href="51_PROGR.HTM" class="no-ch">5.1.- Programación de un servidor HTTP.</a></li>
+      <li><a href="52_IMPLE.HTM" class="no-ch">5.2.- Implementar comunicaciones simultáneas.</a></li>
+      <li><a href="53_MONIT.HTM" class="no-ch">5.3.- Monitorización de tiempos de respuesta.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo de monitorización del tiempo de transmisión.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_COMUN.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_DNS_Y.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.- Conexión, transmisión y desconexión.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id12">
+<div class="iDevice emphasis0">
+<div id="ta12_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado">
+<a href="../PNG/PSP05_-7.PNG" title="Ampliar imagen."><img alt="Dibujo con  3 reactángulos de colores que simulan las capas de enlace, red y transporte del protocolo TCP/IP. Sobre el último rectángulo, transporte, hay 4 círulos con la palabra socket; y para cada uno de éstos, una línea enlaza con otro círculo conteniendo el nombre de un protocolo de aplicación: FTP, HTTP, Telnet y SMTP." class="imagen_ampliable" height="160" src="../PNG/PSP05_-8.PNG" style="width: 172px; height: 160px" title="Protocolos de aplicación." width="172" /></a>
+</div>
+</div>
+<p>
+<strong>Los</strong>
+<strong>protocolos de
+aplicación se comunican con el nivel de transporte
+mediante un <span lang="en">API</span></strong><strong>, denominada <span lang="en">API</span></strong><strong> <span lang="en">Socket</span></strong><strong>,</strong>
+y que en en el caso de Java viene implementada mediante las clases
+del paquete <code>java.net</code>
+como
+<code>Socket</code>
+y <code>ServerSocket</code>.
+</p>
+<p>
+Como
+recordarás, un <span lang="en">socket</span> <span lang="en">Java</span> es la representación de una conexión para la transmisión de
+información entre dos ordenadores distintos o entre un ordenador y
+él mismo. Esta abstracción de medio nivel, permite despreocuparse
+de lo que está pasando en capas inferiores.
+</p>
+<p>
+Dentro de
+una red, un <span lang="en">socket</span>
+es único pues viene caracterizado por cinco  
+parámetros: el protocolo usado (<span lang="en">HTTP</span>, <span lang="en">FTP</span>, etc.), dos direcciones <span lang="en">IP</span>
+(la del equipo local o donde reside el proceso cliente, y la del
+equipo remoto o donde reside el proceso servidor) y dos puertos (uno
+local y otro remoto)
+</p>
+<p>
+Te
+recordamos los pasos que se siguen para establecer, mantener y cerrar
+una conexión <span lang="en">TCP/IP</span>: 
+</p>
+<ul class="lista_verificacion">
+	<li>
+	Se
+	crean los <span lang="en">sockets</span> en el
+	cliente y el servidor
+	</li>
+	<li>
+	El
+	servidor establece el puerto por el que proporciona el servicio 
+	</li>
+	<li>
+	El
+	servidor permanece a la escucha de las peticiones de los clientes.
+	</li>
+	<li>
+	Un
+	cliente conecta con el servidor.
+	</li>
+	<li>
+	El
+	servidor acepta la conexión.
+	</li>
+	<li>
+	Se
+	realiza el intercambio de datos.
+	</li>
+	<li>
+	El
+	cliente o el servidor, o ambos, cierran la conexión.
+	</li>
+</ul>
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<a href="../PNG/PSP05_-9.PNG" title="Ampliar imagen."><img alt="Dibujo que representa mediante un rectángulo a la derecha un proceso servidor y a la izquierda un proceso cliente. Entre ambos flechas que indican la conexión del cliente al servidor, la desconexión del cliente en el servidor y la transmisión de datos." class="imagen_ampliable" height="121" src="../PNG/PSP05-10.PNG" style="width: 200px; height: 121px" title="Conexión y transmisión." width="200" /></a>
+</div>
+<div class="elemento_centrado credenciales">
+Esquema conexión-transmisión-desconexión cliente/servidor.
+</div>
+</div>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id14">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta14_54" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b14" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b14" class="block iDevice_content">
+<p>
+<strong>Señala si la afirmación siguiente es verdadera o falsa:</strong> 
+</p>
+<p>
+<strong>
+Los procesos de aplicación ese comunican con la capa de transporte mediante un <span lang="en">API</span>.</strong>
+</p>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b14"><input type="radio" name="option0b14" id="true0b14" class="exe-radio-option exe-radio-option-0-2-0b14-truefalse" /> Verdadero</label> 
+<label for="false0b14"><input type="radio" name="option0b14" id="false0b14" class="exe-radio-option exe-radio-option-1-2-0b14-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b14" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b14-result" class="right">Verdadero</strong></p>
+La afirmación es verdadera, este <span lang="en">API</span> es el <span lang="en">API</span> <span lang="en">socket</span>.
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_COMUN.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_DNS_Y.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/22_conexin_transmisin_y_desconexin.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:20 GMT -->
+</html>

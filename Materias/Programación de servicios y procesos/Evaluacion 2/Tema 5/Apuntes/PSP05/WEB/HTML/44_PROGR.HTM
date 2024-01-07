@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/44_programacin_de_un_cliente_telnet.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.4.- Programación de un cliente Telnet. | DAM_PSP_05 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-21"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_05</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Generación de servicios en red.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li><a href="2_PROTOC.HTM" class="daddy">2.- Protocolos de comunicaciones del nivel de aplicación.</a>
+   <ul class="other-section">
+      <li><a href="21_COMUN.HTM" class="no-ch">2.1.- Comunicación entre aplicaciones.</a></li>
+      <li><a href="22_CONEX.HTM" class="no-ch">2.2.- Conexión, transmisión y desconexión.</a></li>
+      <li><a href="23_DNS_Y.HTM" class="no-ch">2.3.- DNS y resolución de nombres.</a></li>
+      <li><a href="24_EL_PR.HTM" class="no-ch">2.4.- El protocolo FTP.</a></li>
+      <li><a href="25_LOS_P.HTM" class="no-ch">2.5.- Los protocolos SMTP y POP3.</a></li>
+      <li><a href="26_EL_PR.HTM" class="no-ch">2.6.- El protocolo HTTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_BIBLIO.HTM" class="daddy">3.- Bibliotecas de clases y componentes Java.</a>
+   <ul class="other-section">
+      <li><a href="31_OBJET.HTM" class="no-ch">3.1.- Objetos predefinidos.</a></li>
+      <li><a href="32_MTODO.HTM" class="no-ch">3.2.- Métodos y ejemplos de uso de InetAddress.</a></li>
+      <li><a href="33_PROGR.HTM" class="no-ch">3.3.- Programación con URL.</a></li>
+      <li><a href="34_CREAR.HTM" class="no-ch">3.4.- Crear y analizar objetos URL.</a></li>
+      <li><a href="35_LEER_.HTM" class="no-ch">3.5.- Leer y escribir a través de una URLConnection.</a></li>
+      <li><a href="36_TRABA.HTM" class="no-ch">3.6.- Trabajar con el contenido de una URL.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_PROGRA.HTM" class="current-page-parent daddy">4.- Programación de aplicaciones cliente.</a>
+   <ul>
+      <li><a href="41_PROGR.HTM" class="no-ch">4.1.- Programación de un cliente HTTP.</a></li>
+      <li><a href="42_BIBLI.HTM" class="no-ch">4.2.- Bibliotecas para programar un cliente FTP.</a></li>
+      <li><a href="43_PROGR.HTM" class="no-ch">4.3.- Programación de un cliente FTP.</a></li>
+      <li id="active"><a href="44_PROGR.HTM" class="active no-ch">4.4.- Programación de un cliente Telnet.</a></li>
+      <li><a href="45_PROGR.HTM" class="no-ch">4.5.- Programación de un cliente SMTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_PROGRA.HTM" class="daddy">5.- Programación de servidores.</a>
+   <ul class="other-section">
+      <li><a href="51_PROGR.HTM" class="no-ch">5.1.- Programación de un servidor HTTP.</a></li>
+      <li><a href="52_IMPLE.HTM" class="no-ch">5.2.- Implementar comunicaciones simultáneas.</a></li>
+      <li><a href="53_MONIT.HTM" class="no-ch">5.3.- Monitorización de tiempos de respuesta.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo de monitorización del tiempo de transmisión.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="43_PROGR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="45_PROGR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.4.- Programación de un cliente Telnet.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id63">
+<div class="iDevice emphasis0">
+<div id="ta63_73" class="block iDevice_content">
+<p><img alt="Hombre sentado trabajando con un ordenador." class="elemento_derecha" src="../JPG/PSP05-17.JPG" style="width: 200px; height: 112px;" title="Programador." width="200" height="112" /></p>
+<p><strong><span lang="en">Telnet</span> </strong>(<span lang="en">TELecommunication NETwork</span>) es un <strong>protocolo que permite acceder a otro equipo de la red y adminstrarlo de forma remota, esto es, como si estuviéramos sentados delante de él</strong>.</p>
+<p>El protocolo <span lang="en">Telenet</span> está basado en:</p>
+<ul class="lista_verificacion">
+<li>El modelo cliente/servidor, por lo que su esquema básico de funcionamiento será el típico de esta arquitectura.</li>
+<li>El servidor escucha las peticiones por el puerto 23.</li>
+<li>Su funcionamiento es en modo texto.</li>
+</ul>
+<p>Este servicio puede resultar muy útil para administrar por ejemplo equipos sin pantalla o teclado, o bien servidores apilados en un <span lang="en">rack</span> o que no estén físicamente presentes.</p>
+<p>En la actualidad, no se suele utilizar, debido a la poca seguridad que ofrece, ya que toda la información que se intercambia entre servidor y cliente, incluidos usuario y contraseña, se transmiten en texto plano. Esto es así, porque <span lang="en">Telnet</span> se creó pensando en la facilidad de uso y no en la seguridad. En su lugar, se utiliza un servicio de acceso y control remoto basado en el protocolo <span lang="en">SSH</span>.</p>
+<p>Veremos un ejemplo de <strong>programación de un cliente <span lang="en">Telnet</span>, sólo a modo ilustrativo de uso de otra biblioteca proporcionada por el <span lang="en">API</span> de Apache, </strong><code>org.apache.commons.net</code>, que ya te descargaste en los apartados anteriores.</p>
+<p>La biblioteca necesaria es <code>org.apache.commons.net.telnet</code>. Para disponer de ella, tendremos que agregar a las bibliotecas del proyecto, como en el ejemplo de <span lang="en">FTP</span>, el archivo <code>commons-net-n.x.x.jar</code>. Entre las clases que proporciona para programar un cliente <span lang="en">Telnet</span> está:</p>
+<ul>
+<li class="lista_verificacion"><strong>Clase <code>TelnetClient</code>. </strong>Permite implementar un terminal virtual para el protocolo <span lang="en">Telnet</span>. Hereda de la clase <code>SocketClient</code>.
+<ul>
+<li>El método <code>SocketClient.connect()</code> realiza la conexión al servidor .</li>
+<li>Los métodos <code>TelnetClient.getInputStream()</code> y <code>TelnetClient.getOutputStream()</code> permiten a través de objetos <code>InputStream()</code> y <code>OutputStream()</code> enviar y recibir datos a través de la conexión <span lang="en">Telnet</span>.</li>
+<li>El método <code>TelnetClient.disconnect()</code> cierra la conexión al servidor, así como los flujos de entrada y salida y el <code>socket</code> abiertos.</li>
+</ul>
+</li>
+</ul>
+<p>En el siguiente enlace puedes ver el código de programación de un cliente <span lang="en">Telnet</span>. (Puedes utilizar las bibliotecas de Apache para <span lang="en">Telnet</span> o bien las indicadas en el ejemplo).</p>
+<div class="enlace_centrado"><a href="https://hablandojava.blogspot.com/2010/01/cliente-telnet-java.html" title="Acceder al ejemplo java de un cliente Telnet."> Ejemplo <span lang="en">Java</span> de un cliente <span lang="en">Telnet</span>.</a></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id64">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta64_54" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b64" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b64" class="block iDevice_content">
+<p>
+<strong>Señala si la afirmación siguiente es verdadera o falsa:</strong>
+</p>
+<p>
+<strong>El método <code>telnet.connect(“Miservidor”)</code> realiza una conexión <span lang="en">Telnet</span>Telnet al servidor remoto Miservidor.</strong>
+</p>
+ 
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b64"><input type="radio" name="option0b64" id="true0b64" class="exe-radio-option exe-radio-option-0-2-0b64-truefalse" /> Verdadero</label> 
+<label for="false0b64"><input type="radio" name="option0b64" id="false0b64" class="exe-radio-option exe-radio-option-1-2-0b64-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b64" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b64-result" class="wrong">Falso</strong></p>
+La afirmación es falsa, falta especificar el puerto 23.
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id65">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta65_47" class="block iDevice_content">
+<p>
+En
+el siguiente enlace dispones de toda la información sobre la
+biblioteca del <span lang="en">API</span> de Apache para el servicio <span lang="en">Telnet</span>.
+</p>
+<div class="enlace_centrado">
+<a href="http://commons.apache.org/net/apidocs/org/apache/commons/net/telnet/package-summary.html" title="Acceder a información sobre la biblioteca de Apache para el servicio Telnet.">
+Biblioteca de Apache para el servicio <span lang="en">Telnet</span>.</a>
+</div>
+<p>
+Si
+quieres conocer más sobre el servicio <span lang="en">SSH</span>, consulta este enlace:
+</p>
+<div class="enlace_centrado">
+<a href="http://es.wikipedia.org/wiki/Ssh" title="Acceder al información sobre el protocolo SSH.">
+Protocolo <span lang="en">SSH</span>.</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="43_PROGR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="45_PROGR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/44_programacin_de_un_cliente_telnet.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:33 GMT -->
+</html>

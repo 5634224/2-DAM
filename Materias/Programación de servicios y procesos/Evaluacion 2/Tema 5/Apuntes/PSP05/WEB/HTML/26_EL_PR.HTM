@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/26_el_protocolo_http.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.6.- El protocolo HTTP. | DAM_PSP_05 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-11"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_05</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Generación de servicios en red.</a></li>
+   <li><a href="1_INTROD.HTM" class="no-ch">1.- Introducción.</a></li>
+   <li class="current-page-parent"><a href="2_PROTOC.HTM" class="current-page-parent daddy">2.- Protocolos de comunicaciones del nivel de aplicación.</a>
+   <ul>
+      <li><a href="21_COMUN.HTM" class="no-ch">2.1.- Comunicación entre aplicaciones.</a></li>
+      <li><a href="22_CONEX.HTM" class="no-ch">2.2.- Conexión, transmisión y desconexión.</a></li>
+      <li><a href="23_DNS_Y.HTM" class="no-ch">2.3.- DNS y resolución de nombres.</a></li>
+      <li><a href="24_EL_PR.HTM" class="no-ch">2.4.- El protocolo FTP.</a></li>
+      <li><a href="25_LOS_P.HTM" class="no-ch">2.5.- Los protocolos SMTP y POP3.</a></li>
+      <li id="active"><a href="26_EL_PR.HTM" class="active no-ch">2.6.- El protocolo HTTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_BIBLIO.HTM" class="daddy">3.- Bibliotecas de clases y componentes Java.</a>
+   <ul class="other-section">
+      <li><a href="31_OBJET.HTM" class="no-ch">3.1.- Objetos predefinidos.</a></li>
+      <li><a href="32_MTODO.HTM" class="no-ch">3.2.- Métodos y ejemplos de uso de InetAddress.</a></li>
+      <li><a href="33_PROGR.HTM" class="no-ch">3.3.- Programación con URL.</a></li>
+      <li><a href="34_CREAR.HTM" class="no-ch">3.4.- Crear y analizar objetos URL.</a></li>
+      <li><a href="35_LEER_.HTM" class="no-ch">3.5.- Leer y escribir a través de una URLConnection.</a></li>
+      <li><a href="36_TRABA.HTM" class="no-ch">3.6.- Trabajar con el contenido de una URL.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_PROGRA.HTM" class="daddy">4.- Programación de aplicaciones cliente.</a>
+   <ul class="other-section">
+      <li><a href="41_PROGR.HTM" class="no-ch">4.1.- Programación de un cliente HTTP.</a></li>
+      <li><a href="42_BIBLI.HTM" class="no-ch">4.2.- Bibliotecas para programar un cliente FTP.</a></li>
+      <li><a href="43_PROGR.HTM" class="no-ch">4.3.- Programación de un cliente FTP.</a></li>
+      <li><a href="44_PROGR.HTM" class="no-ch">4.4.- Programación de un cliente Telnet.</a></li>
+      <li><a href="45_PROGR.HTM" class="no-ch">4.5.- Programación de un cliente SMTP.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_PROGRA.HTM" class="daddy">5.- Programación de servidores.</a>
+   <ul class="other-section">
+      <li><a href="51_PROGR.HTM" class="no-ch">5.1.- Programación de un servidor HTTP.</a></li>
+      <li><a href="52_IMPLE.HTM" class="no-ch">5.2.- Implementar comunicaciones simultáneas.</a></li>
+      <li><a href="53_MONIT.HTM" class="no-ch">5.3.- Monitorización de tiempos de respuesta.</a></li>
+      <li><a href="54_EJEMP.HTM" class="no-ch">5.4.- Ejemplo de monitorización del tiempo de transmisión.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="25_LOS_P.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_BIBLIO.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.6.- El protocolo HTTP.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id25">
+<div class="iDevice emphasis0">
+<div id="ta25_73" class="block iDevice_content">
+<p><img alt="Foto de una mano con un gunate blaco sosteniendo en una bandeja el rótulo." class="elemento_derecha" src="../JPG/PSP05_-5.JPG" style="width: 140px; height: 196px;" title="Web." width="140" height="196" /></p>
+<p>El protocolo <span lang="en">HTTP</span> o Protocolo de Transferencia de Hipertexto es un conjunto de normas que posibilitan la comunicación entre servidor y cliente, permitiendo la transmisión de información entre ambos. La información transferida son las conocidas páginas <span lang="en">HTML</span> o páginas <span lang="en">web</span>. Se trata del método más común de intercambio de información en la <span lang="en">World Wide Web</span>.</p>
+<p><span lang="en">HTTP</span> define tanto la sintaxis como la semántica que utilizan clientes y servidores para comunicarse. Algunas <strong>consideraciones importantes sobre <span lang="en">HTTP</span></strong> son las siguientes:</p>
+<ul class="lista_verificacion">
+<li>Es un protocolo que sigue el <strong>esquema petición-respuesta</strong> entre un cliente y un servidor.</li>
+<li>Utiliza por defecto el <strong>puerto 80 </strong></li>
+<li>Al <strong>cliente que efectúa la petición</strong>, por ejemplo un navegador <span lang="en">web</span>, se le conoce como agente del usuario (<span lang="en">user agent</span>).</li>
+<li>A<strong> la información transmitida se la llama recurso y se la identifica mediante un localizador uniforme de recursos (<span lang="en">URL</span>)</strong>.
+<p>Por ejemplo: <code>http://www.iesalandalus.org/organizacion.htm</code></p>
+</li>
+<li><strong>Los recursos pueden ser</strong> archivos, el resultado de la ejecución de un programa, una consulta a una base de datos, la traducción automática de un documento, etc.</li>
+</ul>
+<p>El <strong>funcionamiento esquemático del protocolo <span lang="en">HTTP</span></strong> es el siguiente:</p>
+<ul class="lista_verificacion">
+<li>El usuario especifica en el cliente <span lang="en">web</span> la dirección del recurso a localizar con el siguiente formato: <code>http://dirección[:puerto][ruta]</code>, por ejemplo: <code>http://www.iesalandalus.org/organizacion.htm</code></li>
+<li>El cliente <span lang="en">web</span> descompone la información de la <span lang="en">URL</span> diferenciando el protocolo de acceso, la <span lang="en">IP</span> o nombre de dominio del servidor, el puerto y otros parámetros si los hubiera.</li>
+<li>El cliente <span lang="en">web</span> establece una conexión al servidor y solicita el recurso <span lang="en">web</span> mediante un mensaje al servidor, encabezado por un método, por ejemplo <code>GET /organizacion.htm
+	HTTP/1.1</code> y otras líneas.</li>
+<li>El servidor contesta con un mensaje encabezado con la línea <code>HTTP/1.1
+	200 OK</code>, si existe la página y la envía, o bien envía un código de error.</li>
+<li>El cliente <span lang="en">web</span> interpreta el código <span lang="en">HTML</span> recibido.</li>
+<li>Se cierra la conexión.</li>
+</ul>
+<p>En el siguiente enlace dispones de un ejemplo de diálogo entre cliente y servidor utilizando el protocolo <span lang="en">HTTP</span>. Más adelante, estudiaremos algunos detalles más de este protocolo para poder programar un servicio <span lang="en">web</span> básico.</p>
+<div class="enlace_centrado"><a href="https://ccia.esei.uvigo.es/docencia/SCS/1011/practicas/practica-1/index.html" title="Acceder al ejemplo de diálogo entre cliente y servidor usando el protocolo HTTP."> Ejemplo de diálogo entre cliente y servidor usando el protocolo <span lang="en">HTTP</span>.</a></div>
+<p><span lang="en">HTTP</span> es un protocolo sin estado, lo que significa que no recuerda nada relativo a conexiones anteriores a la actual. Algunas aplicaciones necesitan que se guarde el estado y para ello hacen uso de lo que se conoce como <span lang="en">cookie</span>.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id26">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta26_54" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b26" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b26" class="block iDevice_content">
+<p>
+<strong>Señala si la afirmación siguiente es verdadera o falsa:</strong>
+</p>
+<p>
+<strong><span lang="en">HTTP</span> es un protocolo al igual que <span lang="en">URL</span>.</strong>
+</p>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b26"><input type="radio" name="option0b26" id="true0b26" class="exe-radio-option exe-radio-option-0-2-0b26-truefalse" /> Verdadero</label> 
+<label for="false0b26"><input type="radio" name="option0b26" id="false0b26" class="exe-radio-option exe-radio-option-1-2-0b26-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b26" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b26-result" class="wrong">Falso</strong></p>
+La afirmación es falsa, <span lang="en">http</span> es un protocolo, pero <span lang="en">URL</span> no es un protocolo, es la dirección de un recurso en la <span lang="en">web</span>.
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id27">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta27_47" class="block iDevice_content">
+<p>¿No sabes que son y para que sirven las <span lang="en">cookies</span>? Consulta este enlace para prender sobre ellas.</p>
+<div class="enlace_centrado"><a href="http://es.wikipedia.org/wiki/Cookie_(informática)#Prop.C3.B3sito" title="Acceder a información sobre cookies."> Información sobre <span lang="en">cookies</span>.</a></div>
+<p>Si quieres profundizar en el funcionamiento del protocolo <span lang="en">HTTP</span> te recomendamos que visites este enlace:</p>
+<div class="enlace_centrado"><a href="https://es.wikipedia.org/wiki/Protocolo_de_transferencia_de_hipertexto" title="Acceder a información sobreel protocolo HTTP."> Información sobre protocolo <span lang="en">HTTP</span>.</a></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="25_LOS_P.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_BIBLIO.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432838/mod_resource/content/7/PSP05_Contenidos_web/PSP05_Contenidos_Web/26_el_protocolo_http.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Dec 2023 17:10:22 GMT -->
+</html>
