@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433046/mod_resource/content/1/39__insercin_modificacin_y_eliminacin_de_datos_en_objetos.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Jan 2024 16:24:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.9.-  Inserción, modificación y eliminación de datos en objetos. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de componentes.</a></li>
+   <li><a href="1_tcnicas_y_estndares_modelovistacontrolador.html" class="daddy">1.- Técnicas y estándares. Modelo-Vista-Controlador.</a>
+   <ul class="other-section">
+      <li><a href="11__especificaciones_tcnicas_para_el_desarrollo_de_componentes.html" class="no-ch">1.1.-  Especificaciones técnicas para el desarrollo de componentes.</a></li>
+      <li><a href="12__especificaciones_funcionales_para_el_desarrollo_de_componentes.html" class="no-ch">1.2.-  Especificaciones funcionales para el desarrollo de componentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="2__tcnicas_de_optimizacin_de_consultas_y_acceso_a_grandes_volmenes_de_informacin.html" class="daddy">2.-  Técnicas de optimización de consultas y acceso a grandes volúmenes de información.</a>
+   <ul class="other-section">
+      <li><a href="21__operaciones_de_consulta_herramientas.html" class="no-ch">2.1.-  Operaciones de consulta. Herramientas.</a></li>
+      <li><a href="22__sistemas_batch_inputs_generacin_de_programas_de_extraccin_y_procesamiento_de_datos.html" class="no-ch">2.2.-  Sistemas batch inputs. Generación de programas de extracción y procesamiento de datos.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3__lenguaje_proporcionado_por_los_sistemas_erpcrm.html" class="current-page-parent daddy">3.-  Lenguaje proporcionado por los sistemas ERP-CRM.</a>
+   <ul>
+      <li><a href="31__caractersticas_y_sintaxis_del_lenguaje.html" class="no-ch">3.1.-  Características y sintaxis del lenguaje.</a></li>
+      <li><a href="32__declaracin_de_datos_tipos_bsicos.html" class="no-ch">3.2.-  Declaración de datos. Tipos básicos.</a></li>
+      <li><a href="33__estructuras_de_programacin_colecciones.html" class="no-ch">3.3.-  Estructuras de programación. Colecciones.</a></li>
+      <li><a href="34__sentencias_del_lenguaje.html" class="no-ch">3.4.-  Sentencias del lenguaje.</a></li>
+      <li><a href="35__llamadas_a_funciones.html" class="no-ch">3.5.-  Llamadas a funciones.</a></li>
+      <li><a href="36__clases_y_objetos.html" class="no-ch">3.6.-  Clases y objetos.</a></li>
+      <li><a href="37__mdulos_y_paquetes.html" class="no-ch">3.7.-  Módulos y paquetes.</a></li>
+      <li><a href="38__libreras_de_funciones_apis.html" class="no-ch">3.8.-  Librerías de funciones (APIs).</a></li>
+      <li id="active"><a href="39__insercin_modificacin_y_eliminacin_de_datos_en_objetos.html" class="active no-ch">3.9.-  Inserción, modificación y eliminación de datos en objetos.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__entornos_de_desarrollo_y_herramientas_de_desarrollo_en_sistemas_erpcrm.html" class="daddy">4.-  Entornos de desarrollo y herramientas de desarrollo en sistemas ERP-CRM.</a>
+   <ul class="other-section">
+      <li><a href="41__depuracin_de_un_programa.html" class="no-ch">4.1.-  Depuración de un programa.</a></li>
+      <li><a href="42__manejo_de_errores.html" class="no-ch">4.2.-  Manejo de errores.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formularios_e_informes_en_sistemas_erpcrm.html" class="daddy">5.- Formularios e informes en sistemas ERP-CRM.</a>
+   <ul class="other-section">
+      <li><a href="51_arquitectura_de_formularios_e_informes_elementos.html" class="no-ch">5.1.- Arquitectura de formularios e informes. Elementos.</a></li>
+      <li><a href="52_herramientas_para_la_creacin_de_formularios_e_informes.html" class="no-ch">5.2.- Herramientas para la creación de formularios e informes.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="38__libreras_de_funciones_apis.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4__entornos_de_desarrollo_y_herramientas_de_desarrollo_en_sistemas_erpcrm.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.9.-  Inserción, modificación y eliminación de datos en objetos.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id39">
+<div class="iDevice emphasis0">
+<div id="ta39_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado"></div>
+</div>
+<p>En este apartado vamos a ver cómo están estructurados los módulos y cómo crear un primer módulo sencillo que cree un objeto en la aplicación para insertar, modificar o eliminar datos en la base de datos.</p>
+<p>Los módulos de <span lang="en">Odoo</span> se guardan dentro de la carpeta <code>addons</code>, que para nuestra versión de Ubuntu se encuentra en <code>/usr/lib/python3/dist-packages/odoo/addons</code>. Si has instalado la aplicación desde un archivo de <span lang="en">Internet</span> en lugar de desde <code>Synaptic</code>, o tu versión de la aplicación o Ubuntu es diferente, puede que ella ruta del directorio addons sea diferente.</p>
+<p>Lo que tenemos que hacer es crear una carpeta para nuestro módulo dentro del directorio <code>addons</code>. Los archivos que tiene que contener la carpeta son:</p>
+<ul class="lista_verificacion">
+<li><code>__init__.py</code>. Necesario para que la carpeta se trate como un paquete en <span lang="en">Python</span>, contiene los import de cada archivo del módulo que contenga código <span lang="en">Python</span>, en este caso, el archivo <code>nombre_modulo.py</code>.</li>
+<li><code>__manifest__.py</code>. Contiene un diccionario <span lang="en">Python</span> con la descripción del módulo, como quién es el autor, la versión del módulo o cuáles son los otros módulos de los que depende.</li>
+<li><code>nombre_modulo.py</code>. En este archivo creamos la clase definiendo los campos que va a tener. Al crear la clase estamos creando el modelo (una tabla en la base de datos) y también estamos creando el controlador, porque cuando creamos una clase estamos definiendo el comportamiento que tiene.</li>
+<li><code>nombre_modulo_view.xml</code>. En este archivo definimos la vista de nuestro módulo, o del objeto que va a crear nuestro módulo. Para crear este archivo necesitamos tener ciertos conocimientos de <span lang="en">XML</span>, o bien coger una vista de otro objeto y a partir de ella crear la del nuevo objeto.</li>
+</ul>
+<p>También existe otra forma de crear módulos sin necesidad de ningún desarrollo, que es utilizando el módulo<code> base_module_record</code>. Si instalamos este módulo, tendremos la opción de grabar todas las acciones que realicemos en la aplicación. Si has utilizado alguna vez las macros en un procesador de textos o en una hoja de cálculo sabrás de lo que estamos hablando. El módulo<code> base_module_record</code> funciona de forma parecida. Por ejemplo, podemos crear un nuevo objeto y asignarle un menú, todo ello se grabaría en un archivo comprimido. Realmente ese archivo comprimido lo que va a contener es un módulo, con todos los archivos indicados anteriormente. Si con posterioridad cogemos esos archivos y los copiamos a la carpeta <code>addons</code>, podremos instalarlos en la aplicación como cualquier otro módulo. Al instalarlo, el resultado sería que aparecería ese nuevo objeto y menú en nuestra aplicación.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice" id="id40">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_debesconocerfpd.png)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta40_48" class="block iDevice_content">
+<p>En el siguiente enlace de la página web de Odoo puedes consultar como se construye un módulo en Odoo:</p>
+<p class="enlace_centrado"><a href="https://www.odoo.com/documentation/13.0/howtos/backend.html" title="Acceder a la documentación de Odoo para crear un módulo." target="_blank" rel="noopener">Crear un módulo en Odoo</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="38__libreras_de_funciones_apis.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4__entornos_de_desarrollo_y_herramientas_de_desarrollo_en_sistemas_erpcrm.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433046/mod_resource/content/1/39__insercin_modificacin_y_eliminacin_de_datos_en_objetos.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Jan 2024 16:24:59 GMT -->
+</html>

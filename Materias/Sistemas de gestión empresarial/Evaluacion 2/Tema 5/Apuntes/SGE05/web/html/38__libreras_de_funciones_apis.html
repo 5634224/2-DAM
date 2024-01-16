@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433046/mod_resource/content/1/38__libreras_de_funciones_apis.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Jan 2024 16:24:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.8.-  Librerías de funciones (APIs). </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-15"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de componentes.</a></li>
+   <li><a href="1_tcnicas_y_estndares_modelovistacontrolador.html" class="daddy">1.- Técnicas y estándares. Modelo-Vista-Controlador.</a>
+   <ul class="other-section">
+      <li><a href="11__especificaciones_tcnicas_para_el_desarrollo_de_componentes.html" class="no-ch">1.1.-  Especificaciones técnicas para el desarrollo de componentes.</a></li>
+      <li><a href="12__especificaciones_funcionales_para_el_desarrollo_de_componentes.html" class="no-ch">1.2.-  Especificaciones funcionales para el desarrollo de componentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="2__tcnicas_de_optimizacin_de_consultas_y_acceso_a_grandes_volmenes_de_informacin.html" class="daddy">2.-  Técnicas de optimización de consultas y acceso a grandes volúmenes de información.</a>
+   <ul class="other-section">
+      <li><a href="21__operaciones_de_consulta_herramientas.html" class="no-ch">2.1.-  Operaciones de consulta. Herramientas.</a></li>
+      <li><a href="22__sistemas_batch_inputs_generacin_de_programas_de_extraccin_y_procesamiento_de_datos.html" class="no-ch">2.2.-  Sistemas batch inputs. Generación de programas de extracción y procesamiento de datos.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3__lenguaje_proporcionado_por_los_sistemas_erpcrm.html" class="current-page-parent daddy">3.-  Lenguaje proporcionado por los sistemas ERP-CRM.</a>
+   <ul>
+      <li><a href="31__caractersticas_y_sintaxis_del_lenguaje.html" class="no-ch">3.1.-  Características y sintaxis del lenguaje.</a></li>
+      <li><a href="32__declaracin_de_datos_tipos_bsicos.html" class="no-ch">3.2.-  Declaración de datos. Tipos básicos.</a></li>
+      <li><a href="33__estructuras_de_programacin_colecciones.html" class="no-ch">3.3.-  Estructuras de programación. Colecciones.</a></li>
+      <li><a href="34__sentencias_del_lenguaje.html" class="no-ch">3.4.-  Sentencias del lenguaje.</a></li>
+      <li><a href="35__llamadas_a_funciones.html" class="no-ch">3.5.-  Llamadas a funciones.</a></li>
+      <li><a href="36__clases_y_objetos.html" class="no-ch">3.6.-  Clases y objetos.</a></li>
+      <li><a href="37__mdulos_y_paquetes.html" class="no-ch">3.7.-  Módulos y paquetes.</a></li>
+      <li id="active"><a href="38__libreras_de_funciones_apis.html" class="active no-ch">3.8.-  Librerías de funciones (APIs).</a></li>
+      <li><a href="39__insercin_modificacin_y_eliminacin_de_datos_en_objetos.html" class="no-ch">3.9.-  Inserción, modificación y eliminación de datos en objetos.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__entornos_de_desarrollo_y_herramientas_de_desarrollo_en_sistemas_erpcrm.html" class="daddy">4.-  Entornos de desarrollo y herramientas de desarrollo en sistemas ERP-CRM.</a>
+   <ul class="other-section">
+      <li><a href="41__depuracin_de_un_programa.html" class="no-ch">4.1.-  Depuración de un programa.</a></li>
+      <li><a href="42__manejo_de_errores.html" class="no-ch">4.2.-  Manejo de errores.</a></li>
+   </ul>
+   </li>
+   <li><a href="5_formularios_e_informes_en_sistemas_erpcrm.html" class="daddy">5.- Formularios e informes en sistemas ERP-CRM.</a>
+   <ul class="other-section">
+      <li><a href="51_arquitectura_de_formularios_e_informes_elementos.html" class="no-ch">5.1.- Arquitectura de formularios e informes. Elementos.</a></li>
+      <li><a href="52_herramientas_para_la_creacin_de_formularios_e_informes.html" class="no-ch">5.2.- Herramientas para la creación de formularios e informes.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="37__mdulos_y_paquetes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="39__insercin_modificacin_y_eliminacin_de_datos_en_objetos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.8.-  Librerías de funciones (APIs).</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id35">
+<div class="iDevice emphasis0">
+<div id="ta35_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado">
+<figure class="exe-figure exe-image float-right license-gnu-gpl" style="width: 196px;"><a href="../png/sge05_cont_r15_fibonnacci-python.png" title="Ampliar imagen." target="_blank" rel="noopener"><img src="../png/sge05_cont_r15_fibonnacci-python_miniatura.png" alt="Ilustración de Función Fibonnacci ejecutándose en el intérprete de Python." title="Función Fibonnacci." class="imagen_ampliable" width="196" height="76" /></a>
+<figcaption class="figcaption"><span class="author">Captura de pantalla de terminal de Ubuntu.</span> <span class="license"><span class="sep">(</span><a href="http://www.gnu.org/licenses/gpl.html" target="_blank" title="Acceder a la página web con los términos de la licencia GNU/GPL" rel="noopener">GNU/GPL</a><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+</div>
+<p>Una <strong><acronym title="Application Programming Interface. Interfaz de programación de aplicaciones." lang="en">API</acronym></strong>, o <strong>Biblioteca de Clases</strong>, es un conjunto de clases útiles que tienen a disposición los programadores para utilizar en sus programas. <span lang="en">Python</span> proporciona una <span lang="en">API</span> estándar, cuyo código fuente está a libre disposición para las principales plataformas desde el sitio <span lang="en">web</span> de <span lang="en">Python</span>. También es posible acceder a muchos módulos libres de terceros en la misma página <span lang="en">web</span>, así como a programas, herramientas y documentación adicional.</p>
+<p>En el enlace expresado más abajo encontrarás una referencia a toda la Biblioteca estándar de módulos de <span lang="en">Python</span>, entre los que destacan:</p>
+<ul class="lista_verificacion">
+<li><code>os:</code> provee de diferentes funciones del sistema operativo, como creación de archivos y directorios, leer o escribir de un archivo, manipular rutas, <abbr title="Etcétera.">etc</abbr>.</li>
+<li><code>sys:</code> permite acceder a información sobre el intérprete de <span lang="en">Python</span>, como por ejemplo el <span lang="en">prompt</span> del sistema, datos de licencia y en general cualquier parámetro o variable que tenga que ver con el intérprete.</li>
+<li><code><span lang="en">datetime</span>:</code> módulos para la manipulación de fechas y horas.</li>
+<li><code><span lang="en">math</span>:</code> funciones matemáticas.</li>
+</ul>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id37">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../png/icon_parasabermasfpd.png)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta37_47" class="block iDevice_content">
+<p>Para mayor información puedes consultar el siguiente enlace donde se describe la Biblioteca estándar que se distribuye con <span lang="en">Python</span>:</p>
+<p class="enlace_centrado"><a href="https://docs.python.org/3/library/" title="Acceder a la biblioteca de clases estándar de Python." target="_blank" rel="noopener">Biblioteca de clases estándar de <span lang="en">Python</span>.</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id38">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta38_54" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b38" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b38" class="block iDevice_content">
+<strong>La función <code>chdir() </code>que cambia de directorio la podemos encontrar en el paquete <code>sys</code>.</strong>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b38"><input type="radio" name="option0b38" id="true0b38" class="exe-radio-option exe-radio-option-0-2-0b38-truefalse" /> Verdadero</label> 
+<label for="false0b38"><input type="radio" name="option0b38" id="false0b38" class="exe-radio-option exe-radio-option-1-2-0b38-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b38" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b38-result" class="wrong">Falso</strong></p>
+La función <code>chdir()</code> se encuentra en el paquete os, de manipulación de funciones del sistema operativo.
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="37__mdulos_y_paquetes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="39__insercin_modificacin_y_eliminacin_de_datos_en_objetos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433046/mod_resource/content/1/38__libreras_de_funciones_apis.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Jan 2024 16:24:59 GMT -->
+</html>

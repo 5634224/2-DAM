@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433046/mod_resource/content/1/51_arquitectura_de_formularios_e_informes_elementos.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Jan 2024 16:25:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/content.css" />
+<link rel="stylesheet" type="text/css" href="../css/nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.1.- Arquitectura de formularios e informes. Elementos. </title>
+<link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../js/exe_jquery.js"></script>
+<script type="text/javascript" src="../js/common_i18n.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-21"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Desarrollo de componentes.</a></li>
+   <li><a href="1_tcnicas_y_estndares_modelovistacontrolador.html" class="daddy">1.- Técnicas y estándares. Modelo-Vista-Controlador.</a>
+   <ul class="other-section">
+      <li><a href="11__especificaciones_tcnicas_para_el_desarrollo_de_componentes.html" class="no-ch">1.1.-  Especificaciones técnicas para el desarrollo de componentes.</a></li>
+      <li><a href="12__especificaciones_funcionales_para_el_desarrollo_de_componentes.html" class="no-ch">1.2.-  Especificaciones funcionales para el desarrollo de componentes.</a></li>
+   </ul>
+   </li>
+   <li><a href="2__tcnicas_de_optimizacin_de_consultas_y_acceso_a_grandes_volmenes_de_informacin.html" class="daddy">2.-  Técnicas de optimización de consultas y acceso a grandes volúmenes de información.</a>
+   <ul class="other-section">
+      <li><a href="21__operaciones_de_consulta_herramientas.html" class="no-ch">2.1.-  Operaciones de consulta. Herramientas.</a></li>
+      <li><a href="22__sistemas_batch_inputs_generacin_de_programas_de_extraccin_y_procesamiento_de_datos.html" class="no-ch">2.2.-  Sistemas batch inputs. Generación de programas de extracción y procesamiento de datos.</a></li>
+   </ul>
+   </li>
+   <li><a href="3__lenguaje_proporcionado_por_los_sistemas_erpcrm.html" class="daddy">3.-  Lenguaje proporcionado por los sistemas ERP-CRM.</a>
+   <ul class="other-section">
+      <li><a href="31__caractersticas_y_sintaxis_del_lenguaje.html" class="no-ch">3.1.-  Características y sintaxis del lenguaje.</a></li>
+      <li><a href="32__declaracin_de_datos_tipos_bsicos.html" class="no-ch">3.2.-  Declaración de datos. Tipos básicos.</a></li>
+      <li><a href="33__estructuras_de_programacin_colecciones.html" class="no-ch">3.3.-  Estructuras de programación. Colecciones.</a></li>
+      <li><a href="34__sentencias_del_lenguaje.html" class="no-ch">3.4.-  Sentencias del lenguaje.</a></li>
+      <li><a href="35__llamadas_a_funciones.html" class="no-ch">3.5.-  Llamadas a funciones.</a></li>
+      <li><a href="36__clases_y_objetos.html" class="no-ch">3.6.-  Clases y objetos.</a></li>
+      <li><a href="37__mdulos_y_paquetes.html" class="no-ch">3.7.-  Módulos y paquetes.</a></li>
+      <li><a href="38__libreras_de_funciones_apis.html" class="no-ch">3.8.-  Librerías de funciones (APIs).</a></li>
+      <li><a href="39__insercin_modificacin_y_eliminacin_de_datos_en_objetos.html" class="no-ch">3.9.-  Inserción, modificación y eliminación de datos en objetos.</a></li>
+   </ul>
+   </li>
+   <li><a href="4__entornos_de_desarrollo_y_herramientas_de_desarrollo_en_sistemas_erpcrm.html" class="daddy">4.-  Entornos de desarrollo y herramientas de desarrollo en sistemas ERP-CRM.</a>
+   <ul class="other-section">
+      <li><a href="41__depuracin_de_un_programa.html" class="no-ch">4.1.-  Depuración de un programa.</a></li>
+      <li><a href="42__manejo_de_errores.html" class="no-ch">4.2.-  Manejo de errores.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="5_formularios_e_informes_en_sistemas_erpcrm.html" class="current-page-parent daddy">5.- Formularios e informes en sistemas ERP-CRM.</a>
+   <ul>
+      <li id="active"><a href="51_arquitectura_de_formularios_e_informes_elementos.html" class="active no-ch">5.1.- Arquitectura de formularios e informes. Elementos.</a></li>
+      <li><a href="52_herramientas_para_la_creacin_de_formularios_e_informes.html" class="no-ch">5.2.- Herramientas para la creación de formularios e informes.</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="5_formularios_e_informes_en_sistemas_erpcrm.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_herramientas_para_la_creacin_de_formularios_e_informes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.1.- Arquitectura de formularios e informes. Elementos.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id55">
+<div class="iDevice emphasis0">
+<div id="ta55_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado">
+<figure class="exe-figure exe-image float-right license-gnu-gpl" style="width: 200px;"><a href="../png/contenido_del_fichero_view-xml.png" title="Descargar la imagen ampliada" target="_blank" rel="noopener"><img src="../png/contenido_del_fichero_view-xml.png" alt="Ilustración de un Trozo de código que describe una vista." title="Vista." class="imagen_ampliable" width="200" height="167" /></a>
+<figcaption class="figcaption"><span class="author">Captura de pantalla de terminal de Ubuntu.</span> <span class="license"><span class="sep">(</span><a href="http://www.gnu.org/licenses/gpl.html" rel="license nofollow noopener" target="_blank">GNU/GPL</a><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+</div>
+<p>Los formularios y demás vistas de la aplicación son construidos de forma dinámica por la descripción <span lang="en">XML</span> de la pantalla del cliente. Podemos decir que el lenguaje <span lang="en">XML</span> es un metalenguaje que utiliza etiquetas del tipo <code>etiqueta_contenido_fin etiqueta</code> para expresar información estructurada.</p>
+<p>Una etiqueta consiste en una marca hecha en el documento, que hace referencia a un elemento o pedazo de información. Las etiquetas tienen la forma , donde <code>nombre</code> es el nombre del elemento que se está señalando.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id56">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta56_70" class="block iDevice_content">
+En apartados anteriores has tenido acceso a un breve manual sobre el metalenguaje <span lang="en">XML</span>. Si lo necesitas puedes echarle un vistazo para comprender mejor los conceptos de este apartado.
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id57">
+<div class="iDevice emphasis0">
+<div id="ta57_73" class="block iDevice_content">
+<p>En el caso de Odoo, la estructura del archivo <code>nombre_modulo_view.xml</code> y el fichero de definición <code>__manifest__.py</code> es la siguiente:</p>
+<div class="codigo elemento_centrado" style="width: 39em;">
+<div class="texto_izquierda">
+<pre><code></code></pre>
+<div class="pq-patch"><em>openacademy/__manifest__.py</em>
+<div class="pq-section">
+<div class="highlight-python">
+<div class="highlight">
+<pre><span></span>    <span class="s1">'data'</span><span class="p">:</span> <span class="p">[</span>
+        <span class="c1"># 'security/ir.model.access.csv',</span>
+        <span class="s1">'templates.xml'</span><span class="p">,</span>
+<span class="hll">        <span class="s1">'views/openacademy.xml'</span><span class="p">,</span>
+</span>    <span class="p">],</span>
+    <span class="c1"># only loaded in demonstration mode</span>
+    <span class="s1">'demo'</span><span class="p">:</span> <span class="p">[</span>
+</pre>
+</div>
+</div>
+</div>
+<em>openacademy/views/openacademy.xml</em>
+<div class="pq-section">
+<div class="highlight-xml">
+<div class="highlight">
+<pre><span></span><span class="hll"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+</span><span class="hll"><span class="nt">&lt;odoo&gt;</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="c">&lt;!-- window action --&gt;</span>
+</span><span class="hll">        <span class="c">&lt;!--</span>
+</span><span class="hll"><span class="c">            The following tag is an action definition for a "window action",</span>
+</span><span class="hll"><span class="c">            that is an action opening a view or a set of views</span>
+</span><span class="hll"><span class="c">        --&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;record</span> <span class="na">model=</span><span class="s">"ir.actions.act_window"</span> <span class="na">id=</span><span class="s">"course_list_action"</span><span class="nt">&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"name"</span><span class="nt">&gt;</span>Courses<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"res_model"</span><span class="nt">&gt;</span>openacademy.course<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"view_mode"</span><span class="nt">&gt;</span>tree,form<span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">"help"</span> <span class="na">type=</span><span class="s">"html"</span><span class="nt">&gt;</span>
+</span><span class="hll">                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"o_view_nocontent_smiling_face"</span><span class="nt">&gt;</span>Create the first course
+</span><span class="hll">                <span class="nt">&lt;/p&gt;</span>
+</span><span class="hll">            <span class="nt">&lt;/field&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;/record&gt;</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="c">&lt;!-- top level menu: no parent --&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;menuitem</span> <span class="na">id=</span><span class="s">"main_openacademy_menu"</span> <span class="na">name=</span><span class="s">"Open Academy"</span><span class="nt">/&gt;</span>
+</span><span class="hll">        <span class="c">&lt;!-- A first level in the left side menu is needed</span>
+</span><span class="hll"><span class="c">             before using action= attribute --&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;menuitem</span> <span class="na">id=</span><span class="s">"openacademy_menu"</span> <span class="na">name=</span><span class="s">"Open Academy"</span>
+</span><span class="hll">                  <span class="na">parent=</span><span class="s">"main_openacademy_menu"</span><span class="nt">/&gt;</span>
+</span><span class="hll">        <span class="c">&lt;!-- the following menuitem should appear *after*</span>
+</span><span class="hll"><span class="c">             its parent openacademy_menu and *after* its</span>
+</span><span class="hll"><span class="c">             action course_list_action --&gt;</span>
+</span><span class="hll">        <span class="nt">&lt;menuitem</span> <span class="na">id=</span><span class="s">"courses_menu"</span> <span class="na">name=</span><span class="s">"Courses"</span> <span class="na">parent=</span><span class="s">"openacademy_menu"</span>
+</span><span class="hll">                  <span class="na">action=</span><span class="s">"course_list_action"</span><span class="nt">/&gt;</span>
+</span><span class="hll">        <span class="c">&lt;!-- Full id location:</span>
+</span><span class="hll"><span class="c">             action="openacademy.course_list_action"</span>
+</span><span class="hll"><span class="c">             It is not required when it is the same module --&gt;</span>
+</span><span class="hll">
+</span><span class="hll"><span class="nt">&lt;/odoo&gt;</span>
+</span></pre>
+</div>
+</div>
+</div>
+</div>
+<pre><code></code></pre>
+</div>
+</div>
+<p>Cada tipo de registro, hace referencia a un objeto diferente. Los registros se definen con la etiqueta &lt;<span lang="en"><code>record</code></span><code>&gt; &lt;/<span lang="en">record</span>&gt;</code>, que indican el inicio y fin de la descripción del registro. Dentro van los campos <span lang="en"><code>field</code></span> que se utilizan para definir las características del registro. Siguiendo la estructura anterior, un ejemplo de creación de <strong>vista de tipo formulario</strong> sería el siguiente:</p>
+<div class="codigo elemento_centrado" style="width: 35.15em;">
+<div class="texto_izquierda">
+<pre><code>&lt;record model="ir.ui.view" id="view_agenda_form"&gt; </code></pre>
+<pre><code>&lt;field name="name"&gt;agenda&lt;/field&gt; </code></pre>
+<pre><code>&lt;field name="model"&gt;agenda&lt;/field&gt; </code></pre>
+<pre><code>&lt;field name="type"&gt;form&lt;/field&gt; </code></pre>
+<pre><code>&lt;field name="priority" eval="5"/&gt; </code></pre>
+<pre><code>&lt;field name="arch" type="xml"&gt; </code></pre>
+<pre><code>&lt;form string="Agenda"&gt; </code></pre>
+<pre><code>&lt;field name="nombre" select="1"/&gt; </code></pre>
+<pre><code>&lt;field name="telefono" select="1" /&gt; </code></pre>
+<pre><code>&lt;/form&gt; </code></pre>
+<pre><code>&lt;/field&gt; </code></pre>
+<pre><code>&lt;/record&gt;</code></pre>
+</div>
+</div>
+<p>El campo <span lang="en"><code>name</code></span> hace referencia al nombre de la vista y el campo <span lang="en"><code>name</code></span><code>="<span lang="en">model</span>"</code> hace referencia al objeto del modelo, es decir, la tabla en la base de datos, del cual va a mostrar la información. Vemos que la vista está formada por dos campos: <code>nombre</code> y <code>telefono</code>.</p>
+<p>De igual forma podemos definir el <strong>elemento de menú</strong> para acceder al objeto agenda:</p>
+<div class="codigo elemento_centrado" style="width: 70.9em;">
+<div class="texto_izquierda">
+<pre><code>&lt;menuitem name="Agenda" id="menu_agenda_agenda_form"/&gt; </code></pre>
+<pre><code>&lt;menuitem name="Agenda" id="menu_agenda_form" parent="agenda.menu_agenda_agenda_form" action="action_agenda_form"/&gt;</code></pre>
+</div>
+</div>
+<p>Así como la <strong>acción asociada a ese elemento de menú</strong>:</p>
+<div class="codigo elemento_centrado" style="width: 42.3em;">
+<div class="texto_izquierda">
+<pre><code>&lt;record model="ir.actions.act_window" id="action_agenda_form"&gt; </code></pre>
+<pre><code>&lt;field name="res_model"&gt;agenda&lt;/field&gt; </code></pre>
+<pre><code>&lt;field name="domain"&gt;[]&lt;/field&gt; </code></pre>
+<pre><code>&lt;/record&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id58">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../gif/icon_autoevaluacionfpd.gif)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta58_54" class="block iDevice_content">
+
+</div>
+<section class="question">
+<form name="true-false-form-0b58" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b58" class="block iDevice_content">
+<p><strong> En la definición de una vista <code>&lt;<span lang="en">record</span>&gt;</code>, con la etiqueta podemos crear acciones y vistas.</strong></p>
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b58"><input type="radio" name="option0b58" id="true0b58" class="exe-radio-option exe-radio-option-0-2-0b58-truefalse" /> Verdadero</label> 
+<label for="false0b58"><input type="radio" name="option0b58" id="false0b58" class="exe-radio-option exe-radio-option-1-2-0b58-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b58" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b58-result" class="right">Verdadero</strong></p>
+<p>Con el atributo <span lang="en"><code>model</code></span> definimos si se trata de una acción o de una vista.</p>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="5_formularios_e_informes_en_sistemas_erpcrm.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="52_herramientas_para_la_creacin_de_formularios_e_informes.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../js/_fpd_js.js"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1433046/mod_resource/content/1/51_arquitectura_de_formularios_e_informes_elementos.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 Jan 2024 16:25:02 GMT -->
+</html>
