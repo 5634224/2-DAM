@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/34_lenguaje_de_consulta_xpath.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.4.- Lenguaje de consulta XPath. </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_HIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-36"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Bases de datos xml.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introduccion.</a>
+   <ul class="other-section">
+      <li><a href="11_DOCUM.HTM" class="no-ch">1.1.- Documentos XML centrados en datos y en texto.</a></li>
+      <li><a href="12OPCION.HTM" class="no-ch">1.2.-	Opciones de almacenamiento.</a></li>
+   </ul>
+   </li>
+   <li><a href="2BASES_D.HTM" class="daddy">2.-	Bases de Datos Nativas XML.</a>
+   <ul class="other-section">
+      <li><a href="21ESTRAT.HTM" class="no-ch">2.1.-	Estrategias de almacenamiento.</a></li>
+      <li><a href="22COLECC.HTM" class="no-ch">2.2.-	Colecciones y documentos.</a></li>
+      <li><a href="23GESTOR.HTM" class="no-ch">2.3.-	Gestores nativos XML comerciales y libres</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_BASE_D.HTM" class="current-page-parent daddy">3.- Base de datos eXist.</a>
+   <ul>
+      <li><a href="31_INSTA.HTM" class="no-ch">3.1.- Instalación eXist.</a></li>
+      <li><a href="32_PRIME.HTM" class="no-ch">3.2.- Primeros pasos.</a></li>
+      <li><a href="33_JAVA_.HTM" class="no-ch">3.3.- Java Admin Client de eXist.</a></li>
+      <li id="active"><a href="34_LENGU.HTM" class="active no-ch">3.4.- Lenguaje de consulta XPath.</a></li>
+      <li><a href="35_EL_LE.HTM" class="daddy">3.5.- El lenguaje de consultas XQuery.</a>
+      <ul class="other-section">
+         <li><a href="351_MODE.HTM" class="no-ch">3.5.1.- Modelo de datos.</a></li>
+         <li><a href="352_CAMI.HTM" class="no-ch">3.5.2.- Caminos de localización.</a></li>
+         <li><a href="353_PRIM.HTM" class="no-ch">3.5.3.- Primeras consultas XQuery.</a></li>
+         <li><a href="354_EXPR.HTM" class="no-ch">3.5.4.- Expresiones FLWOR.</a></li>
+         <li><a href="355_XQUE.HTM" class="no-ch">3.5.5.- XQuery Update Facility.</a></li>
+      </ul>
+      </li>
+      <li><a href="36_CONEX.HTM" class="daddy">3.6.- Conexión a base de datos XML. API XML:DB.</a>
+      <ul class="other-section">
+         <li><a href="361_INTR.HTM" class="no-ch">3.6.1.- Introducción.</a></li>
+         <li><a href="362_CONS.HTM" class="no-ch">3.6.2.- Consultas sobre colecciones y documentos.</a></li>
+         <li><a href="363_CREA.HTM" class="no-ch">3.6.3.- Crear y borrar colecciones.</a></li>
+      </ul>
+      </li>
+      <li><a href="37_CONEX.HTM" class="daddy">3.7.- Conexión a base de datos XML. API XJQ.</a>
+      <ul class="other-section">
+         <li><a href="371_INTR.HTM" class="no-ch">3.7.1.- Introducción</a></li>
+         <li><a href="372_CONE.HTM" class="no-ch">3.7.2.- Conexión a la BD.</a></li>
+         <li><a href="373_EJEC.HTM" class="no-ch">3.7.3.- Ejecución de consultas XQuery</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_BASES_.HTM" class="daddy">4.- Bases de Datos MongoDB</a>
+   <ul class="other-section">
+      <li><a href="41_INSTA.HTM" class="no-ch">4.1.- Instalación, configuración y manejo de una base de datos Mongo.</a></li>
+      <li><a href="42_CONEX.HTM" class="no-ch">4.2.- Conexión desde JAVA a MongoDB</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="33_JAVA_.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_EL_LE.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.4.- Lenguaje de consulta XPath.</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id108">
+<div class="iDevice emphasis0" >
+<div id="ta108_111_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><b>XPath</b><span> (</span><code>XML Path Language</code><span>) es un lenguaje que permite construir expresiones que recorren y procesan un documento XML. La idea es parecida a las </span><a href="https://es.wikipedia.org/wiki/Expresiones_regulares" title="Expresiones regulares">expresiones regulares</a><span> para seleccionar partes de un texto sin atributos (</span><code>plain text</code><span>). XPath permite buscar y seleccionar teniendo en cuenta la estructura jerárquica del XML. XPath fue creado para su uso en el estándar </span><a href="https://es.wikipedia.org/wiki/XSLT" title="XSLT">XSLT</a><span>, en el que se usa para seleccionar y examinar la estructura del documento de entrada de la transformación. XPath fue definido por el consorcio </span><a href="https://es.wikipedia.org/wiki/W3C" title="W3C">W3C</a><span>.</span></p>
+<p style="text-align: justify;"><span><img src="../GIF/PIC_XPAT.GIF" alt="Fuente: https://www.w3schools.com" width="160" height="160" /></span></p>
+<p style="text-align: justify;"><span>Caracteristicas de XPath<br /></span></p>
+<ul style="text-align: justify;">
+<li>Es una sintaxis para definir partes de un documento XML</li>
+<li>Usa expresiones de ruta para navegar en documentos XML</li>
+<li>Contiene una biblioteca de funciones estándar</li>
+<li>Es un elemento importante en XSLT y en XQuery</li>
+<li>XPath 3.0 es una recomendación de W3C desde  Abril de 2014.</li>
+</ul>
+<p style="text-align: justify;"><b>Tipos de nodos</b></p>
+<p style="text-align: justify;">Las partes de un documento XLM se denominan nodos. Existen 7 tipos de nodos diferentes:</p>
+<ul style="text-align: justify;">
+<li>Raíz: El nodo raíz o nodo documento (root node) no debe confundirse con el elemento raíz. Éste es más bien el nodo padre virtual del elemento raíz.</li>
+<li>Elemento (element node)</li>
+<li>Atributo (attribute node)</li>
+<li>Texto (text node)</li>
+<li>Espacio de nombres (namespace node)</li>
+<li>Instrucción de procesamiento (processing instruction node)</li>
+<li>Comentario (comment node)</li>
+</ul>
+<p style="text-align: justify;">Cada uno de estos nodos puede ser seleccionado con <a href="#t3c92b6ee-495d-83b6-2711-3799e877df27" id="link3c92b6ee-495d-83b6-2711-3799e877df27" class="exe-tooltip definition-tt">XPath</a> para su posterior procesamiento en XSL.</p>
+<p id="yui_3_17_2_1_1596299808305_137" style="text-align: justify;"><b id="yui_3_17_2_1_1596299808305_139">Los ejes</b></p>
+<p id="yui_3_17_2_1_1596299808305_138" style="text-align: justify;">La navegación dentro de un documento XML a través de XPath tiene lugar desde un nodo de contexto, que en las siguientes ilustraciones se representan como 'SELF'. El nodo de contexto es siempre el punto de partida en el que se encuentra el procesador XSLT. Los nombres de los ejes definen las relaciones de parentesco respecto al mismo. En las ilustraciones se muestran 11 de los 13 ejes disponibles. Junto a los ejes que presentamos a continuación, que permiten la navegación en un documento, es posible seleccionar atributos de un nodo o nodos de espacio de nombres a través de los ejes <code>attribute </code>o <code>namespace</code>.</p>
+<p style="text-align: justify;">El eje self contiene el nodo de contexto.</p>
+<p style="text-align: justify;"><img src="../JPG/XPATH_IM.JPG" alt="Fuente: https://www.data2type.de" width="899" height="503" /></p>
+<p style="text-align: justify;"><span>El eje child contiene los nodos hijo del nodo de contexto.</span></p>
+<p style="text-align: justify;"><span><img src="../JPG/XPATH_-2.JPG" alt="Fuente: https://www.data2type.de" width="815" height="442" /></span></p>
+<p style="text-align: justify;"><span>El eje descendant-or-self contiene el nodo de contexto y los descendientes.<br /></span></p>
+<p style="text-align: justify;"><span><img src="../JPG/XPATH_-3.JPG" alt="Fuente: https://www.data2type.de" width="753" height="408" /></span></p>
+<p style="text-align: justify;"><span>El eje parent contiene el padre del nodo de contexto.</span></p>
+<p style="text-align: justify;"><span><img src="../JPG/XPATH_-4.JPG" alt="Fuente: https://www.data2type.de" width="685" height="376" /></span></p>
+<p id="yui_3_17_2_1_1596299808305_150" style="text-align: justify;">El eje ancestor contiene los ancestros del nodo de contexto.</p>
+<p style="text-align: justify;"><img src="../JPG/XPATH_-5.JPG" alt="Fuente: https://www.data2type.de" width="717" height="384" /></p>
+<p id="yui_3_17_2_1_1596299808305_154" style="text-align: justify;">El eje ancestor-or-self contiene el nodo de contexto y sus descendientes.</p>
+<p style="text-align: justify;"><img src="../JPG/XPATH_-6.JPG" alt="Fuente: https://www.data2type.de" width="658" height="354" /></p>
+<p style="text-align: justify;"><span>El eje preceding contiene todos los nodos que aparecen antes del nodo de contexto, excluyendo los ancestros. El eje following contiene todos los nodos que aparecen después del nodo de contexto, excluyendo los descendientes.</span></p>
+<p style="text-align: justify;"><span><img src="../JPG/XPATH_-7.JPG" alt="Fuente: https://www.data2type.de" width="604" height="329" /></span></p>
+<p style="text-align: justify;"><span>El eje preceding-sibling contiene los hermanos precedentes del nodo de contexto. El eje following-sibling contiene los hermanos situados detrás del nodo de contexto.</span></p>
+<p style="text-align: justify;"><span><img src="../JPG/XPATH_-8.JPG" alt="Fuente: https://www.data2type.de" width="619" height="333" /></span></p>
+<div id="c4276" style="text-align: justify;">
+<p><b>Localización</b></p>
+<p>La localización es la expresión que permite al procesador seleccionar nodos o un conjunto de nodos. Esta localización se conoce como camino o ruta de localización y puede presentar diversas formas:</p>
+<ul>
+<li>con sintaxis abreviada o completa</li>
+<li>como ruta de localización relativa o absoluta.</li>
+</ul>
+<p><b>Sintaxis abreviada o completa</b></p>
+<p id="yui_3_17_2_1_1596299808305_164">En XPath existen dos formas de sintaxis, que en la práctica se pueden utilizar de manera combinada. La sintaxis abreviada se usa normalmente cuando se trata de nodos y ejes que son seleccionados con mucha frecuencia, mientras que la sintaxis completa se utiliza en caso de nodos y ejes a los que se accede con menor frecuencia. En los siguientes apartados se utilizará la sintaxis completa, recurriendo a la sintaxis abreviada cuando se trate de expresiones más frecuentes.</p>
+<ul>
+<li><span>Un ejemplo de sintaxis completa:</span></li>
+</ul>
+</div>
+<div class="highlighted-code language-markup" style="text-align: justify;">
+<div>
+<pre><code>/child::libro/child::autor/child::nombre/attribut::apellido</code></pre>
+</div>
+</div>
+<div id="c4278" style="text-align: justify;">
+<ul>
+<li><span>En sintaxis abreviada:</span></li>
+</ul>
+</div>
+<div id="c4279" style="text-align: justify;">
+<div>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>/libro/autor/nombre/@apellido</code></pre>
+</div>
+</div>
+<em></em></div>
+</div>
+<div id="c4280" style="text-align: justify;">
+<p>En la sintaxis abreviada se prescinde del nombre del eje <code>child:</code>: y el atributo se introduce anteponiendo el carácter @. En los próximos ejemplos se ofrecerán más detalles sobre la sintaxis abreviada.</p>
+<p id="yui_3_17_2_1_1596299808305_168"><b id="yui_3_17_2_1_1596299808305_167">Equivalencias entre sintaxis completa y abreviada</b></p>
+<table title="Rutas de localización - sintaxis completa y abreviada" border="1" id="yui_3_17_2_1_1596299808305_173" style="border-color: #000000; height: 131px; width: 486px;">
+<thead>
+<tr style="height: 22px;">
+<th style="height: 22px; width: 181px;"><span style="font-size: 12pt;">Sintaxis completa</span></th>
+<th style="height: 22px; width: 289px;"><span style="font-size: 12pt;">Sintaxis abreviada</span></th>
+</tr>
+</thead>
+<tbody id="yui_3_17_2_1_1596299808305_172">
+<tr style="height: 21px;">
+<td style="height: 21px; width: 181px;"><span style="font-size: 10pt;"><code>child::</code></span></td>
+<td style="height: 21px; width: 289px;"><span style="font-size: 12pt;">Eje por defecto. Se puede omitir.</span></td>
+</tr>
+<tr style="height: 22px;">
+<td style="height: 22px; width: 181px;"><span style="font-size: 10pt;"><code>attribute::</code></span></td>
+<td style="height: 22px; width: 289px;"><span style="font-size: 10pt;"><code>@</code></span></td>
+</tr>
+<tr style="height: 22px;">
+<td style="height: 22px; width: 181px;"><span style="font-size: 10pt;"><code>descendant-or-self::node()/</code></span></td>
+<td style="height: 22px; width: 289px;"><span style="font-size: 10pt;"><code>//</code></span></td>
+</tr>
+<tr id="yui_3_17_2_1_1596299808305_171" style="height: 22px;">
+<td style="height: 22px; width: 181px;"><span style="font-size: 10pt;"><code>self::node()</code></span></td>
+<td id="yui_3_17_2_1_1596299808305_170" style="height: 22px; width: 289px;"><span style="font-size: 10pt;"><code>.</code></span></td>
+</tr>
+<tr id="yui_3_17_2_1_1596299808305_175" style="height: 22px;">
+<td style="height: 22px; width: 181px;"><span style="font-size: 10pt;"><code>parent::node()</code></span></td>
+<td id="yui_3_17_2_1_1596299808305_174" style="height: 22px; width: 289px;"><span style="font-size: 10pt;"><code>..</code></span></td>
+</tr>
+</tbody>
+</table>
+<div id="c4280">
+<p><b></b></p>
+<p><b>Rutas relativas y absolutas</b></p>
+<p id="yui_3_17_2_1_1596299808305_169">La ruta de localización XPath puede ser relativa o absoluta. Una ruta absoluta comienza por el nodo raíz, que es el nodo situado directamente sobre el elemento raíz. Esta distinción es necesaria, ya que desde el elemento raíz no sería posible acceder, por ejemplo, a comentarios o instrucciones que se encuentran fuera del mismo. <br />Las rutas de localización constan de pasos de localización separados por /.</p>
+<p>Un ejemplo:</p>
+</div>
+<div id="c4281">
+<div>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>/child::Europa/child::pais/child::nombre</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="c4282">
+<p>En este caso se trata de una ruta absoluta que parte del nodo raíz. El nodo raíz se indica mediante una barra diagonal. Desde ahí se selecciona el elemento raíz &lt;<code>Europa</code>&gt;. La expresión generará un resultado si el elemento raíz tiene un nodo hijo &lt;<code>pais</code>&gt; y éste a su vez contiene un nodo hijo &lt;<code>nombre</code>&gt;. Los ejes se definen mediante el nombre del eje seguido de dos signos de dos puntos. En el caso del eje child, puede omitirse la expresión <code>child:</code>:. Así, la ruta de localización <code>Europa/pais/nombre</code> equivale a la ruta del ejemplo con sintaxis abreviada. Por el contrario, las rutas de localización relativas necesitan un nodo de contexto. La ruta se evaluará desde esta posición.</p>
+</div>
+</div>
+<div style="text-align: justify;">
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="style.xsl"?&gt;          
+&lt;Europa&gt;
+    &lt;pais&gt;
+        &lt;nombre&gt;Alemania&lt;/nombre&gt;
+        &lt;habitantes unidad="millones"&gt;82.4&lt;/habitantes&gt;
+        &lt;capital&gt;Berlín&lt;/capital&gt;
+        &lt;sigla-pais&gt;D&lt;/sigla-pais&gt;
+        &lt;prefijo&gt;0049&lt;/prefijo&gt;
+    &lt;/pais&gt;
+    &lt;pais&gt;
+        &lt;nombre&gt;Francia&lt;/nombre&gt;
+        &lt;habitantes unidad="millones"&gt;58.5&lt;/habitantes&gt;
+        &lt;capital&gt;Paris&lt;/capital&gt;
+        &lt;sigla-pais&gt;F&lt;/sigla-pais&gt;
+        &lt;prefijo&gt;0033&lt;/prefijo&gt;
+     &lt;/pais&gt;
+     &lt;pais&gt;
+        &lt;nombre&gt;España&lt;/nombre&gt;
+        &lt;habitantes unidad="millones"&gt;39.4&lt;/habitantes&gt;
+        &lt;capital&gt;Madrid&lt;/capital&gt;
+        &lt;sigla-pais&gt;E&lt;/sigla-pais&gt;
+        &lt;prefijo&gt;0034&lt;/prefijo&gt;
+     &lt;/pais&gt;
+&lt;/Europa&gt; </code></pre>
+</div>
+</div>
+<span style="font-size: 10pt;"><code></code></span></div>
+<p style="text-align: justify;"><strong>Ejemplo:</strong></p>
+<div class="highlighted-code language-markup" style="text-align: justify;">
+<div>
+<pre><code>child::pais/child::nombre</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">De igual forma que en la ruta absoluta, en este caso se generará un resultado si el nodo de contexto tiene un nodo hijo &lt;<code>pais</code>&gt;, que a su vez posee un nodo hijo &lt;<code>nombre</code>&gt;.</p>
+<p style="text-align: justify;">La descripción aquí presentada de las rutas relativas es incompleta. Podrá encontrar más información sobre rutas relativas en literatura especializada sobre XPath.</p>
+<p style="text-align: justify;">Las siguientes son expresiones XPath con sintaxis abreviadas y extendidas. ¿Qué mostrarían estas consultas?</p>
+<div style="padding-left: 30px; text-align: justify;">
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>/Europa/pais/nombre
+/Europa/pais/habitantes
+/Europa/descendant::habitantes
+/Europa/pais/nombre/following-sibling::habitantes
+/Europa/pais/nombre/following-sibling::habitantes/parent::pais/descendant::capital</code></pre>
+</div>
+</div>
+<span><b>Filtrar conjuntos de nodos a través de predicados</b></span></div>
+<div style="padding-left: 30px; text-align: justify;"><span><b></b></span></div>
+<p style="text-align: justify;"><span>Las expresiones XPath sirven para la selección de nodos en un árbol XML. Gracias al filtrado de expresiones a través de predicados, es posible usar expresiones XPath para seleccionar grupos de nodos que respondan a criterios más complejos, definiendo el acceso a los nodos de una manera mucho más precisa. Los predicados son expresiones que devuelven un resultado booleano (verdadero o falso), de manera que se puede filtrar de nuevo el resultado del nodo seleccionado a través de la expresión XPath. En caso de que un determinado nodo dentro de un conjunto de nodos se corresponda con el predicado de la expresión (que se cumpla la condición del mismo), éste pasará a formar parte del resultado. Por el contrario, si la condición no se cumple, se excluirá el nodo del resultado. De esta forma es posible afinar la búsqueda dentro de un determinado conjunto inicial de nodos a través de las restricciones realizadas mediante predicados.</span></p>
+<p style="text-align: justify;"><span>Localización de distintos tipos de nodos</span></p>
+<p style="text-align: justify;"><span>Hasta ahora nos hemos ocupado sobre todo con los nodos elemento. No obstante, existen otros tipos de nodo que pueden ser seleccionados para su posterior análisis y procesamiento. La siguiente tabla muestra ejemplos de cómo se realiza tal selección.</span></p>
+<table title="Localización de distintos tipos de nodos" border="1" style="height: 84px; border-color: #000000;">
+<tbody>
+<tr style="height: 21px;">
+<td style="height: 21px; width: 142px;"><span style="font-size: 10pt;"><code>nombre/text()</code></span></td>
+<td style="height: 21px; width: 837px;"><span style="font-size: 12pt;">En caso de que se quiera acceder al nodo de texto del elemento nombre se deberá usar la prueba de nodo <span style="font-size: 10pt;"><code>text().</code></span></span></td>
+</tr>
+<tr style="height: 42px;">
+<td style="height: 42px; width: 142px;"><span style="font-size: 10pt;"><code>direccion/comment()</code></span></td>
+<td style="height: 42px; width: 837px;"><span style="font-size: 12pt;">En caso de que se quiera acceder al nodo de comentario del elemento direccion se deberá usar la prueba de nodo <span style="font-size: 10pt;"><code>coment().</code></span></span></td>
+</tr>
+<tr style="height: 21px;">
+<td style="height: 21px; width: 142px;"><span style="font-size: 10pt;"><code>dirección/node()</code></span></td>
+<td style="height: 21px; width: 837px;"><span style="font-size: 12pt;">Si se quiere acceder a todos los tipos de nodos (con excepción de los atributos) se deberá usar la prueba de nodo <span style="font-size: 10pt;"><code>node().</code></span></span></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p>
+<p id="yui_3_17_2_1_1596299808305_179" style="text-align: justify;">Ejemplo:</p>
+<div class="highlighted-code language-markup" style="text-align: justify;">
+<div>
+<pre><code>//direccion[localidad="Stuttgart"]</code></pre>
+</div>
+</div>
+<p style="text-align: justify;"><span>La expresión <code>//direccion </code>selecciona todos los nodos elemento "<code>direccion"</code> del documento. En el segundo paso se reduce esta selección mediante un predicado. Sólo aquellos elementos que tengan un elemento hijo "<code>localidad</code>" y que el valor del mismo sea "<code>Stuttgart</code>" permanecerán en la selección. Los demás serán excluidos.</span></p>
+<p id="yui_3_17_2_1_1596299808305_187" style="text-align: justify;">Es posible, además de la comparación de cadenas, restringir la selección mediante la comparación de otros valores en la expresión de un predicado. Por ejemplo:</p>
+<table title="Comparación de valores" border="1" style="height: 100px; border-color: #000000;">
+<tbody>
+<tr style="height: 25px;">
+<td style="height: 25px; width: 317px;"><span style="font-size: 12pt;">Comparación de cadena</span></td>
+<td style="height: 25px; width: 338px;"><code><span style="font-size: 12pt;">direccion[nombre="Pepe López"]</span></code></td>
+</tr>
+<tr style="height: 25px;">
+<td style="height: 25px; width: 317px;"><span style="font-size: 12pt;">Comparación numérica (mayor)</span></td>
+<td style="height: 25px; width: 338px;"><span style="font-size: 10pt;"><code>disco[@calificacion &gt; 3]</code></span></td>
+</tr>
+<tr style="height: 25px;">
+<td style="height: 25px; width: 317px;"><span style="font-size: 12pt;">Comparación numérica (menor o igual)</span></td>
+<td style="height: 25px; width: 338px;"><span style="font-size: 10pt;"><code>//cancion[@año &lt;= 1990]</code></span></td>
+</tr>
+<tr style="height: 25px;">
+<td style="height: 25px; width: 317px;"><span style="font-size: 12pt;">Combinación de "mayor" y "no igual a"</span></td>
+<td style="height: 25px; width: 338px;"><span style="font-size: 10pt;"><code>disco[@calificacion &lt; 2]/cancion[@año != 2000]</code></span></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p>
+<p style="text-align: justify;">Además de la comparación de valores, es posible establecer la coexistencia de otros elementos como criterio para analizar un conjunto de nodos.</p>
+<table title="Comprobación de la existencia de otros elementos" border="1" style="height: 50px; border-color: #000000;">
+<tbody>
+<tr style="height: 25px;">
+<td style="height: 25px; width: 283px;"><span style="font-size: 10pt;"><code>/listadedirecciones[direccion]</code></span></td>
+<td style="height: 25px; width: 485px;"><span style="font-size: 12pt;">Comprueba si existe el elemento hijo "<code><span style="font-size: 10pt;">dirección</span></code>".</span></td>
+</tr>
+<tr style="height: 25px;">
+<td style="height: 25px; width: 283px;"><span style="font-size: 10pt;"><code>/listadedirecciones/direccion[@cat]</code></span></td>
+<td style="height: 25px; width: 485px;"><span style="font-size: 12pt;">Comprueba si existe un atributo "<code><span style="font-size: 10pt;">cat</span></code>" dentro de "<span style="font-size: 10pt;"><code>direccion</code></span>".</span></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"></p>
+<p style="text-align: justify;">Atención: Un predicado sólo comprueba si la condición es veradera o falsa. Se trata de una conversión implícita a un valor booleano.</p>
+<p style="text-align: justify;"><b>Operadores booleanos en predicados</b></p>
+<p style="text-align: justify;">Los predicados pueden contener los operadores booleanos "<code>and</code>" y "<code>or</code>".</p>
+<table title="Operadores booleanos en predicados" border="1" id="yui_3_17_2_1_1596299808305_195" style="border-color: #000000;">
+<tbody id="yui_3_17_2_1_1596299808305_194">
+<tr id="yui_3_17_2_1_1596299808305_193">
+<td><span style="font-size: 10pt;"><code>//titulo[@estilo="pop" and @calificacion=4]</code></span></td>
+<td id="yui_3_17_2_1_1596299808305_192"><span style="font-size: 12pt;">Selecciona todos los elementos "<span style="font-size: 10pt;"><code>titulo</code></span>" que posean un atributo "<span style="font-size: 10pt;"><code>estilo</code></span>" con el valor "<span style="font-size: 10pt;"><code>pop</code></span>" y además un atributo "<span style="font-size: 10pt;"><code>calificacion</code></span>" con el valor 4.</span></td>
+</tr>
+<tr id="yui_3_17_2_1_1596299808305_197">
+<td><span style="font-size: 10pt;"><code>//titulo[@estilo="pop" or @calificacion&gt; 2]</code></span></td>
+<td id="yui_3_17_2_1_1596299808305_196"><span style="font-size: 12pt;">Selecciona todos los elementos "<span style="font-size: 10pt;"><code>titulo</code></span>" que posean un atributo "<span style="font-size: 10pt;"><code>estilo</code></span>" con el valor "<span style="font-size: 10pt;"><code>pop</code></span>" o un atributo "<span style="font-size: 10pt;"><code>calificacion</code></span>" cuyo valor sea mayor que 2.</span></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;"><b style="font-size: 1.05em;"></b></p>
+<p style="text-align: justify;"><b style="font-size: 1.05em;">Predicados en cascada</b></p>
+<div id="c4298" style="text-align: justify;">
+<p>Además del filtrado mediante operadores booleanos, es posible restringir la selección mediante una disposición en serie de predicados. Los predicados en cascada funcionan como una superposición de filtros. En primer lugar se filtra un conjunto de nodos, que será a su vez el conjunto de partida para el segundo predicado, etc.</p>
+</div>
+<div id="c4299" style="text-align: justify;">
+<div>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>//seccion[parrafo][@tipo='advertencia']</code></pre>
+</div>
+</div>
+<em></em></div>
+</div>
+<div id="c4300" style="text-align: justify;">
+<p>En primer lugar se seleccionan todos los elementos seccion. El primer predicado reduce la selección a aquellos elementos que tengan un elemento hijo "<code>parrafo</code>". El conjunto resultante se filtra de nuevo mediante el segundo predicado, de manera que sólo quedaran los elementos que tengan un atributo "<code>tipo</code>" con el valor "<code>advertencia</code>".</p>
+<div id="c4301">
+<p><b>Unión de conjuntos de nodos</b></p>
+<p>Hasta ahora se ha definido en cada expresión sólo un conjunto de nodos. No obstante, se dan con frecuencia aplicaciones en las que se deben unir varios conjuntos de nodos. En el ejemplo ofrecido a continuación se selecciónan todos los títulos dentro del estilo pop y todas las compañías discográficas.</p>
+</div>
+<div id="c4302">
+<div id="yui_3_17_2_1_1596299808305_201">
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>//titulo[@estilo="pop"] | //discografica</code></pre>
+</div>
+</div>
+<div id="c4301">
+<div id="c4303">
+<p><b>Funciones XPath</b></p>
+<p>Las funciones ofrecen operaciones avanzadas adicionales en la consulta de conjuntos de nodos, así como en el análisis de cadena de nodos de texto y valores de atributos. Las funciones <a href="https://www.data2type.de/es/xml-xslt-xslfo/xpath/" target="_top"><span lang="es" title="XPath">XPath</span></a> se pueden usar en expresiones XPath y en predicados, tal como se muestra en el siguiente ejemplo:</p>
+</div>
+<div id="c4304">
+<div>
+<div class="highlighted-code language-markup">
+<div>
+<pre><code>count(//cancion)
+//disco[count(cancion)&gt;10]</code></pre>
+</div>
+</div>
+<em></em></div>
+</div>
+<div id="c4305">
+<p>Las funciones pueden contener un argumento y devuelven siempre un valor. En el primer ejemplo la función "<code>count</code>" tiene como argumento un conjunto de nodos y devuelve como valor de salida un conjunto de nodos.</p>
+<p>Ejemplos de funciones de conjuntos de nodos:</p>
+<table title="Funciones de conjuntos de nodos" border="1" style="height: 100px; border-color: #000000;">
+<tbody>
+<tr style="height: 25px;">
+<td style="height: 25px; width: 387px;"><span style="font-size: 10pt;"><code>local-name(..)</code></span></td>
+<td style="height: 25px; width: 592px;"><span style="font-size: 12pt;">Devuelve el nombre del elemento padre como cadena.</span></td>
+</tr>
+<tr style="height: 50px;">
+<td style="height: 50px; width: 387px;"><span style="font-size: 10pt;"><code>//cancion[position()=5] (Sintaxis abreviada [5] )</code></span></td>
+<td style="height: 50px; width: 592px;"><span style="font-size: 12pt;">Devuelve todas las canciones que ocupen la quinta posición en cada disco.</span></td>
+</tr>
+<tr style="height: 25px;">
+<td style="height: 25px; width: 387px;"><span style="font-size: 10pt;"><code>//cancion[position()=last()]</code></span></td>
+<td style="height: 25px; width: 592px;"><span style="font-size: 12pt;">Devuelve las canciones que ocupen la última posición en cada disco.</span></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>Ejemplos de funciones de cadena:</p>
+<table title="Funcions de cadena" border="1" style="height: 115px; width: 998px; border-color: #000000;" width="998">
+<tbody>
+<tr style="height: 50px;">
+<td style="height: 50px; width: 268px;"><span style="font-size: 10pt;"><code>//disco[string-length(titulo) &gt; 20 ]</code></span></td>
+<td style="height: 50px; width: 714px;"><span style="font-size: 12pt;">Selecciona todos los discos cuyo título tenga más de 20 caracteres.</span></td>
+</tr>
+<tr style="height: 50px;">
+<td style="height: 50px; width: 268px;"><span style="font-size: 10pt;"><code>//disco[starts-with(interprete,'M')]</code></span></td>
+<td style="height: 50px; width: 714px;"><span style="font-size: 12pt;">Selecciona todos los discos en los que el nombre del intérprete comience con la letra "<span style="font-size: 10pt;"><code>M</code></span>".</span></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>Un ejemplo de una función muy útil y usada con mucha frecuencia es "<code>not()</code>". Esta función niega una expresión booleana. A continuación se ofrece un ejemplo del empleo de esta función:</p>
+<table title="Función not()" border="1" style="border-color: #000000; width: 733px;">
+<tbody>
+<tr>
+<td style="width: 172px;"><span style="font-size: 10pt;"><code>//disco[not(cancion)]</code></span></td>
+<td style="width: 545px;"><span style="font-size: 12pt;">Selecciona todos los discos que no tengan un elemento "<span style="font-size: 10pt;"><code>cancion</code></span>".</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p style="text-align: justify;"><span style="font-size: 10pt;"><code> </code></span></p>
+<p style="text-align: justify;"><span style="font-size: 10pt;"><code></code></span></p>
+<div id="t3c92b6ee-495d-83b6-2711-3799e877df27" class="exe-tooltip-text">
+<p style="text-align: justify;">Camino de acceso a los datos de acceso a un árbol XML</p>
+</div></div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="33_JAVA_.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_EL_LE.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/34_lenguaje_de_consulta_xpath.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:22 GMT -->
+</html>

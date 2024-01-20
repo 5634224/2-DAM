@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/42_conexin_desde_java_a_mongodb.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.2.- Conexión desde JAVA a MongoDB </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_HIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-52"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Bases de datos xml.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introduccion.</a>
+   <ul class="other-section">
+      <li><a href="11_DOCUM.HTM" class="no-ch">1.1.- Documentos XML centrados en datos y en texto.</a></li>
+      <li><a href="12OPCION.HTM" class="no-ch">1.2.-	Opciones de almacenamiento.</a></li>
+   </ul>
+   </li>
+   <li><a href="2BASES_D.HTM" class="daddy">2.-	Bases de Datos Nativas XML.</a>
+   <ul class="other-section">
+      <li><a href="21ESTRAT.HTM" class="no-ch">2.1.-	Estrategias de almacenamiento.</a></li>
+      <li><a href="22COLECC.HTM" class="no-ch">2.2.-	Colecciones y documentos.</a></li>
+      <li><a href="23GESTOR.HTM" class="no-ch">2.3.-	Gestores nativos XML comerciales y libres</a></li>
+   </ul>
+   </li>
+   <li><a href="3_BASE_D.HTM" class="daddy">3.- Base de datos eXist.</a>
+   <ul class="other-section">
+      <li><a href="31_INSTA.HTM" class="no-ch">3.1.- Instalación eXist.</a></li>
+      <li><a href="32_PRIME.HTM" class="no-ch">3.2.- Primeros pasos.</a></li>
+      <li><a href="33_JAVA_.HTM" class="no-ch">3.3.- Java Admin Client de eXist.</a></li>
+      <li><a href="34_LENGU.HTM" class="no-ch">3.4.- Lenguaje de consulta XPath.</a></li>
+      <li><a href="35_EL_LE.HTM" class="daddy">3.5.- El lenguaje de consultas XQuery.</a>
+      <ul class="other-section">
+         <li><a href="351_MODE.HTM" class="no-ch">3.5.1.- Modelo de datos.</a></li>
+         <li><a href="352_CAMI.HTM" class="no-ch">3.5.2.- Caminos de localización.</a></li>
+         <li><a href="353_PRIM.HTM" class="no-ch">3.5.3.- Primeras consultas XQuery.</a></li>
+         <li><a href="354_EXPR.HTM" class="no-ch">3.5.4.- Expresiones FLWOR.</a></li>
+         <li><a href="355_XQUE.HTM" class="no-ch">3.5.5.- XQuery Update Facility.</a></li>
+      </ul>
+      </li>
+      <li><a href="36_CONEX.HTM" class="daddy">3.6.- Conexión a base de datos XML. API XML:DB.</a>
+      <ul class="other-section">
+         <li><a href="361_INTR.HTM" class="no-ch">3.6.1.- Introducción.</a></li>
+         <li><a href="362_CONS.HTM" class="no-ch">3.6.2.- Consultas sobre colecciones y documentos.</a></li>
+         <li><a href="363_CREA.HTM" class="no-ch">3.6.3.- Crear y borrar colecciones.</a></li>
+      </ul>
+      </li>
+      <li><a href="37_CONEX.HTM" class="daddy">3.7.- Conexión a base de datos XML. API XJQ.</a>
+      <ul class="other-section">
+         <li><a href="371_INTR.HTM" class="no-ch">3.7.1.- Introducción</a></li>
+         <li><a href="372_CONE.HTM" class="no-ch">3.7.2.- Conexión a la BD.</a></li>
+         <li><a href="373_EJEC.HTM" class="no-ch">3.7.3.- Ejecución de consultas XQuery</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="4_BASES_.HTM" class="current-page-parent daddy">4.- Bases de Datos MongoDB</a>
+   <ul>
+      <li><a href="41_INSTA.HTM" class="no-ch">4.1.- Instalación, configuración y manejo de una base de datos Mongo.</a></li>
+      <li id="active"><a href="42_CONEX.HTM" class="active no-ch">4.2.- Conexión desde JAVA a MongoDB</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="41_INSTA.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ANEXO_LI.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.2.- Conexión desde JAVA a MongoDB</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id132">
+<div class="iDevice emphasis0" >
+<div id="ta132_132_2" class="block iDevice_content">
+<div class="exe-text"><p>Las  ordenes Java necesarias para conectar a una base de datos MongoDB son:</p>
+<ul>
+<li>Conectar con la base de datos<br /><code>MongoClient clienteMongo = MongoClients.create();</code></li>
+<li>Activar una base de datos<br /><code>MongoDatabase baseDatos = clienteMongo.getDatabase("centro");</code></li>
+<li>Obtener un listado de las colecciones<br /><code>baseDatos.listCollectionNames();</code></li>
+<li>Cerrar la conexión<br /><code>clienteMongo.close();</code></li>
+</ul>
+<p>En el siguiente ejemplo se muestra la conexión a una base de datos Mongo llamada centro:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>package com.jcg.java.mongodbfp;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoDatabase;
+public class JavaMongoDbFp {
+      public static void main( String args[] ) {
+           MongoClient clienteMongo = MongoClients.create();
+           MongoDatabase baseDatos = clienteMongo.getDatabase("centro");
+           for (String name : baseDatos.listCollectionNames()) {
+                System.out.println(name);
+           }clienteMongo.close();
+}
+}</code></pre>
+</div>
+</div>
+<ul>
+<li>Seleccionar una colección<br /><code>MongoCollection coleccion = database.getCollection("personas");</code></li>
+<li>Buscar el primer documento de una colección<br /><code>Document primero = coleccion.find().first();</code></li>
+</ul>
+<p>En el siguiente ejemplo se muestra como seleccionar una colección y como buscar el primer documento de la misma:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>package com.jcg.java.mongodbfp;
+import com.mongodb.*;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Projections;
+import com.mongodb.client.model.Filters;
+import static com.mongodb.client.model.Filters.*;
+import static com.mongodb.client.model.Projections.*;
+import com.mongodb.client.model.Sorts;
+import java.util.Arrays;
+import org.bson.Document;
+public class JavaMongoDbFp {
+         public static void main( String args[] ) {
+             MongoClient clienteMongo = MongoClients.create();
+             MongoDatabase baseDatos = clienteMongo.getDatabase("centro");
+             MongoCollection&lt;Document&gt; coleccion =
+             baseDatos.getCollection("personas");
+             Document primero = coleccion.find().first();
+             System.out.println(primero.toJson());
+             clienteMongo.close();
+        }
+}</code></pre>
+</div>
+</div>
+<ul>
+<li>Realizar una consulta<br /><code>FindIterable&lt;Document&gt; iterDoc = coleccion.find(new Document("tipo", "Alumno"));</code></li>
+</ul>
+<p>En el siguiente ejemplo se muestra como realizar una consulta a una base de datos dada.</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>package com.jcg.java.mongodbfp;
+import com.mongodb.*;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Projections;
+import com.mongodb.client.model.Filters;
+import static com.mongodb.client.model.Filters.*;
+import static com.mongodb.client.model.Projections.*;
+import com.mongodb.client.model.Sorts;
+import java.util.Arrays;
+import java.util.Iterator;
+import org.bson.Document;
+public class JavaMongoDbFp {
+      public static void main( String args[] ) {
+          MongoClient clienteMongo = MongoClients.create();
+          MongoDatabase baseDatos = clienteMongo.getDatabase("centro");
+          MongoCollection&lt;Document&gt; coleccion = baseDatos.getCollection("personas");
+         //Obtener un objecto iterable de tipo cursor
+          FindIterable&lt;Document&gt; iterDoc = coleccion.find(new Document("tipo", "Alumno"));
+           int i = 1;
+           //Iniciamos el iterador
+           Iterator it = iterDoc.iterator();
+           while (it.hasNext()) {
+               System.out.println(it.next());
+               i++;}
+        clienteMongo.close();
+      }
+}</code></pre>
+</div>
+</div>
+<p>En el siguiente ejemplo se realiza una inserción de un documento:</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>package com.jcg.java.mongodbfp;
+import com.mongodb.*;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Projections;
+import com.mongodb.client.model.Filters;
+import static com.mongodb.client.model.Filters.*;
+import static com.mongodb.client.model.Projections.*;
+import com.mongodb.client.model.Sorts;
+import java.util.Arrays;
+import java.util.Iterator;
+import org.bson.Document;
+public class JavaMongoDbFp {
+     public static void main( String args[] ) {
+        MongoClient clienteMongo = MongoClients.create();
+        MongoDatabase baseDatos = clienteMongo.getDatabase("centro");
+        MongoCollection&lt;Document&gt; coleccion =
+        baseDatos.getCollection("personas");
+        Document persona = new Document("nombre", "Sergio")
+          .append("tipo", "Profesor")
+          .append("datos_personales",new Document("telefono","123456789")
+          .append("email", "su@correo.es"))
+          .append("asignaturas", Arrays.asList("Física","Matemáticas"));
+      coleccion.insertOne(persona);
+      clienteMongo.close();
+   }
+}</code></pre>
+</div>
+</div>
+<p><br /><br /></p></div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="41_INSTA.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="ANEXO_LI.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/42_conexin_desde_java_a_mongodb.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:26 GMT -->
+</html>

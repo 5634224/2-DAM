@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/353_primeras_consultas_xquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.5.3.- Primeras consultas XQuery. </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_HIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Bases de datos xml.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introduccion.</a>
+   <ul class="other-section">
+      <li><a href="11_DOCUM.HTM" class="no-ch">1.1.- Documentos XML centrados en datos y en texto.</a></li>
+      <li><a href="12OPCION.HTM" class="no-ch">1.2.-	Opciones de almacenamiento.</a></li>
+   </ul>
+   </li>
+   <li><a href="2BASES_D.HTM" class="daddy">2.-	Bases de Datos Nativas XML.</a>
+   <ul class="other-section">
+      <li><a href="21ESTRAT.HTM" class="no-ch">2.1.-	Estrategias de almacenamiento.</a></li>
+      <li><a href="22COLECC.HTM" class="no-ch">2.2.-	Colecciones y documentos.</a></li>
+      <li><a href="23GESTOR.HTM" class="no-ch">2.3.-	Gestores nativos XML comerciales y libres</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_BASE_D.HTM" class="current-page-parent daddy">3.- Base de datos eXist.</a>
+   <ul>
+      <li><a href="31_INSTA.HTM" class="no-ch">3.1.- Instalación eXist.</a></li>
+      <li><a href="32_PRIME.HTM" class="no-ch">3.2.- Primeros pasos.</a></li>
+      <li><a href="33_JAVA_.HTM" class="no-ch">3.3.- Java Admin Client de eXist.</a></li>
+      <li><a href="34_LENGU.HTM" class="no-ch">3.4.- Lenguaje de consulta XPath.</a></li>
+      <li class="current-page-parent"><a href="35_EL_LE.HTM" class="current-page-parent daddy">3.5.- El lenguaje de consultas XQuery.</a>
+      <ul>
+         <li><a href="351_MODE.HTM" class="no-ch">3.5.1.- Modelo de datos.</a></li>
+         <li><a href="352_CAMI.HTM" class="no-ch">3.5.2.- Caminos de localización.</a></li>
+         <li id="active"><a href="353_PRIM.HTM" class="active no-ch">3.5.3.- Primeras consultas XQuery.</a></li>
+         <li><a href="354_EXPR.HTM" class="no-ch">3.5.4.- Expresiones FLWOR.</a></li>
+         <li><a href="355_XQUE.HTM" class="no-ch">3.5.5.- XQuery Update Facility.</a></li>
+      </ul>
+      </li>
+      <li><a href="36_CONEX.HTM" class="daddy">3.6.- Conexión a base de datos XML. API XML:DB.</a>
+      <ul class="other-section">
+         <li><a href="361_INTR.HTM" class="no-ch">3.6.1.- Introducción.</a></li>
+         <li><a href="362_CONS.HTM" class="no-ch">3.6.2.- Consultas sobre colecciones y documentos.</a></li>
+         <li><a href="363_CREA.HTM" class="no-ch">3.6.3.- Crear y borrar colecciones.</a></li>
+      </ul>
+      </li>
+      <li><a href="37_CONEX.HTM" class="daddy">3.7.- Conexión a base de datos XML. API XJQ.</a>
+      <ul class="other-section">
+         <li><a href="371_INTR.HTM" class="no-ch">3.7.1.- Introducción</a></li>
+         <li><a href="372_CONE.HTM" class="no-ch">3.7.2.- Conexión a la BD.</a></li>
+         <li><a href="373_EJEC.HTM" class="no-ch">3.7.3.- Ejecución de consultas XQuery</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_BASES_.HTM" class="daddy">4.- Bases de Datos MongoDB</a>
+   <ul class="other-section">
+      <li><a href="41_INSTA.HTM" class="no-ch">4.1.- Instalación, configuración y manejo de una base de datos Mongo.</a></li>
+      <li><a href="42_CONEX.HTM" class="no-ch">4.2.- Conexión desde JAVA a MongoDB</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="352_CAMI.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="354_EXPR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.5.3.- Primeras consultas XQuery.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id41">
+<div class="iDevice emphasis0">
+<div id="ta41_73" class="block iDevice_content">
+<p style="text-align: justify;"><img alt="Estudiante sentado de espalda trabajando con ordenador y un libro." class="elemento_derecha" height="132" src="../JPG/AD06_-15.JPG" style="width: 200px; height: 132px;" title="Estudiante con ordenador." width="200" /></p>
+<p style="text-align: justify;">Una <strong>consulta XQuery es una expresión que lee una secuencia de datos en XML y devuelve como resultado otra secuencia de datos en XML</strong>, donde:</p>
+<ul class="lista_verificacion" style="text-align: justify;">
+<li>Una <strong>secuencia </strong>es un conjunto ordenado de cero o más ítems.</li>
+<li>Un <strong>ítem</strong> es cualquier tipo de nodo del árbol XML o un <a href="#tb632a002-4dbc-48c4-374f-36da83bceecd" id="linkb632a002-4dbc-48c4-374f-36da83bceecd" class="exe-tooltip definition-tt">valor atómico.</a></li>
+</ul>
+<p style="text-align: justify;">Las funciones que se pueden invocar para <strong>referirnos a colecciones y documentos dentro de la BD</strong> son las siguientes:</p>
+<div class="highlighted-code language-markup" style="text-align: justify;">
+<div>
+<pre><code>collection(camino de la colección)
+
+doc(camino del documento)</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">Así por ejemplo:</p>
+<ul class="lista_verificacion" style="text-align: justify;">
+<li>La consulta <code>collection(/Books)</code>: devuelve el contenido de la colección de ruta absoluta <code>/Books</code>.</li>
+<li>La consulta <code>doc(/Empresa.xml)</code>: devuelve el documento <code>/Empresa.xml</code> completo.</li>
+</ul>
+<p style="text-align: justify;">Otros <strong>ejemplos de consultas </strong><span lang="en">XQuery</span><strong> basadas en expresiones </strong><span lang="en">XPath</span> son los siguientes:</p>
+<ul class="lista_verificacion" style="text-align: justify;">
+<li>La consulta <code>collection(/Books)//book/title</code> devuelve los nodos <code>title</code> de todos los libros (<code>book</code>) de la colección <code>/Books</code></li>
+<li>Si se utilizan espacios de nombres o <code>namespaces</code>, entonces la consulta anterior se redactaría de la siguiente forma: <code>declare  namespace t = http://www.qizx.com/namespace/Tutorial;
+	collection(/Books)//t:book/t:title</code></li>
+<li>La consulta <code>doc(/Empresa.xml)//nombre</code> devuelve todos los nodos <code>nombre</code> del documento <code>/Empresa.xml</code></li>
+</ul>
+<p style="text-align: justify;">En la siguiente enlace encontraras diferentes ejemplos de consultas XQuery:  ejecutadas directamente sobre una sencilla BD XML denominada '<code>Cursillos</code>'. Necesitarás descargar el archivo:</p>
+<div class="enlace_centrado" style="text-align: justify;"><a href="http://www.lsi.us.es/docs/informes/LSI-2005-02.pdf" title="Ejemplos de XQuery">Acceso a los ejemplos. </a><span class="tamano"> (0.01 MB)</span><a href="AD06_DES.HTM" title="Resumen textual alternativo para &quot;consultas con XQuery&quot;."></a></div>
+<div id="tb632a002-4dbc-48c4-374f-36da83bceecd" class="exe-tooltip-text">
+<p>Un valor atómico es una instancia de uno de los tipos de datos atómicos incorporados definidos por el esquema XML.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id42">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta42_54" class="block iDevice_content">
+Señala si la siguiente afirmación es verdadera o falsa. 
+
+</div>
+<section class="question">
+<form name="true-false-form-0b42" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b42" class="block iDevice_content">
+<p>
+<strong>La expresión  <code>colletcion(&quot;/Cursos&quot;)//curso[aula=2]/profesor</code> devuelve los cursos y los profesores con cursos en el aula 2.</strong>
+</p>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b42"><input type="radio" name="option0b42" id="true0b42" class="exe-radio-option exe-radio-option-0-2-0b42-truefalse" /> Verdadero</label> 
+<label for="false0b42"><input type="radio" name="option0b42" id="false0b42" class="exe-radio-option exe-radio-option-1-2-0b42-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b42" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b42-result" class="wrong">Falso</strong></p>
+Es falso, devuelve todos los profesores que dan cursos en el aula 2. 
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id43">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta43_47" class="block iDevice_content">
+<p>
+Te recomendamos que visites el siguiente enlace para profundizar en el concepto y uso de los <code>namespaces</code>.
+</p>
+<p class="enlace_centrado">
+<a href="http://flanagan.ugr.es/xml/nombres.htm" title="Acceder a información sobre espacios de nombres o  namespaces en XML.">Espacios de nombres o <code>namespaces</code> en XML.</a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="352_CAMI.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="354_EXPR.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/353_primeras_consultas_xquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:24 GMT -->
+</html>

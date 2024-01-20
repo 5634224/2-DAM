@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/35_el_lenguaje_de_consultas_xquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.5.- El lenguaje de consultas XQuery. </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Bases de datos xml.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introduccion.</a>
+   <ul class="other-section">
+      <li><a href="11_DOCUM.HTM" class="no-ch">1.1.- Documentos XML centrados en datos y en texto.</a></li>
+      <li><a href="12OPCION.HTM" class="no-ch">1.2.-	Opciones de almacenamiento.</a></li>
+   </ul>
+   </li>
+   <li><a href="2BASES_D.HTM" class="daddy">2.-	Bases de Datos Nativas XML.</a>
+   <ul class="other-section">
+      <li><a href="21ESTRAT.HTM" class="no-ch">2.1.-	Estrategias de almacenamiento.</a></li>
+      <li><a href="22COLECC.HTM" class="no-ch">2.2.-	Colecciones y documentos.</a></li>
+      <li><a href="23GESTOR.HTM" class="no-ch">2.3.-	Gestores nativos XML comerciales y libres</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_BASE_D.HTM" class="current-page-parent daddy">3.- Base de datos eXist.</a>
+   <ul>
+      <li><a href="31_INSTA.HTM" class="no-ch">3.1.- Instalación eXist.</a></li>
+      <li><a href="32_PRIME.HTM" class="no-ch">3.2.- Primeros pasos.</a></li>
+      <li><a href="33_JAVA_.HTM" class="no-ch">3.3.- Java Admin Client de eXist.</a></li>
+      <li><a href="34_LENGU.HTM" class="no-ch">3.4.- Lenguaje de consulta XPath.</a></li>
+      <li id="active"><a href="35_EL_LE.HTM" class="active daddy">3.5.- El lenguaje de consultas XQuery.</a>
+      <ul>
+         <li><a href="351_MODE.HTM" class="no-ch">3.5.1.- Modelo de datos.</a></li>
+         <li><a href="352_CAMI.HTM" class="no-ch">3.5.2.- Caminos de localización.</a></li>
+         <li><a href="353_PRIM.HTM" class="no-ch">3.5.3.- Primeras consultas XQuery.</a></li>
+         <li><a href="354_EXPR.HTM" class="no-ch">3.5.4.- Expresiones FLWOR.</a></li>
+         <li><a href="355_XQUE.HTM" class="no-ch">3.5.5.- XQuery Update Facility.</a></li>
+      </ul>
+      </li>
+      <li><a href="36_CONEX.HTM" class="daddy">3.6.- Conexión a base de datos XML. API XML:DB.</a>
+      <ul class="other-section">
+         <li><a href="361_INTR.HTM" class="no-ch">3.6.1.- Introducción.</a></li>
+         <li><a href="362_CONS.HTM" class="no-ch">3.6.2.- Consultas sobre colecciones y documentos.</a></li>
+         <li><a href="363_CREA.HTM" class="no-ch">3.6.3.- Crear y borrar colecciones.</a></li>
+      </ul>
+      </li>
+      <li><a href="37_CONEX.HTM" class="daddy">3.7.- Conexión a base de datos XML. API XJQ.</a>
+      <ul class="other-section">
+         <li><a href="371_INTR.HTM" class="no-ch">3.7.1.- Introducción</a></li>
+         <li><a href="372_CONE.HTM" class="no-ch">3.7.2.- Conexión a la BD.</a></li>
+         <li><a href="373_EJEC.HTM" class="no-ch">3.7.3.- Ejecución de consultas XQuery</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_BASES_.HTM" class="daddy">4.- Bases de Datos MongoDB</a>
+   <ul class="other-section">
+      <li><a href="41_INSTA.HTM" class="no-ch">4.1.- Instalación, configuración y manejo de una base de datos Mongo.</a></li>
+      <li><a href="42_CONEX.HTM" class="no-ch">4.2.- Conexión desde JAVA a MongoDB</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="34_LENGU.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="351_MODE.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.5.- El lenguaje de consultas XQuery.</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id28">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_CAS.PNG)"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta28_66" class="block iDevice_content">
+<p><img alt="Foto de Ana de pie en diagonal, mirando al frente y con manos cogidas." class="elemento_derecha" height="132" src="../JPG/EIN_PP-2.JPG" style="width: 200px; height: 132px;" title="Foto de Ana en diagonal." width="200" /></p>
+<p style="text-align: justify;"><strong>Ana</strong> está orgullosa en su nueva faceta de profesora. <strong>Juan</strong> y <strong>María</strong> la han felicitado y están satisfechos con la introducción que les ha dado sobre Qizx. <strong>Ana</strong> les dice —Antes de empezar con la aplicación en Java, necesitamos familiarizarnos con el lenguaje de consultas XQuery.</p>
+<p style="text-align: justify;">A lo que <strong>Juan</strong> le pregunta —¿Conoces algo del lenguaje?"</p>
+<p><strong>Ana</strong> sonríe y contesta —Pues...sí. En clase vimos también algunos ejemplos sencillos de uso.</p>
+<p><strong>Juan</strong>, con cara de asombro dice —Está claro que el nuevo Ciclo Formativo de <acronym title="Desarrollo de Aplicaciones Multiplataforma.">DAM</acronym> incorpora muchos temas punteros que yo no domino. El próximo curso iniciaré sin falta el estudio de algunos módulos.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id29">
+<div class="iDevice emphasis0">
+<div id="ta29_73" class="block iDevice_content">
+<p><img alt="Hombre sentado trabajando con un ordenador." class="elemento_derecha" height="112" src="../JPG/AD06_-11.JPG" style="width: 200px; height: 112px;" title="Programador." width="200" /></p>
+<p style="text-align: justify;">XQuery es un lenguaje de consulta diseñado para extraer información de colecciones de datos expresadas en XML<strong>. </strong>Entre las <strong>principales características de XQuery</strong> vamos a destacar las siguientes:</p>
+<ul class="lista_verificacion" style="text-align: justify;">
+<li>Está <strong>basado en el lenguaje <span lang="en">XPath</span>, (</strong>XML <span lang="en">Path Language</span>),<strong> </strong>y se fundamenta en él para realizar la selección de información y la iteración a través del conjunto de datos XML.</li>
+<li>Es un <strong>lenguaje declarativo</strong>, lo que significa que, en vez de ejecutar una lista de comandos como un <a href="#td1f13018-9d05-e7a4-0138-25177d159d47" id="linkd1f13018-9d05-e7a4-0138-25177d159d47" class="exe-tooltip definition-tt titled-tt" title="Lenguaje procedimental: | ">lenguaje procedimental</a> clásico, cada consulta es una expresión que es evaluada y devuelve un resultado, al igual que en <acronym lang="en" title="Structured Query Languaje.">SQL</acronym>.</li>
+</ul>
+<p style="text-align: justify;">Podemos decir que <strong>XQuery es a XML lo mismo que SQL es a las bases de datos relacionales. </strong>Sin embargo, aunque XQuery y SQL puedan considerarse similares, el modelo de datos sobre el que se sustenta XQuery es muy distinto del modelo de datos relacional sobre el que sustenta SQL, ya que XML incluye conceptos como jerarquía y orden de los datos que no están presentes en el modelo relacional.</p>
+<p style="text-align: justify;">Por ejemplo, a diferencia de SQL, en XQuery es importante y determinante el orden en que se encuentren los datos, ya que no es lo mismo buscar una etiqueta <code>nombre</code> dentro de una etiqueta <code>autor</code> que todas las etiquetas <code>nombre</code> del documento (que pueden estar anidadas dentro de una etiqueta <code>autor</code> o fuera).</p>
+<p style="text-align: justify;">Los <strong>principales tipos de expresiones de XQuery </strong>son:</p>
+<ul class="lista_verificacion" style="text-align: justify;">
+<li>Expresiones <span lang="en">XPath</span>, para navegar por los documentos.</li>
+<li>Expresiones <code>FLWOR (For, Let, Where, Order, Return)</code> para iterar por los elementos de un conjunto de datos.</li>
+</ul>
+<p style="text-align: justify;">Pero XQuery también admite:</p>
+<ul class="lista_verificacion">
+<li style="text-align: justify;">Constructores para generar nodos y contenido dinámico.</li>
+<li style="text-align: justify;">Condicionales (<code>IF, THEN ELSE</code>) para construir el resultado en base a alguna condición.</li>
+<li style="text-align: justify;">Cuantificadores (<code>SOME, ANY</code>) para chequear la existencia de algún elemento que cumpla una condición.</li>
+<li style="text-align: justify;">Listas a las que se pueden aplicar operadores (<code>UNION</code>,...) y funciones de agregación (<code>AVG</code>, <code>COUNT</code>,...).</li>
+</ul>
+<div id="td1f13018-9d05-e7a4-0138-25177d159d47" class="exe-tooltip-text">
+<p>Un lenguaje procedimental es aquel que indica cómo se realiza cierto proceso para obtener los resultados que se esperan, esto es, se especifican los pasos o procedimiento que hay que seguir.</p>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id30">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta30_47" class="block iDevice_content">
+<p>
+En este enlace puedes profundizar sobre el lenguaje XQuery.
+</p>
+<p class="enlace_centrado">
+<a href="http://www.w3.org/TR/XQuery/" title="Acceder a la especificación completa de XQuery.">Especificación completa de XQuery.
+</a>
+</p>
+<p>
+El siguiente enlace te propociona a su vez enlaces muchos enlaces interesantes a varias tecnologías asociadas a XQuery, así como a XQuery.
+</p>
+<p class="enlace_centrado">
+<a href="http://gim.unex.es/blogs/ljarevalo/tag/XQuery-xml-xslt-XPath/" title="Acceder a información sobre tecnologías asociadas a XQuery.">Tecnologías asociadas con XQuery.</a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id123">
+<div class="iDevice emphasis0" >
+<div id="ta123_123_2" class="block iDevice_content">
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice" id="id124">
+<div class="iDevice emphasis0" >
+<div id="ta124_124_2" class="block iDevice_content">
+
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="34_LENGU.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="351_MODE.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/35_el_lenguaje_de_consultas_xquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:22 GMT -->
+</html>

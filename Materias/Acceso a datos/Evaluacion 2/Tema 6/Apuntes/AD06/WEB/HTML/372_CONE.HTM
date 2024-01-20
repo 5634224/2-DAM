@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/372_conexin_a_la_bd.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.7.2.- Conexión a la BD. </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_HIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-48"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Bases de datos xml.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introduccion.</a>
+   <ul class="other-section">
+      <li><a href="11_DOCUM.HTM" class="no-ch">1.1.- Documentos XML centrados en datos y en texto.</a></li>
+      <li><a href="12OPCION.HTM" class="no-ch">1.2.-	Opciones de almacenamiento.</a></li>
+   </ul>
+   </li>
+   <li><a href="2BASES_D.HTM" class="daddy">2.-	Bases de Datos Nativas XML.</a>
+   <ul class="other-section">
+      <li><a href="21ESTRAT.HTM" class="no-ch">2.1.-	Estrategias de almacenamiento.</a></li>
+      <li><a href="22COLECC.HTM" class="no-ch">2.2.-	Colecciones y documentos.</a></li>
+      <li><a href="23GESTOR.HTM" class="no-ch">2.3.-	Gestores nativos XML comerciales y libres</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_BASE_D.HTM" class="current-page-parent daddy">3.- Base de datos eXist.</a>
+   <ul>
+      <li><a href="31_INSTA.HTM" class="no-ch">3.1.- Instalación eXist.</a></li>
+      <li><a href="32_PRIME.HTM" class="no-ch">3.2.- Primeros pasos.</a></li>
+      <li><a href="33_JAVA_.HTM" class="no-ch">3.3.- Java Admin Client de eXist.</a></li>
+      <li><a href="34_LENGU.HTM" class="no-ch">3.4.- Lenguaje de consulta XPath.</a></li>
+      <li><a href="35_EL_LE.HTM" class="daddy">3.5.- El lenguaje de consultas XQuery.</a>
+      <ul class="other-section">
+         <li><a href="351_MODE.HTM" class="no-ch">3.5.1.- Modelo de datos.</a></li>
+         <li><a href="352_CAMI.HTM" class="no-ch">3.5.2.- Caminos de localización.</a></li>
+         <li><a href="353_PRIM.HTM" class="no-ch">3.5.3.- Primeras consultas XQuery.</a></li>
+         <li><a href="354_EXPR.HTM" class="no-ch">3.5.4.- Expresiones FLWOR.</a></li>
+         <li><a href="355_XQUE.HTM" class="no-ch">3.5.5.- XQuery Update Facility.</a></li>
+      </ul>
+      </li>
+      <li><a href="36_CONEX.HTM" class="daddy">3.6.- Conexión a base de datos XML. API XML:DB.</a>
+      <ul class="other-section">
+         <li><a href="361_INTR.HTM" class="no-ch">3.6.1.- Introducción.</a></li>
+         <li><a href="362_CONS.HTM" class="no-ch">3.6.2.- Consultas sobre colecciones y documentos.</a></li>
+         <li><a href="363_CREA.HTM" class="no-ch">3.6.3.- Crear y borrar colecciones.</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="37_CONEX.HTM" class="current-page-parent daddy">3.7.- Conexión a base de datos XML. API XJQ.</a>
+      <ul>
+         <li><a href="371_INTR.HTM" class="no-ch">3.7.1.- Introducción</a></li>
+         <li id="active"><a href="372_CONE.HTM" class="active no-ch">3.7.2.- Conexión a la BD.</a></li>
+         <li><a href="373_EJEC.HTM" class="no-ch">3.7.3.- Ejecución de consultas XQuery</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_BASES_.HTM" class="daddy">4.- Bases de Datos MongoDB</a>
+   <ul class="other-section">
+      <li><a href="41_INSTA.HTM" class="no-ch">4.1.- Instalación, configuración y manejo de una base de datos Mongo.</a></li>
+      <li><a href="42_CONEX.HTM" class="no-ch">4.2.- Conexión desde JAVA a MongoDB</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="371_INTR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="373_EJEC.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.7.2.- Conexión a la BD.</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id120">
+<div class="iDevice emphasis0" >
+<div id="ta120_120_2" class="block iDevice_content">
+<div class="exe-text"><div id="yui_3_17_2_1_1596539680065_133">
+<p id="yui_3_17_2_1_1596539680065_132" style="text-align: justify;">Las aplicaciones que acceden a BD necesitan, como primer paso para poder gestionar los datos de la BD, establecer la conexión con la BD a gestionar. La <acronym title="Application Programming Interface">API</acronym> XQJ facilita dos interfaces apropiadas para lograr este objetivo:</p>
+<ol style="text-align: justify;">
+<li>
+<div><b>XQDataSource</b>, Fábrica para obtener objetos <b>XQConnection</b></div>
+</li>
+<li>
+<div><b>XQConnection</b><span>, Para referenciar conexiones (sesiones) con un SGBD específico. Toda conexión se logra, forzosamente, a través de un objeto </span><b>XQDataSource</b></div>
+</li>
+</ol>
+</div>
+<p style="text-align: justify;">Así, para obtener una conexión, hay que seguir el siguiente esquema:</p>
+<div class="highlighted-code language-java" style="text-align: justify;">
+<div>
+<pre><code>XQDataSource xqs = new ExistXQDataSource();
+XQConnection con = xqs. getConnection ( lista_parametros ) ;</code></pre>
+</div>
+</div>
+<p id="yui_3_17_2_1_1596539680065_141" style="text-align: justify;"><span id="yui_3_17_2_1_1596539680065_140">Una vez se dispone del objeto XQDataSource ya estamos en condiciones de crear un objeto XQConnection para establecer la sesión de trabajo con el SGBD y eso lo conseguimos con el método getConnection() de la interfaz XQDataSource.</span></p>
+<p style="text-align: justify;"><span> La API XQJ facilita sobrecargas del método getConnection():</span></p>
+<ul style="text-align: justify;">
+<li style="list-style-type: none;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><span>XQConnection getConnection ( </span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+string">String</a><span> username, </span><span> </span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+string">String</a><span> passwd ) </span><span>throws XQException </span></li>
+<li><span>XQConnection getConnection ( ) throws XQException </span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p style="text-align: justify;">La interfaz<span> </span><code>setProperty()</code> nos permite definir una serie de propiedades antes de intentar establecer la conexión con el método <code>getConnection()</code>:</p>
+<div class="highlighted-code language-java" style="text-align: justify;">
+<div>
+<pre><code>void setProperty ( String name, String value ) throws XQException;</code></pre>
+</div>
+</div>
+<p style="text-align: justify;"><span>Entre las propiedades que permite establecer el método </span><code>setProperty() </code><span>encontramos el nombre de la máquina, el puerto, el nombre de la base de datos, el usuario y la contraseña.</span><span></span></p>
+<p style="text-align: justify;"><span>El método </span><b>XQDataSource.getConnection()</b><span> devuelve, si todo es correcto, un objeto que implementa la interfaz </span><b>XQConnection</b><span>, el cual utilizaremos para ejecutar cualquier acción XQuery o Update sobre la BD. Al finalizar el programa hay que recordar siempre de cerrar la conexión con el método</span><b> </b><b>XQConnection.close(),</b><span> a fin de liberar todos los recursos asignados por el sistema operativo para mantener la conexión.</span></p>
+<p style="text-align: justify;">La interfaz <b>XQConnection</b> facilita métodos para crear expresiones sobre las que ejecutaremos sentencias<b><span> </span>XQuery / Update</b>, y los métodos para validar ( <b>commit())</b><span> </span>o deshacer ( <b>rollback()</b>) los cambios llevados a cabo durante una transacción.</p>
+<p style="text-align: justify;">Ejemplo de conexion : </p>
+<div class="highlighted-code language-java" style="text-align: justify;">
+<div>
+<pre><code>import javax.xml.xquery.XQConnection;
+import javax.xml.xquery.XQDataSource;
+import javax.xml.xquery.XQException;
+import javax.xml.xquery.XQPreparedExpression;
+import javax.xml.xquery.XQSequence; 
+import net.xqj.exist.ExistXQDataSource;
+public class HelloWorld {    
+    public static void main(String[] args) throws XQException {
+        XQDataSource ds = new ExistXQDataSource();
+        ds.setProperty("serverName", "localhost");
+        ds.setProperty("port", "8083");
+        XQConnection con = ds.getConnection();
+        String query = "&lt;hello-world&gt;{1 + 1}&lt;/hello-world&gt;";
+        XQPreparedExpression expr = con.prepareExpression(query);
+        XQSequence result = expr.executeQuery();
+        // prints "&lt;hello-world&gt;2&lt;/hello-world&gt;"
+        System.out.println(result.getSequenceAsString(null));        
+        result.close();
+        expr.close();
+        con.close();
+    }    
+}</code></pre>
+</div>
+</div>
+<p style="text-align: justify;">En eXist-db, el hecho de que el método <b>XQDataSource.getConnection() </b>no levante una excepción, no es garantía de que la conexión se haya establecido correctamente.</p>
+<p style="text-align: justify;">En el ejemplo anterior la conexion se hace con un usuario guest que es la opción por defecto si no se especifica usuario y contraseña. Para conectarse con un usuario se utilizan el método <code>setProperty():</code></p>
+<div class="highlighted-code language-java" style="text-align: justify;">
+<div>
+<pre><code>  ds.setProperty("user" , "admin");
+  ds.setProperty("password" , "admin");</code></pre>
+</div>
+</div>
+<p style="text-align: justify;"><span>Por defecto, una conexión opera en modo </span><code>auto-commit</code><span>, lo que significa que cada instrucción Update es ejecutada y validada en una transacción individual, Esta forma de trabajar se puede desactivar con el método </span><code>XQConnection.setAutoCommit()</code><span>, y en tal situación, la transacción finalizará efectuando una llamada al método </span><code>commit()</code><span>o </span><code>rollback()</code><span>, dando lugar al inicio de una nueva transacción. No hay, pues, una instrucción específica para indicar el inicio de transacción.</span><code></code></p></div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id121">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Para saber más:</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta121_121_2" class="block iDevice_content">
+<div class="exe-text"><p><span>Consulta la </span><a href="http://xqj.net/javadoc/javax/xml/xquery/XQDataSource.html">API XQJ de eXist<span> </span></a><span>para obtener más información.</span></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="371_INTR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="373_EJEC.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/372_conexin_a_la_bd.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:26 GMT -->
+</html>

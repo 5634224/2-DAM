@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/373_ejecucin_de_consultas_xquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.7.3.- Ejecución de consultas XQuery </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_HIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-49"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Bases de datos xml.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introduccion.</a>
+   <ul class="other-section">
+      <li><a href="11_DOCUM.HTM" class="no-ch">1.1.- Documentos XML centrados en datos y en texto.</a></li>
+      <li><a href="12OPCION.HTM" class="no-ch">1.2.-	Opciones de almacenamiento.</a></li>
+   </ul>
+   </li>
+   <li><a href="2BASES_D.HTM" class="daddy">2.-	Bases de Datos Nativas XML.</a>
+   <ul class="other-section">
+      <li><a href="21ESTRAT.HTM" class="no-ch">2.1.-	Estrategias de almacenamiento.</a></li>
+      <li><a href="22COLECC.HTM" class="no-ch">2.2.-	Colecciones y documentos.</a></li>
+      <li><a href="23GESTOR.HTM" class="no-ch">2.3.-	Gestores nativos XML comerciales y libres</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_BASE_D.HTM" class="current-page-parent daddy">3.- Base de datos eXist.</a>
+   <ul>
+      <li><a href="31_INSTA.HTM" class="no-ch">3.1.- Instalación eXist.</a></li>
+      <li><a href="32_PRIME.HTM" class="no-ch">3.2.- Primeros pasos.</a></li>
+      <li><a href="33_JAVA_.HTM" class="no-ch">3.3.- Java Admin Client de eXist.</a></li>
+      <li><a href="34_LENGU.HTM" class="no-ch">3.4.- Lenguaje de consulta XPath.</a></li>
+      <li><a href="35_EL_LE.HTM" class="daddy">3.5.- El lenguaje de consultas XQuery.</a>
+      <ul class="other-section">
+         <li><a href="351_MODE.HTM" class="no-ch">3.5.1.- Modelo de datos.</a></li>
+         <li><a href="352_CAMI.HTM" class="no-ch">3.5.2.- Caminos de localización.</a></li>
+         <li><a href="353_PRIM.HTM" class="no-ch">3.5.3.- Primeras consultas XQuery.</a></li>
+         <li><a href="354_EXPR.HTM" class="no-ch">3.5.4.- Expresiones FLWOR.</a></li>
+         <li><a href="355_XQUE.HTM" class="no-ch">3.5.5.- XQuery Update Facility.</a></li>
+      </ul>
+      </li>
+      <li><a href="36_CONEX.HTM" class="daddy">3.6.- Conexión a base de datos XML. API XML:DB.</a>
+      <ul class="other-section">
+         <li><a href="361_INTR.HTM" class="no-ch">3.6.1.- Introducción.</a></li>
+         <li><a href="362_CONS.HTM" class="no-ch">3.6.2.- Consultas sobre colecciones y documentos.</a></li>
+         <li><a href="363_CREA.HTM" class="no-ch">3.6.3.- Crear y borrar colecciones.</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="37_CONEX.HTM" class="current-page-parent daddy">3.7.- Conexión a base de datos XML. API XJQ.</a>
+      <ul>
+         <li><a href="371_INTR.HTM" class="no-ch">3.7.1.- Introducción</a></li>
+         <li><a href="372_CONE.HTM" class="no-ch">3.7.2.- Conexión a la BD.</a></li>
+         <li id="active"><a href="373_EJEC.HTM" class="active no-ch">3.7.3.- Ejecución de consultas XQuery</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_BASES_.HTM" class="daddy">4.- Bases de Datos MongoDB</a>
+   <ul class="other-section">
+      <li><a href="41_INSTA.HTM" class="no-ch">4.1.- Instalación, configuración y manejo de una base de datos Mongo.</a></li>
+      <li><a href="42_CONEX.HTM" class="no-ch">4.2.- Conexión desde JAVA a MongoDB</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="372_CONE.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_BASES_.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.7.3.- Ejecución de consultas XQuery</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id122">
+<div class="iDevice emphasis0" >
+<div id="ta122_122_2" class="block iDevice_content">
+<div class="exe-text"><p>La <acronym title="Application Programming Interface">API</acronym> XQJ facilita los dos mecanismos a través de las interfaces:</p>
+<ul>
+<li>
+<div><b>XQExpression</b>, Para la ejecución inmediata de sentencias.</div>
+</li>
+<li>
+<div><b>XQPreparedExpression</b>, Para la ejecución de sentencias parametrizadas.</div>
+</li>
+</ul>
+<p><span>Para ejecutar una sentencia <b>XQExpression</b>, crearemos un objeto XQExpression a partir del método <code>XQConnection.createExpression()</code>. Disponemos de dos sobrecargas de este método:</span></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>XQExpression createExpression throws XQException ;
+XQExpression createExpression ( XQStaticContext properties )throws XQException ;</code></pre>
+</div>
+</div>
+<p>En ambas sobrecargas obtiene un objeto XQExpression que podremos utilizar para ejecutar sentencias XQuery / Update de manera inmediata. La segunda sobrecarga permite indicar las propiedades del contexto estático que se tendrán en cuenta al evaluar la expresión, mientras que la primera sobrecarga toma como contexto estático el asociado a la conexión.</p>
+<p>La interfaz XQStaticContext provee un conjunto de métodos get y set para recuperar y establecer las propiedades de un contexto estático. La interfaz XQConnection facilita los métodos getStaticContext() y setStaticContext() para recuperar y establecer el contexto estático de la conexión.</p>
+<p>Una vez tengamos el objeto XQExpression, podremos a través de él ejecutar consultas y otras órdenes de manera inmediata. Recordemos que en XQuery hay que distinguir, como en SQL, las sentencias "consulta" que pueden devolver un conjunto de resultados que habrá que procesar, de las sentencias "no consulta" que permiten ejecutar una orden (inserción, eliminación o actualización e incluso órdenes específicas del'SGBD), de la que se nos informa, como mucho, del éxito o fracaso de su ejecución. De ahí que la interfaz XQExpression distingue los métodos executeQuery para las "consultas" de los métodos executeCommand para las "no consultas":</p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>void executeCommand ( java.lang.String cmd ) throws XQException ;
+void executeCommand ( java.io.Reader cmd )  throws XQException ;
+XQResultSequence executeQuery ( java.Lang.String query ) throws XQException ;
+XQResultSequence executeQuery ( java.Io.Reader query ) throws XQException ;
+XQResultSequence executeQuery ( java.Io.InputStream query ) throws XQException ;</code></pre>
+</div>
+</div>
+<p><span>Además de los métodos anteriores, disponemos del método <code>close()</code> para cerrar la expresión, liberando todos los recursos asociados cuando ya no sea necesaria. La ejecución del método <code>close()</code> sobre la conexión cierra todas las expresiones definidas sobre ella. También disponemos del método <code>isClosed()</code> para poder averiguar si una expresión está abierta o cerrada:</span></p>
+<div class="highlighted-code language-java">
+<div>
+<pre><code>void close throws XQException ;
+boolean isClosed;</code></pre>
+</div>
+</div>
+<p>Fijémonos que el método executeQuery() devuelve, si todo va bien, un objeto XQResultSequence, interfaz que deriva de la interfaz XQSequence, la cual nos facilita un conjunto de métodos para evaluar la secuencia de resultados obtenidos con el método executeQuery():</p>
+<p>La interfaz XQResultSequence representa una secuencia de elementos siguiendo la definición de XDM (XQuery 1.0 and XPath 2.0 Data Model, de W3C ). Un vistazo a la documentación de esta interfaz nos muestra que disponemos de métodos para:</p>
+<p></p>
+<ul>
+<li><span>Procesar sus elementos: <code>next(), previous(), getItem(), getPosition(), count(), first(), last(), isFirst(), isLast(), isBeforeFirst(), isAfeterLast()</code> y un conjunto de métodos get para obtener el contenido de un elemento en el formato adecuado <code>( getBoolean(), getByte(), getDouble()...).</code></span></li>
+<li>Obtener una versión seriada de la secuencia como un objeto String (método <code>getSequenceAsString()</code>).</li>
+<li>Obtener una versión seriada de la secuencia (método <code>getSequenceAsStream()</code>) como un objeto XMLStreamReader (interfaz del API Stax de Java, que permite la iteración, hacia delante, de un documento XML en modo lectura, utilizando los métodos <code>next()</code> y <code>hasNext()</code>).</li>
+</ul>
+<p>Según sea la gestión que tengamos que efectuar, utilizaremos unos u otros métodos. Así, ante un programa de sentencia abierta (en el que el usuario pueda introducir la sentencia a ejecutar), sólo podremos pensar en mostrar el resultado a través de la versión seriada hacia String o vía objeto Transformer a partir de la seriación hacia XMLStreamReader. Y ante un programa de sentencia cerrada (sentencia perfectamente conocida en escribir el programa), dado que se conoce la forma de la respuesta, podemos pensar en efectuar un tratamiento específico.</p></div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="372_CONE.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_BASES_.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/373_ejecucin_de_consultas_xquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:26 GMT -->
+</html>

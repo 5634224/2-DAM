@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/355_xquery_update_facility.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.5.5.- XQuery Update Facility. </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-15"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Bases de datos xml.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introduccion.</a>
+   <ul class="other-section">
+      <li><a href="11_DOCUM.HTM" class="no-ch">1.1.- Documentos XML centrados en datos y en texto.</a></li>
+      <li><a href="12OPCION.HTM" class="no-ch">1.2.-	Opciones de almacenamiento.</a></li>
+   </ul>
+   </li>
+   <li><a href="2BASES_D.HTM" class="daddy">2.-	Bases de Datos Nativas XML.</a>
+   <ul class="other-section">
+      <li><a href="21ESTRAT.HTM" class="no-ch">2.1.-	Estrategias de almacenamiento.</a></li>
+      <li><a href="22COLECC.HTM" class="no-ch">2.2.-	Colecciones y documentos.</a></li>
+      <li><a href="23GESTOR.HTM" class="no-ch">2.3.-	Gestores nativos XML comerciales y libres</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_BASE_D.HTM" class="current-page-parent daddy">3.- Base de datos eXist.</a>
+   <ul>
+      <li><a href="31_INSTA.HTM" class="no-ch">3.1.- Instalación eXist.</a></li>
+      <li><a href="32_PRIME.HTM" class="no-ch">3.2.- Primeros pasos.</a></li>
+      <li><a href="33_JAVA_.HTM" class="no-ch">3.3.- Java Admin Client de eXist.</a></li>
+      <li><a href="34_LENGU.HTM" class="no-ch">3.4.- Lenguaje de consulta XPath.</a></li>
+      <li class="current-page-parent"><a href="35_EL_LE.HTM" class="current-page-parent daddy">3.5.- El lenguaje de consultas XQuery.</a>
+      <ul>
+         <li><a href="351_MODE.HTM" class="no-ch">3.5.1.- Modelo de datos.</a></li>
+         <li><a href="352_CAMI.HTM" class="no-ch">3.5.2.- Caminos de localización.</a></li>
+         <li><a href="353_PRIM.HTM" class="no-ch">3.5.3.- Primeras consultas XQuery.</a></li>
+         <li><a href="354_EXPR.HTM" class="no-ch">3.5.4.- Expresiones FLWOR.</a></li>
+         <li id="active"><a href="355_XQUE.HTM" class="active no-ch">3.5.5.- XQuery Update Facility.</a></li>
+      </ul>
+      </li>
+      <li><a href="36_CONEX.HTM" class="daddy">3.6.- Conexión a base de datos XML. API XML:DB.</a>
+      <ul class="other-section">
+         <li><a href="361_INTR.HTM" class="no-ch">3.6.1.- Introducción.</a></li>
+         <li><a href="362_CONS.HTM" class="no-ch">3.6.2.- Consultas sobre colecciones y documentos.</a></li>
+         <li><a href="363_CREA.HTM" class="no-ch">3.6.3.- Crear y borrar colecciones.</a></li>
+      </ul>
+      </li>
+      <li><a href="37_CONEX.HTM" class="daddy">3.7.- Conexión a base de datos XML. API XJQ.</a>
+      <ul class="other-section">
+         <li><a href="371_INTR.HTM" class="no-ch">3.7.1.- Introducción</a></li>
+         <li><a href="372_CONE.HTM" class="no-ch">3.7.2.- Conexión a la BD.</a></li>
+         <li><a href="373_EJEC.HTM" class="no-ch">3.7.3.- Ejecución de consultas XQuery</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="4_BASES_.HTM" class="daddy">4.- Bases de Datos MongoDB</a>
+   <ul class="other-section">
+      <li><a href="41_INSTA.HTM" class="no-ch">4.1.- Instalación, configuración y manejo de una base de datos Mongo.</a></li>
+      <li><a href="42_CONEX.HTM" class="no-ch">4.2.- Conexión desde JAVA a MongoDB</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="354_EXPR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="36_CONEX.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.5.5.- XQuery Update Facility.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id48">
+<div class="iDevice emphasis0">
+<div id="ta48_73" class="block iDevice_content">
+<div class="elemento_derecha">
+<div class="elemento_centrado">
+<p style="text-align: justify;">El lenguaje <strong>XQuery solo proporciona expresiones para la realización de consultas sobre documentos XML</strong>, pero <strong>no su actualización (inserción, modificación o eliminación de nodos)</strong>.</p>
+<p style="text-align: justify;">XQuery Update Facility es una extensión de XQuery que permite la actualización de documentos mediante las cláusulas <code>insert, delete, replace y rename</code>.</p>
+</div>
+<div class="elemento_centrado" style="text-align: justify;"><a href="../JPG/AD06_-20.JPG" title="Ampliar imagen."><img alt="Dibujo que muestra  un cartel gris claro con las palabras: Update Xquery (azul), insert(lila), delete(rojo), rename(verde), replace(turquesa)." class="imagen_ampliable" height="108" src="../JPG/AD06_-21.JPG" style="width: 200px; height: 108px;" title="Update Xquery." width="200" /></a></div>
+</div>
+<p style="text-align: justify;">El <strong>funcionamiento de las cláusulas de XQuery Update </strong>es el siguiente:<strong> </strong></p>
+<ul class="lista_verificacion" style="text-align: justify;">
+<li><strong><code>insert</code></strong>. Permite la inserción de uno o varios nodos antes (<code>before</code>) o después (<code>after</code>) del nodo indicado. También se puede insertar al principio (<code>as first into</code>) o al final del documento (<code>as last into</code>).</li>
+<li><strong><code>delete</code>.</strong> Elimina uno o varios nodos del documento.</li>
+<li><strong><code>replace</code></strong>. Tiene dos funciones:
+<ul>
+<li>Modificar el valor del nodo</li>
+<li>Modificar el nodo completo</li>
+</ul>
+</li>
+<li><strong><code>rename</code>.</strong> Renombra un nodo (elemento, atributo o instrucciones de proceso) sin afectar a su contenido.</li>
+</ul>
+<p style="text-align: justify;">A continuación te mostramos dos ejemplos sencillos, uno de <code>insert</code> y otro de <code>delete</code>:</p>
+<ul class="lista_verificacion" style="text-align: justify;">
+<li>Eliminar la empresa de <code>id=2</code> en el documento Empresa.xml: <code>delete node doc(Empresa.xml)//empresa[@id=2]</code></li>
+<li>Insertar el nodo tipoAccesible/tipo al final del documento <code>/Aulas/aula3 insert node  tipoAccesible/tipo as last into doc(Aulas/aula3.xml)//aula</code></li>
+</ul>
+<div class="elemento_centrado" style="text-align: justify;"></div>
+<p style="text-align: justify;">En el siguiente enlace puedes otros ejemplos de actualizaciones usando <span lang="en">XQuery</span> <span lang="en">Update</span>:</p>
+<p class="enlace_centrado" style="text-align: justify;"><a href="http://xqilla.sourceforge.net/XQueryUpdate" title="Acceder a página con ejemplos de XQuery Update.">Ejemplos de XQuery Update</a></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id49">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta49_54" class="block iDevice_content">
+Señala si la siguiente afirmación es verdadera o falsa. 
+
+</div>
+<section class="question">
+<form name="true-false-form-0b49" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b49" class="block iDevice_content">
+<strong>Mediante rename se puede sustituir el valor de un nodo.</strong>
+
+</div>
+<p class="iDevice_answer js-required">
+<label for="true0b49"><input type="radio" name="option0b49" id="true0b49" class="exe-radio-option exe-radio-option-0-2-0b49-truefalse" /> Verdadero</label> 
+<label for="false0b49"><input type="radio" name="option0b49" id="false0b49" class="exe-radio-option exe-radio-option-1-2-0b49-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b49" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b49-result" class="wrong">Falso</strong></p>
+Es falso, rename permite cambiar el nombre a un nodo, no sustituir su valor. 
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id50">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta50_47" class="block iDevice_content">
+<p>En el siguiente enlace puedes ver un documento tipo resumen con muchos de los aspectos tratados en esta unidad hasta el momento.</p>
+<p class="enlace_centrado"><a href="http://openaccess.uoc.edu/webapps/o2/bitstream/10609/1064/1/00789tfc.pdf" title="Acceder a la presentación sobre XML y bases de datos.">XML y Bases de Datos.</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="354_EXPR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="36_CONEX.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1431908/mod_resource/content/3/AD06_contenidos_Web/355_xquery_update_facility.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 18 Jan 2024 16:06:25 GMT -->
+</html>
