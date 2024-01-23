@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432860/mod_resource/content/7/PSP06_Contenidos_Web/33_firmando_ficheros_jar.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 17:49:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3.- Firmando ficheros Jar. | DAM_PSP_06 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-15"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_06</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Técnicas de programación segura.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introducción a la seguridad Informática.</a>
+   <ul class="other-section">
+      <li><a href="11_AMENA.HTM" class="no-ch">1.1.- Amenazas de seguridad.</a></li>
+      <li><a href="12_ATAQU.HTM" class="no-ch">1.2.- Ataques.</a></li>
+      <li><a href="13_VULNE.HTM" class="no-ch">1.3.- Vulnerabilidades en el software.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_PROGRA.HTM" class="daddy">2.- Programación segura.</a>
+   <ul class="other-section">
+      <li><a href="21_EXCEP.HTM" class="daddy">2.1.- Excepciones (I).</a>
+      <ul class="other-section">
+         <li><a href="211_EXCE.HTM" class="no-ch">2.1.1.- Excepciones (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_EJEMP.HTM" class="no-ch">2.2.- Ejemplo I.</a></li>
+      <li><a href="23_VALID.HTM" class="no-ch">2.3.- Validación de entradas.</a></li>
+      <li><a href="24_EJEMP.HTM" class="no-ch">2.4.- Ejemplo II.</a></li>
+      <li><a href="25_FICHE.HTM" class="no-ch">2.5.- Ficheros de registro.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_POLTIC.HTM" class="current-page-parent daddy">3.- Políticas de seguridad.</a>
+   <ul>
+      <li><a href="31_MODEL.HTM" class="no-ch">3.1.- Modelo de seguridad de java.</a></li>
+      <li><a href="32_ASEGU.HTM" class="daddy">3.2.- Asegurando las aplicaciones (I).</a>
+      <ul class="other-section">
+         <li><a href="321_ASEG.HTM" class="no-ch">3.2.1.- Asegurando las aplicaciones (y II).</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="33_FIRMA.HTM" class="active no-ch">3.3.- Firmando ficheros Jar.</a></li>
+      <li><a href="34_UTILI.HTM" class="no-ch">3.4.- Utilizando ficheros Jar firmados.</a></li>
+      <li><a href="35_HERRA.HTM" class="no-ch">3.5.- Herramientas de seguridad.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_I_.HTM" class="no-ch">Anexo I.- Ataques.</a></li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="321_ASEG.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_UTILI.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.3.- Firmando ficheros Jar.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id49">
+<div class="iDevice emphasis0">
+<div id="ta49_73" class="block iDevice_content">
+<p>Los ficheros JAR (<span lang="en">ARchive of Java</span>) contienen componentes de <span lang="en">Java</span> (como archivos de clase) y, opcionalmente, recursos de soporte (como imágenes o sonidos).</p>
+<p>Como hemos visto antes, las políticas de seguridad se pueden especificar por su ubicación o por la persona que firma el fichero <code>jar</code>. A continuación, vamos a aprender a crear un fichero <code>jar</code> y firmarlo digitalmente para, más adelante, establecer correctamente sus políticas de acceso.</p>
+<p>Los pasos que debemos realizar son:</p>
+<ul class="lista_verificacion">
+<li>Descarga el siguiente código fuente o utiliza cualquier otro código que estimes conveniente.
+<p class="enlace_centrado"><a href="../JAVA/GETPROPS.JAV" title="Acceder a la deescarga de el código fuente GetProps.java">Descargar código fuente GetProps.java</a></p>
+</li>
+<li>Compila el código fuente: <br />
+<div class="codigo elemento_centrado" style="width: 16.45em;">
+<div class="texto_izquierda">
+<pre><code>javac GetProps.java</code></pre>
+</div>
+</div>
+</li>
+<li>Crea el fichero <span lang="en">jar</span> ejecutando:
+<div class="codigo elemento_centrado" style="width: 25.25em;">
+<div class="texto_izquierda">
+<pre><code>jar cvf GetProps.jar GetProps.class</code></pre>
+</div>
+</div>
+</li>
+<li>Genera las claves. A continuación vamos a crear un par de claves (una clave privada y una clave pública) para firmar el fichero. La clave privada la vamos a utilizar para firmar el fichero y la clave pública la van a utilizar los demás usuarios para comprobar que el fichero es correcto. En la siguiente unidad aprenderás muchos más conceptos relacionados con la criptografía en <span lang="en">java</span>.
+<p>Para generar las claves ejecutamos:</p>
+<div class="codigo elemento_centrado" style="width: 50em;">
+<div class="texto_izquierda">
+<pre><code>keytool –genkey –alias firmar –keypass hola00 –keystore DAM –storepass distancia</code></pre>
+</div>
+</div>
+<p>donde:</p>
+<ul>
+<li>-<code>alias firmar</code>. Indica el alias que se va a utilizar para referirnos al keystore, que es donde se van almacenar las llaves generadas.</li>
+<li>-<code>keypass hola00</code>. Especifica la contraseña de la llave privada.</li>
+<li>-<code>keystore DAM</code>. Indica el nombre del <code>keystore</code> que se esta creando o utilizando.</li>
+<li>-<code>storepass distancia</code>. Indica el <span lang="en">password</span> del <code>keystore</code>.</li>
+</ul>
+<p>A continuación, tal y como se puedes ver en la siguiente figura, hay que introducir los datos del certificado: nombre, organización, localidad, etc.</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="../PNG/PSP06-24.PNG" title="Ampliar imagen."><img alt="Captura de pantalla que muestra el proceso de generación de un certificado de seguridad." class="imagen_ampliable" src="../PNG/PSP06-25.PNG" style="width: 196px; height: 68px;" title="Generando certificado de seguridad." width="196" height="68" /></a></div>
+</div>
+<p> </p>
+</li>
+<li>Finalmente, firmados el fichero <span lang="en">jar</span> utilizando el certificado creado
+<div class="codigo elemento_centrado" style="width: 43.4em;">
+<div class="texto_izquierda">
+<pre><code>jarsigner –keystore DAM –signedjar sGetProps.jar GetProps.jar firmar</code></pre>
+</div>
+</div>
+<p>donde:</p>
+</li>
+<li>-<code>keystore DAM</code>. Es el <span lang="en">keystore</span> creado anteriormente.</li>
+<li>-<code>signedjar sGetPrrops.jar</code>. Indica el fichero <code>jar</code> firmado.</li>
+<li><code>GetProps.jar</code> Es el fichero <code>jar</code> a firmar.</li>
+<li><code>firmar</code>. Es el alias que se ha creado anteriormente.
+<div class="elemento_centrado">
+<div class="elemento_centrado"><a href="../PNG/PSP06-26.PNG" title="Ampliar imagen."><img alt="Captura de pantalla que muestra el resultado de la ejecución de jarsigner para firmar un fichero jar." class="imagen_ampliable" src="../PNG/PSP06-27.PNG" style="width: 200px; height: 100px;" title="Firmando un fichero jar." width="200" height="100" /></a></div>
+</div>
+</li>
+<li>Exportamos la llave pública del certificado ejecutando:
+<div class="codigo elemento_centrado" style="width: 39.55em;">
+<div class="texto_izquierda">
+<pre><code>keytool –export –keystore DAM –alias firmar –file Javier.cert</code></pre>
+</div>
+</div>
+</li>
+</ul>
+<p>Ahora ya tenemos todos los archivos necesarios para enviarlos a los diferentes clientes que quieran utilizar nuestra aplicación: el fichero jar firmado (<code>sGetProps.jar</code>) y el certificado (<code>Javier.cert</code>).</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id50">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta50_47" class="block iDevice_content">
+<p>
+Si deseas conocer el funcionamiento de los certificados de seguridad, consulta el siguiente enlace:
+</p>
+<p class="enlace_centrado">
+<a href="http://es.wikipedia.org/wiki/Certificado_digital" title="Acceder al certificado digital (Wikipedia).">Certificado digital.</a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="321_ASEG.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="34_UTILI.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432860/mod_resource/content/7/PSP06_Contenidos_Web/33_firmando_ficheros_jar.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 17:49:56 GMT -->
+</html>

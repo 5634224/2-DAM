@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432860/mod_resource/content/7/PSP06_Contenidos_Web/22_ejemplo_i.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 17:49:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2.- Ejemplo I. | DAM_PSP_06 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-7"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_06</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Técnicas de programación segura.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introducción a la seguridad Informática.</a>
+   <ul class="other-section">
+      <li><a href="11_AMENA.HTM" class="no-ch">1.1.- Amenazas de seguridad.</a></li>
+      <li><a href="12_ATAQU.HTM" class="no-ch">1.2.- Ataques.</a></li>
+      <li><a href="13_VULNE.HTM" class="no-ch">1.3.- Vulnerabilidades en el software.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_PROGRA.HTM" class="current-page-parent daddy">2.- Programación segura.</a>
+   <ul>
+      <li><a href="21_EXCEP.HTM" class="daddy">2.1.- Excepciones (I).</a>
+      <ul class="other-section">
+         <li><a href="211_EXCE.HTM" class="no-ch">2.1.1.- Excepciones (II).</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="22_EJEMP.HTM" class="active no-ch">2.2.- Ejemplo I.</a></li>
+      <li><a href="23_VALID.HTM" class="no-ch">2.3.- Validación de entradas.</a></li>
+      <li><a href="24_EJEMP.HTM" class="no-ch">2.4.- Ejemplo II.</a></li>
+      <li><a href="25_FICHE.HTM" class="no-ch">2.5.- Ficheros de registro.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_POLTIC.HTM" class="daddy">3.- Políticas de seguridad.</a>
+   <ul class="other-section">
+      <li><a href="31_MODEL.HTM" class="no-ch">3.1.- Modelo de seguridad de java.</a></li>
+      <li><a href="32_ASEGU.HTM" class="daddy">3.2.- Asegurando las aplicaciones (I).</a>
+      <ul class="other-section">
+         <li><a href="321_ASEG.HTM" class="no-ch">3.2.1.- Asegurando las aplicaciones (y II).</a></li>
+      </ul>
+      </li>
+      <li><a href="33_FIRMA.HTM" class="no-ch">3.3.- Firmando ficheros Jar.</a></li>
+      <li><a href="34_UTILI.HTM" class="no-ch">3.4.- Utilizando ficheros Jar firmados.</a></li>
+      <li><a href="35_HERRA.HTM" class="no-ch">3.5.- Herramientas de seguridad.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_I_.HTM" class="no-ch">Anexo I.- Ataques.</a></li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="211_EXCE.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_VALID.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2.- Ejemplo I.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id20">
+<div class="iDevice emphasis0">
+<div id="ta20_73" class="block iDevice_content">
+<p>
+<img alt="Icono de un ordenador." class="elemento_derecha" height="196" src="../PNG/PSP06_-7.PNG" style="width: 152px; height: 196px" title="Computer." width="152" />
+A continuación, para aprender a utilizar las excepciones, vamos a ver un ejemplo en el que como se  puede ver en el siguiente código, se genera un vector de 100 elementos con valores aleatorios y posteriormente, se almacenan los valores en el fichero <code>Salida.txt</code>.
+</p>
+<p>
+<strong>EscribirNumeros.java</strong>
+</p>
+<div class="codigo elemento_centrado" style="width: 46.15em">
+<div class="texto_izquierda">
+<pre>
+<code>// Nota: Este código no funciona. Es simplemente para uso educativo</code>
+</pre>
+<pre>
+<code>import java.io.*;</code>
+</pre>
+<pre>
+<code>import java.util.Vector;</code>
+</pre>
+<pre>
+<code>import java.util.Random;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>class EscribirNumeros {</code>
+</pre>
+<pre>
+<code>    private Vector&lt;Integer&gt; numeros;</code>
+</pre>
+<pre>
+<code>    private static final int SIZE = 100;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>    public EscribirNumeros (){</code>
+</pre>
+<pre>
+<code>        // Generamos el vector con números aleatorios</code>
+</pre>
+<pre>
+<code>        numeros = new Vector&lt;Integer&gt;(SIZE);</code>
+</pre>
+<pre>
+<code>        Random randomGenerator = new Random();</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>        for (int i = 0; i &lt; SIZE; i++){</code>
+</pre>
+<pre>
+<code>            Integer num=randomGenerator.nextInt(100);</code>
+</pre>
+<pre>
+<code>            numeros.addElement(new Integer(num));</code>
+</pre>
+<pre>
+<code>        }</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>        // Guardamos el vector en un fichero</code>
+</pre>
+<pre>
+<code>        PrintWriter out = null; </code>
+</pre>
+<pre>
+<code>        System.out.println(&quot;Entrando a la zona Try&quot;);</code>
+</pre>
+<pre>
+<code>        out = new PrintWriter(new FileWriter(&quot;Salida.txt&quot;));</code>
+</pre>
+<pre>
+<code>         </code>
+</pre>
+<pre>
+<code>        for (int i = 0; i &lt; SIZE; i++)</code>
+</pre>
+<pre>
+<code>            out.println(&quot;Valor de: &quot; + i + &quot; = &quot; + numeros.elementAt(i));</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>        out.close();</code>
+</pre>
+<pre>
+<code>    }</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>     public static void main( String[] arg ) {</code>
+</pre>
+<pre>
+<code>          new EscribirNumeros ();</code>
+</pre>
+<pre>
+<code>     }</code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+</div>
+</div>
+<br />
+<p>
+En la primera parte del código, donde se generan los valores aleatorios no se puede producir ningún tipo de excepción. Pero a la hora de guardar los valores en el fichero, es posible que no se pueda abrir el fichero y se produzca una excepción de entrada/salida (<code>IOException</code>). Otro posible fallo es al ejecutar la sentencia
+</p>
+<div class="codigo elemento_centrado" style="width: 17em">
+<div class="texto_izquierda">
+<pre>
+<code>numeros.elementAt(i)</code>
+</pre>
+</div>
+</div>
+<br />
+<p>
+es que el número de elemento solicitado (i) esté fuera del rango del vector (que es de 0 a 99). En el caso de intentar obtener un elemento que se encuentre fuera del vector se genera la excepción <code>IndexOutOfBoundsException</code>. 
+</p>
+<p>
+En el siguiente código vamos a tratar las dos excepciones comentadas para permitir que el código siempre se ejecute de una forma segura.
+</p>
+<p>
+<strong>EscribirNumeros.java</strong>
+</p>
+<div class="codigo elemento_centrado" style="width: 57.7em">
+<div class="texto_izquierda">
+<pre>
+<code>import java.io.*;</code>
+</pre>
+<pre>
+<code>import java.util.Vector;</code>
+</pre>
+<pre>
+<code>import java.util.Random;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>class EscribirNumeros {</code>
+</pre>
+<pre>
+<code>    private Vector&lt;Integer&gt; numeros;</code>
+</pre>
+<pre>
+<code>    private static final int SIZE = 100;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>    public EscribirNumeros (){</code>
+</pre>
+<pre>
+<code>        // Generamos el vector con números aleatorios</code>
+</pre>
+<pre>
+<code>        numeros = new Vector&lt;Integer&gt;(SIZE);</code>
+</pre>
+<pre>
+<code>        Random randomGenerator = new Random();</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>        for (int i = 0; i &lt; SIZE; i++){</code>
+</pre>
+<pre>
+<code>            Integer num=randomGenerator.nextInt(100);</code>
+</pre>
+<pre>
+<code>            numeros.addElement(new Integer(num));</code>
+</pre>
+<pre>
+<code>        }</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>        // Guardamos el vector en un fichero</code>
+</pre>
+<pre>
+<code>        PrintWriter out = null;</code>
+</pre>
+<pre>
+<code> </code>
+</pre>
+<pre>
+<code>        try {</code>
+</pre>
+<pre>
+<code>            System.out.println(&quot;Entrando a la zona Try&quot;);</code>
+</pre>
+<pre>
+<code>            out = new PrintWriter(new FileWriter(&quot;Salida.txt&quot;));</code>
+</pre>
+<pre>
+<code>         </code>
+</pre>
+<pre>
+<code>            for (int i = 0; i &lt; SIZE; i++)</code>
+</pre>
+<pre>
+<code>                out.println(&quot;Valor de: &quot; + i + &quot; = &quot; + numeros.elementAt(i));</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>            } catch (ArrayIndexOutOfBoundsException e) {</code>
+</pre>
+<pre>
+<code>                System.err.println(&quot;Caught ArrayIndexOutOfBoundsException: &quot; +e.getMessage());</code>
+</pre>
+<pre>
+<code>            } catch (IOException e) {</code>
+</pre>
+<pre>
+<code>                System.err.println(&quot;Caught IOException: &quot; + e.getMessage());</code>
+</pre>
+<pre>
+<code>            } finally {</code>
+</pre>
+<pre>
+<code>                if (out != null) {</code>
+</pre>
+<pre>
+<code>                    System.out.println(&quot;Cerrando el fichero&quot;);</code>
+</pre>
+<pre>
+<code>                    out.close();</code>
+</pre>
+<pre>
+<code>                } else {</code>
+</pre>
+<pre>
+<code>                    System.out.println(&quot;NO se ha abierto el fichero&quot;);</code>
+</pre>
+<pre>
+<code>                }</code>
+</pre>
+<pre>
+<code>            }</code>
+</pre>
+<pre>
+<code>    }</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>     public static void main( String[] arg ) {</code>
+</pre>
+<pre>
+<code>          new EscribirNumeros ();</code>
+</pre>
+<pre>
+<code>     }</code>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="211_EXCE.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="23_VALID.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432860/mod_resource/content/7/PSP06_Contenidos_Web/22_ejemplo_i.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 17:49:49 GMT -->
+</html>

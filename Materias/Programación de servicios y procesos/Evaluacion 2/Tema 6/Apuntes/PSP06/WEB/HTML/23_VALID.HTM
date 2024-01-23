@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432860/mod_resource/content/7/PSP06_Contenidos_Web/23_validacin_de_entradas.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 17:49:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.3.- Validación de entradas. | DAM_PSP_06 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_06</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Técnicas de programación segura.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introducción a la seguridad Informática.</a>
+   <ul class="other-section">
+      <li><a href="11_AMENA.HTM" class="no-ch">1.1.- Amenazas de seguridad.</a></li>
+      <li><a href="12_ATAQU.HTM" class="no-ch">1.2.- Ataques.</a></li>
+      <li><a href="13_VULNE.HTM" class="no-ch">1.3.- Vulnerabilidades en el software.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_PROGRA.HTM" class="current-page-parent daddy">2.- Programación segura.</a>
+   <ul>
+      <li><a href="21_EXCEP.HTM" class="daddy">2.1.- Excepciones (I).</a>
+      <ul class="other-section">
+         <li><a href="211_EXCE.HTM" class="no-ch">2.1.1.- Excepciones (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_EJEMP.HTM" class="no-ch">2.2.- Ejemplo I.</a></li>
+      <li id="active"><a href="23_VALID.HTM" class="active no-ch">2.3.- Validación de entradas.</a></li>
+      <li><a href="24_EJEMP.HTM" class="no-ch">2.4.- Ejemplo II.</a></li>
+      <li><a href="25_FICHE.HTM" class="no-ch">2.5.- Ficheros de registro.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_POLTIC.HTM" class="daddy">3.- Políticas de seguridad.</a>
+   <ul class="other-section">
+      <li><a href="31_MODEL.HTM" class="no-ch">3.1.- Modelo de seguridad de java.</a></li>
+      <li><a href="32_ASEGU.HTM" class="daddy">3.2.- Asegurando las aplicaciones (I).</a>
+      <ul class="other-section">
+         <li><a href="321_ASEG.HTM" class="no-ch">3.2.1.- Asegurando las aplicaciones (y II).</a></li>
+      </ul>
+      </li>
+      <li><a href="33_FIRMA.HTM" class="no-ch">3.3.- Firmando ficheros Jar.</a></li>
+      <li><a href="34_UTILI.HTM" class="no-ch">3.4.- Utilizando ficheros Jar firmados.</a></li>
+      <li><a href="35_HERRA.HTM" class="no-ch">3.5.- Herramientas de seguridad.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_I_.HTM" class="no-ch">Anexo I.- Ataques.</a></li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="22_EJEMP.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="24_EJEMP.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.3.- Validación de entradas.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id21">
+<div class="iDevice emphasis0">
+<div id="ta21_73" class="block iDevice_content">
+<p><img alt="Icono OK." class="elemento_derecha" src="../PNG/PSP06_-8.PNG" style="width: 160px; height: 160px;" title="OK." width="160" height="160" /> Una vía importante de errores de seguridad y de inconsistencia de datos dentro de una aplicación se produce a través de los datos que introducen los usuarios. Un fallo de seguridad muy frecuente, consiste en los errores basados en <span lang="en">buffer overflow</span>, se producen cuando se desborda el tamaño de una determinada variable, vector, matriz, etc. y se consigue acceder a zonas de memoria reservadas. Por ejemplo, si reservamos memoria para el nombre de usuario que ocupa 20 caracteres y, de alguna forma, el usuario consigue que la aplicación almacene más datos, se está produciendo un <span lang="en">buffer overflow </span>ya que los primeros 20 valores se almacenan en un lugar correcto, pero los restantes valores se almacenan en zonas de memoria destinadas a otros fines.</p>
+<p>La validación de datos permite:</p>
+<ul class="lista_verificacion">
+<li>Mantener la consistencia de los datos. Por ejemplo, si a un usuario le indicamos que debe introducir su <acronym title="Documento Nacional de Identidad.">DNI</acronym> éste debe tener el mismo formato siempre.</li>
+<li>Evitar desbordamientos de memoria buffer overflow. Al comprobar el formato y la longitud del campo evitamos que se produzcan los desbordamientos de memoria.</li>
+</ul>
+<p>Para llevar un riguroso control, sobre los datos de entrada de los usuarios hay que tener en cuenta la validación del formato y la validación del tamaño de la entrada.</p>
+<p>Java incorpora una potente y útil librería (<code>import java.util.regex</code>) para utilizar la clase <code>Pattern</code> que nos permite definir expresiones regulares. Las expresiones regulares permiten definir exactamente el formato de la entrada de datos.</p>
+<p>Para utilizar las expresiones regulares debemos realizar los siguientes pasos:</p>
+<ol>
+<li>Importamos la librería: <br />
+<div class="codigo elemento_centrado" style="width: 19.75em;">
+<div class="texto_izquierda">
+<pre><code>import java.util.regex.*;</code></pre>
+</div>
+</div>
+</li>
+<li>Definimos <code>Pattern </code>y <code>Matcher</code>:
+<div class="codigo elemento_centrado" style="width: 15.35em;">
+<div class="texto_izquierda">
+<pre><code>Pattern pat=null;</code></pre>
+<pre><code>Matcher mat=null;</code></pre>
+</div>
+</div>
+</li>
+<li>Compilamos el patrón a utilizar. <br />
+<div class="codigo elemento_centrado" style="width: 21.4em;">
+<div class="texto_izquierda">
+<pre><code>pat=Pattern.compile(patron);</code></pre>
+</div>
+</div>
+<p>donde el patrón a comprobar es la parte más importante ya que es donde tenemos que indicar el formato que va a tener la entrada.</p>
+<table class="tabla" summary="Elementos que se pueden utilizar para validar datos de entrada."><caption>Elementos para la validación entradas</caption>
+<thead>
+<tr>
+<th scope="col">Elemento</th>
+<th scope="col">Comentario.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">x</th>
+<td>El carácter x.</td>
+</tr>
+<tr>
+<th scope="row">[abc]</th>
+<td>Los caracteres a, b o c.</td>
+</tr>
+<tr>
+<th scope="row">[a-z]</th>
+<td>Una letra en minúscula.</td>
+</tr>
+<tr>
+<th scope="row">[A-Z]</th>
+<td>Una letra en mayúscula.</td>
+</tr>
+<tr>
+<th scope="row">[a-zA-Z]</th>
+<td>Una letra en minúscula o mayúscula.</td>
+</tr>
+<tr>
+<th scope="row">[0-9]</th>
+<td>Un número comprendido entre el 0 y el 9.</td>
+</tr>
+<tr>
+<th scope="row">[a-zA-Z0-9]</th>
+<td>Una letra en minúscula, mayúscula o un número.</td>
+</tr>
+</tbody>
+</table>
+<br />
+<table class="tabla" summary="Operadores que se pueden utilizar para validar datos de entrada."><caption>Operadores para la validación entradas</caption>
+<thead>
+<tr>
+<th scope="col">Operador</th>
+<th scope="col">Comentario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">[a-z]{2}</th>
+<td>Hay que introducir 2 letras en minúsculas.</td>
+</tr>
+<tr>
+<th scope="row">[a-z]{2,5}</th>
+<td>Hay que introducir de 2 a 5 letras en minúsculas.</td>
+</tr>
+<tr>
+<th scope="row">[a-z]{2,}</th>
+<td>Hay que introducir más de 2 letras en minúsculas.</td>
+</tr>
+<tr>
+<th scope="row">hola|adios</th>
+<td>Es la operación OR lógica y permite indicar que se introduzca el texto "hola" o "adios".</td>
+</tr>
+<tr>
+<th scope="row">XY</th>
+<td>Es la operación AND lógica y permite indicar que se deben introducir dos expresiones X seguida de Y.</td>
+</tr>
+<tr>
+<th scope="row">e(n|l) campo</th>
+<td>Los delimitadores ( ) permite hacer expresiones más complejas. En el ejemplo, el usuario debe introducir el texto "en campo" o "el campo".</td>
+</tr>
+</tbody>
+</table>
+<br />
+<p>A modo de ejemplo, a continuación se muestran varios ejemplos de expresiones:</p>
+<ul class="lista_verificacion">
+<li>Teléfono (formato 000-000000) <br />
+<div class="codigo elemento_centrado" style="width: 28.55em;">
+<div class="texto_izquierda">
+<pre><code>pat=Pattern.compile("[0-9]{3}-[0-9]{6}");</code></pre>
+</div>
+</div>
+</li>
+<li>DNI <br />
+<div class="codigo elemento_centrado" style="width: 28.55em;">
+<div class="texto_izquierda">
+<pre><code>pat=Pattern.compile("[0-9]{8}-[a-zA-Z]");</code></pre>
+</div>
+</div>
+</li>
+<li>Provincias andaluzas <br />
+<div class="codigo elemento_centrado" style="width: 57.7em;">
+<div class="texto_izquierda">
+<pre><code>pat=Pattern.compile("Almería","Granada","Jaén","Málaga","Sevilla","Cádiz","Córdoba","Huelva");</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li>Le pasamos al evaluador de expresiones el texto a comprobar. <br />
+<div class="codigo elemento_centrado" style="width: 25.25em;">
+<div class="texto_izquierda">
+<pre><code>mat=pat.matcher(texto_a_comprobar);</code></pre>
+</div>
+</div>
+</li>
+<li>Comprobamos si hay alguna coincidencia:
+<div class="codigo elemento_centrado" style="width: 49.45em;">
+<div class="texto_izquierda">
+<pre><code>if(mat.find()){
+	// Coincide con el patrón 
+	}else{
+	// NO coincide con el patrón 
+	}</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id22">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta22_47" class="block iDevice_content">
+<p>
+En los siguientes enlaces puedes encontrar más información sobre la clase <code>Pattern</code>
+</p>
+<p class="enlace_centrado">
+<a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/util/regex/Pattern.html" title="Acceder a la documentación oficial de la clase pattern">Documentación oficial (<code>Pattern</code>).</a>
+</p>
+<p class="enlace_centrado">
+<a href="http://bpsmind.wordpress.com/2007/08/22/ejemplos-de-expresiones-regulares-en-java/" title="Acceder a los ejemplos de utilización de la clase pattern">Ejemplos.</a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id23">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-23_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion23_60" class="block question iDevice_content">
+<strong>Indica el patrón que permite validar un DNI con la letra en minúscula:</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i23_63" class="sr-av"><a href="#answer-23_63">Opción 1</a></label><input type="radio" name="option23_60" id="i23_63" class="exe-radio-option exe-radio-option-0-4-23_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-23_63"><div id="taans23_63" class="block iDevice_content">
+Pattern.compile(&quot;[0-9]{9}-[a-zA-Z]&quot;);
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i23_122" class="sr-av"><a href="#answer-23_122">Opción 2</a></label><input type="radio" name="option23_60" id="i23_122" class="exe-radio-option exe-radio-option-1-4-23_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-23_122"><div id="taans23_122" class="block iDevice_content">
+Pattern.compile(&quot;[0-9][a-zA-Z]&quot;);
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i23_125" class="sr-av"><a href="#answer-23_125">Opción 3</a></label><input type="radio" name="option23_60" id="i23_125" class="exe-radio-option exe-radio-option-2-4-23_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-23_125"><div id="taans23_125" class="block iDevice_content">
+Pattern.compile(&quot;[0-9]{8}-[a-zA-Z]&quot;);
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i23_128" class="sr-av"><a href="#answer-23_128">Opción 4</a></label><input type="radio" name="option23_60" id="i23_128" class="exe-radio-option exe-radio-option-3-4-23_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-23_128"><div id="taans23_128" class="block iDevice_content">
+Pattern.compile(&quot;[0-9]{8}-[a-z]&quot;);<br />
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b23_60" class="feedback js-hidden">
+<div id="taf23_63" class=" iDevice_content">
+No es así.
+
+</div>
+</section>
+<section id="sa1b23_60" class="feedback js-hidden">
+<div id="taf23_122" class=" iDevice_content">
+Incorrecto.
+
+</div>
+</section>
+<section id="sa2b23_60" class="feedback js-hidden">
+<div id="taf23_125" class=" iDevice_content">
+No es correcto, repasa los conocimientos del apartado.
+
+</div>
+</section>
+<section id="sa3b23_60" class="feedback js-hidden">
+<div id="taf23_128" class=" iDevice_content">
+Correcto.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-23_63">Incorrecto</a><span> (<a href="#sa0b23_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-23_122">Incorrecto</a><span> (<a href="#sa1b23_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-23_125">Incorrecto</a><span> (<a href="#sa2b23_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-23_128">Opción correcta</a><span> (<a href="#sa3b23_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="22_EJEMP.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="24_EJEMP.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432860/mod_resource/content/7/PSP06_Contenidos_Web/23_validacin_de_entradas.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 17:49:49 GMT -->
+</html>

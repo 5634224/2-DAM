@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432860/mod_resource/content/7/PSP06_Contenidos_Web/24_ejemplo_ii.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 17:49:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.4.- Ejemplo II. | DAM_PSP_06 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_06</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Técnicas de programación segura.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introducción a la seguridad Informática.</a>
+   <ul class="other-section">
+      <li><a href="11_AMENA.HTM" class="no-ch">1.1.- Amenazas de seguridad.</a></li>
+      <li><a href="12_ATAQU.HTM" class="no-ch">1.2.- Ataques.</a></li>
+      <li><a href="13_VULNE.HTM" class="no-ch">1.3.- Vulnerabilidades en el software.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_PROGRA.HTM" class="current-page-parent daddy">2.- Programación segura.</a>
+   <ul>
+      <li><a href="21_EXCEP.HTM" class="daddy">2.1.- Excepciones (I).</a>
+      <ul class="other-section">
+         <li><a href="211_EXCE.HTM" class="no-ch">2.1.1.- Excepciones (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_EJEMP.HTM" class="no-ch">2.2.- Ejemplo I.</a></li>
+      <li><a href="23_VALID.HTM" class="no-ch">2.3.- Validación de entradas.</a></li>
+      <li id="active"><a href="24_EJEMP.HTM" class="active no-ch">2.4.- Ejemplo II.</a></li>
+      <li><a href="25_FICHE.HTM" class="no-ch">2.5.- Ficheros de registro.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_POLTIC.HTM" class="daddy">3.- Políticas de seguridad.</a>
+   <ul class="other-section">
+      <li><a href="31_MODEL.HTM" class="no-ch">3.1.- Modelo de seguridad de java.</a></li>
+      <li><a href="32_ASEGU.HTM" class="daddy">3.2.- Asegurando las aplicaciones (I).</a>
+      <ul class="other-section">
+         <li><a href="321_ASEG.HTM" class="no-ch">3.2.1.- Asegurando las aplicaciones (y II).</a></li>
+      </ul>
+      </li>
+      <li><a href="33_FIRMA.HTM" class="no-ch">3.3.- Firmando ficheros Jar.</a></li>
+      <li><a href="34_UTILI.HTM" class="no-ch">3.4.- Utilizando ficheros Jar firmados.</a></li>
+      <li><a href="35_HERRA.HTM" class="no-ch">3.5.- Herramientas de seguridad.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_I_.HTM" class="no-ch">Anexo I.- Ataques.</a></li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="23_VALID.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="25_FICHE.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.4.- Ejemplo II.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id24">
+<div class="iDevice emphasis0">
+<div id="ta24_73" class="block iDevice_content">
+<p>
+A continuación, vamos a ver un ejemplo en que se valida el texto de entrada para que cumpla el formato de DNI.
+</p>
+<p>
+<strong>ValidarEntrada.java</strong>
+</p>
+<div class="codigo elemento_centrado" style="width: 52.75em">
+<div class="texto_izquierda">
+<pre>
+<code>import java.io.*;</code>
+</pre>
+<pre>
+<code>import java.util.regex.*;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>class ValidarEntrada {</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>     public ValidarEntrada(){</code>
+</pre>
+<pre>
+<code>          String dni_cliente=new String();          </code>
+</pre>
+<pre>
+<code>          Pattern pat=null;</code>
+</pre>
+<pre>
+<code>          Matcher mat=null;</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>          // para leer del teclado</code>
+</pre>
+<pre>
+<code>          BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>          try{</code>
+</pre>
+<pre>
+<code>               System.out.println(&quot;Introduce tu DNI (Formato 00000000-A):&quot;);</code>
+</pre>
+<pre>
+<code>               dni_cliente=reader.readLine();</code>
+</pre>
+<pre>
+<code>          </code>
+</pre>
+<pre>
+<code>               pat=Pattern.compile(&quot;[0-9]{8}-[a-zA-Z]&quot;);</code>
+</pre>
+<pre>
+<code>               mat=pat.matcher(dni_cliente);</code>
+</pre>
+<pre>
+<code>               </code>
+</pre>
+<pre>
+<code>               if(mat.find()){</code>
+</pre>
+<pre>
+<code>                         System.out.println(&quot;Correcto!!  &quot;+dni_cliente);</code>
+</pre>
+<pre>
+<code>               }else{</code>
+</pre>
+<pre>
+<code>                    System.out.println(&quot;El DNI esta mal  &quot;+dni_cliente);</code>
+</pre>
+<pre>
+<code>               }</code>
+</pre>
+<pre>
+<code>               </code>
+</pre>
+<pre>
+<code>          } catch( Exception e ) {</code>
+</pre>
+<pre>
+<code>               System.out.println( e.getMessage() );</code>
+</pre>
+<pre>
+<code>          }</code>
+</pre>
+<pre>
+<code>     }</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>     public static void main( String[] arg ) {</code>
+</pre>
+<pre>
+<code>          new ValidarEntrada();</code>
+</pre>
+<pre>
+<code>     }</code>
+</pre>
+<pre>
+<code></code>
+</pre>
+<pre>
+<code>}</code>
+</pre>
+</div>
+</div>
+<br />
+<p>
+Compilamos el código:
+</p>
+<div class="codigo elemento_centrado" style="width: 19.75em">
+<div class="texto_izquierda">
+<pre>
+<code>javac ValidarEntrada.java</code>
+</pre>
+</div>
+</div>
+<br />
+<p>
+y lo ejecutamos:
+</p>
+<div class="codigo elemento_centrado" style="width: 16.45em">
+<div class="texto_izquierda">
+<pre>
+<code>java ValidarEntrada</code>
+</pre>
+</div>
+</div>
+<br />
+<p>
+En la siguiente figura podemos ver un ejemplo del resultado de la ejecución de la aplicación.
+</p>
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<a href="../PNG/PSP06_-9.PNG" title="Ampliar imagen."><img alt="Captura de pantalla que muestra el resultado de la ejecución del programa ValidarEntrada." class="imagen_ampliable" height="100" src="../PNG/PSP06-10.PNG" style="width: 200px; height: 100px" title="Java ValidarEntrada." width="200" /></a>
+</div>
+</div>
+<p>
+&nbsp;
+</p>
+
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="23_VALID.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="25_FICHE.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432860/mod_resource/content/7/PSP06_Contenidos_Web/24_ejemplo_ii.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 17:49:50 GMT -->
+</html>

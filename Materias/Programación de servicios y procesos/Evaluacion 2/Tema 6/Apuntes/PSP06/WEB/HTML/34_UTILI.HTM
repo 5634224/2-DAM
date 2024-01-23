@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432860/mod_resource/content/7/PSP06_Contenidos_Web/34_utilizando_ficheros_jar_firmados.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 17:49:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.4.- Utilizando ficheros Jar firmados. | DAM_PSP_06 </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="MEFP 2020" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-16"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">DAM_PSP_06</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">Técnicas de programación segura.</a></li>
+   <li><a href="1_INTROD.HTM" class="daddy">1.- Introducción a la seguridad Informática.</a>
+   <ul class="other-section">
+      <li><a href="11_AMENA.HTM" class="no-ch">1.1.- Amenazas de seguridad.</a></li>
+      <li><a href="12_ATAQU.HTM" class="no-ch">1.2.- Ataques.</a></li>
+      <li><a href="13_VULNE.HTM" class="no-ch">1.3.- Vulnerabilidades en el software.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_PROGRA.HTM" class="daddy">2.- Programación segura.</a>
+   <ul class="other-section">
+      <li><a href="21_EXCEP.HTM" class="daddy">2.1.- Excepciones (I).</a>
+      <ul class="other-section">
+         <li><a href="211_EXCE.HTM" class="no-ch">2.1.1.- Excepciones (II).</a></li>
+      </ul>
+      </li>
+      <li><a href="22_EJEMP.HTM" class="no-ch">2.2.- Ejemplo I.</a></li>
+      <li><a href="23_VALID.HTM" class="no-ch">2.3.- Validación de entradas.</a></li>
+      <li><a href="24_EJEMP.HTM" class="no-ch">2.4.- Ejemplo II.</a></li>
+      <li><a href="25_FICHE.HTM" class="no-ch">2.5.- Ficheros de registro.</a></li>
+      <li><a href="26_EJEMP.HTM" class="no-ch">2.6.- Ejemplo III.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_POLTIC.HTM" class="current-page-parent daddy">3.- Políticas de seguridad.</a>
+   <ul>
+      <li><a href="31_MODEL.HTM" class="no-ch">3.1.- Modelo de seguridad de java.</a></li>
+      <li><a href="32_ASEGU.HTM" class="daddy">3.2.- Asegurando las aplicaciones (I).</a>
+      <ul class="other-section">
+         <li><a href="321_ASEG.HTM" class="no-ch">3.2.1.- Asegurando las aplicaciones (y II).</a></li>
+      </ul>
+      </li>
+      <li><a href="33_FIRMA.HTM" class="no-ch">3.3.- Firmando ficheros Jar.</a></li>
+      <li id="active"><a href="34_UTILI.HTM" class="active no-ch">3.4.- Utilizando ficheros Jar firmados.</a></li>
+      <li><a href="35_HERRA.HTM" class="no-ch">3.5.- Herramientas de seguridad.</a></li>
+   </ul>
+   </li>
+   <li><a href="ANEXO_I_.HTM" class="no-ch">Anexo I.- Ataques.</a></li>
+   <li><a href="ANEXO_LI.HTM" class="no-ch">Anexo.- Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="33_FIRMA.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_HERRA.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.4.- Utilizando ficheros Jar firmados.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id51">
+<div class="iDevice emphasis0">
+<div id="ta51_73" class="block iDevice_content">
+<p>
+Una vez que tenemos el fichero jar firmado (<code>sGetProps.jar</code>) y el certificado de seguridad (<code>Javier.cert</code>), podemos intentar ejecutar directamente la aplicación, pero veremos que al utilizar el <span lang="en">SecurityManger</span> nos da problemas de seguridad.
+</p>
+<div class="codigo elemento_centrado" style="width: 36.25em">
+<div class="texto_izquierda">
+<pre>
+<code>java –cp sGetProps.jar GetProps</code>
+</pre>
+<pre>
+<code>java –Djava.security.manager –cp sGetProps.jar GetProps</code>
+</pre>
+</div>
+</div>
+<br />
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<a href="../PNG/PSP06-28.PNG" title="Ampliar imagen."><img alt="Captura de pantalla que muestra el resultado de la ejecución de java –Djava.security.manager –cp sGetProps.jar GetProps." class="imagen_ampliable" height="100" src="../PNG/PSP06-29.PNG" style="width: 200px; height: 100px" title="java –Djava.security.manager –cp sGetProps.jar GetProps." width="200" /></a>
+</div>
+</div>
+<p>
+Para que la aplicación funcione correctamente, primero debemos importar el certificado ejecutando:
+</p>
+<div class="codigo elemento_centrado" style="width: 39em">
+<div class="texto_izquierda">
+<pre>
+<code>keytool –import alias Javier –file Javier.cert –keystore DAM</code>
+</pre>
+</div>
+</div>
+<p>
+donde:
+</p>
+<ul class="lista_verificacion">
+	<li><code>-import alias Javier</code>. Indica que se va a importar el certificado con el alias <code>Javier</code>.</li>
+	<li><code>-keystore DAM</code>. Indica el <span lang="en">keystore</span> donde se guarda el certificado.</li>
+</ul>
+<p>
+Una vez que tenemos el alias, tenemos que configurar las políticas de acceso para que el usuario <code>Javier</code> pueda ejecutar correctamente la aplicación. Para ello, debemos realizar los siguientes pasos:
+</p>
+<ul class="lista_verificacion">
+	<li>Ejecutamos el comando <code>policytool</code> para iniciar la herramienta que permite administrar las políticas de acceso.</li>
+	<li>Nos vamos al menú Archivo -&gt; Abrir y seleccionamos el fichero <code>java.policy</code> que se encuentra en <code>c:\Archivos de programa\Java\jre7\lib\security\java.policy</code> (hay que tener cuidado porque la ubicación puede cambiar dependiendo de la versión de java).
+	<div class="elemento_centrado">
+	<div class="elemento_centrado">
+	<a href="../PNG/PSP06-18.PNG" title="Ampliar imagen."><img alt=" Captura de pantalla de las herramientas de  Políticas de seguridad de java." class="imagen_ampliable" height="128" src="../PNG/PSP06-19.PNG" style="width: 192px; height: 128px" title="Herramienta de Políticas ." width="192" /></a>
+	</div>
+	</div>
+	</li>
+	<li>Una vez abierto el fichero de políticas de acceso tenemos que indicar el <span lang="en">keystore</span> que vamos a utilizar. Para ello, en el menú Almacen de claves seleccionamos Editar y en el campo <span lang="en">URL</span> de almacén de claves  indicamos la ubicación de las claves (que en nuestro caso es <code>file:\c:\ejemplo\DAM)</code>.</li>
+	<li>Añadimos una entrada para permitir el acceso de nuestro código. Para ello, realizamos los siguientes pasos:
+	</li>
+	<li>Pulsamos el botón <em>Agregar Entrada de Política</em> y podemos indicar el origen del fichero por su ubicación (<code>codebase</code>) o por su firma (<code>SignedBy</code>). En esta ocasión, en el campo <code>SignedBy</code> escribimos nuestro usuario <em>Javier</em>.</li>
+	<li>Pulsamos en <em>Agregar Permiso</em> y añadimos un permisos con los siguientes datos:</li>
+	<li>añadimos una nueva política de acceso con los siguientes datos:
+	<ul>
+		<li>PropertyPermission = <code>java.util.PropertyPermission</code>
+		</li>
+		<li>Nombre de Destino = <code>user.home</code></li>
+		<li>Acciones = <code>read</code></li>
+	</ul>
+	</li>
+	<li>Pulsamos en <em>Agregar Permiso</em> para añadir el segundo permiso con los siguientes datos:
+	<ul>
+		<li>PropertyPermission = <code>java.util.PropertyPermission</code></li>
+		<li>Nombre de Destino = <code>java.home</code></li>
+		<li>Acciones = <code>read</code></li>
+	</ul>
+	</li>
+	<li>Finalmente, guardamos todos los cambios.
+	<div class="elemento_centrado">
+	<div class="elemento_centrado">
+	<a href="../PNG/PSP06-20.PNG" title="Ampliar imagen."><img alt="Captura de pantalla que muestra la edición de permisos de las políticas de seguridad. ." class="imagen_ampliable" height="68" src="../PNG/PSP06-21.PNG" style="width: 192px; height: 68px" title="Editando permisos." width="192" /></a>
+	</div>
+	</div>
+	</li>
+</ul>
+<p>
+Una vez configurada la política de acceso, volvemos a ejecutar la aplicación y ya podemos comprobar que la aplicación se ejecuta correctamente.
+</p>
+<div class="codigo elemento_centrado" style="width: 36.25em">
+<div class="texto_izquierda">
+<pre>
+<code>java –Djava.security.manager –cp sGetProps.jar GetProps</code>
+</pre>
+</div>
+</div>
+<div class="elemento_centrado">
+<div class="elemento_centrado">
+<a href="../PNG/PSP06-30.PNG" title="Ampliar imagen."><img alt="java –Djava.security.manager –cp sGetProps.jar GetProps." class="imagen_ampliable" height="66" src="../PNG/PSP06-31.PNG" style="width: 188px; height: 66px" title="Captura de pantalla que muestra el resultado de ejecutar java –Djava.security.manager –cp sGetProps.jar GetProps." width="188" /></a>
+</div>
+</div>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id52">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta52_47" class="block iDevice_content">
+<p>
+A continuación puedes ver una guía rápida para la firma de aplicaciones.
+</p>
+<p class="enlace_centrado">
+<a href="http://docs.oracle.com/javase/tutorial/security/toolsign/signer.html" title="Acceder a la documentación oficial (Steps for the Code Signer)">Documentación oficial (Steps for the Code Signer).</a>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id53">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-53_60" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion53_60" class="block question iDevice_content">
+<strong>¿Qué comando permite firmar ficheros <code>jar</code>?</strong>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i53_63" class="sr-av"><a href="#answer-53_63">Opción 1</a></label><input type="radio" name="option53_60" id="i53_63" class="exe-radio-option exe-radio-option-0-3-53_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-53_63"><div id="taans53_63" class="block iDevice_content">
+policytool.<br />
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i53_86" class="sr-av"><a href="#answer-53_86">Opción 2</a></label><input type="radio" name="option53_60" id="i53_86" class="exe-radio-option exe-radio-option-1-3-53_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-53_86"><div id="taans53_86" class="block iDevice_content">
+jarsigner.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i53_95" class="sr-av"><a href="#answer-53_95">Opción 3</a></label><input type="radio" name="option53_60" id="i53_95" class="exe-radio-option exe-radio-option-2-3-53_60-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-53_95"><div id="taans53_95" class="block iDevice_content">
+keytool.<br />
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b53_60" class="feedback js-hidden">
+<div id="taf53_63" class=" iDevice_content">
+Incorrecto, repasa los conocimientos del apartado.
+
+</div>
+</section>
+<section id="sa1b53_60" class="feedback js-hidden">
+<div id="taf53_86" class=" iDevice_content">
+Correcto.
+
+</div>
+</section>
+<section id="sa2b53_60" class="feedback js-hidden">
+<div id="taf53_95" class=" iDevice_content">
+No es correcto, repasa los conocimientos del apartado.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-53_63">Incorrecto</a><span> (<a href="#sa0b53_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-53_86">Opción correcta</a><span> (<a href="#sa1b53_60">Retroalimentación</a>)</span></li>
+<li><a href="#answer-53_95">Incorrecto</a><span> (<a href="#sa2b53_60">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="33_FIRMA.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="35_HERRA.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432860/mod_resource/content/7/PSP06_Contenidos_Web/34_utilizando_ficheros_jar_firmados.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 17:49:57 GMT -->
+</html>
