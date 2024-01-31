@@ -1,0 +1,52 @@
+=============IMPORTANTE: SSH===============
+IP de conexion via SSH: 192.168.56.101 (es una IP fija)
+Usuario: usar cualquiera de los que se muestran a continuación.
+Ejemplo: odoo@192.168.56.101
+
+=============USUARIOS DEL SISTEMA OPERATIVO===============
+---Usuario normal---
+Nombre: sge
+Contraseña: sge
+
+--Usuario root (Si ejecutas su -l - root)--
+Nombre: root (obviamente)
+Contraseña: root
+
+--Usuario odoo (RECOMENDADO PARA SSH)--
+Nombre: odoo
+Contraseña: odoo
+
+Está ya metido en el fichero /etc/sudoers, por lo que podrás ejecutar comandos con sudo, por ejemplo, para hacer un
+sudo service odoo restart
+o bien
+sudo systemctl restart odoo
+
+=============POSTGRES===============
+Usuario: postgres
+Contraseña: postgres
+Comando: sudo -u postgres psql
+
+=============PGADMIN4===============
+URL de acceso: 192.168.56.101/pgadmin4
+Correo electrónico: sge@sge.sge
+Contraseña: sgesge
+
+=============ODOO===============
+URL de acceso: 192.168.56.101:8069
+Clave maestra de la BB.DD: 8ev2-9imf-ynsi
+Database name: odoo
+Correo electrónico: sge@sge.sge
+Contraseña: sge
+
+--Rutas importantes de Odoo--
+/usr/lib/python3/dist-packages/odoo: es donde se encuentra el proyecto entero de Odoo
+/usr/lib/python3/dist-packages/odoo/misaddons: es donde almacenarás los módulos que crees con scaffold
+/etc/odoo: es donde se encuentra el fichero odoo.conf
+/var/lib/odoo: es la carpeta Home del usuario odoo
+
+--Cómo se ejecuta scaffold--
+Simplemente, te sitúas en la carpeta 
+/usr/lib/python3/dist-packages/odoo/misaddons
+y escribes:
+odoo scaffold nombreModulo
+(Sustituye "nombreModulo" por el nombre de la carpeta que contendrá tu nuevo módulo)
