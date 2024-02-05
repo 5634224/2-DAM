@@ -1,0 +1,3 @@
+11;'Clefairy';'Hada';1;4
+13;'Machop';'Lucha';1;5
+5;'Squirtle';'Agua';1;2
