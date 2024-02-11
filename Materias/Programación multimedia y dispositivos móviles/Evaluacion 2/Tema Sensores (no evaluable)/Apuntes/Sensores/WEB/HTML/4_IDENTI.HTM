@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432527/mod_resource/content/1/DAM_PMDM10_Contenidos/4_identificacin_de_sensores.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Feb 2024 16:11:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_EFFE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4.- Identificación de sensores. | PMDM10 - DAM - Programación Multimedia y Dispositivos Móviles - UT10.- Sensores. Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Rubén Carrasco Peña  - Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_EFFE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_HIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+<script type="text/javascript"
+   src="../JS/LATESTA4.JS?config=default">
+</script></head>
+<body class="exe-web-site" id="exe-node-89"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM10 - DAM - Programación Multimedia y Dispositivos Móviles - UT10.- Sensores. Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">PMDM10.- Sensores.</a></li>
+   <li><a href="1_TIPOS_.HTM" class="no-ch">1.- Tipos de sensores.</a></li>
+   <li><a href="2_FRAMEW.HTM" class="no-ch">2.- Framework o entorno de trabajo del sensor.</a></li>
+   <li><a href="3_DISPON.HTM" class="no-ch">3.- Disponibilidad del sensor.</a></li>
+   <li id="active"><a href="4_IDENTI.HTM" class="active no-ch">4.- Identificación de sensores.</a></li>
+   <li><a href="5_MONITO.HTM" class="no-ch">5.- Monitorización de eventos del sensor.</a></li>
+   <li><a href="6_SISTEM.HTM" class="no-ch">6.- Sistema de coordenadas del sensor.</a></li>
+   <li><a href="7_SENSOR.HTM" class="no-ch">7.- Sensor de gravedad.</a></li>
+   <li><a href="8_SENSOR.HTM" class="no-ch">8.- Sensor de acelaración o acelerómetro.</a></li>
+   <li><a href="9_GIROSC.HTM" class="no-ch">9.- Giroscopio.</a></li>
+   <li><a href="10_SENSO.HTM" class="no-ch">10.- Sensor de aceleración lineal.</a></li>
+   <li><a href="11_SENSO.HTM" class="no-ch">11.- Sensor de campo geomagnético.</a></li>
+   <li><a href="12_SENSO.HTM" class="no-ch">12.- Sensor de proximidad.</a></li>
+   <li><a href="13_EJERC.HTM" class="no-ch">13.- Ejercicio resuelto 2.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="3_DISPON.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_MONITO.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4.- Identificación de sensores.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id229">
+<div class="iDevice emphasis0">
+<div id="ta229_154" class="block iDevice_content">
+<p>El marco del sensor de Android proporciona varios métodos que le permiten determinar en tiempo de ejecución qué sensores están en un dispositivo. La API también proporciona métodos que le permiten determinar las capacidades de cada sensor, como su rango máximo, su resolución y sus requisitos de potencia.</p>
+<p>Para identificar los sensores que están en un dispositivo, primero necesitamos obtener una referencia al servicio del sensor. Para hacerlo, crearemos una instancia de la clase <strong><span lang="en">SensorManager</span> </strong>llamando al método <strong><span lang="en">getSystemService()</span></strong> y pasando el argumento <strong><span lang="en">SENSOR_SERVICE</span></strong>.</p>
+<div class="exe-fx exe-accordion">
+<h2>Ejemplo</h2>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code> private SensorManager mSensorManager;
+ ...
+ mSensorManager = (SensorManager) getSystemService (Context.SENSOR_SERVICE);</code></pre>
+</div>
+</div>
+</div>
+<p>A continuación, podemos obtener una lista de cada sensor en un dispositivo llamando al método <span lang="en">getSensorList()</span> y utilizando la constante <span lang="en">TYPE_ALL</span>.</p>
+<div class="exe-fx exe-accordion">
+<h2>Ejemplo</h2>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code> Lista &lt;Sensor&gt; deviceSensors = mSensorManager.getSensorList (Sensor.TYPE_ALL);</code></pre>
+</div>
+</div>
+</div>
+<p>Si deseamos enumerar todos los sensores de un tipo determinado, podemos usar otra constante en lugar de <strong><span lang="en">TYPE_ALL</span></strong> como <strong><span lang="en">TYPE_GYROSCOPE</span></strong>, <strong><span lang="en">TYPE_LINEAR_ACCELERATION</span></strong> o <strong></strong><span lang="en"><strong>TYPE_GRAVITY</strong></span>.</p>
+<p>También podemos determinar si existe un tipo específico de sensor en un dispositivo utilizando el método <strong><span lang="en">getDefaultSensor()</span></strong> y pasando la constante de tipo para un sensor específico. Si un dispositivo tiene más de un sensor de un tipo determinado, uno de los sensores debe designarse como el sensor predeterminado. Si no existe un sensor predeterminado para un tipo determinado de sensor, la llamada al método devuelve nulo, lo que significa que el dispositivo no tiene ese tipo de sensor.</p>
+<div class="exe-fx exe-accordion">
+<h2>Ejemplo</h2>
+<p>El siguiente código verifica si hay un magnetómetro en un dispositivo:</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code> private SensorManager mSensorManager;
+ ...
+ mSensorManager = (SensorManager) getSystemService (Context.SENSOR_SERVICE);
+ if (mSensorManager.getDefaultSensor (Sensor.TYPE_MAGNETIC_FIELD)! = null) {
+   // ¡Éxito!  Hay un magnetómetro.
+ }
+ else {
+   // ¡Fallo!  Sin magnetómetro
+ }</code></pre>
+</div>
+</div>
+</div>
+<p><span class=" exe-block-info">Android no requiere que los fabricantes de dispositivos creen ningún tipo particular de sensores en sus dispositivos, por lo que los dispositivos pueden tener una amplia gama de configuraciones de sensores.</span></p>
+<p>Otro método útil es el método <strong><span lang="en">getMinDelay()</span></strong>, que devuelve el intervalo de tiempo mínimo (en microsegundos) que un sensor puede usar para detectar los datos. Cualquier sensor que devuelve un valor distinto de cero para el método <strong><span lang="en">getMinDelay()</span></strong> es un sensor de transmisión. Los sensores de transmisión por secuencias detectan los datos a intervalos regulares y se introdujeron en Android 2.3 (nivel de API 9). Si un sensor devuelve cero cuando llama al método <strong><span lang="en">getMinDelay()</span></strong>, significa que el sensor no es un sensor de transmisión porque informa los datos solo cuando hay un cambio en los parámetros que está detectando.</p>
+<p>El método <strong><span lang="en">getMinDelay()</span></strong> es útil porque nos permite determinar la velocidad máxima a la que un sensor puede adquirir datos. Si ciertas funciones en su aplicación requieren altas tasas de adquisición de datos o un sensor de transmisión, puede utilizar este método para determinar si un sensor cumple con esos requisitos y luego habilitar o deshabilitar, en consecuencia, las características relevantes en su aplicación.</p>
+<p style="text-align: center;"><strong></strong><span title="Texto en rojo" style="text-align: center;"><strong></strong><span class=" exe-block-danger"><strong>Precaución:</strong> la velocidad máxima de adquisición de datos de un sensor no es necesariamente la velocidad a la que el marco del sensor entrega los datos del sensor a su aplicación. El marco del sensor informa los datos a través de los eventos del sensor, y varios factores influyen en la velocidad a la que su aplicación recibe los eventos del sensor.</span></span><span class=" exe-block-danger"></span></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper MultichoiceIdevice em_iDevice em_iDevice_question" id="id322">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-322_86" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion322_86" class="block question iDevice_content">
+<p>Para obtener una lista de todos los sensores de un dispositivo utilizamos la constante:</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i322_89" class="sr-av"><a href="#answer-322_89">Opción 1</a></label><input type="radio" name="option322_86" id="i322_89" class="exe-radio-option exe-radio-option-0-4-322_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-322_89"><div id="taans322_89" class="block iDevice_content">
+<p>TYPE_GRAVITY</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i322_10603" class="sr-av"><a href="#answer-322_10603">Opción 2</a></label><input type="radio" name="option322_86" id="i322_10603" class="exe-radio-option exe-radio-option-1-4-322_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-322_10603"><div id="taans322_10603" class="block iDevice_content">
+<p>TYPE_ALL</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i322_10606" class="sr-av"><a href="#answer-322_10606">Opción 3</a></label><input type="radio" name="option322_86" id="i322_10606" class="exe-radio-option exe-radio-option-2-4-322_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-322_10606"><div id="taans322_10606" class="block iDevice_content">
+<p>TYPE_GYROSCOPE</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i322_10609" class="sr-av"><a href="#answer-322_10609">Opción 4</a></label><input type="radio" name="option322_86" id="i322_10609" class="exe-radio-option exe-radio-option-3-4-322_86-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-322_10609"><div id="taans322_10609" class="block iDevice_content">
+<p>TYPE_LINEAR_ACCELERATION</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b322_86" class="feedback js-hidden">
+<div id="taf322_89" class=" iDevice_content">
+<p>No es correcto, vuelve a leer el apartado.</p>
+</div>
+</section>
+<section id="sa1b322_86" class="feedback js-hidden">
+<div id="taf322_10603" class=" iDevice_content">
+<p>Correcto.</p>
+</div>
+</section>
+<section id="sa2b322_86" class="feedback js-hidden">
+<div id="taf322_10606" class=" iDevice_content">
+<p>No es correcto, repasa el texto de nuevo</p>
+</div>
+</section>
+<section id="sa3b322_86" class="feedback js-hidden">
+<div id="taf322_10609" class=" iDevice_content">
+<p>No es correcto, esta constante proporciona otra información.</p>
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-322_89">Incorrecto</a><span> (<a href="#sa0b322_86">Retroalimentación</a>)</span></li>
+<li><a href="#answer-322_10603">Opción correcta</a><span> (<a href="#sa1b322_86">Retroalimentación</a>)</span></li>
+<li><a href="#answer-322_10606">Incorrecto</a><span> (<a href="#sa2b322_86">Retroalimentación</a>)</span></li>
+<li><a href="#answer-322_10609">Incorrecto</a><span> (<a href="#sa3b322_86">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="3_DISPON.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="5_MONITO.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432527/mod_resource/content/1/DAM_PMDM10_Contenidos/4_identificacin_de_sensores.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Feb 2024 16:11:50 GMT -->
+</html>

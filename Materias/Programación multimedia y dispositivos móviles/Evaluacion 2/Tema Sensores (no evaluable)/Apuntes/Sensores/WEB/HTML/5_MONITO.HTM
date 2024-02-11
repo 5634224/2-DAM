@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432527/mod_resource/content/1/DAM_PMDM10_Contenidos/5_monitorizacin_de_eventos_del_sensor.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Feb 2024 16:11:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_EFFE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>5.- Monitorización de eventos del sensor. | PMDM10 - DAM - Programación Multimedia y Dispositivos Móviles - UT10.- Sensores. Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Rubén Carrasco Peña  - Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_EFFE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_HIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+<script type="text/javascript"
+   src="../JS/LATESTA4.JS?config=default">
+</script></head>
+<body class="exe-web-site" id="exe-node-108"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM10 - DAM - Programación Multimedia y Dispositivos Móviles - UT10.- Sensores. Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">PMDM10.- Sensores.</a></li>
+   <li><a href="1_TIPOS_.HTM" class="no-ch">1.- Tipos de sensores.</a></li>
+   <li><a href="2_FRAMEW.HTM" class="no-ch">2.- Framework o entorno de trabajo del sensor.</a></li>
+   <li><a href="3_DISPON.HTM" class="no-ch">3.- Disponibilidad del sensor.</a></li>
+   <li><a href="4_IDENTI.HTM" class="no-ch">4.- Identificación de sensores.</a></li>
+   <li id="active"><a href="5_MONITO.HTM" class="active no-ch">5.- Monitorización de eventos del sensor.</a></li>
+   <li><a href="6_SISTEM.HTM" class="no-ch">6.- Sistema de coordenadas del sensor.</a></li>
+   <li><a href="7_SENSOR.HTM" class="no-ch">7.- Sensor de gravedad.</a></li>
+   <li><a href="8_SENSOR.HTM" class="no-ch">8.- Sensor de acelaración o acelerómetro.</a></li>
+   <li><a href="9_GIROSC.HTM" class="no-ch">9.- Giroscopio.</a></li>
+   <li><a href="10_SENSO.HTM" class="no-ch">10.- Sensor de aceleración lineal.</a></li>
+   <li><a href="11_SENSO.HTM" class="no-ch">11.- Sensor de campo geomagnético.</a></li>
+   <li><a href="12_SENSO.HTM" class="no-ch">12.- Sensor de proximidad.</a></li>
+   <li><a href="13_EJERC.HTM" class="no-ch">13.- Ejercicio resuelto 2.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="4_IDENTI.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_SISTEM.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">5.- Monitorización de eventos del sensor.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id297">
+<div class="iDevice emphasis0">
+<div id="ta297_154" class="block iDevice_content">
+<p>Para monitorizar datos de sensores necesitamos implementar dos métodos contemplados en la interfaz <strong><span lang="en">SensorEventListener</span></strong>, que serán <strong><span lang="en">onAccuracyChanged():onAccuracyChanged()</span></strong> y <strong><span lang="en">onSensorChanged()</span></strong>. El sistema Android llama a estos métodos siempre que ocurran ciertas circunstancias.</p>
+<h5>La precisión de un sensor cambia.</h5>
+<p>En este caso, el sistema invoca el método <strong></strong><span lang="en"><strong>onAccuracyChanged(</strong><strong>)</strong></span><strong></strong>, que le proporciona una referencia al objeto <span lang="en">Sensor</span> que cambió y la nueva precisión del sensor. La precisión está representada por una de las cuatro constantes de estado: <span lang="en">SENSOR_STATUS_ACCURACY_LOW, SENSOR_STATUS_ACCURACY_MEDIUM, SENSOR_STATUS_ACCURACY_HIGH o SENSOR_STATUS_UNRELIABLE</span>.</p>
+<h5>Un sensor informa un nuevo valor.</h5>
+<p>En este caso, el sistema invoca el método<strong> <span lang="en">onSensorChanged()</span></strong>, que le proporciona un objeto <strong><span lang="en">SensorEvent</span></strong>. Un objeto <strong><span lang="en">SensorEvent</span></strong> contiene información sobre los nuevos datos del sensor, que incluyen: la precisión de los datos, el sensor que generó los datos, la marca de tiempo en la que se generaron los datos y los nuevos datos que el sensor registró.</p>
+<div class="exe-fx exe-accordion">
+<h2>Ejemplo</h2>
+<p>El siguiente código muestra cómo usar el método <strong><span lang="en">onSensorChanged()</span> </strong> para controlar los datos del sensor de luz. Este ejemplo muestra los datos del sensor en un <em><span lang="en">TextView</span></em> que está definido en el archivo <strong><span lang="en">main.xml</span></strong> como <strong><span lang="en">sensor_data</span></strong>.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>public class SensorActivity extends Activity implements SensorEventListener {
+   private SensorManager mSensorManager;
+   private Sensor mLight;
+
+   @Override
+   public final void onCreate(Bundle savedInstanceState) {
+     super.onCreate(savedInstanceState);
+     setContentView(R.layout.main);
+     mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+     mLight = mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
+   }
+
+   @Override
+   public final void onAccuracyChanged(Sensor sensor, int accuracy) {
+     // Do something here if sensor accuracy changes.
+   }
+
+   @Override
+   public final void onSensorChanged(SensorEvent event) {
+     // The light sensor returns a single value.
+     // Many sensors return 3 values, one for each axis.
+     float lux = event.values[0];
+     // Do something with this sensor value.
+   }
+
+   @Override
+   protected void onResume() {
+     super.onResume();
+     mSensorManager.registerListener(this, mLight, SensorManager.SENSOR_DELAY_NORMAL);
+   }
+
+   @Override
+   protected void onPause() {
+     super.onPause();
+     mSensorManager.unregisterListener(this);
+   }
+}</code></pre>
+</div>
+</div>
+</div>
+<p>En el ejemplo, el retraso de datos predeterminado (<strong><span lang="en">SENSOR_DELAY_NORMAL</span></strong>) se especifica cuando se invoca el método <strong><span lang="en">registerListener()</span>.</strong> El retardo de datos (o tasa de muestreo) controla el intervalo en el cual los eventos del sensor se envían a su aplicación a través del método de devolución de llamada <strong><span lang="en">onSensorChanged()</span>.</strong> La demora de datos predeterminada es adecuada para monitorear cambios típicos de orientación de pantalla y utiliza un retraso de 200.000 microsegundos. Podemos especificar otros retrasos de datos, como <strong><span lang="en">SENSOR_DELAY_GAME</span></strong> (retardo de 20.000 microsegundos), <strong><span lang="en">SENSOR_DELAY_UI</span></strong> (retardo de 60.000 microsegundos) o <strong><span lang="en">SENSOR_DELAY_FASTEST</span></strong> (retardo de 0 microsegundos). A partir de Android 3.0 (API nivel 11) también podemos especificar el retraso como un valor absoluto (en microsegundos).</p>
+<p>La demora que especifiquemos solo es un retraso sugerido. El sistema Android y otras aplicaciones pueden alterar este retraso. Como práctica recomendada, debemos especificar la demora más grande que podamos porque el sistema generalmente usa un retraso menor que el especificado por nosotros (es decir, debemos elegir la frecuencia de muestreo más lenta que aún satisfaga las necesidades de nuestra aplicación). Usar un retraso mayor impone una carga menor en el procesador y, por lo tanto, utilizará menos energía.</p>
+<p>No hay un método público para determinar la velocidad a la que el <span lang="en">framework </span>del sensor está enviando eventos del sensor a nuestra aplicación; sin embargo, podemos usar las marcas de tiempo que están asociadas con cada evento del sensor para calcular la tasa de muestreo en varios eventos.</p>
+<p>También es importante tener en cuenta que este ejemplo utiliza los métodos de devolución de llamada <strong><span lang="en">onResume()</span></strong> y <strong><span lang="en">onPause()</span></strong> para registrar y anular el registro del detector de eventos del sensor. Como práctica recomendada, siempre debemos desactivar los sensores que no necesitamos, especialmente cuando su actividad está en pausa. Si no lo hacemos, agotaremos la batería en unas pocas horas debido a que algunos sensores tienen requisitos de energía considerables y pueden agotar rápidamente la energía de la batería. El sistema no desactivará los sensores automáticamente cuando la pantalla se apaga.</p>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="4_IDENTI.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="6_SISTEM.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432527/mod_resource/content/1/DAM_PMDM10_Contenidos/5_monitorizacin_de_eventos_del_sensor.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Feb 2024 16:11:50 GMT -->
+</html>

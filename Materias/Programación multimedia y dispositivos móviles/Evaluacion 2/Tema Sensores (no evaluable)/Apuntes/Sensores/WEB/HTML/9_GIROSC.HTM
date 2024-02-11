@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432527/mod_resource/content/1/DAM_PMDM10_Contenidos/9_giroscopio.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Feb 2024 16:11:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_EFFE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>9.- Giroscopio. | PMDM10 - DAM - Programación Multimedia y Dispositivos Móviles - UT10.- Sensores. Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Rubén Carrasco Peña  - Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_EFFE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_HIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+<script type="text/javascript"
+   src="../JS/LATESTA4.JS?config=default">
+</script></head>
+<body class="exe-web-site" id="exe-node-114"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM10 - DAM - Programación Multimedia y Dispositivos Móviles - UT10.- Sensores. Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">PMDM10.- Sensores.</a></li>
+   <li><a href="1_TIPOS_.HTM" class="no-ch">1.- Tipos de sensores.</a></li>
+   <li><a href="2_FRAMEW.HTM" class="no-ch">2.- Framework o entorno de trabajo del sensor.</a></li>
+   <li><a href="3_DISPON.HTM" class="no-ch">3.- Disponibilidad del sensor.</a></li>
+   <li><a href="4_IDENTI.HTM" class="no-ch">4.- Identificación de sensores.</a></li>
+   <li><a href="5_MONITO.HTM" class="no-ch">5.- Monitorización de eventos del sensor.</a></li>
+   <li><a href="6_SISTEM.HTM" class="no-ch">6.- Sistema de coordenadas del sensor.</a></li>
+   <li><a href="7_SENSOR.HTM" class="no-ch">7.- Sensor de gravedad.</a></li>
+   <li><a href="8_SENSOR.HTM" class="no-ch">8.- Sensor de acelaración o acelerómetro.</a></li>
+   <li id="active"><a href="9_GIROSC.HTM" class="active no-ch">9.- Giroscopio.</a></li>
+   <li><a href="10_SENSO.HTM" class="no-ch">10.- Sensor de aceleración lineal.</a></li>
+   <li><a href="11_SENSO.HTM" class="no-ch">11.- Sensor de campo geomagnético.</a></li>
+   <li><a href="12_SENSO.HTM" class="no-ch">12.- Sensor de proximidad.</a></li>
+   <li><a href="13_EJERC.HTM" class="no-ch">13.- Ejercicio resuelto 2.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="8_SENSOR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="10_SENSO.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">9.- Giroscopio.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id306">
+<div class="iDevice emphasis0">
+<div id="ta306_154" class="block iDevice_content">
+<p>El giroscopio mide la velocidad de rotación en rad/s (radianes por segundo) alrededor del eje x, y y z de un dispositivo. El siguiente código muestra cómo obtener una instancia del giroscopio predeterminado:</p>
+<div class="exe-fx exe-accordion">
+<h2>Código</h2>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>private SensorManager mSensorManager;
+private Sensor mSensor;
+ ...
+ mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+ mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);</code></pre>
+</div>
+</div>
+</div>
+<p>El sistema de coordenadas del sensor es el mismo que el utilizado para el sensor de aceleración. La rotación es positiva en el sentido contrario a las agujas del reloj; es decir, un observador que mira desde una ubicación positiva en los ejes x, y o z en un dispositivo colocado en el origen informaría la rotación positiva si el dispositivo parecía estar girando en sentido contrario a las agujas del reloj. Esta es la definición matemática estándar de rotación positiva y no es lo mismo que la definición de balanceo que utiliza el sensor de orientación.</p>
+<p>Normalmente, la salida del giroscopio se integra a lo largo del tiempo para calcular una rotación que describe el cambio de ángulos sobre el paso de tiempo.</p>
+<div class="exe-fx exe-accordion">
+<h2>Ejemplo</h2>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<pre><code>// Create a constant to convert nanoseconds to seconds.
+private static final float NS2S = 1.0f / 1000000000.0f;
+private final float[] deltaRotationVector = new float[4]();
+private float timestamp;
+
+public void onSensorChanged(SensorEvent event) {
+  // This timestep's delta rotation to be multiplied by the current rotation
+  // after computing it from the gyro sample data.
+  if (timestamp != 0) {
+    final float dT = (event.timestamp - timestamp) * NS2S;
+    // Axis of the rotation sample, not normalized yet.
+    float axisX = event.values[0];
+    float axisY = event.values[1];
+    float axisZ = event.values[2];
+
+    // Calculate the angular speed of the sample
+    float omegaMagnitude = sqrt(axisX*axisX + axisY*axisY + axisZ*axisZ);
+
+    // Normalize the rotation vector if it's big enough to get the axis
+    // (that is, EPSILON should represent your maximum allowable margin of error)
+    if (omegaMagnitude &gt; EPSILON) {
+      axisX /= omegaMagnitude;
+      axisY /= omegaMagnitude;
+      axisZ /= omegaMagnitude;
+      }
+
+    // Integrate around this axis with the angular speed by the timestep
+    // in order to get a delta rotation from this sample over the timestep
+    // We will convert this axis-angle representation of the delta rotation
+    // into a quaternion before turning it into the rotation matrix.
+    float thetaOverTwo = omegaMagnitude * dT / 2.0f;
+    float sinThetaOverTwo = sin(thetaOverTwo);
+    float cosThetaOverTwo = cos(thetaOverTwo);
+    deltaRotationVector[0] = sinThetaOverTwo * axisX;
+    deltaRotationVector[1] = sinThetaOverTwo * axisY;
+    deltaRotationVector[2] = sinThetaOverTwo * axisZ;
+    deltaRotationVector[3] = cosThetaOverTwo;
+  }
+
+  timestamp = event.timestamp;
+  float[] deltaRotationMatrix = new float[9];
+  SensorManager.getRotationMatrixFromVector(deltaRotationMatrix, deltaRotationVector);
+  // User code should concatenate the delta rotation we computed with the current rotation
+  // in order to get the updated rotation.
+  // rotationCurrent = rotationCurrent * deltaRotationMatrix;
+  }</code></pre>
+</div>
+</div>
+<p>Los giroscopios estándar brindan datos rotativos brutos sin ningún filtrado o corrección por ruido y deriva (sesgo). En la práctica, el ruido y la deriva del giroscopio introducirán errores que deben ser compensados.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id316">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-316_141" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion316_141" class="block question iDevice_content">
+<p>El sensor de aceleración...</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i316_144" class="sr-av"><a href="#answer-316_144">Opción 1</a></label><input type="radio" name="option316_141" id="i316_144" class="exe-radio-option exe-radio-option-0-3-316_141-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-316_144"><div id="taans316_144" class="block iDevice_content">
+<p>es un buen sensor para usar si monitorizamos el movimiento del dispositivo.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i316_10456" class="sr-av"><a href="#answer-316_10456">Opción 2</a></label><input type="radio" name="option316_141" id="i316_10456" class="exe-radio-option exe-radio-option-1-3-316_141-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-316_10456"><div id="taans316_10456" class="block iDevice_content">
+<p>se usa para determinar la orientación relativa del dispositivo en el espacio.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i316_10459" class="sr-av"><a href="#answer-316_10459">Opción 3</a></label><input type="radio" name="option316_141" id="i316_10459" class="exe-radio-option exe-radio-option-2-3-316_141-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-316_10459"><div id="taans316_10459" class="block iDevice_content">
+<p>mide la velocidad de rotación.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b316_141" class="feedback js-hidden">
+<p>Opción correcta</p>
+</section>
+<section id="sa1b316_141" class="feedback js-hidden">
+<p>Incorrecto</p>
+</section>
+<section id="sa2b316_141" class="feedback js-hidden">
+<p>Incorrecto</p>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-316_144">Opción correcta</a><span> (<a href="#sa0b316_141">Retroalimentación</a>)</span></li>
+<li><a href="#answer-316_10456">Incorrecto</a><span> (<a href="#sa1b316_141">Retroalimentación</a>)</span></li>
+<li><a href="#answer-316_10459">Incorrecto</a><span> (<a href="#sa2b316_141">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id317">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-317_141" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion317_141" class="block question iDevice_content">
+<p>El sensor de gravedad...</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i317_144" class="sr-av"><a href="#answer-317_144">Opción 1</a></label><input type="radio" name="option317_141" id="i317_144" class="exe-radio-option exe-radio-option-0-3-317_141-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-317_144"><div id="taans317_144" class="block iDevice_content">
+<p>es un buen sensor para usar si monitorizamos el movimiento del dispositivo.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i317_10462" class="sr-av"><a href="#answer-317_10462">Opción 2</a></label><input type="radio" name="option317_141" id="i317_10462" class="exe-radio-option exe-radio-option-1-3-317_141-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-317_10462"><div id="taans317_10462" class="block iDevice_content">
+<p>se usa para determinar la orientación relativa del dispositivo en el espacio.</p>
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i317_10465" class="sr-av"><a href="#answer-317_10465">Opción 3</a></label><input type="radio" name="option317_141" id="i317_10465" class="exe-radio-option exe-radio-option-2-3-317_141-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-317_10465"><div id="taans317_10465" class="block iDevice_content">
+<p>mide la velocidad de rotación.</p>
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b317_141" class="feedback js-hidden">
+<p>Incorrecto</p>
+</section>
+<section id="sa1b317_141" class="feedback js-hidden">
+<p>Opción correcta</p>
+</section>
+<section id="sa2b317_141" class="feedback js-hidden">
+<p>Incorrecto</p>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-317_144">Incorrecto</a><span> (<a href="#sa0b317_141">Retroalimentación</a>)</span></li>
+<li><a href="#answer-317_10462">Opción correcta</a><span> (<a href="#sa1b317_141">Retroalimentación</a>)</span></li>
+<li><a href="#answer-317_10465">Incorrecto</a><span> (<a href="#sa2b317_141">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="8_SENSOR.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="10_SENSO.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432527/mod_resource/content/1/DAM_PMDM10_Contenidos/9_giroscopio.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Feb 2024 16:11:53 GMT -->
+</html>

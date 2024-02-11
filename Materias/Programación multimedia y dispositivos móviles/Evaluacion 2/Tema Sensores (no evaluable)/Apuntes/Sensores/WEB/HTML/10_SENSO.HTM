@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432527/mod_resource/content/1/DAM_PMDM10_Contenidos/10_sensor_de_aceleracin_lineal.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Feb 2024 16:11:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_EFFE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>10.- Sensor de aceleración lineal. | PMDM10 - DAM - Programación Multimedia y Dispositivos Móviles - UT10.- Sensores. Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Rubén Carrasco Peña  - Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_EFFE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_HIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+<script type="text/javascript"
+   src="../JS/LATESTA4.JS?config=default">
+</script></head>
+<body class="exe-web-site" id="exe-node-115"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM10 - DAM - Programación Multimedia y Dispositivos Móviles - UT10.- Sensores. Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">PMDM10.- Sensores.</a></li>
+   <li><a href="1_TIPOS_.HTM" class="no-ch">1.- Tipos de sensores.</a></li>
+   <li><a href="2_FRAMEW.HTM" class="no-ch">2.- Framework o entorno de trabajo del sensor.</a></li>
+   <li><a href="3_DISPON.HTM" class="no-ch">3.- Disponibilidad del sensor.</a></li>
+   <li><a href="4_IDENTI.HTM" class="no-ch">4.- Identificación de sensores.</a></li>
+   <li><a href="5_MONITO.HTM" class="no-ch">5.- Monitorización de eventos del sensor.</a></li>
+   <li><a href="6_SISTEM.HTM" class="no-ch">6.- Sistema de coordenadas del sensor.</a></li>
+   <li><a href="7_SENSOR.HTM" class="no-ch">7.- Sensor de gravedad.</a></li>
+   <li><a href="8_SENSOR.HTM" class="no-ch">8.- Sensor de acelaración o acelerómetro.</a></li>
+   <li><a href="9_GIROSC.HTM" class="no-ch">9.- Giroscopio.</a></li>
+   <li id="active"><a href="10_SENSO.HTM" class="active no-ch">10.- Sensor de aceleración lineal.</a></li>
+   <li><a href="11_SENSO.HTM" class="no-ch">11.- Sensor de campo geomagnético.</a></li>
+   <li><a href="12_SENSO.HTM" class="no-ch">12.- Sensor de proximidad.</a></li>
+   <li><a href="13_EJERC.HTM" class="no-ch">13.- Ejercicio resuelto 2.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="9_GIROSC.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_SENSO.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">10.- Sensor de aceleración lineal.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id307">
+<div class="iDevice emphasis0">
+<div id="ta307_154" class="block iDevice_content">
+<p>El sensor de aceleración lineal le proporciona un vector tridimensional que representa la aceleración a lo largo de cada eje del dispositivo, excluyendo la gravedad. Puede usar este valor para realizar la detección de gestos. El valor también puede servir como entrada para un sistema de navegación inercial, que utiliza la navegación a estima. El siguiente código muestra cómo obtener una instancia del sensor de aceleración lineal predeterminado:</p>
+<div class="exe-fx exe-accordion">
+<h2>Código</h2>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>private SensorManager mSensorManager;
+private Sensor mSensor;
+...
+mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_LINEAR_ACCELERATION);</code></pre>
+</div>
+</div>
+</div>
+<p>Conceptualmente, este sensor le proporciona datos de aceleración según la siguiente relación:</p>
+<p style="text-align: center;"><strong> aceleración lineal = aceleración - aceleración debido a la gravedad</strong></p>
+<p style="text-align: left;">Normalmente utilizaremos este sensor cuando deseemos obtener datos de aceleración sin la influencia de la gravedad. Por ejemplo, podría usar este sensor para saber lo rápido que va mi automóvil. El sensor de aceleración lineal siempre tiene un desplazamiento, que debe eliminar. La forma más sencilla de hacerlo es crear un paso de calibración en nuestra aplicación. Durante la calibración, podemos pedirle al usuario que configure el dispositivo en una mesa, y luego lea los desplazamientos para los tres ejes. A continuación, deberíamos restar ese desplazamiento de las lecturas directas del sensor de aceleración para obtener la aceleración lineal real.</p>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="9_GIROSC.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="11_SENSO.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432527/mod_resource/content/1/DAM_PMDM10_Contenidos/10_sensor_de_aceleracin_lineal.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Feb 2024 16:11:53 GMT -->
+</html>

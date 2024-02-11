@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432527/mod_resource/content/1/DAM_PMDM10_Contenidos/11_sensor_de_campo_geomagntico.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Feb 2024 16:11:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_LIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_EFFE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>11.- Sensor de campo geomagnético. | PMDM10 - DAM - Programación Multimedia y Dispositivos Móviles - UT10.- Sensores. Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Rubén Carrasco Peña  - Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_LIGH.JS"></script>
+<script type="text/javascript" src="../JS/EXE_EFFE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_HIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+<script type="text/javascript"
+   src="../JS/LATESTA4.JS?config=default">
+</script></head>
+<body class="exe-web-site" id="exe-node-116"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM10 - DAM - Programación Multimedia y Dispositivos Móviles - UT10.- Sensores. Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">PMDM10.- Sensores.</a></li>
+   <li><a href="1_TIPOS_.HTM" class="no-ch">1.- Tipos de sensores.</a></li>
+   <li><a href="2_FRAMEW.HTM" class="no-ch">2.- Framework o entorno de trabajo del sensor.</a></li>
+   <li><a href="3_DISPON.HTM" class="no-ch">3.- Disponibilidad del sensor.</a></li>
+   <li><a href="4_IDENTI.HTM" class="no-ch">4.- Identificación de sensores.</a></li>
+   <li><a href="5_MONITO.HTM" class="no-ch">5.- Monitorización de eventos del sensor.</a></li>
+   <li><a href="6_SISTEM.HTM" class="no-ch">6.- Sistema de coordenadas del sensor.</a></li>
+   <li><a href="7_SENSOR.HTM" class="no-ch">7.- Sensor de gravedad.</a></li>
+   <li><a href="8_SENSOR.HTM" class="no-ch">8.- Sensor de acelaración o acelerómetro.</a></li>
+   <li><a href="9_GIROSC.HTM" class="no-ch">9.- Giroscopio.</a></li>
+   <li><a href="10_SENSO.HTM" class="no-ch">10.- Sensor de aceleración lineal.</a></li>
+   <li id="active"><a href="11_SENSO.HTM" class="active no-ch">11.- Sensor de campo geomagnético.</a></li>
+   <li><a href="12_SENSO.HTM" class="no-ch">12.- Sensor de proximidad.</a></li>
+   <li><a href="13_EJERC.HTM" class="no-ch">13.- Ejercicio resuelto 2.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="10_SENSO.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_SENSO.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">11.- Sensor de campo geomagnético.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id308">
+<div class="iDevice emphasis0">
+<div id="ta308_154" class="block iDevice_content">
+<p>El sensor de campo geomagnético le permite controlar los cambios en el campo magnético de la tierra. El siguiente código muestra cómo obtener una instancia del sensor de campo geomagnético predeterminado:</p>
+<div class="exe-fx exe-accordion">
+<h2>Código</h2>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>private SensorManager mSensorManager;
+private Sensor mSensor;
+...
+mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);</code></pre>
+</div>
+</div>
+</div>
+<figure class="exe-figure exe-image float-right license-CC-BY-SA" style="width: 240px;"><a href="../PNG/PMDM10-3.PNG" rel="lightbox" title="Ampliar imagen"><img src="../PNG/PMDM10-3.PNG" alt="Ilustración que muestra un esquema del globo terráqueo y un sistema de coordenadas horizontales" title="Azimut" class="imagen_ampliable" width="200" height="123" /></a>
+<figcaption class="figcaption"><a href="https://ca.wikipedia.org/wiki/Azimut#/media/Fitxer:Horizontal_coordinate_system_2.png" target="_blank" class="author" title="Acceder a Wikimedia para ver la procedencia de la imagen &quot;Azimut&quot;. (Se abre en una nueva ventana)." rel="noopener">Francisco Javier Blanco González</a> <span class="license"><span class="sep">(</span><a href="http://creativecommons.org/licenses/?lang=es" target="_blank" title="Acceder a los términos de licencia Creative Commons BY-SA de la imagen. (Se abre en una nueva ventana)." rel="noopener">CC BY-SA</a><span class="sep">)</span></span></figcaption>
+</figure>
+<p><br />Este sensor proporciona datos de intensidad de campo sin procesar (en μT) para cada uno de los tres ejes de coordenadas. Por lo general, no es necesario que usemos este sensor directamente. En su lugar, podemos usar el sensor de vector de rotación para determinar el movimiento de rotación sin procesar o podemos usar el acelerómetro y el sensor de campo geomagnético junto con el método <strong><span lang="en">getRotationMatrix()</span></strong> para obtener la matriz de rotación y la matriz de inclinación. A continuación, podemos utilizar estas matrices con los <strong><span lang="en">getOrientation()</span></strong> y <strong><span lang="en">getInclination()</span></strong> para obtener datos de <a href="#tb73338ef-847d-b1e8-7c1a-389dafcc32b6" id="linkb73338ef-847d-b1e8-7c1a-389dafcc32b6" class="exe-tooltip definition-tt titled-tt light-tt" title="Inclinación azumutal: | ">inclinación azimutal</a> y geomagnética.</p>
+<p style="text-align: center;"><span class=" exe-block-info">Al probar nuestra aplicación, podemos mejorar la precisión del sensor agitando el dispositivo describiendo un patrón con forma de 8.</span></p>
+<div id="tb73338ef-847d-b1e8-7c1a-389dafcc32b6" class="exe-tooltip-text">
+<p>Es el ángulo de una dirección contado en el sentido de las agujas del reloj a partir del norte geográfico. Por ejemplo, el acimut de un punto hacia el este es de 90° y hacia el oeste de 270° sexagesimales. El término acimut solo se usa cuando se trata del norte geográfico.</p>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="10_SENSO.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_SENSO.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432527/mod_resource/content/1/DAM_PMDM10_Contenidos/11_sensor_de_campo_geomagntico.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Feb 2024 16:11:54 GMT -->
+</html>

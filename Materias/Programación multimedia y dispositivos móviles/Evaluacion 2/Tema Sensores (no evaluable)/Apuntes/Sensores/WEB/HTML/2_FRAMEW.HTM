@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432527/mod_resource/content/1/DAM_PMDM10_Contenidos/2_framework_o_entorno_de_trabajo_del_sensor.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Feb 2024 16:11:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.- Framework o entorno de trabajo del sensor. | PMDM10 - DAM - Programación Multimedia y Dispositivos Móviles - UT10.- Sensores. Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Rubén Carrasco Peña  - Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+<script type="text/javascript"
+   src="../JS/LATESTA4.JS?config=default">
+</script></head>
+<body class="exe-web-site" id="exe-node-92"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM10 - DAM - Programación Multimedia y Dispositivos Móviles - UT10.- Sensores. Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">PMDM10.- Sensores.</a></li>
+   <li><a href="1_TIPOS_.HTM" class="no-ch">1.- Tipos de sensores.</a></li>
+   <li id="active"><a href="2_FRAMEW.HTM" class="active no-ch">2.- Framework o entorno de trabajo del sensor.</a></li>
+   <li><a href="3_DISPON.HTM" class="no-ch">3.- Disponibilidad del sensor.</a></li>
+   <li><a href="4_IDENTI.HTM" class="no-ch">4.- Identificación de sensores.</a></li>
+   <li><a href="5_MONITO.HTM" class="no-ch">5.- Monitorización de eventos del sensor.</a></li>
+   <li><a href="6_SISTEM.HTM" class="no-ch">6.- Sistema de coordenadas del sensor.</a></li>
+   <li><a href="7_SENSOR.HTM" class="no-ch">7.- Sensor de gravedad.</a></li>
+   <li><a href="8_SENSOR.HTM" class="no-ch">8.- Sensor de acelaración o acelerómetro.</a></li>
+   <li><a href="9_GIROSC.HTM" class="no-ch">9.- Giroscopio.</a></li>
+   <li><a href="10_SENSO.HTM" class="no-ch">10.- Sensor de aceleración lineal.</a></li>
+   <li><a href="11_SENSO.HTM" class="no-ch">11.- Sensor de campo geomagnético.</a></li>
+   <li><a href="12_SENSO.HTM" class="no-ch">12.- Sensor de proximidad.</a></li>
+   <li><a href="13_EJERC.HTM" class="no-ch">13.- Ejercicio resuelto 2.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_TIPOS_.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_DISPON.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.- Framework o entorno de trabajo del sensor.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id272">
+<div class="iDevice emphasis0">
+<div id="ta272_154" class="block iDevice_content">
+<p>Podemos acceder a estos sensores y adquirir datos sin procesar del sensor utilizando el <em></em><span lang="en"><em><span lang="en">framework</span></em> </span>de sensores de Android. El <em></em><span lang="en"><em><span lang="en">framework</span></em> </span>del sensor es parte del paquete <b><span lang="en">android.hardware</span></b> e incluye las siguientes clases e interfaces:</p>
+<ul class="lista_verificacion">
+<li style="margin-bottom: 6px;"><strong><span lang="en">SensorManager</span></strong>: Podemos usar esta clase para crear una instancia del servicio del sensor. Esta clase proporciona varios métodos para acceder y enumerar sensores, registrar y anular el registro de receptores de eventos de sensores y adquirir información de orientación. Esta clase también proporciona varias constantes de sensor que se utilizan para informar la precisión del sensor, establecer velocidades de adquisición de datos y calibrar sensores.</li>
+<li style="margin-bottom: 6px;"><strong><span lang="en">Sensor</span></strong>: Podemos usar esta clase para crear una instancia de un sensor específico. Esta clase proporciona varios métodos que nos permiten determinar las capacidades de un sensor.</li>
+<li style="margin-bottom: 6px;"><strong><span lang="en">SensorEvent</span></strong>: El sistema usa esta clase para crear un objeto de evento sensor, que proporciona información sobre un evento sensor. Un objeto de evento de sensor incluye la siguiente información:
+<ul>
+<li style="margin-bottom: 6px; margin-top: 6px;">los datos del sensor en bruto,</li>
+<li style="margin-bottom: 6px;">el tipo de sensor que generó el evento,</li>
+<li style="margin-bottom: 6px;">la precisión de los datos</li>
+<li style="margin-bottom: 6px;">y la marca de tiempo del evento.</li>
+</ul>
+</li>
+<li style="margin-bottom: 6px;"><strong><span lang="en">SensorEventListener</span></strong>: Podemos usar esta interfaz para crear dos métodos de devolución de llamada que reciben notificaciones (eventos del sensor) cuando cambian los valores del sensor o cuando cambia la precisión del sensor.</li>
+</ul>
+<p>En una aplicación típica, utilizaremos estas <span title="Application Programming Interfaces">API</span> relacionadas con el sensor para realizar dos tareas básicas:</p>
+<ul class="lista_verificacion">
+<li style="margin-bottom: 6px;"><strong>Identificación de sensores y capacidades del sensor</strong></li>
+</ul>
+<p style="padding-left: 60px;">La identificación de sensores y capacidades del sensor en el tiempo de ejecución es útil si su aplicación tiene características que dependen de capacidades o tipos de sensores específicos. Por ejemplo, es posible que desee identificar todos los sensores que están presentes en un dispositivo y desactivar las funciones de la aplicación que dependen de sensores que no están presentes. Del mismo modo, es posible que desee identificar todos los sensores de un tipo determinado para que pueda elegir la implementación del sensor que tenga el rendimiento óptimo para su aplicación.</p>
+<ul class="lista_verificacion">
+<li style="margin-bottom: 6px;"><strong>Control de los eventos del sensor</strong></li>
+</ul>
+<p style="padding-left: 60px;">La monitorización de los eventos del sensor es la forma de adquirir los datos del sensor sin procesar. Se produce un evento de sensor cada vez que un sensor detecta un cambio en los parámetros que está midiendo. Un evento de sensor le proporciona cuatro elementos de información: el nombre del sensor que activó el evento, la marca de tiempo del evento, la precisión del evento y los datos brutos del sensor que desencadenaron el evento.</p>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_TIPOS_.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_DISPON.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432527/mod_resource/content/1/DAM_PMDM10_Contenidos/2_framework_o_entorno_de_trabajo_del_sensor.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 08 Feb 2024 16:11:48 GMT -->
+</html>

@@ -1,0 +1,7 @@
+NamedQuery, el TypedQuery y el Query
+el NamedQuery es para crear consultas en lenguaje HQL (muy similar al sql) en el propio archivo de entidad, y poder utilizarlas luego en tu main
+ése es el que más he probado y es el que he utilizado para la tarea
+
+luego está el TypedQuery, que básicamente sirve para recoger en el código java del main lo que devuelve el NamedQuery de la entidad
+
+y luego está el query a secas que sirve para lanzar consultas de SQL de toda la vida, aunque llevaba algo más de código para poder procesar la información que devuelve
