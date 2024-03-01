@@ -1,0 +1,33 @@
+En fragment:
+    private var _binding: FragmentFormularioBinding? = null
+
+    private val binding get() = _binding!!
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        _binding = FragmentFormularioBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+En activity:
+    internal lateinit var binding: ActivityLoginBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // Método para mostrar la pantalla de inicio (splash screen)
+        installSplashScreen()
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+O asi, en fragment:
+// Método para crear la vista del fragmento
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflar el layout para este fragmento y asignarlo al binding
+        _binding = FragmentRvcontactBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+
+El _binding!! la doble admiracion significa no nulo

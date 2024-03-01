@@ -1,0 +1,46 @@
+Buenas tardes,
+
+En vistas de la nota que recibí sobre la tarea 5, quería comentarte un poco que fue lo que me pasó. Yo tenía instalado IntelliJ en una máquina virtual, y venía de haber hecho la tarea 3 de Desarrollo de Interfaces, en la cual hice una interfaz de prototipo horizontal para un supuesto cliente de correo electrónico.
+
+Al ver que en tu práctica nos pedías hacer cosas con correo electrónico, dije: ostras, pues si ya tengo hecha la interfaz de la otra asignatura, voy a reutilizarla. Y ya me animé y dije: pues le hago también una interfaz gráfica para el ejercicio del FTP (que fue el que sí que pudiste abrir, según me comentaste en la retroalimentación de la tarea).
+
+Al usar Maven (por lo menos en IntelliJ), yo desconocía absolutamente por completo que una vez que añades una librería en un pom.xml de cualquier proyecto, esa librería ya queda guardada localmente en tu PC (en este caso era mi máquina virtual). ¿El por qué a mi me funcionaba y a ti no? Básicamente es por eso, al yo tener ya esa dependencia descargada, aunque yo no lo hubiese especificado en el pom, IntelliJ automáticamente me la estaba cogiendo del "repositorio local" (podríamos llamarlo así).
+
+El caso es que no sé cómo ni por qué, pero se ve que la librería que pone que falta, la javafx.web, yo ya la tenía descargada en mi máquina virtual de algún proyecto de prueba que hice anteriormente con JavaFX. Total, que no solo te pasó a ti lo de no poder ejecutarlo, también le pasó al profesor de Desarrollo de Interfaces, y se lo tuve que explicar en una tutoría.
+
+Lo que te quiero decir es que el programa no arranca porque mi código no compile, sino por la falta de una dependencia. Con solo añadir esta dependencia, y actualizar maven, arrancaría:
+
+<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-web -->
+
+<dependency>
+
+    <groupId>org.openjfx</groupId>
+
+    <artifactId>javafx-web</artifactId>
+
+    <version>17.0.6</version>
+
+</dependency>
+
+Esto mismo, se lo expliqué al profesor de Desarrollo de Interfaces, concertamos una tutoría individual, le dije y le enseñé que en mi ordenador (la máquina virtual) se ejecutaba, me enseñó como en el suyo no lo hacía, le dije la dependencia que tenía que poner, la puso, lo volvió a ejecutar delante de mí, y listo, automáticamente el problema se solucionó y me subió la nota (no al 10, evidentemente, pero sí que me puso un 9).
+
+Lo que es una lástima es que me bajes tanto la nota por un fallo que no es del propio código del programa, por eso te quería pedir por favor, si eres tan amable, de a lo mejor, no darme toda la nota, pero no dejarme con un 5. Lo veo un poco injusto, la verdad, no hablamos de que me hayas quitado 1 o 2 puntos, es que me has quitado la práctica totalidad de la puntuación del ejercicio 2.
+
+Entiendo que en un entorno empresarial estos fallos no se deben de cometer, y entiendo que me tengas que restar puntos, pero me parece un poco desproporcionada la penalización que me has puesto, ya que aquí no estamos trabajando en una empresa, aquí estamos aprendiendo. Y creo que a fin de cuentas, lo más importante es que compruebes que el código funciona.
+
+También por eso yo te insistí tanto al principio (incluso antes de que finalizara la semana de entrega extraordinaria, que todavía podía "enmendar" mis errores), cuando me dijiste que habías tenido problemas anteriormente con otros alumnos que te habían entregado programas con JavaFX, y por eso te decía: dímelo con tiempo si no lo puedes ejecutar, antes de corregirlo, y lo vemos en una tutoría (como de hecho hice después con el profesor de Interfaces).
+
+
+Incluso te lo dije más que nada también porque aunque la fecha de plazo ordinaria para entregar la tarea ya había finalizado, la extraordinaria con penalización de un 30% no había pasado. De haber sabido que ibas a bajarme tanto la nota antes de que transcurriera esa semana "extra" (que entonces yo aún no sabía la causa del por qué no se te ejecutaba a ti ni al profesor de Desarrollo de Interfaces), te lo hubiese hecho sin interfaz gráfica asumiendo un 30% de penalización en la nota.
+
+
+Espero que me entiendas. La verdad, le puse mucho empeño en esa tarea para hacerte la interfaz gráfica porque al ver el enunciado de los dos ejercicios, dije: ostras, estos dos proyectos se harían genial con una interfaz gráfica. No pedía el enunciado que tuviese que ser con interfaz en modo terminal, o gráfica, por lo que entendí que teníamos un poco de "vía libre" en ese sentido.
+
+Y aunque sé que las interfaces gráficas no es algo de tu asignatura específicamente, me gusta hacer cosas extra por ir aprendiendo a como "conjugar" de alguna manera todos los conocimientos que hemos ido aprendiendo a lo largo del grado. También me acuerdo de que tuve que usar un hilo para hacer la sincronización (lectura de emails) y que el hilo principal que manejaba la interfaz gráfica no se quedase congelado mientras tanto :)
+
+De hecho, en las siguientes tareas, aunque no te he hecho interfaz gráfica, sí que he aportado mi "pequeño detalle". Es algo que siempre me ha gustado, hacer pequeños detallitos en las tareas. Concretamente, en PSP06 he repasado lo de escribir souts por pantalla de distintos colores, y en PSP07 he repasado JUnit de Entornos de Desarrollo.
+
+Bueno, lo dicho Maria José, espero que me entiendas, y que entiendas lo que pasó, y por favor, dale una vuelta. Me desanimó mucho ver que me pusiste un 5 por algo tan simple, y por ver que mi "esfuerzo extra" no solo había sido en vano, sino que había sido el causante de una bajada de nota tan grande.
+
+Un saludo.
+

@@ -1,0 +1,7 @@
+1. Instalar QEMU for Windows: https://qemu.weilnetz.de/w64/ | QEMU for Linux Debian based: sudo apt install qemu-full qemu-kvm
+2. (Solo para Windows) Agrega a la variable de entorno PATH del sistema la ruta de instalación de QEMU. Por ejemplo, en mi caso es C:\Program Files\qemu\.
+3. (Solo para Windows) Activar características de Windows (Win + R, y pon OptionalFeatures.exe). Concretamente: Hyper-V y Plataforma de máquina virtual.
+4. (Solo para Windows) Habilitar la ejecución de scripts de PowerShell. Abrir una ventana de PowerShell como administrador y escribir esto:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+5. (Solo para Windows) Reinicia el equipo (o en su lugar, reinicia el proceso explorer.exe; el VS Code si lo tienes abierto ciérralo, y la terminal la terminal también).
+6. Ya puedes ejecutar el script.

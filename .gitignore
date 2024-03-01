@@ -2,6 +2,8 @@ cookies.txt
 *Resumen*.docx
 *Realización*
 *ayuditas*
+*.qcow2
+*private*
 # *.mkv
 # *.mp4
 
@@ -12,6 +14,7 @@ Materias/Programación de servicios y procesos/Evaluacion 1/Tema 2/Recursos/Proy
 Materias/Programación de servicios y procesos/Evaluacion 1/Tema 3/Recursos/Proyectos/TCP/Explicación-TCP.mkv
 Materias/Programación de servicios y procesos/Evaluacion 2/Tema 5/Recursos/Proyectos/6 Cliente FTP/ExplicacionFTP.mkv
 Materias/Programación de servicios y procesos/Evaluacion 2/Tema 5/Recursos/Proyectos/5 Crear servidor web HTTP en Java/Explicacion-Servidor-HTTP.mkv
+Materias/Programación de servicios y procesos/Evaluacion 2/Tema 7/Recursos/1 - Explicacion-Criptografia.mkv
 
 Materias/Programación de servicios y procesos/Evaluacion 1/Tema 1/Apuntes/PSP01/web/zip/psp01_cont_r024_creacionprocesos/*
 Materias/Programación de servicios y procesos/Evaluacion 1/Tema 1/Apuntes/PSP01/web/zip/psp01_cont_r041_comunicacionprocesos/*
