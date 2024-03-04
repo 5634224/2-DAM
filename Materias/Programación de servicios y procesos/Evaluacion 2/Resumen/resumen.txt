@@ -1,0 +1,33 @@
+Todo lo que puede entrar:
+-Expresiones regulares (lo típico: un login)
+-Logs (Log4J)
+-Clases URL
+-Ficheros properties
+-FTP
+-HTTP (cabeceras)
+-Correo (IMAP y SMTP)
+-Hasheado (MessageDigest)
+-Cifrado (simetrico y asimetrico)
+-Firma (es asimétrico siempre)
+
+Resumen del tema cifrado y firma:
+- Signature (Firma): sirve para cifrar un archivo con la clave privada, y que el destinatario, con la clave pública, pueda verificar que el archivo lo has enviado tu.
+- Cipher (cifrado): sirve para cifrar un archivo con la clave pública, y que SOLO el destinatario (que es el único que tiene la clave privada) pueda abrir el archivo que le estás mandando.
+
+
+
+eso lo suyo es crearse una clase abstracta, o una interfaz, con los nombres de los métodos.
+Por ejemplo: CifradoAsimetrico.java tendría:
+-encriptar()           -----|
+                            + ------------> Usan la Clase Cipher
+-desencriptar()        -----|
+
+-firmar()              -----|
+                            + ------------> Usan la Clase Signature
+-verificarFirma()      -----|
+
+Y otra clase/interfaz que fuese CifradoSimetrico tendría:
+-encriptar()
+-desencriptar()
+
+Y de esas clases abstractas/interfaces, hacer implementaciones específicas para cada algoritmo
