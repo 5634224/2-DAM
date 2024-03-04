@@ -16,7 +16,7 @@ Resumen del tema cifrado y firma:
 
 
 
-eso lo suyo es crearse una clase abstracta, o una interfaz, con los nombres de los métodos.
+Idea que he descartado: eso lo suyo es crearse una clase abstracta, o una interfaz, con los nombres de los métodos.
 Por ejemplo: CifradoAsimetrico.java tendría:
 -encriptar()           -----|
                             + ------------> Usan la Clase Cipher
