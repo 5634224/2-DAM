@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/13_solicitud_de_permisos_en_tiempo_de_ejecucin.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:26:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_LIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.3.- Solicitud de permisos en tiempo de ejecución. | PMDM12 - DAM - Programación Multimedia y Dispositivos Móviles - UT12.- Geolocalización y Mapas de Google. Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Rubén Carrasco Peña  - Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_LIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-121"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM12 - DAM - Programación Multimedia y Dispositivos Móviles - UT12.- Geolocalización y Mapas de Google. Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">PMDM12.- Geolocalización y mapas de Google.</a></li>
+   <li class="current-page-parent"><a href="1_GEOLOC.HTM" class="current-page-parent daddy">1.- Geolocalización.</a>
+   <ul>
+      <li><a href="11_TIPOS.HTM" class="no-ch">1.1.- Tipos de acceso a la ubicación.</a></li>
+      <li><a href="12_TIPOS.HTM" class="no-ch">1.2.- Tipos de precisión.</a></li>
+      <li id="active"><a href="13_SOLIC.HTM" class="active no-ch">1.3.- Solicitud de permisos en tiempo de ejecución.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_MAPAS_.HTM" class="daddy">2.- Mapas de Google.</a>
+   <ul class="other-section">
+      <li><a href="21_EJERC.HTM" class="no-ch">2.1.- Ejercicio resuelto 1 (mapas de Google Maps y geolocalización).</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="12_TIPOS.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_MAPAS_.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.3.- Solicitud de permisos en tiempo de ejecución.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id337">
+<div class="iDevice emphasis0">
+<div id="ta337_154" class="block iDevice_content">
+<figure class="exe-figure exe-image float-left license-custom" style="width: 240px;"><a href="../PNG/PMDM12_C.PNG" rel="lightbox" title="Ampliar imagen"><img src="../PNG/PMDM12_C.PNG" alt="Visualización de pantallas de solicitud de precisión aproximada y precisa de deelopers.android" title="Permisos" class="imagen_ampliable" width="200" height="186" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/guide/components/intents-filters?hl=es-419" target="_blank" class="author" rel="noopener" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana).">Google Developers</a> <span class="license"><span class="sep">(Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>Cuando una función de tu aplicación necesite acceso a la ubicación, espera hasta que el usuario interactúe con ella para solicitar el permiso.</p>
+<p style="text-align: center;"><strong><span class=" exe-block-danger" title="Texto en rojo">En Android 12 (nivel de API 31) o versiones posteriores, los usuarios pueden solicitar que tu aplicación solo recupere información de ubicación aproximada, incluso cuando tu aplicación solicite el permiso de ubicación precisa en tiempo de ejecución. Se recomienda en general solicitar sólo la ubicación aproximada.<br /></span></strong></p>
+<p>Para ofrecer esta elección al usuario, la aplicación debe solicitar en el archivo de manifiesto <span lang="en">ACCESS_FINE_LOCATION</span> y <span lang="en">ACCESS_COARSE_LOCATION</span>. En este caso, el diálogo de permisos del sistema incluirá ambas opciones para el usuario, como puede verse en la segunda captura de la imagen de esta página.</p>
+<p>Observa que, además, el usuario puede elegir si desea otorgar el permiso mientras la aplicación está en uso (siempre que esté en uso), sólo para esta ocasión, o denegarlo.</p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice em_iDevice_autoevaluacionfpd" id="id344">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header" style="background-image:url(../GIF/ICON_AUT.GIF)"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-344_136">
+<form name="multi-select-form-344_136" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion344_136" class="block question iDevice_content">
+<p>El sistema considera que la aplicación usa la ubicación en primer plano cuando...</p>
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op344_1360" class="sr-av"><a href="#answer-344_139">Opción 1</a></label><input type="checkbox" id="op344_1360" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-344_139"><div id="taans344_139" class="block iDevice_content">
+<p>La aplicación ejecuta un servicio en primer plano que se mantiene activo incluso cuando la aplicación no es la que está como principal o incluso la pantalla está apagada.</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-344_1360" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op344_1361" class="sr-av"><a href="#answer-344_11169">Opción 2</a></label><input type="checkbox" id="op344_1361" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-344_11169"><div id="taans344_11169" class="block iDevice_content">
+<p>Una función dentro de la aplicación comparte constantemente la ubicación con otros usuarios.</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-344_1361" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op344_1362" class="sr-av"><a href="#answer-344_11171">Opción 3</a></label><input type="checkbox" id="op344_1362" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-344_11171"><div id="taans344_11171" class="block iDevice_content">
+<p>Una <span lang="en">Activity</span> de la aplicación que usa "ubicación" es visible.</p>
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-344_1362" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-3-344_136" /> 
+</p>
+</div>
+<section id="f344_136" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-344_139" class="right">Correcto</a></li>
+<li><a href="#answer-344_11169" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-344_11171" class="right">Correcto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="12_TIPOS.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="2_MAPAS_.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/13_solicitud_de_permisos_en_tiempo_de_ejecucin.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:26:27 GMT -->
+</html>

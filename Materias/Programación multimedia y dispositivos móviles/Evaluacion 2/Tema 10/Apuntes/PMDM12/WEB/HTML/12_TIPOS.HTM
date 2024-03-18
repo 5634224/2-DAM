@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/12_tipos_de_precisin.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:26:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_EFFE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2.- Tipos de precisión. | PMDM12 - DAM - Programación Multimedia y Dispositivos Móviles - UT12.- Geolocalización y Mapas de Google. Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Rubén Carrasco Peña  - Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_EFFE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_HIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-120"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM12 - DAM - Programación Multimedia y Dispositivos Móviles - UT12.- Geolocalización y Mapas de Google. Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">PMDM12.- Geolocalización y mapas de Google.</a></li>
+   <li class="current-page-parent"><a href="1_GEOLOC.HTM" class="current-page-parent daddy">1.- Geolocalización.</a>
+   <ul>
+      <li><a href="11_TIPOS.HTM" class="no-ch">1.1.- Tipos de acceso a la ubicación.</a></li>
+      <li id="active"><a href="12_TIPOS.HTM" class="active no-ch">1.2.- Tipos de precisión.</a></li>
+      <li><a href="13_SOLIC.HTM" class="no-ch">1.3.- Solicitud de permisos en tiempo de ejecución.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_MAPAS_.HTM" class="daddy">2.- Mapas de Google.</a>
+   <ul class="other-section">
+      <li><a href="21_EJERC.HTM" class="no-ch">2.1.- Ejercicio resuelto 1 (mapas de Google Maps y geolocalización).</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="11_TIPOS.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_SOLIC.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.2.- Tipos de precisión.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id335">
+<div class="iDevice emphasis0">
+<div id="ta335_154" class="block iDevice_content">
+<p>Android admite los siguientes niveles de precisión de la ubicación:</p>
+<p><span class=" destacado_inline resaltado_inline">Aproximada</span></p>
+<p>Proporciona una estimación de la ubicación del dispositivo. Si esta estimación de la ubicación es de <span lang="en">LocationManagerService</span> o <span lang="en">FusedLocationProvider</span>, la estimación es exacta en un radio de 3 kilómetros cuadrados. Tu aplicación puede recibir ubicaciones con este nivel de precisión cuando declaras el permiso <span lang="en">ACCESS_COARSE_LOCATION</span>, pero no el permiso <span lang="en">ACCESS_FINE_LOCATION</span>. Android usa datos de <span title="Wireless Fidelity" lang="en">Wi-Fi</span> o datos móviles para determinar la ubicación del dispositivo. </p>
+<p><br /><span class=" resaltado_inline">Precisa</span></p>
+<p>Proporciona una estimación de la ubicación del dispositivo que sea lo más precisa posible. Si la estimación de la ubicación es de <span lang="en">LocationManagerService</span> o <span lang="en">FusedLocationProvider</span>, suele ser de 50 metros y, a veces, tan precisa como de unos pocos metros. Tu aplicación puede recibir ubicaciones en este nivel de precisión cuando declaras el permiso <span lang="en">ACCESS_FINE_LOCATION</span>. Android usa el sistema de posicionamiento global (<span title="Global Positioning System" lang="en">GPS</span>) y los datos de <span lang="en">Wi-Fi</span> y los datos móviles para determinar la ubicación del dispositivo. </p>
+<p>El permiso que elijamos determina la precisión de la ubicación devuelta por la API. Según el nivel de precisión que necesitemos, solo debes solicitar uno de los permisos de ubicación de Android en el archivo de manifiesto.</p>
+<div class="exe-fx exe-accordion">
+<h2>Ejemplo</h2>
+<div class="highlighted-code code-style-2 language-markup line-numbers">
+<div>
+<pre><code>&lt;manifest ... &gt;
+  &lt;!-- Always include this permission --&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&gt;
+
+  &lt;!-- Include only if your app benefits from precise location access. --&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;
+&lt;/manifest&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="11_TIPOS.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="13_SOLIC.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/12_tipos_de_precisin.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:26:24 GMT -->
+</html>

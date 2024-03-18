@@ -1,0 +1,28 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 18 Mar 2024 11:26:06 at https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN5L0%I0p7DaK0c8T6R2H0%kf2A250000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "es, en, *" https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/index.html -O1 "D:\Documentos\Mis lugares web\PMDM12" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:26:44	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/PMDM12_CONT_R1_GoogleMaps.jpg
+11:26:44	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/ico-nv.jpg
+11:26:44	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/icon_casopracticofpd.png
+11:26:44	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/favicon.ico
+11:26:44	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/ministerio-de-educacion-y-formacion-profesional-web.jpg
+11:26:45	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/icon_debesconocerfpd.png
+11:26:46	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/p1201-img003.png
+11:26:47	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/p1201-img002.png
+11:26:48	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/icon_autoevaluacionfpd.gif
+11:26:50	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/p1201-img007.png
+11:26:50	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/p1201-img005.png
+11:26:52	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/popup_bg.gif
+11:27:36	Warning: 	HTML file (1500 bytes) retransferred due to lack of cache: https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/PMDM12_Descripcion_Video_LocalizacionActual.html
+11:27:39	Error: 	"Not Found" (404) at link https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/xspf_player.swf?song_url= (from https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/common.js)
+11:27:39	Error: 	"Not Found" (404) at link https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/exe_media.js (from https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/common.js)
+11:27:39	Error: 	"Not Found" (404) at link https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/exe_media.css (from https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/common.js)
+11:27:39	Error: 	"Not Found" (404) at link https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/youtu.be/ (from https://ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/exe_lightbox.js)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 33 seconds : 96 links scanned, 104 files written (8471991 bytes overall) [8244609 bytes received at 88651 bytes/sec], 5.5 requests per connection
+(4 errors, 13 warnings, 0 messages)

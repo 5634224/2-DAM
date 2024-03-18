@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/21_ejercicio_resuelto_1_mapas_de_google_maps_y_geolocalizacin.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:26:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_LIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_EFFE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.1.- Ejercicio resuelto 1 (mapas de Google Maps y geolocalización). | PMDM12 - DAM - Programación Multimedia y Dispositivos Móviles - UT12.- Geolocalización y Mapas de Google. Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Rubén Carrasco Peña  - Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_LIGH.JS"></script>
+<script type="text/javascript" src="../JS/EXE_EFFE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_HIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-109"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM12 - DAM - Programación Multimedia y Dispositivos Móviles - UT12.- Geolocalización y Mapas de Google. Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">PMDM12.- Geolocalización y mapas de Google.</a></li>
+   <li><a href="1_GEOLOC.HTM" class="daddy">1.- Geolocalización.</a>
+   <ul class="other-section">
+      <li><a href="11_TIPOS.HTM" class="no-ch">1.1.- Tipos de acceso a la ubicación.</a></li>
+      <li><a href="12_TIPOS.HTM" class="no-ch">1.2.- Tipos de precisión.</a></li>
+      <li><a href="13_SOLIC.HTM" class="no-ch">1.3.- Solicitud de permisos en tiempo de ejecución.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_MAPAS_.HTM" class="current-page-parent daddy">2.- Mapas de Google.</a>
+   <ul>
+      <li id="active"><a href="21_EJERC.HTM" class="active no-ch">2.1.- Ejercicio resuelto 1 (mapas de Google Maps y geolocalización).</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="2_MAPAS_.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.1.- Ejercicio resuelto 1 (mapas de Google Maps y geolocalización).</h1></header>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id339">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_DEB.PNG)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta339_129" class="block iDevice_content">
+<p>Para llevar a cabo este ejercicio es necesario que consigas una "<span lang="en">API Key</span>" que te permita interactuar con los servicios de Google. Para ello es necesario contar con una cuenta de <strong>correo de Google y una tarjeta de crédito válida</strong>.</p>
+<p>Todos los ejercicios se pueden llevar a cabo sin coste, ya que Google, en el momento de escribir este contenido, ofrece un periodo de prueba gratuito de 90 días o 300$. Este crédito es más que suficiente para llevar a cabo los ejercicios propuestos. Esta cuenta de prueba puede cancelarse una vez transcurrido el tiempo de la realización de estas prácticas. Digamos que, para poder activar la <span lang="en">API Key Google,</span> comprueba que el proyecto está asociado a una cuenta de facturación correcta, aunque son necesarias miles de visitas para que se cobre por ello. Esto está orientado para empresas que se apoyan en el servicio de <span lang="en">Google Maps</span> para ofrecer sus servicios.</p>
+<p>En caso de no disponer de tarjeta de crédito, debes contactar con el tutor del curso para salvar este problema, probablemente él pueda compartir una <span lang="en">APY Key</span> con propósitos educativos.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id303">
+<div class="iDevice emphasis0">
+<div id="ta303_154" class="block iDevice_content">
+<p>Se trata de crear una aplicación en la que agregues un mapa mediante el <strong><span lang="en">Maps SDK for Android</span></strong> y lo muestres con una ubicación. Como EXTRA trabajaremos para que muestre la ubicación actual de tu terminal.</p>
+<p>1.- El primer paso es crear un proyecto de <span lang="en">Google Maps en Android Studio</span> (<a href="https://developers.google.com/maps/documentation/android-sdk/start?hl=es-419#create_a_google_maps_project_in_android_studio" target="_blank" title="Cómo crear una app básica de Google Maps en Android Studio (se abre en una nueva ventana)" rel="noopener">más ayuda<sub><img style="vertical-align: bottom;" src="../JPG/ICO_NV.JPG" alt="" width="16" height="14" /></sub></a>).</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<figure class="exe-figure exe-image position-center license-custom" style="width: 240px;"><a href="../PNG/P1201_IM.PNG" rel="lightbox" title="Ampliar imagen"><img src="../PNG/P1201_IM.PNG" alt="Captura 01 de ejercicio 01 en Android Studio" title="Captura ejercicio 01.01" class="imagen_ampliable" width="200" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" class="author" rel="noopener">Google Developers </a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+<div class="exe-col exe-col-2">
+<figure class="exe-figure exe-image position-center license-custom" style="width: 240px;"><a href="../PNG/P1201_-2.PNG" rel="lightbox" title="Ampliar imagen"><img src="../PNG/P1201_-2.PNG" alt="Captura 02 de ejercicio 01 en Android Studio" title="Captura ejercicio 01.02" class="imagen_ampliable" width="200" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" class="author" rel="noopener">Google Developers </a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+</div>
+<p>Esta acción terminará habiendo creado el proyecto y mostrará dos ficheros abiertos sobre los que trabajar, el archivo de manifiesto y <strong><span lang="en">MapsActivity.java</span></strong>. Si observas, se ha creado un archivo <strong><span lang="en">activity_maps.xml</span></strong> donde se despliega un fragmento para albergar el mapa de Google a pantalla completa.</p>
+<p>2. El segundo paso consiste en conseguir una <span lang="en">API Key de Google Maps</span>. Para ello tendrás que registrar tu cuenta de correo en <a href="https://cloud.google.com/" target="_blank" title="Acceso a la consola cloud de Google (se abre en una nueva ventana)" rel="noopener">Cloud console de Google<sub><img style="vertical-align: bottom;" src="../JPG/ICO_NV.JPG" alt="" width="16" height="14" /></sub></a>, crear un proyecto nuevo, crear una cuenta de facturación donde asignes datos de facturación (incluso una tarjeta de crédito obligatoria) y finalmente activar la <span lang="en">API <strong>Maps SDK for Android</strong></span><strong></strong>. Es posible que el nombre del servicio y la forma de hacerlo varíe en el tiempo. Deberás encontrar información de cómo hacerlo en Internet. En el momento de escribir este contenido, puedes encontrar ayuda de cómo hacerlo en este <a href="https://developers.google.com/maps/documentation/android-sdk/start?hl=es-419#get-key" target="_blank" title="Cómo configurar Cloud Console de Google para usar Google Maps (se abre en una nueva ventana)" rel="noopener">enlace<sub><img style="vertical-align: bottom;" src="../JPG/ICO_NV.JPG" alt="" width="16" height="14" /></sub></a>.</p>
+<p>3. El siguiente paso es añadir nuestra <span lang="en">API Key</span> al proyecto. Para ello lo más sencillo es seguir las indicaciones de Android Studio y completar la variable <span lang="en">android:value</span> del elemento &lt;<span lang="en">meta-data</span>&gt; con tu <span lang="en">API key (figura 1).</span></p>
+<p>El resultado es una aplicación que abre el fragmento de <span lang="en">Google Maps</span> con el mapa ubicado en Sidney (Australia), como se muestra en la figura 2.</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<p style="text-align: center;">Figura 1</p>
+<figure class="exe-figure exe-image position-center license-custom" style="width: 240px;"><a href="../PNG/P1201_-3.PNG" rel="lightbox" title="Ampliar imagen"><img src="../PNG/P1201_-3.PNG" alt="Captura 03 de ejercicio 01 en Android Studio" title="Captura ejercicio 01.03" class="imagen_ampliable" width="200" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" class="author" rel="noopener" title="Acceder a OpenexchAngerates.org (se abre en una nueva ventana).">Google Developers </a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+<div class="exe-col exe-col-2">
+<p style="text-align: center;">Figura 2</p>
+<figure class="exe-figure exe-image position-center license-custom" style="width: 140px;"><a href="../PNG/P1201_-4.PNG" rel="lightbox" title="Ampliar imagen"><img src="../PNG/P1201_-4.PNG" alt="Captura 04 de ejercicio 01 en Android Studio" title="Captura ejercicio 01.04" class="imagen_ampliable" width="100" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" class="author" rel="noopener" title="Acceder a OpenexchAngerates.org (se abre en una nueva ventana).">Google Developers </a> <span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+</div>
+<p>Si observas el código generado automáticamente en el archivo <strong><span lang="en">MapsActivity.java,</span></strong> podrás observar que se ha programado el evento <strong><span lang="en">onMapReady()</span></strong> para que, cuando esté preparado, se actualice y se añada un marcador (la tachuela roja de siempre) mediante la función <strong><span lang="en">addMarker()</span></strong>. Finalmente, se centra la posición del mapa en el marcador mediante el método <strong><span lang="en">moveCamera()</span></strong> pasando el objeto que guarda las coordenadas. También es posible cambiar el aspecto del marcador.</p>
+<div class="exe-fx exe-accordion">
+<h2>MapsActivity.java</h2>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        // Add a marker in Sydney and move the camera
+        LatLng sydney = new LatLng(-34, 151);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }</code></pre>
+</div>
+</div>
+</div>
+<p>Elije unas coordenadas de latitud y longitud de un lugar que te guste (tu pueblo, tu ciudad, un sitio que te guste) y actualiza la línea de código dónde se crea el objeto de la clase <span lang="en">LatLng</span>. Prueba de nuevo la aplicación y verifica que el mapa se abre las coordenadas indicadas.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>LatLng sydney = new LatLng(Latitud elegida, Longitud elegida); </code></pre>
+</div>
+</div>
+<figure class="exe-figure exe-image float-right license-custom" style="width: 240px;"><a href="../PNG/P1201_-5.PNG" rel="lightbox" title="Ampliar imagen"><img src="../PNG/P1201_-5.PNG" alt="Captura 05 de ejercicio 01 en Android Studio" title="Captura ejercicio 01.05" class="imagen_ampliable" width="200" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" class="author" rel="noopener" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana).">Google Developers </a><span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+<p>4. APARTADO EXTRA: El último paso consiste en cambiar esta ubicación por defecto para que en realidad el mapa muestre nuestra ubicación. Puedes establecer la ubicación para los terminales emulados mediante la opción "<span lang="en">Location</span>" de los controles extendidos.</p>
+<p>Te recomendamos que, después de establecer la localización mediante los controles extendidos, y antes de ejecutar la aplicación, abras <span lang="en">Google Maps</span> en el emulador y verifiques que te reconoce la ubicación que hayas establecido como tu ubicación actual. De esta forma te aseguras que el terminal ya ha solicitado la ubicación y tiene algún valor al respecto.</p>
+<p>Ahora, al ejecutar la aplicación te solicitará los permisos y, finalmente, mostrará la ubicación elegida (en este caso, Madrid).</p>
+<div class="exe-layout-2-cols exe-layout-2-50-50 exe-clear">
+<div class="exe-col exe-col-1">
+<figure class="exe-figure exe-image position-center license-custom" style="width: 140px;"><a href="../PNG/P1201_-6.PNG" rel="lightbox" title="Ampliar imagen"><img src="../PNG/P1201_-6.PNG" alt="Captura 06 de ejercicio 01 en Android Studio" title="Captura ejercicio 01.06" class="imagen_ampliable" width="100" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" class="author" rel="noopener" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana).">Google Developers </a><span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+<div class="exe-col exe-col-2">
+<figure class="exe-figure exe-image position-center license-custom" style="width: 140px;"><a href="../PNG/P1201_-7.PNG" rel="lightbox" title="Ampliar imagen"><img src="../PNG/P1201_-7.PNG" alt="Captura 07 de ejercicio 01 en Android Studio" title="Captura ejercicio 01.07" class="imagen_ampliable" width="100" /></a>
+<figcaption class="figcaption"><a href="https://developer.android.com/studio" target="_blank" class="author" rel="noopener" title="Acceder a Android Studio en Google Developers (se abre en una nueva ventana).">Google Developers </a><span class="license"><span class="sep">(</span><span class="custom-license">Uso educativo nc</span><span class="sep">)</span></span></figcaption>
+</figure>
+</div>
+</div>
+<p>A continuación te mostramos el contenido de algunos archivos importantes.</p>
+<div class="exe-fx exe-accordion">
+<h2>AndroidManifest.xml</h2>
+<p>Permisos en <strong>AndroidManifest.xml</strong>.</p>
+<div class="highlighted-code code-style-2 language-markup line-numbers">
+<div>
+<pre><code>&lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/&gt;
+&lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/&gt;
+&lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+&lt;uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="exe-fx exe-accordion">
+<h2>build.gradle(:app)</h2>
+<p>Dependencias en <strong>build.gradle(:app)</strong>.</p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'org.jetbrains:annotations:16.0.2'
+    
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="exe-fx exe-accordion">
+<h2>MapsActivity.java</h2>
+<p>Archivo <strong>MapsActivity.java.</strong></p>
+<div class="highlighted-code code-style-2 language-java line-numbers">
+<div>
+<pre><code>package com.cidead.pmdm.ubicacion;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.FragmentActivity;
+
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.os.Bundle;
+import android.widget.Toast;
+
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.cidead.pmdm.ubicacion.databinding.ActivityMapsBinding;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+
+    private GoogleMap mMap;
+    private ActivityMapsBinding binding;
+    Location currentLocation;
+    FusedLocationProviderClient fusedLocationProviderClient;
+    private static final int REQUEST_CODE=101;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivityMapsBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+        getCurrentLocation();
+    }
+
+    /**
+     * Manipulates the map once available.
+     * This callback is triggered when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+     * we just add a marker near Sydney, Australia.
+     * If Google Play services is not installed on the device, the user will be prompted to install
+     * it inside the SupportMapFragment. This method will only be triggered once the user has
+     * installed Google Play services and returned to the app.
+     */
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        LatLng tuUbicacion = new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude());
+        mMap.addMarker(new MarkerOptions().position(tuUbicacion).title("Current Location"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(tuUbicacion));
+    }
+
+    private void getCurrentLocation(){
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                &amp;&amp; ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
+            return;
+        }
+        Task&lt;Location&gt; task = fusedLocationProviderClient.getLastLocation();
+        task.addOnSuccessListener(new OnSuccessListener&lt;Location&gt;() {
+            @Override
+            public void onSuccess(@NonNull @org.jetbrains.annotations.NotNull Location location) {
+                if (location != null) {
+                    currentLocation = location;
+                    Toast.makeText(MapsActivity.this, String.valueOf(currentLocation.getLatitude()) + "-" +String.valueOf(currentLocation.getLongitude()), Toast.LENGTH_LONG).show();
+                    SupportMapFragment supportMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+                    assert supportMapFragment != null;
+                    supportMapFragment.getMapAsync(MapsActivity.this);
+                }
+            }
+        });
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (REQUEST_CODE) {
+            case REQUEST_CODE:
+                if (grantResults.length &gt; 0 &amp;&amp; grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    getCurrentLocation();
+                }
+                break;
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<p>Es una tarea compleja. Puedes apoyarte en este vídeo para llevarlo a cabo:</p>
+<figure class="exe-figure exe-media position-center" style="width: 330px;"><iframe width="330" height="185" src="https://www.youtube.com/embed/cnlSyYeRqrs" allowfullscreen="allowfullscreen"></iframe>
+<figcaption class="figcaption"><span class="title"><em><a href="PMDM12_D.HTM" target="_blank" title="Acceder a la descripción textual alternativa del vídeo &quot;Cómo obtener la localización actual&quot;. (Se abre en una nueva ventana)." rel="noopener">Descripción textual del vídeo "Localización actual"<sub><img src="../JPG/ICO_NV.JPG" alt="Nueva ventana" width="16" height="14" /></sub></a></em></span></figcaption>
+<span style="font-size: 8pt;"><a href="PMDM12_D.HTM" target="_blank" title="Acceder a la descripción textual alternativa del vídeo &quot;Cómo obtener la localización actual&quot;. (Se abre en una nueva ventana)." rel="noopener"><sub></sub></a></span></figure>
+<p>Puedes consultar más ayuda en esta guía rápida de creación de aplicaciones de <a href="https://developers.google.com/maps/documentation/android-sdk/start?hl=es-419#create-project" target="_blank" title="Guía de inicio rápido para usar Google Maps con Android Studio (se abre en una nueva ventana)" rel="noopener">Google Maps para Android Studio.<sub><img style="vertical-align: bottom;" src="../JPG/ICO_NV.JPG" alt="" width="16" height="14" /></sub></a></p>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice em_iDevice_parasabermasfpd" id="id342">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_PAR.PNG)"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta342_128" class="block iDevice_content">
+<p>Google recomienda por seguridad otras opciones para añadir la <span lang="en">API Key</span> a la aplicación mediante <span lang="en">local.properties</span>. Aquí tienes <a href="https://developers.google.com/maps/documentation/android-sdk/start?hl=es-419#add-key" target="_blank" title="Ayuda de Google de cómo añadir la API Key aun proyecto Android (se abre en una nueva ventana)" rel="noopener">más ayuda para intentar esta otra opción<sub><img style="vertical-align: bottom;" src="../JPG/ICO_NV.JPG" alt="" width="16" height="14" /></sub></a>para intentarlo.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="2_MAPAS_.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/21_ejercicio_resuelto_1_mapas_de_google_maps_y_geolocalizacin.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:26:39 GMT -->
+</html>

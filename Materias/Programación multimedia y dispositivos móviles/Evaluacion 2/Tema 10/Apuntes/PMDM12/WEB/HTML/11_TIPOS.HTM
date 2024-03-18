@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/11_tipos_de_acceso_a_la_ubicacin.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:26:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS/BASE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_EFFE.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/EXE_HIGH.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/CONTENT.CSS" />
+<link rel="stylesheet" type="text/css" href="../CSS/NAV.CSS" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1.- Tipos de acceso a la ubicación. | PMDM12 - DAM - Programación Multimedia y Dispositivos Móviles - UT12.- Geolocalización y Mapas de Google. Contenidos </title>
+<link rel="shortcut icon" href="../ICO/FAVICON.ICO" type="image/x-icon" />
+<meta name="author" content="Rubén Carrasco Peña  - Centro para la Innovación y Desarrollo de la Educación a Distancia. (CIDEAD)" />
+<meta name="generator" content="eXeLearning 2.6 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="../JS/EXE_JQUE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_EFFE.JS"></script>
+<script type="text/javascript" src="../JS/EXE_HIGH.JS"></script>
+<script type="text/javascript" src="../JS/COMMON_I.JS"></script>
+<script type="text/javascript" src="../JS/COMMON.JS"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body class="exe-web-site" id="exe-node-92"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">PMDM12 - DAM - Programación Multimedia y Dispositivos Móviles - UT12.- Geolocalización y Mapas de Google. Contenidos</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="INDEX.HTM" class="daddy main-node">PMDM12.- Geolocalización y mapas de Google.</a></li>
+   <li class="current-page-parent"><a href="1_GEOLOC.HTM" class="current-page-parent daddy">1.- Geolocalización.</a>
+   <ul>
+      <li id="active"><a href="11_TIPOS.HTM" class="active no-ch">1.1.- Tipos de acceso a la ubicación.</a></li>
+      <li><a href="12_TIPOS.HTM" class="no-ch">1.2.- Tipos de precisión.</a></li>
+      <li><a href="13_SOLIC.HTM" class="no-ch">1.3.- Solicitud de permisos en tiempo de ejecución.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_MAPAS_.HTM" class="daddy">2.- Mapas de Google.</a>
+   <ul class="other-section">
+      <li><a href="21_EJERC.HTM" class="no-ch">2.1.- Ejercicio resuelto 1 (mapas de Google Maps y geolocalización).</a></li>
+   </ul>
+   </li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="1_GEOLOC.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_TIPOS.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.1.- Tipos de acceso a la ubicación.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id334">
+<div class="iDevice emphasis0">
+<div id="ta334_154" class="block iDevice_content">
+<p><strong><span class=" resaltado_inline">Categoría ubicación en primer plano</span></strong></p>
+<p>Se usa cuando la ubicación es necesaria en algún momento concreto. Por ejemplo, cuando una aplicación de mensajería necesita compartir la ubicación del usuario. En este caso es necesario declarar en el archivo de manifiesto una entrada de servicio indicando "<span lang="en">location</span>".</p>
+<div class="exe-fx exe-accordion">
+<h2>Código</h2>
+<div class="highlighted-code code-style-2 language-markup line-numbers">
+<div>
+<pre><code>&lt;service
+    android:name="MyNavigationService"
+    android:foregroundServiceType="location" ... &gt;
+    &lt;!-- Any inner elements would go here. --&gt;
+&lt;/service&gt;</code></pre>
+</div>
+</div>
+</div>
+<p>El sistema considera que la aplicación usa esta categoría si:</p>
+<ul class="lista_verificacion">
+<li style="margin-bottom: 7px;">Una <span lang="en">Activity</span> de la aplicación que usa "ubicación" es visible.</li>
+<li style="margin-bottom: 7px;">La aplicación ejecuta un servicio en primer plano que se mantiene activo incluso cuando la aplicación no es la que está como principal, o incluso la pantalla está apagada.</li>
+</ul>
+<p>En cuanto a la precisión, es posible especificar si necesitamos ubicación precisa o ubicación predeterminada. En ambos casos, en el archivo de manifiesto deberemos indicar cuál de los permisos es necesario.</p>
+<p></p>
+<p><strong><span class=" resaltado_inline">Categoría ubicación en segundo plano</span></strong></p>
+<p>Una aplicación requiere acceso a la ubicación en segundo plano si una función dentro de la aplicación comparte constantemente la ubicación con otros usuarios o usa la <a href="https://developer.android.com/training/location/geofencing?hl=es-419" target="_blank" title="Acceso  página de developer.android.com sobre aplicaciones de geovallado (se abre en una nueva ventana)" rel="noopener">API de geovallado<sub><img style="vertical-align: bottom;" src="../JPG/ICO_NV.JPG" alt="" width="16" height="14" /></sub></a>. Por ejemplo, una aplicación familiar donde se comparte la ubicación de alguno de los miembros con otros.</p>
+<p>El sistema considera que tu aplicación usa ubicación en segundo plano si hace un uso diferente al indicado en primer plano. Para poder usar este tipo de aplicación es necesario indicar en el archivo de manifiesto el siguiente permiso:</p>
+<div class="exe-fx exe-accordion">
+<h2>Código</h2>
+<div class="highlighted-code code-style-2 language-markup line-numbers">
+<div>
+<pre><code>&lt;manifest ... &gt;
+  &lt;!-- Required only when requesting background location access on
+       Android 10 (API level 29) and higher. --&gt;
+  &lt;uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /&gt;
+&lt;/manifest&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DebesconocerfpdIdevice em_iDevice em_iDevice_debesconocerfpd" id="id336">
+<div class="iDevice emphasis_debesconocerfpd" >
+<header class="iDevice_header" style="background-image:url(../PNG/ICON_DEB.PNG)"><h1 class="iDeviceTitle">Debes conocer</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta336_129" class="block iDevice_content">
+<p><span lang="en">Google Play Store</span> tiene una <a href="https://support.google.com/googleplay/android-developer/answer/9799150?hl=es-419" target="_blank" title="Acceso a política sobre ubicación de Google Play (se abre en una nueva ventana)" rel="noopener">política sobre la ubicación del dispositivo<sub><img style="vertical-align: bottom;" src="../JPG/ICO_NV.JPG" alt="" width="16" height="14" /></sub></a>en la que el acceso a la ubicación en segundo plano se restringe a las aplicaciones que lo necesiten para su funcionalidad principal, y cumplan los requisitos de políticas relacionadas.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="1_GEOLOC.HTM" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="12_TIPOS.HTM" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="../JS/_FPD_JS.JS"></script></body>
+<!-- Mirrored from ead.murciaeduca.es/pluginfile.php/1432558/mod_resource/content/1/DAM_PMDM12_Contenidos/11_tipos_de_acceso_a_la_ubicacin.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Mar 2024 10:26:24 GMT -->
+</html>
